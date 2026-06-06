@@ -1,0 +1,34 @@
+{
+  "name": "Forgebeemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Torque Stinger",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Tears the opponent to pieces with the saw stinger on its rear."
+  },
+  "digivolves_from": [
+    "Funbeemon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Blue)",
+    "Vespamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon that belongs to the mysterious aerial, covert honey base, \" Royal Base \". While Waspmon is in charge of security for the base, Forgebeemon is responsible for the construction of the Royal Base. Its arm is equipped with an adhesive glue gun, and it uses the \" Honey Glue \" produced in its abdomen to bond materials together. On occasion, Funbeemon carrying materials also get stuck together, and in such situations, Forgebeemon uses its auxiliary arms to skillfully rescue them. A lot of its equipment can be used in battle, such as its other pair of arms that have turned into mecha arms and its saw-shaped stinger, and while they are a key factor for construction, they boast combat capabilities that cannot be taken lightly. It is said that although Forgebeemon work hard day and night constructing things for their \" Queen \", they don't know what it is they are building. Its Special Moves are tearing the opponent to pieces with the saw stinger on its rear ( Torque Stinger ), and an electrical discharge attack that uses the welding arms that extend from its back ( Bumble Welder )."
+}

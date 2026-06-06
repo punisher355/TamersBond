@@ -1,0 +1,33 @@
+{
+  "name": "Jougamon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 13,
+    "LVE": 13,
+    "KNW": 13,
+    "SNC": 13,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Tsui Getsu Shō",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Jumps up while equippingGyokutoto its foot, and then delivers a flying kick."
+  },
+  "digivolves_from": [
+    "Andiramon (Deva)"
+  ],
+  "digivolves_to": [
+    "Shakamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A God Man Digimon that contains the data of a Chinese moon goddess . It is a calm and beautiful Digimon that usually lives in solitude on its ship known as the Kōkankyū , which resembles the moon. Although it seldom has the chance to show it off, Jougamon is a master of Ch'uan Fa , and uses its specialty kicking techniques and high mobility to make sport of the opponent in battle. When faced with a powerful opponent, it summons its huge-bladed, crescent-shaped weapon called \" Gyokuto \", and fights boldly while wielding it freely. The way it fights with its Ch'uan Fa and Gyokuto is both feared and lauded as being chilling and beautiful, like the moonlight in winter. Its Special Moves are jumping up while equipping Gyokuto to its foot, and then delivering a flying kick ( Tsui Getsu Shō ), and making Gyokuto spin rapidly to send out slashes into its surroundings ( Gabi Seppa ). Its \" Taiin Kōkō \", which emits light from a raised-up Gyokuto to heal its comrades, boasts of unrivaled healing power, but since it often spends its time alone, it has few opportunities to use it."
+}

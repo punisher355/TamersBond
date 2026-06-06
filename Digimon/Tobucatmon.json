@@ -1,0 +1,39 @@
+{
+  "name": "Tobucatmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Guruguru Fight",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Repeatedly goes around behind the enemy and bites them."
+  },
+  "digivolves_from": [
+    "Labramon",
+    "Ryudamon",
+    "Shakomon"
+  ],
+  "digivolves_to": [
+    "Cho·Hakkaimon",
+    "Hisyaryumon",
+    "Mametyramon",
+    "Skull Baluchimon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon which has the appearance of a cat that flies about the Net Ocean . Although it has a rough temperament, it loves the ocean, and the \" F⑭ \" engraved on its body is proof that it is a fighter Digimon despite its appearance, and it is said that only 1% of the strongest among Tobucatmon are known and respected as \" Cat Gun \". [N 1] It is able to fly at high speed by folding its wings, and has a regular habit of flying where it flash es the claws on its right feet when turning right and flashes the claws on its left feet when turning left, but sometimes its movements are read by the enemy. Its Signature Move is a strange glare in which it gazes at distant targets ( Tobutobu Phoenix ). Its Special Move is repeatedly going around behind the enemy and biting them ( Guruguru Fight )."
+}

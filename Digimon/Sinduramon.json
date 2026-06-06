@@ -1,0 +1,49 @@
+{
+  "name": "Sinduramon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 9,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Bǎo Chǔ",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Unleashes an intense lightning strike from its Bǎo Chǔ."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Diatrymon",
+    "Harpymon",
+    "Kiwimon",
+    "Lighdramon",
+    "Mercuremon",
+    "Opossummon",
+    "Opossumon",
+    "Peckmon",
+    "Swanmon",
+    "Unimon",
+    "Wendimon"
+  ],
+  "digivolves_to": [
+    "Baihumon",
+    "Beelzebumon",
+    "Cherubimon (Vice)",
+    "Cherubimon (Virtue)",
+    "Hi Andromon",
+    "Ravmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Rooster . As a follower of the Four Holy Beasts Digimon Baihumon , it likes to quarrel and gossip above all else. With its provocative attitude, it will pick a fight with its opponent one way or another, but when they move to attack, it immediately draws its head and wings within its spherical armor. Its armor is the hardest among all of the Deva's equipment, and once it gets inside of the armor, it is absolutely protected. During battle, it is occasionally possible to cut through the breach when it rolls around in that state. Just like Kumbhiramon , it carries the Bǎo Chǔ on its back, and its Special Move consists of unleashing an intense lightning strike from it ( Púyaváha )."
+}

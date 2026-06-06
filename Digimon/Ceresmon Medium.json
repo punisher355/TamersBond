@@ -1,0 +1,31 @@
+{
+  "name": "Ceresmon Medium",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 12,
+    "SNC": 15,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Fruits Flechette",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Scatters poisonous, unripe fruit from the \"Karpos Hulē\" over a wide range."
+  },
+  "digivolves_from": [
+    "Blossomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the Olympos XII , Ceresmon is a monstrous, gigantic bird Digimon that carries on its back the \" Karpos Hulē \", a forest bearing the Digital World 's greatest sweets and famous fruits. With a body composed of rocks and rich, fertile soil, Ceresmon's soaring form is definitely the epitome of an island floating in the sky. Sitting on the head of Ceresmon is \"Ceresmon Medium\", which serves as its true form. \"Ceresmon Medium\" has practically nil fighting strength and so rarely, if ever, comes out in public on its own, but it is said that it will occasionally show itself unattended by the monstrous bird to those who earn its trust. Its personality is filled with gentleness and a kind heart, and it is said that it offers fruit from the \" Karpos Hulē \" to hungry Digimon, and shelters injured Digimon in its woods until they recuperate. However, it will reverse its attitude and bring terror as if a demonic forest to those who forget the blessings granted by the forests and land, and unnecessarily injure the trees or pollute the soil. Its Special Move \" Island Freefall \", in which it slams its huge body against the opponent, inflicts damage from the intense shock wave and vibrations around the area where it falls. For its \" Burning Blood Shell \", it fires a magma bodily fluid from its mouth as an enormous flame shot. The unripe fruit from the \" Karpos Hulē \" has high concentrations of poison, and its \" Fruits Flechette \", in which it scatters them over a wide range, transforms its surroundings into a land of death with that poison upon impact. However, the poison changes into high-quality fertilizer after several days, and then it is reborn as a fertile land.",
+  "web_created": true
+}

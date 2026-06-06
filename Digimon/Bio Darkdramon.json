@@ -1,0 +1,31 @@
+{
+  "name": "Bio Darkdramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 8,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Dark Roar",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Charges and shoots a giant ball of dark energy."
+  },
+  "digivolves_from": [
+    "Bio Thunderbirmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Digimon Analyzer ⇨ Japanese Bio Darkdramon A Bio-Hybrid type formed from the fusion of a human and a Digimon. Its Special Move is Dark Roar . It pulverizes the enemy with its brutal energy! — Digimon Savers: \"Final Decisive Battle! Kouki, Ultimate Evolution\" Digimon Savers ⇨ English バイオダークドラモン： 人間とデジモンが融合したバイオハイブリッド体だ。必殺技は ダークロアー 。暗黒エネルギーで敵を粉砕するぞ。 — デジモンセイバーズ 「最後の決戦！聖、究極進化」 デジモンセイバーズ ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ Japanese Digimon Series Memorial Book: Digimon Animation Chronicle ⇨ English 敗れた聖が新たなデジモンと融合することで進化した姿。人間界に戻ってきたマサルの前に現れ、シャイングレイモンとの決着を求めた。「ダークロア」で暗黒なエネルギーを放ち、右腕の「ギガスティックランス」で敵を貫く。 デジモンシリーズ メモリアルブック デジモンアニメーションクロニクル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K",
+  "web_created": true
+}

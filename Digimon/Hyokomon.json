@@ -1,0 +1,37 @@
+{
+  "name": "Hyokomon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 3,
+    "KNW": 4,
+    "SNC": 2,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Karatakewari",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Jumps and brings down its sword on the opponent from above."
+  },
+  "digivolves_from": [
+    "Pyocomon"
+  ],
+  "digivolves_to": [
+    "Birdramon",
+    "Buraimon",
+    "Dinohumon",
+    "Musyamon",
+    "Peckmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Chick Digimon that evolved via data related to samurai. It works hard training day and night, developing secret fencing in order to master swordsmanship. Although it shows confidence in its sword abilities, its true strength is still lacking. It is said that once Hyokomon has undergone repeated sword training and is able to break out of its shell, it will be the moment of its next evolution. Its Special Move is using its wings and leg strength to jump, and then swinging its sword straight down on the opponent from above ( Karatakewari ). Opponents that are still standing are met with its \" Hiken Piyopiyo-giri \", which it devised at the end of its training, stunning them."
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Metal Garurumon (Black)",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 13,
+    "LVE": 14,
+    "KNW": 13,
+    "SNC": 12,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "CocytusBreath",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Spews cold air at absolute zero that completely freezes the target."
+  },
+  "digivolves_from": [
+    "Catch Mamemon",
+    "Cerberumon",
+    "Cerberumon: Werewolf Mode",
+    "Dark Superstarmon",
+    "Doumon",
+    "Gigadramon",
+    "Lady Devimon",
+    "Mammon",
+    "Metal Tyranomon",
+    "Vamdemon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Yaeger Dorulumon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [
+    "Omnimon",
+    "Omnimon Zwart",
+    "Gabumon -Yujo no Kizuna-"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A Virus-type Metal Garurumon equipped with cold-based weapons all over its body. It has a fearsome personality, in that once the Laser Sights on its snout lock onto its prey, it will pursue them relentlessly and bombard them with missiles regardless of whether they are friend or foe. Its Special Move is cold air that freezes everything in an instant ( Cocytus Breath ). In addition, it wipes out the opponent with its \" Garuru Tomahawk \", in which it launches a gigantic missile called the Freeze Bomber from its chest, and \" Grace Cross Freezer \", in which it fires its weapons all at once.",
+  "web_created": true
+}

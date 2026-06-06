@@ -1,0 +1,29 @@
+{
+  "name": "Poyomon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Gummymon",
+    "Mochimon",
+    "Nyaromon",
+    "Pukamon",
+    "Pyocomon",
+    "Tokomon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "With a translucent body, it is a Digimon Baby that drifts through the \" Net Ocean \" like a jellyfish. As it has the most primitive structure among the Digimon discovered to date, it has been showered in attention as the \" Missing Link \", the key to solving the mystery of the origin of Digimon, by the scholars and enthusiasts studying the roots of Digimon. In order to defend itself from intruders it spews potently acidic bubbles out of its mouth."
+}

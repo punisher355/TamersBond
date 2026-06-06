@@ -1,0 +1,46 @@
+{
+  "name": "Skull Mammon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Spiral Bone",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Rapidly spins and then hurls one of its vertebra."
+  },
+  "digivolves_from": [
+    "Cho·Hakkaimon",
+    "Dagomon",
+    "Daipenmon",
+    "Death Meramon",
+    "Dinobeemon",
+    "Enbarrmon",
+    "Lady Devimon",
+    "Mammon",
+    "Master Tyranomon",
+    "Panjyamon",
+    "Skull Baluchimon",
+    "Skull Greymon",
+    "Vamdemon",
+    "Vermillimon",
+    "Were Garurumon",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Undead Digimon that was a Mammon , revived from ancient times, that continued to battle with Virus-species Digimon, resulting in its whole body being eaten away by a virus, leaving nothing but bones. Its survival instinct as a Vaccine is strong even in death, and in order to continue battling, it has lost all emotion and intelligence aside from its resolve to exterminate Viruses. The Digicore shining within its chest is undamaged, so it is able to maintain its vital functions even though its body has become nothing but bones, but if the bare Digicore is struck, then Skull Mammon would probably be at the edge of death. Its Special Move is rapidly spinning and then hurling one of its vertebra ( Spiral Bone )."
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Chaosmon",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 15,
+    "LVE": 16,
+    "KNW": 14,
+    "SNC": 15,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Haou Ryoudanken",
+    "element": "Neutral",
+    "pr": 13,
+    "tags": "[MELEE]",
+    "description": "Uses itsBAN-TYO Bladeto slice the enemy in half with a single decisive stroke."
+  },
+  "digivolves_from": [
+    "Darkdramon",
+    "Bancho Leomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Normally, when a Jogress occurs, the Digicores of the two Digimon are completely fused and reborn as a new Digimon; however, Chaosmon retains each of the Digicores of the Digimon before the Jogress, and maintains its form in a very incomplete state. Chaosmon is the codename for Digimon who \"should not exist\", and according to the \" Central Dogma \" of the Digital World , are absolute impossible singularities ( bugs ). Due to its extremely unstable existence, its lifespan is very short, and it is conjectured that the program being run by the Digital World's managing system which eliminates bugs is causing its lifespan to shorten. This Chaosmon is believed to be born from the Jogress of Bancho Leomon and Darkdramon , and the faces of each Digimon are visible on its arms. Its Special Moves are an unstoppable bisecting slash unleashed from the \" BAN-TYO Blade \" equipped to its \" Bancho Arm \" ( Haou Ryoudanken ), and firing off its own digital cells from the \" Gigastick Cannon \" equipped to its \" Darkdra Arm \" ( Dark Prominence ).",
+  "web_created": true
+}

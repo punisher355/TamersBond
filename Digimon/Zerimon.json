@@ -1,0 +1,24 @@
+{
+  "name": "Zerimon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Gummymon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An extremely rare Digimon, which is born in pairs from a single Digitama . The reason why only Zerimon and Cocomon are born as twins is unclear at the present stage. Moreover, they are not restricted to always being born as twins, and either a Zerimon or Cocomon may be born from a single Digitama. Compared to the extremely energetic, one-horned Zerimon, the three-horned Cocomon has a relatively docile personality. In addition, unlike other Slime Digimon, more of Zerimon than just the horn on its head is firm-knit and rigid. Like other Baby Digimon, it spits acid bubbles to intimidate opponents."
+}

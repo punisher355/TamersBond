@@ -1,0 +1,40 @@
+{
+  "name": "Kaiser Leomon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 10,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Schwarz Donner",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires a black spirit shot from its mouth."
+  },
+  "digivolves_from": [
+    "Duskmon",
+    "Filmon",
+    "Leomon",
+    "Liamon",
+    "Löwemon"
+  ],
+  "digivolves_to": [
+    "Bagramon",
+    "Deathmon",
+    "Dinorexmon",
+    "Ultimate Brachimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A Digimon that truly inherited the \" Spirit of Darkness \" of the legendary Ten Warriors . As with Duskmon , the \"Spirit of Darkness\" was changed into its Velgrmon form due to Cherubimon 's spell, but Kaiser Leomon is its true form released from this magical power. It is called the \" Jet-black Lion \", and its body is covered in a unique metal which shines jet-black and is called \" Obsidian Digizoid \", a kind of Chrome Digizoid . For that reason, not only is its defensive ability high, but its body armor has a keen sharpness. It is said that after Kaiser Leomon runs through, everything will be cut to pieces by the first gust of that black wind. Its Special Moves are firing a black spirit shot ( Schwarz Donner ), and pulverizing the opponent with its whole body clad in a black aura ( Schwarz König ).",
+  "web_created": true
+}

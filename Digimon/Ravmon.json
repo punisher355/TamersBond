@@ -1,0 +1,48 @@
+{
+  "name": "Ravmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Spiral Raven Claw",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Raises the sharp nails on its left arm and then performs a rotating rush at the opponent."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Andiramon",
+    "Blossomon",
+    "Dark Superstarmon",
+    "Fantomon",
+    "Garudamon",
+    "Huankunmon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Megalo Growmon",
+    "Parrotmon",
+    "Rize Greymon",
+    "Shawujinmon",
+    "Sinduramon",
+    "Tyilinmon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "Enmamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Cyborg Digimon which possesses a wing made of Chrome Digizoid . At the Genesis of the Digital World , it was a Digimon that served under a certain God Man Digimon and was titled the \" Silver Crow \", but it is said that it was touched by that god's anger and one of its wings was dyed black. The true terror of Ravmon is in its covert actions. It conceals its figure with its black wing, and slashes the opponent with its white wing. Suddenly appearing out of nowhere, it brings down the opponent in a single blow. Its Special Moves are raising the sharp nails on its left arm and then performing a rotating rush at the opponent ( Spiral Raven Claw ), and cutting the opponent to pieces with its left wing ( Blast Wing ). Also, it strikes the opponent with the sword \" Chouou-maru \" which it unleashes with nimble movements, and the blade of dark lightning which is released from the \" Chouou-maru \", \" Ame-no-Ohabari \", possesses tremendous destructive power."
+}

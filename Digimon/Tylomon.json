@@ -1,0 +1,53 @@
+{
+  "name": "Tylomon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Torpedo Attack",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "123Chases and charges into the enemy like a homing torpedo.Fires a Tylomon-shaped torpedo from its mouth.Fires six torpedoes from hexagon-shaped portals that appear in front of it."
+  },
+  "digivolves_from": [
+    "Gabumon (Black)",
+    "Ganimon",
+    "Gomamon",
+    "Kamemon",
+    "Lalamon",
+    "Lunamon",
+    "Psychemon",
+    "Shakomon",
+    "Swimmon"
+  ],
+  "digivolves_to": [
+    "Big Mamemon",
+    "Blossomon",
+    "Gigadramon",
+    "Hangyomon",
+    "Mach Gaogamon",
+    "Megalo Growmon (Orange)",
+    "Mermaimon",
+    "Paildramon",
+    "Rapidmon Perfect",
+    "Shawujinmon",
+    "Waru Seadramon",
+    "Whamon Perfect",
+    "Mega Seadramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese An Armor-level Ocean Dragon Digimon that evolved through the power of the \" Digimental of Sincerity \". Because of its unique form, it holds the alias of \" Jet Plane of the Deep \" and has a fast movement speed underwater, at which it even contends for first place with Metal Seadramon . It has an extremely ferocious personality and will attack those who enter its territory, even if the opponent is larger than itself. Even underwater, it is able to distinguish scents from 1 km away. Its Special Move is chasing and charging into the enemy like a homing torpedo ( Torpedo Attack ); it is impossible to escape from this technique. Also, its Ocean Strike , in which it compresses the water in its body to super-high pressure and shoots it out in a high-pressure water stream, is powerful enough to punch holes into the opponent.",
+  "web_created": true
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Bastemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 10,
+    "LVE": 11,
+    "KNW": 8,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Helter Skelter",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Beguiles the opponent with the bewitching charms of its belly dance."
+  },
+  "digivolves_from": [
+    "Angemon",
+    "Devimon",
+    "Mikemon",
+    "Nefertimon",
+    "Siesamon",
+    "Tailmon",
+    "Witchmon"
+  ],
+  "digivolves_to": [
+    "Babamon",
+    "Barbamon",
+    "Beelzebumon",
+    "Black Saint Galgomon",
+    "Diarbbitmon",
+    "Dukemon",
+    "Gran Kuwagamon",
+    "Kuzuhamon",
+    "Lilithmon",
+    "Marsmon",
+    "Megidramon",
+    "Ofanimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Man Digimon also referred to as the \" Goddess of Cats \". It loves to be showy and has a sly personality, and its specialty is using its charmingly sparkling eyes and the jewels worn all over its body to bewitch the opponent, allowing it to manipulate them as it desires. Most fall victim to Bastemon's glamour , causing them to be completely eviscerated. Although it excels in nimbleness with its flexible movements, it is also powerful despite its appearance, and the claws on its hands are sharp enough to cut even rocks to pieces. It is said to be at loggerheads with Nefertimon , who is an avatar of light. Its Special Moves are beguiling the opponent with the bewitching charms of its belly dance ( Helter Skelter ), and getting close to the opponent while dancing, then sucking out all the blood in their body, down to the last drop ( Vampire Dance )."
+}

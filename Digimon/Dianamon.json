@@ -1,0 +1,38 @@
+{
+  "name": "Dianamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 12,
+    "LVE": 15,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Crescent Harken",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE] [BURST 2]",
+    "description": "Conjures an illusion with the mysterious power of the moon, and cuts down those it's deemed as enemies in an instant."
+  },
+  "digivolves_from": [
+    "Andiramon (Deva)",
+    "Crescemon",
+    "Insekimon",
+    "Mach Gaogamon",
+    "Mermaimon",
+    "Taomon",
+    "Taomon (Silver)"
+  ],
+  "digivolves_to": [
+    "GraceNovamon"
+  ],
+  "needs_review": false,
+  "review_notes": "with Apollomon dna to Grace Novamon",
+  "description": "One of the Olympos XII , this God Man Digimon presides over water and ice, and is able to fight even when its surroundings are at absolute zero . Just as the moon has two sides (light and dark), its personality is of a two-sided nature, and its beauty conceals terrifying power. Its Special Moves are conjuring an illusion using the mysterious power of the moon, and cutting down those it's deemed as enemies in an instant ( Crescent Harken ), and pulling out a sleek, sharp, long and dazzling arrow of ice from the protuberances on its back, then firing it ( Arrow of Artemis ). It also uses \" Goodnight Moon \", bathing the opponent in moonlight emitted from the \" Goodnight Sisters \" on both of its legs to lure the opponent into sleep."
+}

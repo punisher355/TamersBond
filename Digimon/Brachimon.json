@@ -1,0 +1,56 @@
+{
+  "name": "Brachimon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Brachio Bubble",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Spits out countless bubbles to attack the enemy."
+  },
+  "digivolves_from": [
+    "Ankylomon",
+    "Betel Gammamon",
+    "Chamelemon",
+    "Cyclomon",
+    "Dark Tyranomon",
+    "Drimogemon",
+    "Ebidramon",
+    "Gekomon",
+    "Kangarumon",
+    "Kaus Gammamon",
+    "Octmon",
+    "Tortamon",
+    "Tyranomon",
+    "XV-mon",
+    "XV-mon (Black)",
+    "Zassoumon"
+  ],
+  "digivolves_to": [
+    "Cannondramon",
+    "Chaosdramon",
+    "Megidramon",
+    "Metal Garurumon",
+    "Metal Seadramon",
+    "Ouryumon",
+    "Plesiomon",
+    "Rust Tyranomon",
+    "Ultimate Brachimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Plesiosaur Digimon resembling the Brachiosaurus that existed long ago. It is quite the heavyweight among dinosaur Digimon, so you'll be in for a world of hurt if you get trampled by its large body. However, because it is herbivorous and docile, it never attacks without reason. Its Special Move is spitting out countless bubbles to attack the enemy ( Brachio Bubble )."
+}

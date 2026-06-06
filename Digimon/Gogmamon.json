@@ -1,0 +1,37 @@
+{
+  "name": "Gogmamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Giant Grater",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Grinds the enemy with the crystals on its arms."
+  },
+  "digivolves_from": [
+    "Baboongamon",
+    "Golemon",
+    "Tortamon"
+  ],
+  "digivolves_to": [
+    "Ancient Volcamon",
+    "Blastmon",
+    "Dinorexmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ore Digimon with an enormous body. It is said to have a small population at present, and mostly lives in solitude deep inside caves. It hardly ever eats in a conventional manner, instead building up energy by occasionally leaving the cave and taking in light through the crystals covering its body. It reliably eliminates intruders into the cave with its \" Giant Grater \", in which it grinds the enemy with the crystals on its arms, and its \" Curse Reflection \", where it fires the light energy it has accumulated from the tips of its crystals."
+}

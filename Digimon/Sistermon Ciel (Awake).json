@@ -1,0 +1,32 @@
+{
+  "name": "Sistermon Ciel (Awake)",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Shirotsume Ichimonji-giri (Satoru)",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[RANGE 8]",
+    "description": "Rapidly fires bullets from bothTguns at random directions."
+  },
+  "digivolves_from": [
+    "Sistermon Ciel",
+    "Sistermon Noir"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Another form of Sistermon Ciel that has awakened. Wearing the wimple causes the Holy Stigma to appear on its abdomen. Its cherished sword, the \" Shirotsume-Ichimonji \", harbors light within its blade, and becomes sharper with each swing. It displays elegant swordsmanship in lockstep with the radiance of its cherished sword, and the moment light overflows from its sword is precisely when it turns into a sword dance that fascinates those who see it.",
+  "web_created": true
+}

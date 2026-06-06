@@ -1,0 +1,48 @@
+{
+  "name": "Shine Greymon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Light",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 10,
+    "LVE": 12,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Glorious Burst",
+    "element": "Light",
+    "pr": 11,
+    "tags": "[RANGE 4] [BLIND]"
+  },
+  "digivolves_from": [
+    "Crescemon",
+    "Duramon",
+    "Gerbemon",
+    "Groundramon",
+    "Holy Angemon",
+    "Lilamon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Greymon",
+    "Shawujinmon",
+    "Skull Greymon",
+    "Tyilinmon",
+    "Whamon Perfect",
+    "Wingdramon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "Omnimon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Light Dragon Digimon which fights with the red-hot solar energy it accumulates. Its Special Moves are spreading its gigantic wings, concentrating that light energy to its utmost limit, then firing it ( Glorious Burst ), and mowing down the opponent with wings of glimmering light ( Shining Blast ). Also, it can summon the GeoGrey Sword , in which the power of Gaia is condensed, from the solid earth."
+}

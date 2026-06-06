@@ -1,0 +1,53 @@
+{
+  "name": "Gawappamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "DJ Shooter",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Rapidly spins the disc on its head, then shoots it off."
+  },
+  "digivolves_from": [
+    "Agumon Hakase",
+    "Candmon",
+    "Elecmon",
+    "Fujamon",
+    "Ganimon",
+    "Gaomon",
+    "Goburimon",
+    "Gomamon",
+    "Piyomon",
+    "Shakomon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Blossomon",
+    "Hangyomon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Mega Seadramon",
+    "Megalo Growmon",
+    "Rize Greymon",
+    "Sagomon",
+    "Tonosama Gekomon",
+    "Tyilinmon",
+    "Waru Seadramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon that fused from the data of a music player and the legendary animal, \" Kappa \". It is always listening to its favorite music in bright and cheerful spirits, but it sheds tears if the disc-like part on its head is damaged. Its Special Moves are rapidly spinning the disc on its head, then shooting it off ( DJ Shooter ), and a striking technique released from its extensible hands ( Gawappa Punch ). Also, it surprises the enemy with its mysterious dance \" Gawappa Rapper \"."
+}

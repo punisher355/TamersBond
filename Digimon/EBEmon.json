@@ -1,0 +1,36 @@
+{
+  "name": "EBEmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 13,
+    "SNC": 10,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Brain Rupture",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Launches a cracking program into the opponent's brain using the gun it carries in its left hand, extracting the data stored in its brain, or fires a purple beam that can take control of the target."
+  },
+  "digivolves_from": [
+    "Dagomon",
+    "Ex-Tyranomon",
+    "Insekimon",
+    "Metal Mamemon",
+    "Skull Satamon",
+    "Vademon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon that was artificially created from a Vademon that was captured, and had its configuration data analyzed and improved. In a certain country's facility, called \" Area 51 \", it seems they were using and building extraterrestrial technology, but the truth is shrouded in mystery. Its Special Move \" Brain Rupture \" is firing a cracking program into the opponent's brain with the gun it holds in its left hand, then absorbing all the data stored in their brain. Its \" Planet Destroyer \" is a technique that releases all of its accumulated power and fires it off from the gun in its right hand, so it is said that it's able to instantly destroy a single planet. It is said that that certain country is covertly conducting research and development on Digimon in order to take possession of the Digital World. EBEmon was adopted from a winning Digimon illustration entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Yousuke from Gifu prefecture ."
+}

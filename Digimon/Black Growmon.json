@@ -1,0 +1,56 @@
+{
+  "name": "Black Growmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Exhaust Flame",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Breathes a stream of flames from its mouth while roaring."
+  },
+  "digivolves_from": [
+    "Candmon",
+    "Gizamon",
+    "Goburimon",
+    "Guilmon",
+    "Hawkmon",
+    "Impmon",
+    "Kotemon",
+    "Pico Devimon",
+    "Piyomon",
+    "Renamon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Black Megalo Growmon",
+    "Death Meramon",
+    "Death-X-DORUguremon",
+    "Grademon",
+    "Groundramon",
+    "Megalo Growmon (Orange)",
+    "Mephismon",
+    "Monzaemon",
+    "Pandamon",
+    "Rize Greymon",
+    "Skull Greymon",
+    "Vamdemon",
+    "Were Garurumon (Black)",
+    "Wingdramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Dragon Digimon that is called the \" Jet-black Demon Dragon \". Although it is fundamentally the same species as Growmon , it has more of a Virus-species' nature, and is said to be the natural form of Growmon. Unlike a Growmon raised by a Tamer , it can roughly be described as having gone feral. Black Growmon's roar is identical to Growmon's, having the power to shake the solid earth, and before battle it raises its voice to an offensive roar to intimidate the opponent. Its Signature Move is developing plasma along the blades on both of its elbows, then striking the opponent ( Plasma Blade ). Its Special Move is spewing out a powerful blaze with a roar ( Exhaust Flame )."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Lucemon: Satan Mode",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 11,
+    "LVE": 17,
+    "KNW": 12,
+    "SNC": 18,
+    "RLB": 18
+  },
+  "signature_move": {
+    "name": "Purgatorial Flame",
+    "element": "Neutral",
+    "pr": 15,
+    "tags": "[MELEE]",
+    "description": "Projects a huge flame of darkness from its mouth and sometimes from theGehennasphere."
+  },
+  "digivolves_from": [
+    "Ancient Garurumon",
+    "Ancient Greymon",
+    "Ancient Irismon",
+    "Ancient Troiamon",
+    "Ancient Wisemon",
+    "Holydramon",
+    "Piemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Having the appearance of the dragon of Revelation , it is Lucemon 's final form. As was told in the Revelation, it carries the Crowns of the Seven Deadly Sins upon its head, and it holds the orb of darkness, \" Gehenna \", which absorbs all attacks. All attacks are nullified before the Gehenna , and it is said that the world will perish when Lucemon takes this form. However, Lucemon's true form ( Lucemon Larva ) exists within the Gehenna , and Satan Mode is no more than Lucemon's shadow. Therefore, no matter how many times Satan Mode is attacked, those attacks will not reach the true form, Lucemon Larva. Its Special Moves are a flame of destruction which purifies everything ( Purgatorial Flame ), and a light of annihilation fired from the seven Crowns ( Divine Atonement ).",
+  "web_created": true
+}

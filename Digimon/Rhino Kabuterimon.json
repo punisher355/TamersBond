@@ -1,0 +1,35 @@
+{
+  "name": "Rhino Kabuterimon",
+  "stage": "Ultimate",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Condenser Storm",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Dynamically wields its horn and liberates all of the electricity accumulated within its body all at once, catching the opponent in a lightning storm."
+  },
+  "digivolves_from": [
+    "Blitzmon"
+  ],
+  "digivolves_to": [
+    "Ancient Beatmon",
+    "Gran Kuwagamon",
+    "Grandis Kuwagamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Thunder that has transcended legend by inheriting all the might of one of the legendary Ten Warriors and acquiring unknown abilities. It has such a gigantic body and a heavy shell that it could be mistaken for a Dinosaur. It has the ability to generate a special magnetic field with ultrahigh voltage electric current, and is able to freely manipulate it using its gigantic horn. Although rushing techniques are its specialty, it doesn't actually come into contact with the opponent, but instead tosses them away with that special magnetic field. Its Special Moves are dynamically wielding its horn and liberating all of the electricity accumulated within its body all at once, swallowing up the opponent in a lightning storm ( Condenser Storm ), and firing all the electricity accumulated in its horn like a laser ( Thunder Laser ).",
+  "web_created": true
+}

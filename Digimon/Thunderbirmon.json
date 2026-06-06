@@ -1,0 +1,44 @@
+{
+  "name": "Thunderbirmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Electric",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Spark Wing",
+    "element": "Electric",
+    "pr": 5,
+    "tags": "[RANGE 5] [CHAIN 5,3]"
+  },
+  "digivolves_from": [
+    "Candmon",
+    "Commandramon",
+    "Floramon",
+    "Hawkmon",
+    "Jazamon",
+    "Penmon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Angewomon",
+    "Garudamon",
+    "Gigadramon",
+    "Jazarichmon",
+    "Parrotmon",
+    "Scorpiomon",
+    "Volcamon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Giant Bird Digimon that \"Armor Evolved\" with the \" Digimental of Friendship \". It has the ability to summon thunder clouds with an echoing cry like thunder, and control thunder with the horn on its brow. Although it has a rough temperament, it has a caring nature for its comrades. Its Signature Move is firing out countless electrically-charged feathers like rain ( Spark Wing ). Its Special Move is flapping wings clad in electricity, generating a storm of lightning ( Thunder Storm )."
+}

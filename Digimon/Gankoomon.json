@@ -1,0 +1,39 @@
+{
+  "name": "Gankoomon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 11,
+    "LVE": 13,
+    "KNW": 11,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Tekken Seisai",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "12Strikes with all its strength.Both Gankoomon andHinukamuyunleash a barrage of punches."
+  },
+  "digivolves_from": [
+    "Blue Meramon",
+    "Death Meramon",
+    "Digitamamon",
+    "Mach Gaogamon",
+    "Panjyamon",
+    "Savior Hackmon",
+    "Super Starmon",
+    "Superstarmon",
+    "Volcamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon who acceded to the \" Royal Knights \" because it is a Holy Knight Digimon. Although it is said to have taken up residence in the southwestern edges [N 1] of the Digital World , it rarely stays in the same place, so it journeys across the Digital World while going around and putting a stop to unusual phenomena and signs of chaos, taking along the next-generation Hackmon as its companion. Unlike the other Royal Knights who rarely show their faces, it actually steps down and acts, and there are many Digimon it counts as bosom friends. In order to pass on its own title as a Royal Knight to Hackmon, it assigns it rigorous trials, and entrusts Hackmon's training to the Sistermon sisters on the way. Due to its stubborn personality, its dealing with Hackmon in a severe manner is a cruel sort of kindness of wanting it to keep up with the other Royal Knights and become independent. \" Hinukamuy \", who is emerging from its body, is always there for Gankoomon, and although no words escape its lips, it gets involved without wasting its breath arguing. Its Special Moves are striking with all its strength at anyone and everyone who talks back to it ( Tekken Seisai ), and \" Hinukamuy \" loosing heaven's punishment at Gankoomon's harsh words, \" Jishin! Kaminari! Kaji! Oyaji! \" Furthermore, its \" Chabudai Gaeshi \" upends the ground as if it were a chabudai made of Chrome Digizoid , and the ground, being treated like a chabudai , becomes as hard as if it was made of Chrome Digizoid. \" Hinukamuy \" is itself in the process of evolving from an Adult , and it is said that when its power awakens, there couldn't exist any kind of Digimon to be recognized as a rival."
+}

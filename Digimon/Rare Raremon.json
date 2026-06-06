@@ -1,0 +1,35 @@
+{
+  "name": "Rare Raremon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Raremon",
+    "Reppamon",
+    "Tia Ludomon"
+  ],
+  "digivolves_to": [
+    "Deathmon (Black)",
+    "Devitamamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The Perfect form of Raremon , who survived the progressive decay of its body through further mechanization, and took on a bizarre appearance. Its body repeatedly breaks down and reconstitutes itself, and eyes and mouths keep emerging and decaying. The foul stench it gives off from its entire body has increased so much that even Ultimates have difficulty approaching it. Because it consumes energy to keep its body intact, it supplies itself with energy by dissolving enemies with its \" Digest \", in which it swallows them whole via the mouth on its head. In addition, it spews toxic \" Decayson \" gas from the many mouths that have formed, and enemies that inhale it will die instantly."
+}

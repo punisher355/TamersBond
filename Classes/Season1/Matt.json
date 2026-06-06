@@ -1,0 +1,63 @@
+{
+  "name": "Matt",
+  "season": 1,
+  "img": "Matt.webp",
+  "abilities": [
+    {
+      "name": "Pack Bond",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Friendship rank 3+)",
+      "description": "Once per encounter you may use your Free Action to grant an ally Digimon within 3 spaces +3 to their next damage roll. You protect what matters to you, even if you won't say it out loud."
+    },
+    {
+      "name": "Solo Run",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Friendship rank 3+)",
+      "description": "Once per encounter when your Digimon is the only Digimon currently active on your side, they gain +2 to all attack rolls and +2 damage. You don't need a team to be dangerous."
+    },
+    {
+      "name": "Cold Front",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Friendship rank 4",
+      "description": "Once per encounter when your Digimon is attacked, you may use your Free Action to grant them +4 to their Reliability for that attack only. The wall goes up before the hit lands."
+    },
+    {
+      "name": "Rival's Fire",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Friendship rank 4",
+      "description": "When an ally Digimon is reduced to 0 HP in the same encounter, your Digimon gains +4 to their next attack roll and +4 damage on that attack. Loss makes them dangerous."
+    },
+    {
+      "name": "I Work Alone",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Solo Run, Friendship rank 5",
+      "description": "Solo Run now activates whenever your Digimon acts before any allied Digimon has taken a turn this round, even if other Digimon are present. First in is always alone."
+    },
+    {
+      "name": "Stand Together",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Pack Bond, Friendship rank 5",
+      "description": "Pack Bond can now target any ally Digimon anywhere on the battlefield, not just within 3 spaces. When you decide to protect someone, distance does not matter."
+    },
+    {
+      "name": "Warp Digivolution",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "At least 1 Row 2 ability, Friendship rank 5",
+      "description": "Your Digimon can now digivolve two stages at once in a single Basic Action, skipping the stage in between. Pay the combined Hope cost of both stages minus 2 to initiate. Warp Digivolution cannot be forced — full cost must always be paid. See Season 1 Rules for full details."
+    },
+    {
+      "name": "The Wall",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Friendship rank 7",
+      "description": "Once per session when an attack would reduce an ally Digimon to 0 HP, you may declare The Wall before the damage is applied. The damage is divided evenly between the ally Digimon and your Digimon — both take half, rounded down. The ally always survives at minimum 1 HP. Your Digimon takes their half normally."
+    }
+  ]
+}

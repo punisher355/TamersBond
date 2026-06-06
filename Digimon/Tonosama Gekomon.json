@@ -1,0 +1,48 @@
+{
+  "name": "Tonosama Gekomon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Kobushi Tone",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Causes the enemy's configuration data to vibrate using the ultra-low frequency waves from its vocals and horns, destroying them."
+  },
+  "digivolves_from": [
+    "Gawappamon",
+    "Gokimon",
+    "Karatuki Numemon",
+    "Octmon",
+    "Raremon",
+    "Sand Yanmamon",
+    "Seadramon",
+    "Shellmon",
+    "Vegimon",
+    "Zassoumon"
+  ],
+  "digivolves_to": [
+    "Bacchusmon",
+    "Giga Seadramon",
+    "King Etemon",
+    "Leviamon",
+    "Metal Etemon",
+    "Plesiomon",
+    "Vikemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese An upgraded version of Gekomon with an antenna resembling the chonmage of a feudal lord. The upgrade is said to have first occurred in a karaoke grading system. It plays a melody from the two horns extending from its shoulders, and its singing voice, which is several octave s below that of Gekomon's, imparts a feeling of a lordly air of superiority (?). Its Special Move is causing the enemy's configuration data to vibrate using the ultra-low frequency waves from its vocals and horns, destroying them ( Kobushi Tone ). However, depending on the opponent, their physical condition may end up improving due to the low frequency waves."
+}

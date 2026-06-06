@@ -1,0 +1,33 @@
+{
+  "name": "Death-X-DORUgoramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Metal Impulse",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "12Blasts everything away except the enemy'sDigicore.Skewers the oppponent with its claws, destroying their data."
+  },
+  "digivolves_from": [
+    "DORUguremon",
+    "Grademon",
+    "Rapidmon Armor"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A figure of the Prototype Digimon \" DORU Series \", experimented on in search of further evolutions, that achieved its ultimate form through \" Death-X-Evolution \". It is called the \" Digicore Predator \" because its own activity is dependent on the Digicores of other Digimon, and is nothing but a threat to them. By continuously preying on the Digicores of other Digimon, it is active despite its deceased condition, and since it stores vast amounts of Digicore information within its body, its entire body is covered in restraints, and so it is barely able to function as a single Digimon. Its Special Moves are blasting everything away except the enemy's Digicore ( Metal Impulse ) and \" DORU Din \".",
+  "web_created": true
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Deathmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 14,
+    "LVE": 10,
+    "KNW": 13,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Death Arrow",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires energy arrows from the eyes on its hands."
+  },
+  "digivolves_from": [
+    "Ex-Tyranomon",
+    "Giromon",
+    "Kaiser Leomon",
+    "Mummymon",
+    "Sephirothmon",
+    "Skull Satamon",
+    "Velgrmon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [
+    "Hadesmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Like Demon , it was originally a high-ranking Angel Digimon, but it fell to the Dark Area and is now one of the Demon Lord Digimon. Despite being a Demon Lord Digimon, it differs from other Fallen Angel and Devil Digimon in that it does not dedicate itself to performing evil deeds, but instead it simply maintains a neutral position as a silent observer. However, it is a terrifying Digimon, and it is told that when the impending final battle arrives, its whitened appearance will change to jet-black darkness, and it will transform into a god of destruction. Its Special Moves are an arrow of death fired from the evil eye s on its hands ( Death Arrow ), and a destructive beam fired when the eye in its head shines deep crimson ( Explosion Eye ). Deathmon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Ino Takahiro from Yamagata prefecture ."
+}

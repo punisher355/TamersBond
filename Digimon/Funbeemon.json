@@ -1,0 +1,48 @@
+{
+  "name": "Funbeemon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Plant",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 2,
+    "KNW": 3,
+    "SNC": 4,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Gear Stinger",
+    "element": "Plant",
+    "pr": 3,
+    "tags": "[RANGE 4]",
+    "description": ""
+  },
+  "digivolves_from": [
+    "Mochimon",
+    "Puroromon",
+    "Tanemon"
+  ],
+  "digivolves_to": [
+    "Dokugumon",
+    "DORUgamon",
+    "Forgebeemon",
+    "Flymon",
+    "Ginryumon",
+    "Gold Numemon",
+    "Guardromon (Gold)",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Omekamon",
+    "Raptordramon",
+    "Stingmon",
+    "Togemon",
+    "Waspmon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Insect Digimon that belongs to the mysterious \"aerial, covert honey base, Royal Base \". Although its daily life differs from that of other Insect Digimon, it is a strong, dedicated worker due to its personality being so cheerful. It always gets along with Plant Digimon like Palmon or Lilimon . Because the base is usually under construction, it has the duty of carrying home data left on fields of flowers or vegetation, little by little, to use as raw materials, causing it to be classified as a Virus-species. Also, because the base is defended by powerful Digimon, making it impossible to approach, the goal of that construction is a mystery at present. Its Special Move is rapid-firing tiny, serrated stingers ( Gear Stinger ). Also, because a huge crowd of its comrades are summoned when it uses its \" 88 Call \", in which it reddens the antennae on its head and contacts its allies, it would be wisest to just run away.",
+  "web_created": true
+}

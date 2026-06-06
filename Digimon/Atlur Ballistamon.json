@@ -1,0 +1,35 @@
+{
+  "name": "Atlur Ballistamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 8,
+    "SNC": 9,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Plasma Crack",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Unleashes bolts of lightning from the claws on its back, with power comparable toSusanoomon'sYakusa-no-Ikadzuchi."
+  },
+  "digivolves_from": [
+    "Ballistamon",
+    "Mail Birdramon"
+  ],
+  "digivolves_to": [
+    "Grand Locomon",
+    "Mugendramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The evolved form of Ballistamon . Electromagnetic armor has been assimilated into its thickened metallic body, allowing it to reduce damage using magnetism and attack with electrical discharges. Sporting a kind personality, Atlur Ballistamon obstructs its foes, acting as a defensive wall for its allies on the battlefield. Its Special Moves are putting its two fists together to generate and unleash an electrical attack ( Plasma Crack ), and dishing out a punch that will reach anywhere ( Rocket Bunker )."
+}

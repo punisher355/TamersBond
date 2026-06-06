@@ -1,0 +1,38 @@
+{
+  "name": "Sistermon Noir",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Mickey Bullet",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Rapidly fires bullets from bothAnthonyguns at random directions."
+  },
+  "digivolves_from": [
+    "Dracumon",
+    "Lunamon",
+    "Sistermon Blanc"
+  ],
+  "digivolves_to": [
+    "Lady Devimon",
+    "Pandamon",
+    "Sistermon Ciel (Awake)",
+    "Sistermon Noir (Awake)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A nun Digimon wearing a klobuk shaped like the head of a black cat, it has a sisterly relationship with Sistermon Blanc . It breaks the ice with its extremely cheerful personality and innocent behavior. It was charged with Hackmon 's care by Gankoomon , and is training Hackmon while accompanying Gankoomon on its journey. However, Sistermon Noir is working half for training, half for fun, and will point its guns and laugh even while admitting that Hackmon is sad. A long time ago, in its previous life, it was out on the streets with its younger sister Blanc, but they were saved by Gankoomon just as they were going to collapse from exhaustion. It carries guns called \" Anthony \" in its hands, and for its Special Moves it has the random firing of its \" Mickey Bullet \", rapidly firing the bullets from both in a straight line ( Bless Fire ), and furthermore, its \" Grand Sister Cruz \" which matches its movements with its younger sister and brings down the opponent.",
+  "web_created": true
+}

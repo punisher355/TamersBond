@@ -1,0 +1,33 @@
+{
+  "name": "Tengumon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "MaenZanshūgeki",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Unleashes a kick while slashing with the blades on the bottom of itsgeta."
+  },
+  "digivolves_from": [
+    "Karatenmon"
+  ],
+  "digivolves_to": [
+    "Enmamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Daitengu Digimon that lives in the dark depths of the mountains with Karatenmon serving as its followers. The Karatenmon train daily under Tengumon, but ultimately, the trial imposed upon them is defeating Tengumon. Moreover, the one who defeats it evolves into the next Tengumon. It is said that the new Tengumon will firstly wave its Genriki -filled gunbai and then cause a natural disaster to announce their succession. Its Special Move is unleashing a kick while slashing with the blades on the bottom of its geta ( Maen Zanshūgeki ). Its \" Sonten Daireppū \", in which it channels all of its Genriki into its gunbai and waves it, unleashing a tornado that can lift even boulders, is both feared and lauded by mountain Digimon as it boasts the power to incinerate opponents along with the terrain."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Imperialdramon: Fighter Mode (Black)",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Positron Laser",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[RANGE 8]",
+    "description": "Fires an energy blast from thePositron Laseron its left arm."
+  },
+  "digivolves_from": [
+    "Digitamamon",
+    "Dinobeemon",
+    "Paildramon",
+    "Waru Seadramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A form that controlled the berserk Imperialdramon: Dragon Mode (Black) with a heart of darkness, changing its form into a Virus Fighter Mode . It rejects Vaccine Digimon, and prefers targeting Digimon affiliated with the Virus Busters in particular to eliminate them. In addition to being fired for bombardments, the \" Positron Laser \" equipped to its left arm turns into the \" Positron Laser Lance \" by extending the heat sink , and delivers a powerful blow. Also, its \" Giga Death \", in which it inserts the Positron Laser into the dragon-face on its chest, and then emits all of its body's energy as a destructive energy wave, now has unfathomable offensive ability with increased destructive power.",
+  "web_created": true
+}

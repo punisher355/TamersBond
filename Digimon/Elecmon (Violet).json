@@ -1,0 +1,58 @@
+{
+  "name": "Elecmon (Violet)",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Jamming Thunder",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Shoots electricity generated from the static of rubbing its tails together, interfering with communications in the process."
+  },
+  "digivolves_from": [
+    "Pyocomon"
+  ],
+  "digivolves_to": [
+    "Aegiomon",
+    "Boarmon",
+    "Bomber Nanimon",
+    "Centalmon",
+    "Cockatrimon",
+    "Geremon",
+    "Hookmon",
+    "Hyougamon",
+    "Ikkakumon",
+    "Leomon",
+    "Liamon",
+    "Lighdramon",
+    "Mad Leomon",
+    "Moosemon",
+    "Numemon",
+    "Red Vegimon",
+    "Sheepmon",
+    "Shima Unimon",
+    "Tailmon",
+    "Thunderballmon",
+    "Tuskmon",
+    "Vegimon",
+    "Whamon",
+    "Woodmon",
+    "Zassoumon",
+    "Mad Leomon: Armed Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Elecmon that evolved into a Virus-type. It has an unpleasant personality that bullies indiscriminately, and dextrously uses its tails to strike the enemy. Its Signature Move is unleashing a nine-hit combo with its nine tails ( Tail Dusk ). Its Special Move is generating electricity with the static produced by rubbing its tails together, causing interference through jamming waves ( Jamming Thunder )."
+}

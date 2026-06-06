@@ -1,0 +1,41 @@
+{
+  "name": "Knight Chessmon (Black)",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Gottsumon",
+    "Hagurumon",
+    "Pawn Chessmon (Black)",
+    "Pawn Chessmon (White)"
+  ],
+  "digivolves_to": [
+    "Astamon",
+    "Bishop Chessmon (White)",
+    "Caturamon",
+    "Dark Superstarmon",
+    "Megalo Growmon",
+    "Pandamon",
+    "Rook Chessmon (Black)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "It is an expert at throwing its gigantic Darts . Although it is unskilled in close combat, it capitalizes on its thoroughbred-like leg strength, jumping over the opponent and confounding them with its leaping power. Its catchphrase is, \" Joust! \". Its Special Moves are \" Big Darts \", and leaping high into the sky and landing with a blow that tramples the opponent ( Gallop Whole ). Also, it will tilt the Darts and charge into the opponent ( Knight Lancer )."
+}

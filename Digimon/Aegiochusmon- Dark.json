@@ -1,0 +1,34 @@
+{
+  "name": "Aegiochusmon: Dark",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Dark",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Triangler",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE] [CHAIN 3,4] [RUSH]",
+    "description": "Chops up the enemy with its three scythes."
+  },
+  "digivolves_from": [
+    "Aegiomon"
+  ],
+  "digivolves_to": [
+    "Chronomon: Destroy Mode",
+    "Jupitermon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A God Man Digimon which synthesized the abilities of various species, using a humanoid body as a base. This synthesis of species is said to have resulted from the pursuit of the ultimate state, or omnipotence, dramatically altering its appearance to match its surroundings. Because this form is composed of data taken from the Evil-species, the Evil-species data that lay dormant in its body has spread over its entire body, centered upon the crystal in its chest. The malevolence of the Evil-species has flooded its body and soul, and it regards all those it sees to be its prey and hunts down its enemies. The red electric shocks emanating from its body hide viruses, and it could be said that it is a special Digimon that generates viruses in spite of being a Digimon of the Vaccine attribute. The technique where it transmits viruses into the wounds of the enemy it has dealt damage to, undermining it from the inside, is completely menacing. Its special moves are \" Triangler \", wherein it chops up the enemy with its three scythes, \" Plasmadness \", wherein it gathers dark electric shocks on both of its hands and showers the foe with them, and \" Death Dinner \", wherein it mounts the opponent and instinctively preys upon it.",
+  "web_created": true
+}

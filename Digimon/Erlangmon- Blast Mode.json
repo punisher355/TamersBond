@@ -1,0 +1,31 @@
+{
+  "name": "Erlangmon: Blast Mode",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 17,
+    "LVE": 12,
+    "KNW": 16,
+    "SNC": 18,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Banshō Ikkan",
+    "element": "Neutral",
+    "pr": 13,
+    "tags": "[MELEE]",
+    "description": "Concentrates the energy surging from its third eye and shoots it clean through the enemy."
+  },
+  "digivolves_from": [
+    "Erlangmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The awakened form Erlangmon puts on display after unleashing its power to the utmost limit only when eliminating enemies that it is incapable of defeating, even if they are observed with its third eye . It wears a transformed Kōtenken as armor, and the third eye above its head has the power to see through everything. It fights while \"observing\" all things, including the opponent's thoughts as well, with its awakened third eye, and tears the enemy to pieces with the Sān Jiān Liǎng Rèn Dāo , which has turned into a gigantic energy form. It is safe to say that its fighting style, which can even foresee the future, is invincible. However, since Erlangmon's third eye is also its Digicore , it can be considered to be a dangerous form whose overwhelming strength comes at the expense of its Digicore being virtually exposed. Furthermore, the burden of managing its immense power and the information it observes is huge, so it cannot maintain this form for long. Its Special Move is concentrating the energy surging from its third eye and shooting it clean through the enemy ( Banshō Ikkan ). In addition, it uses its unrivaled foresight to identify all of the enemy's behavioral patterns based on their physical and mental activity, and anticipate all of their attacks ( Tengan Kensei ).",
+  "web_created": true
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Pucchiemon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 6,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Heartner Beam",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Releases a soft light that causes a loss of fighting spirit and soothes the hearts of its enemies."
+  },
+  "digivolves_from": [
+    "Monodramon",
+    "Solarmon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Lilimon",
+    "Phelesmon",
+    "Pucchiemon (Green)",
+    "Meicrackmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Fairy Digimon which evolved through the power of the \" Digimental of Kindness \". Owning a whimsical personality, it loves to have its head stroked and to share secrets with others, and can be found singing songs when in a good mood. However, it hates having its tail touched, and it will fall into a foul mood and refuse to listen to you if you keep trying. Its power isn't strong, but it has the strange ability to becalm its opponents. Furthermore, Pucchiemon of a green color are known to exist, but their numbers are very low, so their presence is considered to be quite valuable. Its Special Move releases a soft light that causes a loss of fighting spirit and soothes the hearts of its enemies ( Heartner Beam ).",
+  "web_created": true
+}

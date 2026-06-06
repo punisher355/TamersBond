@@ -1,0 +1,44 @@
+{
+  "name": "Yatagaramon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 6,
+    "LVE": 8,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Mikafutsu-no-kami",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Concentrates energy produced by theDokkoshoin its forelegs, then fires it."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "Diatrymon",
+    "Nohemon",
+    "Peckmon",
+    "Seahomon",
+    "Tyranomon",
+    "XV-mon",
+    "XV-mon (Black)"
+  ],
+  "digivolves_to": [
+    "Hououmon",
+    "Minervamon",
+    "Rosemon",
+    "Spinomon",
+    "Zhuqiaomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Possessing three legs, it is a bizarre Bewitching Bird Digimon. Although its jet-black body presents an evil image to those who see it, it is told that it is the Digimon who guides the chosen to the \" Golden Land \" in the eastern part of the Digital World . The eastern part of the Digital World is a region where there are still many mysteries, and it is said that the \"Golden Land\" is protected by multiple sacred barriers. Although it is said that with Yatagaramon's guidance the barriers will be released, traditionally, only those who surmount the \"Threefold Trials\" submitted by Yatagaramon will finally arrive at the \"Golden Land\", and it is told that those who were not able to endure the trials are dispatched to the Dark Area . Its Special Move is concentrating the energy produced from the Dokkosho on both of its wings in its forelegs, then firing it ( Mikafutsu-no-kami ). Digimon who have suffered this technique have their digital cells disassembled to a state of \"0\"s and \"1\"s. Also, it is able to transform the surrounding 3 km into a dark night by means of its \" Haguro \", a black light emitted from its jet-black feathers."
+}

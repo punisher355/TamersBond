@@ -1,0 +1,30 @@
+{
+  "name": "Metallicdramon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 11,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Laser Cannon",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[RANGE 8]"
+  },
+  "digivolves_from": [
+    "Jazarichmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Digimon that flies at the highest altitudes of the Digital World at the speed of light , even other flying Digimon cannot catch sight of it. According to one theory, it is said that if Metallicdramon flaps its wings from high in the sky, mysterious particles will be scattered that preserve the harmony of the Digital World. It seems that when Metallicdramon reduces its altitude so that it is visible, it is a sign that something is about to happen. Its Special Move is annihilating things in a straight line with a powerful beam that it accumulates in the laser gun on its tail ( Laser Cannon ). The light that is emitted the moment this technique is invoked can be seen from 10 km away, and those who have witnessed it directly at close range are blinded by its overwhelming radiance. Furthermore, it sets the laser on its tail to being a sword, then charges and slashes with it at high speed ( Laser Saber )."
+}

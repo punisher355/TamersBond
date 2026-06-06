@@ -1,0 +1,54 @@
+{
+  "name": "Icemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Iceball Bomb",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Throws a solid frozen bomb of ice."
+  },
+  "digivolves_from": [
+    "Alraumon",
+    "Gomamon",
+    "Gottsumon",
+    "Kamemon",
+    "Lunamon",
+    "Plotmon",
+    "Shamamon",
+    "Snow Goburimon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Big Mamemon",
+    "Blue Meramon",
+    "Crescemon",
+    "Cyberdramon",
+    "Etemon",
+    "Hangyomon",
+    "Insekimon",
+    "Mamemon",
+    "Panjyamon",
+    "Vademon",
+    "Volcamon",
+    "Were Garurumon",
+    "Zudomon",
+    "Nanomon (Digimon)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon whose body is made of ice. Whether it is an evolution or a mutation of Gottsumon is still a mystery, and research continues to be done on that matter. Its Special Move is throwing a solid frozen bomb of ice ( Iceball Bomb )."
+}

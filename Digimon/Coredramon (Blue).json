@@ -1,0 +1,48 @@
+{
+  "name": "Coredramon (Blue)",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Fire",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Blue Flare Breath",
+    "element": "Fire",
+    "pr": 7,
+    "tags": "[RANGE 4] [BURN 3,2]"
+  },
+  "digivolves_from": [
+    "Agumon (Black)",
+    "DORUmon",
+    "Dracomon",
+    "Guilmon",
+    "Hackmon",
+    "Kotemon",
+    "Lunamon",
+    "Monodramon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Black Megalo Growmon",
+    "Blue Meramon",
+    "Cyberdramon",
+    "Gigadramon",
+    "Groundramon",
+    "Mega Seadramon",
+    "Megalo Growmon",
+    "Rize Greymon",
+    "Wingdramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "Digimon bearing the name \" Dramon \" always have Dragon-factor data in their Digicore , and the higher the percentage of that data, the more the shape of their body resembles a Dragon-type, but Coredramon's Dragon-factor data has reached 100%, so it is undoubtedly a pure-blooded Dragon Digimon. The blue-skinned Coredramon is said to be the evolved form of a Dracomon that ingested large quantities of a rare gem called \" Blue Diamante \", which is mined only in mountainous regions with very high altitudes, and is able to fly at high speed with its developed wings to survive in the steep mountains. Its Special Moves are unleashing a scorching breath that shines blue ( Blue Flare Breath ), and using its powerful tail to deliver a bitter blow to the opponent ( Strike Bomber ). \" Blue Flare Breath \" is effective at decomposing the texture data covering the surface of a Digimon's body, so Digimon that suffer this breath will be susceptible to attacks on their exposed Digicores. Like Dracomon, it has a scale referred to as the \" Gekirin \", and if it is touched there, it loses its mind to an excess of anger, and indiscriminately fires its \" G Shurunen-II \", a diverging laser beam in which it makes the horns on its head glow intensely, then fires from its mouth."
+}

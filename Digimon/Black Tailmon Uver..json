@@ -1,0 +1,53 @@
+{
+  "name": "Black Tailmon Uver.",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Neko Punch",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Uses its long claws and attacks the opponent."
+  },
+  "digivolves_from": [
+    "Espimon",
+    "Ludomon",
+    "Bakumon",
+    "Floramon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gaomon",
+    "Gazimon",
+    "Impmon",
+    "Lopmon",
+    "Patamon",
+    "Pico Devimon",
+    "Piyomon",
+    "Plotmon",
+    "Psychemon",
+    "Renamon",
+    "Terriermon",
+    "Tukaimon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Digitamamon",
+    "Manticoremon",
+    "Piccolomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A form that Black Tailmon transformed into by absorbing large amounts of courier service data that flowed into the Digital World in recent years. Its mean personality has completely gone, and it delivers ordered packages with full dedication, whatever the day. It is often seen delivering things while clinging to the back of Pistmon , who it is on good terms with. The delivery bag on its back is capable of keeping anything warm or cool in optimal condition, and since it can only be opened and closed by Black Tailmon, it is safe even for confidential data. It eliminates Digimon that get in the way of its deliveries with its Signature Move \" Neko Punch \", or \" Bakōnya \", in which it hits them with the corner of its delivery bag that it swings down. Even if it deals a great amount of damage to the enemy with \" Bakōnya \", its delivery bag is so durable that its contents will remain completely intact.",
+  "web_created": true
+}

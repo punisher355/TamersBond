@@ -1,0 +1,33 @@
+{
+  "name": "Done Devimon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Mamemon",
+    "Mummymon",
+    "Neo Devimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A form of Devimon that took in negative data to its limit and became an Ultimate. Its mental state is between normal and abnormal, and once it is angered, its intelligence vanishes, and it attacks in a ferocious manner. Digimon that are attacked by a berserk Done Devimon disappear without a trace. Its Special Moves are piercing the opponent's entire body ( Destroy Claw ), a destructive energy wave emitted from its mouth ( Ultimate Flare ), and crushing the opponent with its two arms, which materialize as a result of its overflowing negative data ( Mias - spew )."
+}

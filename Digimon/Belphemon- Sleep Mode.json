@@ -1,0 +1,40 @@
+{
+  "name": "Belphemon: Sleep Mode",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 12,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Lampranthus",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Casts black flames from the chains coiled around its body."
+  },
+  "digivolves_from": [
+    "Andiramon (Deva)",
+    "Astamon",
+    "Digitamamon",
+    "Ex-Tyranomon",
+    "Fantomon",
+    "Insekimon",
+    "Megadramon",
+    "Wisemon"
+  ],
+  "digivolves_to": [
+    "Ogudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Demon Lord Digimon said to be sealed in the deepest parts of the Dark Area . As the strength it possesses is too immense, its data is said to have been put in a sleep state by the Digital World 's system , although the truth of the matter is uncertain. Because it has fallen into a deep sleep, it cannot unleash attacks on its own, but it is able to inflict damage on Digimon with just its snores, and for that reason it won't be easy to attack Belphemon: Sleep Mode in its sleep. Its Special Moves are the \" Eternal Nightmare \" it invokes with its peaceful snoring, and black flames produced from the chains coiled around its body ( Lampranthus ). Those suffering from a lack of sleep are encouraged to experience an \" Eternal Nightmare \"; it will promise an eternal slumber.",
+  "web_created": true
+}

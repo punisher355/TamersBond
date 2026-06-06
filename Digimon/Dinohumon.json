@@ -1,0 +1,60 @@
+{
+  "name": "Dinohumon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 5,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Lizard Dance",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Uses dance-like movements to cut the opponent with the blades on its arms andAkinakes."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Betamon",
+    "Bokomon",
+    "DORUmon",
+    "Hyokomon",
+    "Kamemon",
+    "Kotemon",
+    "Monodramon",
+    "Patamon",
+    "Pico Devimon",
+    "Tentomon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Black Rapidmon",
+    "Cerberumon",
+    "Cyberdramon",
+    "Dinobeemon",
+    "Grademon",
+    "Hisyaryumon",
+    "Jyureimon",
+    "Knightmon",
+    "Kyukimon",
+    "Marin Devimon",
+    "Mephismon",
+    "Mummymon",
+    "Orochimon",
+    "Paildramon",
+    "Shawujinmon",
+    "Volcdramon",
+    "Cerberumon: Werewolf Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Dragon Man Digimon with the appearance of a humanoid lizard. It lives in an area that has not yet become a modernised civilisation, where all of the tribesmen are valiant combat dragons who possess the makings of a warrior. It has great muscle strength, allowing its to swing its greatsword, Akinakes , with ease. Its Special Move is doing dance-like movements and cutting the opponent with the blades on its arms and Akinakes ( Lizard Dance )."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Ceresmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Island Freefall",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Slams its huge body against the opponent, inflicting damage from the intense shock wave and vibrations around the area where it falls."
+  },
+  "digivolves_from": [
+    "Blossomon",
+    "Delumon",
+    "Jyureimon",
+    "Lilimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the Olympos XII , Ceresmon is a monstrous, gigantic bird Digimon that carries on its back the \" Karpos Hulē \", a forest bearing the Digital World 's greatest sweets and famous fruits. With a body composed of rocks and rich, fertile soil, Ceresmon's soaring form is definitely the epitome of an island floating in the sky. Sitting on the head of Ceresmon is \" Ceresmon Medium \", which serves as its true form. \"Ceresmon Medium\" has practically nil fighting strength and so rarely, if ever, comes out in public on its own, but it is said that it will occasionally show itself unattended by the monstrous bird to those who earn its trust. Its personality is filled with gentleness and a kind heart, and it is said that it offers fruit from the \" Karpos Hulē \" to hungry Digimon, and shelters injured Digimon in its woods until they recuperate. However, it will reverse its attitude and bring terror as if a demonic forest to those who forget the blessings granted by the forests and land, and unnecessarily injure the trees or pollute the soil. Its Special Move \" Island Freefall \", in which it slams its huge body against the opponent, inflicts damage from the intense shock wave and vibrations around the area where it falls. For its \" Burning Blood Shell \", it fires a magma bodily fluid from its mouth as an enormous flame shot. The unripe fruit from the \" Karpos Hulē \" has high concentrations of poison, and its \" Fruits Flechette \", in which it scatters them over a wide range, transforms its surroundings into a land of death with that poison upon impact. However, the poison changes into high-quality fertilizer after several days, and then it is reborn as a fertile land."
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Black King Numemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Earth",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 7,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Dark Pupil",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "12Fires black beams from its round eyes.Throws poisonous black poop at the enemy."
+  },
+  "digivolves_from": [
+    "Geremon",
+    "Gold Numemon",
+    "Karatuki Numemon",
+    "Numemon",
+    "Raremon",
+    "Scumon",
+    "Tesla Jellymon"
+  ],
+  "digivolves_to": [
+    "Cthyllamon",
+    "Giga Seadramon",
+    "Metal Etemon",
+    "Platinum Numemon",
+    "Prince Mamemon",
+    "Shin Monzaemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A jet-black Numemon that has established its position as King of the dark trash data world and became a Perfect. It carries a crown it picked up on its back like a shell, and also grew a mustache. As it is dignified, it tries to refrain from poop attacks which violate its dignity, but uses them on impulse. Its Special Move is firing black beams from its round eyes ( Dark Pupil ). Also, its \" Poison Mucus \", in which it splashes a liquid that its mouth contains copious amounts of, makes the body smelly and sticky, and poisons it, causing insufferable pain.",
+  "web_created": true
+}

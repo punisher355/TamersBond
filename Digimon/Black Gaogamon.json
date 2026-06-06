@@ -1,0 +1,34 @@
+{
+  "name": "Black Gaogamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Dash Double Claw",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Runs up to the enemy and slashes with the claws on both forepaws."
+  },
+  "digivolves_from": [
+    "Gabumon (Black)",
+    "Gaomon"
+  ],
+  "digivolves_to": [
+    "Black Mach Gaogamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon that resulted as Gaomon 's physique got larger, its claws that were once protected by gloves have grown steadily. \" Black Digitron \" was mixed in during its growth process, resulting in it taking on this black form. It is more resilient and takes less damage as compared to normal Gaogamon , at the expense of its speed. Its Special Moves are approaching the opponent at a speed faster than the eye can see and unleashing its \" Dash Double Claw \", and biting the opponent with its sturdy teeth, not letting go until they collapse ( Gaoga Hound ). Also, it can release a powerful vortex of wind from its mouth in one breath ( Spiral Blow )."
+}

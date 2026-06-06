@@ -1,0 +1,63 @@
+{
+  "name": "Kuwagamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Scissor Arms",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "123Slices with its claws.Easily cuts anything to pieces with its head scissors.Dive-bombs from the sky."
+  },
+  "digivolves_from": [
+    "Dokunemon",
+    "Elecmon",
+    "Funbeemon",
+    "Gizamon",
+    "Goburimon",
+    "Hagurumon",
+    "Kokabuterimon",
+    "Kokuwamon",
+    "Kotemon",
+    "Kunemon",
+    "Mushmon",
+    "Otamamon",
+    "Palmon",
+    "Piyomon",
+    "Shamamon",
+    "Tentomon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Cannonbeemon",
+    "Infermon",
+    "Jyureimon",
+    "Lilimon",
+    "Megalo Growmon (Orange)",
+    "Metallife Kuwagamon",
+    "Monzaemon",
+    "Okuwamon",
+    "Piccolomon",
+    "Taomon (Silver)",
+    "Tekkamon",
+    "Vademon",
+    "Zudomon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Insect Digimon armed with gigantic pincers on its head. Like Kabuterimon , it has combat abilities that far exceed those of similar species that inhabit File Island . It is protected by its tenacious power and sturdy shell, and in particular, as the power of its pincers is super-powerful, once it clamps an enemy it will squeeze until the opponent's life is extinguished. There is a perfect rivalry between it and the Vaccine-attribute Kabuterimon, and there is only \"Conflict\" between them. Its Special Move is able to easily cut hard substances to pieces ( Scissor Arms )."
+}

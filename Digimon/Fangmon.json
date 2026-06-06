@@ -1,0 +1,49 @@
+{
+  "name": "Fangmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Dark",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 4,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Blast Coffin",
+    "element": "Dark",
+    "pr": 7,
+    "tags": "[RANGE 5] [BLAST 1]"
+  },
+  "digivolves_from": [
+    "Bearmon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gazimon",
+    "Impmon",
+    "Palmon",
+    "Plotmon",
+    "Psychemon",
+    "Strabimon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Archnemon",
+    "Assaultmon",
+    "Cerberumon",
+    "Ex-Tyranomon",
+    "Jewelbeemon",
+    "Marin Devimon",
+    "Vamdemon",
+    "Were Garurumon",
+    "Cerberumon: Werewolf Mode"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Demon Beast Digimon that lives deep in the heart of the forest, and preys upon those who lose their way. It is said that it is definitely the data of the Big Bad Wolf that appears within many fairy-tales, become a Digimon, and once it sets its sights on a prey they will never escape, as it sometimes goes so far as to disguise itself as someone dear to its prey in order to get closer. It has a heretical existence among Dog and Wolf-species Digimon, and if Garurumon is a being of the light, then Fangmon is a being of darkness. Its Signature Move is stealing things like weapons and items from the opponent, using its sharpened agility ( Snipe Steal ). Its Special Move is \" Blast Coffin \"."
+}

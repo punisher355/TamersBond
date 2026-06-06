@@ -1,0 +1,44 @@
+{
+  "name": "Dogmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "DistemHowling",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Damages the opponent's sense of hearing with a great howl, making them lose their fighting spirit."
+  },
+  "digivolves_from": [
+    "Angoramon",
+    "Bakumon",
+    "Clear Agumon",
+    "Dracumon",
+    "Labramon",
+    "Renamon",
+    "Terriermon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Cerberumon",
+    "Digitamamon",
+    "Metal Greymon (Virus)",
+    "Oleamon",
+    "Cerberumon: Werewolf Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Puppet Digimon that was produced from an American cartoon TV database. Because its body is very soft and strong, and can expand and contract like rubber, it completely absorbs every attack. Although its appearance gives off the impression that it is very dangerous, it is a harmless Digimon with no malice or aggression. Its Signature Move is inflicting damage to the opponent's sense of hearing with a great howl, making them lose their fighting spirit ( Distem Howling ). Its Special Move \" Ultra Kamitsuku \" is an intense technique in which it snaps at them with its sharp fangs. Dogmon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Higuchi Keiichi from Hyōgo prefecture .",
+  "web_created": true
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Black Tailmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Neko Punch",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Attacks the opponent with its long claws."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Floramon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gaomon",
+    "Gazimon",
+    "Impmon",
+    "Lopmon",
+    "Patamon",
+    "Pico Devimon",
+    "Piyomon",
+    "Plotmon",
+    "Psychemon",
+    "Renamon",
+    "Terriermon",
+    "Tukaimon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Andiramon (Deva)",
+    "Betsumon",
+    "Cyberdramon",
+    "Dark Superstarmon",
+    "Death Meramon",
+    "Holy Angemon",
+    "Knightmon",
+    "Lady Devimon",
+    "Neo Devimon",
+    "Pandamon",
+    "Skull Baluchimon",
+    "Waru Monzaemon",
+    "Were Garurumon (Black)",
+    "Meicrackmon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Virus attribute Tailmon who sports vivid, pitch-black fur. A child completely born of evil, it lives its life treading through the ominous darkness. Black Tailmon is a variety of Tailmon that is born very rarely, and as such is said to have a low population size. It has a mean and prideful personality, and is a problematic Digimon that loves picking on the weak. It is a dark-type Digimon that generally evolves into Fallen Angel Digimon. Its Special Move is \" Neko Punch \", the same as Tailmon's."
+}

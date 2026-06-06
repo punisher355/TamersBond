@@ -1,0 +1,41 @@
+{
+  "name": "Marin Chimairamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Ankylomon",
+    "Chamblemon",
+    "Ikkakumon",
+    "Octmon",
+    "Tobiumon",
+    "Yukidarumon"
+  ],
+  "digivolves_to": [
+    "Giga Seadramon",
+    "Platinum Numemon",
+    "Plesiomon",
+    "Regalecusmon",
+    "Vikemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Composite Digimon that was created by putting together the parts of various Aquatic Digimon. It is thought to have been produced using the same technology as Chimairamon , but other than that, it is a complete mystery. It appears out of nowhere like a gust of wind, bringing devastation to ecosystems with its terrifying destructive impulses, and then disappears somewhere else. Its Special Moves are generating a large whirlpool by rapidly spinning its whole body ( Poseidon Vortex ), and vaporizing its surroundings with a massive amount of energy released from the tip of its horn ( Aqua Viper )."
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Yuramon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Budmon",
+    "Koromon",
+    "Peti Meramon",
+    "Tanemon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Seed Digimon whose whole body is covered in a substance with the appearance of long, soft hair. When it hatches from its Digitama , it seeks an environment suitable for its growth, and drifts lightly through the air, like a dandelion seed. If it finds a place where there will be no intruders and where the environment is good, it will settle to the ground and begin preparations for evolution. Its offensive ability is practically nil, so it will spit out adhesive bubbles to hinder the opponent's movement, then seize the opportunity to escape."
+}

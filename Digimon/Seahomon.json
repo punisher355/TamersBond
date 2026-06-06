@@ -1,0 +1,38 @@
+{
+  "name": "Seahomon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Water",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Prism Rainbow",
+    "element": "Light",
+    "pr": 5,
+    "tags": "[RANGE 4] [CONFUSE]",
+    "description": "Spews out a seven-colored beam from its trumpet-like mouth. This technique has the effect of purifying all feelings of conflict such as the enemy's belligerence and hatred."
+  },
+  "digivolves_from": [
+    "Goburimon",
+    "Kudamon",
+    "Swimmon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Marin Devimon",
+    "Whamon Perfect",
+    "Yatagaramon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An Armor-level Aquatic Digimon that evolved through the power of the \" Digimental of Light \". It inhabits places with high water pressure in the deepest trenches of the Net Ocean , so it has a small build, but when it rises up to an area of the ocean with shallow water, it seems that it becomes even larger than Seadramon-species Digimon. Although it is still a hypothesis, it is rumored that Seahomon is a survivor of ancient Digimon said to have perished in the past, and that it might have something to do with Seadramon-species Digimon. Its Special Move is spewing out a seven-colored beam from its trumpet-like mouth ( Prism Rainbow ). This technique has the effect of purifying all feelings of conflict such as the enemy's belligerence and hatred.",
+  "web_created": true
+}

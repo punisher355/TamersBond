@@ -1,0 +1,42 @@
+{
+  "name": "Chaos Dukemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Judecca Prison",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Fires a dark corrosive wave fromGorgon.Charges forward with an electrifiedBalmung."
+  },
+  "digivolves_from": [
+    "Andiramon (Deva)",
+    "Atlur Kabuterimon (Red)",
+    "Black Megalo Growmon",
+    "Knightmon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Mistymon",
+    "Shakkoumon",
+    "Wisemon"
+  ],
+  "digivolves_to": [
+    "Dukemon: Crimson Mode",
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Another form of Dukemon , which has awoken to its instincts as a Virus-species. Its heart and thoughts are completely Dark Side, and it is nothing more than the \" Digital Hazard \" that brings calamity to the Digital World . It is clad in black, demonic armor refined from high purity Chrome Digizoid just like Dukemon, and its right hand can become the demonic lance \" Balmung \" while its left hand can become the demonic shield \" Gorgon \". It is definitely a being set in opposition to Dukemon. Its Special Moves are the powerful barrage of attacks of its demonic lance ( Demon's Disaster ), and firing a dark wave which corrodes everything from the demonic shield in its left hand ( Judecca Prison ).",
+  "web_created": true
+}

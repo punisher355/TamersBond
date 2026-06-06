@@ -1,0 +1,51 @@
+{
+  "name": "Kyubimon (Silver)",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Koenryuu",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Creates a burning dragon out of blue flames from its tails and incinerates the enemy."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Floramon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Lopmon",
+    "Renamon",
+    "Snow Goburimon"
+  ],
+  "digivolves_to": [
+    "Andiramon (Deva)",
+    "Chimairamon",
+    "Gigadramon",
+    "Kyukimon",
+    "Mephismon",
+    "Rapidmon Perfect",
+    "Sandiramon",
+    "Taomon",
+    "Taomon (Silver)",
+    "Vajramon",
+    "Vamdemon",
+    "Waru Monzaemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A subspecies of Kyubimon whose fur is silver. Although it's less intelligent than Kyubimon , it seems to have excellent speed. Digimon World -next 0rder- ⇨ English キュウビモンの亜種で、体毛の色が銀色。キュウビモンよりも知性は劣るものの、速度に優れる様だ。 デジモンワールド -next 0rder-"
+}

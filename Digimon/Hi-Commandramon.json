@@ -1,0 +1,37 @@
+{
+  "name": "Hi-Commandramon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "DCD Grenade",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Fires from its multi-grenade launcher."
+  },
+  "digivolves_from": [
+    "Commandramon",
+    "Hagurumon",
+    "Kokuwamon"
+  ],
+  "digivolves_to": [
+    "Cargodramon",
+    "Orochimon",
+    "Tankdramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A heavy infantry Digimon from the mechanized \" D-Brigade \". It is said that many of those that have not been chosen in \"Selection-D\", a special selection test that screens through 100 Commandramon , evolve into Hi-Commandramon. Its main role is to act as a \"shield\", defending Commandramon assault troops with its enormous build and protective shield. The surface of its skin has been modified with a special texture similar to Commandramon's, and has the function of displaying its surrounding colors in real-time. Its Special Moves are firing from its multi-grenade launcher ( DCD Grenade ), and performing a ramming attack with its protective shield ( Destroy Charge ). DCD Grenade is equipped with a special warhead, and is capable of instantly switching between high-explosive shells, smoke bombs, and sound grenade s ."
+}

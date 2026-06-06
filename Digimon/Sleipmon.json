@@ -1,0 +1,50 @@
+{
+  "name": "Sleipmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 10,
+    "SNC": 13,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Bifröst",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires incandescent arrows of light from the sacred crossbowMuspellsheimr."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Atlur Kabuterimon (Blue)",
+    "Blossomon",
+    "Crescemon",
+    "DORUguremon",
+    "Enbarrmon",
+    "Grademon",
+    "Mach Gaogamon",
+    "Mamemon",
+    "Mammon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Piccolomon",
+    "Rapidmon Perfect",
+    "Rize Greymon",
+    "Shawujinmon",
+    "Were Garurumon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "JESmon GX"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Holy Knight Digimon which is one of the Digital World's guardians, the \" Royal Knights \". While most of the Royal Knights are Human Digimon, it has a bestial silhouette which could be called bizarre. Its whole body is clad in an armor of the \" Red Digizoid \" which boasts great defensive power, so even Ultimate Digimon are unlikely to be able to easily damage Sleipmon. Its six legs possess unsurpassed mobility, and it is capable of instantaneous, high-speed movements that its thick build would not suggest. Sleipmon acts as a guardian of the super-ancient ruins which sleep below the thick ice of the Digital World's north pole, since it is said that essential program data which concerns the creation of Digimon is sealed within these ruins. Its Special Moves are incandescent arrows of light fired from the sacred crossbow Múspellsheimr held in its left hand ( Bifröst ), and using the sacred shield Niflheimr in its right hand to lower the temperature of its climate and generate a blizzard ( Odin's Breath ).",
+  "web_created": true
+}

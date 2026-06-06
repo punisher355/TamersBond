@@ -1,0 +1,34 @@
+{
+  "name": "Manekimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "KobanFurumai",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Manifests koban energy forms from its paws and throws them."
+  },
+  "digivolves_from": [
+    "Gasamon",
+    "Hanimon"
+  ],
+  "digivolves_to": [
+    "Darumamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon that took in data related to the maneki-neko . Despite its charming aura, its enlarged right arm unleashes punches that can smash even slabs of rock. The paw on its right hand is a device that draws objects towards it, and instead of bringing in happiness, it draws in prey to attack. Its Special Move is manifesting koban energy forms from its paws and throwing them ( Koban Furumai ). Its \" Shōteki Rairaiken \", which combines the attracting power of the device on its hand with the punching strength of its enormous right arm, will knock out even higher-Level Digimon if it lands a clean hit."
+}

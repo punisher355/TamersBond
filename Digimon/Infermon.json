@@ -1,0 +1,50 @@
+{
+  "name": "Infermon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 9,
+    "LVE": 8,
+    "KNW": 9,
+    "SNC": 10,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Hell's Grenade",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Fires shells of a terrible, destructive energy from the muzzle inside of its mouth."
+  },
+  "digivolves_from": [
+    "Arkadimon Adult",
+    "Chrysalimon",
+    "Devimon",
+    "Dokugumon",
+    "Duskmon",
+    "Kuwagamon",
+    "Soulmon",
+    "Stingmon"
+  ],
+  "digivolves_to": [
+    "Arkadimon Ultimate",
+    "Armagemon",
+    "Beelzebumon",
+    "Belial Vamdemon",
+    "Cherubimon (Vice)",
+    "Demon",
+    "Diablomon",
+    "Gokumon",
+    "Parasimon",
+    "Piemon",
+    "Venom Vamdemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Perfect Digimon whose appearance resembles a long-legged spider. Its form is usually in an outstretched state, with its head and limbs extended, but it is also able to assume a cocoon form, with its limbs retracted into its body. When it goes into its cocoon form, its defensive power is raised such that every attack is deflected, but it can only go forward in a straight line, and the fact that it cannot modify its trajectory is a clear weakness. It is able to penetrate every Network , despite the strength of their security. If Infermon is released into the Network, the world will probably then collapse into chaos. Its Special Move is firing off shells of a terrible, destructive energy from the muzzle inside of its mouth ( Hell's Grenade ), and charging the opponent with its cocoon form ( Cocoon Attack )."
+}

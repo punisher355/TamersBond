@@ -1,0 +1,41 @@
+{
+  "name": "Anubimon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Ammit",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "123Summons a demonic beast from hell to devour theDigicoresof evil Digimon.Fires waves of destructive light from its hands.Summons four balls of darkness that encircle and converge upon the enemy."
+  },
+  "digivolves_from": [
+    "Cerberumon",
+    "Ex-Tyranomon",
+    "Kumbhiramon",
+    "Lamortmon",
+    "Skull Baluchimon",
+    "Taomon",
+    "Vajramon",
+    "Vikaralamon",
+    "Waru Monzaemon",
+    "Were Garurumon",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A God Man Digimon that guards and supervises the Dark Area . It constantly monitors the Dark Area, to which Digimon that were deleted when they reached the end of their lifespan, or when they were defeated in battle, are ultimately transmitted (though Fallen Angel Digimon are sent there while still alive). As for the Digimon sent to the Dark Area, if their data is evil, it imprisons them within eternal darkness, but if their data is good, it has the ability to reset them back to a Digitama . It has power as mighty as to decide the rebirth of a Digimon, and furthermore, it has the role of the Digital World 's judge. Its Signature Move is drawing a square pyramid with beams of light as depicted in Ancient Egypt's mystic rites, then imprisoning the opponent within it ( Pyramid Power ). Its Special Move \" Ammit \" is a terrifying technique that summons a demonic beast from hell, which devours the Digicores of evil Digimon.",
+  "web_created": true
+}

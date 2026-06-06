@@ -1,0 +1,31 @@
+{
+  "name": "Zephagamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 14,
+    "LVE": 10,
+    "KNW": 13,
+    "SNC": 15,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Gale Braver",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Transforms each of the swords in its hands into boomerangs, and unleashes a slashing attack enveloped in a tornado."
+  },
+  "digivolves_from": [
+    "Grand Galemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Ultimate Digimon known as the God of Wind , it is an embodiment of the wind data that flows in the Digital World . It primarily operates in forest regions, and uses the wind to carry warm air, ripening the fruits of the trees, and protects not only Digimon but also the environment itself. Zephagamon's Digicore , the source of its power, is situated beneath the wings on its chest, and is constantly protected by whirling winds. In addition, it is said that, in the event of an emergency, it prevents disasters by expelling energy directly from the atmosphere through its exposed Digicore. The wind Zephagamon surrounds itself with and unleashes has magical properties, and it is considered one of the heroes of the Vortex Warriors . Its Special Moves are transforming each of the swords in its hands into boomerangs, and unleashing a slashing attack enveloped in a tornado ( Gale Braver ), and transforming its wings into wind energy forms and bisecting the enemy as it passes by them ( Anemoi Embrace ). Finally, its \" Divine Tempest \", in which it expands the wings on its chest and releases the maximum amount of wind energy from its Digicore, sends enemies flying off into the distance, scraping the earth away.",
+  "web_created": true
+}

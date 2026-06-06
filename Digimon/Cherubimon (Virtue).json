@@ -1,0 +1,40 @@
+{
+  "name": "Cherubimon (Virtue)",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Lightning Spear",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Forms a heavenly spear in Cherubimon's hand."
+  },
+  "digivolves_from": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Crescemon",
+    "Ex-Tyranomon",
+    "Holy Angemon",
+    "Insekimon",
+    "Piccolomon",
+    "Shakkoumon",
+    "Silphymon",
+    "Sinduramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Angel Digimon which has the appearance of a beast. It is one of the Three Archangel Digimon assigned the highest rank, just like the Seraph Digimon Seraphimon . Its primary duty is to defend the Digital World's \" Kernel \". Angel Digimon, which are positioned at the ultimate \"Virtue\", have the aspect of their being easily stained by its antithesis of \"Vice\" as a consequence of their extremity. It uses mighty lightning techniques, and their strike is thought to be divine punishment. Its Special Moves are firing a spear of lightning ( Lightning Spear ), and summoning a gigantic thundercloud, then loosing innumerable thunderbolts on the opponent ( Heaven's Judgment ).",
+  "web_created": true
+}

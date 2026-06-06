@@ -1,0 +1,35 @@
+{
+  "name": "Tonosama Mamemon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Appare Zakura",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Judges the enemy's wrongdoing with cherry blossoms that scatter mysteriously, causing them to lose the will to fight."
+  },
+  "digivolves_from": [
+    "Big Mamemon",
+    "Chimairamon",
+    "Mamemon",
+    "Mametyramon",
+    "Metal Mamemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Mamemon that read jidaigeki video data and mutated. Easygoing and always cheerful, it drags around its hakama , which it has difficulty walking in, and constantly falls over, rolls, and gets tangled up in it, making onlookers laugh and bringing joy to their hearts. It is magnanimous in that it welcomes any Digimon that comes to its castle, but once a Digimon that disturbs the area around the castle appears, it will... punish them without mercy... while rolling. In its Special Move \" Appare Zakura \", which is unleashed from its fan , it judges the enemy's wrongdoing with cherry blossoms that scatter mysteriously, and causes them to lose the will to fight. However, \" Appare Zakura \" is easily affected by the wind, and will sometimes fail to reach the enemy when the headwinds are blowing against it. Also, it has the splendid \" Sensugaeshi \", which is capable of repelling any attack from the enemy."
+}

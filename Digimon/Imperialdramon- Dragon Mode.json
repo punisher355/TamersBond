@@ -1,0 +1,48 @@
+{
+  "name": "Imperialdramon: Dragon Mode",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Mega Death",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[RANGE 8]",
+    "description": "Fires dark matter from its mouth or cannon that annihilates everything within a wide radius."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Andromon",
+    "Archnemon",
+    "Chimairamon",
+    "Cyberdramon",
+    "Dinobeemon",
+    "Gigadramon",
+    "Knightmon",
+    "Lady Devimon",
+    "Magnamon",
+    "Megalo Growmon (Orange)",
+    "Mummymon",
+    "Orochimon",
+    "Paildramon",
+    "Pucchiemon (Green)",
+    "Triceramon",
+    "Were Garurumon",
+    "Were Garurumon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese An ultimate Ancient Dragon Digimon that existed in ancient times. There is a clear distinction between it and other Digimon in terms of existence or ability. Also, Imperialdramon is called the Dragon Mode , but there seems to exist a \" Fighter Mode \" that is able to liberate all of its power. However, it is said that that form has never been seen. Due to its immense power, controlling it is next to impossible, and depending on how it is raised, it may become a savior or a god of destruction. Its Special Move is firing super-massive dark matter , swallowing everything in a dark space ( Mega Death ). This technique is a terrifying ability that completely annihilates everything within a radius of a few hundred meters around the impact-point of the dark matter.",
+  "web_created": true
+}

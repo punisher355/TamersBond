@@ -1,0 +1,38 @@
+{
+  "name": "Ancient Mermaimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 10,
+    "LVE": 12,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Great Maelstrom",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Generates a gigantic maelstrom which swallows everything in the water."
+  },
+  "digivolves_from": [
+    "Hangyomon",
+    "Marin Devimon",
+    "Mermaimon",
+    "Sirenmon",
+    "Splashmon",
+    "Thetismon"
+  ],
+  "digivolves_to": [
+    "Apocalymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Before ⇨ Japanese Possessing the attribute of \"water\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is a guardian goddess of the birthplace of Digimon, the \" Net Ocean \". It rules the whole of the far-reaching \"Net Ocean\", and is able to handle all water, such as the ocean currents and tidal waves, as if they were its own limbs. It is said that countless continents and islands have been erased when Ancient Mermaimon felt angry. Ancient Mermaimon's abilities were later passed on to the \"Aquatic Digimon\". Its Special Moves are generating a gigantic maelstrom which swallows everything in the water ( Great Maelstrom ), and crystallizing water into super-hard substances, then firing them off like a machine gun ( Crystal Billow )."
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Aegiochusmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 8,
+    "SNC": 9,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Bolt Break Knockdown",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE] [CHAIN 2,3] [RUSH]",
+    "description": "Rushes in and attacks with fists shrouded in lightning from its horn."
+  },
+  "digivolves_from": [
+    "Aegiomon"
+  ],
+  "digivolves_to": [
+    "Jupitermon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A God Man Digimon which synthesized the abilities of various species, using a humanoid body as a base. This synthesis of species is said to have resulted from the pursuit of the ultimate state, or omnipotence, dramatically altering its appearance to match its surroundings. This form is composed of data taken from the Dragon-species, so the Dragon-species data lying dormant within its body manifests on the surface of its body, centered upon the crystal in its chest, and establishes itself as armor. This armor is a Powered Suit that affects not only Aegiochusmon's defensive power but also its physical strength, drastically increasing its offensive power. Its Special Moves are commencing a rush attack with fists shrouded in the thunder produced from its horn ( Bolt Break Knockdown ), and shaping thunder into a pile, then impaling the opponent from just overhead to drive them into the ground ( Lightning Pile ). It is said that if the pile of \" Lightning Pile \" pierces the opponent once, the piles cast afterward will always hit, regardless from where they're cast. Also, it has a technique called \" Charging Strike \" which pierces the opponent's head with its horn using a high speed charge that capitalizes on its prided leg strength.",
+  "web_created": true
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Tankmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Hyper Cannon",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Shoots a missile from the gun barrel on its head."
+  },
+  "digivolves_from": [
+    "Agumon (Black)",
+    "Armadimon",
+    "Candmon",
+    "Clear Agumon",
+    "Gottsumon",
+    "Guilmon",
+    "Hagurumon",
+    "Koemon",
+    "Kokuwamon",
+    "Psychemon",
+    "Terriermon",
+    "Toy Agumon",
+    "Toy Agumon (Black)",
+    "Tukaimon",
+    "V-mon",
+    "Zubamon"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Big Mamemon",
+    "Blikmon",
+    "Cannonbeemon",
+    "Cargodramon",
+    "Death Meramon",
+    "Gigadramon",
+    "Giromon",
+    "Knightmon",
+    "Locomon",
+    "Metal Greymon",
+    "Metal Mamemon",
+    "Metal Tyranomon",
+    "Tankdramon",
+    "Volcamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Cyborg Digimon which has the appearance of a tank. Tankmon holds the alias of \" Mercenary Digimon \", since it will assist both Vaccine and Virus Digimon if it becomes profitable to do so. With its heavyweight-power and the heavy artillery installed all throughout its body, it can pulverize the enemy into scrap without even turning to face them. As it is extremely fond of strife, it follows after conflicts wherever they occur. When this loner Digimon goes somewhere, the fighting there will never cease. Its Special Move is firing a super-powerful missile from the gun barrel on its head ( Hyper Cannon ).",
+  "web_created": true
+}

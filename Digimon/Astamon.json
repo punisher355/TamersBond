@@ -1,0 +1,52 @@
+{
+  "name": "Astamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Hellfire",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Fires every single one of \"Oro Salmón's\" homing bullets."
+  },
+  "digivolves_from": [
+    "Devimon",
+    "Gryzmon",
+    "Gururumon",
+    "Knight Chessmon (Black)",
+    "Leomon",
+    "Mad Leomon",
+    "Porcupamon",
+    "Sangloupmon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Belphemon: Rage Mode",
+    "Belphemon: Sleep Mode",
+    "Dynasmon",
+    "Grand Dracumon",
+    "Heavy Leomon",
+    "Magna Kidmon",
+    "Megidramon",
+    "Olegmon",
+    "Plutomon",
+    "Quartzmon",
+    "Saber Leomon",
+    "Venom Vamdemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Before Original ⇨ Japanese Though it is a Perfect, it possesses power surpassing that of an Ultimate, and is a Prince of the Dark Area which governs a legion of Demon Digimon. It shows cruelty to its enemies and kindness to its friends, and because of that charisma it is expected to gain a considerable number of followers among Demon Digimon. The bullets fired from its prided machine gun, \" Oro Salmón \", possess their own will, and will definitely chase the opponent to the \"end of hell\". Its Special Moves are firing every single one of Oro Salmón 's bullets ( Hellfire ), and a kick which unleashes all of its own pent-up dark Qi ( Maverick )."
+}

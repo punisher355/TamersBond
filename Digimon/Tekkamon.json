@@ -1,0 +1,47 @@
+{
+  "name": "Tekkamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Zandenken",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Cuts the enemy's configuration data in half with its electrified sword."
+  },
+  "digivolves_from": [
+    "Karatuki Numemon",
+    "Kuwagamon",
+    "Nanimon",
+    "Omekamon",
+    "Raremon",
+    "Starmon",
+    "Thunderballmon",
+    "Tuchidarumon",
+    "V-dramon (Black)",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Boltmon",
+    "Gokumon",
+    "Hi Andromon",
+    "Piemon",
+    "Pinochimon",
+    "Prince Mamemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon said to have been created by an evil hacker to destroy programs, in opposition to the \"Net Keeper\" Giromon . It wears a mask made of iron, and glares at its enemies with sharp eyes. Its Special Moves are cutting the enemy's configuration data in half with a terrifyingly sharp sword ( Zandenken ), and flinging itself after turning into a pachinko ball ( Skull Stand )."
+}

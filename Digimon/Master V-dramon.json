@@ -1,0 +1,33 @@
+{
+  "name": "Master V-dramon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "V-Breath Arrow",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Spews a high-temperature V-shaped heat ray from its mouth."
+  },
+  "digivolves_from": [
+    "Elecmon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "D1 Tamers ⇨ Japanese A Mythical Dragon Digimon! V-dramon's final form, having awakened to true power. V-Breath Arrow A technique in which it spews a V-shaped high-temperature heat ray from its mouth. It is extraordinarily potent, and entirely effective against even powerful Digimon! Digimon Adventure 02: D1 Tamers ⇨ English げんりゅうがた デジモン！ ブイドラモンが しんの チカラに めざめた さいしゅう けいたい ブイブレスアロー Ｖがたのコウネツの ねっせんをクチから はきだすワザ ケタハズレのイリョク がありキョウリョクな デジモンにも じゅうぶんきくぞ！ デジモンアドベンチャー02 ディーワンテイマーズ ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

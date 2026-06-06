@@ -1,0 +1,35 @@
+{
+  "name": "Ancient Irismon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Storm Gazer",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Continuously generates a colossal storm."
+  },
+  "digivolves_from": [
+    "Jet Silphymon",
+    "Lilamon",
+    "Toropiamon"
+  ],
+  "digivolves_to": [
+    "Lucemon: Satan Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Possessing the attribute of \"Wind\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it has golden wings and a beautiful rainbow-colored figure. With its golden wings it soars around the vast skies, and it is said that by erecting rainbow bridges it can move freely even through the earth and sea. Ancient Irismon's beauty and abilities were later passed on to the \"Bird Man\" and \"Fairy Digimon\". Its Special Moves are continuously generating a colossal storm ( Storm Gazer ), and firing a super-fused laser that shines with the seven colors ( Rainbow Symphony )."
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Toy Agumon (Black)",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Fire",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 2,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Toy Flame",
+    "element": "Fire",
+    "pr": 2,
+    "tags": "[RANGE 4]",
+    "description": "Fires a mini-missile in the shape of a flame."
+  },
+  "digivolves_from": [
+    "Chocomon",
+    "Tsumemon"
+  ],
+  "digivolves_to": [
+    "Deltamon",
+    "Devimon",
+    "Fugamon",
+    "Garurumon (Black)",
+    "Geo Greymon",
+    "Geremon",
+    "Greymon",
+    "Greymon (Blue)",
+    "Guardromon",
+    "Mechanorimon",
+    "Nanimon",
+    "Numemon",
+    "Raptordramon",
+    "Revolmon",
+    "Scumon",
+    "Starmon",
+    "Tankmon",
+    "Thunderballmon",
+    "Trailmon Ball"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Toy Agumon that has been dyed black. It was infected by a computer virus on the Network , and turned into a toy that bullies children. Its Special Move is firing a mini-missile in the shape of a flame ( Toy Flame ).",
+  "web_created": true
+}

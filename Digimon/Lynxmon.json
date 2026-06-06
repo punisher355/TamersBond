@@ -1,0 +1,49 @@
+{
+  "name": "Lynxmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 5,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Thermal Mane",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Detonates the thermal energy within its body to its maximum, generating bursting flames."
+  },
+  "digivolves_from": [
+    "Candmon",
+    "Coronamon",
+    "DORUmon",
+    "Gazimon",
+    "Lopmon",
+    "Piyomon",
+    "Plotmon",
+    "Renamon"
+  ],
+  "digivolves_to": [
+    "Black Rapidmon",
+    "Blue Meramon",
+    "Caturamon",
+    "Flaremon",
+    "Kumbhiramon",
+    "Magnamon",
+    "Mihiramon",
+    "Monzaemon",
+    "Taomon",
+    "Were Garurumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Beast Digimon that evolved through the power of \" Digimental of Courage \". It has the appearance of a lynx shrouded in blazing fur, and inhabits tropical jungles. As it is the polar opposite of Garurumon , who lives in cold regions, it has a carefree personality. Although it hates being tied down and never swears allegiance to its master, Lynxmon and Garurumon recognize each other as good rivals. Its Special Move is detonating the thermal energy within its body to its maximum, generating bursting flames ( Thermal Mane ).",
+  "web_created": true
+}

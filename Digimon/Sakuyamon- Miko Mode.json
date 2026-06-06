@@ -1,0 +1,33 @@
+{
+  "name": "Sakuyamon: Miko Mode",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 13,
+    "SNC": 15,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Izuna",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Summons 4 mystical fox spirits that are imbued with the powers of fire, water, wind and thunder that obey and fight for Sakuyamon."
+  },
+  "digivolves_from": [
+    "Panjyamon",
+    "Taomon",
+    "Taomon (Silver)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A form Sakuyamon takes when it performs Shinto rituals and listens to God 's will. It seldom fights in Miko Mode , but has strengthened its ability to exorcise evil spirits."
+}

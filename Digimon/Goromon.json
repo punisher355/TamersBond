@@ -1,0 +1,33 @@
+{
+  "name": "Goromon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Spits out rocks from its large mouth."
+  },
+  "digivolves_from": [
+    "Sunamon"
+  ],
+  "digivolves_to": [
+    "Sunarizamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Baby Digimon that grows by eating rocks. Because its digestive system is not fully developed yet, it stores an amount of ore in its body unimaginable from its small size, and gradually converts it into nourishment. The site in which its eye is located also serves as its mouth, and it seems to turn completely blind while eating. Its Signature Move is spitting out rocks from its large mouth ( Rock Breath )."
+}

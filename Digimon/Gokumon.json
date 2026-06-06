@@ -1,0 +1,40 @@
+{
+  "name": "Gokumon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Dokuro Ranbu",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "12Grabs the opponent with theGuilty Chainand decapitates them with theJudgment Sickle.Unleashes a rush of slashing attacks with theJudgment Sickle."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Giromon",
+    "Infermon",
+    "Kyukimon",
+    "Matadrmon",
+    "Metal Fantomon",
+    "Skull Satamon",
+    "Tekkamon",
+    "Vajramon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A fugitive Digimon born from the data of wanted criminals. This strange villain fully believes itself to be a \"Bounty Hunter\" and hunts criminals down, although there is actually a price on its own head. Its Special Move is grabbing the opponent with the \" Guilty Chain \" on its left arm, and decapitating them with the \" Judgment Sickle \" on its right ( Dokuro Ranbu )."
+}

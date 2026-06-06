@@ -1,0 +1,33 @@
+{
+  "name": "Bancho Lilimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Absolute Territory",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Tears the enemy to pieces as well as the space around them with its yo-yos."
+  },
+  "digivolves_from": [
+    "Eosmon (Perfect)",
+    "Lilamon",
+    "Lilimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Fairy Digimon that wears a deep crimson tokkō-fuku . The showy petals it had when it was a Lilimon have been dyed a dark color, and the pretty impression it used to make is long gone. In the Digital World where the weak are food for the strong , it has the conviction to fight for the weak, and has saved many that have been assaulted by evil Digimon. Its tokkō-fuku, which it donned when it acquired the title of \" Bancho \", is said to be proof of it enforcing that conviction. It has many Special Moves where it uses its yo-yos as weapons; there is \" Absolute Territory \", which tears the enemy to pieces as well as the space around them, \" Nightmare Assemble \", which pierces the enemy and absorbs them, and \" Twin Petal \", where it unleashes a flashkick with its gorgeous legs."
+}

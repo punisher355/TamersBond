@@ -1,0 +1,60 @@
+{
+  "name": "SkullBaluchimon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 9,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Grave Bone",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Tramples the opponent with its gigantic feet, burying them underground."
+  },
+  "digivolves_from": [
+    "Allomon",
+    "Baluchimon",
+    "Black Tailmon",
+    "Damemon",
+    "Deltamon",
+    "Gargomon",
+    "Ginryumon",
+    "Greymon (Blue)",
+    "Mantaraymon",
+    "Monochromon",
+    "Musyamon",
+    "Porcupamon",
+    "Raremon",
+    "Sangloupmon",
+    "Symbare Angoramon",
+    "Tobucatmon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Anubimon",
+    "Belphemon: Rage Mode",
+    "Dinorexmon",
+    "Dinotigermon",
+    "Griffomon",
+    "Medieval Dukemon",
+    "Ouryumon",
+    "Platinum Numemon",
+    "Skull Mammon",
+    "Ultimate Brachimon",
+    "Valdurmon",
+    "Zanbamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A gigantic Undead Digimon reproduced from the data of several counterfeit fossils, which were in the data of a fossil of what was thought to be the largest land mammal. It has no emotions or intelligence, and because its body operates by reflex with only the data of the nerves laid out within its body, it keeps mercilessly attacking until it can no longer move. It is said that it will plunge any Digimon into the terror of death, either from the curse which forcibly revived it from the data of its corpse, or the cold black vapors which flow unceasingly from its Digicore . Its Special Moves are trampling the opponent with its gigantic feet, burying them underground ( Grave Bone ), and imprisoning the opponent in the space within its cold black vapors, then chasing them eternally until they die ( Deadly Fear ).",
+  "web_created": true
+}

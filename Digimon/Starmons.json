@@ -1,0 +1,34 @@
+{
+  "name": "Starmons",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 2,
+    "SNC": 4,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Rock 'n' Rolling",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Tackles an enemy while spinning."
+  },
+  "digivolves_from": [
+    "Pickmon"
+  ],
+  "digivolves_to": [
+    "Shooting Starmon",
+    "Starmon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "The \"Starmons\" are composed of a corps of several Pickmon with a Starmon at their heart. The will of the corps is at the discretion of Starmon, the Head of the corps, and the Head's decisions are briskly and unconditionally followed by the Pickmon, keeping them from falling out of line as they maneuver according to Starmon's directions. The complex maneuvers required by the corps techniques \" Meteor Squall \" and \" Wish Upon a Star \" are made possible by their strict hierarchical system. As Starmon has a cheerful, showy personality, it is an extreme optimist. Basically, it never gets depressed, and if it even seems depressed it seems to only be thinking things like, \"I may be down, but I look good, don't I?\" Because of that, even though it is taken lightly by other Digimon, it certainly doesn't worry about itself at all.",
+  "web_created": true
+}

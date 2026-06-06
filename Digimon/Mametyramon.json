@@ -1,0 +1,58 @@
+{
+  "name": "Mametyramon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Mame Bite 1000",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE] [RUSH]",
+    "description": "Snaps at the opponent many times over at super-speed."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Allomon",
+    "Dark Tyranomon",
+    "Devimon",
+    "Filmon",
+    "Gesomon",
+    "Ginryumon",
+    "Gladimon",
+    "Monochromon",
+    "Revolmon",
+    "Seadramon",
+    "Thunderballmon",
+    "Tobucatmon",
+    "Tyranomon"
+  ],
+  "digivolves_to": [
+    "Bagramon",
+    "Dinomon",
+    "Dinorexmon",
+    "Dinotigermon",
+    "Gaioumon",
+    "Medieval Dukemon",
+    "Metal Piranimon",
+    "Ouryumon",
+    "Rasenmon: Fury Mode",
+    "Rust Tyranomon",
+    "Spinomon",
+    "Tonosama Mamemon",
+    "Ultimate Brachimon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A tiny Mutation Digimon feared as the \" Tiny Tyrant \". It condensed Tyranomon 's data into its tiny body, pushing its ferocious nature and combat instinct to the surface, where they have strikingly manifested in its behavior. While its body may be tiny, rather than assaulting opponents en masse, it always acts by itself, swooping down on Digimon roaming its own territory without wasting its breath, and always making a show of being the strongest in its domain. However, because its body is tiny, its territory is not very wide. With its physical strength condensed several hundred-fold into its tiny body, and its tenacious jaw that can crunch even super-hard armor, it possesses fighting strength that surpasses even that of gigantic Dinosaur Digimon. Its Special Moves are snapping at them many times over at super-speed ( Mame Bite 1000 ), and if it seems like it's losing, removing the Helmet on its head and striking at them in an attempt to reverse its fortunes ( 'met Lariat ).",
+  "web_created": true
+}

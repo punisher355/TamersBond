@@ -1,0 +1,35 @@
+{
+  "name": "Ludomon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 3,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Kakkinmon",
+    "Sakuttomon"
+  ],
+  "digivolves_to": [
+    "Black Tailmon Uver.",
+    "Reppamon",
+    "Tia Ludomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the ' Legend-Arms ', who are capable of transforming themselves into weapons. It is the only one among the 'Legend-Arms' capable of transforming itself into a shield. It wields sturdy, steel shields on its head and on both arms, protecting it from attacks coming from any direction. As a Digimon made with protection in mind, there have been records of it protecting areas being targeted by the D-Brigade . Its Special Move is using the Wall Rake it wields on both arms to attack and defend. Not only that, Ludomon is also able to exhibit its defensive abilities at their maximum strength while it is transformed into a shield."
+}

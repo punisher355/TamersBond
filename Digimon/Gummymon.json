@@ -1,0 +1,44 @@
+{
+  "name": "Gummymon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Spits out a lot of adhesive bubbles."
+  },
+  "digivolves_from": [
+    "Poyomon",
+    "Zerimon"
+  ],
+  "digivolves_to": [
+    "Armadimon",
+    "Bakumon",
+    "Blucomon",
+    "Clear Agumon",
+    "DORUmon",
+    "Gaomon",
+    "Hagurumon",
+    "Jazamon",
+    "Renamon",
+    "Terriermon",
+    "Toy Agumon",
+    "Terriermon Assistant"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Digimon that grew up from Zerimon . As it inherited an exceedingly energetic personality from Zerimon, it is both cheerful and lively. Although it is growing, it's squishy because its body tissue is as unstable as usual, but just like Zerimon, parts of its horn have hardened and it intimidates the opponent with headbutts. Its greatest change from Zerimon is that it has a body and ear-like objects coming out of its head. Its Special Move is spewing out a lot of adhesive bubbles ( Double Bobble )."
+}

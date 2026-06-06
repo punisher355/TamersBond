@@ -1,0 +1,38 @@
+{
+  "name": "Cargodramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Suppression Strike",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Attacks with the Gatling gun on the front of its fuselage."
+  },
+  "digivolves_from": [
+    "Ginryumon",
+    "Hi-Commandramon",
+    "Sealsdramon",
+    "Tankmon"
+  ],
+  "digivolves_to": [
+    "Brigadramon",
+    "Darkdramon",
+    "Ouryumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon in charge of troop transport for the mechanized \" D-Brigade \". It is said to have evolved by taking in the design data for a real-world tiltrotor aircraft that was obtained via hacking . It has excellent maneuverability that allows it to hover and fly at high-speed by adjusting the angle of the propellers on both of its wings. Cargodramon's fuselage has a cargo hold, and on normal missions, it often houses a squadron of five Commandramon and one Hi-Commandramon . Also, when the cargo hold is empty, it can carry a single Tankdramon by suspending wires under its fuselage. Its Special Move is attacking with the Gatling gun on the front of its fuselage ( Suppression Strike ). It is used for ground control when deploying troops. If a close combat situation arises due to unforeseen circumstances, it will hack the opponent to pieces with its \" Slaughter Blade \", in which it slashes them with the propellers on both of its wings. This technique may damage the propellers, so it is only allowed to be used in emergencies."
+}

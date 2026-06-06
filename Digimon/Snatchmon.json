@@ -1,0 +1,34 @@
+{
+  "name": "Snatchmon",
+  "stage": "Champion",
+  "attribute": "Unknown",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 4,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Ruin Laser",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Launches an attack from the back of its arms."
+  },
+  "digivolves_from": [
+    "Loogamon"
+  ],
+  "digivolves_to": [
+    "Helloogarmon",
+    "Master Tyranomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An artificial Digimon that evolved after several BEMmon that grew stronger began cannibalizing each other and one survived until the very end. In addition to Snatchmon that await command codes to act, it is said that there are some individuals that develop a sense of self, seek greater strength, and aim to become the strongest by continually preying on their enemies. Its Special Moves are firing from the back of its arms ( Ruin Laser ), tearing the enemy to pieces with the tip of its tail ( Tooth-spear ), and feeding upon defeated opponents with its \" Fusionize \".",
+  "web_created": true
+}

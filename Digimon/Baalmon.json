@@ -1,0 +1,38 @@
+{
+  "name": "Baalmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 8,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 9,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Guiltish",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Transforms its amulets into various things and attacks."
+  },
+  "digivolves_from": [
+    "Devimon",
+    "Ice Devimon",
+    "Mad Leomon",
+    "Wizarmon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Beelzebumon: Blast Mode",
+    "Noble Pumpmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese As an enlightened Digimon that excels in all knowledge, it is called the \" Sublime Lord \". According to one theory, it is surely another form of a certain Demon Lord Digimon . It is said that in exchange for the reader's soul, it will grant one page of information from the \" Red Book of Appin \", which records all of its knowledge. Although Baalmon will answer any kind of question, it always inflicts an ordeal for the answer. If that ordeal is not surmounted, then it will not give the requested answer, and will snatch away your soul. Its mantle is covered in amulets from all times and places, and it is said that on those amulets are written solutions for every problem, so that with that wealth of information it is able to completely defend against any attack. It Special Moves are transforming its amulets into various things and attacking ( Guiltish ), and releasing a mighty, lightning-fast smite from the Dǎshénbiān it holds in its hand ( Kamiuchi ). Kamiuchi inflicts especially large damage on Holy-species Digimon."
+}

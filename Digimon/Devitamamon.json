@@ -1,0 +1,37 @@
+{
+  "name": "Devitamamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Black Death Cloud",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Blinds the enemy and eats at their mind before exhaling a dark gas that dissolves their data."
+  },
+  "digivolves_from": [
+    "Death Meramon",
+    "Digitamamon",
+    "Manticoremon",
+    "Piccolomon",
+    "Raiji Ludomon",
+    "Rare Raremon",
+    "Triceramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Mutation-type Ultimate Digimon that is said to have Dark Evolved from Digitamamon . Although defining \"Evil\" in the Digital World is very difficult, Devitamamon is a being like \" Pandora's box \", filled with all the evils of this world. It turns everything it sees and touches into an object of its hatred, and recites and masters magic through a lost, ancient high-level programming language . As for its magic effects, they are used for nothing but \"Destruction\". Its Special Move is spewing a dark gas that deprives the opponent of their sight, gnaws away at their spirit, and then digitally decomposes them from the surface of their body ( Black Death Cloud ). It was adopted from a winning Digimon entry in the \" Bandai-Town FAX Service Digimon Illustration Contest \" which belonged to Mr. Kazuma Kanai from Saitama prefecture ."
+}

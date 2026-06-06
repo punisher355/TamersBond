@@ -1,0 +1,40 @@
+{
+  "name": "Pukumon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Needle Squall",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Launches its super-hard spines all at once from its metal head made fromChrondigizoit."
+  },
+  "digivolves_from": [
+    "Anomalocarimon",
+    "Dagomon",
+    "Giromon",
+    "Hangyomon",
+    "Mamemon",
+    "Marin Devimon",
+    "Skull Greymon",
+    "Thetismon",
+    "Waru Seadramon",
+    "Whamon Perfect"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A British Punk Digimon that was born when Britain's strongest hacker caused a mutation in a computer virus in which they had poured all the knowledge they possessed. Although its size is small, it has a rebellious personality that contends for first place even in the Digital World . It can't help picking fights, no matter whether the opponents are stronger or weaker than itself. Although settling disputes with fist fights is considered its normal style, it has a Special Move \" Needle Squall \" as its ultimate weapon, in which it launches its super-hard spines all at once from its metal head made from Chrome Digizoid ."
+}

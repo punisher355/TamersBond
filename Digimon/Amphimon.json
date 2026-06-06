@@ -1,0 +1,33 @@
+{
+  "name": "Amphimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Crystal Freezer",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Shoots cold air from its fist to freeze the opponent."
+  },
+  "digivolves_from": [
+    "Thetismon",
+    "Toropiamon",
+    "Zudomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon that wanders about everywhere in the vast \" Net Ocean \", forging connections with various marine Digimon. It is capable of diving into ultra-high pressure zones thanks to the Bodysuit that covers its whole body, and has even intruded the \"Abyss Sanctuary\", which is constructed at the extreme depths of the sea. Like Angel Digimon and God Man Digimon, it is permitted to pass judgment upon those judged to be evil in the Net Ocean. Once a battle begins, its usual merriment undergoes a complete about-face like the raging sea, and it strikes sinners with a blow of judgment. Its Special Moves are shooting cold air from its fist to freeze the opponent ( Crystal Freezer ), sending off ultra-high pressure water cutters from its horizontally swung hand ( Aqua Zanba ), and delivering a kick with its electrified foot ( Raiburn Break ). Also, it can deploy several Jellyfish Units to form its \" Umbre Defender \" electromagnetic shield to protect itself or its companions."
+}

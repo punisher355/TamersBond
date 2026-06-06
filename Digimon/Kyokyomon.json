@@ -1,0 +1,33 @@
+{
+  "name": "Kyokyomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Fufumon"
+  ],
+  "digivolves_to": [
+    "Commandramon",
+    "Ryudamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Lesser Digimon whose body has grown long. If it gets angry it can stretch up to nearly nine times its normal length to attack the opponent, but because it only extends forward, the opponent usually avoids it completely. It has a light body like Fufumon , and floats lightly through the air, but it is able to move relatively nimbly by paddling the air with its hands and feet. Its Special Move is stretching itself out and then firing an iron spike from its mouth ( Metal Straw )."
+}

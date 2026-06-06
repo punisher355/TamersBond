@@ -1,0 +1,62 @@
+{
+  "name": "Archnemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Spider Thread",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Chops up the opponent with razor-sharp wires or binds them with webbing from its hands."
+  },
+  "digivolves_from": [
+    "Angemon",
+    "Ankylomon",
+    "Chrysalimon",
+    "Devidramon",
+    "Dokugumon",
+    "Fangmon",
+    "Flymon",
+    "Gokimon",
+    "Hudiemon",
+    "Ogremon",
+    "Orgemon",
+    "Pegasmon",
+    "Sangloupmon",
+    "Snimon",
+    "Stingmon",
+    "Submarimon",
+    "Vegimon"
+  ],
+  "digivolves_to": [
+    "Ancient Beatmon",
+    "Babamon",
+    "Beelzebumon",
+    "Belial Vamdemon",
+    "Bio Lotusmon",
+    "Black War Greymon",
+    "Hydramon",
+    "Lilithmon",
+    "Lotusmon",
+    "Parasimon",
+    "Rafflesimon",
+    "Voltobautamon",
+    "Imperialdramon: Dragon Mode",
+    "Imperialdramon: Fighter Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Beast Digimon which has the appearance of the \" Queen of Spiders \" of Greek mythology. As the queen who presides over all Dokugumon , it is a highly intelligent and extremely cunning Digimon. It is skilled at transforming into a human-like appearance, getting the opponent to let down their guard so that it can approach and completely devour them. Also, because of its extremely short temper and ferocious personality, many Digimon are afraid of it. Its Special Moves are chopping up the opponent with razor-sharp wires ( Spider Thread ), and attacking the opponent with the countless carnivorous Dokugumon hidden in its abdomen ( Predation Spider )."
+}

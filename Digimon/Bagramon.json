@@ -1,0 +1,33 @@
+{
+  "name": "Bagramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 9,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Astral Snatcher",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Rips a living Digimon's soul from its body with its right arm, and sends it to heaven or hell as it pleases, or even places it within another Digimon's body."
+  },
+  "digivolves_from": [
+    "Kaiser Leomon",
+    "Mametyramon",
+    "Stiffilmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Although it was originally a high-ranking Angel Digimon that ruled over death , it despaired against the unreasonable justice of the world and rebelled against God . It then received the scourge of God and eternally lost one of its eyes and half of its body, and has since replaced that half with an artificial body cut from a sacred tree . Its long, artificial right arm can catch hold of ghostly forms, and rip the soul out of a living Digimon's body. The extracted soul can be sent to heaven or hell as Bagramon pleases, and can even be placed in another Digimon's body, a Signature Move of Bagramon's named \" Astral Snatcher \". The large ruby with which it replaced its lost eye conceals its \" Invisible Snake-eyes \", a power that allows it to observe anywhere within the Digital World , and with this ability, Bagramon is able to instantly obtain any information it wants to know. For this reason, Bagramon is known across the Digital World as the \" Sage of Death \". Although Bagramon's sins would be forgiven if it repented before God, Bagramon will not go back to submission under God. This is because Bagramon still seeks to replace the \"Unreasonable Justice of the World\" that God constructed, and its goal in life is to banish God from the world with its \"New Justice\"."
+}

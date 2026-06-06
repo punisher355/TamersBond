@@ -1,0 +1,33 @@
+{
+  "name": "Aegisdramon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Power Water",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires gigantic shots of water from both its arms."
+  },
+  "digivolves_from": [
+    "Canoweissmon",
+    "Megadramon",
+    "Tankdramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Cyborg Digimon born from the fusion of a Plesiomon with Seadramon-species data. It is said that its shining armor, made of Gold Digizoid , will purify all evil. It is a member of the Crack Team , and is mainly in charge of analyzing information on the enemy and reconnaissance. It is also known as the brains of the Crack Team due to the fact that the analyzed information is quickly sent to the Crack Team deployed to its surroundings, allowing them to keep the upper hand in combat situations. In addition, it has enough firepower to wipe out a whole battalion, even when acting alone. Its Special Moves are firing gigantic shots of water from both its arms ( Power Water ), shooting down an enemy it has locked onto with missiles launched from its deck ( Blaze Power ), and crushing the opponent with a water current spewed out from its mouth ( Tera Hydro Breath ). Also, it has \" Shine Breaker \", wherein it simultaneously fires a large quantity of missiles enough to cover the sky, and charges upon the enemy at its maximum output."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Archelomon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Ocean Strom",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Generates a gigantic whirlpool in the ocean, submerging the opponent."
+  },
+  "digivolves_from": [
+    "Armadimon",
+    "Ganimon",
+    "Gizamon",
+    "Shakomon"
+  ],
+  "digivolves_to": [
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Reptile Digimon which evolved through the power of the \" Digimental of Sincerity \". It has the appearance of a large sea turtle, and both of its flippers have become sharp like knives. It doesn't move around particularly quickly even underwater, and has a carefree personality, but because it has sharp fore-flippers and a sturdy shell, it's rarely assaulted by the enemy. Its Special Move is generating a gigantic whirlpool in the ocean, submerging the opponent ( Ocean Strom ).",
+  "web_created": true
+}

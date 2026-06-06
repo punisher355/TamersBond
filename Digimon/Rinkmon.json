@@ -1,0 +1,44 @@
+{
+  "name": "Rinkmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Spinning Cutter",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Rapidly spins its body using its prided speed, and tears up the opponent with the cutters on both of its arms."
+  },
+  "digivolves_from": [
+    "Clear Agumon",
+    "Guilmon",
+    "Hagurumon",
+    "Kokuwamon",
+    "Pico Devimon",
+    "Renamon",
+    "Terriermon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Chimairamon",
+    "Cyberdramon",
+    "Metal Mamemon",
+    "Taomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mutant Digimon that evolved through the power of the \" Digimental of Friendship \". It is a Cyborg Digimon created from the sample data of an experiment where elementary particle s were accelerated to the speed of light in an accelerator . It is said to have been born from the fusion of that sample data, a Digimon raised for experimental use, and the Digimental. A very agile Digimon, it can accelerate up to 98 percent of the speed of light, so there are no Digimon who can rival Rinkmon in speed. In contrast to its outstanding speed, however, its strength is weak and it does not fare well in fighting and hand-to-hand combat. Its Special Move, \" Spinning Cutter \", is rapidly spinning its body with its prided speed, and tearing through the enemy using the cutters on both of its arms.",
+  "web_created": true
+}

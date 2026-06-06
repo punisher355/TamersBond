@@ -1,0 +1,47 @@
+{
+  "name": "Commandramon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 2,
+    "LVE": 3,
+    "KNW": 5,
+    "SNC": 2,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "M16 Assassin",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Fires from its hand-held assault rifle."
+  },
+  "digivolves_from": [
+    "Caprimon",
+    "Kyokyomon",
+    "Missimon"
+  ],
+  "digivolves_to": [
+    "Clockmon",
+    "Dobermon",
+    "Greymon",
+    "Guardromon",
+    "Hanumon",
+    "Hi-Commandramon",
+    "Hover Espimon",
+    "Liamon",
+    "Monochromon",
+    "Numemon",
+    "Sealsdramon",
+    "Snimon",
+    "Thunderbirmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An infantry Digimon belonging to the mechanized \" D-Brigade \". The \"D-Brigade\" is a mechanized brigade composed of Dragon type Cyborg Digimon, and the missions assigned to this special force are never made public. The surface of Commandramon's skin has been modified with a special texture that detects its surrounding colors in real-time, and is capable of displaying a variety of camouflage patterns. As a result, it is said that most of Commandramon's 'targets' do not even notice Commandramon's presence before being silenced. Its Special Moves are firing its hand-held assault rifle ( M16 Assassin ) and throwing a small bomb ( DCD Bomb )."
+}

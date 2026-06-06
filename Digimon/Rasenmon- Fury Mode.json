@@ -1,0 +1,33 @@
+{
+  "name": "Rasenmon: Fury Mode",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 13,
+    "SNC": 15,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Desperate Vortex",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Extends its large, spiral-shaped tails and skewers the opponent over and over again."
+  },
+  "digivolves_from": [
+    "Helloogarmon",
+    "Mametyramon",
+    "Stiffilmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A ruthless, nine-tailed Ultimate Digimon that became unable to control its power of darkness when large amounts of negative emotion data flowed in from others while it was evolving from a Perfect Digimon . It is a destroyer that gave in to its rampaging power of darkness when it finished evolving, instinctively devastating its surroundings. It suffers from inner conflict stemming from its fear of and attempts to reject the swirling negative emotions inside of itself, which gave rise to its destructive impulses and subsequently its vicious personality. Its Special Moves are extending its large, spiral-shaped tails and skewering the opponent over and over again ( Desperate Vortex ), and pouncing on the opponent, devouring their Digicore directly ( Predator's Bite ). In addition, it indiscriminately attacks by rapidly spinning the blades on its wrists, tearing apart everything in their surroundings while generating tornadoes ( Spiral Hell ).",
+  "web_created": true
+}

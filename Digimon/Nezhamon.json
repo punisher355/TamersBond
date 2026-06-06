@@ -1,0 +1,34 @@
+{
+  "name": "Nezhamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Kenkonken",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "A slash attack in which it fires a ring-shaped energy wave from the ring on its right wrist."
+  },
+  "digivolves_from": [
+    "Pandamon"
+  ],
+  "digivolves_to": [
+    "Nezhamon: Crimson Mode",
+    "Shakamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon with control over flame, born from the data of a certain young god from Chinese legend. It possesses three treasure tools, and has the ability to wield them skillfully. Despite its short appearance, it is an arrogant ruffian with a belligerent personality. Because of this, once Nezhamon starts acting violently, the only way to stop it is to get along with it in battle until it is satisfied. It fights while using the \" Fukanirin \" attached to its feet to soar through the air, brandishing the \" Kasensō \", which jets out flames, and freely wielding the \" Kontenryō \" wrapped around its neck. At first glance, it is a troublemaker, but for better or worse, it also has a heroic nature and is sincere, so it has a somewhat likeable side as well. Its Special Moves are a slash attack in which it fires a ring-shaped energy wave from the ring on its right wrist ( Kenkonken ), and using the Fukanirin to accelerate at full power, and then piercing the opponent with the Kasensō , accompanied by flames, while charging at high speed ( Bakujin Engekiha )."
+}

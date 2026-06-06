@@ -1,0 +1,49 @@
+{
+  "name": "Ex-Tyranomon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 8,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Pretty Attack",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Fires pink hearts which emanates from its adorable body at the enemy."
+  },
+  "digivolves_from": [
+    "Clockmon",
+    "Dark Lizamon",
+    "Fangmon",
+    "Monochromon",
+    "Raremon"
+  ],
+  "digivolves_to": [
+    "Anubimon",
+    "Belphemon: Sleep Mode",
+    "Black War Greymon",
+    "Cherubimon (Virtue)",
+    "Deathmon",
+    "Dinomon",
+    "Dukemon",
+    "EBEmon",
+    "Gaioumon",
+    "Pinochimon",
+    "Rust Tyranomon",
+    "Venom Vamdemon",
+    "Victory Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon that sneaks around within a Tyranomon -shaped plush toy. The reason why it is a Tyranomon plush toy is unclear, but it is likely that the mysterious Digimon that is stealing away inside just broke into the plush toy that was closest. However, this plush toy possesses power rivaling that of Monzaemon at its limits and the defensive power of an impregnable fortress, so ordinary Digimon and the like are completely unable to oppose it. However, like Monzaemon, if nothing is pulling its strings, then it is nothing but an ornament. Its Special Moves are \" Pretty Attack \", which emanates from its adorable body, and an evil orb unleashed by the Digimon hiding within it ( Black Matter )."
+}

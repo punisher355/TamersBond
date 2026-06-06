@@ -1,0 +1,33 @@
+{
+  "name": "Blastmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 12,
+    "LVE": 11,
+    "KNW": 13,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Diamond Machine Gun",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires off the crystals throughout its body like a machine gun, alongside an intense punch."
+  },
+  "digivolves_from": [
+    "Gogmamon",
+    "Jyagamon",
+    "Scorpiomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A super-heavyweight Digimon with a mineral body. It is clad in a hard crystal armor that regenerates when broken, and boasts a number of various, powerful techniques, so its slowly moving form is the epitome of an impregnable moving fortress. Because of its glittering body and power, it calls itself the \"most beautiful, sublime creature.\" Its \" Diamond Machine Gun \", which fires off the crystals throughout its body like a machine gun, alongside an intense punch, can sweep through hundreds of enemies in one shot, and its \" Diamond Hedgehog \", which capitalizes on its hard body and great weight, is just it curling up its body and rolling around, but there's nothing that can keep its original shape after being squashed by that. Although its \" Crystal Breath \", a technique in which it absorbs sunlight into its body, then spews it out as an extremely high-temperature, high-pressure laser, has the weakness of only being usable in daytime, the destructive power it displays more than makes up for its faults."
+}

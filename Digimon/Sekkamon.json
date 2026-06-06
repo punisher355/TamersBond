@@ -1,0 +1,32 @@
+{
+  "name": "Sekkamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Tenkomon"
+  ],
+  "digivolves_to": [
+    "Yukinamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Sorry, but no official profile of Sekkamon has been added yet. ⇨ English Template:K"
+}

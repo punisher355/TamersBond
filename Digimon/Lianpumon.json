@@ -1,0 +1,35 @@
+{
+  "name": "Lianpumon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Teppeki-no-Sō",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Changes to its expressionless mask \"Teppeki-no-Sō\", causing its body to become as hard as rock."
+  },
+  "digivolves_from": [
+    "Impmon",
+    "Kakamon",
+    "Takinmon"
+  ],
+  "digivolves_to": [
+    "Xingtianmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Mutation Digimon that wears a distinctive mask. It has a cheerful personality that loves the festive atmosphere, and will switch between various masks to try to liven up the mood. If a mask is removed, another one will immediately emerge from beneath, so no one has seen its true face behind the mask. Also, Lianpumon hardly ever speaks, but instead expresses its emotions to others through gestures and changing masks. According to one theory, Lianpumon has masks in its cape resembling the Digimon that it gets along with. In battle, it displays technical tactics, demonstrating various abilities by changing its masks. Its expressionless mask \" Teppeki-no-Sō \" drastically raises its defensive power, and its body becomes as hard as ore. When an ally is injured, it puts on its \" Kenshin-no-Sō \", a mask that shows a loving expression. This allows it to share its own data and quickly heal the wounds it touches. Its Special Move is putting on its mask of anger, and hurling the masks it has on-hand like shuriken ( Kyūshu Kyūmen Geki )."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Mercurymon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Thousand Fist",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Closes in on the enemy at top speed and launches a barrage of punches."
+  },
+  "digivolves_from": [
+    "Andiramon",
+    "Cerberumon",
+    "Garudamon",
+    "Grappu Leomon",
+    "Mach Gaogamon",
+    "Pandamon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Yaeger Dorulumon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A member of the Olympos XII , it is a Digimon god of ingenuity who boasts of being the fastest in the Digital World . It moves with such exceptional speed that it cannot be seen with the naked eye, so it is said that all images of Mercurymon in records and documents are but afterimages. It hates staying rooted to one place and is always wandering the Digital World, so encountering Mercurymon can be rather difficult. Its Special Move is closing in on the enemy with speed almost akin to performing teleportation, then pouring on a hyper-barrage ( Thousand Fist ). Not only that, Mercurymon is an outstanding Shaman and is capable of using \" Spiritual Enchant \", in which it slices through space with its favorite knife \" Aztec \", and summons apparitions from another world."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Tinkermon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Light",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 4,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Speed Nightmare",
+    "element": "Dark",
+    "pr": 3,
+    "tags": "[MELEE] [CONFUSE]"
+  },
+  "digivolves_from": [
+    "Nyaromon",
+    "Poromon",
+    "Tanemon"
+  ],
+  "digivolves_to": [
+    "Cockatrimon",
+    "Fairimon",
+    "Parasaurmon",
+    "Petermon",
+    "Vegimon",
+    "Zassoumon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Fairy Digimon that is always snuggling up to Petermon . It does its best to work with Petermon in building \" Never-Ever Land \", a world of children. It bounces around in the best of moods when it is with Petermon, but if it's ignored then it will angrily strike Petermon and then fly off somewhere. After that, it is happy to come looking for Petermon and meekly receive pampering. Tinkermon's wings shine, and because there is a change in the strength of the radiance when it is tense, looking at the wings' radiance is considered a good way to suss out Tinkermon's mood. It applies a paralytic nail polish to its sharply pointed, poisoned spear and nails, and if one mocks its tiny appearance, they'll suffer a massive retaliation. Its Special Move is dragging the opponent into a nightmare with the fast-acting \" Speed Nightmare \" hallucinogen from its poisoned spear. Its \" Nightmare Pandemic \" is able to control its paralyzing effect from just a section to the whole body by increasing the number of nails it stings with. Also, the \" Fairy Powder \" scattered from its wings has the ability to change about half of those it covers into babies. The infantilized opponents give into Petermon's temptations and are led to the world of children, \"Never-Ever Land\". This cooperation with Petermon and Tinkermon is called \" Petermon Syndrome \"."
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Wingdramon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Blaze Sonic Breath",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Releases a supersonic heat-blast from its mouth."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Black Growmon",
+    "Coredramon (Blue)",
+    "Coredramon (Green)",
+    "Fladramon",
+    "Geo Greymon",
+    "Greymon (Blue)",
+    "XV-mon"
+  ],
+  "digivolves_to": [
+    "Breakdramon",
+    "Dynasmon",
+    "Shine Greymon",
+    "Slayerdramon",
+    "Ulforce V-dramon",
+    "Valdurmon",
+    "War Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Sky Dragon Digimon which possesses greatly developed wings, and is able to fly freely through the air. Because the scales on its wings are capable of blocking gravity, it is able to fly without flapping its wings. It seldom lands on the ground, and spends most of its time living in the sky. It is said that its air speed exceeds Mach 20, and there are few Digimon who can survive a dog fight with Wingdramon. It Special Moves are firing scorching breath from its mouth by exceeding the speed of sound ( Blaze Sonic Breath ), and accelerating up to maximum speed in a nose dive at the opponent, then striking them with the lance on its back ( Explode Sonic Lance ). Furthermore, because Wingdramon breaks the sound barrier just by moving at high speeds, it generates a shock wave called \" Wing Blast \". For that reason, you aren't uninjured even if you parry Wingdramon's Special Moves."
+}

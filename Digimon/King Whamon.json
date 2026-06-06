@@ -1,0 +1,31 @@
+{
+  "name": "King Whamon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "WaJet",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Attacks with an ultra-high pressure spout."
+  },
+  "digivolves_from": [
+    "Whamon Perfect"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate-level Whamon that has built a habitable island upon itself due to the fact that many Digimon would catch a ride inside its mouth as a Whamon while traveling through Net Space . Even when diving into the ocean depths, it will protect Digimon by surrounding the island in a large bubble. However, if someone causes a dispute on the island, it will forcefully eject them by spouting them. Its Special Moves are attacking with an ultra-high pressure spout ( WaJet ), and charging with its hard, rock face head ( Ride Right )."
+}

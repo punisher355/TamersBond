@@ -1,0 +1,43 @@
+{
+  "name": "Apocalymon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Dark",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 15,
+    "LVE": 15,
+    "KNW": 14,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Darkness Zone",
+    "element": "Dark",
+    "pr": 13,
+    "tags": "[MELEE] [CHAIN 2,3]",
+    "description": "Generates an endlessly spreading darkness, which returns everything to \"Nothingness\"."
+  },
+  "digivolves_from": [
+    "Ancient Beatmon",
+    "Ancient Megatheriumon",
+    "Ancient Mermaimon",
+    "Ancient Sphinxmon",
+    "Ancient Troiamon",
+    "Ancient Volcamon",
+    "Barbamon",
+    "Chaosdramon",
+    "Giga Seadramon",
+    "Metal Seadramon",
+    "Mugendramon",
+    "Piemon",
+    "Pinochimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A mysterious Digimon that appeared when negative thoughts gathered through dark power. None know its true identity, and whether this thing is a Digimon cannot be analyzed. Although the reason for its appearance is unconfirmed, it is thought that it seeks to purge the chaotic Digital World and return it to \"Nothingness\". According to one theory, there is a prophecy of Apocalymon's coming in a book of ancient prophecies. Its Special Move is generating an endlessly spreading darkness, which returns everything to \" Nothingness \" ( Darkness Zone ). It is said that those engulfed by this darkness lose their sense of orientation in every direction, and are annihilated.",
+  "web_created": true
+}

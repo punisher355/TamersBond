@@ -1,0 +1,35 @@
+{
+  "name": "Goatmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Mystic Bell",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[RANGE 5] [CONFUSE]",
+    "description": "Generates special ultrasonic waves from the bell hanging from its neck to confound the opponent."
+  },
+  "digivolves_from": [
+    "Gazimon",
+    "Strabimon"
+  ],
+  "digivolves_to": [
+    "Andiramon",
+    "Skull Satamon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An Armor-level Mammal Digimon that evolved through the power of the \" Digimental of Hope \". This Digimon, which has the appearance of a large black goat, has had the duty of guarding treasures and ruins since ancient times. It is programmed to capitalize on its special characteristics, erect powerful barriers, and protect important data. However, because it is a goat, it seems that some of them are troublesome in that they completely eat document data. The thief Digimon Harpymon is undoubtedly its natural enemy. Its Special Move is generating special ultrasonic waves from the bell hanging from its neck to confound the enemy ( Mystic Bell ).",
+  "web_created": true
+}

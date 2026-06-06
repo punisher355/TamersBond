@@ -1,0 +1,30 @@
+{
+  "name": "Lovely Angemon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Angewomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A close combat specialist renowned for being an angel that descended to earth. It is always bright and cheerful, and adorns itself in a fashionable manner, and has a lovely personality that enjoys eating delicious things while walking about. However, Lovely Angemon contains the data of magical fighters who engage in hand-to-hand combat, and deals fiendish enemies that it can never forgive with a breathtaking combo of combat techniques. No matter what sort of crisis arises, it will overcome the predicament with its spirit of never giving up, and achieve victory at any cost. Its Special Moves are putting all its strength into its fist and dishing out a seven-colored punch ( Marble Impact ), and jumping high into the sky and kicking while spinning ( Dream Hurricane ). In addition, its “ Lovely Shower ”, where it punches its fist and fires heart-shaped energy shots at the enemy, has the effect of purifying the enemy’s evil heart."
+}

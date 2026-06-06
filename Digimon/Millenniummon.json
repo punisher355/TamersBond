@@ -1,0 +1,34 @@
+{
+  "name": "Millenniummon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Time Unlimited",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Summons a black orb that imprisons the enemy in a dimension where time is compressed."
+  },
+  "digivolves_from": [
+    "Megadramon",
+    "Skull Greymon"
+  ],
+  "digivolves_to": [
+    "Zeed Millenniumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Ultimate Composite Digimon that has fused the overwhelming power possessed by Mugendramon and the data of various powerful Digimon possessed by Chimairamon . It is said to be impossible to defeat, and at present the unclear cause of its fusion is being ascertained, but it is unlikely that any clues will be found. Its Special Move is creating a different dimension with compressed time, and it can keep an opponent in that subspace for an eternity ( Time Unlimited ).",
+  "web_created": true
+}

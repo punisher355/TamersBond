@@ -1,0 +1,42 @@
+{
+  "name": "Moosemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Horn Blade",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "12Cuts through space itself with its giant antlers, along with the opponent no matter how far away they are.Strikes the opponent with its horns."
+  },
+  "digivolves_from": [
+    "Blucomon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gaomon",
+    "Gazimon",
+    "Lopmon",
+    "Psychemon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Crescemon",
+    "Daipenmon",
+    "Mammon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Ancient Beast Digimon that evolved through the power of the \" Digimental of Hope \". It inhabits mountainous areas, and has a tough body that makes light of adverse conditions such as the thin air and extreme cold. Moosemon is revered as the \" Guardian Deity of the Mountains \", and should someone show up and defile the mountain it lives on, Moosemon will try to defend it until the very end, even at the cost of its own life. Its mood swings are erratic; though all is well when it is calm, it can turn uncontrollable when is in a bad mood. It seems that Moosemon's mood is linked to the weather on the mountains, and it is said that the unexplained occurrences of thunder or avalanches from time to time are the result of Moosemon's ill temper. Its Special Move \" Horn Blade \" is a technique where it cuts through space itself using its giant antlers, so no matter how far away the opponent is, it is capable of cutting them along with space.",
+  "web_created": true
+}

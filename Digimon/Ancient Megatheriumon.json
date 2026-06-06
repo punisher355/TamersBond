@@ -1,0 +1,39 @@
+{
+  "name": "Ancient Megatheriumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 14,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Freezing Blizzard",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Uses its cannons to create an absolute zero super-blizzard."
+  },
+  "digivolves_from": [
+    "Crys Paledramon",
+    "Dagomon",
+    "Daipenmon",
+    "Frozomon",
+    "Mammon",
+    "Marin Devimon",
+    "Zudomon"
+  ],
+  "digivolves_to": [
+    "Apocalymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Possessing the attribute of \"Ice\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is said that the power and bravery it possesses can adapt even to the intense cold of the freezing tundra. With an attack of absolute zero it suspends the atomic movement of every object, and it easily destroys even the eternally frozen gigantic icebergs. Ancient Megatheriumon's abilities were later passed on to the \"Mammal\" and \"Ice-Snow Digimon\". Its Special Moves are a super-blizzard at absolute zero ( Freezing Blizzard ), and a super-charge which can even destroy a gigantic iceberg ( Great Snowplow ).",
+  "web_created": true
+}

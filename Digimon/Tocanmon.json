@@ -1,0 +1,34 @@
+{
+  "name": "Tocanmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Pliers Cutter",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "12Pinches and twists with its beak.Spins around to hit enemies multiple times with its beak."
+  },
+  "digivolves_from": [
+    "Penmon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Taomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Bird Digimon that evolved through the power of the \" Digimental of Kindness \". It is a Bird Digimon that tends to stay in its shell, contrary to its flashy appearance. Its wings have degenerated due to it living on land for a long time, and so it became a flightless bird. When it feels anxious, it will try to duck its head and retreat into its shell, but can barely do so with its huge beak being in the way. However, when its anger exceeds a critical point, it will open its huge, colorful beak and raise its crest to act intimidating. Its body, which is covered by its shell, has degenerated feathers, and is rumored to be muscular. Its Special Move \" Pliers Cutter \" is pinching and twisting things with its beak. This technique, while not flashy, is one that is weighty with the kerchunk it endures afterwards.",
+  "web_created": true
+}

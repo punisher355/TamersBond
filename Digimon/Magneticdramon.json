@@ -1,0 +1,31 @@
+{
+  "name": "Magneticdramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Stone Railgun",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Uses magnetic force to accelerate the ore on its body, and fires it at high speed."
+  },
+  "digivolves_from": [
+    "Proganomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that wears rock boasting high hardness like armor. Although it is classified as a Rock Dragon, it is actually a unique Digimon that has no physical composition data. Its body, which looks like electricity, is a mass of enormous energy which also generates a powerful magnetic field, and it uses the magnetic force to form its body as if it were clad in rock. The ore covering the surface of its body can be used both as sturdy armor and as a weapon, and it is a technical fighter who—despite its appearance—makes up for its sluggish movements by applying magnetic force onto enemies to pull them in. Also, because Magneticdramon's activities are like a moving magnetic field, researchers have pointed out that it is a being with a tendency to influence the environments of the Digital World . There are concerns that it could have adverse effects such as triggering volcanic activity, seismic shifts, and even affecting Digimon ecosystems, causing abnormal evolution. Its Special Moves are using magnetic force to accelerate the ore on the surface of its body, and firing it at high speed ( Stone Railgun ), confining the opponent within a powerful, condensed magnetic field, compressing and crushing them with rocks ( Electric Compression ), and emitting an electromagnetic pulse over a vast range, temporarily halting the opponent's Digicore and rendering them unconscious ( Magnetic Tempest ).",
+  "web_created": true
+}

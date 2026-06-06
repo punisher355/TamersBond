@@ -1,0 +1,37 @@
+{
+  "name": "Pteromon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 2,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Wind Slicer",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Flaps its arm-wings to send out a blade of wind."
+  },
+  "digivolves_from": [
+    "Fluffymon",
+    "Pyocomon"
+  ],
+  "digivolves_to": [
+    "Birdramon",
+    "Galemon",
+    "Togemon",
+    "V-dramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Bird Dragon Digimon that flies about freely through the skies over vast forests. The horns on its head are soft, and serve more as sensory organs than they do for offense. It can acutely perceive changes in climate by reading the wind striking against its horns. It has a strong interest in other species, and often flies through the sky alongside them in attempt to make contact; this includes Child Digimon such as Piyomon and Falcomon , and occasionally larger Adult and Perfect Digimon. Also, it has the ability to instantly regrow its feathers to heal its wounds when injured. Its Special Moves are a slash attack where it flaps its arm-wings to send out a blade of wind ( Wind Slicer ), and piercing the enemy with the talons on its feet while flying ( Rumble Claw ).",
+  "web_created": true
+}

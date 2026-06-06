@@ -1,0 +1,38 @@
+{
+  "name": "Ghilliedhumon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "True Eyes",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Sees through the enemy's body to accurately locate their Digicore."
+  },
+  "digivolves_from": [
+    "Betel Gammamon",
+    "Gulus Gammamon",
+    "Kaus Gammamon",
+    "Wezen Gammamon"
+  ],
+  "digivolves_to": [
+    "Cannondramon",
+    "Siriusmon",
+    "Spinomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that inhabits forested areas and specializes in sniping. Its skill as a hunter is very high, blending in with the forest using the camouflage suit that covers its whole body and sniping without revealing its location to its prey. Although it is a Digimon with a calm disposition, it has a strong attachment to its territorial hunting grounds, so those who carelessly step into Ghilliedhumon's hunting grounds will be sniped without warning. Since it prefers making slow movements that can mask its presence and the sounds it makes, it is poor at moving swiftly. Ghilliedhumon's eyes have a special function; it accurately locates the prey Digimon's Digicore with its \" True Eyes \", which allows it see through their body, and then brings them down by shooting them clean through the Digicore with its \" Core Shoot \", fired from its cherished rifle \" Bellota \"."
+}

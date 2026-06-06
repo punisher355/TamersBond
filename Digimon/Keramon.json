@@ -1,0 +1,53 @@
+{
+  "name": "Keramon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 3,
+    "KNW": 3,
+    "SNC": 3,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Crazy Giggle",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Spews out an exceptionally destructive bullet of light while laughing."
+  },
+  "digivolves_from": [
+    "Tsumemon",
+    "Yarmon"
+  ],
+  "digivolves_to": [
+    "Arkadimon Adult",
+    "Bakemon",
+    "Bomber Nanimon",
+    "Chrysalimon",
+    "Dokugumon",
+    "Duskmon",
+    "Garurumon",
+    "Geremon",
+    "Guardromon",
+    "Kabuterimon",
+    "Mechanorimon",
+    "Meicoomon",
+    "Nanimon",
+    "Numemon",
+    "Octmon",
+    "Platinum Scumon",
+    "Scumon",
+    "Soulmon",
+    "Wendimon",
+    "Wizarmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Child Digimon that evolved from Tsumemon . Its physique has gotten larger, and with its huge mouth, it can eat away at much more data than Tsumemon could. Because it eats away at more than 100 megabyte s of data per second, the data is destroyed the instant it enters Keramon. It has an extremely cheerful personality and thinks of its destructive actions as just part of its play. Its Special Move is spewing out an exceptionally destructive bullet of light while laughing (?) ( Crazy Giggle )."
+}

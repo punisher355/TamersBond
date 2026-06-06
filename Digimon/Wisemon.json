@@ -1,0 +1,48 @@
+{
+  "name": "Wisemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Blade Kuwagamon",
+    "Clockmon",
+    "Darcmon",
+    "Fla Wizarmon",
+    "Mercuremon",
+    "Revolmon",
+    "Sorcerimon",
+    "Witchmon",
+    "Wizarmon"
+  ],
+  "digivolves_to": [
+    "Ancient Wisemon",
+    "Belphemon: Sleep Mode",
+    "Chaos Dukemon",
+    "Demon",
+    "Duftmon",
+    "Jijimon",
+    "Murmukusmon",
+    "Piemon",
+    "Venom Vamdemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon completely shrouded in mystery, it can appear anywhere in time and space via the Book . Treating the Book as a spiritual vessel, it frequently alters its shape to appear anywhere within the spaces and times which the Book has connected, and it is said that its true form remains within a separate dimension. Among researchers it is rumored that it is in the same family as Piemon , and of the same Demon Man type. The Space-time Stones it holds in its hands are able to playback a record of a space, preserving every event or object of the Digital World within space and time. Its Special Moves are repeatedly preserving opponent's attacks within space and time and then performing a high-speed playback ( Pandora Dialogue ), and confining the opponent within the Space-time Stones for an eternity ( Eternal Nirvana )."
+}

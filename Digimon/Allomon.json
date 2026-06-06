@@ -1,0 +1,45 @@
+{
+  "name": "Allomon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Dino Burst",
+    "element": "Wind",
+    "pr": 7,
+    "tags": "[RANGE 4]",
+    "description": "Spews out an ultra-high temperature wind."
+  },
+  "digivolves_from": [
+    "Ganimon",
+    "Guilmon",
+    "Monodramon",
+    "Muchomon",
+    "V-mon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Hisyaryumon",
+    "Mametyramon",
+    "Megalo Growmon",
+    "Orochimon",
+    "Vikaralamon",
+    "Waru Monzaemon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An Armor-level Dinosaur Digimon that evolved through the power of the \" Digimental of Courage \". Particularly ferocious among Dinosaur Digimon, it is in a hostile relationship with fellow Dinosaur-type Tyranomon . Allomon's special features are having powerful leg strength, and being able to run at blistering speed by tilting its head down and taking a horizontal stance. Its Special Move is spewing out an ultra-high temperature wind ( Dino Burst ).",
+  "web_created": true
+}

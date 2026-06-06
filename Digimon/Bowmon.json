@@ -1,0 +1,35 @@
+{
+  "name": "Bowmon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Intimidates the opponent with a spark-filled bark."
+  },
+  "digivolves_from": [
+    "Fusamon"
+  ],
+  "digivolves_to": [
+    "BEMmon",
+    "Herissmon",
+    "Loogamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Lesser Digimon whose whole body is covered in soft fur. It takes an interest in everything it sees, and has a habit of sniffing them out. Although it is an active Digimon, it immediately tumbles over when running due to its short legs. It is unable to ascend or descend to places with a difference in elevation greater than the length of its legs, so in areas with uneven elevation, it moves around while rolling. If someone hostile approaches it, it will intimidate them with a spark-filled bark called \" Puppy Spark \"."
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Diarbbitmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Trusgain",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Slashes the enemy with its unrestrained swordsmanship."
+  },
+  "digivolves_from": [
+    "Bastemon",
+    "Cerberumon",
+    "Lamortmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An astute Beast Knight Digimon that protects the nature-rich land inhabited by many Beast Digimon. It has a gentle personality and prefers spending its time quietly while interacting with the Digimon around it. If an enemy that threatens the land appears, it will draw its two cherished swords, \" Móralltach \" and \" Beagalltach \", and drive the enemy back with its nimble movements. Even though Diarbbitmon is usually well-mannered, it will invoke its rage against those who ravage the land, and chop them up until not even a trace of them remains, and will also keep pursuing their allies until they are annihilated. Its Special Moves are slashing the enemy with its unrestrained swordsmanship ( Trusgain ), and summoning two magic spears which home in on them ( Buidhedearg ). In addition, it also cuts off the enemy's path of retreat with its \" Buck Strash \", in which it minces the enemy as it leaves behind high-speed afterimages in all directions around them."
+}

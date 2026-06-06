@@ -1,0 +1,33 @@
+{
+  "name": "Brigadramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 14,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Genocide Rain",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires 4,800 high-explosive shells per second using the Gatling cannon on its right arm."
+  },
+  "digivolves_from": [
+    "Cargodramon",
+    "Hisyaryumon",
+    "Tankdramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "D-Brigade had perfected an Ultimate Digimon as their weapon of last resort in the past, but this individual caused a fiasco when it broke out after running wild. After reflecting upon their failure to produce the strongest and most unique Digimon to represent their organization, they evolved and developed a Digimon as a command machine for managing troops efficiently—Brigadramon. It circles above the mission area, searching for and destroying threats on the ground or at low altitudes. Once a major threat has been eliminated, Cargodramon carrying squadrons will land, deploying Commandramon , Hi-Commandramon , and Tankdramon on the ground. Brigadramon circles the skies until the mission is complete, continuously giving commands to the deployed troops and performing reconnaissance. Its Special Moves are strafing with high-explosive shells fired at a rate of 4,800 rounds per second using the huge Gatling cannon on its right arm ( Genocide Rain ), and organic missiles housed within the claws on its left hand ( Exa Destroyer ). For a time, D-Brigade had lost their reputation due to the fiasco; however, after the deployment of Brigadramon, their operational success rate has improved and their troop loss rate has dropped significantly, so they have started to regain their former reputation. There are also reports that three Brigadramon are currently in commission, and that number is expected to further increase in the future."
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Shima Unimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 7,
+    "LVE": 5,
+    "KNW": 4,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Raster Shot",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Spits out a shockwave from its mouth."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Candmon",
+    "Clear Agumon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gaomon",
+    "Kokuwamon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Asuramon",
+    "Hangyomon",
+    "Mammon",
+    "Piccolomon",
+    "Skull Greymon",
+    "Super Starmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A subspecies of Unimon that has stripes all over its body. Because the data of the Unicorn is more highly expressed in its body, it lacks the wings of the Pegasus . For that reason, it is unable to fly in the air, but it races across the land with its powerful legs. Also, its Unicorn horn is sharper than Unimon's, and its lethal potential has increased. Its Special Move is spewing a shock wave from its gigantic mouth ( Raster Shot )."
+}

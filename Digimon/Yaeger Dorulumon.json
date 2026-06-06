@@ -1,0 +1,38 @@
+{
+  "name": "Yaeger Dorulumon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Weiß Spirale",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Pierces any enemy with theSturm Stinger."
+  },
+  "digivolves_from": [
+    "Dorulumon",
+    "Drimogemon",
+    "Garurumon",
+    "Garurumon (Black)"
+  ],
+  "digivolves_to": [
+    "Mercurymon",
+    "Metal Garurumon (Black)",
+    "Z'd Garurumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An evolution of Dorulumon that became able to walk on two legs. It has taken the appearance of a knight equipped with the gigantic, drill-shaped spear \" Sturm Stinger \" and its slash-and-defend dual-use \" Zasshu Shield \". Its ability for single-point penetration is the best, and because of this distinctive characteristic, it leads single-unit charges on its enemies to break open escape routes for those behind it to follow. Its Special Moves are piercing any enemy with the Sturm Stinger ( Weiß Spirale ), and tearing them to pieces with the Zasshu Shield ( Schwarz Nagel ).",
+  "web_created": true
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Butterflamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Sweet Pheromone",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Causes phosphorus powder containing a hallucinogenic program stored in its wings to rain down on the opponent and confuse them."
+  },
+  "digivolves_from": [
+    "Dokunemon",
+    "Psychemon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Blue)",
+    "Jyagamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Insect Digimon that evolved through the power of the \" Digimental of Knowledge \". Like Flybeemon and Honeybeemon , it is a mythical Digimon that was born due to the power of the Digimental during a large Kunemon outbreak. It prefers living in areas with flower beds and a warm climate. It hates conflict and has a friendly personality. Its Special Move \" Sweet Pheromone \" is a technique for protecting itself when it has no other options, causing phosphorus powder containing a hallucinogenic program stored in its wings to rain down on the opponent and confuse them. This hallucinogenic program also has the effect of alleviating the opposing Digimon's hostility, allowing it to end the battle without injuring them.",
+  "web_created": true
+}

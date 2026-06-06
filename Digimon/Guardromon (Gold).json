@@ -1,0 +1,44 @@
+{
+  "name": "Guardromon (Gold)",
+  "stage": "Champion",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Clear Agumon",
+    "Funbeemon",
+    "Hagurumon",
+    "Shoutmon",
+    "Solarmon",
+    "Toy Agumon",
+    "Zubamon"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Cannonbeemon",
+    "Duramon",
+    "Grademon",
+    "Master Blimpmon",
+    "Metal Mamemon",
+    "Nanomon (Digimon)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A form that Guardromon defending Chrondigizoit mines transformed into in order to withstand repeated, relentless raids by illegal miners. Guardromon's armor is said to be the result of it taking in the Chrondigizoit dust data floating in the air. Its armor is more durable than that of a normal Guardromon , and its Special Move \" Destruction Grenade \" has also succeeded in slightly raising its output. But in exchange, its armor became heavier, causing its movements to be sluggish overall."
+}

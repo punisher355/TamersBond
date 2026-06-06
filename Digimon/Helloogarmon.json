@@ -1,0 +1,36 @@
+{
+  "name": "Helloogarmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Howling Burst",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Fires a blast of flames that spread from its mouth."
+  },
+  "digivolves_from": [
+    "Loogarmon",
+    "Snatchmon",
+    "Tyranomon"
+  ],
+  "digivolves_to": [
+    "Fenriloogamon",
+    "Rasenmon: Fury Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon in a chaotic state, overflowing with an enormous amount of magical power, whose form was released through the Interface on its brow by the sinister magic data of the mythical warg , which slept within the deepest parts of its Digicore . That enormous amount of magical power is transformed into magical flames, which keep spewing forth endlessly. The ultra-high-temperature magical flames have consumed even Helloogarmon itself, so nearly its entire body has been replaced by those flames. It has also lost its sense of self, and its sole governing principle is to incinerate everything around it. Its Special Moves are firing a blast of flames that spread from its mouth ( Howling Burst ), and tearing the enemy to pieces with its claws enveloped in ultra-high-temperature magical flames ( Inferno Claw ). The attack in which it unleashes \" Inferno Claw \" with both hands, and crushes the opponent between its hands while tearing them apart is called \" Hati Embrace \"."
+}

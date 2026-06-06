@@ -1,0 +1,36 @@
+{
+  "name": "Machmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Full ThrottleEdge",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Tears the enemy to pieces with the blades protruding from various parts."
+  },
+  "digivolves_from": [
+    "Hagurumon",
+    "Jazamon"
+  ],
+  "digivolves_to": [
+    "Loader Leomon",
+    "Metal Mamemon",
+    "Rebellimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon that yearns for speed. Dust clouds over barren plains are often caused by Machmon racing noisily. Despite its motorcycle-like appearance, it doesn't have a seat, and no one wants to ride it. However, it believes that it will eventually find a Digimon destined to ride it skillfully. It is a natural-born bōsōzoku who views anyone that travels at high speed as an enemy. Its Special Moves are tearing the enemy to pieces with the blades protruding from various parts ( Full Throttle Edge ), and indiscriminately shooting with the four gun muzzles mounted to the sides of its front wheel ( Madness Fire )."
+}

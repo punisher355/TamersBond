@@ -1,0 +1,46 @@
+{
+  "name": "Blimpmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Zeppelin Explosion",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Fires cannonballs from its topside cannons at the enemy."
+  },
+  "digivolves_from": [
+    "Gazimon",
+    "Gottsumon",
+    "Hagurumon",
+    "Kotemon",
+    "Plotmon",
+    "Solarmon",
+    "Strabimon",
+    "Toy Agumon"
+  ],
+  "digivolves_to": [
+    "Asuramon",
+    "Giromon",
+    "Knightmon",
+    "Locomon",
+    "Master Blimpmon",
+    "Metal Mamemon",
+    "Valvemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Vehicle Digimon just like Mechanorimon , it flies in the skies without a care in the world. Although its delicate balloon portion is protected by a metallic coating, it seems to still be under construction as its left flank is left exposed. Its Signature Move is shooting bullets of helium gas and detonating them ( Helium Bomb ). Its Special Move is firing cannonballs from the two large cannons seated on its top ( Zeppelin Explosion )."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Puyoyomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Sends out a bursting streak of electricity."
+  },
+  "digivolves_from": [
+    "Puyomon"
+  ],
+  "digivolves_to": [
+    "Jellymon",
+    "Kodokugumon Child"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Puyomon evolved by taking in jellyfish data. It grew several tentacles by copying the biological features of jellyfish. As you can tell from its round eyes that are brimming with curiosity, it has grown its own preferences, and once it sticks to something that it likes, it will not let go. Conversely, when it is something that it dislikes, it sends out a bursting streak of electricity ( Zone Pachipachi ), and never lets anything get near it. Even if it likes sticking to something, it will lose interest after a while and detach from it, and has a moody personality where it floats lightly in search of exciting things that suit its taste."
+}

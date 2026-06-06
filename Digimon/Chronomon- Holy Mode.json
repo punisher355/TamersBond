@@ -1,0 +1,31 @@
+{
+  "name": "Chronomon: Holy Mode",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 14,
+    "LVE": 10,
+    "KNW": 13,
+    "SNC": 15,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Holy Flare",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Emits sacred flames that incinerate beings who maliciously try to distort space-time, and even erase the fact that they existed."
+  },
+  "digivolves_from": [
+    "Butenmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A God Man Digimon that is also said to be a materialization of the system that governs time. The flow of time in the Digital World is truly vague, and disturbances in time occasionally occur due to conflicts between powerful Digimon or cataclysms. It is Chronomon who appears on those occasions, tasked with restoring space-time. Once it restores space-time, the fact that it manifested also disappears along with the space-time disturbance, so no one has seen Chronomon. For that reason, Chronomon's existence is only mentioned in a few legends. Its Special Moves are sacred flames that incinerate beings who maliciously try to distort space-time, and even erase the fact that they existed ( Holy Flare ), and an indefensible blow in which it swings its wings like blades, severing the opponent along with space-time ( Chronos Crop ).",
+  "web_created": true
+}

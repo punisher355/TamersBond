@@ -1,0 +1,53 @@
+{
+  "name": "Mechanorimon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Gyro Break",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "A mechanically powered, explosive, corkscrew punch."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Candmon",
+    "Guilmon",
+    "Hagurumon",
+    "Keramon",
+    "Kokuwamon",
+    "Strabimon",
+    "Toy Agumon",
+    "Toy Agumon (Black)"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Big Mamemon",
+    "Fantomon",
+    "Gigadramon",
+    "Giromon",
+    "Locomon",
+    "Mamemon",
+    "Megadramon",
+    "Metal Mamemon",
+    "Metal Tyranomon",
+    "Valvemon",
+    "Waru Monzaemon",
+    "Nanomon (Digimon)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "It is a Powered Suit Digimon used exclusively by tiny Digimon, and is the first Vehicle Digimon in the Digital World . It is a unique Digimon that is unable to move on its own and is incapable of action unless it is being piloted by another Digimon. Considering its Virus attribute, the pilot Digimon can probably be considered a Virus attribute, too. It is a Digimon that is still in development, and if it is overworked then its computer kernel ( Digicore ) will totally overheat. Its Special Moves are a mechanically powered, explosive corkscrew punch ( Gyro Break ), and an attack beamed from the linear lens embedded in its torso ( Twinkle Beam ). The opponents who suffer this lose control of their body."
+}

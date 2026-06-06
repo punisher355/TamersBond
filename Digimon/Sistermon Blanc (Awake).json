@@ -1,0 +1,31 @@
+{
+  "name": "Sistermon Blanc (Awake)",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Divine Pierce (Satoru)",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "A more powerful version ofDivine Pierce."
+  },
+  "digivolves_from": [
+    "Sistermon Blanc"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Another form of Sistermon Blanc . The Holy Stigma appears at the center of the wimple on its head, and it awakens. Its reserved personality completely changes upon entering this state, rushing about the battlefield with frenzied movements obeying its battle instincts laid bare. When it reverts from its awakened state, it instantly falls into a gentle sleep, making its previous violence seem inconceivable.",
+  "web_created": true
+}

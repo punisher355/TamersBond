@@ -1,0 +1,47 @@
+{
+  "name": "Rukamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 7,
+    "SNC": 4,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Shaking Pulse",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Emits the ultrasonic waves from its mouth that it uses to communicate at maximum power."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Gabumon",
+    "Ganimon",
+    "Gomamon",
+    "Jellymon",
+    "Kamemon",
+    "Penmon",
+    "Shakomon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Chimairamon",
+    "Marin Devimon",
+    "Mega Seadramon",
+    "Mermaimon",
+    "Thetismon",
+    "Whamon Perfect",
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A unique signal that originated within software for researching communication between different kinds of groups changed into a Digimon, as an Aquatic Mammal Digimon with a unique existence. Due to its habitat being limited to the sea, it became able to move about the sea at high speed. As expected from its appearance, it possesses advanced intelligence, but its form of thought is too complex for a normal person to understand. Although it is a species that doesn't like useless battles, It won't go easy against an opponent that comes and challenges it. Its Special Move is emitting the ultrasonic waves from its mouth that it uses to communicate, just at maximum power ( Shaking Pulse )."
+}

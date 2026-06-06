@@ -1,0 +1,24 @@
+{
+  "name": "Bombmon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Missimon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A short-tempered Digimon that easily blows its top at trivial things. As it loses its temper, its topknot steadily shortens, and when the topknot has completely retracted into its head, its anger explodes. Although it has Special Moves like \" Bomberhead \", which heaps shock-waves upon the opponent, and \" Fireworks Revolution \", which scatters particles of various colors, all of them have the power of a firecracker. However, because of its vivid beauty, it is often enjoyed as a party entertainment. It is a nuisance for Bombmon that it is provoked even though it is at a party."
+}

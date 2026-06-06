@@ -1,0 +1,31 @@
+{
+  "name": "Bio Spinomon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Fire",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 10,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Blue Prominence",
+    "element": "Fire",
+    "pr": 8,
+    "tags": "[RANGE 4]",
+    "description": ""
+  },
+  "digivolves_from": [
+    "Bio Stegomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Digimon Analyzer ⇨ Japanese Bio Spinomon A Bio-Hybrid that is the fusion of human and Digimon. Its Special Move is Blue Prominence . A blast of blue fire that will burn everything! — Digimon Savers: \"The Fierce Attack of Kurata's Army Corps, Protect the Holy Capital\" Digimon Savers ⇨ English バイオスピノモン 人間とデジモンが融合したバイオハイブリッド体だ。必殺技は ブループロミネンス 。一兆度の火の玉で全てを焼き尽くすぞ。 — デジモンセイバーズ 「猛攻倉田軍団 聖なる都を守れ」 デジモンセイバーズ ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ Japanese He is said to be \"ten times faster, a hundred times more powerful, and infinitely more in love with Honey ( Yoshino )\" than Bio Stegomon in his Ultimate form. In addition to his physical abilities, he is also equipped with a powerful flame technique called \" Blue Prominence \" that he exhales from his mouth. Digimon Series Memorial Book: Digimon Animation Chronicle ⇨ English バイオステゴモンに比べて「スピードは１０倍、パワーは１００倍、ハニー（淑乃）への愛は無限大」になったと言われる究極体の姿。肉体能力もさることながら、口から吐く「ブループロミネンス」といった強力な火炎技も備えている。 デジモンシリーズ メモリアルブック デジモンアニメーションクロニクル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K",
+  "web_created": true
+}

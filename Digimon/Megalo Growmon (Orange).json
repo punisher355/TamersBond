@@ -1,0 +1,60 @@
+{
+  "name": "Megalo Growmon (Orange)",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Atomic Blaster",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Fires beams from its chest-mounted cannons that destroy the enemy at the atomic level."
+  },
+  "digivolves_from": [
+    "Black Growmon",
+    "Devimon",
+    "Geo Greymon",
+    "Greymon",
+    "Growmon",
+    "Growmon (Orange)",
+    "Kuwagamon",
+    "Red Vegimon",
+    "Tylomon"
+  ],
+  "digivolves_to": [
+    "Belphemon: Rage Mode",
+    "Black War Greymon",
+    "Breakdramon",
+    "Chaos Dukemon",
+    "Darkdramon",
+    "Demon",
+    "Dinorexmon",
+    "Dukemon",
+    "Examon",
+    "Hi Andromon",
+    "Medieval Dukemon",
+    "Megidramon",
+    "Metal Piranimon",
+    "Rust Tyranomon",
+    "Shine Greymon",
+    "Sleipmon",
+    "Victory Greymon",
+    "War Greymon",
+    "Imperialdramon: Dragon Mode",
+    "Imperialdramon: Fighter Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Cyborg Digimon that evolved from Data-attribute Growmon . Armed with the super-metal \" Chrome Digizoid \", it also possesses anti-air capabilities with its two vernier . Its Special Move is an attack fired from both of the gunports on its chest that destroys the opponent on the atomic level ( Atomic Blaster )."
+}

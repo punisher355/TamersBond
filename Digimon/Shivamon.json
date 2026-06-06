@@ -1,0 +1,38 @@
+{
+  "name": "Shivamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 9,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Kūṭastha Kiraṇa",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires unparalleled, orb-shaped light energy from its palms."
+  },
+  "digivolves_from": [
+    "Boutmon",
+    "Climbmon",
+    "Divemon",
+    "Pistmon",
+    "Shootmon",
+    "Tempomon"
+  ],
+  "digivolves_to": [
+    "Tyrant Kabuterimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate Digimon that evolved by achieving enlightenment through yoga . It is a pursuer of peace that possesses both a gentle heart and the rigor of trying to guide others. It shows its violent disposition to those who lack decorum or disturb the peace, and annihilates them without mercy. The energy concealed within its body is as powerful as nuclear fuel, and it is a god of destruction that pulverizes everything when push comes to shove. Its Special Moves are firing unparalleled, orb-shaped light energy from its palms ( Kūṭastha Kiraṇa ), and hurling the rings on its arms, whose shape it can change at will, to blow the enemy away ( Kamala Karma ). Also, its \" Samādhi Śānti \", a rainbow-colored barrier it covers itself with in its yoga poses, does not let most attacks pass through, and this barrier can only be penetrated by those who have acquired strength through the power of yoga, like Shivamon."
+}

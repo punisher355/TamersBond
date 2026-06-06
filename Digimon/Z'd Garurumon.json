@@ -1,0 +1,36 @@
+{
+  "name": "Z'd Garurumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Z'd Hou",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires its back-mountedZ'd Hou."
+  },
+  "digivolves_from": [
+    "Mach Gaogamon",
+    "Pandamon",
+    "Piccolomon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Yaeger Dorulumon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A subspecies of Metal Garurumon , the final form of Garurumon , it is the ultimate beast tank Digimon equipped with the ultimate superdreadnought-class weapon, \" Z'd Hou \". Z'd Garurumon's weapons and ammunition are equipped throughout its body, so its physical strength isn't consumed, and it can sustain a rain of bullets for a long duration. The four Laser Sights on its snout have been improved for its ammunition, and are now capable of locking onto hundreds of objects. Its Special Move is mowing down the opponent by simultaneously firing its ultimate weapon Z'd Hou alongside all of the other weapons throughout its body ( Fullmetal Blaze ). Also, it can spray explosive energy from its mouth ( Blowback Breath ). In addition, Z'd Garurumon possesses an evolutionary code that differs from Digimon that were naturally born in the Digital World, and it is thought that it is a Digimon that evolved from a Digitama that was produced due to artificial data intervention.",
+  "web_created": true
+}

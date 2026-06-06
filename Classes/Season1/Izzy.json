@@ -1,0 +1,56 @@
+{
+  "name": "Izzy",
+  "season": 1,
+  "img": "Izzy.webp",
+  "abilities": [
+    {
+      "name": "Data Scan",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 3+)",
+      "description": "Once per encounter as a Basic Action, choose one enemy. You learn their Attribute, Element, and one combat stat of your choice."
+    },
+    {
+      "name": "Tactical Override",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 3+)",
+      "description": "Once per encounter as a Free Action on your turn, you may move one allied Digimon up to 2 spaces in any direction before their turn begins."
+    },
+    {
+      "name": "Calculated Strike",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Knowledge rank 4",
+      "description": "Once per encounter when your Digimon misses an attack, you may spend 3 Hope to reroll the attack roll and take the higher result."
+    },
+    {
+      "name": "Exploit Weakness",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Data Scan, Knowledge rank 4",
+      "description": "When your Digimon attacks an enemy you have already scanned this encounter, they deal +Knowledge rank bonus damage on that attack."
+    },
+    {
+      "name": "Digimon Encyclopedia",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "At least 1 Row 2 ability, Knowledge rank 5",
+      "description": "Once per session you may declare that your character has researched a specific Digimon type before this encounter. You automatically know their Attribute, Element, and two combat stats without spending a scan action."
+    },
+    {
+      "name": "Full Analysis",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Data Scan and Exploit Weakness, Knowledge rank 5",
+      "description": "Data Scan now reveals ALL of the target's combat stats in addition to their Attribute and Element."
+    },
+    {
+      "name": "Prodigious",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Knowledge rank 7",
+      "description": "Once per encounter after an enemy takes an action, you may use your Free Action to predict their next move. The GM tells you one of the following: which target they will attack next, which move they plan to use, or whether they intend to move. You can only predict one thing per activation."
+    }
+  ]
+}

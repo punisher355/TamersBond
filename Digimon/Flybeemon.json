@@ -1,0 +1,35 @@
+{
+  "name": "Flybeemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Fly Spark",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Rapidly vibrates the wings on its back and sends out an electric shock, or fires lightning from its tail."
+  },
+  "digivolves_from": [
+    "Tentomon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Blossomon",
+    "Knightmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Insect Digimon that evolved through the power of the \" Digimental of Knowledge \". It is a mythical Digimon that is said to have evolved in a mutant-like manner due to the power of the Digimental when Kunemon emerged in large numbers. Honeybeemon and Butterflamon are also species of Flybeemon, so it is extremely rare to encounter. It is very territorial , and will try to repel those that intrude its territory, even if they are an Ultimate. Its Special Moves are rapidly vibrating the wings on its back and sending out an electric shock ( Fly Spark ), and firing the hardened stinger on the tip of its tail to pierce the enemy ( Needle Stinger ). Flybeemon was adopted from a winning Digimon entry in the \" Bandai-Town FAX Service Digimon Illustration Contest \" which belonged to Ms. Nao Takei from Gunma prefecture .",
+  "web_created": true
+}

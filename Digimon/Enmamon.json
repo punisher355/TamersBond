@@ -1,0 +1,38 @@
+{
+  "name": "Enmamon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 11,
+    "LVE": 17,
+    "KNW": 11,
+    "SNC": 18,
+    "RLB": 18
+  },
+  "signature_move": {
+    "name": "Jōhari-no-kagami",
+    "element": "Neutral",
+    "pr": 14,
+    "tags": "[MELEE]",
+    "description": "Uses its mirror to reflect all attacks."
+  },
+  "digivolves_from": [
+    "Amaterasumon",
+    "Ariemon",
+    "Kaguyamon",
+    "Ravmon",
+    "Ryugumon",
+    "Tengumon",
+    "Yukinamon",
+    "Zanbamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Demon Lord Digimon that exists in Yomi , the realm of the dead. Yomi, which is where deceased Digimon are sent to in the Eastern Digital World , is ruled over by Enmamon. The hitodama -like familiars floating by its side are called \" Zenzū \"—the bluish-white one—and \" Akuzū \"—the red one—respectively. The two familiars inscribe Digicore information onto scrolls, and after reading them, Digicores that are determined to contain bugs by Enmamon are not reincarnated on earth and remain in Yomi. In Yomi, Enmamon serves as absolute ruler, punishing those who try to escape, but it too is also bound by the system and is unable to leave to the outside world. It possesses the \" Jōhari-no-kagami , a mirror that reflects all attacks, making it impossible to defeat Enmamon in Yomi. Its Special Move is swinging its shaku downward, summoning a giant fist clad in hellfire above the opponent ( Enraō Gōtan ).",
+  "web_created": true
+}

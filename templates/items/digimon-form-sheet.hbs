@@ -1,0 +1,89 @@
+<form class="{{cssClass}} digimon-form-card flexcol" autocomplete="off">
+
+  {{!-- ══ HEADER: portrait + name + badges ══ --}}
+  <header class="dfc-header">
+
+    <div class="dfc-portrait-wrap">
+      <img class="dfc-portrait profile-img" src="{{item.img}}" data-edit="img"
+           title="Click to change image" />
+    </div>
+
+    <div class="dfc-header-info">
+      <input class="dfc-name charname" name="name" type="text"
+             value="{{item.name}}" placeholder="Form Name" />
+
+      <div class="dfc-badges">
+        <span class="dfc-badge dfc-badge-stage">{{stageName}}</span>
+        <span class="dfc-badge dfc-badge-attr">{{attrName}}</span>
+        <span class="dfc-badge dfc-badge-elem">{{elemName}}</span>
+        {{#if system.size}}<span class="dfc-badge dfc-badge-size">{{system.size}}</span>{{/if}}
+      </div>
+
+      <div class="dfc-meta-grid">
+        <div class="dfc-field">
+          <label>Stage</label>
+          <select name="system.stage">{{selectOptions stageOptions selected=system.stage}}</select>
+        </div>
+        <div class="dfc-field">
+          <label>Attribute</label>
+          <select name="system.attribute">{{selectOptions attributeOptions selected=system.attribute}}</select>
+        </div>
+        <div class="dfc-field">
+          <label>Element</label>
+          <select name="system.element">{{selectOptions elementOptions selected=system.element}}</select>
+        </div>
+        <div class="dfc-field">
+          <label>Size</label>
+          <input type="text" name="system.size" value="{{system.size}}" placeholder="Medium" />
+        </div>
+        <div class="dfc-field dfc-field-wide">
+          <label>Signature Move</label>
+          <input type="text" name="system.signatureMove" value="{{system.signatureMove}}" placeholder="Move name" />
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  {{!-- ══ BODY ══ --}}
+  <section class="dfc-body">
+
+    {{!-- Stat grid --}}
+    <div class="dfc-section-title">Bond Stats</div>
+    <div class="dfc-stat-grid">
+      {{#each statList}}
+      <div class="dfc-stat-cell" style="border-top: 3px solid {{this.color}};">
+        <img src="{{this.crestImg}}" class="dfc-crest-icon" />
+        <span class="dfc-stat-label">{{this.label}}</span>
+        <input class="dfc-stat-input" type="number"
+               name="system.stats.{{this.key}}" value="{{this.value}}" />
+      </div>
+      {{/each}}
+    </div>
+
+    {{!-- Digivolution chain --}}
+    {{#if system.digivolves_from.length}}
+    <div class="dfc-chain-row">
+      <span class="dfc-chain-label">Digivolves from</span>
+      <span class="dfc-chain-names">{{#each system.digivolves_from}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+    </div>
+    {{/if}}
+    {{#if system.digivolves_to.length}}
+    <div class="dfc-chain-row">
+      <span class="dfc-chain-label">Digivolves to</span>
+      <span class="dfc-chain-names">{{#each system.digivolves_to}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+    </div>
+    {{/if}}
+
+    {{!-- UUID reference row --}}
+    <div class="dfc-uuid-row">
+      <label class="dfc-uuid-label">UUID</label>
+      <input class="dfc-uuid-display uuid-display" type="text" readonly value="{{itemUuid}}" />
+      <button class="dfc-uuid-copy uuid-copy-btn" type="button" title="Copy UUID">
+        <i class="fas fa-copy"></i>
+      </button>
+    </div>
+
+  </section>
+
+</form>

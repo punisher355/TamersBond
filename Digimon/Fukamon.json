@@ -1,0 +1,25 @@
+{
+  "name": "Fukamon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Mococomon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Smoke Digimon with virtually no mass, like a cloud, that floats lightly through the air. It doesn't move that much on its own accord, but since it travels around by going with the wind, it widely inhabits the continent of the Eastern Digital World . On stormy days, it is said to take shelter behind objects or large Digimon so that it doesn't get blown away. When it senses that it is in danger, it spews out clouds with its \" Koun \" and then flees.",
+  "web_created": true
+}

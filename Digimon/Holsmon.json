@@ -1,0 +1,41 @@
+{
+  "name": "Holsmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Mach Impulse",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Unleashes a blade-like shock wave from its wings."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Piyomon",
+    "Renamon",
+    "Terriermon",
+    "Tukaimon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Angewomon",
+    "Dinobeemon",
+    "Magnamon",
+    "Mihiramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Beast Digimon that evolved through the power of the \" Digimental of Love \". The \"Digimental of Love\" has the attribute of \"Wind\", and those that don this Digimental soar through the sky by flapping their wings like a gust of wind running through the air. In aerial combat, its speed and all of its attacks are superior to enemy Digimon. Its Special Moves are unleashing a shock wave from its wings ( Mach Impulse ) and spinning its body to generate a gigantic tornado ( Tempest Wing ). Its Signature Move is a cursed beam, fired from a sharp glance of its eyes ( Udjat Gaze ).",
+  "web_created": true
+}

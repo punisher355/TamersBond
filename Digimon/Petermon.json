@@ -1,0 +1,32 @@
+{
+  "name": "Petermon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Tinkermon"
+  ],
+  "digivolves_to": [
+    "Lilamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon which has the appearance of a boy that dances freely in the sky. It tempts young and childish Digimon that refuse to evolve with, \"Let's make a country just for children,\" calling them to the children's world of \" Never-Ever Land \" that it built. It's said to have a naive and innocent personality, but thanks to its purity there a brutality lurks within. In particular, although it calls it a \"Pretend Punishment\", it mercilessly beats Digimon who break their promises. With Petermon's first-class handling of its sword, it delicately manipulates the knife on its hip to punish the opponent. It relentlessly chases its opponents while smiling scornfully with the dazzling swordplay of its \" Snipe Sting \", whose blows hit the vitals precisely, or its \" Twinkle Shoot \", which if it's thrown, pursues the opponent until it hits. Also, Petermon's breezy whistling melody, \" Midnight Fantasia \", is able to freely manipulate the young Digimon sleeping nearby while they remain asleep."
+}

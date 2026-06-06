@@ -1,0 +1,32 @@
+{
+  "name": "Alphamon Ouryuken",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Light",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 18,
+    "LVE": 12,
+    "KNW": 15,
+    "SNC": 18,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Kyūkyoku Senjin Ouryūken",
+    "element": "Light",
+    "pr": 15,
+    "tags": "[MELEE]",
+    "description": "Attacks with its sword."
+  },
+  "digivolves_from": [
+    "Alphamon",
+    "Ouryumon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A form in which Ouryumon achieved a miraculous evolution and became a sword through the operation of the magic circle of Digimoji that Alphamon unleashed. Ouryumon is the Ultimate of the experimental \" Prototype Digimon \" that pursued further fighting strength, and by becoming a sword, all of that fighting strength was devoted exclusively to its attacks. To swing the Ouryuken is to wield all of the power contained within an Ultimate Digimon, so to speak, so it isn't a sword that can be swung by an average Digimon, and there aren't any average Digimon that can take the blow.",
+  "web_created": true
+}

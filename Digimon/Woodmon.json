@@ -1,0 +1,57 @@
+{
+  "name": "Woodmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Plant",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Branch Drain",
+    "element": "Plant",
+    "pr": 6,
+    "tags": "[MELEE] [DRAIN]",
+    "description": "12Extends its branch-shaped arms and stabs the enemy, draining their energy.Drains energy by inhaling."
+  },
+  "digivolves_from": [
+    "Alraumon",
+    "Dokunemon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Floramon",
+    "Goburimon",
+    "Hawkmon",
+    "Lalamon",
+    "Mushmon",
+    "Palmon",
+    "Piyomon",
+    "Renamon",
+    "Snow Goburimon",
+    "Tentomon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Algomon (Perfect)",
+    "Blossomon",
+    "Delumon",
+    "Jyureimon",
+    "Lilamon",
+    "Mamemon",
+    "Okuwamon",
+    "Piccolomon",
+    "Pumpmon",
+    "Taomon",
+    "Mega Seadramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Plant Digimon with the appearance of a large, withered tree. It usually disguises itself as an ordinary tree, and lives by grabbing Digimon that pass by and draining their energy. In addition, it is able to move about using its root-like feet. It has a frenzied personality, and never stops attacking once it is angered. Although its defense is high due to its hard trunk, it is vulnerable to fire and fares very poorly against flame-type Digimon like Meramon and Birdramon , which it regards as enemies. Its Special Move is extending its branch-shaped arms and stabbing the enemy, completely draining them of their energy ( Branch Drain ).",
+  "web_created": true
+}

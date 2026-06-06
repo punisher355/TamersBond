@@ -1,0 +1,25 @@
+{
+  "name": "Relemon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Pokomon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A mysterious Digimon that is said to only be born on moonlit nights. It is said that Relemon born specifically on the night of the full moon receive its magical power, and as they grow, are able to use greater and more wondrous abilities than other Digimon. Because it is nocturnal, it seldom appears before people and has a shy personality. It is not able to attack, but it can transform into anything to defend itself, if it is close to the size of its body. However, it can still be found because it can never conceal its tail.",
+  "web_created": true
+}

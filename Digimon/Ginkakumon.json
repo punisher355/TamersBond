@@ -1,0 +1,34 @@
+{
+  "name": "Ginkakumon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Kiendan",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Shoots a fireball from its mouth."
+  },
+  "digivolves_from": [
+    "Fujamon",
+    "Kakamon"
+  ],
+  "digivolves_to": [
+    "Pandamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Ginkakumon is a taciturn boy giant that is feared as one of the \"Gold and Silver Oni Brothers\" alongside its big sister Kinkakumon . The Beni Hisago that it carries on its back is Kinkakumon's drink, and it's said that the inside is connected to somewhere in a different dimension, and that Digimon who are hurled to this different dimension are converted to alcohol. It is always worrying for its big sister Kinkakumon out of love. It warmly watches over even Kinkakumon's misbehavior, and if there is an unscrupulous fellow approaching its big sister, it throws them with enough power to shake a mountain. If Kinkakumon is aboard the cockpit in its abdomen, then Ginkakumon's power becomes as mighty as should be expected from a big sister and a little brother. Being boarded is secretly a happy time for Ginkakumon. Its Special Move is a breath attack that shoots a fireball from its mouth ( Kiendan ), and firing off this Kiendan while stepping back from the opponent that has challenged it in close combat is its counter technique, \" Gyakugeki Endan \". Also, its \" Ginkaku Tokkan \" is a ramming technique that capitalizes on its large build by lowering its back and charging to crush the opponent, and its \" Kin Gin Raimeigeki \", which exposes the opponent to high voltage when Kinkakumon is aboard, further adds to that."
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Lucemon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 3,
+    "KNW": 3,
+    "SNC": 5,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Grand Cross",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Fires ten superheated orbs in a cruciform syzygy."
+  },
+  "digivolves_from": [
+    "Cupimon",
+    "Koromon",
+    "Nyaromon",
+    "Tokomon"
+  ],
+  "digivolves_to": [
+    "Angemon",
+    "Chrysalimon",
+    "Darcmon",
+    "Devimon",
+    "Geremon",
+    "Hanumon",
+    "Ice Devimon",
+    "Numemon",
+    "Pidmon",
+    "Scumon",
+    "Tortamon",
+    "Unimon",
+    "V-dramon",
+    "Wizarmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Said to have descended to the ancient Digital World long ago, it is an Angel Digimon which has the appearance of a child. It manifested in an era in which the Digital World was still chaotic, and it is said that it brought about order and harmony. However, a long period of darkness was summoned due to Lucemon's later \"Rebellion\". Although it has the appearance of a child, the power and intelligence it possesses surpass even that of a Perfect Digimon. It is said that Lucemon's abilities have now been inherited and split among the Three Archangels . Its Special Move is firing ten super-heated spheres of light arranged in a cruciform syzygy ( Grand Cross ). This technique possesses a power surpassing that of Seraphimon 's \" Seven Heavens \"."
+}

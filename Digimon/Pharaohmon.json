@@ -1,0 +1,40 @@
+{
+  "name": "Pharaohmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 12,
+    "LVE": 15,
+    "KNW": 12,
+    "SNC": 12,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Necromist",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Emits a fear-gas that steals the will of hostile Digimon, and slowly desiccates their flesh. If someone suffers this attack, there are only two options—whether to be lured completely to the world of death, or to serve Pharaohmon as an immortal, even in death."
+  },
+  "digivolves_from": [
+    "Blue Meramon",
+    "Fantomon",
+    "Mistymon",
+    "Mummymon",
+    "Phelesmon",
+    "Skull Greymon",
+    "Triceramon",
+    "Vulturemon",
+    "Waru Monzaemon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese An Ultimate Demon Man Digimon whose body shines gold enough to be baleful. It is said that it evolved from Mummy Digimon , and it boasted absolute power in the ancient Digital World , ruling many areas. As for the mysterious ancient ruins that dot the Digital World, many Digimon were under Pharaohmon's control at the Genesis of the Digital World, and from these places which are said to have been raised in just a few days, that control can be perceived. Its Special Move is emitting a fear-gas that steals the will of hostile Digimon, and slowly desiccates their flesh ( Necromist ). If you suffer this attack, there are only two options—whether to be lured completely to the world of death, or to serve Pharaohmon as an immortal, even in death. Pharaohmon was adopted from a winning Digimon entry in the \" Bandai-Town FAX Service Digimon Illustration Contest \" which belonged to Mr. Toshiki Mizutani from Kanagawa prefecture ."
+}

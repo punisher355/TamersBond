@@ -1,0 +1,34 @@
+{
+  "name": "Black Saint Galgomon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 14,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Giant Missile",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires the giant missiles on its shoulders."
+  },
+  "digivolves_from": [
+    "Bastemon",
+    "Black Rapidmon",
+    "Gigadramon",
+    "Metal Tyranomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A type of Saint Galgomon specialising in entering enemy territory to attack, it is equipped with massive amounts of armaments. Although it lacks speed, it is able to utilise the heat-based weapons located all over its body to counterattack in all directions without moving an inch. Its Special Move is firing all of the heavy artillery on its body at once ( Burst Shot )."
+}

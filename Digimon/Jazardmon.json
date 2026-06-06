@@ -1,0 +1,34 @@
+{
+  "name": "Jazardmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Laser Eye",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Hawkmon",
+    "Jazamon"
+  ],
+  "digivolves_to": [
+    "Cannonbeemon",
+    "Jazarichmon",
+    "Pumpmon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Digimon whose form combines the data of both a dragon and a fighter . In addition to being able to fly at high speed, it is also capable of vertical take-off and landing , as well as hovering thanks to its legs. It is a bit of an oddball in that its hobby is performing reconnaissance, so it will always have a good grasp of what is going on in its surroundings. It possesses night vision, thermal, ultrasound, and other capabilities, and it is considered impossible to approach it without being noticed. Its Special Moves are shooting lasers from its eyes ( Laser Eye ), and firing high-speed machine guns from its shoulders ( Sonic Vulcan )."
+}

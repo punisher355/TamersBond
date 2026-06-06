@@ -1,0 +1,33 @@
+{
+  "name": "Agumon -Yuki no Kizuna-",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Fire",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "RedReamer",
+    "element": "Fire",
+    "pr": 11,
+    "tags": "[RANGE 8] [BURN 3,2]",
+    "description": "Burns the enemy with high-intensity red lasers emitted from the tips of its claws."
+  },
+  "digivolves_from": [
+    "Master Tyranomon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "The strong bond between Agumon and its Partner, it is a legendary, final evolution that was achieved after countless possibilities. The indomitable \" Courage \" of its Partner turned into hot flames that spurt out from its whole body, and appears as proof of their deep trust. It has a deeper understanding of humans owing to the long amount of time they spent together, and so this evolved form has also taken on a near-humanoid shape. Its Special Moves are burning the enemy with high-intensity red lasers emitted from the tips of its claws ( Red Reamer ), using the spear on its tail as a weapon and skewering them with it ( Strash Salamander ), and converting the flames of courage contained within it into an ultra-high temperature energy shot and then releasing it ( Gaia Brave ).",
+  "web_created": true
+}

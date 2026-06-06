@@ -1,0 +1,57 @@
+{
+  "name": "Atlur Kabuterimon (Red)",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Electric",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Horn Buster",
+    "element": "Electric",
+    "pr": 10,
+    "tags": "[RANGE 4] [CHAIN 2,3]",
+    "description": "12Blasts fire from its rear end and rockets at the opponent, stabbing them with its gigantic horn.Fires a spiraling energy beam from its horn."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "Digmon",
+    "Dokugumon",
+    "Flymon",
+    "Garurumon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Mothmon",
+    "Red V-dramon",
+    "Red Vegimon",
+    "Scumon",
+    "Stingmon",
+    "Sunflowmon",
+    "Tailmon",
+    "Vegimon",
+    "Waspmon",
+    "Yanmamon"
+  ],
+  "digivolves_to": [
+    "Bancho Stingmon",
+    "Chaos Dukemon",
+    "Craniummon",
+    "Gran Kuwagamon",
+    "Grandis Kuwagamon",
+    "Herakle Kabuterimon",
+    "Holydramon",
+    "Rosemon",
+    "Saint Galgomon",
+    "War Greymon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An evolution of Kabuterimon that was discovered within the tropical region of the Net Area . It is almost 1.5 times Kabuterimon's size, and is quite large among Insect Digimon. It is the same species as the blue Atlur Kabuterimon , and similarly, the strength of its horn, which is its main weapon, has soared, but this type of Atlur Kabuterimon seems to have surpassed it in flight ability. Also, muscular tissues have appeared on the base of its forelimbs, so its grappling ability has also improved. Its behavior, with the exception of its survival instincts, has been observed to consist of protecting the weak, and there are even times when its behavior has appeared knight-like. Its Special Move is stabbing the opponent with its gigantic horn ( Horn Buster )."
+}

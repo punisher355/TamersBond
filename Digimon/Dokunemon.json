@@ -1,0 +1,52 @@
+{
+  "name": "Dokunemon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Worm Venom",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[RANGE 4] [BLAST 2] [PARALYZE 2]",
+    "description": "Jumps and scatters a neurotoxinfrom its beak that paralyzes the enemy"
+  },
+  "digivolves_from": [
+    "Budmon",
+    "Mochimon"
+  ],
+  "digivolves_to": [
+    "Arbormon",
+    "Butterflamon",
+    "Cockatrimon",
+    "Dark Lizamon",
+    "Dokugumon",
+    "Flymon",
+    "Gokimon",
+    "Kuwagamon",
+    "Mori Shellmon",
+    "Mothmon",
+    "Nise Drimogemon",
+    "Platinum Scumon",
+    "Sand Yanmamon",
+    "Snimon",
+    "Stingmon",
+    "Togemon",
+    "Woodmon",
+    "Yanmamon",
+    "Zassoumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Larva Digimon whose appearance is very similar to Kunemon . Like Kunemon, it is being studied in order to solve the mystery of Insect Digimon, but unlike Kunemon, it has a timid personality, and because it usually lives hidden in forests, it is difficult to find, and so research has not progressed. In addition, it carries a very potent toxin, and it is dangerous to even touch it. Its Special Moves are jumping and scattering a neurotoxin from its beak that paralyzes the enemy ( Worm Venom ), and charging and then stabbing the enemy with the horn on its tail ( Poison Ride ).",
+  "web_created": true
+}

@@ -1,0 +1,37 @@
+{
+  "name": "King Etemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Saru Shibai",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Puts up a false show to cripple the opponent's fighting spirit, and/or throws a ball of energy at them."
+  },
+  "digivolves_from": [
+    "Digitamamon",
+    "Etemon",
+    "Great King Scumon",
+    "Monzaemon",
+    "Pandamon",
+    "Tonosama Gekomon",
+    "Vademon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "It styles itself among other Etemon as the \" King of Etemon \", and after all, it is an ultimate form that is said to be a being set at the top. It gets even more carried away and calls itself the \" King of Kings \". It is snazzily dressed in its \" Saru Suit \", engraved with the characters \" Great King \" on its chest, but although it swaggers around with the affectation of a star, it only earns derision from other Digimon. Its Special Move is putting up a false show that cripples the opponent's fighting spirit ( Saru Shibai ).",
+  "web_created": true
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Algomon (Ultimate)",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 12,
+    "LVE": 13,
+    "KNW": 11,
+    "SNC": 11,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Terabyte Disaster",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires countless beams from its mouth."
+  },
+  "digivolves_from": [
+    "Algomon (Perfect)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A gigantic Ultimate Digimon that evolved from the Perfect-level Algomon , and also amplified its close-combat abilities. Its Special Moves are countless beams fired from its mouth ( Terabyte Disaster ), and beams destructive enough to completely distort even dimensions, fired from the eyes on its limbs ( Distortion Line ). In addition, its \" Brute Force \", which mows down the enemy with its massive body, is also exceptionally destructive."
+}

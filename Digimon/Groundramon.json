@@ -1,0 +1,51 @@
+{
+  "name": "Groundramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Fire",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 7,
+    "SNC": 10,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Scrapless Claw",
+    "element": "Fire",
+    "pr": 8,
+    "tags": "[MELEE] [PUSH]",
+    "description": "Holds the opponent between the arms on its back and crushes them."
+  },
+  "digivolves_from": [
+    "Ankylomon",
+    "Bao Hackmon",
+    "Black Growmon",
+    "Coredramon (Blue)",
+    "Coredramon (Green)",
+    "DORUgamon",
+    "Geo Greymon",
+    "Growmon",
+    "Growmon (Orange)",
+    "Meramon",
+    "Tuskmon",
+    "Tyranomon"
+  ],
+  "digivolves_to": [
+    "Breakdramon",
+    "Cannondramon",
+    "Chaosdramon",
+    "JESmon",
+    "Megidramon",
+    "Metal Garurumon",
+    "Shine Greymon",
+    "Slayerdramon",
+    "Vikemon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Earth Dragon Digimon with giant arms on its back. The arms on its back are said to be wings that mutated, allowing it to more efficiently dig through the ground. It usually lurks within the tunnels it carved deep underground, and seldom comes to the surface. Also, as Groundramon tends to prefer to inhabit veins of the rare Huanglong Ore , it has been discovered that it is very likely to find the elements of Huanglong Ore comprising the scales covering its body. Its personality is extremely ferocious, and as most people lose their life when they encounter one, it is one Digimon for which the details of its ecology are not well understood. Its Special Moves are holding the opponent between the arms on its back and crushing them ( Scrapless Claw ) and knocking them out with the iron sphere on its tail ( Megaton Hammer Crush ). When it reaches the surface it uses \" Giga Crack \", which drops the opponent into fissures it generates by striking its whole body against the ground."
+}

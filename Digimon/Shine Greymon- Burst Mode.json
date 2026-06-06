@@ -1,0 +1,31 @@
+{
+  "name": "Shine Greymon: Burst Mode",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Corona Blaze Sword",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fuses its flaming shield and sword into a greatsword with explosively increased power."
+  },
+  "digivolves_from": [
+    "Rize Greymon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Shine Greymon that has temporarily reached the limits of its abilities through Burst Evolution, it is a unique form which wears an aura of solar-class high-energy flames. Its Special Moves are fusing its flaming shield and sword into a greatsword with explosively increased power ( Corona Blaze Sword ), and putting its body and soul into inducing a massive eruption ( Final Shining Burst ). Also, it can continuously fire incandescent flame shots ( Torrid Weiss )."
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Venusmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 14,
+    "LVE": 13,
+    "KNW": 11,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Piccolomon",
+    "Taomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the Olympos XII , it is a Digimon that is filled with compassion and rules over love. Wherever Venusmon is, beautiful flowers bloom profusely no matter how ruined the soil is, and the land's youthful vigor is revived. It is said that there are many Digimon who serve the pure and beautiful Venusmon. Venusmon can correctly perceive the world with its mind's eye by blindfolding itself, and it isn't taken in by any lie or deception. Furthermore, it restrains its overflowing glamour by concealing its pupils, so it's also a consideration to keep from adding more swooning Digimon. Venusmon is always accompanied by its bird \" Olive \" and its scallop \" Hotan \", small friends who can speak animatedly and unreservedly with Venusmon. Because it is a Digimon that rules over love, it uses a fighting style that pacifies the opponent's heart with each gesture. Its \" Healing Therapy \" makes the opponent's fighting spirit vanish just by caressing their head, and those opponents who receive its \" LOVE YOU \" blown kiss fall over from the shock. Also, if they are pricked in the head by the bird Olive , then they get caught up in the \" Peace Fantasia \", which makes them have peaceful intentions no matter what kind of ferocious personality it has."
+}

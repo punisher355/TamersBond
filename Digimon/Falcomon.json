@@ -1,0 +1,41 @@
+{
+  "name": "Falcomon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 5,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Scratch Smash",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Scratches with its wing claws."
+  },
+  "digivolves_from": [
+    "Pinamon"
+  ],
+  "digivolves_to": [
+    "Diatrymon",
+    "Igamon",
+    "Nohemon",
+    "Numemon",
+    "Orgemon",
+    "Stingmon",
+    "Tyranomon",
+    "XV-mon",
+    "Ogremon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Bird Digimon that lives on 3000m-tall mountains. As its wings are not very developed, it's not so much able to fly as it is able to glide; to make up for that, it is able to run about craggy mountains at great speed with its powerful legs. Because it has a rough temperament, you must be careful because if you approach carelessly, you will get fiercely attacked. Its Special Moves are scratching the opponent with its wing claws ( Scratch Smash ), and an attack it unleashes using its powerful leg strength ( Falco Rush )."
+}

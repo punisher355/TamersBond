@@ -1,0 +1,41 @@
+{
+  "name": "Akatorimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Scar-Red Eye",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Shoots twin jets of flame from eyes that can petrify and shatter the opponent."
+  },
+  "digivolves_from": [
+    "Floramon",
+    "Muchomon",
+    "Penmon",
+    "Piyomon"
+  ],
+  "digivolves_to": [
+    "Delumon",
+    "Fantomon",
+    "Garudamon",
+    "Hippogriffomon",
+    "Parrotmon",
+    "Piccolomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cockatrimon -species Digimon that developed its legs to make up for being unable to fly. Because it consumes more energy than meets the eye moving its large body, it apparently detests violent battles. Its Special Move is glaring with its red eyes to petrify and shatter the opponent ( Scar-Red Eye )."
+}

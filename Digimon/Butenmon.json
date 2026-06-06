@@ -1,0 +1,38 @@
+{
+  "name": "Butenmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Nichirin no Mai",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Rotates its massive sword as if drawing a circle, slashing the opponent."
+  },
+  "digivolves_from": [
+    "Buraimon",
+    "Ginryumon",
+    "Musyamon"
+  ],
+  "digivolves_to": [
+    "Chronomon: Destroy Mode",
+    "Chronomon: Holy Mode",
+    "Gaioumon",
+    "Griffomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A God Man Digimon clad in crimson armor, wielding a greatsword, it evolves from Digimon who have honed their sword abilities through repeated battles. Despite being a Perfect, it is an expert who has already mastered swordsmanship. Possessing sword techniques that even feel elegant and such incredible strength that is said to shatter mountains, the way it runs across the battlefield with its greatsword in hand is truly a statement for someone worth a thousand warriors. Its Special Move is fully swinging its greatsword at high speed, as if drawing a circle, bisecting enemies in its path ( Nichirin no Mai ). Also, the way it mows down enemies with its \" Gyōkō Issen \", a strike it puts all of its strength into, enough to shatter mountains, has earned it praise as a war god that brings dawn to the battlefield."
+}

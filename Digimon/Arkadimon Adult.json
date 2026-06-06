@@ -1,0 +1,37 @@
+{
+  "name": "Arkadimon Adult",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Prison Fist",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "123Destroys the opponent's data at the program level.Stabs the opponent with the spines on its arm and absorbs their energy.Uses its hand to summon a vortex of dark energy."
+  },
+  "digivolves_from": [
+    "Arkadimon Child",
+    "Dracumon",
+    "Keramon"
+  ],
+  "digivolves_to": [
+    "Arkadimon Perfect",
+    "Infermon",
+    "Skull Satamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A cursed Digimon artificially created based on the data of various Digimon. Its nature is to evolve by absorbing its opponent's data, but it is unclear if it possesses any sense of self. Because these details are unknown, it is currently being investigated. Its Special Moves are destroying the opponent's data at the program level ( Prison Fist ), and robbing the opponent of their configuration data and turning it into its own ( Snatch Whip ). Digimon Story: Cyber Sleuth Hacker's Memory ⇨ English 様々なデジモンのデータを元に人為的に創られた呪われしデジモン。相手のデータを吸収することで成長進化する性質を持つが、自我を持っているかは判っていない。詳細は不明で現在調査中である。必殺技は相手のデータをプログラムレベルで破壊する「 プリズンフィスト 」と、相手の構成データを剥き取り自らのデータにする「 スナッチウィップ 」。 デジモンストーリー サイバースルゥース ハッカーズメモリー ⇨ Japanese It stabs the spikes growing from its arms into the enemy's body, and absorbs their energy after immobilizing them. Its Special Move is \" Prison Fist \". Digimon Visual Dictionary ⇨ English 腕に生えているトゲを敵の体につきさして、身動きできないようにしてからエネルギーを吸い取るぞ。必殺技は、「 プリズンフィスト 」。 デジモン大図鑑 ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

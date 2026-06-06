@@ -1,0 +1,33 @@
+{
+  "name": "Shoutmon X3",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Three Victorize",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Fires a beam from the V on its chest, which sweeps away hordes of opponents in a single strike."
+  },
+  "digivolves_from": [
+    "Patamon"
+  ],
+  "digivolves_to": [
+    "Shoutmon X5"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A warrior called the \" Physical Mode \", born from three Digimon's combat instinct and possessing the fundamental abilities of \"Spirit, Skill, and Power\" in great supply. Its motion is rich with maneuverability, and it makes sport of the enemy with its acrobatic movements. It appears slender and because its flexible body joints absorb and dissipate the force they receive, it possesses the ability to resist impacts. The \" V \" on its chest can not only fire its \" Three Victorize \", which sweeps away hordes of opponents in a single strike, but can also be detached and used as the gigantic boomerang \" Victorize Boomerang \", instead of as a sword, as it is an all-purpose weapon that can even be thrown.",
+  "web_created": true
+}

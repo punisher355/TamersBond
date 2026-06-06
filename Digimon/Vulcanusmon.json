@@ -1,0 +1,32 @@
+{
+  "name": "Vulcanusmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 11,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Anomalocarimon",
+    "Asuramon",
+    "Dagomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the Olympos XII , it is a Digimon \" God of Smithery \". Most well-known weapons are the work of Vulcanusmon, and the famous \" Berenjena \" cherished by Beelzebumon is also an article of Vulcanusmon's. It has an artisan's pride and a stubborn personality. It sees through the competence of its clients, and when it feels that they can not master or will not treasure the weapon, it will deny the request. When building, it performs with a standard of work corresponding to the other party. As such, the \" Berenjena \" that it put all of its effort into after being charmed by Beelzebumon's power is considered to be an excellent article, even by Vulcanusmon. Although it's a Digimon that freely manipulates its eight arms and works in silence, it exhibits an artisan's style even in battle. It radiates its \" Bomber Art \", flames to use for welding, and manufactures then and there an appropriate weapon to fit the situation ( Pinpoint Weapon Works ). Furthermore, during its \" Appropriate Works \", in which it equips its weapons, manufactured one after another with its \" Pinpoint Weapon Works \", to each of its arms, all of Vulcanusmon's power is fully unleashed. However, Vulcanusmon's own fighting ability is not very great, so it prefers working behind the scenes to fighting in person."
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Pagumon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Shoots bubble-like substances from its mouth."
+  },
+  "digivolves_from": [
+    "Botamon",
+    "Choromon",
+    "Kuramon",
+    "Zurumon"
+  ],
+  "digivolves_to": [
+    "Bearmon",
+    "Gazimon",
+    "Ghostmon",
+    "Gizamon",
+    "Goburimon",
+    "Gottsumon",
+    "Impmon",
+    "Lopmon",
+    "Otamamon",
+    "Pico Devimon",
+    "Tukaimon",
+    "Tyumon",
+    "Guilmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A small-sized Digimon capable of flying at low altitudes using the ear-like parts growing from its head. It is able to move those ears skillfully and use them like hands, performing gestures such as pulling its eyelid and sticking its tongue out, or slapping its rear to mock the opponent. It has a prank-loving personality. It will bully Digimon such as Koromon or Tunomon by chasing them around. Sometimes, it also bullies others by spitting out \" Doku no Awa \" from its mouth."
+}

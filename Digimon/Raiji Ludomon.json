@@ -1,0 +1,36 @@
+{
+  "name": "Raiji Ludomon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Lightning Buster",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Generates electricity at high output from its head and uses it to strike the enemy."
+  },
+  "digivolves_from": [
+    "Reppamon",
+    "Tia Ludomon"
+  ],
+  "digivolves_to": [
+    "Bryweludramon",
+    "Devitamamon",
+    "Qinglongmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "⇨ Japanese The evolved form of Tia Ludomon , it has been further mechanised and attained the ability to fly. By sacrificing its agility, it gained durability that allows it to withstand even an attack from an Ultimate level head-on. The shields attached to its shoulders and arms automatically put up an electric barrier which cannot be seen, causing enemies to be confused as to why their attacks are not working. Not only that, it is also able to increase the area covered by its barrier in exchange for being unable to move, allowing it to protect entire regions to a certain extent. Its Special Moves are generating electricity at high output from its head and using it to strike the enemy ( Lightning Buster ), and firing its ( Rocket Messer ) from both arms. Digimon Reference Book ⇨ English 機械化の要素が強まり飛行能力を手にしたティアルドモンの進化系。俊敏さは犠牲になったものの、究極体からの攻撃を一辺に受けても耐えきるほどの強固さを誇る。肩と腕に装着した盾で電気を帯びたバリアが自動展開される。そのバリアは視認することができず、敵はなぜ攻撃が効かないのか困惑する。また身動きは取れなくなるがバリアを広範囲に広げ、ある程度の地域をまるごと守ることもできる。 必殺技は、頭から放つ高出力電撃を敵に叩き込む『 ライトニングバスター 』、両腕を射出する『 ロケットメッサー 』を持つ。 デジモン図鑑 ⇨ Japanese A Perfect level Armor Digimon. Through mechanisation, it has gained the ability to fly, as well as erect a barrier over an area to protect it. V-Jump ⇨ English 完全体の防具型デジモン。機械化して空を飛べるようになり、広範囲を守るバリアを出せる。 Ｖジャンプ ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

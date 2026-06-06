@@ -1,0 +1,40 @@
+{
+  "name": "Bitmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Ear Lancer",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Causes its usually drooping ears to straighten and sharpen, and uses them to pierce the enemy."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Gazimon",
+    "Kokuwamon",
+    "Lopmon",
+    "Mushmon"
+  ],
+  "digivolves_to": [
+    "Andiramon (Deva)",
+    "Asuramon",
+    "Kumbhiramon",
+    "Mihiramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor Level Mammal Digimon that evolved with the power of the \" Digimental of Friendship \". It possesses not only long ears, but also claws on its forelegs that are sharp enough to crush even diamonds, and which it uses to dig through the strata no matter how solid. It is rumored that from time to time, it will run into ancient fossils as it travels underground, which it keeps as part of its collection. Its body and head are covered by armor created from the gathering of minerals, which allows it to absorb the impact from attacks when it curls its body into a ball. It has a very gentle personality, and would usually let an enemy pass while keeping calm; it is a defensive Digimon through and through. Its Special Move is entering an offensive stance, causing its usually drooping ears to straighten and sharpen, and using its ears to pierce the enemy ( Ear Lancer ). However, it rarely ever goes on the offensive.",
+  "web_created": true
+}

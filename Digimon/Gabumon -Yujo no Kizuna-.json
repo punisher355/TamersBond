@@ -1,0 +1,32 @@
+{
+  "name": "Gabumon -Yujo no Kizuna-",
+  "stage": "Mega II",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 13,
+    "LVE": 16,
+    "KNW": 18,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Full Metal Machine Gun",
+    "element": "Neutral",
+    "pr": 14,
+    "tags": "[RANGE 11] [TRUE]",
+    "description": "Causes a downpour of iron to rain down from theCowlPartson its arms."
+  },
+  "digivolves_from": [
+    "Metal Garurumon",
+    "Metal Garurumon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The strong bond between Gabumon and its Partner, it is a legendary, final evolution that was achieved after countless possibilities. The undying \" Friendship \" of its Partner turned into elegant armor which covers its body, and appears as proof of the trust coursing through both of them. It is able to fly by generating photon light wings on its back, but it can also transform into its Motorcycle Mode , which is its Partner's favorite vehicle, and ride fast together. Its Special Moves are causing a downpour of iron to rain down from the Cowl Parts on its arms ( Full Metal Machine Gun ), and purging the Cowl Parts and unleashing an instant attack ( Cool Edge ). Furthermore, with its \" Moon Tense \", which fires laser beams in all directions, and its \" Raddle Star \", tracking weapons equipped with AI , it leaves no openings regardless of range.",
+  "web_created": true
+}

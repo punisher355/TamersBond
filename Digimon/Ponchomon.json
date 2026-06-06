@@ -1,0 +1,37 @@
+{
+  "name": "Ponchomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Dark",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 7,
+    "LVE": 5,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Blood Dance: Maracas Version",
+    "element": "Dark",
+    "pr": 5,
+    "tags": "[MELEE] [PIERCE]",
+    "description": "Strikes the opponent while getting into a rhythm with the maracas on its Mexican hat."
+  },
+  "digivolves_from": [
+    "Bearmon",
+    "Floramon",
+    "Mushmon",
+    "Palmon"
+  ],
+  "digivolves_to": [
+    "Fantomon",
+    "Pumpmon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Armor-level Ghost Digimon that evolved through the power of the \" Digimental of Purity \". Although it is classified as a Ghost-type, it is an unusual Digimon that looks like a Plant-type, judging from its appearance, and it is rumored that when a Togemon has died due to unforeseen circumstances, it will become a Ponchomon. It is said to be a Digimon that was generated from a \" Latin music distribution program\" that exists on the Network . It looks as if it has a cheerful personality, but its facial expression can't be read, and it is eerie to other Digimon. Because all of its actions are performed with a Latin rhythm, it views Digimon that can't keep up with the beat as its enemies. It seems to get along with Bakemon , who moves to its own music. Its Signature Moves are striking the opponent while getting into a rhythm with the maracas on its Mexican hat ( Blood Dance: Maracas Version ), and driving punches that only hit the opponent's face with its leather-strapped fists, intoxicating them with its destructive power ( Tequila Knuckle ).",
+  "web_created": true
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Suijinmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 13,
+    "LVE": 12,
+    "KNW": 11,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Mugen Cannon",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires superdreadnought-class energy waves from its two cannons."
+  },
+  "digivolves_from": [
+    "Cyberdramon",
+    "Hangyomon",
+    "Rapidmon Perfect",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Machine Digimon that possesses parts from both Justimon and Mugendramon . While the reason why these parts are being used is unknown, there is no doubt that it has great combat strength. Its Special Moves are \" Accel Arm \", where it grips and crushes the enemy with its power-type arm, and \" Mugen Cannon \", a technique shared with Mugendramon."
+}

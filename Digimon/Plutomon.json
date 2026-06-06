@@ -1,0 +1,41 @@
+{
+  "name": "Plutomon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Haggard Cluster",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Unleashes the fangs on its chest to release a darkness, that absorbs all substances and vaporizes everything."
+  },
+  "digivolves_from": [
+    "Astamon",
+    "Cerberumon",
+    "Cerberumon: Werewolf Mode",
+    "Digitamamon",
+    "Hippogriffomon",
+    "Lamortmon",
+    "Matadrmon",
+    "Oleamon",
+    "Were Garurumon"
+  ],
+  "digivolves_to": [
+    "Zombie Plutomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that defeats evil with terror and violence, and governs the realm of the dead. It wanders the world pursuing criminals or villains who deserve to fall into the realm of the dead, and it is said that if it detects prey, Plutomon appears wrapped up in a deep darkness. Plutomon, who finds joy only in chewing the wicked, has mouths lined with sharp fangs throughout its body, and the mouths make a chattering sound when it's pursuing its prey. It is feared even by good Digimon for this oddity. Plutomon's techniques have the ferocity to cast any villain into the realm of the dead, and one of them, \" Hell's Gate \", causes a gigantic mouth to appear from the darkness and swallows villains whole, and disassembles those who have been swallowed into scraps of fragmented data. Its \" Haggard Cluster \", in which it unleashes the fangs on its chest to release a darkness, absorbs all substances and vaporizes everything. In addition, its \" Chaos Rights \", which Plutomon invokes once it gets too engrossed in battle, is the peak of its frenzy, and when it chews an enemy with the mouths all over its body, it devours data with each bite, making it seem like a terrifying predator. It is similar to Jupitermon , who belongs to the Olympos XII , as far as punishing evil, but Jupitermon will not admit it due to its cruelty, and it's said that there's always been a longstanding discord between the two."
+}

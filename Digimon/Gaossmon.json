@@ -1,0 +1,33 @@
+{
+  "name": "Gaossmon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "element": "Neutral",
+    "name": "Baby Bubble",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "A medium-temperature jet of flames."
+  },
+  "digivolves_from": [
+    "Chibickmon"
+  ],
+  "digivolves_to": [
+    "Agumon (Black)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A tiny Digimon strong only in competitive spirit, and in any case it barks a lot. It is also quick to flee, and extremely swift. Although it is almost impossible to track it down after it runs into the bushes, it will soon begin to bark, giving away its location. Since it specializes in running on land, it dreads water and is totally incapable of swimming. In fact, it can't even cross a 10 cm deep brook, and Gaossmon have occasionally been found nearly drowned and passed out in a puddle of water. Its Special Moves are a medium-temperature jet of flames ( Kilo Flame ), and an intense headbutt ( Head Strike ).",
+  "web_created": true
+}

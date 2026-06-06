@@ -1,0 +1,41 @@
+{
+  "name": "Ghostmon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 2,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Little Plasma",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Fires weak energy shots from its palms."
+  },
+  "digivolves_from": [
+    "Algomon (Baby II)",
+    "Pagumon",
+    "Peti Meramon"
+  ],
+  "digivolves_to": [
+    "Algomon (Adult)",
+    "Bakemon",
+    "Devimon",
+    "Flare Lizamon",
+    "Saberdramon",
+    "Witchmon",
+    "Wizarmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Ghost Digimon that is often witnessed flying over graveyards. Although it doesn't like to show its face due to its timidness and shyness, it is a kind-hearted Digimon that helps those in need, while turning invisible so as not to be noticed by them. When it is forced into battle, it moves about cunningly using its \" Little Plasma \", in which it fires weak energy shots from its palms, and \" Jack Raid \", where it turns invisible moments before charging and crashing into the enemy, then striking them from behind while they are still in a state of confusion."
+}

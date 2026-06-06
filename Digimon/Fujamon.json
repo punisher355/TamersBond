@@ -1,0 +1,36 @@
+{
+  "name": "Fujamon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Ginsuidan",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Violently shakes its tail, and fires the water covering its tail fin likeshots."
+  },
+  "digivolves_from": [
+    "Mococomon"
+  ],
+  "digivolves_to": [
+    "Gawappamon",
+    "Ginkakumon",
+    "Kinkakumon",
+    "Xiquemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A voracious Aquatic Digimon that widely inhabits the rivers of the Eastern Digital World . It has an aggressive nature, and whenever someone invades its territory, it will use its venomous fangs to bite them and try to drive them away, no matter how superior the opponent is. Skillfully using its large fins, it can travel by crawling on land for short periods as well as grab onto objects. It is said that one of the reasons why it has a vast range of habitats is that it spins its long, snake-like tail like a propeller, allowing it to swim upstream regardless of whether the current is against it or not. Its Special Move is violently shaking its tail, and firing the water covering its tail fin like shot s ( Ginsuidan ). The toxins of its \" Kōga \", in which it bites with its venomous fangs, are potent enough to paralyze even Adults and Perfects."
+}

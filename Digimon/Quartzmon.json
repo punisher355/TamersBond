@@ -1,0 +1,31 @@
+{
+  "name": "Quartzmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Gypt Ryūshi Hou",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Emits theGypt Particlesgenerated within its large wicked sphere to the entire surroundings, and if anyone touches them even slightly, they will spread throughout their entire body and completely erase them without leaving any data behind."
+  },
+  "digivolves_from": [
+    "Astamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A colossal Digimon that keeps absorbing data to amplify its power. The Great Evil Globe , which makes up most of its body, is a fusion reactor that generates \" Gypt Particles \", Quartzmon's power source, from the data it has absorbed. Quartzmon's true form is situated at the very top, and can act independently of the Great Evil Globe , and furthermore, it is also capable of altering its appearance. It hungers for the data of the entire world, and will swallow even Digimon whole and absorb them. Its Special Move is emitting the Gypt Particles generated within the Great Evil Globe into its entire surroundings ( Gypt Ryūshi Hou ), and if you touch them even the slightest bit, they will spread throughout your whole body and completely erase you without leaving any data behind. Also, in its \" Ruin Blast \", where it injects Gypt Particles into the body of an enemy it seizes with its tentacles, the enemy explodes from within.",
+  "web_created": true
+}

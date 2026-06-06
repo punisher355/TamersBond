@@ -1,0 +1,196 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header flexrow" style="gap: 12px; padding: 8px; background: #1a1a2e; color: #c8d8e8;">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"
+         style="width:72px;height:72px;border:2px solid #3a3a5e;border-radius:4px;cursor:pointer;object-fit:contain;flex-shrink:0;" />
+    <input class="charname" name="name" type="text" value="{{item.name}}" placeholder="Move Name"
+           style="flex:1;background:transparent;border:none;border-bottom:1px solid #3a3a5e;color:#c8d8e8;font-size:1.3em;" />
+  </header>
+
+  <section class="sheet-body" style="padding:10px; display:flex; flex-direction:column; gap:8px; overflow-y:auto; flex:1;">
+
+    {{!-- Core stats row --}}
+    <div class="form-group flexrow" style="gap:10px; align-items:center; flex-wrap:wrap;">
+      <label style="min-width:70px; font-weight:700; font-size:0.85em; color:#6a6a7e;">Element</label>
+      <select name="system.element" style="width:110px;">
+        {{selectOptions elementOptions selected=system.element}}
+      </select>
+      <label style="min-width:30px; font-weight:700; font-size:0.85em; color:#6a6a7e;">PR</label>
+      <select name="system.pr" style="width:140px;">
+        {{selectOptions prOptions selected=system.pr}}
+      </select>
+      <label style="min-width:70px; font-weight:700; font-size:0.85em; color:#6a6a7e;">Min Stage</label>
+      <select name="system.minStage" style="width:110px;">
+        {{selectOptions stageOptions selected=system.minStage}}
+      </select>
+    </div>
+
+    <div class="form-group flexrow" style="gap:10px; align-items:center;">
+      <label style="font-weight:700; font-size:0.85em; color:#6a6a7e; min-width:70px;">Signature</label>
+      <input type="checkbox" name="system.isSignature" {{#if system.isSignature}}checked{{/if}} />
+      <span style="font-size:0.82em; color:#555;">Signature move for this stage</span>
+    </div>
+
+    {{!-- Tags --}}
+    <div style="border-top:1px solid #ddd; padding-top:8px;">
+      <label style="font-weight:700; font-size:0.85em; color:#6a6a7e; display:block; margin-bottom:6px;">
+        Move Tags
+        {{#if tagsString}}<span class="tag-preview-inline">{{tagsString}}</span>{{/if}}
+      </label>
+
+      <div class="tag-checkboxes">
+
+        <div class="tag-category">
+          <span class="tag-cat-label">Delivery</span>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.melee" data-param-for=""
+                   {{#if system.tags.melee}}checked{{/if}} />
+            MELEE <span class="tag-hint">— adjacent only</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.range" data-param-for="range"
+                   {{#if system.tags.range}}checked{{/if}} />
+            RANGE
+            <input class="tag-param" type="number" name="system.tags.rangeX" data-tag="range"
+                   value="{{system.tags.rangeX}}" min="1" max="20" />
+            <span class="tag-hint">spaces</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.pierce" data-param-for=""
+                   {{#if system.tags.pierce}}checked{{/if}} />
+            PIERCE <span class="tag-hint">— ignores Love reduction</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.trueHit" data-param-for=""
+                   {{#if system.tags.trueHit}}checked{{/if}} />
+            TRUE <span class="tag-hint">— can't miss on a successful hit roll</span>
+          </label>
+        </div>
+
+        <div class="tag-category">
+          <span class="tag-cat-label">Area</span>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.burst" data-param-for="burst"
+                   {{#if system.tags.burst}}checked{{/if}} />
+            BURST
+            <input class="tag-param" type="number" name="system.tags.burstX" data-tag="burst"
+                   value="{{system.tags.burstX}}" min="1" max="10" />
+            <span class="tag-hint">spaces — centered on attacker</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.blast" data-param-for="blast"
+                   {{#if system.tags.blast}}checked{{/if}} />
+            BLAST
+            <input class="tag-param" type="number" name="system.tags.blastX" data-tag="blast"
+                   value="{{system.tags.blastX}}" min="1" max="10" />
+            <span class="tag-hint">spaces — centered on target</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.chain" data-param-for="chain"
+                   {{#if system.tags.chain}}checked{{/if}} />
+            CHAIN
+            <input class="tag-param" type="number" name="system.tags.chainX" data-tag="chain"
+                   value="{{system.tags.chainX}}" min="1" max="10" />
+            <span class="tag-hint">extra targets,</span>
+            <input class="tag-param" type="number" name="system.tags.chainY" data-tag="chain"
+                   value="{{system.tags.chainY}}" min="1" max="20" />
+            <span class="tag-hint">spaces per bounce</span>
+          </label>
+        </div>
+
+        <div class="tag-category">
+          <span class="tag-cat-label">Timing</span>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.charge" data-param-for=""
+                   {{#if system.tags.charge}}checked{{/if}} />
+            CHARGE <span class="tag-hint">— fires at Resolution Stage</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.counter" data-param-for=""
+                   {{#if system.tags.counter}}checked{{/if}} />
+            COUNTER <span class="tag-hint">— free action response after being hit</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.rush" data-param-for=""
+                   {{#if system.tags.rush}}checked{{/if}} />
+            RUSH <span class="tag-hint">— combines Move + Basic Action</span>
+          </label>
+        </div>
+
+        <div class="tag-category">
+          <span class="tag-cat-label">Status Effects</span>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.burn" data-param-for="burn"
+                   {{#if system.tags.burn}}checked{{/if}} />
+            BURN
+            <input class="tag-param" type="number" name="system.tags.burnX" data-tag="burn"
+                   value="{{system.tags.burnX}}" min="1" max="20" />
+            <span class="tag-hint">dmg/tick,</span>
+            <input class="tag-param" type="number" name="system.tags.burnY" data-tag="burn"
+                   value="{{system.tags.burnY}}" min="1" max="10" />
+            <span class="tag-hint">ticks</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.freeze" data-param-for=""
+                   {{#if system.tags.freeze}}checked{{/if}} />
+            FREEZE <span class="tag-hint">— no actions; breaks on damage or Love roll DN14</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.paralyze" data-param-for="paralyze"
+                   {{#if system.tags.paralyze}}checked{{/if}} />
+            PARALYZE
+            <input class="tag-param" type="number" name="system.tags.paralyzeX" data-tag="paralyze"
+                   value="{{system.tags.paralyzeX}}" min="1" max="6" />
+            <span class="tag-hint">stacks — halves Speed</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.blind" data-param-for=""
+                   {{#if system.tags.blind}}checked{{/if}} />
+            BLIND <span class="tag-hint">— -4 to all hit rolls</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.confuse" data-param-for=""
+                   {{#if system.tags.confuse}}checked{{/if}} />
+            CONFUSE <span class="tag-hint">— must attack nearest ally (Friendship DN14 to break)</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.drain" data-param-for=""
+                   {{#if system.tags.drain}}checked{{/if}} />
+            DRAIN <span class="tag-hint">— regain HP = half damage dealt</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.push" data-param-for=""
+                   {{#if system.tags.push}}checked{{/if}} />
+            PUSH <span class="tag-hint">— push target (Courage difference in spaces, min 1)</span>
+          </label>
+        </div>
+
+        <div class="tag-category">
+          <span class="tag-cat-label">Healing</span>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.heal" data-param-for=""
+                   {{#if system.tags.heal}}checked{{/if}} />
+            HEAL <span class="tag-hint">— restores HP, scales with Knowledge</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.regen" data-param-for="regen"
+                   {{#if system.tags.regen}}checked{{/if}} />
+            REGEN
+            <input class="tag-param" type="number" name="system.tags.regenX" data-tag="regen"
+                   value="{{system.tags.regenX}}" min="1" max="20" />
+            <span class="tag-hint">HP per turn</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+
+    {{!-- Effect description --}}
+    <div class="form-group flexcol" style="gap:4px; flex:1;">
+      <label style="font-weight:700; font-size:0.85em; color:#6a6a7e;">Effect</label>
+      <textarea name="system.effect" rows="5"
+                style="resize:vertical; font-size:0.85em;"
+                placeholder="Move effect description">{{system.effect}}</textarea>
+    </div>
+
+  </section>
+</form>

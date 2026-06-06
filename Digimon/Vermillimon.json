@@ -1,0 +1,49 @@
+{
+  "name": "Vermillimon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 8,
+    "LVE": 8,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Volcano Strike S",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Shoots a fireball more powerful than Monochromon's at the enemy."
+  },
+  "digivolves_from": [
+    "Cyclomon",
+    "Dark Tyranomon",
+    "Flare Lizamon",
+    "Flare Lizarmon",
+    "Greymon (Blue)",
+    "Monochromon",
+    "Mori Shellmon",
+    "Stegomon",
+    "Togemogumon"
+  ],
+  "digivolves_to": [
+    "Black War Greymon",
+    "Cannondramon",
+    "Gaioumon",
+    "Goddramon",
+    "Mugendramon",
+    "Rosemon",
+    "Skull Mammon",
+    "Victory Greymon",
+    "War Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ankylosaur Digimon with a huge horn. It is thought to be the evolved form of Monochromon that live near volcanoes, and its armor-like skin, which is as hard as a diamond, has also grown resistant to heat from volcanoes. Its Special Moves are shooting a fireball more powerful than Monochromon's at the enemy ( Volcano Strike S ), and charging fiercely and then violently ramming them with its horn ( Hard Tackle )."
+}

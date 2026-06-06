@@ -1,0 +1,41 @@
+{
+  "name": "Turbomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Brutal Wheel",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Rapidly spins the shells on its arms and pulverizes the opponent."
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Herissmon",
+    "Koemon",
+    "Otamamon",
+    "Renamon",
+    "Toy Agumon",
+    "Vorvomon",
+    "Terriermon Assistant"
+  ],
+  "digivolves_to": [
+    "Mockingbirdmon",
+    "Maneuvermon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A quadrupedal Beast Digimon with wheel-like shells on its arms and feet. The bizarre sight of it rapidly spinning its characteristic shells, and moving around just like a vehicle while prone is something that will stick with anyone once they have seen it. Despite being bizarre, it can back up at high speed by spinning its shells in reverse, as well as perform jumps and sharp turns, granting it high, three-dimensional mobility that is impossible for ordinary creatures. It naturally puts its mobility to good use in combat; the ramming attacks it performs while accelerating have high offensive power, and it also demonstrates a quick-witted fighting style that includes raising dust clouds by pressing its rotating shells against the ground to blind its opponents. It is also capable of standing up and walking on two legs, albeit if need be. However, this is rarely seen even outside of battle, and it seems that Turbomon finds it easier to travel using its shells. Its Special Moves are rapidly spinning the shells on its arms and pulverizing the opponent ( Brutal Wheel ), and spinning its whole body at high speed and sending the opponent flying with a powerful ramming attack ( Crush Gear Spin ).",
+  "web_created": true
+}

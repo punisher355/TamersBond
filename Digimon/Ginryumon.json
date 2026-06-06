@@ -1,0 +1,52 @@
+{
+  "name": "Ginryumon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Tekkoujin",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Impales the enemy with an iron spear fired from its mouth."
+  },
+  "digivolves_from": [
+    "Blucomon",
+    "DORUmon",
+    "Dracomon",
+    "Funbeemon",
+    "Guilmon",
+    "Renamon",
+    "Ryudamon",
+    "Zubamon"
+  ],
+  "digivolves_to": [
+    "Butenmon",
+    "Cannonbeemon",
+    "Cargodramon",
+    "Grademon",
+    "Gyukimon",
+    "Mametyramon",
+    "Mega Seadramon",
+    "Metal Fantomon",
+    "Oboromon",
+    "Orochimon",
+    "Skull Baluchimon",
+    "Skull Greymon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Dragon Digimon whose entire body is clad in sturdy, Japanese-styled armor. Despite what its appearance may suggest, it has a light body that allows it to glide gracefully in mid-air, and it fights while parrying enemy attacks with its tough yet smooth armor. It does not cower before any enemy Digimon and excels at attacking with exceptional breakthrough ability, using its courage at parrying enemy attacks using its own body, and eyesight that allows it to detect enemy attacks right before they hit. It is hypothesized to be a \" Prototype Digimon \" due to the outdated Interface on its forehead. Its Special Move is impaling the enemy with an iron spear fired from its mouth ( Tekkoujin ). Its Signature Move is parrying enemy attacks with its armor and charging at the enemy ( Boujinha )."
+}

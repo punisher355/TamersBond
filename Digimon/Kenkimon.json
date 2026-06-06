@@ -1,0 +1,35 @@
+{
+  "name": "Kenkimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Crazy Crane",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Swings the crane on its back at the enemy."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Kokuwamon",
+    "Plotmon"
+  ],
+  "digivolves_to": [
+    "Valvemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Machine Digimon that \"Armor Evolved\" with the \" Digimental of Friendship \". Because its right hand has become a forklift and its left has become a shovel, this heavy machinery Digimon is able to complete any kind of construction work. It runs on electricity, and charges itself with the plug on its tail. Its Special Move is swinging the crane on its back ( Crazy Crane ).",
+  "web_created": true
+}

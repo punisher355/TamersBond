@@ -1,0 +1,33 @@
+{
+  "name": "Kaguyamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 13,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Taketori Monogatari",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Uses its telekinesis to forcibly disarm the enemy, and fires a volley of psychic bullets to annihilate its surroundings."
+  },
+  "digivolves_from": [
+    "Karakurumon"
+  ],
+  "digivolves_to": [
+    "Enmamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Some say that whenever one looks up at the moonlit night, they may occasionally see a door leading to another horizon open up; that is because Kaguyamon is crying. Residing in the beautiful bamboo grove regions spread across the Eastern Digital World , Kaguyamon has been strongly influenced by the data of a princess mentioned in a tale passed down in Japan since ancient times. It has a nature that loves peace and tranquility above all else, and is responsible for protecting the mountains that make up most of the Eastern Digital World. It has the ability to open gates to faraway places or Digital Worlds of other dimensions, and transports its targets, enveloped in light, via bamboo that appears at their destinations. Since it dispatches many of its subordinate Digimon to locations where strange phenomena have occurred, bamboo groves are said to form at sites where gates have been opened. Its bamboo tube-like device has a mechanism that emits psychic waves, and utilizing its telekinesis grants it high mobility and the ability to fly. Because it can easily control powerful, vast amounts of psychic waves, there are times when it will use its telekinesis to deal with problems itself that its subordinate Digimon were unable to handle. Its Special Moves are using its telekinesis to forcibly disarm the enemy, and firing a volley of psychic bullets to annihilate its surroundings ( Taketori Monogatari ), and causing meteorites summoned from another space to rain down directly above enemy forces ( Tsukiyo no Mukae )."
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Solarmon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 3,
+    "SNC": 3,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Shiny Ring",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[RANGE 4] [BURN 3,2]",
+    "description": "Launches a gear that generates intense heat to scorch the enemy."
+  },
+  "digivolves_from": [
+    "Caprimon",
+    "Gigimon",
+    "Mochimon"
+  ],
+  "digivolves_to": [
+    "Birdramon",
+    "Blimpmon",
+    "Bomber Nanimon",
+    "Clockmon",
+    "Geremon",
+    "Gold Numemon",
+    "Golemon",
+    "Guardromon",
+    "Guardromon (Gold)",
+    "Gururumon",
+    "Hover Espimon",
+    "Meramon",
+    "Nanimon",
+    "Numemon",
+    "Pucchiemon",
+    "Red Vegimon",
+    "Scumon",
+    "Starmon",
+    "Trailmon Ball",
+    "Turuiemon",
+    "Whamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Machine Digimon that appears to be a rare species of mechanical Digimon. Some researchers say that it might be a mutation of Hagurumon , but the truth is a mystery. Due to its \" Computer Kernel \" generating heat, its body has become hot enough to cause burns. Its Special Move is launching a gear that generates intense heat to scorch the enemy ( Shiny Ring ).",
+  "web_created": true
+}

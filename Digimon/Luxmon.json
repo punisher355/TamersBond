@@ -1,0 +1,35 @@
+{
+  "name": "Luxmon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 5,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Pico Knuckle",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "A fist technique where it imitatesAngemon, whom it aspires to be, to the best of its ability."
+  },
+  "digivolves_from": [
+    "Pyocomon"
+  ],
+  "digivolves_to": [
+    "Birdramon",
+    "Pidmon",
+    "Xiquemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Angel Digimon with a small, child-like body that belongs to the lowest rank among angels. It is often teased by Impmon and Pico Devimon , possibly because of its pure, innocent nature which makes it incapable of seeing through lies. It does not possess much power due to it being a Child, but once in battle, it is able to demonstrate its true strength in fighting against superior opponents by working together with other Luxmon. Its Special Move is a fist technique where it imitates Angemon , whom it aspires to be, to the best of its ability ( Pico Knuckle ). Its \" Cloud Barrier \", in which it deploys a circular shield of light around it, increases its defensive power manyfold when deployed by several Luxmon at the same time."
+}

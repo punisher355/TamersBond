@@ -1,0 +1,49 @@
+{
+  "name": "Jyagamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Plant",
+  "archetype": "Trickster",
+  "size": "Medium",
+  "stats": {
+    "CRG": 7,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Smash Potato",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[RANGE 4] [PUSH]",
+    "description": "Fires pieces of its rind."
+  },
+  "digivolves_from": [
+    "Burgemon Adult",
+    "Butterflamon",
+    "Digmon",
+    "Ebidramon",
+    "Galgomon",
+    "Igamon",
+    "Monochromon",
+    "Nohemon",
+    "Numemon",
+    "Ogremon",
+    "Orgemon",
+    "Prairiemon",
+    "Togemon",
+    "Tuchidarumon"
+  ],
+  "digivolves_to": [
+    "Ancient Sphinxmon",
+    "Blastmon",
+    "Rosemon",
+    "Spinomon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A mimicking Digimon which is able to hide itself from opponents with its potato-like appearance. Although it has a timid personality and doesn’t much like to fight, its hidden combat abilities are extremely great. In fact, with its peaceful personality it loves to eat and sleep. Since its rind is several orders harder than it looks, it can curl up its limbs and head to allow it to endure the opponent’s attacks. The visible part of its sprout serves as radar which can perceive the motion of enemies above and behind it, so even if its head is hidden it can take in the conditions of its surroundings, and understand them. Its Special Move is firing off pieces of its rind ( Smash Potato )."
+}

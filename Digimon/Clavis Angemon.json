@@ -1,0 +1,34 @@
+{
+  "name": "Clavis Angemon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 14,
+    "LVE": 10,
+    "KNW": 12,
+    "SNC": 15,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "The Key",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Manifests a keyhole for its key, using it to isolate the target from spacetime in a crystalline barrier.Releases a strong light fromThe Keywhile surrounded by several doors."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Piccolomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Angel Digimon that protects the \" Zenith Gate \" separating the Digital World from the outside world. The \"Zenith Gate\" is sealed by 360 doors, and \" The Key \" held by Clavis Angemon acts as the master key to every door. \" The Key \" is a special key that only Clavis Angemon can handle, so one could say that Clavis Angemon itself is a part of the key. It is said that through the power embedded in the key, Clavis Angemon is able to wield offensive power so great that it could cause the Digital World's collapse, but only against enemies attempting to break through the doors."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Bullmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Matador Dash",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Charges forward at a great speed and uses its two horns to strike up towards the enemy."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Psychemon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Kumbhiramon",
+    "Vajramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mammal Digimon that evolved with the power of the \" Digimental of Hope \". Its appearance is that of a fighting bull, and it possesses tremendous charging and destructive power. However, due to the fact that it is only capable of charging forward, and that it always charges forth at full speed, it is incapable of reversing or turning. Not only that, it has a fairly short temper, and a weakness in that gets agitated the moment it sees anything red. Its Special Move is charging forward at great speed and using its two horns to strike up towards the enemy ( Matador Dash ).",
+  "web_created": true
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Oleamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 9,
+    "LVE": 11,
+    "KNW": 8,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Jameal",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Spreads its petals wide to prey on Digimon entranced by its scent."
+  },
+  "digivolves_from": [
+    "Dogmon",
+    "Publimon",
+    "Sangloupmon"
+  ],
+  "digivolves_to": [
+    "Marsmon",
+    "Plutomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Insectivorous Plant Digimon confirmed to inhabit the forest regions of the Digital World . The scent emitted from its flower lures Insect Digimon in particular. It wraps its tongue around prey entranced by its scent to taste them, and then preys on them with its \" Jameal \", in which it spreads its petals wide. The Digimon that it preys upon are slowly digested and become its nourishment. Oleamon, who mingles with and lives among other Plant Digimon, is a very terrifying being to Insect Digimon that coexist in the same area. Its \" Leaf Red \", wherein it uses its poisonous leaves, which function as its hands, is a Signature Move where it sends them flying or bundles them together to form a blade to wield freely."
+}

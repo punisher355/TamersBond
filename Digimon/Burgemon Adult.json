@@ -1,0 +1,33 @@
+{
+  "name": "Burgemon Adult",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Digitamamon",
+    "Jyagamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "It is a Digimon that evolves from Child-level Burgamon that consist of carefully selected ingredient data and have a pure heart. It is a kind Digimon whose purpose in life is to cook, and serves other Digimon without asking for anything in return. Its Special Moves are causing the enemy to lose their fighting spirit with onion slices full of pepper ( Spicy Onion ), and placing them in a huge patty ( Delicious Patty )."
+}

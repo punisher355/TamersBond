@@ -1,0 +1,58 @@
+{
+  "name": "Tortamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Shell Phalanx",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Fires the blades on its shell as if they were multiple-warhead missiles."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Armadimon",
+    "Bakumon",
+    "Betamon",
+    "Clear Agumon",
+    "Gazimon",
+    "Goburimon",
+    "Gomamon",
+    "Gottsumon",
+    "Kamemon",
+    "Lucemon",
+    "Otamamon",
+    "Patamon",
+    "Plotmon",
+    "Sunarizamon",
+    "Tentomon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Atlur Kabuterimon (Blue)",
+    "Brachimon",
+    "Gogmamon",
+    "Mummymon",
+    "Sagomon",
+    "Scorpiomon",
+    "Triceramon",
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A tortoise-type Digimon armed with a shell covered in sharp blades. As both its shell and body are highly dense, it is heavier than it looks, such that it creates fierce tremors with every step it takes. Furthermore, it holds the alias \" Noise Digimon \" due to its shrill, metallic-sounding cry. While its usual walking movements are extremely slow, it can retract its limbs so that its body is in the shape of a disc and spin itself, allowing it to move at ten times its usual speed. Its Special Move is firing the blades on its shell as if they were multiple-warhead missiles ( Shell Phalanx )."
+}

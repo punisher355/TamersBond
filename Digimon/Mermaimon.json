@@ -1,0 +1,49 @@
+{
+  "name": "Mermaimon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Coatlmon",
+    "Coelamon",
+    "Depthmon",
+    "Hookmon",
+    "Ikkakumon",
+    "Nefertimon",
+    "Orcamon",
+    "Rukamon",
+    "Shellmon",
+    "Tobiumon",
+    "Tylomon"
+  ],
+  "digivolves_to": [
+    "Ancient Mermaimon",
+    "Babamon",
+    "Dianamon",
+    "Marin Angemon",
+    "Metal Seadramon",
+    "Neptunemon",
+    "Plesiomon",
+    "Qinglongmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon with the appearance of the legendary Mermaid , it is based in seas found in cold regions in the Digital World . It is good at singing, which is unusual for a Digimon, and does so with a very beautiful timbre , charming those who listen to it. However, because it is greedy and extremely fond of treasure, it will charm those with its singing when it feels attracted to them, even if their data (treasure) belongs to other Digimon, and then take the opportunity to loot from them. For that reason, it is rumored that it hides a vast amount of data somewhere in the Net Ocean , but it loses interest in the data it has looted once it falls into its possession, and discards it. Its Special Moves are drawing near while adorning its beautiful mermaid-like figure, and instantly piercing the enemy with its golden anchor ( Charm Plunder ), and spinning its golden anchor in a turbulent manner to pulverize the enemy ( Northern Cross Bomber )."
+}

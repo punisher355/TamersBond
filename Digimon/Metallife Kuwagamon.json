@@ -1,0 +1,41 @@
+{
+  "name": "Metallife Kuwagamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Blade Kuwagamon",
+    "Bulkmon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Thunderballmon"
+  ],
+  "digivolves_to": [
+    "Ancient Beatmon",
+    "Gran Kuwagamon",
+    "Grandis Kuwagamon",
+    "Metal Etemon",
+    "Raidenmon",
+    "Raijinmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A subspecies of Kuwagamon which rapidly boosted its offensive power by means of armification. It has also gained grappling ability due to the fact that its form has become humanoid, and as it has both a tough shell as well as nimble movements, it boasts top-class balance among Perfect Digimon. It is able to freely alter the trajectory of its \" Homing Laser \", a beam fired from the gun points equipped to the fingertips of its hands, at its own will, allowing the beam to avoid any kind of obstacle and hit the opponent dead on. Also, it demonstrates its power in close combat with its \" Emit Blade \", which emits a beam in the shape of a blade and slashes with it."
+}

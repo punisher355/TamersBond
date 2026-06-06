@@ -1,0 +1,41 @@
+{
+  "name": "Bulkmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Electrical Fist",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Sends the enemy flying with a blow from its electricity-laced fist."
+  },
+  "digivolves_from": [
+    "Pulsemon",
+    "Shoutmon"
+  ],
+  "digivolves_to": [
+    "Boutmon",
+    "Climbmon",
+    "Divemon",
+    "Metallife Kuwagamon",
+    "Omega Shoutmon",
+    "Pistmon",
+    "Shootmon",
+    "Tempomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that evolved via the data of a body composition monitor​ that measures muscle mass. It has a bellicose personality, and the power brought about by its unnaturally well-developed upper body muscles is top-class even among Adult Digimon. Its reaction speed is extremely high despite its large size, and it overwhelms its enemies with its tremendous power and speed. It is a hard worker, always continuing its training when it is not eating or sleeping. Its Special Move is sending the enemy flying with a blow from its electricity-laced fist ( Electrical Fist ). To deal with opponents that refuse to come closer, it unleashes an electric attack by discharging the electrical energy stored in its horn ( Thunder Dread )."
+}

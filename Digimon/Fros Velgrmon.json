@@ -1,0 +1,34 @@
+{
+  "name": "Fros Velgrmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Blizzarmon",
+    "Crescemon",
+    "Daipenmon",
+    "Panjyamon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Giant Bird Digimon that rarely appears before others. It is considered to be a symbol of awe in certain regions, and according to legend, it appears before those who are stranded on snowy mountains and assesses their lives. It is said that those who are deemed worthy of saving descend the mountain on Fros Velgrmon, but those who are deemed unworthy are given a peaceful death with its freezing breath. Its Special Moves are a ranged attack in which it generates a blizzard with its tail and wings ( Innocence Blizzard ), and instantly turning the enemy into dry ice with a cold beam fired from its mouth ( Freezing Ray ). Although its \" Ruin Reverb \", in which it sings with a beautiful cry, charms the listener, it is a song of destruction that causes those who finish listening to it to completely shatter internally."
+}

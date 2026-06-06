@@ -1,0 +1,42 @@
+{
+  "name": "Gulfmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Anomalocarimon",
+    "Digitamamon",
+    "Doumon",
+    "Gigadramon",
+    "Jyureimon",
+    "Lady Devimon",
+    "Mephismon",
+    "Pajiramon",
+    "Pajramon",
+    "Taomon (Silver)",
+    "Velgrmon",
+    "Waru Monzaemon",
+    "Were Garurumon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Beast Digimon of darkness that emerged from the depths of the Dark Area . This demon beast's towering size, supported by its four sturdy legs, is akin to that of a mountain, and its lower body houses a \"Maw\" large enough to swallow all. Not only that, it is said that the Maw's opening is connected to the depths of the Dark Area, and that those who are sucked in have their souls ( Digicores ) smashed to pieces and are no longer able to escape. Its power is mighty, and it is also said that it has the ability to destroy the world in seven days. Its Signature Move \" Black Requiem \" is a solemn voice heard singing out of nowhere, and it is said that Digimon who hear this song will soon die, and their data will never be able to be restored. Its Special Move is letting out the sorrowful cries of the dead from the gigantic Maw on its lower half, which bring death to all who hear them ( Dead Scream )."
+}

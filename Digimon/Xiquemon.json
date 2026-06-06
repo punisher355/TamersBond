@@ -1,0 +1,36 @@
+{
+  "name": "Xiquemon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Hyōtōsō",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Smashes and freezes the enemy with its ice-clad claws."
+  },
+  "digivolves_from": [
+    "Fujamon",
+    "Kamemon",
+    "Luxmon",
+    "Piyomon"
+  ],
+  "digivolves_to": [
+    "Huankunmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A different kind of Bird Digimon that travels freely in the air and water. It contains fish data within its Digicore , and dives directly into the water from a flying position, swimming and hunting as if it were flying. It is said that the reason why it wears goggles is to protect its vision while swimming. It is a migratory bird that inhabits cold lakes and rivers, and travels across the Digital World in search of new habitats once the water temperature rises. Witnessing Xiquemon flying around in search of a nest is considered to be a sign of good luck, and it is renowned as a Digimon that brings good omens. Since the amount of food it eats at a time is small, it has a habit of using a technique to freeze and preserve leftover food. Its Special Moves are traveling underwater at high speed and launching a surprise attack on land enemies ( Bakusen ), and firing a small fish-shaped missile from its mouth ( Gyoryūhō ). Although this missile is unable to be fired rapidly, the power of a single shot is immense, and it is Xiquemon's main weapon for bringing down the enemy. Also, it uses its \" Hyōtōsō \", in which it clads its claws in ice, to fight in close combat. It is a technique that freezes and smashes the opponents it grabs, and is also used to preserve its food."
+}

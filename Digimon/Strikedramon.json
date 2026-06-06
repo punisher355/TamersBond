@@ -1,0 +1,48 @@
+{
+  "name": "Strikedramon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Strike Fang",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Incandescently burns the metal plates on each part of it, and it is said that its whole body becomes a mass of flames and rams into the opponent."
+  },
+  "digivolves_from": [
+    "Agumon (Black)",
+    "Flamon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gaomon",
+    "Gomamon",
+    "Guilmon",
+    "Labramon",
+    "Lopmon",
+    "Monodramon",
+    "Strabimon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Cyberdramon",
+    "Locomon",
+    "Savior Hackmon",
+    "Skull Satamon",
+    "Were Garurumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The \" Commando Dragon \" that aims to be a Virus Buster is Strikedramon. Although there are many of its parts that are left-behind traces of Monodramon , like the horn extending behind it, because it transformed into the Commander Mode covered in Metal Plate , it can even be seen as a wholly different species. Although it is naturally a kindhearted Digimon since it is part of the Vaccine-species just like Angemon , once it discovers a Virus-species it becomes possessed by the extermination instinct (destruction instinct?), and it won't try to stop fighting until it has reduced the opponent to trash data. It is also said that, at that time, its red hair will burst into scorching flames, and will become bluish-white hair of flames. Its Special Move \" Strike Fang \", which is what its called when all the portions of its Metal Plate burn red hot, its whole body becomes a mass of flames, then it rams the opponent, is a terrifying technique."
+}

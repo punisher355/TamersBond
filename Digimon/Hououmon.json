@@ -1,0 +1,47 @@
+{
+  "name": "Hououmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Starlight Explosion",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "12Rains golden grains from its wings that purify evil.Explodes with light."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Angewomon",
+    "Arkhai Angemon",
+    "Blue Meramon",
+    "Delumon",
+    "Garudamon",
+    "Jazarichmon",
+    "Majiramon",
+    "Mihiramon",
+    "Parrotmon",
+    "Piccolomon",
+    "Silphymon",
+    "Taomon",
+    "Taomon (Silver)",
+    "Yatagaramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A holy Digimon that possesses four wings that shine gold. It is the head of all Bird Digimon, and is said to be the one that presides over Holy-species Digimon. While Holydramon is the ultimate form of Beast Digimon, Hououmon is the ultimate form of Bird Digimon. As proof that it is a Holy-species Digimon, it draws holy power from where it holds its two \" Holy Rings \", and it is understood that the power possessed by Hououmon is unfathomable. Its Special Move is solemnly flapping its four wings, causing it to rain golden grains ( Starlight Explosion ). It is said that those who suffer this technique have all of their wickedness purified."
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Pipismon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Crazy Soni",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "mits a high-frequency noise at the enemy, rupturing their sensory organs."
+  },
+  "digivolves_from": [
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Magnamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mutation Digimon that evolved through the power of the \" Digimental of Love \". This bat-shaped Digimon is said to have been born from the monitoring data of an ultrasonic sensor made by a certain electrical equipment manufacturer. Its large ears are able to capture sounds of any frequency. Also, the inside of its mouth has the structure of a speaker, allowing it to copy any sound captured by it ears as it is and emit it back. It specializes in night operations, and is able to accurately detect the enemy's position by using ultrasound , even in the dark. If you hear strange sounds out of the darkness, Pipismon might be close by. Its Special Move \" Crazy Sonic \" emits a high-frequency noise at the enemy, rupturing their sensory organs.",
+  "web_created": true
+}

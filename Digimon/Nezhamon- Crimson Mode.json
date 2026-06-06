@@ -1,0 +1,31 @@
+{
+  "name": "Nezhamon: Crimson Mode",
+  "stage": "Mega II",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 16,
+    "LVE": 15,
+    "KNW": 15,
+    "SNC": 13,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Zankan Sōjingeki",
+    "element": "Neutral",
+    "pr": 13,
+    "tags": "[MELEE]",
+    "description": "Minces the enemy in the blink of an eye with its two swords."
+  },
+  "digivolves_from": [
+    "Nezhamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A form that the once-boisterous Nezhamon transformed into upon realizing that it should properly utilize its power. The \" Fukanirin \" have turned into a motorcycle with flaming tires, and the short body it used to have has grown larger as well. It has gained two pairs of adjustable Cyber Arms , becoming a Cyborg Digimon that uses six arms. As with its form prior to transformation, it skillfully wields a variety of powerful treasure tools. It uses its six arms to freely wield its treasure tools that include the two swords, \" Zanyōtō \" and \" Kanyōtō \", the \" Bakuyōsaku \", which captures the target and restrains them, the \" Kōyōsho \", which knocks the opponent down, and the \" Shūkyū \", which chase the opponent to the ends of the earth and incinerate them, and fights to carry out justice with flawless tactics from any distance. Nonetheless, as its belligerent nature remains the same, its only weakness is that it will often try to resolve things through fighting, even if its cause is just. Its Special Moves are \" Zankan Sōjingeki \", in which it minces the enemy in the blink of an eye with its two swords, and \" Hōshin Rokurenge \", its ultimate secret technique where it unleashes its six treasure tools and channels all of its energy into a combo attack.",
+  "web_created": true
+}

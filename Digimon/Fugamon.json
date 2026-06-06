@@ -1,0 +1,52 @@
+{
+  "name": "Fugamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Dark",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Evil Hurricane",
+    "element": "Wind",
+    "pr": 5,
+    "tags": "[RANGE 4] [BLAST 1]"
+  },
+  "digivolves_from": [
+    "Agumon (Black)",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Goburimon",
+    "Hanimon",
+    "Impmon",
+    "Muchomon",
+    "Palmon",
+    "Piyomon",
+    "Renamon",
+    "Shamamon",
+    "Toy Agumon (Black)"
+  ],
+  "digivolves_to": [
+    "Black Megalo Growmon",
+    "Etemon",
+    "Garudamon",
+    "Karatenmon",
+    "Mach Gaogamon",
+    "Okuwamon",
+    "Skull Satamon",
+    "Volcamon",
+    "Were Garurumon",
+    "Were Garurumon (Black)"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Digimon whose form resembles that of the Oni from Eastern legends. It belongs to the same family as Orgemon , sporting the same violent, battle-loving personality. The attacks dealt using its well-developed muscles pack extraordinary power, and bring about absolute destruction. Its Special Move is spinning its Hone Konbou , using it to mow everything down ( Evil Hurricane )."
+}

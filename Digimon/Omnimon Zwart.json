@@ -1,0 +1,32 @@
+{
+  "name": "Omnimon Zwart",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 14,
+    "LVE": 15,
+    "KNW": 17,
+    "SNC": 14,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Garuru Cannon",
+    "element": "Neutral",
+    "pr": 14,
+    "tags": "[MELEE]",
+    "description": "freezes the opponent with frigid, absolute zero shots from theGaruru Cannonin its right arm."
+  },
+  "digivolves_from": [
+    "Black War Greymon",
+    "Metal Garurumon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Holy Knight Digimon born from the fusion of the Virus Busters War Greymon and Metal Garurumon due to the powerful wills of everyone who wished for good, and who is one of the \" Royal Knights \". As a Digimon that combines the special qualities of the two, it is a multitype warrior capable of fully demonstrating those abilities in any given situation. In recent years, it has been confirmed that if the secretion \" Black Digitron \", which completely blackens one's figure, is mixed in with someone in some form or other, they will temporarily take on a black appearance, and during that time, their power will increase. It is equipped with a sword and shield on its War Greymon-shaped left arm, and a cannon and missiles on its Metal Garurumon-shaped right arm. The cape on its back is automatically deployed when dodging an opponent's attack, or when it is flying. Its Special Move is freezing the opponent with frigid, absolute zero shots which it fires from the Metal Garurumon-shaped cannon ( Garuru Cannon ). Also, its left arm is equipped with the invincible blade, \" Grey Sword \".",
+  "web_created": true
+}

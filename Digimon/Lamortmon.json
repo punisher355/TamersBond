@@ -1,0 +1,41 @@
+{
+  "name": "Lamortmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Kaisaisō",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Slices open the enemy's belly with its claws."
+  },
+  "digivolves_from": [
+    "Komondomon",
+    "Leomon",
+    "Porcupamon",
+    "Symbare Angoramon"
+  ],
+  "digivolves_to": [
+    "Anubimon",
+    "Diarbbitmon",
+    "Griffomon",
+    "Marsmon",
+    "Plutomon",
+    "Saber Leomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Perfect Digimon whose hidden feral instincts have been unleashed. It will immediately swoop down on Digimon that express their disgust towards it and keep smashing them until they stop breathing. Although it is an impetuous Digimon that has uncontrollable impulses, it seems that there are some individuals who are ashamed of and despise their own impulses. The vacuum blades that surround the two \" Jūran-maru \" longswords it carries on its waist become stronger and sharper the more it unleashes its ferocity. Taming a rampaging Lamortmon is impossible unless one has built a great deal of trust with them. Its Special Moves are slicing open the enemy's belly with its claws ( Kaisaisō ), repeatedly swinging its two longswords with all its might to pulverize the enemy ( Kōhabattō ), and unleashing the vacuum blades that envelop its longswords ( Fūga Rekkanjin ). In addition, its \" Gōon Kieizan \", in which it converts all of its reason into ferocity and bisects the enemy with its two longswords, is Lamortmon's most destructive technique which slashes the enemy while smashing them to smithereens at the same time."
+}

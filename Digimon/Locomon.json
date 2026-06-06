@@ -1,0 +1,43 @@
+{
+  "name": "Locomon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 11,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Spins and then throws spiked wheels.Extrudes spinning spikes from one of its front wheels and fires them at the end of a cable."
+  },
+  "digivolves_from": [
+    "Ballistamon",
+    "Blimpmon",
+    "Guardromon",
+    "Komondomon",
+    "Mail Birdramon",
+    "Mechanorimon",
+    "Strikedramon",
+    "Tankmon",
+    "Yukidarumon"
+  ],
+  "digivolves_to": [
+    "Grand Locomon",
+    "Hi Andromon",
+    "Zeke Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Machine Digimon which has the appearance of a steam locomotive, its purpose in life is to keep running. It is a being which transports the data within the Network across the Digital World . Within the Digital World, where a large quantity of information comes and goes, the meaning of life for Locomon and other Vehicle-species Digimon is in how quickly they can convey that information. However, there are times when old models of Locomon have run completely wild as a result of seeking to go too quickly. Also, although its range of movement is confined because it can only run on rails, there are occasions when it has generated spatial distortions by continuously running in circles. Its Signature Move, \" Steam Bomb \", is using bombs of the steam blowing from its smokestack. Its Special Move is spinning and then throwing spiked wheels ( Wheel Grinder )."
+}

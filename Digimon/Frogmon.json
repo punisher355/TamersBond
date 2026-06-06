@@ -1,0 +1,32 @@
+{
+  "name": "Frogmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Water",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Leaf Wheel Cutter",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[RANGE 6]",
+    "description": "Spins the wheels on its back at 20,000 rpm and fires them at the enemy."
+  },
+  "digivolves_from": [
+    "Otamamon",
+    "Shakomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mutation Digimon that evolved through the power of the \" Digimental of Purity \". Those who evolve with the \"Digimental of Purity\" often evolve into a Mutation-type, and Frogmon itself has several mysterious devices equipped to its body. Although this Digimon was only discovered recently, analysis of the data comprising its body has confirmed that it is a species from an old generation of Digimon. Its translucent mask is very soft, and reduces the energy of the enemy's attacks to near zero. The wheels attached to its back allow it to fly through the air, and it can apparently cover considerable distances in a single flight. However, this is all that is currently known about it, and further details about its ecology and abilities would require more research. Its Special Move is spinning the wheels on its back at 20,000 rpm, then firing them at the enemy ( Leaf Wheel Cutter ).",
+  "web_created": true
+}

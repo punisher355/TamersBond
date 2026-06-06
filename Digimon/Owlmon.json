@@ -1,0 +1,38 @@
+{
+  "name": "Owlmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Wind",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Midnight Clutch",
+    "element": "Dark",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Approaches the opponent from behind under the cover of darkness, then swoops down on them with its talons."
+  },
+  "digivolves_from": [
+    "Hagurumon",
+    "Mushmon",
+    "Pico Devimon",
+    "Piyomon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Vamdemon",
+    "Waru Monzaemon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Armor-level Bird Digimon that evolved through the power of the \" Digimental of Love \". It excels in reconnaissance and primarily specializes in nocturnal activity. Its night-vision scope eyes have the ability to detect opponents up to 1 km away in the dark, allowing it to approach and ambush them from behind. Because Owlmon's characteristics generally align more with 'reconnaissance' rather than \"combat\", its offensive power is not great, but it excels in ninja-like strikes that utilize the darkness. Its Special Move is approaching the opponent from behind under the cover of darkness, then swooping down on them with its talons ( Midnight Clutch )."
+}

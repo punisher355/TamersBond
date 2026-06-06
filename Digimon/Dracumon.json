@@ -1,0 +1,55 @@
+{
+  "name": "Dracumon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 5,
+    "KNW": 3,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Eye of Nightmare",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Hypnotizes the foe with the wicked eyes in the palms of its hands."
+  },
+  "digivolves_from": [
+    "Bosamon",
+    "Missimon",
+    "Tsumemon",
+    "Tunomon"
+  ],
+  "digivolves_to": [
+    "Arkadimon Adult",
+    "Death-X-DORUgamon",
+    "Devimon",
+    "Dobermon",
+    "Dogmon",
+    "DORUgamon",
+    "Gekomon",
+    "Meramon",
+    "Musyamon",
+    "Porcupamon",
+    "Raremon",
+    "Sangloupmon",
+    "Scumon",
+    "Sistermon Ciel",
+    "Sistermon Noir",
+    "Soulmon",
+    "Starmon",
+    "Wizarmon",
+    "Yaksamon",
+    "Yukidarumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The Dark Area 's most mischievous Digimon. For the sake of a prank, it will meet the challenge unflinchingly even if it is accompanied by some risk. It once nearly got itself killed trying to graffiti the faces of all four of the Four Holy Beasts ...(it's unknown whether it succeeded). It was once a bloodsucking Digimon, but these days it forgets to suck blood, and it seems it's trying to play some kind of trick on the Royal Knights . It is said that those who look into the \" Eye of Nightmare \" cast from the evil eye s on the palms of its hands have their hearts completely dominated by Dracumon. Also, appropriately for a vampire, it seems to have a biting attack technique using its fangs called \" Undead Fang \"."
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Terriermon Assistant",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Dai Bacchi Gū",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Enlarges the badge on its chest and hurls it."
+  },
+  "digivolves_from": [
+    "Cupimon",
+    "Gummymon",
+    "Nyaromon",
+    "Pinamon",
+    "Tokomon"
+  ],
+  "digivolves_to": [
+    "Black Galgomon",
+    "Galgomon",
+    "Maquinamon",
+    "Turuiemon",
+    "Wendimon",
+    "Turbomon",
+    "Mulemon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A hardworking Terriermon that supports Agumon Hakase . It loves learning about Digimon species and their way of life, and telling people what it has learned most of all. In addition to \" Petit Twister \", its Signature Move is enlarging the badge on its chest and hurling it ( Dai Bacchi Gū [N 1] ).",
+  "web_created": true
+}

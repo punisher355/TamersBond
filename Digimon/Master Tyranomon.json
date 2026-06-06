@@ -1,0 +1,50 @@
+{
+  "name": "Master Tyranomon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Master Fire",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Breathes high-temperature flames from its mouth."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "Cyclomon",
+    "DORUgamon",
+    "Dark Tyranomon",
+    "Greymon",
+    "Snatchmon",
+    "Tuskmon",
+    "Tyranomon",
+    "Wendimon"
+  ],
+  "digivolves_to": [
+    "Agumon -Yuki no Kizuna-",
+    "Cannondramon",
+    "Dinomon",
+    "Examon",
+    "Gaioumon",
+    "Goddramon",
+    "Rust Tyranomon",
+    "Skull Mammon",
+    "Volcanicdramon",
+    "War Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Dinosaur Digimon that evolved from a Tyranomon that overcame many fierce battles. The scars covering its body act as proof of the numerous battles it has survived. It takes on a master-like role, coaching its Tyranomon followers and raising them to become full-fledged warriors. Its Special Move is razing the enemy with the high-temperature flames it breathes from its mouth ( Master Fire ).",
+  "web_created": true
+}

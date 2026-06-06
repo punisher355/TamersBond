@@ -1,0 +1,58 @@
+{
+  "name": "Hackmon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Fif Slash",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Cuts the opponent to pieces with its sturdy claws."
+  },
+  "digivolves_from": [
+    "Babydmon",
+    "Koromon",
+    "Mochimon",
+    "Nyaromon",
+    "Sakuttomon",
+    "Tokomon",
+    "Gigimon"
+  ],
+  "digivolves_to": [
+    "Arresterdramon",
+    "Bao Hackmon",
+    "Bomber Nanimon",
+    "Coredramon (Blue)",
+    "Geo Greymon",
+    "Geremon",
+    "Gold V-dramon",
+    "Greymon",
+    "Growmon",
+    "Gururumon",
+    "Leomon",
+    "Monochromon",
+    "Numemon",
+    "Platinum Scumon",
+    "Red V-dramon",
+    "Scumon",
+    "Tailmon",
+    "Targetmon",
+    "XV-mon",
+    "Zubaeagermon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Small Dragon Digimon that shines a cool white. Its unfettered and restraint-hating, adventure-loving way of life is likely due to Gankoomon 's DNA. It faces the rigorous trials imposed by Gankoomon with an air of composure. It has a masterful sense of combat due to its lineage, and because of its training with its chaperones, the Sistermon sisters, it can more than hold its own in battle against its opponents even if they're a Perfect. It specializes in close combat that capitalizes on its keenness, cutting the opponent to pieces with its sturdy claws ( Fif Slash ), rotating its tail like a drill and thrusting it into the opponent ( Teen Ram ), and spewing \" Baby Flame \" from its mouth, which is also usable as a diversion. It follows its dreams of becoming a Royal Knight like Gankoomon as it fights through continuous battles.",
+  "web_created": true
+}

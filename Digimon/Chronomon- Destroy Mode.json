@@ -1,0 +1,32 @@
+{
+  "name": "Chronomon: Destroy Mode",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 13,
+    "LVE": 14,
+    "KNW": 12,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Finger Bomb",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Points at a Digimon to forcibly restore their past data, causing them to explode from within."
+  },
+  "digivolves_from": [
+    "Aegiochusmon: Dark",
+    "Butenmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The berserk form of Chronomon . It is a legendary monster that is said to have abandoned its role of maintaining the stability of space-time, and risen in revolt against the system that governs time. While it was restoring space-time, the various forms of malice in the Digital World flowed into Chronomon all at once, corroding it like a virus, and causing it to run wild. By abusing the power of time that Chronomon originally possessed, it hacks into memories engraved into the Digital World, downloads a variety of techniques to itself, and then goes on a rampage. Its Special Move is forcibly restoring the past data of opponents it points at, causing them to explode from within due to the vast volume of data ( Finger Bomb ). Also, even after going berserk, it still has \" Holy Flare \", in which it incinerates the opponent. Finally, its \" Chrono Devolution \", where it converts the Digital World's time data into energy and unleashes it, instantly ages anyone that comes into contact with that energy, turning them into data dust."
+}

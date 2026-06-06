@@ -1,0 +1,38 @@
+{
+  "name": "Pulsemon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Elec Rush",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Rams into the enemy with all its might at lightning speed."
+  },
+  "digivolves_from": [
+    "Bibimon"
+  ],
+  "digivolves_to": [
+    "Bulkmon",
+    "Exermon",
+    "Namakemon",
+    "Runnermon",
+    "Shoutmon X4",
+    "Thunderballmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that evolved under the influence of pulse waveform data stored in hospitals and gyms. It has a lively personality that treats anyone without discrimination. Pulsemon's characteristic hair is linked to its emotions, and droops whenever it feels down. It is a cunning fighter who battles by capitalizing on its natural agility, and moving around in the shape of a lightning bolt. Its Special Moves are ramming into the enemy with all its might at lightning speed ( Elec Rush ), and discharging electricity generated within its body from its hair ( Petit Impulse ). In addition, many other Digimon like Pulsemon that are influenced by the vital data of others, improving their physical abilities and evolving, have been discovered."
+}

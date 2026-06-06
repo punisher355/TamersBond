@@ -1,0 +1,39 @@
+{
+  "name": "Symbare Angoramon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Jive",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Dishes out a barrage of quick kicks while standing on one leg."
+  },
+  "digivolves_from": [
+    "Angoramon"
+  ],
+  "digivolves_to": [
+    "Cerberumon",
+    "Grappu Leomon",
+    "Hippogriffomon",
+    "Lamortmon",
+    "Skull Baluchimon",
+    "SkullBaluchimon",
+    "Cerberumon: Werewolf Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The Adult form of Angoramon that has shed the long, soft fur covering it in pursuit of agility. Although it has lost the defense offered by the cushioning fur that used to cover its body, its movements have become nimble. It strives for beauty in its behavior and movements, and in battle, it dodges the enemy's attacks as if it were dancing, in lockstep with its own attacks. Its Special Moves are dishing out a barrage of quick kicks while standing on one leg ( Jive ), spinning its body and slashing the enemy with the razor-sharp tips of its ears ( Ländlizer ), and unleashing a powerful tornado from both of its hands ( Breakin' Stream ). It strives for beauty even when unleashing these techniques."
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Baihumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 9,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Kongou",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Emits a wave from its mouth which converts the opponent completely into metal. The victim of this technique is unable to move while their body rusts, but they are unable to die until they have completely rusted away.Becomes immune to attacks."
+  },
+  "digivolves_from": [
+    "Caturamon",
+    "Cerberumon",
+    "Delumon",
+    "Grappu Leomon",
+    "Insekimon",
+    "Loader Leomon",
+    "Makuramon",
+    "Mihiramon",
+    "Sinduramon",
+    "Were Garurumon"
+  ],
+  "digivolves_to": [
+    "Huanglongmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the Four Holy Beasts who protect the Digital World, it guards the West and possesses the attribute of steel. Reigning since the age of myth, it is a legendary being like the other Four Holy Beast Digimon, and its strength is said to equal that of a god. Also, although it is the youngest of the Four Holy Beast Digimon, its power is the greatest among the four. Its immortality and tremendous power are brought forth through its twelve Digicores . Baihumon is a neutral being just like Qinglongmon , and it isn't someone who will generally become an ally. Its Special Move is a wave emitted from its mouth which converts the opponent completely into metal ( Kongou ). The victim of this technique is unable to move while their body rusts, but they are unable to die until they have completely rusted away.",
+  "web_created": true
+}

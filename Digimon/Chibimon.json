@@ -1,0 +1,33 @@
+{
+  "name": "Chibimon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Rams into the opponent while hopping about."
+  },
+  "digivolves_from": [
+    "Chicomon"
+  ],
+  "digivolves_to": [
+    "V-mon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Baby Dragon Digimon that evolved from Chicomon . It has a torso, hands, and feet—unusual for a Baby Digimon—and so is able to grip objects with both of its small hands, and move while hopping about with both feet. It has a voracious appetite and especially likes sweet foods. Also, as it is very fond of sleeping, it will fall asleep the moment you take your eyes off of it. Its Special Move is ramming into the opponent while hopping about ( Hop Attack )."
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Stiffilmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 8,
+    "SNC": 9,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Filmon",
+    "Loogarmon"
+  ],
+  "digivolves_to": [
+    "Bagramon",
+    "Giga Seadramon",
+    "Grandis Kuwagamon",
+    "Rasenmon",
+    "Rasenmon: Fury Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Only a small fraction of Filmon who have tempered their quills to the extreme can achieve evolution into this Perfect Digimon. The fur covering its entire body is said to rival Red Digizoid in hardness, acting as both a shield that protects its body from harm and as a weapon that boasts unparalleled offensive power. The \" Hurricane Knuckles \" it wields in both hands are its prided weapons, made from compressing its own shed fur to ultra-high density. It trains diligently on a daily basis, dreaming of the day that it can finally face Were Garurumon —who it views as its rival—in battle. Its Special Moves are charging forth while doing a high-speed drillspin, cleaving the opponent to bits with its bristled quills and Hurricane Knuckles ( Giga Crimson Dive ), and causing the red, drill-shaped spears all over its body to extend, annihilating multiple enemies in one go ( Vermilion Vortex )."
+}

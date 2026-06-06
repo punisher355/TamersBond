@@ -1,0 +1,33 @@
+{
+  "name": "Arkadimon Baby",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Stabs the sharp portions of its limbs into the opponent and completely absorbs their data."
+  },
+  "digivolves_from": [
+    "Kuramon"
+  ],
+  "digivolves_to": [
+    "Arkadimon Child"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Collectors Hacker's Memory ⇨ Japanese A cursed Digimon artificially created based on the data of various Digimon. Because these details are unknown, it is currently being investigated. Digimon Collectors ⇨ English 様々なデジモンのデータを元に人為的に創られた呪われしデジモン。詳細は不明で現在調査中である。 デジモンコレクターズ ⇨ Japanese A cursed Digimon artificially created based on the data of various Digimon. One of the experiments to construct the \"Ultimate Digimon\", it possesses formidable physical ability despite being a Baby. Its \" Data Drain \", where it stabs the sharp portions of its limbs into the opponent and completely absorbs their data, is both Arkadimon's Special Move and its predatory behavior. So by directly absorbing data from others, Arkadimon has gained a tremendous growth speed. Digimon Story: Cyber Sleuth Hacker's Memory ⇨ English 様々なデジモンのデータを元に人為的に創られた呪われしデジモン。「究極のデジモン」を作る実験体の一つであり、幼年期ながら侮れない身体能力を持つ。鋭い節足を相手に突き刺しデータを吸収してしまう「 データドレイン 」はアルカディモンの必殺技であると同時に捕食行動でもある。こうして他者のデータを直接吸収することで、アルカディモンは驚異的な成長スピードを手に入れたのだ。 デジモンストーリー サイバースルゥース ハッカーズメモリー ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

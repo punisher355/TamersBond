@@ -1,0 +1,40 @@
+{
+  "name": "Chocomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Fires a stream of adhesive bubbles from its mouth."
+  },
+  "digivolves_from": [
+    "Cocomon"
+  ],
+  "digivolves_to": [
+    "Blucomon",
+    "Jazamon",
+    "Lopmon",
+    "Pico Devimon",
+    "Ryudamon",
+    "Shamamon",
+    "Toy Agumon (Black)",
+    "Wormmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that grew up from Cocomon . Although the personalities of the lively Gummymon and the docile Chocomon are opposites, they get along very well and always act in unison. The two are effectively of one mind and body, so much so that should one be separated from the other, it would weaken from loneliness. Its Special Move is spewing out a lot of adhesive bubbles ( Double Bobble )."
+}

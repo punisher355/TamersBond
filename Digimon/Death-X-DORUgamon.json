@@ -1,0 +1,41 @@
+{
+  "name": "Death-X-DORUgamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Agumon (Black)",
+    "DORUmon",
+    "Dracumon",
+    "Guilmon",
+    "Pico Devimon",
+    "Ryudamon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Death-X-DORUguremon",
+    "DORUguremon",
+    "Metal Tyranomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Undead Digimon of the Prototype Digimon \" DORU Series \" that was experimented on in search of further evolutions, and was said to, at the time of the experiment, resemble its Adult form . By continuously preying on the Digicores of other Digimon, it is active despite its deceased condition, and is attempting to evolve. Its Signature Move is \" Cannonball \". Its Special Move is impaling the opponent with its steel arms and ripping out their Digicore ( Metal Cast )."
+}

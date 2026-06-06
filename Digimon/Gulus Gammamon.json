@@ -1,0 +1,41 @@
+{
+  "name": "Gulus Gammamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "DarkPales",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Crushes the enemy with flames of darkness that it amasses in its hands."
+  },
+  "digivolves_from": [
+    "Gammamon",
+    "Plotmon"
+  ],
+  "digivolves_to": [
+    "Bombermon",
+    "Canoweissmon",
+    "Chimairamon",
+    "Fumamon",
+    "Ghilliedhumon",
+    "Regulusmon",
+    "Vamdemon",
+    "Zanmetsumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A ferocious Digimon that evolved when the evil heart hidden within Gammamon was unleashed. It rejects interference from those around it and is only interested in fighting, and once it catches an opponent that comes into sight, it will not stop attacking them until they breathe their last breath. It puts up ferocious battles where it attacks regardless of whether its limbs get broken. Its Special Moves are crushing the enemy with the flames of darkness it amasses in its hands ( Dark Pales ), and hurling those flames of darkness while maintaining their power ( Desdemona ). In addition, it kills the enemy with its \" Dead-end Skewer \", in which it pierces their vitals with the tip of its tail with pinpoint accuracy."
+}

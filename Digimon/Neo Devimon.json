@@ -1,0 +1,54 @@
+{
+  "name": "Neo Devimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Angemon",
+    "Black Tailmon",
+    "Boogiemon",
+    "Coelamon",
+    "Devidramon",
+    "Devimon",
+    "Ice Devimon",
+    "Ogremon",
+    "Orgemon",
+    "Siesamon",
+    "Stingmon",
+    "Tailmon",
+    "Witchmon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Beelzebumon: Blast Mode",
+    "Blitz Greymon",
+    "Done Devimon",
+    "Demon",
+    "Lilithmon",
+    "Metamormon",
+    "Neo Vamdemon",
+    "Ofanimon",
+    "Seraphimon",
+    "BlitzGreymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An evolved form of Devimon that was enhanced by someone. It is a Geno Digimon that was artificially strengthened and completely controlled, even as far as its own will. The mask which covers its face suppresses Neo Devimon's own power, and it is said that it is worn in order to control its will. Its Special Move is an enhanced version of Death Claw ( Guilty Claw )."
+}

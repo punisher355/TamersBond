@@ -1,0 +1,33 @@
+{
+  "name": "Avenge Kidmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 13,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Destruction Trigger",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Stomps on the opponent, then fires an explosive bullet from its legs at point-blank range."
+  },
+  "digivolves_from": [
+    "Death Meramon",
+    "Mummymon",
+    "Vademon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The desire for revenge of a Digimon defeated by Magna Kidmon ran wild, and as a result of the Minus Mind Data applying an overload to its Digicore , the form of the defeated Digimon underwent a mutation-like transformation. In order to vent its raging fury at its form becoming so similar to that of the opponent it should defeat, it has forgotten even the goal of defeating Magna Kidmon that was its dream, and continuously sabotages it. Its Special Moves are stomping on the opponent, without balking at injuring itself, then firing an explosion-inducing bullet at point blank range from the gun muzzles on its legs ( Destruction Trigger ), and hitting the target with many energy shots from its fingers, causing it to hover in the air from the force, then firing live ammunition from its whole body and driving it into the opponent ( Misery Bullet Rain ).",
+  "web_created": true
+}

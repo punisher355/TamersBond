@@ -1,0 +1,31 @@
+{
+  "name": "Jupitermon: Wrath Mode",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 17,
+    "FRD": 13,
+    "LVE": 11,
+    "KNW": 18,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Keraunós Divide",
+    "element": "Neutral",
+    "pr": 14,
+    "tags": "[MELEE]",
+    "description": "Slashes the enemy with a single swing of theKeraunósit wields with both hands."
+  },
+  "digivolves_from": [
+    "Jupitermon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Jupitermon , who usually makes judgments without any emotion, undergoes a complete about-face when confronting those who have committed sins that cause it to be unable to restrain its anger. It summons its great divine sword \" Keraunós \" with an angry roar, and its body grows several tens of times larger, turning into a form clad in armor and lightning. The violent lightning surrounding it is the embodiment of its anger, and while it behaves calmly, each of its movements are brimming with awe, driving enemies into a corner from the pressure. Its Special Moves are slashing even distant enemies with a single swing of the \" Keraunós \" it wields with both hands ( Keraunós Divide ), and loosing thunderbolts to where it points ( Lightning Bee ). It drops the \" Keraunós \" from high in the sky to cast its final judgment upon defeated sinners ( Dios Thunder ). If it hits them, then they are guilty, and if it misses them, it serves as proof of being falsely accused. Sinners will have already been erased along with their data by the time they have been rendered guilty by this technique.",
+  "web_created": true
+}

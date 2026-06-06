@@ -1,0 +1,47 @@
+{
+  "name": "Mistymon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Core Dart",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Surrounds its crystal ball with fire and throws it at its enemies."
+  },
+  "digivolves_from": [
+    "Firamon",
+    "Fla Wizarmon",
+    "Gladimon",
+    "Mojyamon",
+    "Witchmon",
+    "Wizarmon"
+  ],
+  "digivolves_to": [
+    "Black War Greymon",
+    "Chaos Dukemon",
+    "Cherubimon (Vice)",
+    "Craniummon",
+    "Dynasmon",
+    "Lord Knightmon",
+    "Medieval Dukemon",
+    "Megidramon",
+    "Pharaohmon",
+    "Zanbamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Magic Warrior Digimon who came from \" Witchelny \", the Digital World of another dimension. In addition to mastering various forms of sorcery ( high-level programming language ), it is also a sword wielder and possesses masterful swordsmanship. Extremely well-versed in both chivalry and magic, it can attack by imbuing its sword with magical power. One such technique is its Special Move \" Blast Fire \", in which it envelops its sword in flame and then delivers a slash attack with increased power. Also, its \" Core Dart \", in which it manipulates crystals freely, is a technique that it skillfully uses for offense and defense."
+}

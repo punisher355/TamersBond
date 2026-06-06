@@ -1,0 +1,33 @@
+{
+  "name": "Skadimon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 13,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Snow Swatter",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Summons a gigantic snow hand to beat down the enemy."
+  },
+  "digivolves_from": [
+    "Crys Paledramon",
+    "Daipenmon",
+    "Polar Bearmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ice-Snow Digimon that rules over \" Thrymheimr \", a small, snow country somewhere in the snowy mountains. It appears to be a Digimon in the form of a giant snowman, but most of it resembles a powered suit made of ice. Skadimon's true form is the adorable fairy-like Digimon sitting inside the snow globe on its head. Snow is always falling gently inside the globe, but when Skadimon fights or gets angry, its true form disappears in a blizzard. Thrymheimr is a small country where many Digimon that inhabit cold regions live, and is surrounded by ice shaped just like a snow globe. As with its head, the globe is a custom-made, solid ice wall created using Skadimon's abilities, and protects the inhabitants by blocking intruders. When an enemy invades, it waves its stick to freely control snow and ice, and conjure various things to intercept them. Its Special Moves are summoning a gigantic snow hand to beat down the enemy ( Snow Swatter ), and launching a large quantity of snowman-shaped missiles while skating with its ice skates ( Snowman's Dance ). When it reaches the peak of its anger, the globe on its head will break, and it unleashes its \" Raging Avalanche \", in which it engulfs the opponent in a avalanche that releases a huge amount of snow. Although the globe can easily regenerate, exposing its true form to danger is done as a last resort."
+}

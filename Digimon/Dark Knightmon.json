@@ -1,0 +1,36 @@
+{
+  "name": "Dark Knightmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 8,
+    "SNC": 9,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Twin Spear",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Stabs with its \"Twin Spear\".Attacks the enemy with energy released from its \"Twin Spear\"."
+  },
+  "digivolves_from": [
+    "Shadramon",
+    "Tailmon",
+    "Troopmon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Belphemon: Rage Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Dark Knightmon is the fused figure of Skull Knightmon and Deadly Axemon , who have exchanged cups of brotherhood. Dark Knightmon, who brings the older brother's ingenuity together with the younger brother's mobility, has become a first-class warrior. The skills of Dark Knightmon, who can use the \" Twin Spear \" it wields to thrust, slash, sweep, or throw as the situation calls for, are very advanced, and it is said there are few people powerful enough to fight Dark Knightmon fairly to its face and defeat it. While Dark Knightmon possesses that much competency, it will use any means to achieve its goals and won't hesitate to get its hands dirty, and sometimes it will even be willing to betray its own comrades. Dark Knightmon, who is furnished to an implacable depth with merit, is an opponent that you don't want to turn into an enemy, if you can help it."
+}

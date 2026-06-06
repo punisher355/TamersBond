@@ -1,0 +1,38 @@
+{
+  "name": "Buraimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Tsubame Nimai Gaeshi",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Minces the enemy with a cross-slash unleashed with its swords."
+  },
+  "digivolves_from": [
+    "Hyokomon",
+    "Penmon",
+    "Zubamon"
+  ],
+  "digivolves_to": [
+    "Butenmon",
+    "Digitamamon",
+    "Duramon",
+    "Garudamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Bird Man Digimon that evolved after continuous sword training. After training, it acquired enough skill to freely wield two swords. It is on a training pilgrimage , wandering across the Digital World while working as a bodyguard, relying on its honed sword abilities. It is rumored to take any job for a reward, and is often treated as an outlaw. However, it actually has a kind nature that never forgets its spirit of helping the weak, and will never take jobs that torment the weak. Its Special Moves are mincing the enemy with a cross-slash that it quickly unleashes with both its swords ( Tsubame Nimai Gaeshi ), and a counter in which it deals a spinning slash while ascending towards flying targets ( Hiken: Asuka Otoshi )."
+}

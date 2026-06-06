@@ -1,0 +1,33 @@
+{
+  "name": "Ryugumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "NiraiShikaishō",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Raises only the water pressure in the enemy's surroundings, crushing them to death."
+  },
+  "digivolves_from": [
+    "Marin Bullmon"
+  ],
+  "digivolves_to": [
+    "Enmamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon with a beautiful appearance that resides in Ryushogu , an oceanic area in the Eastern Digital World . It constantly emits a faint light from its translucent body, charming those who see it. It not only has a beautiful appearance, but also extremely high combat ability. It is revered as the lord of Ryushogu as well as its guardian deity, and the peace in this area, which is also known as a paradise for water-dwelling Digimon, has been brought about thanks to Ryugumon. It possesses both high intelligence and a calm disposition, and although it has a nature that despises conflict, it will wield its mysterious power to the fullest to counter those who cause harm to Ryushogu. Through the cerata on its tail, it has the ability to absorb energy or share that energy with others, and it also has the role of purifying Ryushogu to its normal state. Its Special Moves are raising only the water pressure in the enemy's surroundings and crushing them to death ( Nirai Shikaishō ), and firing a laser from its brow ( Wadatsumi no Harae ).",
+  "web_created": true
+}

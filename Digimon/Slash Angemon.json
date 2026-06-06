@@ -1,0 +1,36 @@
+{
+  "name": "Slash Angemon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 9,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Holy Espada",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Slashes the opponent with a cross-shaped energy blast."
+  },
+  "digivolves_from": [
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Knightmon",
+    "Kyukimon",
+    "Matadrmon",
+    "Shakkoumon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Power Digimon that commands the Powers and cuts through the vanguard in battle. As it persists in justice, it does not fear death. Along with the blades of its metal wings and hands, its entire body has gained a razor-sharp appearance, and it is surely an Angel Warrior created in order to battle wicked beings. Its Signature Move is \" Holy Espada \". Its Special Move is charging at the opponent with staggering momentum, cutting them to pieces with the blades covering its body ( Heaven's Ripper ).",
+  "web_created": true
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Drimogemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Drill Spin",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Attacks the enemy with the spinning drill on its head."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "DORUmon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gomamon",
+    "Kunemon",
+    "Patamon",
+    "Plotmon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Brachimon",
+    "Cerberumon",
+    "Giromon",
+    "Insekimon",
+    "Loader Leomon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Pandamon",
+    "Skull Satamon",
+    "Triceramon",
+    "Vademon",
+    "Were Garurumon (Black)",
+    "Yaeger Dorulumon",
+    "Zudomon",
+    "Cerberumon: Werewolf Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that moves underground at high speeds with the gigantic drill attached to its snout. It is an extremely rare Digimon to come across because it is always digging deep underground. Although it has a meek, shy personality, it is fairly mischievous, and sometimes it takes the favorite bones that Garurumon has buried underground and hides them in different locations. Its Special Moves are attacking the enemy with its gigantic drill ( Drill Spin ), and throwing the bone it stole from Garurumon ( Crusher Bone ).",
+  "web_created": true
+}

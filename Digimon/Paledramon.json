@@ -1,0 +1,38 @@
+{
+  "name": "Paledramon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Ice Age",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Freezes the enemy with its breath."
+  },
+  "digivolves_from": [
+    "Blucomon"
+  ],
+  "digivolves_to": [
+    "Crys Paledramon",
+    "DORUguremon",
+    "Frozomon",
+    "Hisyaryumon",
+    "Panjyamon",
+    "Pumpmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that evolved from Blucomon . Its large wings of ice allow it to fly at high speed, even in foul weather. Changes in temperature due to the environment no longer affect its body, but when facing hot Digimon such as Meramon , its body will melt just like its Child form, causing its power to decrease. It has a strong sense of camaraderie, so if a Digimon who it has teamed up with falls into a crisis, it will try to help them out regardless of the risks. Its Special Moves are freezing the enemy with its breath ( Ice Age ), and charging from the sky as if it were a giant block of ice ( Meteor Hail )."
+}

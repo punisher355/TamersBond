@@ -1,0 +1,52 @@
+{
+  "name": "Saberdramon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Black Saber",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "12Strikes from the air with the talons on its feet.Shoots dark rings by flapping its wings."
+  },
+  "digivolves_from": [
+    "Agumon (Black)",
+    "Gabumon (Black)",
+    "Ghostmon",
+    "Impmon",
+    "Muchomon",
+    "Penmon",
+    "Pico Devimon",
+    "Piyomon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Cyberdramon",
+    "Fantomon",
+    "Garudamon",
+    "Hippogriffomon",
+    "Karatenmon",
+    "Lady Devimon",
+    "Megadramon",
+    "Okuwamon",
+    "Parrotmon",
+    "Vamdemon",
+    "Velgrmon",
+    "Waru Seadramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon shrouded in black flames. Due to the roughness of its temperament, for which it continues counterattacks against enemies to a ferocious degree, it's difficult to even approach it. Its Special Move is striking from the air with the talons on its feet ( Black Saber )."
+}

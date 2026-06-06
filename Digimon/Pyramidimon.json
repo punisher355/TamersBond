@@ -1,0 +1,31 @@
+{
+  "name": "Pyramidimon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 12,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "ZofrKabus",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Spins its pyramid-shaped fingers and pulverizes the enemy."
+  },
+  "digivolves_from": [
+    "Proganomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon with an enormous figure that some Digimon evolve into by taking in data from ancient ruins scattered throughout the Digital World . Its body is comprised of sand data, and because it is constantly surrounded by a sandstorm, it keeps ordinary Digimon at bay. As a result of absorbing ruins and the ancient data stored within them, it possesses extremely high intelligence and the power to hold its own, even when facing large armies. Since it consumes a lot of energy when active, it often sleeps camouflaging itself as a pyramid. Even if it suffers heavy damage, it can instantly regenerate by taking in sand from its surroundings, so it is difficult to stop Pyramidimon in its tracks unless one attacks its Digicore directly. Its Special Moves are spinning its pyramid-shaped fingers and pulverizing the opponent ( Zofr Kabus ), smashing the opponent from overhead with the pyramids on its shoulders ( Apesh Eiqab ), and unleashing a sandstorm from the eye on its chest which erodes everything ( Laena Khamsin )."
+}

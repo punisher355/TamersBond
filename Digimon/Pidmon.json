@@ -1,0 +1,51 @@
+{
+  "name": "Pidmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Fire Feather",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Showers its feathers, which burst into holy flames, like meteors."
+  },
+  "digivolves_from": [
+    "Clear Agumon",
+    "Coronamon",
+    "Lucemon",
+    "Luxmon",
+    "Patamon",
+    "Piyomon",
+    "Plotmon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Angewomon",
+    "Arkhai Angemon",
+    "Asuramon",
+    "Fantomon",
+    "Flaremon",
+    "Garudamon",
+    "Giromon",
+    "Holy Angemon",
+    "Huankunmon",
+    "Insekimon",
+    "Lilimon",
+    "Monzaemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An \"Angel Digimon\" with two wings, whose body is clad in shining white cloth. Although it is a being of perfected virtue like Angemon , its rank is below Angemon's. However, its power is on par with Angemon, and it is a being that destroys evil while wielding its Holy Rod . Its Special Moves are showering its feathers, which burst into holy flames, like meteors ( Fire Feather ), and charging at tremendous speed, and then unleashing an intense blow with the Holy Rod ( Pid Speed )."
+}

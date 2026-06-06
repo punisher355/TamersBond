@@ -1,0 +1,38 @@
+{
+  "name": "Gammamon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 2,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Horn Attack",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Charges with its two horns."
+  },
+  "digivolves_from": [
+    "Gurimon",
+    "Nyaromon"
+  ],
+  "digivolves_to": [
+    "Betel Gammamon",
+    "Gulus Gammamon",
+    "Kaus Gammamon",
+    "Sealsdramon",
+    "Wezen Gammamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A very rare, young, white Ceratopsian Digimon that was recently discovered. Gammamon's evolution is said to be linked to a \"digital signal that came from extragalactic space\". The two hard horns that grow from its brow are weapons that are useful for offense and defense. It is also capable of levitating, and flying for a short period with the tiny wings on its back. It rarely shows its emotions, but it seems that once you reach out to it, it will gradually grow attached to you. Its Special Move is charging with its two horns ( Horn Attack ). In addition, its \" Breaclaw \", which it unleashes with the claws on its left hand that has accumulated energy, is also a powerful attack technique."
+}

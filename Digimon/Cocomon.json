@@ -1,0 +1,25 @@
+{
+  "name": "Cocomon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Chocomon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An extremely rare Digimon, which is born in pairs from a single Digitama . Why only Zerimon and Cocomon are born as twins is currently unknown. What's more, they are not restricted to always being born as twins, and there have been cases where a Zerimon and Cocomon are each born from a single Digitama. Compared to the extremely energetic, one-horned Zerimon, the three-horned Cocomon has a relatively docile personality. Like other Baby Digimon, it spits acid bubbles to intimidate opponents.",
+  "web_created": true
+}

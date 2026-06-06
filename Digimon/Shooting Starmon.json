@@ -1,0 +1,51 @@
+{
+  "name": "Shooting Starmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Dynamite Soul",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE] [BLAST 4] [PARALYZE 1]",
+    "description": "Rekindles the weakened hearts of dispirited Digimon by shouting passionate phrases at them."
+  },
+  "digivolves_from": [
+    "Starmons"
+  ],
+  "digivolves_to": [
+    "Big Mamemon",
+    "Blossomon",
+    "Catch Mamemon",
+    "Crescemon",
+    "Dark Superstarmon",
+    "Digitamamon",
+    "Giromon",
+    "Makuramon",
+    "Mamemon",
+    "Megalo Growmon",
+    "Metal Mamemon",
+    "Monzaemon",
+    "Pandamon",
+    "Shawujinmon",
+    "Superstarmon",
+    "Tekkamon",
+    "Triceramon",
+    "Tyilinmon",
+    "Volcamon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "The Jogress -evolved form of Starmon and the Pickmons . A horde of Pickmons surround Starmon and their thoughts become one, allowing Starmon to ascend to a Super Major-type. Its Special Move is attacking by turning into a flaming star that penetrates the atmosphere ( Astro Bomber ), with such force that it creates a huge crater upon impact. Not only that, it is able to rekindle the weakened hearts of depressed, dispirited Digimon by shouting passionate phrases at them ( Dynamite Soul ). Its \" Ryūsei Rock Damashī \", a Combined Special Move with Shoutmon EX6 , is a straight right punch filled with fighting spirit.",
+  "web_created": true
+}

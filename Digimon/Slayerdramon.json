@@ -1,0 +1,35 @@
+{
+  "name": "Slayerdramon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Tenryūzanha",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Drives its sword, accelerated with a spin of its body, vertically through the opponent's skull, cutting them in half."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Groundramon",
+    "Rize Greymon",
+    "Savior Hackmon",
+    "Wingdramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Dragon Man Digimon whose body is clad in Chrome Digizoid scale armour . It is said that its form is one that can only be attained by those who complete the training that is called the \"Trial of the Four Great Dragons \", which can only be challenged by Dragon Digimon. It carries the extensible greatsword \" Fragarach \", and has mastered its original ultimate fencing technique, \"Ryūzanken\" . There are three forms within Ryūzanken, from the first to the third, and the first form, \" Tenryūzanha \", is driving its sword, accelerated with a spin of its body, vertically through the opponent's skull, cutting them in half. The second form, \" Shouryūzanpa \", is releasing a dragon wave refined by its sword and directed from the bottom part to the top, slaying the opponent just from the sword's pressure. The third form, \" Kouryūzanba \", is stepping up close to the opponent and curling Fragarach around them, shaving off their whole body with the entwined sword blade."
+}

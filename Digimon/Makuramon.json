@@ -1,0 +1,45 @@
+{
+  "name": "Makuramon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Raurava",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Imprisons its opponent in aBǎo Yùand crushes it, completely erasing them."
+  },
+  "digivolves_from": [
+    "Harpymon",
+    "Opossummon",
+    "Opossumon",
+    "Starmon",
+    "Swanmon",
+    "Turuiemon",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Baihumon",
+    "Beelzebumon",
+    "Hi Andromon",
+    "Justimon: Critical Arm",
+    "Marsmon",
+    "Piemon",
+    "Saint Galgomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Monkey . As a follower of the Four Holy Beasts Digimon Baihumon , it has a curious disposition of not speaking and not showing its emotions on its face. However, contrasted with its facial expressions, its body movements are overflowing and its emotions are expressed through its bodily poses. Those suggest that it is often in a more or less good mood, but that its overflowing curiosity doesn't last very long. It makes a hobby out of collecting and locking up the things that catch its eye in its Bǎo Yù , and in battle, it is a pacifist that locks up the opponent to settle its issues. Its Special Move is \" Raurava \", in which it crushes the Bǎo Yù imprisoning its opponent, completely erasing the opponent along with it.",
+  "web_created": true
+}

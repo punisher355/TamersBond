@@ -1,0 +1,48 @@
+{
+  "name": "Parrotmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Sonic Destroyer",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Flies at thespeed of soundto mow down the enemy with a shock wave."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Akatorimon",
+    "Aquilamon",
+    "Birdramon",
+    "Cockatrimon",
+    "Dokugumon",
+    "Gorimon",
+    "Harpymon",
+    "Raptordramon",
+    "Saberdramon",
+    "Thunderbirmon"
+  ],
+  "digivolves_to": [
+    "Griffomon",
+    "Hououmon",
+    "Metal Garurumon",
+    "Nidhoggmon",
+    "Ornismon",
+    "Ravmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Giant Bird Digimon shaped like a parrot. A strange, mysterious bird that wandered from another Digital World through a rift in space-time, the talons on its feet possess mighty power. As it is very highly intelligent and calm, it prefers not to battle, but once it is angered, it gets out of control. Its Signature Move is flying at the speed of sound , and mowing down the enemy with a shock wave ( Sonic Destroyer ). Its Special Move is generating electricity in the feathers growing on its head, and loosing thunderbolts on the enemy from above ( Mjölnir Thunder )."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Hydramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Biotoxin",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Spews a poison gas from the mouth on its abdomen that has the same components as its highly-toxic liquid."
+  },
+  "digivolves_from": [
+    "Archnemon",
+    "Blossomon",
+    "Gerbemon",
+    "Toropiamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A gigantic Plant Digimon that primarily takes root in swampland. It constantly secretes a highly-toxic liquid from its whole body, which it mercilessly uses to dissolve anyone that touches it, and preys on them. Also, it has a habit of expelling large amounts of that liquid from its abdomen, melting the ground and creating swamps to expand its nest. These swamps disturb the surrounding ecosystem, so if you see ominous flowers that have grown abnormally, it is a sign to be cautious. Its Special Moves are spewing a poison gas from the mouth on its abdomen that has the same components as its highly-toxic liquid ( Biotoxin ), and randomly firing beams from its three heads ( Intense Lamptḗr ). It completely destroys the enemy as well as the earth with its \" Division Break \", in which it causes the vines that it spreads into the ground to shake violently, creating fissures."
+}

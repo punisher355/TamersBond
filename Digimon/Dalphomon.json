@@ -1,0 +1,31 @@
+{
+  "name": "Dalphomon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Prophet ofElijah",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires laser beams from the green jewels on its head and forelegs."
+  },
+  "digivolves_from": [
+    "Maneuvermon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Those who have fallen from heaven should absolutely fear this beast. Possessing a huge body covered in gold fur and beautiful wings, contrary to its terrifying appearance, Dalphomon is an Ultimate Digimon that acts like an Angel Digimon, despite being a Beast. It usually floats in the sky, hiding itself in cumulonimbus clouds, and rarely interacts with other Digimon. It values the elegant physical forms of beasts most of all, and believes that it can become a higher-ranking being by taking in pure data from species such as Angels or Holy Beasts. For that reason, it despises Machine and Cyborg Digimon, who are willing to modify their bodies, above all else. Its Special Move is firing laser beams that home in on the enemy from the green jewels on its head and forelegs ( Prophet of Elijah ). It grabs Digimon with the capture device attached to the tip of its tail, and then eternally seals them within its body without sending them to the Dark Area ( Jail Maon ). Its \" Brutal Halo \" amplifies the ultra-high temperature breath it spews out via its bone halo, incinerating configuration data except for the Digicore ."
+}

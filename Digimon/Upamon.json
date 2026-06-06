@@ -1,0 +1,38 @@
+{
+  "name": "Upamon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Tsubumon"
+  ],
+  "digivolves_to": [
+    "Agumon",
+    "Armadimon",
+    "Gizamon",
+    "Patamon",
+    "Sangomon",
+    "Swimmon",
+    "V-mon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Baby Amphibian Digimon with ear-like branchia growing from both sides of its head. Although it is able to live whether on land or under water, it appears that it is rather suited for life on land. Because of its carefree personality, it is easily and frequently bullied by other Digimon. However, because of its personality, there are occasions when it mistakes it as being played with, rather than it being bullied. Its Special Move is releasing an ultrasonic shout, making the opponent flinch ( Shock Shout )."
+}

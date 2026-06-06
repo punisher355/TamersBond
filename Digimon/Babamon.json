@@ -1,0 +1,38 @@
+{
+  "name": "Babamon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Empress Haze",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Completely erases evil viruses with a single swing of its magic broom."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Archnemon",
+    "Bastemon",
+    "Lilamon",
+    "Mermaimon",
+    "Monzaemon",
+    "Piccolomon",
+    "Vademon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Ancient Digimon that has the appearance of an old woman. It is rumored that a Rosemon was cursed and turned into this form. It has the Special Move \" Empress Haze \", which completely erases evil viruses with a single swing of the magic broom it holds in its right hand.",
+  "web_created": true
+}

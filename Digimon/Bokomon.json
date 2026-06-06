@@ -1,0 +1,53 @@
+{
+  "name": "Bokomon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 5,
+    "LVE": 2,
+    "KNW": 4,
+    "SNC": 4,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Nigeashimou Dash",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Runs away at tremendous speed when it feels it can't win."
+  },
+  "digivolves_from": [
+    "Gurimon"
+  ],
+  "digivolves_to": [
+    "Betel Gammamon",
+    "Boarmon",
+    "Centalmon",
+    "Dinohumon",
+    "Dobermon",
+    "Fladramon",
+    "Fla Wizarmon",
+    "Greymon",
+    "Galgomon",
+    "Growmon",
+    "Hanumon",
+    "Mojyamon",
+    "Nanimon",
+    "Opossumon",
+    "Peacockmon",
+    "Sealsdramon",
+    "Siesamon",
+    "Tuchidarumon",
+    "Wizarmon",
+    "Maildramon",
+    "Dark Maildramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An old man-like Mutation Digimon wrapped in a haramaki . A knowledgeable Digimon scholar, it carries the \" Monoshiri Book \", which has things about the Digital World written in detail, but barely ever shows it. As it is poor at fighting, it is usually boisterous and lively, but when push comes to shove, it becomes surprisingly reliable, instantly taking on a serious look. Its Special Move is running away at tremendous speed when it feels that it can't win ( Nigeashimou Dash )."
+}

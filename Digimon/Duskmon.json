@@ -1,0 +1,40 @@
+{
+  "name": "Duskmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Geist Abend",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "123Makes the eyes on its body glow to hypnotize the opponent.Fires laser beams from all the eyes and mouths on its armor.Powers up its swords and charges while swinging them around."
+  },
+  "digivolves_from": [
+    "Arkadimon Child",
+    "Gazimon",
+    "Keramon"
+  ],
+  "digivolves_to": [
+    "Infermon",
+    "Kaiser Leomon",
+    "Lucemon: Falldown Mode",
+    "Mephismon",
+    "Skull Satamon",
+    "Velgrmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Darkness which bears the might of one of the legendary Ten Warriors . The regret of various extinct species of Digimon and the \"Forbidden Data\" on the Net transformed into intense dark energy, and coalesced into Duskmon. The dark energy exists in order to oppose the light of holy beings, and the one who possesses power over Light is the flip side of the same coin. It has a thoroughly evil personality, so it is both callous and cruel. It is the possessor of demon lord-like dignity that is overflowing with perfectionism and confidence. It is invincible in battle when wielding its swords, and does not hesitate with its inhuman attacks. Its Special Moves are making the eyes all over its body shine and placing the opponent under hypnosis ( Geist Abend ), and absorbing the opponent's power with its two demonic \" Blut Evolution \" swords and making it its own ( Eroberung ). By the way, due to the ability of the three heads and seven eyes on its armor to act on their own as if they were separate creatures, true evil is sealed in them.",
+  "web_created": true
+}

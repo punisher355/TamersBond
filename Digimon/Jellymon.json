@@ -1,0 +1,42 @@
+{
+  "name": "Jellymon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 3,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Bibi Thunder",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "A paralyzing attack in which it discharges static electricity from the tips of its tentacles."
+  },
+  "digivolves_from": [
+    "Pukamon",
+    "Puyoyomon"
+  ],
+  "digivolves_to": [
+    "Ebidramon",
+    "Gesomon",
+    "Ikkakumon",
+    "Kinkakumon",
+    "Manbomon",
+    "Rukamon",
+    "Seadramon",
+    "Tesla Jellymon",
+    "Tobiumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Mollusk Digimon with a squishy head like a jellyfish. Its whole body is flexible, which allows it to retract its body into its head, and it usually lives with just its head showing. While it is in this form, it is light enough to fly just by being blown by the wind. It prefers beautiful environments and acts, and once it sees foul behavior, it will free its body in anger and turn into its Battle Mode . Its Signature Moves are the paralyzing attack \" Bibi Thunder \", in which it discharges static electricity from the tips of its tentacles, \" Volt Knuckle \", a punching technique in which it electrifies its fists, and \" Spiral Kick \", where it kicks the enemy into the air while performing a somersault."
+}

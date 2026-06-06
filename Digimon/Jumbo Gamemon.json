@@ -1,0 +1,41 @@
+{
+  "name": "Jumbo Gamemon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 14,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Megaton Hydro Laser",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Shoots an extremely high-speed water stream from its mouth cannon, which is capable of penetrating everything."
+  },
+  "digivolves_from": [
+    "Anomalocarimon",
+    "Blossomon",
+    "Gerbemon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Megalo Growmon",
+    "Monzaemon",
+    "Rize Greymon",
+    "Tyilinmon",
+    "Waru Seadramon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A gigantic Cyborg Digimon that added beam cannons to its entire body until the strength of its Metal Body 's shell was compromised. Its Special Moves are shooting an extremely high-speed water stream from its mouth cannon, which is capable of penetrating everything ( Megaton Hydro Laser ), and strafing with all of its beams cannons simultaneously ( Jumbo Crater ). In addition, because this technique has 360° coverage, a crater is left in the ground after the firing. It is a Special Move that definitely embodies \" The best defense is a good offense .\" Also, it can retract its legs and fire beams backwards from both of its arms, accelerating itself to perform a spinning charge towards the opponent ( Jumbo Jetter ).",
+  "web_created": true
+}

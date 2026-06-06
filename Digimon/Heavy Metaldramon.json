@@ -1,0 +1,31 @@
+{
+  "name": "Heavy Metaldramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 12,
+    "LVE": 15,
+    "KNW": 13,
+    "SNC": 12,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Black Sabbath",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Pulverizes the enemy with a roaring sound emitted from its guitar-shaped wings."
+  },
+  "digivolves_from": [
+    "Loudmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that evolved into the form of an ominous dragon that overwhelms those who see it by taking in data from heavy metal culture . It thinks of its battles as a show, has a belligerent personality in which it wanders around seeking \"strong opponents\" that are crucial for exciting its audience further, and will sometimes even venture into the Dark Area —where evil beings thrive—in search of more exhilarating battles. Its Black Digizoid -clad body is constantly emitting some kind of \"noise\", whether it is the sound of metal rubbing against metal whenever it rushes about, or producing a roaring sound from its guitar-shaped wings. Many Digimon find it troublesome coming into contact with Heavy Metaldramon, and it is also easily spotted by enemies because of the sounds it constantly produces, so it very rarely encounters an opponent. Its desire to seek out strong opponents grows stronger the longer it goes without battling. Its appearance belies the variety of fighting styles it specializes in when it comes to battle; this includes a thunderous roar that can shatter the earth, power that utilizes its huge, heavy body, and attacks that capitalize on the shape-changing ability of Black Digizoid. Its Special Moves are pulverizing the enemy with a roaring sound emitted from its guitar-shaped wings ( Black Sabbath ), and spewing bluish-white hellfire from its mouth ( Blue Murder Flame )."
+}

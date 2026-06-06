@@ -1,0 +1,56 @@
+{
+  "name": "Tuskmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Panzer Knuckle",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE] [CHARGE]",
+    "description": "12Delivers a superdreadnought-class punch.Delivers a punch with a flaming fist."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Armadimon",
+    "Betamon",
+    "Dracomon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gazimon",
+    "Gizamon",
+    "Goburimon",
+    "Gottsumon",
+    "Monodramon",
+    "Palmon",
+    "Snow Goburimon"
+  ],
+  "digivolves_to": [
+    "Digitamamon",
+    "Groundramon",
+    "Master Tyranomon",
+    "Megadramon",
+    "Metal Greymon",
+    "Metal Tyranomon",
+    "Mummymon",
+    "Paildramon",
+    "Triceramon",
+    "Nanomon (Digimon)",
+    "Mega Seadramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A super-heavyweight class Dinosaur Digimon that grew gigantic horns from both of its shoulders. It holds the alias \" Panzer Digimon \", from how it will destroy all obstructions in sight as it charges forth due to its reckless personality. It specializes in performing charging tackles, and countless Digimon have been felled by this attack. The star symbols on its two arms represent the number of Digimon it has defeated (100 represented by one star). Also, it is a fool's errand to attempt to break the horns on Tuskmon's shoulders, as the broken horns will fall out and get replaced with new ones, just like sharks' teeth. Its Special Move is a superdreadnought-class punch ( Panzer Knuckle ).",
+  "web_created": true
+}

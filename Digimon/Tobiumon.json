@@ -1,0 +1,40 @@
+{
+  "name": "Tobiumon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "SuckerfishDarts",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Fires organic missiles from its abdomen to slow down its prey."
+  },
+  "digivolves_from": [
+    "Gizamon",
+    "Jellymon",
+    "Sangomon",
+    "Swimmon"
+  ],
+  "digivolves_to": [
+    "Gusokumon",
+    "Marin Chimairamon",
+    "Mermaimon",
+    "Piranimon",
+    "Waru Seadramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Aquatic Digimon that corners its targeted prey at high speed. Its oddly developed fins allow it to fly, and its large arms enable it to move on the ground. It holds the alias of \" Hunter Fish \" from how it brings down its targets regardless of whether they are on land, in the sea, or in the air. After it slows down its prey with its \" Suckerfish Darts \", organic missiles fired from its abdomen, it finishes them off with its \" Flying Finish \", where it unleashes a high-speed slash attack with its sharp fins."
+}

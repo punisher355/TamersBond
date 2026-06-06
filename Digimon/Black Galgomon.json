@@ -1,0 +1,47 @@
+{
+  "name": "Black Galgomon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Gatling Arm",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Randomly fires the vulcans on both of its arms."
+  },
+  "digivolves_from": [
+    "Clear Agumon",
+    "Floramon",
+    "Kokuwamon",
+    "Labramon",
+    "Lopmon",
+    "Shamamon",
+    "Strabimon",
+    "Terriermon",
+    "Terriermon Assistant"
+  ],
+  "digivolves_to": [
+    "Assaultmon",
+    "Black Rapidmon",
+    "Metal Greymon (Virus)",
+    "Paildramon",
+    "Rapidmon Perfect",
+    "Volcamon",
+    "Nanomon (Digimon)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A species of Galgomon , its specialty is ambushing the enemy in the dark. It excels more than a normal Galgomon in terms of tactics and combat strength due to the effects of the \" Black Digitron \" mixed into its body, and primarily specializes in taijutsu . Its Special Moves are \" Gatling Arm \", in which it randomly fires the vulcan s on both of its arms, and the intense exploding uppercut \" Dumdum Upper \".",
+  "web_created": true
+}

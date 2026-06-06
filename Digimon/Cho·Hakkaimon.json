@@ -1,0 +1,41 @@
+{
+  "name": "Cho·Hakkaimon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 8,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Kyoushin Homerun",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Swings the Roketto Dīng​pá with its acceleration at full-throttle, blowing the opponent into the distance."
+  },
+  "digivolves_from": [
+    "Damemon",
+    "Kinkakumon",
+    "Opossummon",
+    "Opossumon",
+    "Sistermon Ciel",
+    "Tobucatmon"
+  ],
+  "digivolves_to": [
+    "Belial Vamdemon",
+    "Platinum Numemon",
+    "Shagaramon",
+    "Skull Mammon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A feminine Digimon clothed in a pig costume. It was originally an Angel-species Digimon, but it committed a crime that incurred the wrath of Ofanimon and was banished from heaven, and that's when it took on its current appearance. As it is normally optimistic, it doesn't mind that it was changed into this appearance, and it has a very cheerful personality, but if it gets hungry it will be voracious enough to start getting all worked up, and it will take on a ferocious personality. If it becomes starved, it will go completely out of control. Its \" Roketto Dīng​pá \" weapon is equipped with boosters, and combined with Cho-Hakkaimon's superhuman strength, its power is tremendous. Its \" Kyoushin Hōmuran \", in which it swings the weapon with its acceleration at full-throttle, blows the opponent into the distance. With its \" Dadada Minchi \", it showers them in a high-speed barrage using the \" Roketto Dīng​pá \", and crushes them appallingly flat. Also, if it embraces the opponent with its body, which has burst into flames from the fury of its hunger, then it will roast them well-done with its \" Buta-no-Maruyaki \". Because it wants to change its ferocious personality, it seeks to reform itself by going on a journey.",
+  "web_created": true
+}

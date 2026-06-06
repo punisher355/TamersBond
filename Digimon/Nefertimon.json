@@ -1,0 +1,47 @@
+{
+  "name": "Nefertimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Curse of Queen",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Produces a red, high-temperature beam from the ornament on its brow."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Muchomon",
+    "Patamon"
+  ],
+  "digivolves_to": [
+    "Angewomon",
+    "Bastemon",
+    "Chimairamon",
+    "Hippogriffomon",
+    "Insekimon",
+    "Lilamon",
+    "Magnamon",
+    "Mermaimon",
+    "Silphymon",
+    "Taomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Holy Beast Digimon that evolved through the power of the \" Digimental of Light \". The \"Digimental of Light\" has the attribute of \"Light\", and those that don this Digimental will have the ability to purify darkness with the intense power of light. Even though Tailmon is not a descendant of an ancient species, it became able to Armor evolve by awakening the special abilities that lay dormant within its composition data. Its Special Moves are producing a red, high-temperature beam from the ornament on its brow ( Curse of Queen ), and summoning a megalith with ancient inscriptions engraved in Digimoji to attack the enemy ( Rosetta Stone ).",
+  "web_created": true
+}

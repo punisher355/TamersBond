@@ -1,0 +1,55 @@
+{
+  "name": "Rapidmon Perfect",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 10,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Rapid Fire",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[RANGE 8] [BLAST 2]",
+    "description": "Rapid-fires homing missiles from its arms and the revolver on its back."
+  },
+  "digivolves_from": [
+    "Black Galgomon",
+    "Centalmon",
+    "Galgomon",
+    "Garurumon",
+    "Gururumon",
+    "Ikkakumon",
+    "Kyubimon (Silver)",
+    "Leomon",
+    "Reppamon",
+    "Stegomon",
+    "Turuiemon",
+    "Tylomon",
+    "Unimon",
+    "Waspmon"
+  ],
+  "digivolves_to": [
+    "Hi Andromon",
+    "Magna Garurumon",
+    "Metal Etemon",
+    "Mugendramon",
+    "Raijinmon",
+    "Saint Galgomon",
+    "Sleipmon",
+    "Suijinmon",
+    "Tiger Vespamon",
+    "Vikemon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Cyborg Digimon, evolved from Galgomon . It holds the alias of \" Keen Hound \", and it reliably brings down the opponent with movements near the speed of light . Also, it freely uses its gigantic ears as radar , can act even in the dark, and is also able to detect the existence of distant enemies. The silhouette of its body makes you think of a shaved poodle . During battle its neck protector shuts. Its Special Moves are rapid-firing homing missiles from both of its arms and the revolver equipped to its back ( Rapid Fire ), and firing a beam from its whole body that completely disassembles the opponent's data ( Golden Triangle ).",
+  "web_created": true
+}

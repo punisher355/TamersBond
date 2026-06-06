@@ -1,0 +1,43 @@
+{
+  "name": "Grandis Kuwagamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 12,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Grandis Scissor",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Clamps the enemy with the enormous pincers on its head and cuts them to pieces."
+  },
+  "digivolves_from": [
+    "Anomalocarimon",
+    "Atlur Kabuterimon (Red)",
+    "Bolgmon",
+    "DORUguremon",
+    "Grademon",
+    "Jewelbeemon",
+    "Metallife Kuwagamon",
+    "Okuwamon",
+    "Rhino Kabuterimon",
+    "Stiffilmon",
+    "Vajramon"
+  ],
+  "digivolves_to": [
+    "Tyrant Kabuterimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Only the strongest few among the evil Gran Kuwagamon , called the \" Demon of the Deep Forest \", have evolved into it, and if you come across Grandis Kuwagamon, you can call yourself lucky to some extent. Its presence is concealed like dense fog, and it is the rarest species among Insect Digimon. It takes pride in being a Virus -species, and according to one theory, it is said to be a warrior in league with Black War Greymon , who preaches its own justice as a Virus-species. The \" Gran Killers \" on both of its arms are capable of damaging even the hardest of shells or metals, so it deepens the wounds and eventually brings down the enemy. Its Special Move is clamping the enemy with the enormous pincers on its head and cutting them to pieces ( Grandis Scissor ).",
+  "web_created": true
+}

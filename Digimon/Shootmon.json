@@ -1,0 +1,38 @@
+{
+  "name": "Shootmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Bulkmon",
+    "Exermon",
+    "Namakemon",
+    "Runnermon"
+  ],
+  "digivolves_to": [
+    "Achillesmon",
+    "Kazuchimon",
+    "Shivamon",
+    "Shroudmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Machine Digimon that evolved via the data of various ball games from around the world. With a cannon in one hand capable of shooting all kinds of balls, it plans to popularize ball games throughout the Digital World . Shootmon is nicknamed the \" Laughing Oni Coach \" by Digimon that fear it because it approaches them with a smiling face that never changes whether it is angry or happy. Its Special Moves are shooting balls from its cannon at speeds exceeding 300 km/h ( Cannonball Shooter ), and charging into the enemy by capitalizing on its elastic, spring-like legs ( Wild Pitch ). Also, Digimon who suffer its \" Round Jail \", where it turns anything it touches into a ball without wasting its breath, are mercilessly shot out of its cannon."
+}

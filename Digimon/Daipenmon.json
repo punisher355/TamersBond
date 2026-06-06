@@ -1,0 +1,39 @@
+{
+  "name": "Daipenmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Water",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 10,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Blue HawaiiDeath",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE] [FREEZE]",
+    "description": "Dips theKakikaki-kunin its right hand in blue syrup, then strikes the opponent."
+  },
+  "digivolves_from": [
+    "Chackmon",
+    "Moosemon",
+    "Yukidarumon"
+  ],
+  "digivolves_to": [
+    "Ancient Megatheriumon",
+    "Fros Velgrmon",
+    "Olegmon",
+    "Skadimon",
+    "Skull Mammon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Ice that has transcended legend by inheriting all the might of one of the legendary Ten Warriors and acquiring unknown abilities. Although its wings have degenerated, by flapping the gigantic \" Kakikaki-kun \" hunk of ice held in its right hand and the \" Kochikochi-kun \" held in its left, it seems it can momentarily fly in the air. It's free from care because it is able to manufacture the Kakikaki-kun and the Kochikochi-kun on its own even if they melt away. Its Special Moves are dipping the Kakikaki-kun from its right hand in blue syrup, then striking the opponent ( Blue Hawaii Death ), and dipping the Kochikochi-kun from its left hand in red syrup, then striking the opponent ( Ichigo Death ). Furthermore, there seems to be no difference in the offensive abilities of the dipped syrup colors.",
+  "web_created": true
+}

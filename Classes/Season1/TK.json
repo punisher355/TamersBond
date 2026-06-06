@@ -1,0 +1,56 @@
+{
+  "name": "TK",
+  "season": 1,
+  "img": "Tk.webp",
+  "abilities": [
+    {
+      "name": "Last Light",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Hope pool 20+ (any crest rank 4+)",
+      "description": "Once per encounter when your Hope hits 0 and your Digimon would revert, you may instead keep them at their current stage for 1 additional round at no Hope cost."
+    },
+    {
+      "name": "Reservoir",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Hope pool 20+ (any crest rank 4+)",
+      "description": "Your Hope pool increases by 5 permanently, on top of the normal formula. You carry more than most people think possible."
+    },
+    {
+      "name": "Miracle Roll",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Last Light",
+      "description": "Once per session when any die roll results in a natural 1, you may spend 6 Hope to reverse it completely. The roll is instead treated as a natural 20."
+    },
+    {
+      "name": "Share the Light",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Reservoir",
+      "description": "Once per encounter as a Free Action you may transfer up to 5 Hope from your pool to any allied Tamer of your choice."
+    },
+    {
+      "name": "Against All Odds",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Miracle Roll, Hope pool 30+",
+      "description": "Once per session when your Digimon makes an attack roll with a natural result of 2 through 5, you may spend 3 Hope to treat it as a natural 20 — automatic critical hit with double damage."
+    },
+    {
+      "name": "Beacon",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Share the Light, Hope pool 30+",
+      "description": "Once per session at the start of your turn you may declare Beacon. Until the end of the encounter all allied Tamers pay 1 fewer Hope per turn to maintain digivolution (minimum 0). Cannot stack with another active Beacon."
+    },
+    {
+      "name": "Crest of Hope",
+      "row": 4,
+      "expCost": 1200,
+      "requirements": "Both Row 3 abilities, Hope pool 40+",
+      "description": "Once per major story milestone when the encounter is lost, you may activate Crest of Hope. Every allied Digimon in egg state returns at their Default Stage at full HP. Every allied Tamer's Hope pool refills completely. The round then continues normally."
+    }
+  ]
+}

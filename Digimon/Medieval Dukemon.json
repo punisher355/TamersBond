@@ -1,0 +1,39 @@
+{
+  "name": "Medieval Dukemon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Dynas",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Attacks the enemy by swinging \"Dynas\", the strongest magical lance that contains the power of the wyvern."
+  },
+  "digivolves_from": [
+    "Hisyaryumon",
+    "Mametyramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Mistymon",
+    "Skull Baluchimon",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [
+    "Dukemon: Crimson Mode"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "In \" Witchelny \", the Digital World of another dimension, it is a Warrior Digimon praised as the \" Legendary Hero \". It suddenly appeared and drove out the invaders in ancient Witchelny, which was on the road to ruin because Sorcery ( high-level programming language ) was still immature and there were no means for it to defend itself from foreign invasions, and although it's not certain, it is said that it transcends time and is still in existence. It battles using armor made by Sorcery, it holds the alias of \" Whirlwind General \" due to it governing the Digimon known as the \" Vortex Warriors \", who, among all the magical systems of Fire, Earth, Water, and Wind, battle using weapons made by Wind Sorcery, and it possesses the mightiest magical lance, \" Dynas \", which conceals the power of the wyvern . Although there are almost none who have seen its form in the \" Digital World \", it is a Digimon called the \" Warrior of Fantasy \" in the \"Digital World\", as gaudy ornamentation is applied to the armor over its whole body, and a coat of arms is affixed to its solemn form. Its Special Moves are \" Rage of Wyvern \", fired from Dynas , and \" Final Crest \".",
+  "web_created": true
+}

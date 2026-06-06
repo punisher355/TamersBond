@@ -1,0 +1,35 @@
+{
+  "name": "Maneuvermon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 8,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Brutal Aerobatic",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Uses its acrobatic aerobatics to confuse the enemy, and then fires its organic missiles."
+  },
+  "digivolves_from": [
+    "Turbomon",
+    "Maquinamon",
+    "Mulemon"
+  ],
+  "digivolves_to": [
+    "Dalphomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon with a unique form resembling a fighter . Its appearance is reminiscent of Birds and Bird Dragons due to it being a winged beast, but unlike ordinary Bird-species Digimon, it cuts through the air with its bone-hard wings, and uses the thrust of its jet engine-like organs to fly. Within its neck is a cockpit-like organ; though it prefers to fly while carrying other Digimon in it as passengers, they are often not keen on it as the only way Maneuvermon can be boarded is by entering its body through its mouth. Because it simply loves acts of flying, it rarely descends from the sky, but when it lands on the ground to take a rest, it exposes the landing gear-like arms hidden within its body and uses them to touch down. It specializes in dogfight s that capitalize on its high air superiority capabilities, and also has a wide range of attack methods such as discharging electricity from the claws at the ends of its arms, and the organic missiles mounted to its chest. Its Special Moves are using its acrobatic aerobatics to confuse the enemy, and then firing its organic missiles ( Brutal Aerobatic ), and rapid-firing electricity discharged from its claws to scorch the enemy ( Folgore )."
+}

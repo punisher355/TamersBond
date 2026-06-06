@@ -1,0 +1,47 @@
+{
+  "name": "Submarimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Water",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 5,
+    "KNW": 4,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Oxygen Homing",
+    "element": "Wind",
+    "pr": 7,
+    "tags": "[RANGE 4] [PUSH]",
+    "description": "Discharges super-compressed oxygen."
+  },
+  "digivolves_from": [
+    "Candmon",
+    "DORUmon",
+    "Ganimon",
+    "Impmon",
+    "Kudamon",
+    "Palmon",
+    "Swimmon",
+    "Tentomon"
+  ],
+  "digivolves_to": [
+    "Archnemon",
+    "Delumon",
+    "Magnamon",
+    "Paildramon",
+    "Pumpmon",
+    "Tyilinmon",
+    "Waru Seadramon",
+    "Mega Seadramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "An Armor-level Aquatic Digimon that evolved through the power of the \" Digimental of Sincerity \". The \"Digimental of Sincerity\" has the attribute of \"Water\", and those that don this Digimental demonstrate their true power underwater. It swims freely around the ocean, and the techniques unleashed in underwater battles are no match for it unless they're also from a considerably Aquatic Digimon. Its Special Moves are discharging super-compressed oxygen ( Oxygen Homing ), and after distancing itself underwater, instantly accelerating and performing a ramming attack while spinning the drill on its snout ( Submarine Attack )."
+}

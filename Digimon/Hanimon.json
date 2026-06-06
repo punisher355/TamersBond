@@ -1,0 +1,37 @@
+{
+  "name": "Hanimon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 5,
+    "KNW": 5,
+    "SNC": 2,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "HaniwaFlash",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Fires strange beams of light from its eyes, both attacking and blinding the enemy."
+  },
+  "digivolves_from": [
+    "Kyaromon",
+    "Onibimon"
+  ],
+  "digivolves_to": [
+    "Fugamon",
+    "Kokeshimon",
+    "Manekimon",
+    "Shellmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon that primarily inhabits ruinous areas in the Eastern Digital World . Its appearance strongly resembles that of a haniwa , and its body is made of clay. It looks sturdy, but it is more brittle than what it is made out to be due to it being composed of clay data. Although it instantly forms cracks and becomes chipped, it can occasionally be seen meticulously repairing itself. Despite having an appearance where you cannot tell what it is thinking at first glance, its personality is gentle, and it is also friendly towards other species. However, it absolutely hates the hair on its head being touched, and flies into a rage when touched there, so caution is necessary. It possesses holy power, albeit weak, and by dancing together, multiple Hanimon can create a barrier that wards off Dark-species Digimon. Its Special Moves are firing strange beams of light from its eyes, both attacking and blinding the enemy ( Haniwa Flash ), and a full-force ramming attack that risks shattering its body ( Kofun Tackle )."
+}

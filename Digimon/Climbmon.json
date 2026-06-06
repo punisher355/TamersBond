@@ -1,0 +1,41 @@
+{
+  "name": "Climbmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 11,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "GitonIsolation",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "A mimicry technique where it blends itself into its surroundings, and uses it to creep up stealthily on the enemy."
+  },
+  "digivolves_from": [
+    "Bulkmon",
+    "Exermon",
+    "Namakemon",
+    "Runnermon"
+  ],
+  "digivolves_to": [
+    "Achillesmon",
+    "Ancient Beatmon",
+    "Gran Kuwagamon",
+    "Kazuchimon",
+    "Shivamon",
+    "Shroudmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Insect Digimon that evolved via bouldering course data. The pickaxes on its arms are used not only for piercing things such as cliffs, but also for tapping and driving the kunai -shaped piton s it carries in the underside of its wings into sturdy rocks. Skillfully using its pickaxes and pitons, it clings onto any dangerous spot, and moves quickly and brilliantly like a ninja. It specializes in ambush tactics where it creeps up stealthily on the enemy using its mimicry technique \" Giton Isolation \", in which it blends itself into its surroundings. Its Special Moves are a long-range attack in which it throws its pitons ( Crack Haken ), and spreading out its pickaxe arms and tearing the enemy to pieces while spinning ( Dynamic Scyther )."
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Muchomon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Tropical Beak",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Repeatedly pecks with its colorful beak."
+  },
+  "digivolves_from": [
+    "Pyocomon"
+  ],
+  "digivolves_to": [
+    "Airdramon",
+    "Akatorimon",
+    "Allomon",
+    "Aquilamon",
+    "Birdramon",
+    "Cockatrimon",
+    "Diatrymon",
+    "Flare Lizamon",
+    "Fugamon",
+    "Golemon",
+    "Guardromon",
+    "Hyougamon",
+    "Ikkakumon",
+    "Nefertimon",
+    "Orgemon",
+    "Peckmon",
+    "Pteranomon",
+    "Saberdramon",
+    "Seadramon",
+    "Swanmon",
+    "V-dramon",
+    "Youkomon",
+    "Ogremon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Bird Digimon that is unable to fly, just like Penmon . As a Digimon brought up in tropical southern countries, it leads an always happy life. It possesses a bursting enthusiasm and dances with the rhythm of the samba , and its most favorite thing is its richly colored pelt. Its Special Move is repeatedly pecking with its colorful beak ( Tropical Beak ).",
+  "web_created": true
+}

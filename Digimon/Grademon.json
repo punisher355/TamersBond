@@ -1,0 +1,56 @@
+{
+  "name": "Grademon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Black Growmon",
+    "Cyclomon",
+    "DORUgamon",
+    "Dinohumon",
+    "Ginryumon",
+    "Guardromon (Gold)",
+    "Leomon",
+    "Musyamon",
+    "Omekamon",
+    "Raptordramon",
+    "Seadramon",
+    "Waspmon",
+    "Zubaeagermon"
+  ],
+  "digivolves_to": [
+    "Death-X-DORUgoramon",
+    "DORUgoramon",
+    "Durandamon",
+    "Dynasmon",
+    "Gaioumon",
+    "Giga Seadramon",
+    "Grandis Kuwagamon",
+    "Metal Piranimon",
+    "Noble Pumpmon",
+    "Ouryumon",
+    "Sleipmon",
+    "Tiger Vespamon",
+    "Victory Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Warrior Digimon with a pair of swords that is called the \" Golden Meteor \" due to the way it cuts into the vanguard with dauntless courage. When it uses its \" Souken Gradalpha \" with its twin-sword style, a godly speed is brought to those sword techniques, but due to the cursed swords it becomes impossible for it to control itself, and it can't fight and still retain its sanity. Although its overall power is, after all, inferior, its sword techniques surpass even the Holy Knight Lord Knightmon , of the \" Royal Knights \", and it is said that its royal blue mantle is proof of the honor that was bestowed for its achievements over many battles. Its Special Moves are its swift deadly sword, which cuts the opponent apart crosswise ( Cross Blade ), and its heroic swords, which uses its twin blades from higher ground to smite the opponent over the head ( Grade Slash )."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Arkadimon Perfect",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 10,
+    "LVE": 11,
+    "KNW": 8,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Arkadimon Adult",
+    "Chrysalimon",
+    "Ice Devimon"
+  ],
+  "digivolves_to": [
+    "Arkadimon Ultimate",
+    "Demon",
+    "Diablomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A cursed Digimon artificially created based on the data of various Digimon. Its nature is to evolve by absorbing its opponent's data, but it is unclear if it possesses any sense of self. Because these details are unknown, it is currently being investigated. Its Special Moves are disassembling the opponent's data into a particle state and absorbing it ( Dot Matrix ), and freezing the opponent's data with its tentacle-shaped hands, bringing their vital functions to a halt ( Freeze Tentacles ). Digimon Story: Cyber Sleuth Hacker's Memory ⇨ English 様々なデジモンのデータを元に人為的に創られた呪われしデジモン。相手のデータを吸収することで成長進化する性質を持つが、自我を持っているかは判っていない。詳細は不明で現在調査中である。必殺技は相手のデータを粒子状に分解して吸収する「 ドットマトリックス 」と、触手状の手で相手のデータをフリーズさせて生命活動を停止させる「 フリーズテンタクルス 」 デジモンストーリー サイバースルゥース ハッカーズメモリー ⇨ Japanese A Perfect that grew by converting light energy into evil energy. Its true strength is enough to defeat even an Ultimate. Its Special Move is \" Freeze Tentacles \". Digimon Visual Dictionary ⇨ English 光のエネルギーを邪悪なエネルギーにかえて成長した完全体。その実力は究極体をも倒せるほどだ。必殺技は、「 フリーズテンタクルス 」。 デジモン大図鑑 ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

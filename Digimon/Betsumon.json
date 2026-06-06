@@ -1,0 +1,33 @@
+{
+  "name": "Betsumon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Tsukkomi Punch",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Mentally drains the opponent with a punch with only the power of a straight man's interjections."
+  },
+  "digivolves_from": [
+    "Black Tailmon",
+    "Mikemon",
+    "Tailmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An eccentric Digimon that impersonates all sorts of Digimon in order to confuse the enemy. While it is a Puppet Digimon, similarly to Etemon and Monzaemon , it is a rare type capable of disguising itself as various types of Digimon by changing the Digimon Suit (?) it wears. Its Special Moves are \" Tsukkomi Punch \", which despite only having the power of a straight man's interjections has the ability to mentally drain the opponent, and \" Cold Gag \", an attack which utilises its dubious gaze and cryptic gags to stop opponents in their tracks, as if they have been frozen."
+}

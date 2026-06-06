@@ -1,0 +1,33 @@
+{
+  "name": "Karakurumon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 8,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "KarakuriEnbu:Hachikazuki",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Skillfully minces the enemy with the arms and weapons beneath its kimono."
+  },
+  "digivolves_from": [
+    "Kokeshimon"
+  ],
+  "digivolves_to": [
+    "Kaguyamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon that took in data from karakuri puppet s , traditional Japanese crafts. Characterized by the large sakazuki it wears on its head and its long, beautiful black hair, it has an appearance that resembles a beautiful woman at first glance, but beneath its kimono is a mechanical karakuri puppet. It has been seen living together with groups of Kokeshimon in large, old castles and mansions in the Eastern Digital World , and the sight of them makes them look just like sisters. It conceals a multitude of mechanical arms and weapons beneath its elegant kimono, and also has a side like an assassin where it tenaciously hunts its prey, contrary to its calm demeanor. When hunting its target, it deploys the wheels on its legs and its mechanical arms, and corners the enemy with a hideous look, baring its fangs from its gaping mouth. [N 1] Its Special Moves are skillfully mincing the enemy with the arms and weapons beneath its kimono ( Karakuri Enbu: Hachikazuki ), and dousing the enemy with the strong acid in its bowl, causing them to melt ( Hatsuse no Omotenashi )."
+}

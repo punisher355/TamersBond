@@ -1,0 +1,44 @@
+{
+  "name": "Yanmamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Thunder Ray",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Strafes with an electrified laser."
+  },
+  "digivolves_from": [
+    "Alraumon",
+    "Dokunemon",
+    "Kunemon",
+    "Lalamon",
+    "Otamamon",
+    "Tentomon",
+    "Wormmon",
+    "Modoki Betamon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Red)",
+    "Hangyomon",
+    "Jewelbeemon",
+    "Lilimon",
+    "Pumpmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "As a Digimon that took in the data of the \" jumbo dragonfly \", an enormous insect, it is said to be a very primitive Digimon. Its body is covered in a tough carapace, which is as hard as Greymon 's head, and is extremely light, allowing it to fly about at high speed. Its Special Moves are strafing with an electrified laser ( Thunder Ray ), and generating intense electromagnetic waves by flapping its wings ( Insect Swarm )."
+}

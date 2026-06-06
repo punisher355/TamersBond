@@ -1,0 +1,59 @@
+{
+  "name": "Gerbemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Unchi Bazooka",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Fires poop from its bazooka."
+  },
+  "digivolves_from": [
+    "Aquilamon",
+    "Gaogamon",
+    "Geo Greymon",
+    "Gokimon",
+    "Guardromon",
+    "Numemon",
+    "Ogremon",
+    "Orgemon",
+    "Raremon",
+    "Red Vegimon",
+    "Scumon",
+    "Sunflowmon",
+    "Tuchidarumon",
+    "Tyranomon",
+    "Vegimon"
+  ],
+  "digivolves_to": [
+    "Bancho Leomon",
+    "Demon",
+    "Hydramon",
+    "Jumbo Gamemon",
+    "Metal Etemon",
+    "Mirage Gaogamon",
+    "Neptunemon",
+    "Ouryumon",
+    "Parasimon",
+    "Platinum Numemon",
+    "Rosemon",
+    "Seraphimon",
+    "Shine Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A trash can from a desktop computer which gained life and evolved into a Mutation Digimon. Unlike Scumon , which mutated from discarded scum data, this Digimon is the trash can itself. Until now garbage Digimon were said to be the absolute weakest, but with the arrival of Gerbemon that conventional wisdom will probably be reversed. Also, the trash can can act like a black hole , so that anything that is sucked into the trash can disappears from the Digital World without a trace. Its Special Move is a vile attack in which it fires from its bazooka, constructed from empty cans fastened together ( Poop Bazooka )."
+}

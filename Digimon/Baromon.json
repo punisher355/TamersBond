@@ -1,0 +1,36 @@
+{
+  "name": "Baromon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 7,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Meteor Dance",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Manipulates the spirits of the cosmos, causing a group of meteorites to rain down on the enemy."
+  },
+  "digivolves_from": [
+    "Goburimon",
+    "Labramon",
+    "Lopmon",
+    "Phascomon"
+  ],
+  "digivolves_to": [
+    "Mephismon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Demon Man Digimon that evolved through the power of the \" Digimental of Courage \". It is also a guardian deity that protects the ruins (database) of a temple in a forgotten jungle. It is said that Baromon is a survivor of the old generation of Digimon, and has several abilities of a lost technology not found in current Digimon. The third eye on its brow is one of them, and it is said that this eye allows it to see into the future, and it is told that it was able to survive even during the collapse of the ancient Digital World . Its Special Move is manipulating the spirits of the cosmos, causing a group of meteorites to rain down on the enemy ( Meteor Dance ). The downside is that it takes time to synchronize with the spirits of the cosmos, but once invoked, it is said that 10 terabytes of data surrounding the target is annihilated.",
+  "web_created": true
+}

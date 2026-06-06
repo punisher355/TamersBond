@@ -1,0 +1,25 @@
+{
+  "name": "Dodomon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Dorimon",
+    "Wanyamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Slime Digimon whose whole body is covered in the tough fur \" Mithril Hair \". It exhibits an aggressive personality immediately after being born, and despite its fangs not yet being grown, it threatens enemies by opening its mouth wide and doing a biting motion. Because of this behaviour, it often gets defeated by other Digimon, which explains why this Digimon is so rare. If an opponent approaches, it attacks by spitting \" Chīsana Tetsuryū \" from its mouth."
+}

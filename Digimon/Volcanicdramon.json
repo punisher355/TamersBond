@@ -1,0 +1,32 @@
+{
+  "name": "Volcanicdramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Lavogaritamon",
+    "Master Tyranomon",
+    "Volcamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon said to be a dragon that swims in magma, it is thought to live in a place so deep underground that not even Digimon that move about there can reach it. According to some researchers , there are few who argue that it might have been Volcanicdramon that supported the world from deep beneath the ground ever since the Digital World was created. Should Volcanicdramon ever rise to the surface, it may be that some kind of crisis is occurring in the Digital World. Its Special Move is spewing scorching-hot flames from its mouth ( Volcanic Flare ). The land incinerated by Volcanicdramon is never restored, forever turning it into an uninhabitable wasteland. In addition, it has \" Glide Blaze \", in which it rams the enemy while sending out scorching flames hotter than even magma from its whole body."
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Garummon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Speed Star",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Charges at ultra-high speed and cuts its opponent to pieces with itsWing Blades."
+  },
+  "digivolves_from": [
+    "Gabumon"
+  ],
+  "digivolves_to": [
+    "Beowolfmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Light which bears the might of one of the legendary Warrior Ten . It is capable of moving at extremely high speed, perhaps because it was discovered on an optical communication Net , so it slips through the bullets to get close to the enemy, and then its sharply-pointed claws and fangs tear through those it considers evil without wasting its breath. As the possessor of a righteous heart becoming of the name of Garmr , who fights with the war god Týr at Ragnarök in Norse mythology, its feelings of hatred for evil are stronger than that of others. Although it will never obey those whose hearts are even slightly evil, once it has sworn its allegiance to someone it will never betray them. Its Special Moves are charging at extremely high speed, cutting the opponent to pieces with the Wing Blades on its back ( Speed Star ), and absorbing light energy through its mouth, then spewing it out right at the critical point ( Solar Laser ).",
+  "web_created": true
+}

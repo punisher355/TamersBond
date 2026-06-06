@@ -1,0 +1,38 @@
+{
+  "name": "Fumamon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 8,
+    "LVE": 8,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Tsubakuro",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Freely controls theshurikenattached to the gauntlets on both its arms."
+  },
+  "digivolves_from": [
+    "Betel Gammamon",
+    "Gulus Gammamon",
+    "Kaus Gammamon",
+    "Sealsdramon",
+    "Wezen Gammamon"
+  ],
+  "digivolves_to": [
+    "Cannondramon",
+    "Siriusmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A ninja Digimon that has mastered the excellent assassination technique of Fuma-ryu Ninjutsu . It makes its living as an assassin, disposing of its targets upon receiving a request. It specializes in melee attacks that capitalize on its outstanding physical ability, but since it also utilizes projectile weapons such as shuriken , it has attack styles that leave few openings, even at mid and long-range. It will relentlessly pursue its designated target, even if they escape, so the only way they can save themselves is by defeating Fumamon. It is able to freely control the trajectory of the \" Tsubakuro \" shuriken attached to the gauntlets on both its arms at its own volition, and after inflicting damage to the opponent's limbs with its \" Tsubakuro \" and restricting their movements, it finishes them off with its \" Sharihotsu \", a slash attack using \" Shirasagi \" and \" Kurosagi \", the ninjatō on its back. In addition, it also uses a ninja technique called \" Yomi-Modoshi \", in which it uses the scrolls hanging from its waist to summon Undead Digimon."
+}

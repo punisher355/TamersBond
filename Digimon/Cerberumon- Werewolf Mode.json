@@ -1,0 +1,51 @@
+{
+  "name": "Cerberumon: Werewolf Mode",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Dark",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 8,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Inferno Divide",
+    "element": "Fire",
+    "pr": 8,
+    "tags": "[MELEE] [PIERCE]",
+    "description": "Bites the opponent using the jaws on its hands and fires flaming bullets at point-blank range."
+  },
+  "digivolves_from": [
+    "Devidramon",
+    "Dinohumon",
+    "Dobermon",
+    "Dogmon",
+    "Dorulumon",
+    "Drimogemon",
+    "Fangmon",
+    "Garurumon",
+    "Gryzmon",
+    "Ice Devimon",
+    "Kyubimon",
+    "Mojyamon",
+    "Monochromon",
+    "Sangloupmon",
+    "Siesamon",
+    "Symbare Angoramon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Metal Garurumon (Black)",
+    "Plutomon",
+    "Saber Leomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A mutation of Cerberumon , who resides in the Dark Area and is known as the \" Watchdog of Hell \". It feared that the data born from \"human malice\", overflowing on the Internet as text and images, could have an impact on the Digital World , so it mutated into this form in order to prevent an influx of that data. Its entire body, covered in an organic shell, is now capable of walking on two legs, and its data was rewritten as a sturdy body with arms that have developed to crunch through evil-tainted data. Its Special Moves are firing flame shots at point-blank range while biting the opponent with the large heads mounted on both of its arms ( Inferno Divide ), and cutting them down using the claws on its feet with its dynamic movements ( Cerberus Erase ). In addition, its red-hot \" Hellfire \", which reduces anyone to ash, has powered-up dramatically when compared to the unmutated Cerberumon.",
+  "web_created": true
+}

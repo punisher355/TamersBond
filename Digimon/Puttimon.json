@@ -1,0 +1,25 @@
+{
+  "name": "Puttimon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Cupimon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "It is a sacred Digimon Baby who is the template for all Angel-type Digimon. On the other hand, it has poor self-judgment between good and evil, and can be quite adorably mischievous. If anything, it's popular for bringing about euphoria, good fortune, and such. Though as a newborn it's rare for it to do so, it can fly skillfully about the sky with the two wings growing from its back. When it flies about in the sky, it is able to place its opponent in a happy mood with a mysterious powder called \" Angel Dust \".",
+  "web_created": true
+}

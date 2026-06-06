@@ -1,0 +1,48 @@
+{
+  "name": "Taomon (Silver)",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Kofuusatsu",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Wreathes its talismans around the opponent's body, then detonates them."
+  },
+  "digivolves_from": [
+    "Garurumon",
+    "Gururumon",
+    "Ice Devimon",
+    "Kuwagamon",
+    "Kyubimon (Silver)",
+    "Revolmon",
+    "Snimon",
+    "Tailmon"
+  ],
+  "digivolves_to": [
+    "Boltmon",
+    "Dianamon",
+    "Gulfmon",
+    "Hououmon",
+    "Kuzuhamon",
+    "Lord Knightmon",
+    "Sakuyamon",
+    "Sakuyamon: Miko Mode",
+    "Valkyrimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Vaccine-attribute Taomon that wears a silver robe. Digimon World -next 0rder- ⇨ English 銀色の衣を纏った、ワクチン種のタオモン。 デジモンワールド -next 0rder-"
+}

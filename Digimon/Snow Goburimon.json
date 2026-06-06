@@ -1,0 +1,53 @@
+{
+  "name": "Snow Goburimon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 3,
+    "KNW": 3,
+    "SNC": 2,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Snow Gob Bolt",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "12Hits snowballs embedded with stones at the enemy with a thousand oni knocks.Shoots ice from its club."
+  },
+  "digivolves_from": [
+    "Dorimon",
+    "Hiyarimon",
+    "Pukamon",
+    "Tunomon"
+  ],
+  "digivolves_to": [
+    "Ebidramon",
+    "Geremon",
+    "Gesomon",
+    "Hyougamon",
+    "Ice Devimon",
+    "Icemon",
+    "Ikkakumon",
+    "Kyubimon (Silver)",
+    "Mojyamon",
+    "Monochromon",
+    "Numemon",
+    "Scumon",
+    "Seadramon",
+    "Tailmon",
+    "Tuskmon",
+    "Woodmon",
+    "Yaksamon",
+    "Yukidarumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Goburimon that was brought up in a cold country of snow. Since it wears a warm hat and vest, the cold doesn't bother it in the slightest. The skin on the soles of its feet has thickened enough for it to walk barefooted on snow. Its Special Move is hitting snowballs embedded with stones at the enemy with a thousand oni knocks [N 1] ( Snow Gob Bolt )."
+}

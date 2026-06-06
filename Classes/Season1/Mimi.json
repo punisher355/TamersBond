@@ -1,0 +1,56 @@
+{
+  "name": "Mimi",
+  "season": 1,
+  "img": "Mim.webp",
+  "abilities": [
+    {
+      "name": "Bright Personality",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+) — Friendship path",
+      "description": "Once per encounter as a Free Action, choose one enemy NPC or Digimon. Make a Broadcast check DN 12. On a success they take -2 to their next attack roll. You have that effect on people."
+    },
+    {
+      "name": "Harder Than I Look",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+) — Sincerity path",
+      "description": "Whenever your Digimon takes damage that would reduce them to below half their max HP, they gain +2 to all damage rolls until the end of the round."
+    },
+    {
+      "name": "Pure Heart",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+) — Love path",
+      "description": "Once per encounter as a Free Action you may attempt to calm one non-boss enemy Digimon. Make a Tame check DN 14. On a success that Digimon skips their next action."
+    },
+    {
+      "name": "Center of Attention",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Bright Personality, Friendship rank 4",
+      "description": "Bright Personality now affects all enemies within 3 spaces of the target, not just one."
+    },
+    {
+      "name": "I Believe In You",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Pure Heart, Love rank 4",
+      "description": "Once per session as your Basic Action, choose one allied Digimon. They immediately restore HP equal to your Sincerity rank x 3 and remove all status effects."
+    },
+    {
+      "name": "Won't Stay Down",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Harder Than I Look, Sincerity rank 4",
+      "description": "Once per encounter when your Digimon would trigger the cascade at Default Stage, you may spend 8 Hope to have them stay at 1 HP with their Default Stage intact."
+    },
+    {
+      "name": "The Mimi Effect",
+      "row": 3,
+      "expCost": 800,
+      "requirements": "Any two Row 2 abilities, Sincerity rank 6",
+      "description": "Once per session at the start of your turn you may spend 5 Hope to activate The Mimi Effect. Until the start of your next turn all allied Digimon deal +3 damage and all enemy Digimon take -2 to attack rolls."
+    }
+  ]
+}

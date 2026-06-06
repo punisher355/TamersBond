@@ -1,0 +1,45 @@
+{
+  "name": "Vikemon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Arctic Blizzard",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Momentarily brings the surrounding atmosphere to absolute zero, then smashes the frozen enemy withMjöllnir."
+  },
+  "digivolves_from": [
+    "Grappu Leomon",
+    "Groundramon",
+    "Hangyomon",
+    "Holy Angemon",
+    "Majiramon",
+    "Mammon",
+    "Marin Chimairamon",
+    "Monzaemon",
+    "Rapidmon Armor",
+    "Rapidmon Perfect",
+    "Shakkoumon",
+    "Shawujinmon",
+    "Tonosama Gekomon",
+    "Toropiamon",
+    "Zudomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A Beast Man-type Ultimate Digimon who governs the freezing lands of the permafrost , where nothing ever thaws. Its fur has become like ice crystals, and is said to be as hard as Chrome Digizoid . With the morning star \" Mjöllnir \" it carries on its back, it can annihilate a mountain in one swing, distorting space itself. It manages the Ikkakumon and Zudomon corps, and though in the midst of battle it appears as a heartless berserker, it shows a face of great compassion for its subordinates. Its Special Move \" Arctic Blizzard \" momentarily brings the surrounding atmosphere to absolute zero , flash-freezing the opponent, who it then smashes with Mjöllnir . That the opponent's smashed body becomes like a blizzard is what gave it the name.",
+  "web_created": true
+}

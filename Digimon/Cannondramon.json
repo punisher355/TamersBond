@@ -1,0 +1,44 @@
+{
+  "name": "Cannondramon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Dyna Cannon",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires beams from the three cannons on its back."
+  },
+  "digivolves_from": [
+    "Assaultmon",
+    "Brachimon",
+    "Canoweissmon",
+    "Fumamon",
+    "Ghilliedhumon",
+    "Groundramon",
+    "Lavogaritamon",
+    "Master Tyranomon",
+    "Metal Tyranomon",
+    "Pajiramon",
+    "Pajramon",
+    "Triceramon",
+    "Valvemon",
+    "Vermillimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Cyborg type Digimon equipped with long-distance cannons. Covered in tough armor, it greets approaching enemies with a swing of its tail. Its Signature Move is random-firing grenades from the gun on its front ( Grenade Storm ). Its Special Move is firing its cannons while stationed at an area where enemy attacks cannot reach ( Dyna Cannon ).",
+  "web_created": true
+}

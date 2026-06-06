@@ -1,0 +1,46 @@
+{
+  "name": "Minotaurmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Darkside Quake",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Thrusts itsDemon Arminto the earth, creating a gigantic earthquake."
+  },
+  "digivolves_from": [
+    "Gabumon (Black)",
+    "Goburimon",
+    "Gottsumon",
+    "Junkmon",
+    "Lopmon",
+    "Piyomon",
+    "Shamamon",
+    "Terriermon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Cyberdramon",
+    "Etemon",
+    "Grappu Leomon",
+    "Loader Leomon",
+    "Mammon",
+    "Triceramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Before ⇨ Japanese A dark Digimon that possesses strong Dark Side Power. Although its movements are not swift, it has extremely firm skin, so it won't yield to ordinary attacks. Its Special Move is generating a massive earthquake with the \" Demon Arm \" on its left hand ( Darkside Quake ). This attack can floor opponents over a considerably wide range, so that no matter how far away they are they won't be able to escape.",
+  "web_created": true
+}

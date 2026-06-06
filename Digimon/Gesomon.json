@@ -1,0 +1,49 @@
+{
+  "name": "Gesomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 4,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Deadly Shade",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Attacks with a powerful squid ink that will completely numb the opponent's vision for a long time if they get hit by it."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Ganimon",
+    "Gizamon",
+    "Gomamon",
+    "Guilmon",
+    "Jellymon",
+    "Otamamon",
+    "Penmon",
+    "Snow Goburimon",
+    "Shakomon",
+    "Modoki Betamon"
+  ],
+  "digivolves_to": [
+    "Hangyomon",
+    "Mametyramon",
+    "Marin Devimon",
+    "Mega Seadramon",
+    "Vademon",
+    "Waru Seadramon",
+    "Whamon Perfect"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon which has the shape of a squid and inhabits the depths of the Net Ocean . Although it is feared as the \" White Demon of the Depths \", it is highly intelligent and will not harm Digimon outside of its territory. However, if they seem to cross into its territory even for a moment, it will attack them like a fierce, raging god. Its attack style specializes in \" Hit and Away \", in which it inflicts a single blow as it withdraws from the spot. Its Special Moves are a barrage of attacks that capitalizes on its many legs ( Devil Bashing ), and powerful squid ink that will completely numb the opponent's vision for a long time if they get hit by it ( Deadly Shade )."
+}

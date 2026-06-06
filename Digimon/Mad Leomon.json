@@ -1,0 +1,44 @@
+{
+  "name": "Mad Leomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 6,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Jūoudaken",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Fires its spirit in the shape of a lion's face, which bites off the opponent's flesh."
+  },
+  "digivolves_from": [
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gazimon",
+    "Impmon",
+    "Liollmon",
+    "Lunamon",
+    "Phascomon"
+  ],
+  "digivolves_to": [
+    "Astamon",
+    "Baalmon",
+    "Grappu Leomon",
+    "Loader Leomon",
+    "Lucemon: Falldown Mode",
+    "Skull Satamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A berserker who lost its intelligence and enhanced its combat instinct. Although it was originally a Lion Digimon , it heaped modification upon modification and arrived at its current appearance. In the process, its consciousness vanished, and it became nothing more than a puppet that defeats those standing before it, as it is commanded. Because it doesn't act or think according to its natural instincts, it exhibits headlong assaults, heedless even of any traps or gadgets. Although it is fundamentally high-powered, its patterns are meager, with nothing but primitive attacks such as hitting and kicking. Nevertheless, caution is necessary, because its sharp claws bear a deadly poison which can cause anything to rot away. Only one of its attack patterns bears any resemblance to a Special Move, where it fires its \"Spirit\" in the shape of a lion's face ( Jūoudaken ). The lion-faced spirit that is fired bites the flesh off of those standing in its way as it flies through them.",
+  "web_created": true
+}

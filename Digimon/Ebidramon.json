@@ -1,0 +1,59 @@
+{
+  "name": "Ebidramon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Twin Neptune",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Swoops down on the opponent with its two pincers."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Betamon",
+    "Floramon",
+    "Ganimon",
+    "Gizamon",
+    "Goburimon",
+    "Gomamon",
+    "Guilmon",
+    "Jellymon",
+    "Kokuwamon",
+    "Penmon",
+    "Pico Devimon",
+    "Renamon",
+    "Snow Goburimon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Brachimon",
+    "Dagomon",
+    "Gusokumon",
+    "Hangyomon",
+    "Jyagamon",
+    "Jyureimon",
+    "Mega Seadramon",
+    "Sirenmon",
+    "Splashmon",
+    "Vamdemon",
+    "Waru Seadramon",
+    "Whamon Perfect"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A nonconformist of the Dramon-type which has a tough, shrimp-like shell and gigantic pincers. If one is misled by its outward appearance and makes light of Ebidramon, they will become prey of the offensive ability characteristic of the Dramon-type. Its Special Move is swooping down on them with its two pincers ( Twin Neptune ).",
+  "web_created": true
+}

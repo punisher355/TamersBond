@@ -1,0 +1,32 @@
+{
+  "name": "Kodokugumon Baby",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "element": "Neutral",
+    "name": "Baby Bubble",
+    "pr": 1,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Leafmon"
+  ],
+  "digivolves_to": [
+    "Kodokugumon Child"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Baby-level Digimon that is the offspring of Dokugumon . They live in countless numbers, and attack intruders in clusters. Digimon Series Memorial Book: Digimon Animation Chronicle ⇨ English ドクグモンの子供であり、幼年期にあたるデジモン。無数に生息しており、集団で侵入者に襲いかかる。 デジモンシリーズ メモリアルブック デジモンアニメーションクロニクル",
+  "web_created": true
+}

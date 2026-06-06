@@ -1,0 +1,37 @@
+{
+  "name": "Firamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Gaomon",
+    "Hawkmon"
+  ],
+  "digivolves_to": [
+    "Flaremon",
+    "Mach Gaogamon",
+    "Mistymon",
+    "Monzaemon",
+    "Savior Hackmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon with the alias \" Sky-soaring Lion \". It guards a certain ruins site located in the Digital World , and is also a caring leader-figure. Its Special Moves are cloaking its entire body in flames and attacking by diving down from the air ( Flame Dive ), as well as tearing the enemy apart with its powerful, flame-covered front limbs ( Fira Claw ). Not only that, it is also capable of concentrating all of its energy into its forehead, and firing a flaming bomb ( Fira Bomb )."
+}

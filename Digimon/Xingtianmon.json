@@ -1,0 +1,33 @@
+{
+  "name": "Xingtianmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Fujōendo",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Slashes at the enemy with its flame-wreathed battleaxe."
+  },
+  "digivolves_from": [
+    "Lianpumon"
+  ],
+  "digivolves_to": [
+    "Dijiangmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Oni (Warrior) Digimon with a unique appearance resembling an enormous face with limbs growing from it. It may sound good to say that it has an indomitable fighting spirit, but it is actually a stubborn Digimon that never accepts defeat, no matter how disadvantageous the situation is. If someone makes fun of its appearance or its battle situation becomes disadvantageous, it will express its anger by letting out a war cry while swinging the axe in its right hand. Also, it seems that whenever it doesn't perform its prided techniques well or if it loses in battle, it will hold up its shield and cower behind it while crying loudly. Its Special Moves are slashing at the enemy with its flame-wreathed battleaxe ( Fujōendo ), and a muddy stream of tears that gushes out of its shield ( Junsekigōai ). In addition, its \" Raidō \" unleashes a shock wave triggered by a thunderous roar from the mouth on its abdomen."
+}

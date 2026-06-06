@@ -1,0 +1,215 @@
+TAMER'S BOND — GAME RULES REFERENCE
+=====================================
+
+
+OVERVIEW
+--------
+Each player controls two characters: a Tamer and their Digimon partner.
+The Tamer's crest stats directly power the Digimon's combat stats.
+They are mechanically linked — you cannot play one without the other.
+
+
+TAMER CREST STATS → DIGIMON COMBAT STATS
+-----------------------------------------
+Courage     → Courage    (Hit Rate — 1d20 + Courage for attack rolls)
+Friendship  → Friendship (Speed — governs turn order and movement)
+Love        → Love       (Dmg Reduce — subtracted from incoming damage)
+Knowledge   → Knowledge  (Damage — primary damage bonus)
+Sincerity   → Sincerity  (HP — Max HP = 10 + Sincerity total × 2)
+Reliability → Reliability (Miss Threshold — attackers must beat Reliability + 10)
+Hope        → Digivolution resource (derived: highest crest rank × 5)
+
+
+STAGES
+------
+Fresh → In-Training → Rookie → Champion → Ultimate → Mega → Ultra
+
+Fresh:       No stats, no moves. Narrative only.
+In-Training: All stats 1. One move only (Bubble Blow, PR1, Neutral).
+Rookie–Ultra: Full stats and move sets.
+
+
+DIGIMON COMBAT STATS
+---------------------
+Digimon use the same six crest stats as Tamers: Courage, Friendship, Love,
+Knowledge, Sincerity, and Reliability. Each stat has a specific combat role:
+
+  Courage     — Hit Rate    (1d20 + Courage to hit; attacker rolls vs Reliability + 10)
+  Friendship  — Speed       (turn order and movement in spaces per turn)
+  Love        — Dmg Reduce  (subtracted from incoming damage before multipliers)
+  Knowledge   — Damage      (added to PR dice roll for damage)
+  Sincerity   — HP          (Max HP = 10 + Sincerity total × 2)
+  Reliability — Miss Threshold (attackers must beat Reliability + 10 to hit)
+
+Every stat has four layers:
+
+  Base        — Set by the Digimon's species and stage (from their Form object).
+  Tamer Bonus — Comes from the linked Tamer's crest rank for that stat.
+  Invested    — EXP spent by the player to raise it permanently. No stage cap.
+  Conditional — Temporary buffs or debuffs. Cleared each encounter.
+
+  Total = Base + Tamer Bonus + Invested + Conditional
+
+HP formula:
+  Max HP = 10 + (Sincerity total × 2)
+
+
+HOPE
+----
+Hope is not a crest stat players roll. It is a resource tracked separately.
+Hope rank = the highest of all six spendable crest ranks.
+Hope pool  = Hope rank x 5.
+Hope is spent to maintain Digivolution stages and attempt digivolution rolls.
+
+Hope cost to maintain a stage each turn:
+  Fresh: 0, In-Training: 1, Rookie: 3, Champion: 6,
+  Ultimate: 10, Mega: 15, Ultra: 20
+
+
+EXP SYSTEM
+----------
+Tamer and Digimon each have their OWN separate EXP pool.
+Both pools gain the same amount when EXP is awarded, but spending is completely independent.
+Starting EXP: 1,500 each
+
+Tamer crest stat upgrade costs (rank 1 is free):
+  1→2: 200    2→3: 300    3→4: 400    4→5: 500
+  5→6: 600    6→7: 700    7→8: 800    8→9: 900    9→10: 1000
+
+Tamer skill upgrade costs:
+  1→2: 100    2→3: 200    3→4: 200    4→5: 300    5→6: 500
+  (Rank 6 requires parent crest stat at rank 9 or higher.)
+
+Skill cap rule: A skill's rank cannot exceed its parent crest stat rank.
+
+Digimon invested stat upgrade costs:
+  Cost to go from rank N to N+1 = (N+1) x 100
+  So: 0→1 costs 100, 1→2 costs 200, 2→3 costs 300, and so on.
+
+Digimon invested stats: There is NO hard cap by stage. Invest freely.
+
+
+SKILLS
+------
+There are 24 skills grouped under 6 crest stats (Hope has no skills).
+
+Roll: Skill Rank in d6 + Crest Stat Rank (flat bonus) vs Difficulty Number
+
+Courage skills:    Blitz, Ironclad, Crusher, Ghost, Roar
+Friendship skills: Scan, Rally, Broadcast
+Love skills:       Mend, Radar, Tame
+Knowledge skills:  Decode, Jack In, Modify, Trace, Archive, Command, Playback
+Sincerity skills:  Firewall, Reinforce, Core Drive
+Reliability skills: Zero Error, Field Ops, Recovery
+
+Tamers can invest EXP to raise skill ranks.
+Digimon use skills too but cannot invest in them — their ranks are set by their Form.
+Digimon skill rolls use their combat stat total as the flat bonus instead of tamer rank.
+
+
+MOVES
+-----
+Every move has:
+  Name, Element, PR (Power Rating 1–15), Effect, Minimum Stage
+
+Each Digimon has exactly 4 moves:
+  1 Signature move (locked, cannot be swapped)
+  3 Learned moves (chosen from their species pool)
+
+DNA Digivolved forms get 6 moves:
+  1 Signature + 5 from the combined pool of both partners
+
+
+COMBAT
+------
+Hit Roll: 1d20 + attacker Courage vs target Reliability + 10
+  Natural 1  = critical fail, automatic miss
+  Natural 20 = critical hit, automatic hit + double final damage
+
+Damage formula:
+  Roll PR dice + attacker Knowledge − target Love (min 1 before multipliers)
+  Apply attribute multiplier (Vaccine beats Virus, Virus beats Data, Data beats Vaccine — each ×2)
+  Apply element multiplier (weakness ×1.5, own element resistance ×0.5)
+  Maximum combined multiplier: ×3.0
+  Minimum combined multiplier: ×0.25
+  Absolute minimum final damage: 1
+
+Turn order: Highest Friendship (Speed) acts first. Ties broken by higher Friendship.
+Tamers and Digimon have separate turns.
+
+Tamer Actions each turn:
+  Basic Action (choose one): Attack, Digivolve, Use Item, Skill Check
+  Free Action (once per turn): Call Out (+1 to partner's next attack roll)
+                               OR Analyze (Knowledge DN12 — learn enemy Attribute/Element/one stat)
+
+Hope timing: Hope is deducted at the START of the Tamer's turn, not start of round.
+If Hope hits 0, the Digimon immediately reverts to Default Stage.
+
+PR Dice Table:
+  PR1:  1d4    PR2:  1d6    PR3:  1d8    PR4:  1d10   PR5:  1d12
+  PR6:  2d6    PR7:  2d8    PR8:  2d10   PR9:  2d12
+  PR10: 3d8    PR11: 3d10   PR12: 3d12
+  PR13: 4d8    PR14: 4d10   PR15: 4d12  (Ultra only)
+
+Attribute Multipliers (apply first):
+  Vaccine beats Virus  (x2 damage)
+  Virus beats Data     (x2 damage)
+  Data beats Vaccine   (x2 damage)
+  Free     = always neutral
+  Variable = always neutral
+  Unknown  = beats all attributes
+
+Element Multipliers (apply after attribute):
+  Advantage:    x1.5
+  Disadvantage: x0.5
+  Maximum combined multiplier: x3.0
+  Minimum combined multiplier: x0.25
+  Absolute minimum damage: 1
+
+Element Weaknesses:
+  Fire     → weak to Water, Earth
+  Water    → weak to Electric, Plant
+  Plant    → weak to Fire, Wind
+  Electric → weak to Earth, Wind
+  Wind     → weak to Electric, Fire
+  Earth    → weak to Water, Plant
+  Light    → weak to Dark
+  Dark     → weak to Light
+  Neutral  → no weakness
+
+
+DIGIVOLUTION
+------------
+To attempt digivolution, the Tamer spends Hope and rolls d100.
+
+Natural digivolution: roll above the threshold (default 50).
+Dark digivolution:    roll below 25 (dangerous, GM-controlled form).
+Hope score shifts the thresholds in the player's favor.
+Higher stages require a minimum Hope score to attempt.
+
+Burnout rule: pushing too hard can regress the Digimon to an egg state.
+
+Down Track (per Digimon per session):
+  1st Down → Dedigivolve one stage
+  2nd Down → Dedigivolve to Rookie; Medicine check DN14 to revive
+  3rd Down → Regress to In-Training, out of combat
+  4th Down → Egg state, out for the rest of the session
+
+
+DNA DIGIVOLUTION
+----------------
+Requires two Mega-stage Digimon at the same time.
+The resulting Ultra form uses fixed base stats + the higher of each partner's invested stats.
+EXP costs draw from both Tamers' pools simultaneously.
+DNA form breaks when the encounter ends or either Tamer hits 0 Hope.
+DNA forms get 6 moves instead of 4.
+
+
+DESIGN NOTES
+------------
+- No SP or MP system. Moves have no cost — use them freely.
+- No basic attack. Digimon always use one of their 4 moves.
+- Tamers cannot fight directly under normal circumstances.
+- All six tamer crest stats start at rank 1 for free at character creation.
+- All skills start at rank 1 for free at character creation.
+- Starting EXP budget is 1,500.

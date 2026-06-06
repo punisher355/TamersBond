@@ -1,0 +1,37 @@
+{
+  "name": "Velgrmon",
+  "stage": "Ultimate",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Zone Deleter",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Flaps its wings to blow the opponent and all the space around them into another dimension.Draws a circle around the opponent with the tip of its wing, creating a sphere of darkness that deletes everything caught within it."
+  },
+  "digivolves_from": [
+    "Saberdramon",
+    "V-dramon (Black)",
+    "Duskmon"
+  ],
+  "digivolves_to": [
+    "Deathmon",
+    "Dinotigermon",
+    "Gulfmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Darkness which bears the might of one of the legendary Ten Warriors . It has the appearance of a monstrous, colossal bird, and due to its baleful appearance and nature it is called the \" Corpse Swallower \". It transforms from Duskmon into fine particles, then comes flying out of a sky shrouded by the massive black fog they became. The intensely proud Duskmon hates transforming into the ugly, irrational Velgrmon, so it doesn't show its Velgrmon appearance unless under extreme circumstances. In normal battles, its main tools of combat are its claws which have a tendency to blind the opponent, and its fangs which can crunch even metal. Its Special Moves are flapping its wings with all its power, blowing away the opponent and all of the space around them to another dimension ( Zone Deleter ), and changing the opponent's nature to darkness and manipulating them to its heart's content ( Master of Darkness ).",
+  "web_created": true
+}

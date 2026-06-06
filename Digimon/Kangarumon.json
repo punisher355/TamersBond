@@ -1,0 +1,35 @@
+{
+  "name": "Kangarumon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Jumping Blow",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "An intense blow unleashed from its powerful right arm."
+  },
+  "digivolves_from": [
+    "Gazimon",
+    "Koemon"
+  ],
+  "digivolves_to": [
+    "Brachimon",
+    "Vajramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mammal Digimon that evolved through the power of the \" Digimental of Kindness \". It has outstanding punching, kicking and jumping power; after diving into the opponent's chest with nimble movements to deliver an uppercut, it jumps up high into the sky and unleashes an intense kick. It has a very cheerful personality, and for some reason it has been witnessed on beaches performing light steps as if it were dancing. Its Special Move is an intense blow unleashed from its powerful right arm ( Jumping Blow ).",
+  "web_created": true
+}

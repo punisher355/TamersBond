@@ -1,0 +1,38 @@
+{
+  "name": "Omnimon",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 14,
+    "LVE": 15,
+    "KNW": 18,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Garuru Cannon",
+    "element": "Water",
+    "pr": 13,
+    "tags": "[RANGE 9] [BLAST 1] [FREEZE]",
+    "description": "Freezes the opponent with frigid, absolute zero shots from theGaruru Cannonin its right arm."
+  },
+  "digivolves_from": [
+    "Black War Greymon",
+    "Dinorexmon",
+    "Metal Garurumon",
+    "Metal Garurumon (Black)",
+    "Mirage Gaogamon",
+    "Mugendramon",
+    "Shine Greymon",
+    "War Greymon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Holy Knight Digimon born from the fusion of the Virus Busters War Greymon and Metal Garurumon due to the powerful wills of everyone who wished for good, and who is one of the \" Royal Knights \". As a Digimon that combines the special qualities of the two, it is a multi-type warrior capable of fully demonstrating those abilities in any given situation. It is equipped with a sword and shield on its War Greymon-shaped left arm, and a cannon and missiles on its Metal Garurumon-shaped right arm. The cape on its back is automatically deployed when dodging an opponent's attack, or when it is flying. Its Special Move is freezing the opponent with frigid, absolute zero shots which it fires from the Metal Garurumon-shaped cannon ( Garuru Cannon ). Also, its left arm is equipped with the invincible blade, \" Grey Sword \".",
+  "web_created": true
+}

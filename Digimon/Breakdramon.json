@@ -1,0 +1,37 @@
+{
+  "name": "Breakdramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Fire",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Destroyed Rush",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE] [BURST 2] [PUSH]",
+    "description": "Repeatedly strikes the earth at extremely high speed with its left and right shovel arms, allowing it to split the solid ground."
+  },
+  "digivolves_from": [
+    "DORUguremon",
+    "Groundramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Tyranomon",
+    "Savior Hackmon",
+    "Triceramon",
+    "Wingdramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A gigantic Machine Dragon Digimon said to exist in order to destroy everything on land. When it evolved it succeeded, through hacking, in obtaining the design data for various construction equipment, and it possesses power and ability surpassing other Machine Digimon. However, in exchange for excellent mechanical performance, its organic parts were reduced almost to 0, and its motives and emotions were lost. For that reason, it does not falter when taking damage, and it is feared as the ultimate dragon of destruction that will continue destroying until it rusts away. Its \" Destroyed Rush \", in which it repeatedly strikes the earth at extremely high speed with its left and right shovel arms, can split solid earth, its \" Infinity Boring \", in which it operates and fires all the drills throughout its body, can smash mountains, and its \" Gravity Press \", in which it flattens the target with its entire body mass, can crush anything. Absolutely nothing remains standing wherever Breakdramon has passed through."
+}

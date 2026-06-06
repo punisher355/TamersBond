@@ -1,0 +1,45 @@
+{
+  "name": "Savior Hackmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Resist Raid",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Skewers through the enemy from a flying kick posture with the blades on its feet."
+  },
+  "digivolves_from": [
+    "Angemon",
+    "Arresterdramon",
+    "Bao Hackmon",
+    "Coredramon (Green)",
+    "Firamon",
+    "Gaogamon",
+    "Strikedramon"
+  ],
+  "digivolves_to": [
+    "Breakdramon",
+    "Gankoomon",
+    "JESmon",
+    "Magna Kidmon",
+    "Slayerdramon",
+    "Tiger Vespamon",
+    "Valkyrimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "It evolved into this form after repeatedly meeting and parting with Digimon over its long journey, and living through countless fierce battles. It militarily intervenes in the strife that occurs incessantly throughout the Digital World , seeking ceasefires, and has brought aid to the Digimon on-site who have suffered harm. The result is not always a success, but the tears Savior Hackmon sheds before those tragic scenes strengthen it further, as it earnestly reaches out to the next Digimon that cries for help. It is capable of using its legs to walk bipedally despite them being blades; in addition, crimson blades extend from both of its arms and its tail, and its blade-covered body exudes an aggressive air. The crystal in its chest is a crystallisation of proof that it refined its power with no lack of effort. Its Special Moves are skewering through the enemy from a flying kick posture with the blades on its feet ( Resist Raid ), and rapid-firing shots of fire from its mouth like a machine gun, incinerating the enemy ( Meteor Flame ). Its \" Trident Saber \", which assaults the enemy with the three red blades its tail and arms are equipped with, relentlessly cleaves them apart whether or not they're swathed in Chrome Digizoid ."
+}

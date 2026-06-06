@@ -1,0 +1,61 @@
+{
+  "name": "Deltamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Triplex Force",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Combines energy from its three heads to shoot a single powerful laser beam."
+  },
+  "digivolves_from": [
+    "Armadimon",
+    "Betamon",
+    "Candmon",
+    "DORUmon",
+    "Dracomon",
+    "Gazimon",
+    "Gizamon",
+    "Goburimon",
+    "Gottsumon",
+    "Kokuwamon",
+    "Monodramon",
+    "Patamon",
+    "Pico Devimon",
+    "Ryudamon",
+    "Toy Agumon",
+    "Toy Agumon (Black)",
+    "Modoki Betamon"
+  ],
+  "digivolves_to": [
+    "Cyberdramon",
+    "Etemon",
+    "Gigadramon",
+    "Megadramon",
+    "Metal Greymon",
+    "Metal Tyranomon",
+    "Monzaemon",
+    "Orochimon",
+    "Sharkmon",
+    "Skull Baluchimon",
+    "Skull Greymon",
+    "Nanomon (Digimon)",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Composite Digimon fused from three Digimon. Although each of them had existed as separate Digimon, they were forced to fuse by a computer bug , which resulted when a computer went out of control after being struck by a powerful electromagnetic storm. It is said that since this Digimon, which possesses three heads and two tails, specializes in tripartite attacks that capitalize on its body's traits, it is even able to fight against three Digimon at the same time. However, as each of them was originally a vicious Digimon, they may be united in seeking destruction but they otherwise lack cooperation, and are usually on bad terms with each other. Its Special Moves are combining the energy discharged from its three mouths and firing it ( Triplex Force ), and lunging with the Digimon on its left arm ( Skull Fang )."
+}

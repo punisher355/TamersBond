@@ -1,0 +1,43 @@
+{
+  "name": "Death-X-DORUguremon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 9,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Black Growmon",
+    "DORUgamon",
+    "Death-X-DORUgamon",
+    "Devidramon",
+    "Guardromon",
+    "Raptordramon",
+    "Sangloupmon"
+  ],
+  "digivolves_to": [
+    "Chaosdramon",
+    "DORUgoramon",
+    "Gaioumon",
+    "Giga Seadramon",
+    "Megidramon",
+    "Raijinmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Undead Digimon of the Prototype Digimon \" DORU Series \" that was experimented on in search of further evolutions, and was said to, at the time of the experiment, resemble its final form . By continuously preying on the Digicores of other Digimon, it is active despite its deceased condition, and hungers for a vast amount of Digicores in order to evolve. Since it instinctively sniffs out Digicores, the eye and snout portions of its head are covered in armor, and the sharp tips of the blades on its tail and wings are used to skewer many Digimon, allowing it to prey on their Digicores afterwards. Its Special Moves are breaking open the enemy's armor with the horn on its head and engulfing their Digicore ( Bloody Cave ), and \" Metal Meteor \"."
+}

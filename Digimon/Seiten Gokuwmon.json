@@ -1,0 +1,33 @@
+{
+  "name": "Seiten Gokuwmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 13,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 11,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Kagan Kinsei",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Makes its eyes glow with flame-like light, temporarily increasing its power."
+  },
+  "digivolves_from": [
+    "Gokuwmon"
+  ],
+  "digivolves_to": [
+    "Shakamon"
+  ],
+  "needs_review": true,
+  "review_notes": "",
+  "description": "The end of a long journey in search of truth doctrines. What it acquired during that journey was a power that embodies unity. Seiten Gokuwmon is a Tathāgata Digimon that evolved when Sanzomon used its sutras to elevate the bonds it had with Cho·Hakkaimon and Sagomon —whom it traveled alongside and grew up with—into a new power. Although its inherently belligerent nature remains unchanged, it is no longer as arrogant as it used to be, and has grown into a warrior who combines combat instinct with composure. Its spirit is not the only thing that has grown. The golden decorations on its back are \" Kintoun \", which it transforms into a thundercloud to use. The \" Nyoikinkobō \", which it used regularly, has taken in the power of its companions and combined it with Gokuwmon 's abilities, which enhanced it into the \" Nyoitenjinbō \", a weapon capable of freely changing shape that harnesses three attributes—thunder, fire, and water. Freely wielding sorcery and martial arts, it has become a powerful Digimon who is truly worthy of being called a mighty warrior. While it is a Digimon of the strongest class, rivaling the guardians of the Eastern Digital World , the Tentei Hachibushu , it is a free being who is neither bound by destiny nor constraints, so Erlangmon has been keeping a close watch on its every move. Its Special Moves are making its eyes glow with flame-like light, temporarily increasing its strength ( Kagan Kinsei ), sending out flames from the Nyoitenjinbō and striking while preserving their power ( Hakkai Entengeki ), and similarly, generating a violent whirlpool to engulf the opponent ( Gojō Suitensō ), and transforming the Nyoitenjinbō into a bazooka, concentrating lightning, and then firing it ( Chōtai Seirai Tenhō ).",
+  "web_created": true
+}

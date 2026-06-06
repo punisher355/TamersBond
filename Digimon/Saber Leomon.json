@@ -1,0 +1,50 @@
+{
+  "name": "Saber Leomon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Infinity Arrow",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Hardens the countless envenomed \"hairs\" of its mane and fires them at the opponent, completely paralyzing them."
+  },
+  "digivolves_from": [
+    "Astamon",
+    "Cerberumon",
+    "Cerberumon: Werewolf Mode",
+    "Digitamamon",
+    "Flaremon",
+    "Giromon",
+    "Grappu Leomon",
+    "Jewelbeemon",
+    "Knightmon",
+    "Lamortmon",
+    "Loader Leomon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Metal Mamemon",
+    "Monzaemon",
+    "Panjyamon",
+    "Taomon",
+    "Triceramon",
+    "Waru Monzaemon",
+    "Zudomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Ancient Beast Digimon said to possess explosive, Mach speed power. However, the details about it are shrouded in mystery, though a theory suggests that it might have been a Leomon who was transformed into a beast. It possesses explosive Mach speed power, and with that speed it can easily dodge attacks, no matter how fast they are. Its two greatly developed fangs and sharp claws possess tremendous destructive power, and it is referred to as the ultimate Digimon. Its Special Move is hardening the countless \"Hairs\" of its mane and firing them at the opponent ( Infinity Arrow ). Because its hairs are envenomed, those who suffer this attack have their bodies completely paralyzed. Also, its \" Nail Crusher \", which utilizes its gigantic claws, is a terrifying technique which tears the opponent to pieces.",
+  "web_created": true
+}

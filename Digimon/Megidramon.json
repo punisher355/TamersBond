@@ -1,0 +1,56 @@
+{
+  "name": "Megidramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Hell Howling",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Releases a powerful shock wave from howling."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Assaultmon",
+    "Astamon",
+    "Bastemon",
+    "Black Megalo Growmon",
+    "Brachimon",
+    "Chimairamon",
+    "Death Meramon",
+    "Death-X-DORUguremon",
+    "Delumon",
+    "Gigadramon",
+    "Groundramon",
+    "Majiramon",
+    "Megadramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Greymon",
+    "Metal Tyranomon",
+    "Mistymon",
+    "Paildramon",
+    "Tyilinmon",
+    "Vajramon",
+    "Volcamon",
+    "Waru Seadramon"
+  ],
+  "digivolves_to": [
+    "Dukemon: Crimson Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese An extremely wicked Digimon that is the most evil among Dragon Digimon. It is one of the Four Great Dragons Digimon alongside Qinglongmon , Goddramon , and Holydramon , but its personality is so fiendish that it doesn't bear the slightest resemblance to the other three. Although it is a rare species that isn't even known to be extant, and its very existence is a \" Digital Hazard \", its powers were sealed away by some sort of \"force\". However, it is said that a great amount of damage will be exerted on the Digital World when its powers are awakened. It has a body made from Chrome Digizoid . According to one theory, Megidramon and Chaos Dukemon are the same being, and it is said that whether that wave of terror is projected as a dark knight or as a dark dragon depends on the observer. Its Signature Move is a powerful shock wave that is called the \"howl of hell\" ( Hell Howling ). Its Special Move is its \" Megiddo Flame \" which reduces everything to ash.",
+  "web_created": true
+}

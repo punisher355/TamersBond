@@ -1,0 +1,26 @@
+{
+  "name": "Chibickmon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Pickmon",
+    "Gaossmon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A sociable, hardworking Digimon. Since they like to help their manager, before you even know what kind of work you're doing, a large number of them will appear to help you out. However, because it doesn't really understand the basic details of the work, even though it's trying to help someone, it just ends up getting in the way. Frankly speaking, because it will begin to sob if it is ignored or treated unkindly, it's a bit depressing. That's why, even if you think it really is trying to be a bother, it's important to praise it, even with a lie. To work hard and quickly join the Starmons is Chibickmon's dream.",
+  "web_created": true
+}

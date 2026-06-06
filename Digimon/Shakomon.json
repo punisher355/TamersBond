@@ -1,0 +1,56 @@
+{
+  "name": "Shakomon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 3,
+    "SNC": 3,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Black Pearl",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Shootsjadeiteformed within its body at the opponent."
+  },
+  "digivolves_from": [
+    "Pukamon",
+    "Tunomon",
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Archelomon",
+    "Coelamon",
+    "Frogmon",
+    "Gawappamon",
+    "Gekomon",
+    "Gesomon",
+    "Hookmon",
+    "Ikkakumon",
+    "Karatuki Numemon",
+    "Mantaraymon",
+    "Numemon",
+    "Octmon",
+    "Ranamon",
+    "Raremon",
+    "Rukamon",
+    "Seadramon",
+    "Shellmon",
+    "Tobucatmon",
+    "Tylomon",
+    "Unimon",
+    "Whamon",
+    "Wizarmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon shaped like a bivalve covered by a hard shell. Because its shell developed rapidly, its inner structure has become slime-shaped like that of a Baby . It is a cunning fellow who lures the opponent with its cute face, and attacks them once they get close. Also, when its shell is closed, it has such high defense as to easily deflect things such as light attacks. Its Special Moves are shooting jadeite formed within its body at the opponent ( Black Pearl ), and hitting the opponent with a high-pressure water current ( Water Screw ).",
+  "web_created": true
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Jet Silphymon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Wind",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 9,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Jet Binter",
+    "element": "Wind",
+    "pr": 10,
+    "tags": "[RANGE 8]",
+    "description": "Fires from both arms with the power of the wind."
+  },
+  "digivolves_from": [
+    "Fairimon"
+  ],
+  "digivolves_to": [
+    "Ancient Irismon",
+    "Lotusmon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Wind that has transcended legend by inheriting all the might of one of the legendary Ten Warriors and acquiring unknown abilities. By taking in wind and using the wind's power, it is able to fly about the sky like a jet aircraft. Also, like the wind, its form cannot be seen as it moves through the sky. Its Special Moves are firing from both arms with the power of the wind ( Jet Binter ), and generating an unprecedented turbulence from its gigantic pinwheel and blowing the opponent all the way away ( Ultra Turbulence ).",
+  "web_created": true
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Dinotigermon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Earth",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Ground Fang",
+    "element": "Earth",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Pins the enemy down and stabs and tears them with its fangs."
+  },
+  "digivolves_from": [
+    "Cannonbeemon",
+    "DORUguremon",
+    "Grappu Leomon",
+    "Hisyaryumon",
+    "Loader Leomon",
+    "Mametyramon",
+    "Panjyamon",
+    "Pumpmon",
+    "Raihimon",
+    "Skull Baluchimon",
+    "Skull Satamon",
+    "Taomon",
+    "Velgrmon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "Injured Digimon have become its prey. It is an Ancient Beast Digimon which took in the metal elements of the earth, super-hardened its whole body, and evolved from one of the few Saber Leomon which have repeated and survived endless battles, where the weak are food for the strong . Its movements are not swift compared to Saber Leomon, but it possesses almost twice as much tough flesh and physical strength, and with its big, sharp, sword-like fangs, it forcibly brings down even Digimon larger than itself and which possess thick skin or armor. Other Digimon fear Dinotigermon, who possesses daring and wild predatory instinct, and do not approach. Its Special Moves are pinning down the enemy, then stabbing and tearing through them with its fangs ( Ground Fang ), and swinging down its fangs from an elevation, instantly cutting them to pieces ( Highland Fang ).",
+  "web_created": true
+}

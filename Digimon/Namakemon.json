@@ -1,0 +1,38 @@
+{
+  "name": "Namakemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Unchi Nage",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Throws its own poop to drive away enemies that draw near."
+  },
+  "digivolves_from": [
+    "Pulsemon"
+  ],
+  "digivolves_to": [
+    "Boutmon",
+    "Climbmon",
+    "Divemon",
+    "Pistmon",
+    "Shootmon",
+    "Tempomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon that has ended up only finding joy in life from eating and sleeping. Its dislike of strenuous exercise has even erased its combat instincts as a Digimon, and it has come to live in elevated areas such as on treetops so that no one can approach it. Because both of its arms are often being used to grasp onto tree branches, it is also able to use its long, well-developed tongue skilfully as a third arm. Should enemies draw near, it will throw its own poop ( Unchi Nage ) to drive them away. While it also has a close-range skill where it uses its tongue, which secretes a numbing venom, to lick ( Paralyze Lick ), it rarely ever gets the chance to use it."
+}

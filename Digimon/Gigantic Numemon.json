@@ -1,0 +1,35 @@
+{
+  "name": "Gigantic Numemon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Earth",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Nume Squall",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Drenches its opponents with rain."
+  },
+  "digivolves_from": [
+    "Numemon",
+    "Gold Numemon",
+    "Karatuki Numemon"
+  ],
+  "digivolves_to": [
+    "Platinum Numemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Sorry, but no official profile of Gigantic Numemon has been added yet. ⇨ English",
+  "web_created": true
+}

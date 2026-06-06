@@ -1,0 +1,44 @@
+{
+  "name": "Metal Fantomon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Soul Predator",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Releases enormous energy to enlarge its sickle, then falls upon the opponent with it as if starved for souls."
+  },
+  "digivolves_from": [
+    "Bakemon",
+    "Ginryumon",
+    "Omekamon",
+    "Raptordramon",
+    "Soulmon",
+    "Waspmon"
+  ],
+  "digivolves_to": [
+    "Alphamon",
+    "Demon",
+    "Dinorexmon",
+    "Gokumon",
+    "Metal Piranimon",
+    "Ouryumon",
+    "Tiger Vespamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A Cyborg Digimon that fully mechanized the body of the Reaper -like Fantomon . It operates using an energy supply from another dimension's Digital World , and it is even said that its strings are being pulled by someone. Its energy emission-shaped sickle gives off a \" Grave Scream \", a strange, eerie sound, then reaps souls directly, regardless of any kind of armor or shields. Its Special Move is soul releasing enormous energy to enlarge its sickle, then falling upon the opponent as if it was starving for souls ( Soul Predator ).",
+  "web_created": true
+}

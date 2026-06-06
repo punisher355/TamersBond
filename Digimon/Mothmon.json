@@ -1,0 +1,35 @@
+{
+  "name": "Mothmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "MorphonGatling",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Fires 100 shots per second, and it is impossible to escape from this gunfire."
+  },
+  "digivolves_from": [
+    "Dokunemon",
+    "Kokuwamon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Red)",
+    "Blossomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Insect Digimon that evolved through the power of the \" Digimental of Knowledge \". Like Flybeemon , Honeybeemon and Butterflamon , it is a mythical Digimon that appears when Kunemon emerge in large numbers. Even among them, Mothmon has a rough temperament and is aggressive by nature. The phosphorus powder [N 1] in its wings contains the components for gunpowder, and it sometimes scatters this powder at the enemy as a threat. Its Special Move is \" Morphon Gatling \", shot from the Gatling gun on its tail which is capable of firing 100 rounds per second, so it is impossible to escape from this gunfire. Not only that, the bullets it fires are made of phosphorus powder, and since they penetrate deep into the body and explode, Digimon that are defeated in battle against Mothmon will be left as a terrible sight to behold.",
+  "web_created": true
+}

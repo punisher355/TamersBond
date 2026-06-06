@@ -1,0 +1,35 @@
+{
+  "name": "Zeke Greymon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 10,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Trident Fang",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Chops up the enemy with a single blow from its claws."
+  },
+  "digivolves_from": [
+    "Knightmon",
+    "Locomon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Rebellimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Zeke Greymon is a new form attained when the legendary Digimon bestowed \" Evolution \" upon a Metal Greymon that sought perfect victory. Its body armor, bestowed by the legendary Digimon, is solid, virtual super-metal called Chrome Digizoid , and it was enhanced further to form a body of \" Gold Digizoid \", which emits a noble, golden radiance simply due to its dazzle. It is surprisingly lightweight for the great defensive ability it possesses, so its movements are more agile than one would imagine from its heavy-looking armor. Zeke Greymon's combat strength has high, all-round potential. It specializes in a strategy where it restrains the enemy with the \" Plasma Railgun \" on its right hand, while chopping them up in a single blow to their trunk with its \" Trident Fang \", and it deals with long-range or high-altitude enemies by shooting a high-power energy shot ( Hyper Launcher ). Also, when facing a large army, it burns most opponents to cinders with its \" Zeke Flame \", in which it spews hellfire out of its mouth, and when facing a formidable opponent, it slaughters them by maintaining a lowered stance while it becomes an arrow of shining light and charges at them, releasing the energy at point-blank range to atomize them ( Final Strikes ).",
+  "web_created": true
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Rasenmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 9,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Gyro Smash",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Dishes out a powerful punch while spinning the blades on its arm."
+  },
+  "digivolves_from": [
+    "Soloogarmon",
+    "Stiffilmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Rasenmon's true form, which it attained after accepting its negative emotions without fearing them and regaining the courage it needed to believe in itself. Having broken free of the negative emotions that shackled it down , it is now reborn into this new form and is able to completely control the power that drove it berserk in the past; its violent temperament has also faded, and it now sports a kind and gentle personality. In battle, it is capable of amassing even more power by absorbing the energy derived from its allies' emotions; however, it is only able to use this ability to carry out actions it believes are right. Its Special Moves are dishing out a powerful punch while spinning the blades on its arm ( Gyro Smash ), as well as spinning its blades at extremely high speed, creating tornadoes that strike the opponent ( Qualialise Blast ). Not only that, Rasenmon's \" Spiral Vanish \" move, in which it shoots out and fuses all of the spiral-shaped spines covering its body to form a gigantic drill which it uses to impale the opponent, is its trump card where it unleashes all of the emotion energy it has stored together with its drill to deliver a crushingly powerful blow."
+}

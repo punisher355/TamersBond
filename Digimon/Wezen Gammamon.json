@@ -1,0 +1,41 @@
+{
+  "name": "Wezen Gammamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 7,
+    "LVE": 5,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Gammamon",
+    "Koemon",
+    "Plotmon"
+  ],
+  "digivolves_to": [
+    "Bombermon",
+    "Canoweissmon",
+    "Fumamon",
+    "Ghilliedhumon",
+    "Regulusmon",
+    "Tankdramon",
+    "Zanmetsumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The Adult of Gammamon that has taken on a quadrupedal appearance, it now has an imposing attitude and a generous heart. It is equipped with firearms on various parts of its body; the two horns on its calvaria have turned into long-range cannons, the horn on its snout has turned into a anti-aircraft gun, and the tips of its four feet have turned into small autocannon s , and it is capable of firing them. The normal pace of its actions is sluggish. Its Special Move is shooting high-powered shells from its two cannons ( Sedna ). In addition, its positron cannon \" Albion \", which is shot from its long gun barrel while it pierces its tail into the ground to supply it with energy, boasts the greatest offensive power of Wezen Gammamon. However, each time it shoots, the exhaust ports open to radiate heat, so it is incapable of rapid-firing."
+}

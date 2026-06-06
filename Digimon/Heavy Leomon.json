@@ -1,0 +1,37 @@
+{
+  "name": "Heavy Leomon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 15,
+    "KNW": 13,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Barrage Sweeper",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Shoots at long range, firing abarragewith theautocannondeployed from its left shoulder."
+  },
+  "digivolves_from": [
+    "Astamon",
+    "Flaremon",
+    "Grappu Leomon",
+    "Loader Leomon",
+    "Metal Mamemon",
+    "Panjyamon",
+    "Rebellimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Machine Digimon with the heaviest build, rare even among the various Leomon families. Its power is the greatest among Machine-types thanks to its charging power, so it is difficult to stop Heavy Leomon from charging head-on. The source of Heavy Leomon's charging power is its passionate fighting spirit, and its strength doubles the more its fighting spirit burns. In addition, unlike a weapon made solely for fighting, it has a kind heart in that it also carries out rescue operations, so if there is a Digimon that needs help, it will firstly rush over to them, and then remove any obstacles using its prided power. While it is brimming with passionate fighting spirit in battle, it analyzes the opponent and acts with composure. It shoots at long range, firing a barrage with the \" Barrage Sweeper \" autocannon deployed from its left shoulder, and skillfully uses its \" Resting Burner \", a mid-range attack where it expels ultra-high temperature flames from the lion armor on its chest, and \" Sonic Excavator \", a very-close range technique where it impales the enemy by launching its Pile Bunker while charging with its fighting spirit at its maximum, for different proposes, and achieves victory steadily with tactics that leave no openings regardless of long, mid, or close-range combat."
+}

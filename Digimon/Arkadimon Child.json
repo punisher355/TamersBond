@@ -1,0 +1,37 @@
+{
+  "name": "Arkadimon Child",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 2,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Soul Absorption",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Disassembles and absorbs the enemy's data."
+  },
+  "digivolves_from": [
+    "Arkadimon Baby"
+  ],
+  "digivolves_to": [
+    "Arkadimon Adult",
+    "Boogiemon",
+    "Chrysalimon",
+    "Duskmon",
+    "Leomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A cursed Digimon artificially created based on the data of various Digimon. Its nature is to evolve by absorbing its opponent's data, but it is unclear if it possesses any sense of self. Because these details are unknown, it is currently being investigated. Its Special Moves disassemble and absorb its opponent's data ( Soul Absorption ), as well as erase its configuration data ( Erase Sickle )."
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Boutmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Raigekishou",
+    "element": "Electric",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Lands anaxe kickinto the opponent's skull with lightning."
+  },
+  "digivolves_from": [
+    "Bulkmon",
+    "Exermon",
+    "Namakemon",
+    "Runnermon",
+    "Shoutmon X4",
+    "Thunderballmon"
+  ],
+  "digivolves_to": [
+    "Achillesmon",
+    "Kazuchimon",
+    "Shivamon",
+    "Shoutmon DX",
+    "Shroudmon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Digimon that evolved from the data of combat sport s such as karate . It is a courteous sportsman who has learned the rules of every type of martial arts, and values ​​fighting in the game format its opponent wants. Although Boutmon uses a wide variety of techniques, other than those from sports, non-existent techniques like those in fighting games also show up from time to time. Its Special Moves are landing an axe kick into the opponent's skull with lightning ( Raigekishou ), and firing oversized energy shots from its held-out palms ( Budenhadan ). In addition, it dishes out a series of kicking and punching techniques without giving the opponent a chance to strike back ( Jinrai Kaitengeki ).",
+  "web_created": true
+}

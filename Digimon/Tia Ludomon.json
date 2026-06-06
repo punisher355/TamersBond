@@ -1,0 +1,36 @@
+{
+  "name": "Tia Ludomon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Frisbicker",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Throws the shields on its arms.[N 1]"
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Ludomon"
+  ],
+  "digivolves_to": [
+    "Manticoremon",
+    "Raiji Ludomon",
+    "Rare Raremon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The evolved form of Ludomon , it has grown even more durable and attained outstanding speed. It dashes at high speed across battlefields, rescuing straggling Digimon who are no longer able to fight. It is capable of transforming itself into a shield to be wielded to aid in escaping the battlefield, protecting its wielder from any attack that comes their way. Tia Ludomon's shields have magical properties that allow it to erect barriers of ice, which freeze and nullify opponent attacks. Its Special Moves are throwing the shields on its arms ( Frisbicker ), and charging at high speed and attacking with its claws ( Assault Claw )."
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Cockatrimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Petra Fire",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Unleashes a power from its eyes that petrifies whatever it looks at."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Dokunemon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Floramon",
+    "Gazimon",
+    "Gottsumon",
+    "Hawkmon",
+    "Muchomon",
+    "Patamon",
+    "Penmon",
+    "Piyomon",
+    "Pomumon",
+    "Tinkermon"
+  ],
+  "digivolves_to": [
+    "Delumon",
+    "Digitamamon",
+    "Hippogriffomon",
+    "Lady Devimon",
+    "Parrotmon",
+    "Piccolomon",
+    "Shutumon",
+    "Vademon",
+    "Vamdemon",
+    "Petaldramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Giant Bird Digimon with two overdeveloped legs. Because it has continued to live on the ground for so long, it cannot fly through the air, and has evolved a body that is suited for land. For that reason, its body became even larger, and its leg strength has developed tremendously as well. Its wing parts have completely degenerated, and in battle, it spreads them wide along with its tail to intimidate the enemy. Although its disposition is violently ferocious, it doesn't do well in battles that consume too much energy due to its need to sustain its large build. Its Special Move is \" Petra Fire \". It is a terrifying technique that does not carbonize those it hits, but instead completely petrifies their body."
+}

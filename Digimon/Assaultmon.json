@@ -1,0 +1,40 @@
+{
+  "name": "Assaultmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Justice Massacre",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Strikes with the Gatling guns on both its arms and the machine guns on its stomach in the name of justice."
+  },
+  "digivolves_from": [
+    "Black Galgomon",
+    "Centalmon",
+    "Fangmon",
+    "Garurumon (Black)",
+    "Hookmon",
+    "Pegasmon",
+    "Searchmon"
+  ],
+  "digivolves_to": [
+    "Cannondramon",
+    "Megidramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A special maneuvers Digimon that enhances its combat ability with armored clothing. Because of its humanoid upper body and quadrupedal lower body, it is rumored to be a member of Centalmon 's special forces, but no one has confirmed this. Its Special Moves are striking with the Gatling guns on both its arms and the machine guns on its stomach in the name of justice ( Justice Massacre ), and disappearing from sight and attacking from behind ( Surprise Attack )."
+}

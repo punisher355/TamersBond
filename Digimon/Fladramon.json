@@ -1,0 +1,52 @@
+{
+  "name": "Fladramon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Fire",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Knuckle Fire",
+    "element": "Fire",
+    "pr": 7,
+    "tags": "[MELEE] [BURN 2,2]",
+    "description": "123Drives its fiery fists into the enemy.Shoots fireballs from its hand.Dives downwards horn-first while covered in flames.[N 1]"
+  },
+  "digivolves_from": [
+    "Agumon (Black)",
+    "Bokomon",
+    "Candmon",
+    "Dracomon",
+    "Goburimon",
+    "Hagurumon",
+    "Hawkmon",
+    "Patamon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Blue Meramon",
+    "Cyberdramon",
+    "Death Meramon",
+    "Digitamamon",
+    "Holy Angemon",
+    "Magnamon",
+    "Majiramon",
+    "Megadramon",
+    "Paildramon",
+    "Volcamon",
+    "Were Garurumon",
+    "Wingdramon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An Armor-level Dragon Man Digimon that evolved through the power of the \" Digimental of Courage \". The \"Digimental of Courage\" has the attribute of \"Flame\", and those that don this Digimental have their combat ability rise like blazing flames, allowing them to perform attacks on enemy Digimon with intense power. Its Signature Move is driving its fiery fists into the enemy ( Knuckle Fire ). Its Special Move is changing its entire body into a flaming rocket, and pulverizing the enemy ( Fire Rocket ).",
+  "web_created": true
+}

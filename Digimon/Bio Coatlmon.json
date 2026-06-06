@@ -1,0 +1,32 @@
+{
+  "name": "Bio Coatlmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 5,
+    "KNW": 5,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Freeze Wave",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Wraps around its foe and releases a wave of paralyzing energy."
+  },
+  "digivolves_from": [
+    "Impmon",
+    "Wormmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Toei Digimon Analyzer Digimon Data File ⇨ Japanese A Bio Digimon modified by Kurata . When merging with a human, both its strength and speed increase compared to what it was before being remodeled. Toei Animation | Digimon Savers ⇨ English 倉田に改造されたバイオデジモン。人間と融合することで、改造される前とは、スピード・パワーともにアップしている。 東映アニメーション｜デジモンセイバーズ ⇨ Japanese Digimon Savers ⇨ English バイオサンダーバーモン、バイオクアトルモン、バイオステゴモン 倉田に改造されたバイオデジモンだ。人間と融合することによって、改造される前とはスピード、パワー共にアップしているぞ。 デジモンセイバーズ Text Dialogue Digimon Savers Digimon Data File ⇨ English デジモンセイバーズ デジモンデータファイル ⇨ Japanese Digimon Savers Digimon Data File ⇨ English 今回紹介するのはバイオクアトルモン。 では、デジモンデータファイル、また来週！ デジモンセイバーズ デジモンデータファイル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ Japanese Nanami's evolved form as a Bio Digimon. She wraps her long body around enemy Digimon to immobilize them and unleash her special move, Freeze Wave . Digimon Series Memorial Book: Digimon Animation Chronicle ⇨ English ナナミがバイオデジモンに進化した姿。長大な体を使った巻きつきで敵デジモンの動きを封じ、必殺技「 フリーズウェーブ 」を浴びせる。 デジモンシリーズ メモリアルブック デジモンアニメーションクロニクル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K",
+  "web_created": true
+}

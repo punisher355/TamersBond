@@ -1,0 +1,39 @@
+{
+  "name": "Divemon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Fillet Blade",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Slashes the enemy with the sharp fins all over its body."
+  },
+  "digivolves_from": [
+    "Bulkmon",
+    "Exermon",
+    "Namakemon",
+    "Runnermon"
+  ],
+  "digivolves_to": [
+    "Achillesmon",
+    "Kazuchimon",
+    "Shivamon",
+    "Shroudmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that evolved via data studying the swimming styles of top swimmers. Although it has a merman-like appearance, it is capable of moving bipedally on land. Its swimming speed is top-class even among Aquatic Digimon, and its four eyes never lose sight of its underwater prey. Contrary to its ferocious appearance, it has a fair play spirit that pursues beautiful swimming. Its Special Moves are slashing the enemy with the sharp fins all over its body ( Fillet Blade ), and hurling pressurized water like a blade ( Ripple Edge ). Its \" Liquid Veil \", which is invoked when Divemon is active on land, envelops it in water armor and enhances its physical ability. As a result, even in places without water, it is able to exhibit the same strength as when it is underwater."
+}

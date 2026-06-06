@@ -1,0 +1,53 @@
+{
+  "name": "Pyocomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Nyokimon",
+    "Pipimon",
+    "Poyomon",
+    "Puwamon"
+  ],
+  "digivolves_to": [
+    "Cutemon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Floramon",
+    "Gazimon",
+    "Hawkmon",
+    "Hyokomon",
+    "Jazamon",
+    "Kunemon",
+    "Luxmon",
+    "Muchomon",
+    "Mushmon",
+    "Palmon",
+    "Penmon",
+    "Phascomon",
+    "Pico Devimon",
+    "Piyomon",
+    "Pteromon",
+    "Wormmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Bulb-type Lesser Digimon with a large flower blooming from its head. It is able to move by skilfully manoeuvring its root-like tentacles, and it can even float upwards into the air, albeit only to a small height. It is brimming with curiosity, and its restless movements make it look downright adorable. It has a habit of living together in flocks, and they may number from a few to even a few hundred depending on the flock."
+}

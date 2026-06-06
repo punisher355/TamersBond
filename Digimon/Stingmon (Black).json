@@ -1,0 +1,43 @@
+{
+  "name": "Stingmon (Black)",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Spiking Finish",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Skewers the opponent with the spikes on both its arms, or hits them with a powerful flying kick."
+  },
+  "digivolves_from": [
+    "Floramon",
+    "Mushmon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Angewomon",
+    "Asuramon",
+    "Cannonbeemon",
+    "Dinobeemon",
+    "Jewelbeemon",
+    "Mega Seadramon",
+    "Metal Greymon",
+    "Okuwamon",
+    "Skull Satamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Sorry, but no official profile of Stingmon (Black) has been added yet. The following text is just the blurb of St-769 . This nimble sky assassin is protected by its super-hard body! ⇨ English 超硬質ボディに守られた、俊敏なる空中殺法戦士！"
+}

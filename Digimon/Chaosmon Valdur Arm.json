@@ -1,0 +1,32 @@
+{
+  "name": "Chaosmon Valdur Arm",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Light",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 18,
+    "LVE": 11,
+    "KNW": 16,
+    "SNC": 17,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Haou Ryoudanken",
+    "element": "Light",
+    "pr": 15,
+    "tags": "[MELEE] [PIERCE]",
+    "description": "A decisive slash of itsBAN-TYO Blade."
+  },
+  "digivolves_from": [
+    "Bancho Leomon",
+    "Valdurmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "Normally, when a Jogress occurs, the Digicores of the two Digimon are completely fused and reborn as a new Digimon; however, Chaosmon retains each of the Digicores of the Digimon before the Jogress, and maintains its form in a very incomplete state. Chaosmon is the codename for Digimon who \"should not exist\", and according to the \" Central Dogma \" of the Digital World , are absolute impossible singularities ( bugs ). Due to its extremely unstable existence, its lifespan is very short, and it is conjectured that the program being run by the Digital World's managing system which eliminates bugs is causing its lifespan to shorten. This Chaosmon is believed to be born from the Jogress of Bancho Leomon and Valdurmon , and the faces of each Digimon are visible on its arms. Its Special Moves are an unstoppable bisecting slash unleashed from the \" BAN-TYO Blade \" equipped to its \" Bancho Arm \" ( Haou Ryoudanken ), and a purifying shot of light fired from its \" Valdur Arm \" ( Aurora Blaster ).",
+  "web_created": true
+}

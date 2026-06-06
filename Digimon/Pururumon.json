@@ -1,0 +1,26 @@
+{
+  "name": "Pururumon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Nyaromon",
+    "Poromon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Slime Digimon with a chubby body similar to silicone, it jiggles flabbily when it crawls forward. Both of its small fins are unexpectedly handy, but to be absolutely precise it is not yet able to fly. As it loves the smell of the sun, on days with good weather it lies sprawled on the lawn and smells the scent of grass with a sniff, immersing it in a good mood. If it gets in a pinch, it foams out acidic bubbles and covers the opponent in them, then seizes the opportunity to flee.",
+  "web_created": true
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Shadramon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Flare Buster",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "12Emits a red hot blaze from both hands.Sets itself on fire and rams the opponent."
+  },
+  "digivolves_from": [
+    "Gizamon",
+    "Impmon",
+    "Phascomon",
+    "Psychemon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Blue)",
+    "Dark Knightmon",
+    "Dinobeemon",
+    "Karatenmon",
+    "Kongoumon",
+    "Magnamon",
+    "Volcamon",
+    "Pucchiemon (Green)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Insect Digimon that evolved through the power of the \" Digimental of Courage \". To be precise, it took the form of an insect-humanoid, but its sinister appearance and viciousness is the result of an unfortunate adverse reaction to the \"Digimental of Courage\". It manipulates flames similarly to Fladramon and their combat ability is more or less on par, but it is otherwise a wicked being who is the exact opposite of Fladramon, just like light and darkness. Its Special Move is a red hot blaze emitted from both hands ( Flare Buster ).",
+  "web_created": true
+}

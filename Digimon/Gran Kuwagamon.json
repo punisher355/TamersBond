@@ -1,0 +1,52 @@
+{
+  "name": "Gran Kuwagamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 11,
+    "KNW": 13,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Dimension Scissor",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Cuts through all of the surrounding space with its scissors.Fires energy in the shape of its pincers."
+  },
+  "digivolves_from": [
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Bastemon",
+    "Cannonbeemon",
+    "Climbmon",
+    "Dinobeemon",
+    "Jewelbeemon",
+    "Jyureimon",
+    "Kongoumon",
+    "Mephismon",
+    "Metallife Kuwagamon",
+    "Okuwamon",
+    "Pucchiemon (Green)",
+    "Rhino Kabuterimon",
+    "Scorpiomon",
+    "Shakkoumon",
+    "Triceramon",
+    "Vespamon",
+    "Waru Monzaemon"
+  ],
+  "digivolves_to": [
+    "Tyrant Kabuterimon",
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The ultimate form of Kuwagamon-species Digimon. It is an especially evil being among Insect Digimon, and if you happen to stumble across Gran Kuwagamon within the Digital World, you won't be able to do anything but curse yourself. Because it inhabits the depths of the Digital World's forests, and is only active at night, it is called the \" Demon of the Deep Forest \". Also, its greatest rival is Herakle Kabuterimon , and the battle between these two continues without ever ending. Its Special Move is cutting through all of the surrounding space ( Dimension Scissor )."
+}

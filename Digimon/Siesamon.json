@@ -1,0 +1,60 @@
+{
+  "name": "Siesamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Tiida Ija",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Fires countless holy arrows of sunlight."
+  },
+  "digivolves_from": [
+    "Angoramon",
+    "Bakumon",
+    "Bokomon",
+    "Gabumon",
+    "Ganimon",
+    "Guilmon",
+    "Impmon",
+    "Labramon",
+    "Lopmon",
+    "Patamon",
+    "Renamon",
+    "Terriermon",
+    "Wankomon"
+  ],
+  "digivolves_to": [
+    "Bastemon",
+    "Caturamon",
+    "Cerberumon",
+    "Hippogriffomon",
+    "Holy Angemon",
+    "Kyukimon",
+    "Lady Devimon",
+    "Majiramon",
+    "Mihiramon",
+    "Neo Devimon",
+    "Shishimamon",
+    "Taomon",
+    "Vajramon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Cerberumon: Werewolf Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon which has the appearance of the legendary holy beast, the \" Siisaa \". It has the power to sweep away calamity, and exhibits tremendous power toward evildoers. It is an ally to those that are kind-hearted, and will try to protect its Tamer from every calamity, even if it has to sacrifice its own body. Contrary to its heroic appearance, it usually basks leisurely in the sunlight, due to its docile personality. However, the sunlight is an important factor for Siesamon, because it charges its life energy. Its Signature Move \" Sekkantou \" temporarily prevents the intrusion of evil Viruses, as a kind of Firewall . Its Special Move is firing countless holy arrows of sunlight ( Tiida Ija )."
+}

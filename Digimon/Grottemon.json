@@ -1,0 +1,38 @@
+{
+  "name": "Grottemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Snake Eye Break",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Summons one or more of its flexibleGrotte Hammersfrom the ground or its armor and hits the enemy with them. The attack can be used to petrify and smash enemies."
+  },
+  "digivolves_from": [
+    "Goburimon",
+    "Gottsumon",
+    "Hagurumon",
+    "Koemon"
+  ],
+  "digivolves_to": [
+    "Catch Mamemon",
+    "Superstarmon",
+    "Gigasmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Earth which bears the might of one of the legendary Warrior Ten . Various weapons and armor are brought to life from its large hands and thick fingers, and its craftsmanship is practical yet artistic. The Grotte Armor that it wears and its main weapon, the Grotte Hammer , are both of the handmade Grotte-brand. It prefers to act alone since it hates being ordered about, however its artisan pride is such that once it recognizes someone's true merit, it will obediently abide them, and immerse itself in its own work. Although it's not very intelligent, its pride towards its work is intensely high and it has a strong tendency to take the opponent lightly. In battle, it mainly uses its \" Snake Eye Break \", in which it petrifies enemies touched by its Grotte Hammer and then smashes them, and \" Jack in the Box \", where it burrows into the ground and ambushes the opponent from beneath them, but in fact it also has a technique which creates Golemon using the earth around it and orders them to attack.",
+  "web_created": true
+}

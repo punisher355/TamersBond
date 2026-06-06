@@ -1,0 +1,32 @@
+{
+  "name": "Quantumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Unlimited Journey",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Transforms space into a gate via quantum processing, and forcefully sends the enemy into another dimension."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Metal Mamemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate Digimon enshrined in the aerial city of \"Larc\", which floats above the vast \" Net Ocean \", shrouded by enormous clouds. Quantumon extracts huge amounts of data from the Net Ocean using the expansion devices installed on Larc, and runs millions upon trillions of simulations of the future. Together with its Digimon followers, Quantumon implements the best measures it has formulated against disasters that are predicted to occur in the Digital World . Its Special Move is transforming space into a gate via quantum processing, and forcefully sending the enemy into another dimension ( Unlimited Journey ). This technique can also be used to forcibly evade other Digimon, or send them to another dimension for their own research and analysis. In addition, it can also manipulate the flow of time, causing quantum decay at specific coordinates with its \" Hazy Time \"."
+}

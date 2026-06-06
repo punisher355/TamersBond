@@ -1,0 +1,34 @@
+{
+  "name": "Jokermon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Lunatic Slash",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Hunts the enemy down with its scythe, which can hurl energy blades."
+  },
+  "digivolves_from": [
+    "Devimon",
+    "Wizarmon"
+  ],
+  "digivolves_to": [
+    "Piemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A mysterious and elusive Demon Man Digimon. It appears on the battlefield without warning, bringing down Digimon that are key to deciding the tide of battle with a blow from their blind spot, and thus deciding the outcome of the battle. It is said that if Jokermon allies with you, then victory draws near, and it is called the \" Passing Trump \". Although it is a Digimon shrouded in mystery, investigations have given rise to the suspicion that it is of the same type as Piemon . Its Special Moves are hunting the enemy with its sickle, which collects the hope whirling around the battlefield ( Lunatic Slash ), and invoking a magic circle directly beneath the enemy to fire a beam upwards, erasing them without a trace ( Gaia Magicar ). A winning entry in the Digimon Xros Wars Original Digimon Contest .",
+  "web_created": true
+}

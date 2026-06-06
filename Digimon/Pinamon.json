@@ -1,0 +1,44 @@
+{
+  "name": "Pinamon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Shocks whoever touches the Fuwa Feathers on its tails."
+  },
+  "digivolves_from": [
+    "Botamon",
+    "Puwamon"
+  ],
+  "digivolves_to": [
+    "Candmon",
+    "Elecmon",
+    "Falcomon",
+    "Gaomon",
+    "Goburimon",
+    "Gottsumon",
+    "Kamemon",
+    "Mushmon",
+    "Swimmon",
+    "Terriermon",
+    "Terriermon Assistant"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Chick Digimon that always runs about restlessly. Because it expresses its emotions in how it runs, it doesn't stand still unless it is a time when it is bored or sleeping. Because its emotions do not appear on its face, its emotions must be read from how it runs, so it is a Digimon with which making a connection is very difficult. Although Pinamon hates its tails being touched, just like Puwamon , because a miniature electric shock, \" Piripiri Spark \", is generated from the tails, more caution is needed when touching its tails than with Puwamon."
+}

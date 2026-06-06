@@ -1,0 +1,36 @@
+{
+  "name": "Salamandamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Backdraft",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": ""
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Betamon",
+    "Gazimon"
+  ],
+  "digivolves_to": [
+    "Triceramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Amphibian Digimon that \"Armor Evolved\" with the \" Digimental of Courage \". It is as carefree as it looks with its flame-clad, salamander-like appearance, but once angered, it will cause the flames covering its body to flare up even more and attack. Its Signature Move is spewing out scorching-hot flames from its mouth ( Heat Breath ). Its Special Move is gathering oxygen in the air and triggering a violent explosion ( Backdraft ).",
+  "web_created": true
+}

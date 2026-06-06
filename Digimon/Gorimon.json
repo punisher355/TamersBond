@@ -1,0 +1,51 @@
+{
+  "name": "Gorimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Power Attack",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Fires a large bullet of explosive energy from itsEnergy Cannon.[N 1]"
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Armadimon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Goburimon",
+    "Koemon",
+    "Kokuwamon",
+    "Patamon",
+    "Shamamon",
+    "Terriermon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Black Rapidmon",
+    "Death Meramon",
+    "Mammon",
+    "Metal Greymon (Virus)",
+    "Mummymon",
+    "Orochimon",
+    "Parrotmon",
+    "Valvemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Power Digimon endowed with the arm strength to crush anything and the leg strength to crush things underfoot no matter how hard they are. However, it surprises the opponent with light movements that aren't expected from its physique, and seizes the opportunity to add to the attack with the Energy Cannon on its right hand. It found its aesthetic in \" Hit and Away \". Its Special Move \" Power Attack \" is super-powerful."
+}

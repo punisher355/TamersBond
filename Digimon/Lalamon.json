@@ -1,0 +1,63 @@
+{
+  "name": "Lalamon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Plant",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 2,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Nuts Shoot",
+    "element": "Plant",
+    "pr": 2,
+    "tags": "[RANGE 4] [TRUE]",
+    "description": "Shoots hard nuts from its mouth with surprising accuracy."
+  },
+  "digivolves_from": [
+    "Budmon",
+    "Koromon",
+    "Mochimon",
+    "Tanemon",
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Aquilamon",
+    "Bakemon",
+    "Birdramon",
+    "Gaogamon",
+    "Geo Greymon",
+    "Gold Numemon",
+    "Hudiemon",
+    "Igamon",
+    "Kougamon",
+    "Leomon",
+    "Numemon",
+    "Reppamon",
+    "Red Vegimon",
+    "Revolmon",
+    "Seadramon",
+    "Soulmon",
+    "Stingmon",
+    "Sunflowmon",
+    "Tailmon",
+    "Togemon",
+    "Tuchidarumon",
+    "Turuiemon",
+    "Tylomon",
+    "Vegimon",
+    "Waspmon",
+    "Woodmon",
+    "Yanmamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Plant Digimon which has an appearance like a flower bud. It spins the leaf on its head to fly unsteadily, and is expressionless but charming. Its Special Move is firing solid nuts from its mouth ( Nuts Shoot ). Its aim is surprisingly accurate. Also, it can spin its leaf with all its might to assault the opponent ( Lala Screw ), and put the opponent to sleep with a pleasant song ( Sing a Song )."
+}

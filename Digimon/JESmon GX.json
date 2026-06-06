@@ -1,0 +1,39 @@
+{
+  "name": "JESmon GX",
+  "stage": "Mega II",
+  "attribute": "Data",
+  "element": "Light",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 18,
+    "FRD": 13,
+    "LVE": 11,
+    "KNW": 16,
+    "SNC": 15,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Seiken Meppa",
+    "element": "Light",
+    "pr": 15,
+    "tags": "[MELEE]",
+    "description": "Unleashes asubluminalcombo-attack that succeedsGankoomon's secret technique"
+  },
+  "digivolves_from": [
+    "Alphamon",
+    "Craniummon",
+    "Duftmon",
+    "Duftmon: Leopard Mode",
+    "Dukemon",
+    "Dynasmon",
+    "Lord Knightmon",
+    "Sleipmon",
+    "Ulforce V-dramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "The final form of JESmon that awakened to its true power by undergoing harsh training with Gankoomon , and fully mastering it. Its form, in which its whole body is brimming with fighting spirit and sense of justice, is clad in the red color of blazing flames. The \" Unlimitive Gauntlet \", which is now its main weapon, is a piece of equipment used for both offense and defense that switches between its respective Sword, Knuckle, and Shield Modes depending on the situation. The Tactical Arms has turned into a wing-shaped energy construct by evolving further, and its flight capability has also increased rapidly. In its Arms state, it unleashes a subluminal combo-attack that succeeds Gankoomon's secret technique ( Seiken Meppa ). Its final secret technique is JESmon GX itself becoming the vessel for its \" Knights' Intruder \", the fourteenth Ultimate-Battle-Blade that should not exist, by concentrating the energy of the Royal Knights , turning into an offensive judgment sword that instantly erases the opponent no matter how strong they are.",
+  "web_created": true
+}

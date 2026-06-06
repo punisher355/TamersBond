@@ -1,0 +1,40 @@
+{
+  "name": "Qinglongmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 12,
+    "SNC": 15,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Sourai",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Looses intense thunderbolts from the sky, with divine fury."
+  },
+  "digivolves_from": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Majiramon",
+    "Mermaimon",
+    "Mihiramon",
+    "Raiji Ludomon",
+    "Triceramon",
+    "Tyilinmon"
+  ],
+  "digivolves_to": [
+    "Huanglongmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese One of the Four Holy Beasts who protect the Digital World, it guards the East and releases intense lightning strikes. It is a legendary being like the other Four Holy Beast Digimon, and its strength is said to equal that of a god. Also, it is counted as one of the Four Great Dragons alongside Holydramon , Goddramon , and Megidramon , and is the most deified existence among them. However, although it is a divine being, it will not easily cooperate with humans and the weak, and it is not likely to lend help to its allies unless there is something serious. Its Special Move is loosing intense thunderbolts from the sky, with divine fury ( Sourai ).",
+  "web_created": true
+}

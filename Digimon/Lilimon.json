@@ -1,0 +1,62 @@
+{
+  "name": "Lilimon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Plant",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 11,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Flow' Cannon",
+    "element": "Plant",
+    "pr": 8,
+    "tags": "[RANGE 4]",
+    "description": "Makes a gun muzzle from the petals on its wrists and shoots an energy shell."
+  },
+  "digivolves_from": [
+    "Angemon",
+    "Hudiemon",
+    "Igamon",
+    "Kiwimon",
+    "Kougamon",
+    "Kuwagamon",
+    "Parasaurmon",
+    "Peacockmon",
+    "Pidmon",
+    "Pucchiemon",
+    "Red Vegimon",
+    "Shurimon",
+    "Sunflowmon",
+    "Tailmon",
+    "Togemon",
+    "Vegimon",
+    "Witchmon",
+    "Yanmamon"
+  ],
+  "digivolves_to": [
+    "Bancho Lilimon",
+    "Belial Vamdemon",
+    "Bloom Lordmon",
+    "Ceresmon",
+    "Holydramon",
+    "Lilithmon",
+    "Lotusmon",
+    "Marin Angemon",
+    "Mervamon",
+    "Minervamon",
+    "Pinochimon",
+    "Rafflesimon",
+    "Rosemon",
+    "Sakuyamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Fairy Digimon born from beautifully blooming flower petals. Although it looks like it has an appearance like a human child, it is a Perfect Digimon hiding unfathomable power within. Due to its whimsical, tomboyish personality, it is said that it will open its heart to a human girl with a similar temperament. Also, because it becomes unable to settle down if it starts crying like a crybaby, a great effort is necessary to win it over. However, it also has an aspect that kindly extends its hand to small or weak things. It can fly in the air with the four leaf-like wings growing from its back, and it is said that after Lilimon flies by, a fresh breeze will blow. Its Special Move is thrusting both of its arms forward, making a gun muzzle from the petals on its wrists, and shooting an energy shell ( Flow' Cannon )."
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Magna Kidmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Arresterdramon: Superior Mode (Brave Snatcher)",
+    "Astamon",
+    "Metal Mamemon",
+    "Omega Shoutmon",
+    "Rize Greymon",
+    "Savior Hackmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Dragon Man Digimon which has firearm mechanisms equipped throughout its body. As a wanderer traveling across the Digital World in search of the comrades it was separated from, it is a troublemaker who causes trouble and gets tangled up in scandal wherever it goes. Although it has a self-centered personality and is often indifferent of its surroundings, it's passionate about things like friendship or gratitude, misinterpreting the local Revolmon it comes across as members of its own species and becoming friends with them. As it loves single combat, it is so severely triggerhappy that it fires off bullets indiscriminately once it wins or loses. Its Special Moves are stabbing the opponent with the tiny machineguns connected to the magazines extending from its hips, immediately destroying the enemy's body from within ( Bind Red Trigger ), and the high-altitude annihilation fire which is Kidmon's greatest Special Move, in which it soars high into the sky with its wing-like muffler, then aims at the opponent with its arms folded and weaves together live ammunition and plasma shots fired from the gun muzzles on its legs and the fingers of its hands, which pound away like falling rain ( Happy Bullet Showering ). Also, there is a Special Move called \" Chaos Triangular \" it invokes when special conditions are met."
+}

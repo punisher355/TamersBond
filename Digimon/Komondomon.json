@@ -1,0 +1,38 @@
+{
+  "name": "Komondomon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Wi-wiper",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Leans over the opponent with its large body and scrubs them with the shaggy hair on its feet."
+  },
+  "digivolves_from": [
+    "Angoramon",
+    "Jazamon",
+    "Junkmon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Lamortmon",
+    "Locomon",
+    "Waru Monzaemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A vehicle Digimon that loves to move around while carrying other Digimon. It feels like it is taking a walk wherever it goes and has a carefree personality that doesn't mind wherever it sets foot. It can dive and navigate underwater by spinning its tail. Although its long fur coat constantly gets dirty from being dragged along the ground, it is actually quite fond of cleanliness. It hates fighting and will try to flee from it, putting the safety of the Digimon aboard it first, but as for those who attack it, it repels them with its “ Wi-wiper ”, where it leans over them with its large body and scrubs them with the shaggy hair covering its feet, and “ Masshigurun ”, which blows them away with its violent dashing."
+}

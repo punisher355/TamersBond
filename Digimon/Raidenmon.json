@@ -1,0 +1,34 @@
+{
+  "name": "Raidenmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 9,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "KirlianBrand",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Causes acorona dischargebrought upon by a 45000-volt electric attack."
+  },
+  "digivolves_from": [
+    "Giromon",
+    "Metallife Kuwagamon",
+    "Tyilinmon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A heavyweight-class Machine type Digimon equipped with electromagnetic weapons. It was created as a shooting-type, unlike Raijinmon , who similarly uses lightning as its energy. Although it is not as adept in close combat, it defends itself using its thick armor, and counterattacks with its left arm. Its Special Moves are causing a corona discharge brought upon by a 45000-volt electric attack ( Kirlian Brand ), and firing ultra-high temperature spheres from the gun barrels on both of its shoulders ( Rising Sun ).",
+  "web_created": true
+}

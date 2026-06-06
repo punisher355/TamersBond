@@ -1,0 +1,41 @@
+{
+  "name": "Kyaromon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Puts all its strength into striking the opponent with its tail."
+  },
+  "digivolves_from": [
+    "Pafumon",
+    "Puwamon"
+  ],
+  "digivolves_to": [
+    "Candmon",
+    "Elecmon",
+    "Goburimon",
+    "Hanimon",
+    "Impmon",
+    "Kamemon",
+    "Kudamon",
+    "Palmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Lesser Digimon that vigorously grew a tail. As it is brimming with curiosity, it takes an interest in anything, and has a habit of rushing for whatever caught its interest. The inside of its body has become mostly empty, and because it is elastic like a rubber ball, its \" Shippo Swing \", in which it puts its strength into its tail and strikes, seems to have the force to blow away even a Child Digimon."
+}

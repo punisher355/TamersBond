@@ -1,0 +1,33 @@
+{
+  "name": "Fenriloogamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 9,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "RagnarökHowling",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Causes the blue flames that cover its body to explosively combust in an instant while howling, incinerating its surroundings."
+  },
+  "digivolves_from": [
+    "Helloogarmon",
+    "Mach Gaogamon",
+    "Soloogarmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Fenriloogamon is an imaginary Digimon born from the \"Daydream of a Digicore \". It is a form that had even the Digicore's own creativity miraculously released through the Interface on its brow, and evolved. Possibly because it naturally possessed the data of the warg from real-world mythology within its Digicore, the form created by its Digicore is an \"Ultimate Demon Beast\", clad in silver armor and wielding an inexhaustible supply of magical power. The magical blue flames that envelop its whole body are kept under control at its own volition, and despite having an extremely high burning temperature, they normally flicker silently and beautifully. Its Special Moves are causing the blue flames that cover its body to explosively combust in an instant while howling, incinerating its surroundings ( Ragnarök Howling ), and tearing the opponent to pieces with laser-like magical flames that spurt from its limbs ( Jötunheimr Gale ). In addition, it can also summon a duplicate of itself made of magical flames called \" Hróðvitnir \", and since the duplicate uses the same techniques as Fenriloogamon, those who face it will struggle considerably."
+}

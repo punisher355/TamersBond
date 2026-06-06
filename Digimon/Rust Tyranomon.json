@@ -1,0 +1,42 @@
+{
+  "name": "Rust Tyranomon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Terror's Cluster",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Extends forth the battery on its back and fires its large-scale electromagnetic cannon."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Brachimon",
+    "Ex-Tyranomon",
+    "Gigadramon",
+    "Mametyramon",
+    "Master Tyranomon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Greymon",
+    "Metal Tyranomon"
+  ],
+  "digivolves_to": [
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The Ultimate of Tyranomon who has lived through the fierce, continuing battles that have lasted since the genesis of the Digital World , and evolved alongside it. Having endured many years in harsh environments as Metal Tyranomon , its whole cyborg body shows signs of rust. Its tactics are geared towards annihilation warfare, and it is capable of ravaging an entire enemy base by itself. Rust Tyranomon has the nature of a Digimon predator, gorging on hundreds of thousands of Digimon within a short period without leaving a trace. Its Special Moves are extending forth the battery on its back and firing its large-scale electromagnetic cannon ( Terror's Cluster ), and spewing deep scarlet flames, the same color as its body ( Rust Breath ). Its \" Rust Breath \" induces a rusting effect on whatever it touches. Even in close combat, it pins the opponent down with its power and destructive force, which are top-class among Cyborg Digimon."
+}

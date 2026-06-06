@@ -1,0 +1,56 @@
+{
+  "name": "Gryzmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Atemigaeshi",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Knocks the enemy down by countering their attack, then strikes at their vitals."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Bearmon",
+    "Betamon",
+    "Elecmon",
+    "Gabumon",
+    "Gazimon",
+    "Goburimon",
+    "Hawkmon",
+    "Lopmon",
+    "Strabimon"
+  ],
+  "digivolves_to": [
+    "Astamon",
+    "Caturamon",
+    "Cerberumon",
+    "Delumon",
+    "Dinobeemon",
+    "Grappu Leomon",
+    "Great Gryzmon",
+    "Loader Leomon",
+    "Mammon",
+    "Monzaemon",
+    "Pandamon",
+    "Vajramon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Cerberumon: Werewolf Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Contrary to its ferocious appearance, which its prominently massive body and potentially lethal fangs and claws contribute to, this Beast Digimon has the spirit of an honorable martial artist. In spite of its large body, it nimbly dodges the opponent's attacks or turns them aside, not needing to rely on its own attacks due to the exceptional grappling sense it possesses. Though Gryzmon never starts fights, the moment someone angers it, it will stand on its hind legs and knock them down with its heavyweight forelegs, \" Kuma Tsume \". Its power is such that it is able to inflict a mortal wound on most Digimon with just this single blow. These \" Kuma Tsume \" appear to have been imitated in Waru Monzaemon 's \" Bear Claw \" equipment. Its Special Move is a bold move in which it utilizes the power from the enemy's attack to do a reversal, striking them in their vitals and knocking them out in one hit ( Atemigaeshi )."
+}

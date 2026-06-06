@@ -1,0 +1,62 @@
+{
+  "name": "Yuki Agumon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Little Blizzard[N 1]",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Spews a tiny snowstorm out of its mouth."
+  },
+  "digivolves_from": [
+    "Budmon",
+    "Nyaromon",
+    "Pukamon",
+    "Hiyarimon"
+  ],
+  "digivolves_to": [
+    "Airdramon",
+    "Allomon",
+    "Chackmon",
+    "Dobermon",
+    "Geo Greymon",
+    "Geremon",
+    "Greymon",
+    "Greymon (Blue)",
+    "Growmon",
+    "Gururumon",
+    "Hookmon",
+    "Hyougamon",
+    "Icemon",
+    "Ikkakumon",
+    "Lighdramon",
+    "Mojyamon",
+    "Numemon",
+    "Scumon",
+    "Seadramon",
+    "Shima Unimon",
+    "Sorcerimon",
+    "Tailmon",
+    "Tortamon",
+    "V-dramon",
+    "XV-mon",
+    "Yukidarumon",
+    "Yaksamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A separate species of Agumon that inhabits snowy fields. Due to the mischievousness it inherited from Agumon, it is always happily excited like a child when it snows. Because the color of its body is identical to that of snow, in battle it is able to approach the enemy to attack without being exposed. Its Special Move is spewing a tiny snowstorm out of its mouth ( Little Blizzard ).",
+  "web_created": true
+}

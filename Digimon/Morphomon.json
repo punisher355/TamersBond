@@ -1,0 +1,38 @@
+{
+  "name": "Morphomon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 2,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Rinrin Therapy",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE] [BURST 2] [PARALYZE 2]",
+    "description": "Fluttering scales shaken off of its wings that can either sooth the mind and body or paralyze the body."
+  },
+  "digivolves_from": [
+    "Mochimon",
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Eosmon (Adult)",
+    "Gokimon",
+    "Hudiemon",
+    "Unimon",
+    "Waspmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon whose ears and hands are composed of butterfly wings. It has feelings of enjoyment toward nature and a carefree personality. It touches anyone it has seen for the first time to determine whether they are safe to be around or not, and if they are, and if it has taken a liking to them, it will follow them. It seems that whenever its ear-wings move a lot, it is in a very good mood. Its \" Rinrin Therapy \", the scale s that flutter as it flaps its wings, has the effect of soothing the mind and body, or conversely, paralyzing the body, and is used differently depending on the opponent.",
+  "web_created": true
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Snimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Wind",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Shadow Sickle",
+    "element": "Wind",
+    "pr": 5,
+    "tags": "[RANGE 4] [TRUE]",
+    "description": "A supersonic slash that sends out a blade-shaped shockwave."
+  },
+  "digivolves_from": [
+    "Armadimon",
+    "Commandramon",
+    "Dokunemon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Ganimon",
+    "Gizamon",
+    "Hagurumon",
+    "Kunemon",
+    "Otamamon",
+    "Palmon",
+    "Patamon",
+    "Tentomon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Archnemon",
+    "Atlur Kabuterimon (Blue)",
+    "Blossomon",
+    "Fantomon",
+    "Hippogriffomon",
+    "Jewelbeemon",
+    "Okuwamon",
+    "Scorpiomon",
+    "Skull Greymon",
+    "Taomon (Silver)",
+    "Vamdemon",
+    "Zudomon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "An experimental Digimon that was created at a research facility as a Virus Hunter. It was created from the data of praying mantises, and it tracks its target down as if it were a precise machine. Due to its unfeeling personality, it is feared by both Vaccine and Data-attribute Digimon. The sickles on both of its arms are honed to their sharpest, allowing it to cleanly slice through anything. Although Snimon is a Digimon that has no eyes, the red antennae growing from its head have become sensors, and are able to accurately pinpoint the target's location. Its Special Move is a supersonic slash that can't be seen with the naked eye ( Shadow Sickle )."
+}

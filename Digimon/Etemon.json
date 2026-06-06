@@ -1,0 +1,58 @@
+{
+  "name": "Etemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Love Serenade",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Performs a song that breaks the opponent's heart and destroys their fighting spirit."
+  },
+  "digivolves_from": [
+    "Cyclomon",
+    "Deltamon",
+    "Dokugumon",
+    "Fugamon",
+    "Garurumon (Black)",
+    "Geremon",
+    "Icemon",
+    "Leomon",
+    "Meramon",
+    "Minotaurmon",
+    "Nanimon",
+    "Numemon",
+    "Ogremon",
+    "Orgemon",
+    "Platinum Scumon",
+    "Raremon",
+    "Scumon",
+    "Targetmon",
+    "Vegimon"
+  ],
+  "digivolves_to": [
+    "Bancho Leomon",
+    "Jijimon",
+    "King Etemon",
+    "Metal Etemon",
+    "Piemon",
+    "Pile Volcamon",
+    "Platinum Numemon",
+    "Saint Galgomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An unidentified Digimon that suddenly appeared in the Digital World. It calls itself the \" King of Digimon \", and its fighting strength is beyond imagination. And, well, it's rumored that it pulls the strings of the mysterious Digimon \" Monzaemon \". It is dressed in its reinforced Saru Suit which can endure every attack, and even today it bustles about the whole world for the sake of its unending battles. Its Special Move is breaking the opponent's heart and making their fighting spirit vanish ( Love Serenade ), and a dark sphere that consumes everything it touches ( Dark Spirits )."
+}

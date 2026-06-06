@@ -1,0 +1,32 @@
+{
+  "name": "GraceNovamon",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 18,
+    "LVE": 11,
+    "KNW": 15,
+    "SNC": 18,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Eclipse Finger",
+    "element": "Neutral",
+    "pr": 13,
+    "tags": "[MELEE]",
+    "description": "Focuses the amplified energy within its body in the palms of its hands, and melts the enemy by touching them."
+  },
+  "digivolves_from": [
+    "Apollomon",
+    "Dianamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A mythical Galaxy Digimon, said to have once been born from the fusion of Apollomon and Dianamon of the Olympos XII , when the Digital World: Iliad was visited by an unprecedented crisis. By colliding the opposing energies of the sun and the moon together, it formed Big Bang -class energy within its body. Because of this, it is predicted that Grace Novamon itself has become a standalone galaxy, and it is said to be impossible to measure its total data size accurately. Its Special Moves are focusing the amplified energy within its body into the palms of its hands, and melting the enemy by touching them ( Eclipse Finger ), and firing the eight \" Meleagros \" blades mounted on its back to pursue the enemy until they are destroyed ( Calydon Arcus ).",
+  "web_created": true
+}

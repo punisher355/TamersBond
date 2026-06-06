@@ -1,0 +1,47 @@
+{
+  "name": "Caprimon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Generates a resonance between its two horns to paralyze the opponent."
+  },
+  "digivolves_from": [
+    "Choromon",
+    "Mokumon",
+    "Zurumon"
+  ],
+  "digivolves_to": [
+    "Armadimon",
+    "Commandramon",
+    "Espimon",
+    "Gottsumon",
+    "Hagurumon",
+    "Impmon",
+    "Kokabuterimon",
+    "Kokuwamon",
+    "Kotemon",
+    "Pawn Chessmon (Black)",
+    "Phascomon",
+    "Solarmon",
+    "Toy Agumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A tiny Baby Digimon wearing a metallic helmet. Within the two horns attached to its helmet, it has antennae that are able to receive any radio wave or sound. Caprimon has bat-like traits such as having weak eyesight, instead producing ultrasonic waves from its mouth to detect objects ahead of it based on the rebounding sound waves. For that reason, Caprimon is able to remain active regardless of whether it is day or night. Its technique is generating a resonance between its two horns ( Howling Hertz ); even a large Digimon will have their sense of hearing paralyzed if they suffer this technique."
+}

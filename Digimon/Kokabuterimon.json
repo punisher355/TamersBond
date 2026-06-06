@@ -1,0 +1,42 @@
+{
+  "name": "Kokabuterimon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Scoop Smash",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE] [BURST 2] [PUSH]",
+    "description": "Scoops up the opponent and jettisons them with its boastful horn."
+  },
+  "digivolves_from": [
+    "Caprimon",
+    "Frimon",
+    "Mochimon"
+  ],
+  "digivolves_to": [
+    "Aquilamon",
+    "Blade Kuwagamon",
+    "Blitzmon",
+    "Hanumon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Revolmon",
+    "Thunderballmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A small-built but very strong Insect Digimon. It has a large horn and forefeet, and it is feared in its surroundings, but really it hates fighting and has a gentle personality. However, it is considerably strong, and it appears to have lifted a Tortamon in the experiment of a certain research institution. Its Special Moves are scooping up the opponent and jettisoning them with its prided horn ( Scoop Smash ) and lunging from its large forefeet ( Beetle Lariat ).",
+  "web_created": true
+}

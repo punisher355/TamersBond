@@ -1,0 +1,41 @@
+{
+  "name": "Blucomon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 4,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Baby Hail",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Spits countless icicles from its mouth."
+  },
+  "digivolves_from": [
+    "Chocomon",
+    "Gummymon",
+    "Hiyarimon",
+    "Tunomon"
+  ],
+  "digivolves_to": [
+    "Ginryumon",
+    "Hyougamon",
+    "Moosemon",
+    "Omekamon",
+    "Paledramon",
+    "Yukidarumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Small Dragon Digimon that resides in areas isolated from the outside world by ice. Its physical strength has been tempered by cold, harsh environment, allowing it to lift objects larger than itself with ease. However, because its body is made mainly out of ice, its body will shrink and its power will weaken when exposed to high temperatures. Due to being brought up in areas with small populations, they will tend to form very strong bonds even with Digimon of different species that they encounter. It is especially close to Penmon . Its Special Moves are exhaling chilled air from its mouth, shooting out countless shards of ice ( Baby Hail ), and attacking continuously with its outer shell of ice ( Ice Mash )."
+}

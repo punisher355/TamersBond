@@ -1,0 +1,37 @@
+{
+  "name": "JESmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 11,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Tekken Seibai",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Slices the enemy to pieces with the blades on its arms while moving at high speed."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Arresterdramon: Superior Mode (Brave Snatcher)",
+    "Duramon",
+    "Garudamon",
+    "Groundramon",
+    "Holy Angemon",
+    "Savior Hackmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The crystal in Savior Hackmon 's chest began to shine as it surpassed Perfect to reach its Ultimate form: a Holy Knight Digimon that acquired the title of a \" Royal Knight \", the highest rank of Network Security . It is endowed with the ability to sense the unusual phenomena and signs of chaos that occur all over the Digital World , and is the first of any of the Royal Knights to come running. Rather than act independently, it tends to employ teamwork such as making a coordinated response with nearby Digimon and the Sistermons , which is rare for a Royal Knight; it does so due to its trust in others and so that it will not become overconfident in its abilities. By observing and learning from the Hinukamuy of its mentor Gankoomon , Jesmon also acquired the trio \" Atho \", \" René \", and \" Por \" as part of its ascetic training. They are able to move and act independently under Jesmon's instructions, and boast formidable behavioral abilities such as landing direct attacks on the enemy, the protection of Jesmon, and the rescue of other Digimon. Its Special Moves are slicing the enemy to pieces with the blades on its arms while moving at high speed ( Tekken Seibai ), and an omnidirectional counter technique alongside \"Atho\", \"René\", and \"Por\" that meets every enemy attack with their nine blades ( Schwertgeist ). Its \" Aus Generics \" enables it to temporarily rewrite its own data and perform actions that transcend the laws of nature, leaving its physical abilities unbound by the laws of the Digital World and thus allowing Jesmon to overpower any enemy without taking a single scratch."
+}

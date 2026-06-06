@@ -1,0 +1,63 @@
+{
+  "name": "Garurumon (Black)",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Foxfire",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Breathes high-temperature flames from its mouth."
+  },
+  "digivolves_from": [
+    "Bearmon",
+    "Elecmon",
+    "Floramon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gazimon",
+    "Piyomon",
+    "Renamon",
+    "Strabimon",
+    "Toy Agumon",
+    "Toy Agumon (Black)",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Assaultmon",
+    "Black Rapidmon",
+    "Blue Meramon",
+    "Caturamon",
+    "DORUguremon",
+    "Doumon",
+    "Etemon",
+    "Holy Angemon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Metal Greymon",
+    "Pandamon",
+    "Panjyamon",
+    "Skull Satamon",
+    "Taomon",
+    "Tyilinmon",
+    "Vajramon",
+    "Waru Monzaemon",
+    "Were Garurumon (Black)",
+    "Yaeger Dorulumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Virus attribute Garurumon . The blades extending from its shoulders are so sharp that they slice apart anything they touch. It loves collecting bones and burying them in the ground, though there appear to have been cases of these bones being quietly stolen away by prank-loving Drimogemon . Its Special Move is breathing blue, high-temperature flames from its mouth ( Foxfire ).",
+  "web_created": true
+}

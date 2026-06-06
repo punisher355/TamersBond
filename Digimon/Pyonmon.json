@@ -1,0 +1,25 @@
+{
+  "name": "Pyonmon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Bosamon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Baby Digimon covered in tufty body hair that has a single large ear. It was shy the moment it was born, so if someone stares at it, it will instantly lower its head. However, it is also friendly, and can be seen rubbing its body against Digimon that it is interested in, actively engaging in skin-to-skin contact . It hates opponents that mess with it, and has the power to blow even Child Digimon away with its \" Earnta \", in which it slaps them with its large ear. Similarly, it hates things which make loud noises that ring in its ear, so it lowers its ear and leaves.",
+  "web_created": true
+}

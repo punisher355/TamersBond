@@ -1,0 +1,33 @@
+{
+  "name": "Hexeblaumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 13,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Summon Frost",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Spreads cold air over a wide range, instantly transforming anyone that draws near into statues of ice."
+  },
+  "digivolves_from": [
+    "Crescemon",
+    "Crys Paledramon",
+    "Frozomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A legendary Magic Knight Digimon that only those who have mastered ice sorcery (a high-level programming language ) are said to be able to evolve to. It protected other Digimon until the very end when the Digital World was visited by an ice age long ago, and was later rumored to have moved to another dimension, \" Witchelny \". It excels in the art of manipulating the cold, and creates various things with ice. It starts with weapons such as swords and hammers, and then other tools such as restraints that restrict the enemy's movements, and is also capable of erecting a barrier to defend itself from attacks, so it is definitely an ice professional. Its Special Moves are spreading cold air over a wide range, instantly transforming anyone that draws near into statues of ice ( Summon Frost ), and causing countless ice swords to fall down like a blizzard ( Hecto Edge Blizzard ). In addition, its final secret technique \" Absolute Blast \" unleashes an absolute zero wave from the dragon jaws on its left shoulder which shatters everything."
+}

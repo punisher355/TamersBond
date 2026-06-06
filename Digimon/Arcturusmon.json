@@ -1,0 +1,35 @@
+{
+  "name": "Arcturusmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Black Death",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Pierces the opponent with the drills on its arms, and injects them with GRB Factor to corrode them."
+  },
+  "digivolves_from": [
+    "Metal Greymon (Virus)",
+    "Regulusmon",
+    "Vamdemon"
+  ],
+  "digivolves_to": [
+    "Ragnamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A mysterious Digimon that is said to have evolved by concentrating dark, evil energy to the extreme. In a study on certain Digimon that produce the secretion known as GRB Factor, it was found that they \"theoretically\" evolved when a simulation was conducted in which large amounts of GRB Factor were injected into the Digimon that produce it themselves to their limit. Although the simulation was repeated hundreds of times, all of the simulation results confirmed that they would evolve into this Digimon, so it is theorized to be a Digimon that can manifest even in the real Digital World as long as the conditions are met. It is unknown what sort of ecology it has, but since the level of dark energy measured in the simulation was by far the highest among Digimon that have currently been discovered, it is conjectured that when this Digimon manifests, it will generate a Digital Hazard that drastically alters the environment of the Digital World. Its supposed Special Moves are piercing the opponent with the drills on its arms and injecting them with GRB Factor to corrode them ( Black Death ), and coating the drills on both its arms with large amounts of GRB Factor and spinning them rapidly, allowing it to compress the GRB Factor to its utmost limit, and then shooting it ( Black Confession )."
+}

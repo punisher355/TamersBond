@@ -1,0 +1,45 @@
+{
+  "name": "Evilmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Nightmare Shock",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Fires a supersonic wave from its mouth. Alternatively, traps the foe in a nightmare."
+  },
+  "digivolves_from": [
+    "Candmon",
+    "Gazimon",
+    "Hawkmon",
+    "Impmon",
+    "Phascomon",
+    "Pico Devimon",
+    "Piyomon"
+  ],
+  "digivolves_to": [
+    "Lady Devimon",
+    "Mephismon",
+    "Mummymon",
+    "Phelesmon",
+    "Pumpmon",
+    "Skull Greymon",
+    "Vamdemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Small Devil Digimon that abhors losing. For that reason it is a coward that torments the weak with pricks, without getting into direct combat. It seems it is credited as being the source of the Dark-species Digimon that inhabit the Dark Area , but there are still many mysteries. Its Special Move is subjecting you to a nightmare that you can't wake up from using a supersonic wave it emits from its mouth ( Nightmare Shock )."
+}

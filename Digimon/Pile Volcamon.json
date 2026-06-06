@@ -1,0 +1,35 @@
+{
+  "name": "Pile Volcamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Black Rapidmon",
+    "Etemon",
+    "Grappu Leomon",
+    "Omega Shoutmon",
+    "Paildramon",
+    "Were Garurumon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the evolutions of Volcamon , of which there are said to be seven types. It possesses tremendous power and destructive force, and is well-versed in all sorts of combat techniques, starting with those from pro wrestling . As it evolved, its original massive body was polished even more, transforming it into a smart form suited for hand-to-hand combat. Its Special Moves are using the eruptive power of the volcanoes on its shoulders to slam the enemy into the ground head-first ( Volcanic Driver ), and the strongest fist that can pierce even Chrome Digizoid ( Diamond Fist )."
+}

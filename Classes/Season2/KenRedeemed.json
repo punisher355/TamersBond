@@ -1,0 +1,56 @@
+{
+  "name": "Ken Redeemed",
+  "season": 2,
+  "img": "KenRedeemed.webp",
+  "abilities": [
+    {
+      "name": "Take the Hit",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Friendship rank 3+)",
+      "description": "Once per encounter when an ally Digimon within 4 spaces is targeted by an attack, you may declare Take the Hit before the roll resolves. Your Digimon moves up to 4 spaces toward the ally and receives the attack instead — including all damage and status effects. The ally is completely unaffected. You step in front of harm now. Every time."
+    },
+    {
+      "name": "Wormmon's Trust",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Friendship rank 3+)",
+      "description": "Your Digimon gains +2 to all attack rolls when fighting alongside at least one ally Digimon. The bond is real now. It was always supposed to be. This is what it feels like when it actually is."
+    },
+    {
+      "name": "Making It Right",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Take the Hit, Friendship rank 4",
+      "description": "Once per session at the start of an encounter, choose one ally Digimon. Remove all negative status effects from them immediately before the first turn begins. You cannot undo the past. You can make sure they start clean."
+    },
+    {
+      "name": "Genius For Good",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Wormmon's Trust, Knowledge rank 4",
+      "description": "Once per encounter as a Free Action, choose one ally Digimon about to make an attack. They gain +Knowledge rank to their damage roll on that attack. You still see every angle. Now you use that to help instead."
+    },
+    {
+      "name": "Human Shield",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Making It Right, Friendship rank 5",
+      "description": "Take the Hit can now be used twice per encounter instead of once. Additionally when you use Take the Hit, your Digimon gains temporary HP equal to your Friendship rank before the attack resolves — a small buffer between them and what is coming. You have gotten very good at this. You do not intend to stop."
+    },
+    {
+      "name": "Weight of the Past",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Genius For Good, Knowledge rank 5",
+      "description": "Once per encounter as a Basic Action, choose one enemy Digimon. Make a Command check DN 13. On a success that Digimon takes -3 to all attack rolls for the rest of the encounter. You understand exactly how they think. You used to think the same way."
+    },
+    {
+      "name": "Crest of Kindness",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Friendship rank 7",
+      "description": "Once per session when you use Take the Hit, you may activate Crest of Kindness. Your Digimon takes no damage and suffers no status effects from that attack — the hit is completely absorbed. Nothing gets through. Not this time. Ken spent years being the reason people got hurt. He has decided that is finished."
+    }
+  ]
+}

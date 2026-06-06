@@ -1,0 +1,47 @@
+{
+  "name": "Shakkoumon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Nigimitama",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Shoots exploding clay disks from its waist at the enemy."
+  },
+  "digivolves_from": [
+    "Angemon",
+    "Ankylomon",
+    "Igamon",
+    "Sorcerimon"
+  ],
+  "digivolves_to": [
+    "Belial Vamdemon",
+    "Black War Greymon",
+    "Chaos Dukemon",
+    "Cherubimon (Virtue)",
+    "Goddramon",
+    "Gran Kuwagamon",
+    "Holydramon",
+    "Junomon",
+    "Lampmon",
+    "Seraphimon",
+    "Slash Angemon",
+    "Vikemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Mutation Digimon which Jogress -evolved from Ankylomon and Angemon . It possesses white wings on its body, which shines silver, and according to one theory it is an Angel Digimon which descended to the ancient Digital World . It can rotate its neck and torso 360°, allowing it to attack facing every direction. As its face is expressionless it is difficult to determine what it's thinking, so some observers find it eerie, but its personality is exceedingly gentle. Its Signature Move is firing from its waist ( Nigimitama ). Its Special Move is a red laser beam radiated from both of its eyes ( Aramitama ), and it is said that this beam can reach 100000°C at its focal point.",
+  "web_created": true
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Armamon",
+  "stage": "Mega",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "MalkutCrystal",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Causes sharp crystals to rain down."
+  },
+  "digivolves_from": [
+    "Omega Shoutmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A weapon Digimon classified as one of the \" Legend-Arms \", who are capable of transforming themselves into weapons. Its power is not limited to weaponizing itself, as it is able to forcibly transform the Digimon it cleaves with its greatsword into weapons. Due to that unique special ability, it is thought to be linked to the origin of the Legend-Arms. Armamon is strict in determining whether or not someone is worthy of wielding it as a weapon. Armamon will never surrender itself to anyone, unless they are powerful figures like the Royal Knights Digimon. It fights by freely using its \" Malkut Crystal \", in which it causes sharp crystals to rain down, and \" Rainbow Hand \", where it fires a rainbow-colored aura from its right hand to render the opponent comatose. Its Special Move is a sword dance with its greatsword ( Sword Masquerade ).",
+  "web_created": true
+}

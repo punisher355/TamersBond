@@ -1,0 +1,35 @@
+{
+  "name": "Arresterdramon: Superior Mode (Brave Snatcher)",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Tail Anchor",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "A blazingshōtei-uchi."
+  },
+  "digivolves_from": [
+    "Arresterdramon",
+    "Bao Hackmon"
+  ],
+  "digivolves_to": [
+    "JESmon",
+    "Magna Kidmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Arresterdramon 's Enhancement Mode , which gained further power due to the Kinkoji that appeared when it wished to become stronger. In addition to its large wings, which have increased its flying ability, and the gigantic Tail Anchor , which has been honed to its sharpest, it is a form characterized by its right arm, thought to be that of Bagramon , which bestowed mighty destructive power upon Arresterdramon. Usually, the Kinkoji has the role of inhibiting its power, but it appears to have the opposite role of granting it power, and is said to be proof that Arresterdramon is recognized as a Digimon that uses its power for righteousness. With this drastically increased power, it fights against fiendish Digimon. Its Special Move is a blazing shōtei-uchi ( Blaze Spiker ). If it swings through with all its might, it will completely break through any defense, no matter how sturdy."
+}

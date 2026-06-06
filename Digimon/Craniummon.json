@@ -1,0 +1,41 @@
+{
+  "name": "Craniummon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "End Waltz",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "SpinsClaíomh Solaisto release a sonic wave that completely crushes the foes' data."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Giromon",
+    "Knightmon",
+    "Mammon",
+    "Mistymon",
+    "Skull Greymon",
+    "Skull Satamon"
+  ],
+  "digivolves_to": [
+    "JESmon GX"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The Digimon which best understood decorum among the Royal Knights . It is a perfectionist, and competes with the other Royal Knights Digimon for the top two mission completion rates for Yggdrasill 's orders. When fighting with an opponent, its policy is always to defeat it with one-on-one combat, and if the opponent is a formidable enemy, its delight is supreme. Craniummon's armor had its code modified by Yggdrasill, and was changed into Black Digizoid . It has become possible for it to generate a weapon and shield from its armor by accessing its data. Its Special Move is firing a sonic wave at supersonic speeds by rapidly spinning its magic spear, \" Claíomh Solais \" ( End Waltz ). Those who suffer this technique continue to \"Dance\" until all of their data is pulverized by the shock wave. Also, when it invokes its \" God Bless \", its magic shield \" Avalon \" defends in every direction with an impregnable wall, and it is able to negate any attack for just three seconds.",
+  "web_created": true
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Liollmon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 3,
+    "LVE": 5,
+    "KNW": 3,
+    "SNC": 4,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Cuts the opponent to pieces with its sharp claws."
+  },
+  "digivolves_from": [
+    "Frimon"
+  ],
+  "digivolves_to": [
+    "Boarmon",
+    "Centalmon",
+    "Coelamon",
+    "DORUgamon",
+    "Kyubimon",
+    "Leomon",
+    "Liamon",
+    "Löwemon",
+    "Mad Leomon",
+    "Pegasmon",
+    "Revolmon",
+    "Sealsdramon",
+    "Wizarmon",
+    "Mad Leomon: Armed Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Holy Beast Digimon which has a golden coat. There seems to be very few surviving individuals, so its existence was not confirmed until recently. It is a Digimon with very intense territoriality , so it doesn't show mercy to those who enter its territory, even if they are the same species of Digimon. When it is on alert, the hair on its head becomes tinged with static electricity, and it is said that it produces a sound when threatened. Its Special Moves are cutting the opponent to pieces with its sharp claws ( Lio Claw ), and aiming at the opponent's vitals with its fangs ( Critical Bite ). Although \" Critical Bite \" has the explosive power to take down even Adult Digimon with a single blow, its success rate is low."
+}

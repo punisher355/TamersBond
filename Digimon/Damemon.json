@@ -1,0 +1,40 @@
+{
+  "name": "Damemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Bunbun Ken",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Rotates its tonfa, barely hitting the enemy but making them flinch."
+  },
+  "digivolves_from": [
+    "BEMmon",
+    "Herissmon",
+    "Sistermon Blanc"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Cho·Hakkaimon",
+    "Destromon",
+    "Lucemon: Falldown Mode",
+    "Skull Baluchimon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Damemon was born by coincidence when the waste data drifting through the Digital World randomly combined. Since \"No good, no good!\" is its favorite phrase, it has a bad habit of criticizing anyone and everyone without reading the room, regardless of the situation. Although it is the most \"No good, no good!\" itself, it somehow gets by with the help of its partner, Tyutyumon . It's only together with Tyutyumon that Damemon can finally be said to be a decent-performing Digimon. Tyutyumon stays in the \" Tyutyu Tray \" on the back of Damemon's head, and takes Damemon to various places to go play. When the two of them are together, every day is Priceless. Its Special Move, \" Bunbun Ken \", involves merely rotating its tonfa and rarely ever hits its target, making it more useful for intimidating enemies instead of dealing damage. Its \" Gun Vulcan \", in which it fires small, black, mysterious objects that spread a foul smell from the hidden guns in its feet and tonfa, repulses enemies and causes them to lose their fighting spirit rather than actually inflicting damage. After firing them, however, it will have to clean up after itself or risk angering the Digimon residing in the area; hence, it is always careful with this move. With its \" Boo~st Attack \" [N 1] , it spreads a large amount of smelly gas as it charges forth, though not even Damemon knows where it will fly off to. The damage dealt to the opponent when it does hit, together with the smelly gas, is very large, emotionally."
+}

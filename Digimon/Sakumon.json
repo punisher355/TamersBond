@@ -1,0 +1,25 @@
+{
+  "name": "Sakumon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Sakuttomon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A tiny Digimon with a single blade protruding from its head. Its whole body is golden, and the blade on its head shines very brightly. Its personality is mischievous and it is constantly moving as long as it is awake, but it is bad at balancing due to the weight of its head, so surrounding Digimon can occasionally be seen running around trying to escape because of it swinging its blade as it rolls around.",
+  "web_created": true
+}

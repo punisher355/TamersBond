@@ -1,0 +1,51 @@
+{
+  "name": "Superstarmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Halley Squall",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Summons countless meteors to rain down upon the enemy from overhead."
+  },
+  "digivolves_from": [
+    "Geremon",
+    "Grottemon",
+    "Knight Chessmon (White)",
+    "Nanimon",
+    "Numemon",
+    "Omekamon",
+    "Revolmon",
+    "Scumon",
+    "Starmon",
+    "Swanmon",
+    "Thunderballmon",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Ancient Volcamon",
+    "Gankoomon",
+    "Goddramon",
+    "Justimon: Blitz Arm",
+    "Kaiser Greymon",
+    "Marin Angemon",
+    "Platinum Numemon",
+    "Prince Mamemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The space warrior Starmon turned into this Perfect level Mutation Digimon. It raised its self-satisfaction and clothed itself in a flashy outfit, making its debut as a star. Although it means to use its sunglasses as a disguise to conceal its superstar identity, they do not help at all. Its Special Move, \" Halley Squall \", involves summoning countless meteors to rain down upon the enemy from overhead."
+}

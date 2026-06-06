@@ -1,0 +1,35 @@
+{
+  "name": "Sagomon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 11,
+    "LVE": 7,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Kouyouhoujou: Kamon no Jin",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Raises a waterspout by freely spinning itsKouyouhoujoustaff."
+  },
+  "digivolves_from": [
+    "Gawappamon",
+    "Tortamon"
+  ],
+  "digivolves_to": [
+    "Takutoumon",
+    "Xuanwumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Demon Man Digimon that was banished from the Digital World 's heaven, and fell to the backwoods of North Bridge Island . Although it usually has a cheerful, joke-cracking personality, if it touches the skulls wrapped around its waist it goes into a fury like a raging fire. That is because if even one of the nine skulls wrapped around its waist is lost it will be transformed into a terrifying Digimon. It possesses the \" Kouyouhoujou \" staff which demonstrates terrifying destructive power in the super-heavyweight class, it spins it freely to raise a waterspout ( Kouyouhoujou: Kamon no Jin ), and strikes the ground with its staff to shatter it and release a raging current ( Kouyouhoujou: Taki no Jin ). Also, for close combat it can stab with the crescent-moon shaped blade ( Getsugazan ). It is troubled by worrying, \"What am I?\", so it went on a journey to discover the answer.",
+  "web_created": true
+}

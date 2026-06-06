@@ -1,0 +1,52 @@
+{
+  "name": "Barbamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Pandemonium Lost",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Unleashes all of theDark Area's evil energies at once as an ultra-high-temperature explosion that burns up everything without a trace."
+  },
+  "digivolves_from": [
+    "Bastemon",
+    "Blossomon",
+    "Blue Meramon",
+    "Cerberumon",
+    "Death Meramon",
+    "Doumon",
+    "Fantomon",
+    "Holy Angemon",
+    "Karatenmon",
+    "Kyukimon",
+    "Lucemon: Falldown Mode",
+    "Matadrmon",
+    "Megalo Growmon",
+    "Mummymon",
+    "Shawujinmon",
+    "Skull Satamon",
+    "Taomon",
+    "Tyilinmon",
+    "Vamdemon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [
+    "Apocalymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "As a Demon Lord Digimon which has the appearance of a long-bearded old man, it is one of the \" Seven Great Demon Lords \". It resides within the heart of the Dark Area , the den of demons , and manipulates Fallen Angel Digimon to run the whole gamut of evil. It is obsessed with all of the treasure which exists within the Network , so out of avarice, and regardless of the means, it has a cruel personality with a greed that would kill Digimon just for a piece of treasure. It is the foremost and most cunning schemer of the Seven Great Demon Lords, and can easily manipulate the Ultimate Deathmon in addition to Fallen Angel Digimon. Its Special Moves are using its demonic staff \" Death Lure \" to tempt Digimon into an inescapable living hell, converting them to wickedness, and unleashing all of the Dark Area's evil energies at once as an ultra-high-temperature explosion that burns up everything without a trace ( Pandemonium Lost ). In addition, even Belial Vamdemon 's Special Move \" Pandemonium Flame \" only releases a small fraction of these energies.",
+  "web_created": true
+}

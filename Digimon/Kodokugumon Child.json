@@ -1,0 +1,36 @@
+{
+  "name": "Kodokugumon Child",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 4,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Poison Nail",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Scratches the enemy with its poison claw gloves."
+  },
+  "digivolves_from": [
+    "Puyoyomon",
+    "Kodokugumon Baby"
+  ],
+  "digivolves_to": [
+    "Chamblemon",
+    "Karatuki Numemon",
+    "Dokugumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Child Digimon with the appearance of a spider that behaves in clusters with Dokugumon . It is usually docile and hangs from things such as tree branches with its body curled into a ball, but if an enemy approaches, it attacks en masse from overhead. It wears gloves with a strong poison on the claws because it is unable to produce a strong poison of its own yet. Its Special Move is scratching the enemy with its poison claw gloves ( Poison Nail ).",
+  "web_created": true
+}

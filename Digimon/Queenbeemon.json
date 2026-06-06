@@ -1,0 +1,33 @@
+{
+  "name": "Queenbeemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 14,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Accel Stinger",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Produces the most effective poison against its opponent and launches it at them from theRoyal Throne's arm unit."
+  },
+  "digivolves_from": [
+    "Vespamon"
+  ],
+  "digivolves_to": [
+    "Tyrant Kabuterimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon that is the ruler of the \" Royal Base \", serving as its \" Queen \", and also has an ambitious side that seeks the endless expansion of the base. Possessing high scientific and technological prowess, it designed and developed the Royal Base itself. In addition, it boasts remarkable information processing abilities, such as handling defensive layouts and commanding formations during battle all by itself. On the other hand, its solo combat ability is inferior to Tiger Vespamon 's, but it makes up for this with the multitude of functions of its covert honey weapon/throne, the \" Royal Throne \", which can be considered to be a part of its own body. It has a conspicuous personality, and never fails to flaunt the fact that it is queen, even within the base. Queenbeemon's Digimon subordinates also revere it as their queen, and while it is being showered with calls of affection on the throne, it routinely waves its covert honey equipment, the \" Beam Fan \", around, which has absolutely no tactical effect at all. Its Special Move is producing the most effective poison against its opponent and launching it at them from the Royal Throne 's arm unit ( Accel Stinger ). In its \" Hornet Eraser \", a beam of light fired from the turret on the underside of the Royal Throne , the barrel is further expanded by being supplied with energy from the Royal Base, boosting its firepower to the point that it can blow a single mountain away."
+}

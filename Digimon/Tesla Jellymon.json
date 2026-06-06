@@ -1,0 +1,37 @@
+{
+  "name": "Tesla Jellymon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Physalist",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Sends an electric shock stored in its palms through the enemy's vitals."
+  },
+  "digivolves_from": [
+    "Jellymon"
+  ],
+  "digivolves_to": [
+    "Black King Numemon",
+    "Marin Devimon",
+    "Thetismon",
+    "Waru Seadramon",
+    "Whamon Perfect"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The Adult form of Jellymon that has grown by absorbing data from combat sports like steel cage death matches while in search of stimulation and pleasure. Its electric shock techniques have been further enhanced, and there are even more techniques adapted from things such as karate and professional wrestling in the fighting it unleashes. It easily dodges the enemy's attacks by capitalizing on the softness of its body. Its Special Move is sending an electric shock stored in its palms through the enemy's vitals ( Physalist ). In addition, it has \" Punischöne \", in which it shocks and punishes the enemy in a stimulating manner with the high-voltage belts that extend from its body, and \" Vorsprite \", in which it electrifies its body and rams into them while spinning."
+}

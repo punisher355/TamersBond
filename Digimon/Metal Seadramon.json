@@ -1,0 +1,51 @@
+{
+  "name": "Metal Seadramon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Ultimate Stream",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires a massive beam of energy from the cannon on its snout."
+  },
+  "digivolves_from": [
+    "Brachimon",
+    "Dagomon",
+    "Gigadramon",
+    "Hangyomon",
+    "Marin Devimon",
+    "Megadramon",
+    "Mephismon",
+    "Mermaimon",
+    "Paildramon",
+    "Sharkmon",
+    "Shawujinmon",
+    "Skull Seadramon",
+    "Triceramon",
+    "Waru Seadramon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Whamon Perfect",
+    "Zudomon"
+  ],
+  "digivolves_to": [
+    "Apocalymon",
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese The final form of the Seadramon-species whose whole body is covered in the super-metal, Chrome Digizoid . Its Metal Body reflects every attack. Furthermore, it has the fastest speed of movement among aquatic Digimon. Metal Seadramon was remodeled as a Digimon for use in interception under the sea. With this, all Digimon for use in land, sea, and sky interception have been completed. Its Special Move is an energy cannon that is fired off from its snout ( Ultimate Stream ). The formal name of \"Chrome Digizoid\", the metal used by Metal-species Digimon, is called \"Chrondigizoit Hybrid Organism alloy\" and is abbreviated as \"CHO-alloy\". Chrome Digizoid is an intermediate material between Chrondigizoit and living tissue, so it is able to integrate with living tissue, and it possesses both the super-hard firmness of Chrondigizoit, as well as the smoothness of living tissue."
+}

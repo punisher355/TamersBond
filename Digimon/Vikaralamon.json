@@ -1,0 +1,44 @@
+{
+  "name": "Vikaralamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Súkara",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Bores through the opponent with a redBǎo Lún."
+  },
+  "digivolves_from": [
+    "Allomon",
+    "Ankylomon",
+    "Arbormon",
+    "Boarmon",
+    "Ice Devimon",
+    "Leomon",
+    "Liamon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Anubimon",
+    "Beelzebumon",
+    "Kuzuhamon: Miko Mode",
+    "Parasimon",
+    "Xuanwumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Pig . As a follower of the Four Holy Beasts Digimon Xuanwumon , it is an observer-type that gazes at everything from the outside without ever losing its broad smile. Although it has a special skill of sleeping with its eyes open, its intense snoring and the grinding of its teeth while sleeping quickly give it away. The wheel of light that it spews from its mouth is called the Bǎo Lún , and its effect differs depending on its color; a blue Bǎo Lún captures the opponent, a yellow Bǎo Lún is able to have things placed on it by taking the shape of a disk, if one passes through a green Bǎo Lún their wounds are instantly healed, and so on, as there are several variations. Its Special Move is boring through the opponent with a red Bǎo Lún ( Súkara )."
+}

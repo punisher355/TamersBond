@@ -1,0 +1,35 @@
+{
+  "name": "Armagemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 11,
+    "LVE": 12,
+    "KNW": 13,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Black Rain",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Launches several rocket like attacks from its back wildly into the air."
+  },
+  "digivolves_from": [
+    "Chimairamon",
+    "Infermon",
+    "Metal Tyranomon",
+    "Mummymon",
+    "Silphymon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Super-Ultimate Digimon that was born when Diablomon 's Babies fused in large quantities, causing a mutation. Diablomon had the ability to make many copies of itself, but they were characterized by having lesser abilities than the original possessed. However, by producing Babies in large quantities and then fusing them, it did not disperse its abilities, but instead was able to attain power greater than Diablomon by condensing them into one being. Also, Diablomon-species Digimon are special Digimon that are affiliated with neither light nor darkness. Its Special Moves are firing energy shells from its back into the sky, which fall like rain as scattered beams ( Black Rain ), and a destructive energy wave emitted from its gaping maw ( Ultimate Flare ).",
+  "web_created": true
+}

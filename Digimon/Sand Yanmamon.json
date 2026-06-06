@@ -1,0 +1,38 @@
+{
+  "name": "Sand Yanmamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Desert Wind",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Generates a small sandstorm by flapping its wings intensely."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Candmon",
+    "Dokunemon",
+    "Tentomon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Tonosama Gekomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A species of Yanmamon that lives in the desert. Unlike Yanmamon, it has a carefree personality, but is merciless against Digimon that enter its territory. Its Special Move is generating a small sandstorm by flapping its wings intensely ( Desert Wind )."
+}

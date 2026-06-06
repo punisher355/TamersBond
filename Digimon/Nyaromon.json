@@ -1,0 +1,62 @@
+{
+  "name": "Nyaromon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "element": "Neutral",
+    "name": "Baby Bubble",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Puffs up its tail, makes the hairs like wires, and strikes the opponent."
+  },
+  "digivolves_from": [
+    "Bubbmon",
+    "Pitchmon",
+    "Poyomon",
+    "Punimon",
+    "Pururumon",
+    "Yukimi Botamon"
+  ],
+  "digivolves_to": [
+    "Agumon",
+    "Agumon Hakase",
+    "Armadimon",
+    "Bakumon",
+    "Bearmon",
+    "Elecmon",
+    "Gabumon",
+    "Gammamon",
+    "Gaomon",
+    "Gizamon",
+    "Gottsumon",
+    "Guilmon",
+    "Hackmon",
+    "Hawkmon",
+    "Kamemon",
+    "Lopmon",
+    "Lucemon",
+    "Lunamon",
+    "Piyomon",
+    "Plotmon",
+    "Renamon",
+    "Terriermon",
+    "Tinkermon",
+    "Yuki Agumon",
+    "Terriermon Assistant"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A tiny Digimon with cat-like characteristics. It is always capricious, and it seems it was given the name Nyaromon due to how 'cat'-like its behaviour is. Although it is overflowing with curiosity and can be quite fickle, it also has a lonely side. Its Special Move is puffing up its tail, making the hairs like wires and then striking the opponent ( Fox Tail ). However, there has never yet been an opponent observed to flinch from this attack."
+}

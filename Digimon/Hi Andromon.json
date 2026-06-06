@@ -1,0 +1,45 @@
+{
+  "name": "Hi Andromon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 10,
+    "SNC": 13,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Atomic Ray",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Combines neutron energy and nuclear energy from the regulatory turbines on its shoulders to form a beam that annihilates enemies."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Caturamon",
+    "Destromon",
+    "Gigadramon",
+    "Giromon",
+    "Locomon",
+    "Makuramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Mamemon",
+    "Mummymon",
+    "Rapidmon Perfect",
+    "Sinduramon",
+    "Tekkamon",
+    "Vademon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate Cyborg Digimon that was perfected by improving the incomplete Andromon . The percentage of Chrome Digizoid parts which compose its body has increased, and it is impossible to miss the extent of its gains in offensive and defensive power from this, compared to Andromon. Additionally, while the Bio-Synapse circuits which govern its thinking were incomplete when it was an Andromon, by adding Chrome Digizoid parts to them, it has become self-aware and thus capable of executing its objectives. Because it is both a Vaccine-species and a Cyborg, its attacks against Virus-types are not only scarily accurate but also intense. Its Special Move is taking the fission energy emanating from the blue neutron-control turbine on its right shoulder and the fusion energy emanating from the red atom-control turbine on its left shoulder, combining them at the tip of its hands, and then firing off a beam which annihilates the opponent ( Atomic Ray )."
+}

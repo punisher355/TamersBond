@@ -1,0 +1,46 @@
+{
+  "name": "Lekismon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Moon Night Kick",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Leaps high into the air and performs a diving kick."
+  },
+  "digivolves_from": [
+    "Gaomon",
+    "Lunamon",
+    "Patamon",
+    "Pico Devimon",
+    "Renamon",
+    "Sistermon Blanc",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Crescemon",
+    "Grappu Leomon",
+    "Mach Gaogamon",
+    "Taomon",
+    "Waru Monzaemon",
+    "Waru Seadramon",
+    "Were Garurumon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Beast Man Digimon that has gained astounding jumping ability, and uses its swift movements to toy with its enemies. Although its personality is as wavering as the phases of the moon, its appearance exudes a somewhat mystical air. Its Special Moves are creating hypnotic water bubbles from the \" Moon Gloves \" worn on its hands, and throwing them to lull the enemy to sleep ( Moon Night Bomb ), as well as pulling beautiful arrows of ice from the protrusions on its back and firing them ( Tear Arrow ). It also displays great strength with its \" Moon Night Kick \", where it leaps high into the air and performs a diving kick."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Tempomon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 7,
+    "SNC": 9,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Bulkmon",
+    "Exermon",
+    "Namakemon",
+    "Runnermon"
+  ],
+  "digivolves_to": [
+    "Achillesmon",
+    "Kazuchimon",
+    "Shivamon",
+    "Shroudmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Bird Man Digimon that evolved via dance music data. It is a natural-born dancer who always performs to the rhythm and unleashes its taijutsu while dancing, even in battle. It is a performer who dances to things ranging from cheerful music to mellow, moody songs, and whenever its headphones come off or the music stops, it gets into a bad mood and starts acting violently. It has mastered \" Rhythmic Arts \", dance kenpō which incorporates capoeira and martial arts. Its Special Moves are blowing the enemy away with a very loud beat emitted from the speaker in its abdomen ( Howling Blast ), and creating tornadoes and roaring sounds with its skillful footwork ( Upbeat Twister )."
+}

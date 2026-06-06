@@ -1,0 +1,31 @@
+{
+  "name": "Zombie Plutomon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Dark",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 16,
+    "LVE": 15,
+    "KNW": 15,
+    "SNC": 14,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Hazard Hold",
+    "element": "Dark",
+    "pr": 15,
+    "tags": "[MELEE] [DRAIN]",
+    "description": "Absorbs data from the Digicore of an enemy it grabs until it rots away."
+  },
+  "digivolves_from": [
+    "Plutomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A strange state in which Plutomon 's Digicore shut down due to reaching the end of its lifespan, yet only its body continues to function. It no longer has free will, and has lost its sense of purpose in defeating evil. It is a cursed being that thinks of nothing but indiscriminately devouring the data of others, endlessly roaming about in search of Digicores. It is a \"terrible predator\" in a completely different sense to when it was alive, and its decaying body will never be satiated, no matter how many Digicores from others it consumes. Its Special Moves are absorbing data from the Digicore of an enemy it grabs until it rots away ( Hazard Hold ), emitting X-particles from its left hand in the shape of a sickle and mincing the enemy with it ( Hell's Slice ), and infecting the enemies it has bitten with its own virus, turning them into its puppets ( Marionette Abomination ).",
+  "web_created": true
+}

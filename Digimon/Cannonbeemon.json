@@ -1,0 +1,56 @@
+{
+  "name": "Cannonbeemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Nitro Stinger",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Fires from its super-large caliber laser cannon which can shoot through even heavy armor."
+  },
+  "digivolves_from": [
+    "DORUgamon",
+    "Flymon",
+    "Ginryumon",
+    "Guardromon (Gold)",
+    "Hudiemon",
+    "Jazardmon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Omekamon",
+    "Raptordramon",
+    "Stingmon",
+    "Stingmon (Black)",
+    "Sunflowmon",
+    "Tankmon",
+    "Waspmon"
+  ],
+  "digivolves_to": [
+    "Alphamon",
+    "Ancient Beatmon",
+    "Dinotigermon",
+    "Gran Kuwagamon",
+    "Grand Locomon",
+    "Herakle Kabuterimon",
+    "Metal Piranimon",
+    "Ouryumon",
+    "Saint Galgomon",
+    "Tiger Vespamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A massive Digimon that defends the mysterious \"aerial, covert honey base, Royal Base \". Although the aerial base is exposed to danger from all angles, Cannonbeemon is able to cover a vast range with a bombarding barrage fired simultaneously from the gigantic arms containers on its upper body. Also, even if the opponent is heavily armored, it can use its Special Move \" Nitro Stinger \" to shoot clean through them with its high-caliber laser cannon. Its \" Sky Rocket ∞ \" fires shots from its containers, which boast an innumerable number of loaded ordnance, and will continue furiously until the coast is completely clear."
+}

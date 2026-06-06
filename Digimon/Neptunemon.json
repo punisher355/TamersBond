@@ -1,0 +1,41 @@
+{
+  "name": "Neptunemon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Vortex Penetrate",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Pierces a foe with the spearKing's Bite, which can pursue targets with a mind of its own."
+  },
+  "digivolves_from": [
+    "Dagomon",
+    "Gerbemon",
+    "Gusokumon",
+    "Hangyomon",
+    "Mermaimon",
+    "Piranimon",
+    "Sharkmon",
+    "Silphymon",
+    "Whamon Perfect",
+    "Zudomon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Before ⇨ Japanese One of the Olympos XII , it is a Digimon god of the sea which governs all Aquatic Digimon. The Scalemail which covers Neptunemon's body is made of \" Chrome Digizoid \" converted into the \" Blue Digizoid \" which excels in agility, so it is capable of moving at terrifying speeds in the sea. It constructed a castle to reside within, the \"Abyss Sanctuary\", at the far depths of the sea, so that only those who can withstand the water pressure of the extreme depths can intrude upon it. Its Special Moves are firing off its sentient spear \" King's Bite \" ( Vortex Penetrate ), and a gigantic tidal wave which swallows everything ( Wave of Depth )."
+}

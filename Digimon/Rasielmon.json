@@ -1,0 +1,31 @@
+{
+  "name": "Rasielmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Knowledge Stream",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Freely combines thefive elementsfrom themagic circleson both of its arms and releases enormous energy."
+  },
+  "digivolves_from": [
+    "Meicrackmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ophan Digimon that was once appointed to the same rank as Ofanimon . It possesses the mysterious power to see right through everything in the world from the \" Kernel \" ( God 's domain). It is said that with that power, it knows all about events that happen throughout the Digital World , and has accumulated a divine amount of knowledge. Its Special Move is freely combining the five elements from the magic circle s on its arms and releasing enormous energy ( Knowledge Stream ). As for its \" Sefer Raziel \", which brings about all kinds of miracles to exterminate the adversary, not even Rasielmon itself knows what will happen."
+}

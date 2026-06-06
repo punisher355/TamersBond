@@ -1,0 +1,41 @@
+{
+  "name": "Dark Maildramon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Wind",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Dark Wing",
+    "element": "Water",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Flaps its tattered wings, causing dark bullets to rain down."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Bokomon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Hippogriffomon",
+    "Magnamon",
+    "Megalo Growmon",
+    "Metal Greymon (Virus)",
+    "Metal Tyranomon",
+    "Paildramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A form of Maildramon , who is Knightmon 's servant and acquired the power of \" Miracles \", that found righteousness in evil after abandoning justice. Its Chrome Digizoid armor has been dyed a dark color, and it is looking for a heart of darkness in its master, Knightmon. If it is a Knightmon with a strong evil heart, then it will be obedient to them, but if it senses even a shred of conscience, it will crush even its own master under its bulk. Its Special Move is flapping its tattered wings, causing dark bullets to rain down ( Dark Wing ).",
+  "web_created": true
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Wolfmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Licht Sieger",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Slashes with theLicht Schwertswords."
+  },
+  "digivolves_from": [
+    "Strabimon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Knightmon",
+    "Were Garurumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Light which bears the might of one of the legendary Warrior Ten . The lavender parts all over its body are Saint Amethyst , in which holy light is contained. Due to the holy light, the amethyst retains its extraordinary hardness as long as it keeps its righteous spirit, but the second a negative spirit arises in the possessor, it becomes brittle. It is the possessor of a chivalrous spirit that puts its life on the line for the things it believes in, and hates injustice. Because Wolfmon is taciturn and doesn't really like to concern itself with others, it often has the impression of being cold and unfeeling, but it is actually a kind-hearted warrior. Its Special Moves are splitting the opponent in two with its \" Licht Schwert \" light swords ( Licht Sieger ), and similarly, connecting its two \" Licht Schwert \" and then cutting the opponent into many pieces ( Zwei Sieger ).",
+  "web_created": true
+}

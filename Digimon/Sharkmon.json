@@ -1,0 +1,35 @@
+{
+  "name": "Sharkmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 8,
+    "SNC": 9,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Issei Hōgeki",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Deploys and fires its cannons."
+  },
+  "digivolves_from": [
+    "Deltamon",
+    "Seadramon"
+  ],
+  "digivolves_to": [
+    "Metal Seadramon",
+    "Neptunemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A large shark Digimon that evolves from Aquatic Digimon with a overwhelming tenacity to catch prey. Having taken in battleship data, over half of its body is mechanized. It is a fiendish Digimon that uses its anchor to capture Digimon that live in the Net Ocean or pass close by, and then devours them. Its Special Moves are deploying and firing its cannons ( Issei Hōgeki ), and torpedoes that self-destruct after biting the enemy ( Plutodumon ). In addition, it captures the enemy with its anchor, and charges at them while reeling them in ( Fang Charge )."
+}

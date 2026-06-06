@@ -1,0 +1,42 @@
+{
+  "name": "Sandiramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Krishńa",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Impales the opponent by thrashing its body and then powerfully vomiting up a Bǎo Kuí or A poisonous roar that dissolves anything it hits."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Coatlmon",
+    "Devidramon",
+    "Devimon",
+    "Growmon",
+    "Kyubimon (Silver)",
+    "Sagittarimon",
+    "Stingmon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Diablomon",
+    "Zhuqiaomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Snake . As a follower of the Four Holy Beasts Digimon Zhuqiaomon , it is the most cunning and cruel among the Deva. It doesn't like to decide matches in an instant, and prefers to instead choke the life out of the opponent while tormenting them bit by bit. It usually lives deep beneath the ground, and subterranean maneuvers are its specialty. During battle, it can produce a spear made of light, the Bǎo Kuí , from its mouth, and skillfully wield it with its tail wrapped around it like a hand. Although the Bǎo Kuí vanishes once it slashes the opponent, as long as Sandiramon's energy lasts, it can spit out any number of them, and they will not degrade in sharpness. Its Special Move is impaling the opponent by thrashing its body and then powerfully vomiting up a Bǎo Kuí ( Krishńa )."
+}

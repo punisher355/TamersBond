@@ -1,0 +1,36 @@
+{
+  "name": "Soloogarmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Prominence Laser",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Produces a focused, ultra-high-temperature magical flame from the index and middle fingers of both its hands, and uses it to shoot through distant enemies."
+  },
+  "digivolves_from": [
+    "Filmon",
+    "Loogarmon",
+    "Tyranomon"
+  ],
+  "digivolves_to": [
+    "Fenriloogamon",
+    "Rasenmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that succeeded in controlling the sinister magic data of the mythical warg , which slept within the deepest parts of its Digicore . Program code written in a special language lines the inside of the armor that covers its whole body, suppressing its enormous amount of magical power, which is transformed into raging magical flames, as if it were sealed magic. Soloogarmon is able to freely manipulate the magical flames by modifying the program code, and these manipulated flames can be utilized for all kinds of actions, such as attacking, moving, and posture control. It can produce a focused, ultra-high-temperature magical flame called \" Prominence Laser \" from the index and middle fingers of both its hands, and despite being a flame, it can shoot through distant enemies as if it were a laser beam. Its Special Move is making the magical flame of the \" Vánagandr \", the mace in its right hand, burn at its highest temperature, forming a blade and slashing with it ( Eruption Howling ). It is said that when the ultra-high-temperature flame blade chafes against the air, it makes a sound like the howling of a wolf. In addition, it also uses \" Sköll Rage \", an attack where it uses the thrust of the magical flames spurting from both its shoulders to move at high speed, and then hurl the Vánagandr at the opponent."
+}

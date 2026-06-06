@@ -1,0 +1,44 @@
+{
+  "name": "Jijimon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Hang on Death",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Sends those with evil hearts to the land of the dead with its cherished staff."
+  },
+  "digivolves_from": [
+    "Big Mamemon",
+    "Etemon",
+    "Giromon",
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Mamemon",
+    "Metal Mamemon",
+    "Monzaemon",
+    "Mummymon",
+    "Pandamon",
+    "Piccolomon",
+    "Vamdemon",
+    "Were Garurumon",
+    "Wisemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An elder Digimon that is said to have existed since the era in which the Digital World was created and knows everything about the Digital World. It apparently guides chosen humans whenever the world faces a crisis. Although within it hides incomparable power, it rarely ever exhibits its true strength. Its Special Move is sending those with evil hearts to the land of the dead with its cherished staff ( Hang on Death ).",
+  "web_created": true
+}

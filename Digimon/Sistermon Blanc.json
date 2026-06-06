@@ -1,0 +1,37 @@
+{
+  "name": "Sistermon Blanc",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 3,
+    "SNC": 3,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Tokomon"
+  ],
+  "digivolves_to": [
+    "Damemon",
+    "Galgomon",
+    "Lekismon",
+    "Sistermon Blanc (Awake)",
+    "Sistermon Ciel",
+    "Sistermon Noir"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A girl-shaped Digimon that looks like it's wearing a white rabbit, and whose elder sister is Sistermon Noir . In contrast to its elder sister Noir, it is slightly introverted, and it almost always hides behind its elder sister. It is caring for Hackmon just like its elder sister, and also acts as its escort. Although it is trying to diligently carry out Gankoomon 's request and assist in training with Hackmon, it frequently ends up reining in its elder sister's violent manner. In order to repay Gankoomon for saving it and its elder sister, it puts all of its effort into being a chaperone for Hackmon. The triple-pronged \" Cross Barbée \" lance that it carries as a weapon has both the offensive side of its \" Divine Pierce \", which pierces the opponent, and the defensive side that guards itself using the \" Protect Wave \" that it generates by stabbing the butt end into the ground. Furthermore, it has \" Grand Sister Cruz \", a coordinated technique with its elder sister."
+}

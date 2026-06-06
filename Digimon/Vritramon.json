@@ -1,0 +1,37 @@
+{
+  "name": "Vritramon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Corona Blaster",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "12Fires lasers that rival a solar heat ray from theRudriya Darpaṇa.Jumps into the air, cloaked in flames, performing a double uppercut.[N 2]"
+  },
+  "digivolves_from": [
+    "Fairimon",
+    "Flare Lizamon",
+    "Flare Lizarmon",
+    "Meramon",
+    "Agnimon"
+  ],
+  "digivolves_to": [
+    "Kaiser Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Flame which bears the might of one of the legendary Warrior Ten . This firefighter has skin that can withstand high temperatures and the ability to move even through lava, and snuffs out flames with instant, explosive blazes. It is said that it was born from active volcano research data, and it is thought that it contains an immeasurable, unknown energy. The name of the fire dragon , who is considered the nemesis of the thunder god Indra of Indian mythology, is embodied in its ferocious nature. The more heroic its tactics and the more powerful the opponent is, the more it burns with combativeness. It also has a reckless side that doesn't understand retreating, even in a disadvantageous fight. Its Special Moves are firing lasers that rival a solar heat ray from the \" Rudriya Darpaṇa \" superweapons [N 1] on both of its arms ( Corona Blaster ), setting its whole body aflame, then releasing a high-temperature tornado by flapping its wings ( Flame Storm ).",
+  "web_created": true
+}

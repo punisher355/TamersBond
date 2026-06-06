@@ -1,0 +1,49 @@
+{
+  "name": "Chrysalimon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Dark",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Data Crusher",
+    "element": "Dark",
+    "pr": 5,
+    "tags": "[MELEE] [PIERCE]",
+    "description": "Destroys the opponent's data by stabbing them with the tentacles on its back."
+  },
+  "digivolves_from": [
+    "Arkadimon Child",
+    "Candmon",
+    "Gazimon",
+    "Keramon",
+    "Lucemon",
+    "Monodramon",
+    "Palmon",
+    "Pico Devimon"
+  ],
+  "digivolves_to": [
+    "Algomon (Perfect)",
+    "Archnemon",
+    "Arkadimon Perfect",
+    "Atlur Kabuterimon (Blue)",
+    "Cyberdramon",
+    "Dagomon",
+    "Infermon",
+    "Orochimon",
+    "Taomon",
+    "Nanomon (Digimon)"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Adult Digimon whose appearance resembles a chrysalis. In order to evolve into a stronger Digimon, the Child-level Keramon entered a chrysalis-like state and began conserving its energy. As a result, it is completely unable to move, but it is protected by its tough shell, and can attack the opponent with the tentacles extending from its back. In some cases, it can evolve to Perfect without becoming an Adult, but it is able to evolve to a stronger Perfect by evolving to Chrysalimon. Its Special Move is destroying the opponent's configuration data with the tentacles extending from its back ( Data Crusher ).",
+  "web_created": true
+}

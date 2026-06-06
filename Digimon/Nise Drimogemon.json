@@ -1,0 +1,36 @@
+{
+  "name": "Nise Drimogemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 6,
+    "LVE": 5,
+    "KNW": 5,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Nise Drill Spin",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Thrusts at the enemy with the gigantic drill on its nose."
+  },
+  "digivolves_from": [
+    "Dokunemon",
+    "Gabumon",
+    "Modoki Betamon"
+  ],
+  "digivolves_to": [
+    "Digitamamon",
+    "Insekimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that looks similar to Drimogemon , it was given the name \" Nise \" due to its suspicious mustache. If this Digimon were to have been discovered earlier, Drimogemon could have ended up being called \"Nise\". Its Special Move is thrusting at the enemy with the gigantic drill on its nose ( Nise Drill Spin )."
+}

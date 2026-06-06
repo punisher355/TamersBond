@@ -1,0 +1,34 @@
+{
+  "name": "Durandamon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 14,
+    "LVE": 11,
+    "KNW": 12,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Zwanglänze",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Focuses its fighting spirit into the blades on both arms and slices the enemy with them."
+  },
+  "digivolves_from": [
+    "Asuramon",
+    "Duramon",
+    "Grademon",
+    "Omega Shoutmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon possessing the ultimate holy blade, it evolved by honing its sword to its best ability and attaining data on 'legendary swords' found in mythology and video games. Boasting strength that puts it among the strongest Legend-Arms capable of transforming into swords, it is said that wielding Durandamon in sword form will surely bring about victory. Its slashing attacks are fierce enough to cut through any sort of defense, although there have been records that only the strongest of the Legend-Arms Digimon capable of transforming into shields are able to withstand Durandamon's attacks. Its Special Moves are focusing its fighting spirit into the blades on both arms and slicing the enemy with them ( Zwanglänze ), and spinning its body to slice multiple enemies in one fell swoop ( Thron Messer ). While both attacks are powerful enough to take enemies down in one hit, Durandamon's greatest appeal is still its ability to transform into a weapon and unleash slashing attacks."
+}

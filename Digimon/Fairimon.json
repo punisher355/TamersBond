@@ -1,0 +1,42 @@
+{
+  "name": "Fairimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Wind",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Tornado Gamba",
+    "element": "Wind",
+    "pr": 5,
+    "tags": "[MELEE] [BURST 1] [PUSH]",
+    "description": "Performs a handstand and unleashes a whirlwind kick."
+  },
+  "digivolves_from": [
+    "Hawkmon",
+    "Palmon",
+    "Piyomon",
+    "Plotmon",
+    "Tinkermon"
+  ],
+  "digivolves_to": [
+    "Hippogriffomon",
+    "Jet Silphymon",
+    "Taomon",
+    "Vritramon",
+    "Petaldramon",
+    "Shutumon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Digimon that possesses power over Wind which bears the might of one of the legendary Ten Warriors . It freely manipulates the atmosphere to display mirages to its opponents, and specializes in attacks that generate \" Kamaitachi \" made from vacuums. However, it is more proficient in information warfare than in actual combat ability. Although it has an innocent personality brimming with curiosity, and is a gossipy, talkative troublemaker, because it has no ill will for the person, it isn't really hated. It is thoroughly optimistic, and is the possessor of a strong heart that cuts its way through small difficulties with a smile. Its Special Moves are performing a handstand and unleashing a whirlwind kick ( Tornado Gamba ), and rushing toward the opponent, then dispatching a back-flip kick after a barrage of kicks ( Roseo Temporale ).",
+  "web_created": true
+}

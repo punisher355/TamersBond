@@ -1,0 +1,33 @@
+{
+  "name": "Darumamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Mōshin Hidaruma",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Envelops its whole body in flames, and charges into the opponent."
+  },
+  "digivolves_from": [
+    "Manekimon"
+  ],
+  "digivolves_to": [
+    "Ariemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An unidentified Mutation Digimon that wears a Daruma Suit . Its streamlined suit deflects all attacks, and is specially made so it never tumbles over. It has a gentle personality and is often peacefully practising zazen meditation, but once it turns hostile, it displays a near-outrageous amount of strength. The presence of a few has only been confirmed on a certain island in the Eastern Digital World . Its Signature Move is enveloping its whole body in flames, and charging into the opponent ( Mōshin Hidaruma ). Its \" Dansai Daruma Otoshi \" forcibly severs opponents that enter its barrier into several sections, regardless of how tough they are. The way their torsos and heads separate and fall makes it truly worthy of being called a deadly blow."
+}

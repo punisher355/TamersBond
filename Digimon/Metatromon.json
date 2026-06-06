@@ -1,0 +1,31 @@
+{
+  "name": "Metatromon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Iron Halo",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Stops the enemy's movements with electromagnetic waves emitted from the iron ring floating above its head."
+  },
+  "digivolves_from": [
+    "Mockingbirdmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Could this giant iron soldier be a spokesperson for the inciting angel? Metatromon looks intimidating and has an angelic appearance, but it bears no connection with Angel Digimon whatsoever, and possesses no holy power at all. It is, in fact, a Machine Digimon to its core. In addition, while it has an arrogant personality and looks down on others, priding itself on being a Digimon that is the most refined among Machine Digimon—standing at the top—it can also be said to be a wicked Digimon since it has the abilities to match. The parts that spread out like wings are all autonomous weapons, and are highly-versatile armaments that fire lasers after tracking the enemy, and create an energy field for it to use as a shield. Furthermore, its armor, which gleams like a mirror surface, is very highly defensive, and the view captured by the eyes positioned all over its body covers a full 360-degree range. Although its body movements are sluggish, it is a powerful Digimon that overwhelms others in battle with actions which leave no openings; for example, being able to fight flexibly thanks to its autonomous weapons. Its Special Moves are completely stopping the enemy's movements with electromagnetic waves emitted from the iron ring floating above its head ( Iron Halo ), firing lasers from the eyes covering its entire body ( Eyes of Enoch ), and annihilating enemies by surrounding them with its wing-shaped autonomous weapons and energy fields ( Metatronios )."
+}

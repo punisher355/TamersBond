@@ -1,0 +1,50 @@
+{
+  "name": "Pegasmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Rodeo Gallop",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Unleashes a powerful blow with its hind legs."
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gaomon",
+    "Gazimon",
+    "Liollmon",
+    "Pico Devimon",
+    "Piyomon",
+    "Plotmon"
+  ],
+  "digivolves_to": [
+    "Archnemon",
+    "Assaultmon",
+    "Dagomon",
+    "Garudamon",
+    "Hippogriffomon",
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Indaramon",
+    "Magnamon",
+    "Piccolomon",
+    "Rize Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Armor-level Holy Beast Digimon that evolved through the power of the \" Digimental of Hope \". The \"Digimental of Hope\" has the attribute of \"Holy\", and those that don this Digimental are able to obtain sacred power. Those that acquire this power are able to exhibit their absolute strength against evildoers. Its Signature Move is unleashing a powerful blow with its hind legs ( Rodeo Gallop ). Its Special Moves are firing a holy beam from its brow ( Silver Blaze ), and creating the void of space inside both of its wings, and sending out shooting stars ( Shooting Star )."
+}

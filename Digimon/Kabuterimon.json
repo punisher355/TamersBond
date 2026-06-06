@@ -1,0 +1,60 @@
+{
+  "name": "Kabuterimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Electric",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 6,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Mega Blaster",
+    "element": "Electric",
+    "pr": 7,
+    "tags": "[RANGE 4] [CHAIN 2,3]",
+    "description": "Fires a ball of electricity at the enemy."
+  },
+  "digivolves_from": [
+    "Angoramon",
+    "Floramon",
+    "Funbeemon",
+    "Gabumon (Black)",
+    "Hagurumon",
+    "Kamemon",
+    "Keramon",
+    "Kokabuterimon",
+    "Kotemon",
+    "Kunemon",
+    "Pico Devimon",
+    "Piyomon",
+    "Tentomon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Cannonbeemon",
+    "Dinobeemon",
+    "Jewelbeemon",
+    "Jyureimon",
+    "Kongoumon",
+    "Lilamon",
+    "Mega Seadramon",
+    "Metallife Kuwagamon",
+    "Metal Mamemon",
+    "Okuwamon",
+    "Skull Greymon",
+    "Vademon",
+    "Waru Monzaemon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A fairly unique Insect Digimon, even among newly discovered Digimon. The details of how it evolved into an insect Type are unclear, but it has both ant-like power and the flawless defensive ability possessed by a beetle. Its personality is the epitome of an insect's, and because it only possesses the instincts for survival, it has no intelligence or anything similar. It swoops down on hostile Virus Digimon without mercy. Its head has been metallized, and boasts the defense of an iron wall. Its Special Move is \" Mega Blaster \"."
+}

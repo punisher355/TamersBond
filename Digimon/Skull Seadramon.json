@@ -1,0 +1,35 @@
+{
+  "name": "Skull Seadramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Thunder Javelin",
+    "element": "Electric",
+    "pr": 9,
+    "tags": "[RANGE 5]",
+    "description": "Fires a stinging lightning strike from the blade on its calvaria."
+  },
+  "digivolves_from": [
+    "Coelamon",
+    "Ikkakumon",
+    "Seadramon"
+  ],
+  "digivolves_to": [
+    "Leviamon",
+    "Metal Seadramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Undead Seadramon that swims on through the Net Ocean in search of Digimon prey, surviving on instinct alone despite lacking flesh. As a result of it being reduced to nothing but bones, it has decreased resistance, allowing it to pursue its prey to the ends of the earth with high-speed movements. Once it captures the enemy, it slowly chokes the life out of them with its \" Dead Roll \", where it uses its long body to constrict them. Its Special Move is firing a stinging lightning strike from the blade on its calvaria ( Thunder Javelin ). The more it charges this technique, the more powerful it becomes."
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Zeed Millenniumon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 11,
+    "LVE": 18,
+    "KNW": 11,
+    "SNC": 17,
+    "RLB": 17
+  },
+  "signature_move": {
+    "name": "Time Destroyer",
+    "element": "Neutral",
+    "pr": 13,
+    "tags": "[MELEE]",
+    "description": "123Fires a spiral of energy that consigns opponents to oblivion across space and time.Creates a tear in space-time to swallow the opponents.Summons meteors and drops them on the enemies."
+  },
+  "digivolves_from": [
+    "Millenniummon",
+    "Millenniumon",
+    "Moon Millenniumon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Flying freely between space and time, it is a king of evil that is still trying to destroy all eras and worlds. Although a Digimon will become a Digitama if defeated in battle, there are very rare occasions when it has instead been reborn from within the corpse of its data. According to one theory, when Millenniumon died in a furious battle, the dark soul it possessed was reborn as Zeed Millenniumon. Also, as for the bands which wrap around Zeed Millenniumon, it is said that they are like chains which suppress its abilities, but it is unknown who could cast such a spell on Zeed Millenniumon. [N 1] [N 2] However, it is foretold that if it is released from this spell, it will rain unfathomable destruction upon the Digital World. Its Special Move is \" Time Destroyer \", which consigns hostile opponents to oblivion across space and time. So far, no one who has been brushed off by this technique has returned alive from space and time.",
+  "web_created": true
+}

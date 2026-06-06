@@ -1,0 +1,41 @@
+{
+  "name": "Xuanwumon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Mugen",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Displays an illusion which generates a dark mist around the opponent, destroying their spirit."
+  },
+  "digivolves_from": [
+    "Blossomon",
+    "Delumon",
+    "Grappu Leomon",
+    "Kumbhiramon",
+    "Mihiramon",
+    "Orochimon",
+    "Sagomon",
+    "Vajramon",
+    "Vikaralamon"
+  ],
+  "digivolves_to": [
+    "Huanglongmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the Four Holy Beasts who protect the Digital World, it guards the North and uses phantasmagoric water techniques. It is a legendary being like the other Four Holy Beast Digimon, and its strength is said to equal that of a god. It is the oldest of the Four Holy Beast Digimon, and possesses a gentle personality. Common to the Four Holy Beast Digimon are the possession of four shining eyes, and twelve Digicores floating outside of their body. Normally there is one Digicore per body, and it is not exposed outside of the body except with the Undead types or the greatest of the Ultimate class. Its Special Move is displaying an illusion which generates a dark mist around the opponent, destroying their spirit ( Mugen ).",
+  "web_created": true
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Neo Vamdemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Nightmare Raid",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires its energy-drainingEvilvilfamiliars."
+  },
+  "digivolves_from": [
+    "Fantomon",
+    "Neo Devimon",
+    "Vamdemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The general of the Moon-light Army of the \" Big Death-Stars \". Its goal is to erase hostile forces without leaving a trace, so it has its army of Undead Digimon lurk everywhere and erase the Digimon that move against it, one by one. It forgot its emotions as a consequence of always lurking in the dark, and even slaughter is becoming a part of its life that it neither likes nor dislikes. However, it feels fulfilled only when it watches the termination of a dying Digimon under the moon. Neo Vamdemon can summon its familiar spirits, \" Evilvil \", which are brought forth in an inexhaustible supply, and naturally prefer the life energy of Digimon. The Digimon that experience its \" Nightmare Raid \", which fires the Evilvil at multiple enemies, become a terrible sight to behold. Its \" Bloody Stream Grade \", which freely extends both of its arms, is a technique that reliably captures its opponent, and wrenches them apart after forcing the captured opponent to divulge all their information. And then it collects dark energy, and when the moon on its chest is full, it fires off its certain-kill \" Gardiac Raid \". Although the opponent sees the flash of a beam of light from ahead of everything in its surroundings being changed to darkness, that light is not hope but the light of demise."
+}

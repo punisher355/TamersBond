@@ -1,0 +1,58 @@
+{
+  "name": "Anomalocarimon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Stinger Surprise",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Crosses its forelimbs and fires a shockwave from them."
+  },
+  "digivolves_from": [
+    "Ankylomon",
+    "Dokugumon",
+    "Flymon",
+    "Gaogamon",
+    "Garurumon",
+    "Geo Greymon",
+    "Growmon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Mori Shellmon",
+    "Rukamon",
+    "Sand Yanmamon",
+    "Seadramon",
+    "Shellmon",
+    "Snimon",
+    "Tortamon",
+    "Vegimon"
+  ],
+  "digivolves_to": [
+    "Blitz Greymon",
+    "Grandis Kuwagamon",
+    "Gulfmon",
+    "Jumbo Gamemon",
+    "Parasimon",
+    "Plesiomon",
+    "Pukumon",
+    "Vulcanusmon",
+    "War Greymon",
+    "BlitzGreymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A computer virus infected the databanks of a laboratory where the investigations and excavations of ancient life forms is performed, and took in the data of an ancient life form and evolved. It became like the life form which in ancient times was the apex of the food chain, which had a great appetite and supplied it with an ability capable of allowing it to see food that was of the finest quality. Skillfully using the tentacles that grow from its head, it catches the enemy and kills them with the sharp blade that grows from its tail. When the progression of a fight becomes disadvantageous, it uses its sharp tentacles to hoist up the soil of the seabed to hide its body. The radar eye that projects from its head captures the enemy like a night vision scope, watching for the chance to create a turnabout. Its Special Move is crossing its right and left forelimbs and shooting with \" Stinger Surprise \"."
+}

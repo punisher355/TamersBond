@@ -1,0 +1,57 @@
+{
+  "name": "Dinobeemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Hell Masquerade",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Chops up the opponent in a \"Dance of Hell,\" in which its nimble movements leave behind afterimages."
+  },
+  "digivolves_from": [
+    "Aquilamon",
+    "Dinohumon",
+    "Flymon",
+    "Gokimon",
+    "Gryzmon",
+    "Holsmon",
+    "Kabuterimon",
+    "Lighdramon",
+    "Shadramon",
+    "Shurimon",
+    "Stingmon",
+    "Stingmon (Black)",
+    "Sunflowmon",
+    "XV-mon"
+  ],
+  "digivolves_to": [
+    "Gran Kuwagamon",
+    "Herakle Kabuterimon",
+    "Holydramon",
+    "Skull Mammon",
+    "Tiger Vespamon",
+    "War Greymon",
+    "Zanbamon",
+    "Imperialdramon: Dragon Mode (Black)",
+    "Imperialdramon: Paladin Mode",
+    "Imperialdramon: Fighter Mode (Black)",
+    "Imperialdramon: Dragon Mode",
+    "Imperialdramon: Fighter Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Mutation Digimon which Jogress -evolved from Stingmon and XV-mon . A chimera of a dragon and an insect, this Digimon possesses the name Terrible Bee . It is hard to classify its species as either a Dragon type or an Insect type, but its Insect nature is especially pronounced. It flies through the sky with its four wings and accurately perceives the opponent with the compound eyes on its head, enabling it to choke the life out of its opponent without fail. Also, Dinobeemon possesses a considerably ferocious personality. Its Special Move is the Dance of Hell in which its nimble movements leave behind afterimages while it chops up the opponent ( Hell Masquerade ).",
+  "web_created": true
+}

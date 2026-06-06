@@ -1,0 +1,57 @@
+{
+  "name": "Okuwamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Scissor Arms Ω",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Attacks with its two giant scissor claws that are strong enough to split diamond."
+  },
+  "digivolves_from": [
+    "Coatlmon",
+    "Flymon",
+    "Fugamon",
+    "Gekomon",
+    "Gokimon",
+    "Gururumon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Saberdramon",
+    "Snimon",
+    "Stingmon",
+    "Stingmon (Black)",
+    "Unimon",
+    "Vegimon",
+    "Waspmon",
+    "Woodmon"
+  ],
+  "digivolves_to": [
+    "Ancient Beatmon",
+    "Bancho Stingmon",
+    "Diablomon",
+    "Examon",
+    "Gran Kuwagamon",
+    "Grandis Kuwagamon",
+    "Herakle Kabuterimon",
+    "Holydramon",
+    "Metal Etemon",
+    "Tiger Vespamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "As an evolution of Kuwagamon , it evolved more balefully than Kabuterimon-species Digimon. It was enhanced with a particular focus on Kuwagamon's inferior defensive side. As for its offensive side, the reconnaissance ability of its antennae was improved, and the attack accuracy of its scissors was increased. In addition, it has been proven that it possesses not only its survival instinct but also its destructive impulses as its primary traits. It can be said that it is a more aggressive evolved form. Its Special Move is an enhanced version of \" Scissor Arms \" that can clip through even a diamond with a hardness of 10 ( Scissor Arms Ω )."
+}

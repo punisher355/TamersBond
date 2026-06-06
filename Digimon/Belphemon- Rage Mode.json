@@ -1,0 +1,40 @@
+{
+  "name": "Belphemon: Rage Mode",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Lampranthus",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Releases black flames from the chains coiled around its body."
+  },
+  "digivolves_from": [
+    "Astamon",
+    "Black Megalo Growmon",
+    "Crescemon",
+    "Dark Knightmon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Mephismon",
+    "Pandamon",
+    "Skull Baluchimon",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "It is said that Belphemon awakens from its eternal slumber once in a thousand years, and regains its natural shape. When Belphemon awakens from its slumber it changes into an incarnation of rage, and anything that enters its field of vision becomes a target for destruction. It is said that just by suffering Belphemon: Rage Mode's roar, Perfect Digimon and below will have their data disintegrated and die instantly, and not even Ultimate Digimon can escape unharmed. Its Special Moves are black flames cast from the chains coiled around its body ( Lampranthus ), and a slash attack which is unleashed from its claws, clad in the flames of hell ( Gift of Darkness ). In addition, the data of Digimon consigned to oblivion by the Digimon crowned as the Seven Great Demon Lords is not reincarnated, but is sent to the center of the Dark Area , and becomes the flesh and blood of the Demon Lords.",
+  "web_created": true
+}

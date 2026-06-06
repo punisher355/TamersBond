@@ -1,0 +1,39 @@
+{
+  "name": "Mikemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Nikukyū Punch",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "A combination of punches."
+  },
+  "digivolves_from": [
+    "Bearmon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gottsumon",
+    "Plotmon"
+  ],
+  "digivolves_to": [
+    "Bastemon",
+    "Betsumon",
+    "Majiramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon that resembles a calico cat at first glance. It is said that the data of Nyaromon that lay dormant within its body through the Child phase re-manifested when it became an Adult. However, because it is not a Holy Beast, it does not wear a \" Holy Ring \". It is a very intelligent Digimon, and is usually calm and docile; when it comes to battle, however, it makes sport of the enemy with its nimble movements, and fights using the martial arts it excels at. Its Signature Move is striking with its hardened paws ( Nikukyū Punch ). Its Special Move is scratching with its sharpened claws ( Neko Claw )."
+}

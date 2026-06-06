@@ -1,0 +1,62 @@
+{
+  "name": "Volcamon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Big Bang Voice",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Stuns the enemy with a heavy bass mike performance."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "Black Galgomon",
+    "Bomber Nanimon",
+    "Digmon",
+    "Dobermon",
+    "Fladramon",
+    "Fugamon",
+    "Gladimon",
+    "Golemon",
+    "Icemon",
+    "Lavorvomon",
+    "Meramon",
+    "Nanimon",
+    "Revolmon",
+    "Shadramon",
+    "Starmon",
+    "Tankmon",
+    "Thunderbirmon",
+    "Tyranomon",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Ancient Volcamon",
+    "Apollomon",
+    "Bancho Leomon",
+    "Boltmon",
+    "Gankoomon",
+    "Megidramon",
+    "Metal Etemon",
+    "Saint Galgomon",
+    "Seraphimon",
+    "Volcanicdramon",
+    "War Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A powerful Cyborg Digimon with a large build. It is named Volcamon after how the volcano on its back will erupt when its anger reaches its peak, or when its excitement surpasses its maximum. Furthermore, it is not only a strong opponent but also a close rival of Etemon 's. Its deafening voice shakes the atmosphere and causes the earth to tremble. Its Special Moves are \" Big Bang Voice \", where it stuns the enemy with a heavy bass mike performance, and \" Big Bang Tackle \", a mighty tackle with the power to destroy even mountains.",
+  "web_created": true
+}

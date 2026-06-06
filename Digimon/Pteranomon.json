@@ -1,0 +1,36 @@
+{
+  "name": "Pteranomon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 4,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Beak Pierce",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Nosedives from high in the sky and pierces the enemy with the sharp tip of its beak, penetrating even armor, regardless of its thickness, and destroying their Digicore with unparalleled accuracy."
+  },
+  "digivolves_from": [
+    "Kokuwamon",
+    "Muchomon",
+    "Patamon",
+    "Piyomon"
+  ],
+  "digivolves_to": [
+    "Andromon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Pterosaur Digimon with wings of steel that evolved through the power of the \" Digimental of Love \". Holding the alias of \" Blue Bomber \", it can fly at the highest altitudes among aerial Digimon, and it is able to pinpoint bomb the enemy without revealing itself. It has excellent eyesight, and is capable of capturing the enemy's figure even from an altitude of 10 km up in the sky. Since its Special Move \" Beak Pierce \" is a technique in which it nosedives from high in the sky and pierces the enemy with the sharp tip of its beak, penetrating even armor, regardless of its thickness, and destroying their Digicore with unparalleled accuracy.",
+  "web_created": true
+}

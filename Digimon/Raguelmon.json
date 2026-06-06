@@ -1,0 +1,31 @@
+{
+  "name": "Raguelmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "FormTaranis",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Shreds the opponent with its claws and the tip of its tail, injecting impaled opponents with corrosive data."
+  },
+  "digivolves_from": [
+    "Meicrackmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate level Digimon who observes all Angel Digimon with eyes of distrust, in order to prevent the fall of other Angel Digimon. The moment it detects an Angel Digimon that has begun to fall, it will attack and destroy them before they would have fallen completely. However, because it was shunned for its role as an observer, it began to be filled with nihilistic thoughts until its sole line of thought was to reject everything. At that stage, it no longer discerns between friend and foe, turning into a fearsome Digimon that carries out destruction indiscriminately. Its Special Move is mutilating the enemy using the claws on its arms and the tip of its tail ( Form Taranis ). Once it impales the enemy, it injects destructive data that eat away at and corrode the enemy from the inside. It can also fire laser bullets from the gemstones situated on its arms and chest ( Purhorus )."
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Hippogriffomon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Wind",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Heat Wave",
+    "element": "Wind",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Spews out an extremely high-temperature wind."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Akatorimon",
+    "Angemon",
+    "Aquilamon",
+    "Birdramon",
+    "Cockatrimon",
+    "Darcmon",
+    "Fairimon",
+    "Gekomon",
+    "Leomon",
+    "Nefertimon",
+    "Pegasmon",
+    "Saberdramon",
+    "Scumon",
+    "Siesamon",
+    "Snimon",
+    "Symbare Angoramon",
+    "Unimon",
+    "Maildramon",
+    "Dark Maildramon"
+  ],
+  "digivolves_to": [
+    "Crossmon",
+    "Dynasmon",
+    "Griffomon",
+    "Marin Angemon",
+    "Marsmon",
+    "Murmukusmon",
+    "Ornismon",
+    "Piemon",
+    "Plutomon",
+    "Seraphimon",
+    "Valdurmon",
+    "Zhuqiaomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A mythical beast Digimon which has the appearance of a chimera . It is said it will become a Griffomon if it evolves, but the details are not clear. Its intelligence is not as high as Griffomon's, and since its being is closer to that of a beast, its personality is also ferocious. Its Special Move is spewing out an extremely high-temperature wind ( Heat Wave ).",
+  "web_created": true
+}

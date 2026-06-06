@@ -1,0 +1,32 @@
+{
+  "name": "Hadesmon",
+  "stage": "Mega II",
+  "attribute": "Data",
+  "element": "Dark",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 18,
+    "FRD": 14,
+    "LVE": 15,
+    "KNW": 15,
+    "SNC": 14,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Hell Kakia",
+    "element": "Dark",
+    "pr": 14,
+    "tags": "[MELEE]",
+    "description": "Thrusts the blade on its tail into the ground, changing the configuration of the surrounding structures."
+  },
+  "digivolves_from": [
+    "Deathmon",
+    "Deathmon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "The \" King of the Underworld \" who governs over destruction and regeneration. It possesses the ability to change physical matter or data according to its will, and is capable of even altering or controlling vast expanses of space.",
+  "web_created": true
+}

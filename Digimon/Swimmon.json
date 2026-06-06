@@ -1,0 +1,44 @@
+{
+  "name": "Swimmon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 3,
+    "KNW": 3,
+    "SNC": 5,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Slash Fin",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": ""
+  },
+  "digivolves_from": [
+    "Pinamon",
+    "Upamon"
+  ],
+  "digivolves_to": [
+    "Coelamon",
+    "Igamon",
+    "Karatuki Numemon",
+    "Nohemon",
+    "Numemon",
+    "Seahomon",
+    "Submarimon",
+    "Tobiumon",
+    "Tylomon",
+    "Tyranomon",
+    "Whamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Tropical Fish Digimon with a brightly colored body. It inhabits and forms schools within the warm coral reefs right below the equator. Using its large fins, it is able to fly above the ocean's surface for short periods, and the sight of a school of Swimmon elegantly flying about the surface of the ocean is counted as one of the Digital World 's three most scenic views. The scales that cover the surface of Swimmon's body have the special characteristic of matching their coloring to the colors of their surroundings, and in case it is attacked by a gigantic aquatic Digimon, it is capable of camouflaging itself to escape difficulty. Its Special Moves are cutting the opponent to pieces with its fins ( Slash Fin ), and firing off from its mouth the water that it inhaled through its gills ( Brine Pistol ).",
+  "web_created": true
+}

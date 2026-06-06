@@ -1,0 +1,53 @@
+{
+  "name": "Modoki Betamon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 3,
+    "KNW": 4,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Aqua Tower",
+    "element": "Water",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Unleashes a tinywaterspout."
+  },
+  "digivolves_from": [
+    "Budmon",
+    "Chapmon",
+    "Koromon",
+    "Pukamon",
+    "Tanemon",
+    "Tunomon"
+  ],
+  "digivolves_to": [
+    "Ankylomon",
+    "Deltamon",
+    "Devidramon",
+    "Gekomon",
+    "Gesomon",
+    "Nise Drimogemon",
+    "Orgemon",
+    "Seadramon",
+    "Shellmon",
+    "Starmon",
+    "Stingmon",
+    "V-dramon",
+    "Vegimon",
+    "Yanmamon",
+    "Zassoumon",
+    "Ogremon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Amphibian Digimon just like Betamon . Although it looks identical to Betamon, it is a rare species with a very small population. With its calm personality, it inhabits quiet swampland, and skillfully controls water currents. Its Special Moves are unleashing a tiny waterspout ( Aqua Tower ), and generating a shock wave from the crest on its head ( Blade Fin ).",
+  "web_created": true
+}

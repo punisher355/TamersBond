@@ -1,0 +1,42 @@
+{
+  "name": "Hudiemon",
+  "stage": "Champion",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 7,
+    "SNC": 8,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Infinity Dream",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Flaps its wings to stir up a gust that spreads its scales. While this attack is capable of inflicting poison or paralysis on the enemy, its main function is actually to ease the pain and suffering of its wounded allies."
+  },
+  "digivolves_from": [
+    "Lalamon",
+    "Morphomon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Archnemon",
+    "Cannonbeemon",
+    "Eosmon (Perfect)",
+    "Jewelbeemon",
+    "Lilamon",
+    "Lilimon",
+    "Paildramon",
+    "Pucchiemon (Green)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A humanoid Insect Digimon with the wings of a butterfly. It is cautious at first, but once it gets to know someone, it will reveal its cheerful, innocent countenance. It travels all over the Digital World while dancing gracefully in well-lit places. It is said to be like a backup of the Digital World, accessing records throughout the world and storing vast amounts of record data within itself. Even if a strange phenomenon occurs in the Digital World and records and memories are lost, the lost data will be restored if Hudiemon is around. Its Special Moves are soaring into the air and dishing out a flying kick ( Flying Kick ), and flapping its wings to stir up a gust that spreads its scale s ( Infinity Dream ). While it is capable of poisoning or paralyzing the enemy when using \" Infinity Dream \" on them, its main function is to ease the pain of its wounded allies and make them feel better."
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Canoweissmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "GalliaFissure",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Tears the enemy to pieces with its tough claws that can easily cut through low-purityChrome Digizoid."
+  },
+  "digivolves_from": [
+    "Betel Gammamon",
+    "Gulus Gammamon",
+    "Kaus Gammamon",
+    "Wezen Gammamon"
+  ],
+  "digivolves_to": [
+    "Aegisdramon",
+    "Cannondramon",
+    "Chaosdramon",
+    "Siriusmon",
+    "Spinomon",
+    "Ultimate Brachimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Sky Dragon Digimon with large wings, its body surface has turned a high-purity white as a result of the flames of its blazing heart further intensifying. It prefers fair matches in terms of power and speed, and shows a joyful expression as the battle heats up. However, it will not permit injustice or unjust actions, and takes them on in a righteous manner to overcome them. It is said that when it draws out power that transcends its limits during battle, its whole body will glitter with white light, and become so bright that it can even be detected from the Digital Worlds of other dimensions. It has a variety of combat techniques, and its \" Gallia Fissure \", in which it tears the enemy to pieces with its tough claws, boasts the power to easily cut through Chrome Digizoid , if it has a low purity. In addition, they can also be used at long range, such as its \" Dragonia \", in which it closes its wings and charges like a bullet of light, and \" Meteor Lux \", in which the light from its spread wings rains down as a meteor shower. For its greatest Special Move \" Gran Nova \", it gathers all the energy in its body and fires the brightest fireball from its mouth, enveloping the enemy in a scorching-hot star, even if they are an Ultimate.",
+  "web_created": true
+}

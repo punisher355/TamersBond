@@ -1,0 +1,40 @@
+{
+  "name": "Thetismon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Birī Smasher",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Sends its fists flying by accumulating electricity in its palms."
+  },
+  "digivolves_from": [
+    "Manbomon",
+    "Rukamon",
+    "Tesla Jellymon"
+  ],
+  "digivolves_to": [
+    "Amphimon",
+    "Ancient Mermaimon",
+    "Cthyllamon",
+    "Marin Angemon",
+    "Platinum Numemon",
+    "Pukumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Aquatic Beast Man Digimon which has the appearance of a woman, records show that it was discovered in the deepest trenches of the \" Net Ocean \", the birthplace of Digimon. It brings peace to its own vast territory, and immediately approaches and brings down the hammer on Digimon that tumultuously disturb it. Although it shows no mercy to those who invade its territory, it is kind to Digimon in need of help, guiding them to safety, and has a spirit that fights for the weak against the strong. It eliminates invaders with its \" Birī Smasher \", in which it sends its fists flying by accumulating electricity in its palms, \" Hammer Thunder \", where it kicks the enemy up and then brings them down with both of its electrically-charged fists, and \" Adieu World \", in which it teleports by removing the space between it and the opponent. In addition, its \" Dokutease \", in which it produces various medicines and injects them via its tentacles, heals the wounds of its allies and temporarily boosts their power, but as for enemies, it disintegrates them from the inside out with a deadly poison, killing them."
+}

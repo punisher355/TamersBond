@@ -1,0 +1,48 @@
+{
+  "name": "Doumon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 11,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Kimontonkou",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Chants an incantation while painting a barrier in the air with its gigantic brush, confining the opponent in a labyrinth."
+  },
+  "digivolves_from": [
+    "Devimon",
+    "Garurumon (Black)",
+    "Hanumon",
+    "Ice Devimon",
+    "Kabukimon",
+    "Kyubimon",
+    "Nanimon",
+    "Shurimon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Barbamon",
+    "Gulfmon",
+    "Kuzuhamon",
+    "Kuzuhamon: Miko Mode",
+    "Lilithmon",
+    "Metal Garurumon (Black)",
+    "Piemon",
+    "Sakuyamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An onmyouji Digimon that is versed in Onmyoudou and freely uses every technique in battle. Its spellcasting ability is particularly high, and it specializes in attacks using talismans and spells. Like Taomon , it is a being that lives and lurks within the darkness, but unlike Taomon, it specializes in death curses and assassinations. Not only that, it is able to turn its talismans into shikigami and command them. Its Signature Move is wreathing its talismans around the opponent's body, then detonating them ( Jugonsatsu ). Its Special Move \" Kimontonkou \" is a terrifying technique in which it chants an incantation while painting a barrier in the air with its gigantic brush, confining the opponent in an eternal labyrinth from which they can never escape."
+}

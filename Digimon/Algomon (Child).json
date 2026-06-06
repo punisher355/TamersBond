@@ -1,0 +1,35 @@
+{
+  "name": "Algomon (Child)",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Brute Knuckle",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Curls up the tentacles on its arms into balls and punches with them."
+  },
+  "digivolves_from": [
+    "Algomon (Baby II)"
+  ],
+  "digivolves_to": [
+    "Algomon (Adult)",
+    "Devimon",
+    "Mojyamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The Child-evolved form of Algomon. It watches over young Algomon that are consuming data, and intercepts enemies when they draw near. It attacks with its \" Brute Knuckle \", where it curls up the tentacles on its arms into balls and punches with them, and \" Imprisonment \", where it restrains the enemy with its loose tentacles.",
+  "web_created": true
+}

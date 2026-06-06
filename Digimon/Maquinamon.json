@@ -1,0 +1,41 @@
+{
+  "name": "Maquinamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 8,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Twin Bubble",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Spits bubbles of fire and electricity in rapid bursts."
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Herissmon",
+    "Koemon",
+    "Otamamon",
+    "Renamon",
+    "Toy Agumon",
+    "Vorvomon",
+    "Terriermon Assistant"
+  ],
+  "digivolves_to": [
+    "Mockingbirdmon",
+    "Maneuvermon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A half-beast, half-machine Composite Digimon with both bestial and mechanical traits. Digimon with mechanized bodies are not uncommon, but in Maquinamon's case, it has a rare form where its body is evenly split into machine and beast halves. Although it possesses two traits, it lacks emotional expression due to each of them being completely unbalanced and unstable, and rarely shows hostility towards opposing Digimon. Its combat strength is low as well, and so it is vulnerable in the Digital World where the weak are food for the strong . While it lacks emotion, it is faithful to its instincts, and its appetite, if anything, is simply huge. It is thought that this is due to its unstable nature, making it very energy inefficient. The only thing it excels at is skillfully finding food, using its two excellent senses—its animal sense of smell and the sight of its Machine Eye —and constantly roaming around in search of food. Since it is capable of changing its physiology by taking in data from its surroundings, it is also omnivorous regardless of its habitat. Its Special Move is \" Twin Bubble \", in which it spits out bubbles with the attributes of electricity and fire in two rapid bursts; however, the power of these bubbles is not much different from those spewed by Baby Digimon, and can only be used in battle as a distraction.",
+  "web_created": true
+}

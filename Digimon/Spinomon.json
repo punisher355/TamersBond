@@ -1,0 +1,43 @@
+{
+  "name": "Spinomon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Ajatarmon",
+    "Blossomon",
+    "Bombermon",
+    "Canoweissmon",
+    "DORUguremon",
+    "Ghilliedhumon",
+    "Jyagamon",
+    "Mametyramon",
+    "Metal Greymon",
+    "Skull Greymon",
+    "Toropiamon",
+    "Triceramon",
+    "Volcdramon",
+    "Yatagaramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Dinosaur Digimon that inhabits the green depths of the jungle. It boasts the greatest and strongest powers among the Dinosaur Digimon inhabiting the Digital World, and it is said that it possesses strength equal to that of Dinorexmon . Due to its extreme belligerence it leads a highly brutal existence, but the latest research has made it clear that it possesses astonishing intelligence. The blades on its back have become its greatest feature, and since they possess excellent defensive and offensive power, if it suffers a direct attack, the attacker is forced to suffer nearly fatal wounds. Its Special Moves are shooting off the blades on its back all at once ( Sonic Slash Rain ), and converting the metal accumulated within its body into plasma by superheating it up to 15000°, then firing it off ( Blue Prominence ). The blades on its back keep growing back in an inexhaustible supply, so don't count on it running out of ammo."
+}

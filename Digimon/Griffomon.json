@@ -1,0 +1,43 @@
+{
+  "name": "Griffomon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Supersonic Voice",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Produces an extremely high-frequency sound wave to destroy the opponent's configuration data."
+  },
+  "digivolves_from": [
+    "Blossomon",
+    "Butenmon",
+    "Delumon",
+    "Garudamon",
+    "Grappu Leomon",
+    "Hippogriffomon",
+    "Lamortmon",
+    "Parrotmon",
+    "Piccolomon",
+    "Shutumon",
+    "Silphymon",
+    "Skull Baluchimon",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A fusion Digimon which possesses the head, wings, and forelegs of a Bird Digimon, and the body of a Beast Digimon with a snake-like tail attached to it. Although it is able to fly about the skies with its wings, it is said that it usually inhabits desert regions and mountain caves. Also, Griffomon's offensive power is extremely great, and because it makes sport of enemies with its keen movements, it is extremely difficult to defeat Griffomon. To make the best use of those abilities, it serves as a guard defending against illegal penetrations of the Internet , and is used for the security of confidential information. Its Special Move is producing an extremely high-frequency sound wave, which obliterates the opponent's data structure ( Supersonic Voice )."
+}

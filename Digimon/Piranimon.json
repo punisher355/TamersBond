@@ -1,0 +1,36 @@
+{
+  "name": "Piranimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Cruel Invite",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Drags its target underwater by impaling them with its caudal fin, which is sharpened like a fish hook."
+  },
+  "digivolves_from": [
+    "Seadramon",
+    "Tobiumon"
+  ],
+  "digivolves_to": [
+    "Leviamon",
+    "Neptunemon",
+    "Regalecusmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A ferocious Aquatic Digimon that acts in large schools. The exoskeleton covering its head amplifies the power of its jaws so that it can reliably bring down the enemy with its sharp fangs. That power is said to rival that of a Mammon stomping. After it pulls its target underwater using its \" Cruel Invite \", where it impales them with its caudal fin, which is sharpened like a fish hook, it punctures the body of its prey with \" Calamity Vise \", in which it rapidly oscillates as it gnaws through them, killing them. Since it attacks a single Digimon in schools, not a scrap of data is left behind after it is assaulted by the Piranimon."
+}

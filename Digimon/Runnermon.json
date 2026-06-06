@@ -1,0 +1,39 @@
+{
+  "name": "Runnermon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Lightning Rush",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Charges the enemy at super speed from their blind spot."
+  },
+  "digivolves_from": [
+    "Elecmon",
+    "Pulsemon"
+  ],
+  "digivolves_to": [
+    "Boutmon",
+    "Climbmon",
+    "Divemon",
+    "Pistmon",
+    "Shootmon",
+    "Tempomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon that evolved via the data from a treadmill. It is capable of running without any loss in speed even through areas with poor footing such as mountainous areas or swamplands. However, rather than its speed or ability to cover distances, its stamina deserves special mention; it is able to continue running for long periods while maintaining its top speed the entire time. Its Special Moves are charging at the enemy at super speed from their blind spot ( Lightning Rush ), and shooting energy blades from its tail that slice enemies apart ( Heartbeat Impulse )."
+}

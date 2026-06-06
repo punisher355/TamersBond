@@ -1,0 +1,34 @@
+{
+  "name": "Cthyllamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "BuccalRush",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Opens its mouth wide and attacks with its three long, flexible tongues in a whip-like manner."
+  },
+  "digivolves_from": [
+    "Black King Numemon",
+    "Majiramon",
+    "Marin Devimon",
+    "Thetismon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Cthyllamon inhabits the depths of the Net Ocean , and is known by the alias \" Phantom of the Ocean \" due to the fact that only the skull pattern on its chest can be seen floating eerily in the dark sea. It has a crafty and cunning disposition; instead of actively fighting on its own, it employs aquatic Digimon of a lower Level than itself by brainwashing them. It shares many similarities with Marin Angemon , such as its appearance and the fact that it is rarely ever seen, but the relationship between the two remains unknown. Its Special Move \" Ocean Hell \", in which it steals the opponent's fighting spirit with an aura of endless terror akin to the darkness of the ocean depths, sometimes reduces the Digimon that suffer this technique to being Cthyllamon's puppets. Its \" Buccal Rush \", in which it opens its mouth wide and attacks with its three long, flexible tongues in a whip-like manner, and its \" Aqua Grinder \", where it generates an intense whirlpool that bores into the opponent's body like a drill, possess destructive power that is unimaginable from its tiny physique."
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Sunmon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Spews hot, luminescent bubbles"
+  },
+  "digivolves_from": [
+    "Mokumon"
+  ],
+  "digivolves_to": [
+    "Coronamon",
+    "Guilmon",
+    "Plotmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Baby Digimon with an appearance that looks as if a flame has been lit on its head. The protuberances on its body, which are reminiscent of the sun, are soft and move as if they were limbs. It can only be seen during the daytime on sunny days. It has a gentle personality, and moves by lightly floating about on warm days. Its Special Move is spewing hot, luminescent bubbles ( Sunlight Bubble )."
+}

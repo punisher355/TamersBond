@@ -1,0 +1,59 @@
+{
+  "name": "Asuramon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Asura Shinken",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Attacks the foe with flaming punches or fireballs from its four fists."
+  },
+  "digivolves_from": [
+    "Bitmon",
+    "Blimpmon",
+    "Bomber Nanimon",
+    "Leomon",
+    "Meramon",
+    "Musyamon",
+    "Octmon",
+    "Ogremon",
+    "Orgemon",
+    "Pidmon",
+    "Shellmon",
+    "Shima Unimon",
+    "Sorcerimon",
+    "Stingmon",
+    "Stingmon (Black)",
+    "Unimon",
+    "Wizarmon",
+    "Yaksamon",
+    "Zubaeagermon"
+  ],
+  "digivolves_to": [
+    "Boltmon",
+    "Dominimon",
+    "Durandamon",
+    "Marin Angemon",
+    "Marsmon",
+    "Ofanimon",
+    "Vulcanusmon",
+    "War Greymon",
+    "Zanbamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A legendary Digimon which possesses four arms and three faces, it suddenly appeared within a computer as it was analyzing ancient Hindu cultural documents. Of Asuramon's three faces, one is a face of wrath, one is a face of mercy, and the last is a face of blessings. Contrary to its outer appearance, it honors justice, so it is said that if it sees injustice it will thoroughly attack it without yielding, and it can certainly be said that its personality is like an avatar of a god of light. Its Special Move \" Asura Shinken \" is a Punch Rush unleashed from its four arms, which possesses the offensive power to completely annihilate the opponent itself. Naturally, when that is used while Asuramon has its face of wrath, it is its last and strongest technique.",
+  "web_created": true
+}

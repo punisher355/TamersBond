@@ -1,0 +1,63 @@
+{
+  "name": "Nanomon (Digimon)",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Plug Bomb",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "FiresPlug Bombfrom its fingertips."
+  },
+  "digivolves_from": [
+    "Arbormon",
+    "Black Galgomon",
+    "Blitzmon",
+    "Centalmon",
+    "Chrysalimon",
+    "Clockmon",
+    "Cyclomon",
+    "Deltamon",
+    "Guardromon",
+    "Guardromon (Gold)",
+    "Icemon",
+    "Mechanorimon",
+    "Mojyamon",
+    "Raremon",
+    "Tuskmon",
+    "Wizarmon"
+  ],
+  "digivolves_to": [
+    "Barbamon",
+    "Deathmon",
+    "Diablomon",
+    "Dynasmon",
+    "Fros Velgrmon",
+    "Fujinmon",
+    "Gokumon",
+    "Grand Locomon",
+    "Metal Garurumon (Black)",
+    "Mugendramon",
+    "Parasimon",
+    "Pharaohmon",
+    "Platinum Numemon",
+    "Raidenmon",
+    "Raijinmon",
+    "Platinum Numemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Machine Digimon used for nanomedicine. It was originally a Vaccine-type Digimon whose purpose was to restore computers that have crashed, but its neural pathways were destroyed in an attack by a powerful Virus Digimon, causing it to go berserk. It will reconfigure the data in even computers that are in normal working condition to its liking (of course, making a mess out of it), causing them to malfunction. Its specialty is destroying all sorts of data, and as such no matter how formidable a Digimon, the data forming their body can be destroyed by Nanomon with ease. Its Special Move is firing \" Plug Bomb \" from its fingertips.",
+  "web_created": true
+}

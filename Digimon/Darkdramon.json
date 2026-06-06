@@ -1,0 +1,48 @@
+{
+  "name": "Darkdramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Dark Roar",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires Dark Matter as energy shots."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Angewomon",
+    "Black Megalo Growmon",
+    "Blue Meramon",
+    "Cargodramon",
+    "Dark Superstarmon",
+    "Gigadramon",
+    "Loader Leomon",
+    "Megadramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Greymon (Virus)",
+    "Paildramon",
+    "Pandamon",
+    "Tankdramon",
+    "Were Garurumon"
+  ],
+  "digivolves_to": [
+    "Chaosmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon which is believed to be the weapon of last resort for the mechanized \" D-Brigade \". Although this is information that stubbornly remains part of the rumor mill, it is said that a Tankdramon , shot down during an operation to eliminate a \"target\" designated \"Codename: BAN-TYO \", was retrieved and evolved to Darkdramon at the D-Brigade research facility it was left at. It seems that on the verge of its evolution, a large quantity of \"Dark Matter\" was applied, and after its evolution it ran wild and broke out, so currently even the D-Brigade cannot secure Darkdramon's whereabouts. It is said that even now it is hunting \"Codename: BAN-TYO\"... Its Special Move \" Dark Roar \" is a bold move in which it fires Dark Matter as energy shots, and it is said that there is nothing in this world that can suffer that attack and survive. Also, its right hand is equipped with the \" Gigastick Lance \", which rivals Dukemon 's holy lance \" Gram \"."
+}

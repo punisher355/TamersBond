@@ -1,0 +1,50 @@
+{
+  "name": "Jewelbeemon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Spike Buster",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Swings the spear it holds in its right hand at the speed of light, generating a shock wave."
+  },
+  "digivolves_from": [
+    "Fangmon",
+    "Flymon",
+    "Hudiemon",
+    "Kabuterimon",
+    "Searchmon",
+    "Snimon",
+    "Stingmon",
+    "Stingmon (Black)",
+    "Sunflowmon",
+    "Yanmamon"
+  ],
+  "digivolves_to": [
+    "Ancient Beatmon",
+    "Bancho Stingmon",
+    "Bloom Lordmon",
+    "Gran Kuwagamon",
+    "Grandis Kuwagamon",
+    "Herakle Kabuterimon",
+    "Rafflesimon",
+    "Saber Leomon",
+    "Tiger Vespamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A jewel beetle -like Insect Digimon that emits a rainbow-colored radiance. Its prism-like armor, which changes color with the viewing angle , is not only sturdy but also has the effect of dazzling the enemy's eyes. It is an expert in combat, and prefers beautiful battles. Its Special Move is swinging the spear it holds in its right hand at the speed of light , generating a shock wave ( Spike Buster )."
+}

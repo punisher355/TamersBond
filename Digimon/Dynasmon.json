@@ -1,0 +1,46 @@
+{
+  "name": "Dynasmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 11,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Dragon's Roar",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires energy shots with attributes equal to those of the Warrior Ten from the palms of both its hands."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Astamon",
+    "Fantomon",
+    "Gigadramon",
+    "Grademon",
+    "Grappu Leomon",
+    "Hippogriffomon",
+    "Knightmon",
+    "Metal Greymon",
+    "Metal Mamemon",
+    "Mistymon",
+    "Silphymon",
+    "Wingdramon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [
+    "JESmon GX"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the holy \" Royal Knights \", it possesses the powers of the wyvern . It is a unique being among the Royal Knights, in that it serves the lord who embodied its own sense of justice with deep, unquestioning loyalty. For example, for the sake of its own justice, it won't hate its lord even if they are called \"Evil\". For that reason, it has a strong spirit of chivalry and bushido , with a character that honors devotion, fidelity, and courtesy. With its tenacious, dragon-like power, and dragon armor made from high-purity Chrome Digizoid , it boasts unparalleled strength. Its Special Moves are firing energy shots from the palms of its hands, with all the attributes of the Ten Warriors ( Dragon's Roar ), and transforming its body's energy into an aura of a gigantic wyvern ( Breath of Wyvern )."
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Ornismon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 13,
+    "LVE": 13,
+    "KNW": 14,
+    "SNC": 12,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Cosmic Ray",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires a dazzling laser beam from its mouth."
+  },
+  "digivolves_from": [
+    "Garudamon",
+    "Hippogriffomon",
+    "Insekimon",
+    "Parrotmon",
+    "Silphymon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An ancient Digimon that went extinct in the distant past. Boasting a size beyond imagination, it is called the \" Ruler of the Skies \". Its personality is ferocious, and it is said that it will frequently assault even larger Digimon. Its Special Move is to fire a dazzling laser beam ( Cosmic Ray ).",
+  "web_created": true
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Imperialdramon: Fighter Mode",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Positron Laser",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[RANGE 8]",
+    "description": "Fires an energy blast from thePositron Laseron its left arm."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Andromon",
+    "Archnemon",
+    "Chimairamon",
+    "Cyberdramon",
+    "Dinobeemon",
+    "Gigadramon",
+    "Knightmon",
+    "Lady Devimon",
+    "Magnamon",
+    "Megalo Growmon (Orange)",
+    "Mummymon",
+    "Orochimon",
+    "Paildramon",
+    "Triceramon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Pucchiemon (Green)"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A form of the Ancient Dragon Digimon Imperialdramon: Dragon Mode that liberated all of its power, changing form into the legendary Fighter Mode . It is an ultimate Digimon that acquired a great intellect by changing from the difficult-to-control Dragon Mode to a human form. It is said that the power to destroy a planet dwells in its attacks. Its Special Moves are the \" Positron Laser \" equipped to its right arm, and inserting the Positron Laser into the dragon-face on its chest, then emitting all of its body's energy as a destructive energy wave ( Giga Death ). Its power is ten times that of Dragon Mode 's \" Mega Death \". Also, when it awakens to perfect justice, it is able to transform into an even further Mode .",
+  "web_created": true
+}

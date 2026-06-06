@@ -1,0 +1,36 @@
+{
+  "name": "Lavogaritamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 10,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Merudainā",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Fires a laser-shaped heat ray from its mouth."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "DORUgamon",
+    "Lavorvomon"
+  ],
+  "digivolves_to": [
+    "Cannondramon",
+    "Volcanicdramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Dragon Digimon with large wings that lift even its heavy body effortlessly into the air, and well-trained leg strength that allows it to stand imposingly. It dwells in the magma beds of active volcanoes around the Digital World , and it is theorized that it may live nearby Volcdramon . Its fighting style involves scattering mineral dust, covering the enemy with it, and causing it to explode by freely manipulating its ignition point . If the enemy moves, it will result in ignition, so once they are covered in mineral dust, they will drown in terror as soon as the dust explodes. Its Special Moves are firing a laser-shaped heat ray from its mouth ( Merudainā ), and scattering mineral dust by flapping its wings and causing an explosion ( Wild Blast )."
+}

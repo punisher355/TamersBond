@@ -1,0 +1,42 @@
+{
+  "name": "Zassoumon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Squeeze Vine",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "12Uses its vine arms to squeeze the enemy.Buries its arms to cause vines to rise up around the opponent and stabs them with extending thorns."
+  },
+  "digivolves_from": [
+    "Alraumon",
+    "Dokunemon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Tinkermon",
+    "Modoki Betamon"
+  ],
+  "digivolves_to": [
+    "Blossomon",
+    "Brachimon",
+    "Tonosama Gekomon",
+    "Zamielmon",
+    "Petaldramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A subspecies of the Vegimon species whose body is completely green. Unlike Vegimon, it does not ripen and turn red; in turn, it has obtained the vitality of a weed, allowing it to survive no matter how many times it is cut or beaten. Its Special Move is using its vine arms to squeeze the enemy ( Squeeze Vine ).",
+  "web_created": true
+}

@@ -1,0 +1,34 @@
+{
+  "name": "BEMmon",
+  "stage": "Rookie",
+  "attribute": "Unknown",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 3,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Messer Claw",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Pierces the enemy with its sharp claws."
+  },
+  "digivolves_from": [
+    "Bowmon"
+  ],
+  "digivolves_to": [
+    "Damemon",
+    "Tyranomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An artificial Digimon that was created experimentally by someone. Programmed only with the command codes for \"eating and getting stronger\", once it defeats an enemy, it uses its \" Fusionize \" to turn them into its flesh and blood. Its Special Move is piercing the enemy with its sharp claws ( Messer Claw )."
+}

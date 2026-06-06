@@ -1,0 +1,41 @@
+{
+  "name": "Prince Mamemon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 13,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Smiley Warhead",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Unleashes an intense headbutt without breaking its smile."
+  },
+  "digivolves_from": [
+    "Big Mamemon",
+    "Black King Numemon",
+    "Catch Mamemon",
+    "Delumon",
+    "Digitamamon",
+    "Giromon",
+    "Mamemon",
+    "Metal Mamemon",
+    "Super Starmon",
+    "Superstarmon",
+    "Tekkamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Having taken in data on the Net concerning a royal family, it is a prince of the Mamemon world. Partnering with King Etemon , it plays the part of a mock royal family of the Digital World , and that's why it looks so gorgeous. Although its personality isn't awful, it was incited by King Etemon and is convinced that it truly is a member of the royal family, and the embarrassing thing is that it considers even the \" Royal Knights \" to be its subordinates. Its Special Move is unleashing an intense headbutt without breaking its smile ( Smiley Warhead ). Despite its appearance, the part that it boasts is its tremendous destructive power, since it is an Ultimate, after all."
+}

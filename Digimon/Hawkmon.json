@@ -1,0 +1,61 @@
+{
+  "name": "Hawkmon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 3,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Beak Pecker",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Pecks at the enemy with its beak."
+  },
+  "digivolves_from": [
+    "Nyaromon",
+    "Poromon",
+    "Pyocomon",
+    "Tokomon"
+  ],
+  "digivolves_to": [
+    "Airdramon",
+    "Angemon",
+    "Aquilamon",
+    "Birdramon",
+    "Black Growmon",
+    "Cockatrimon",
+    "Devidramon",
+    "Dobermon",
+    "Evilmon",
+    "Fairimon",
+    "Firamon",
+    "Fladramon",
+    "Garurumon",
+    "Greymon (Blue)",
+    "Gryzmon",
+    "Jazardmon",
+    "Kiwimon",
+    "Meicoomon",
+    "Meramon",
+    "Peckmon",
+    "Scumon",
+    "Swanmon",
+    "Tailmon",
+    "Thunderbirmon",
+    "Tyranomon",
+    "Woodmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A very polite Bird Digimon that is always calm, cool, and collected. Just like V-mon , it's a descendant of a special species that flourished in ancient times, so it's able to borrow the power of the \" Digimental \" to pseudo-evolve to an Armor. Its Signature Move is violently pecking with its beak like a woodpecker ( Beak Pecker ). Its Special Move is using the feather ornament on its head like a boomerang ( Feather Slash )."
+}

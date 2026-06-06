@@ -1,0 +1,35 @@
+{
+  "name": "Master Blimpmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 11,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Zeppelin Circus",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Fires countless guided missiles from each of its gunports."
+  },
+  "digivolves_from": [
+    "Blimpmon",
+    "Guardromon (Gold)"
+  ],
+  "digivolves_to": [
+    "Grand Locomon",
+    "Gundramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Airship Digimon that soars through the skies. It evolved after the then-incomplete Blimpmon underwent repeated modifications. As this is its complete form, the once-exposed balloon section is fully covered in armor. Air resistance has been reduced due to its finished armor, improving its navigation speed as well. Because of this, it is able to quickly dispatch Digimon onboard to the battlefield. Its Special Moves are firing countless guided missiles from each of its gunports ( Zeppelin Circus ), and charging into enemy lines at tremendous speed, scattering everything with the drill on its bow ( Daredevil Break )."
+}

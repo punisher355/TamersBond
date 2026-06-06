@@ -1,0 +1,34 @@
+{
+  "name": "Frozomon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Hyougamon",
+    "Paledramon"
+  ],
+  "digivolves_to": [
+    "Ancient Megatheriumon",
+    "Hexeblaumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Machine Digimon that inhabits areas with heavy snowfall and removes snow vigorously. Contrary to its reliable side that rescues those who get lost in snowstorms and the like, it is also a troublesome Digimon who uses all its strength to eliminate those that get in the way of its rescues, even if they are Babies . It is a specialist when it comes to cold regions who is capable of not only removing snow, but also melting ice with its red-hot sword. Its Special Moves are unleashing a punch attack with its enormous right arm while charging ( Removal Blow ), and piercing the enemy using heat from the Heat Sword on its left arm ( Defrost Blade ). In addition, its \" Glaciate Missile \", in which it shoots ice compacted from the snow that gets sucked in by its propeller, generates huge blocks of ice on impact. It can use this to stop avalanches."
+}

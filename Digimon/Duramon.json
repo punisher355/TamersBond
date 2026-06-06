@@ -1,0 +1,45 @@
+{
+  "name": "Duramon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Grasslash",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Slices the enemy with the blades on both arms."
+  },
+  "digivolves_from": [
+    "Buraimon",
+    "Darcmon",
+    "Guardromon (Gold)",
+    "Mimicmon",
+    "Musyamon",
+    "Raptordramon",
+    "Zubaeagermon"
+  ],
+  "digivolves_to": [
+    "Dukemon",
+    "Durandamon",
+    "JESmon",
+    "Shine Greymon",
+    "Tiger Vespamon",
+    "War Greymon",
+    "Zanbamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "As it continues to sprint forward, this Perfect level Digimon is a step closer to crossing into the world on the other side. Although it knows not what future awaits it, it continues training and tempering its swords to cut through any obstacles that stand in its way. When it transforms itself into a weapon, it uses the characteristic greatsword on its back to unleash countless varieties of attacks. Its Special Moves are slicing the enemy with the blades on both arms ( Grasslash ), and firing a beam attack from its chest, which deals massive damage and carves a '20' mark into the enemy if it lands a direct hit ( Blindead )."
+}

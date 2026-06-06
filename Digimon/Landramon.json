@@ -1,0 +1,33 @@
+{
+  "name": "Landramon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Ground Spike",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Extends its retractable claws from beneath the ground and stabs the opponent."
+  },
+  "digivolves_from": [
+    "Sunarizamon"
+  ],
+  "digivolves_to": [
+    "Proganomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Mineral Digimon whose configuration data is made up mostly of sand. It claims the desert as its territory, moving around by blending into the sand in search of food. It bands together with herds of Sunarizamon to brace itself against invading enemies. It lets out a low-pitched, moan-like cry and gives instructions to the Sunarizamon via vibrations transmitted through the sand, and also has the nature of a leader of the pack . As it fights by controlling the sand comprising its body, it despises moisture, and its strength is heavily influenced by the terrain. It exhibits unparalleled strength in the sand, and is feared as a hunter that manipulates quicksand to hunt its prey. Its Special Moves are extending its retractable claws from beneath the ground and stabbing the opponent ( Ground Spike ), and producing a huge amount of quicksand and dragging the opponent underground ( Desert Abyss )."
+}

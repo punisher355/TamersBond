@@ -1,0 +1,38 @@
+{
+  "name": "Petaldramon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Plant",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Leaf Cyclone",
+    "element": "Plant",
+    "pr": 8,
+    "tags": "[RANGE 6]",
+    "description": "Rotates the leaves around its head and fires them."
+  },
+  "digivolves_from": [
+    "Mojyamon",
+    "Zassoumon",
+    "Mojyamon",
+    "Fairimon",
+    "Cockatrimon",
+    "Arbormon"
+  ],
+  "digivolves_to": [
+    "Lotusmon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Wood which bears the might of one of the legendary Warrior Ten . Countless buds sprouted from Arbormon 's surface and grew suddenly, and it changed into a form resembling a giant lizard with plants over its surface. Although it's just like Arbormon in that you can't tell what it's thinking due to its lack of expression, it possesses a great appetite that is the exact opposite of Arbormon, who doesn't require food. When it opens its mouth, it sticks out its ivy-like tongue and swallows anything. Once it swallows its prey, the branches on its back grow and it grins eerily just at that moment. Its physical attacks involve using its branches and tail-whip. It scatters sleep-inducing spores from its moss, which acts as its skin. Its Special Moves are rotating the leaves around its head and firing them ( Leaf Cyclone ), and making innumerable roots lurking in the ground pop up onto the surface all at once, skewering enemies in the area ( Thousand Spike ).",
+  "web_created": true
+}

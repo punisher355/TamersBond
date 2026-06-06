@@ -1,0 +1,50 @@
+{
+  "name": "Bomber Nanimon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 6,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Free Throw Bomb",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Throws bombs that never miss their mark."
+  },
+  "digivolves_from": [
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gottsumon",
+    "Hackmon",
+    "Hagurumon",
+    "Impmon",
+    "Keramon",
+    "Lopmon",
+    "Psychemon",
+    "Solarmon",
+    "Tentomon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Asuramon",
+    "Giromon",
+    "Insekimon",
+    "Megadramon",
+    "Mephismon",
+    "Metal Mamemon",
+    "Volcamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "It seems to be a subspecies of Nanimon , who came from the Digital World of another dimension to invade this one, but the truth is unclear. As its name suggests, its whole body has turned into a bomb, and it appears that its body became one as it continued to battle in the Digital World. Another of its features is that the hair on its calvaria has become a fuse. Its Special Moves are throwing bombs that never miss their mark ( Free Throw Bomb ), and unleashing a powerful explosive punch ( Baku Oyaji Punch )."
+}

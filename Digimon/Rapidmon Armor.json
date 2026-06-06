@@ -1,0 +1,42 @@
+{
+  "name": "Rapidmon Armor",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Rapid Fire",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[RANGE 8] [BLAST 2]",
+    "description": "Rapid-fires homing missiles from its arms and the revolver on its back."
+  },
+  "digivolves_from": [
+    "Devimon",
+    "Galgomon",
+    "Gold V-dramon",
+    "Greymon",
+    "Scumon"
+  ],
+  "digivolves_to": [
+    "Death-X-DORUgoramon",
+    "Duftmon",
+    "Herakle Kabuterimon",
+    "Raijinmon",
+    "Saint Galgomon",
+    "Vikemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Holy Knight Digimon that Armor Evolved from Terriermon with the \" Digimental of Fate \". Rapidmon is normally a Perfect which evolves from Galgomon , but thanks to the \"Digimental of Fate\", it is able to shine gold and sublimate power up to the Ultimate Level. Its Special Moves are rapid-firing homing missiles from both of its arms and the revolver equipped to its back ( Rapid Fire ), and \" Golden Triangle \", which is similar in power level to Magnamon 's Special Move, \" Extreme Jihad \".",
+  "web_created": true
+}

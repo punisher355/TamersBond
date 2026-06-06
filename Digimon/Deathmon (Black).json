@@ -1,0 +1,38 @@
+{
+  "name": "Deathmon (Black)",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 11,
+    "KNW": 9,
+    "SNC": 9,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Death Arrow",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires energy arrows from the eyes on its hands."
+  },
+  "digivolves_from": [
+    "Cyberdramon",
+    "Digitamamon",
+    "Fantomon",
+    "Lady Devimon",
+    "Manticoremon",
+    "Rare Raremon"
+  ],
+  "digivolves_to": [
+    "Hadesmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Like Demon it was originally a high-ranking Angel Digimon, but it fell to the Dark Area and is now one of the Demon Lord Digimon. Even though it is a Demon Lord Digimon, it is different from other Fallen Angel and Devil Digimon in that it does not run the whole gamut of wickedness, but instead does its utmost to carefully maintain a position of neutrality. However, it is a terrifying Digimon, and it is told that at the time of the approaching final battle, that whitened appearance will change to jet-black darkness, and it will transform into a god of destruction. Its Special Moves are an arrow of death fired from the evil eye s on its hands ( Death Arrow ), and a laser beam fired when the eye in its head shines deep crimson ( Explosion Eye ). Deathmon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Takahiro Ino from Yamagata prefecture .",
+  "web_created": true
+}

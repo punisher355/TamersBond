@@ -1,0 +1,56 @@
+{
+  "name": "Yolei",
+  "season": 2,
+  "img": "Yolei.webp",
+  "abilities": [
+    {
+      "name": "Full Send",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "Once per encounter as a Basic Action, choose one ally Digimon within 4 spaces. They immediately gain +3 to their next attack roll and +3 damage on that attack. This must be used before they attack, not after. You back people completely or not at all."
+    },
+    {
+      "name": "Read the Situation Wrong",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "Once per encounter when you use a skill check and fail, you may immediately reroll it. If the second roll also fails, gain +2 to your next skill check this encounter — the embarrassment makes you sharper. Yolei's mistakes have a habit of teaching her something."
+    },
+    {
+      "name": "Fierce Loyalty",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Full Send, Love rank 4",
+      "description": "Full Send now also removes one status effect from the chosen ally Digimon when activated. You boost them and you fix them at the same time. Anyone you back gets everything."
+    },
+    {
+      "name": "Emotional Spike",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Love rank 4",
+      "description": "Once per encounter when an ally Digimon is reduced to 0 HP in the same encounter, your Digimon immediately gains +4 to all attack rolls until the end of the round. Yolei does not handle loss quietly. Neither does her partner."
+    },
+    {
+      "name": "All or Nothing",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Fierce Loyalty, Love rank 5",
+      "description": "Once per session as your Basic Action, choose one allied Digimon. Until the end of the round they deal double damage on every hit. At the end of the round they gain the Paralyze 2 status — the effort costs them. The gamble is always worth it."
+    },
+    {
+      "name": "Bounce Back",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Emotional Spike, Love rank 5",
+      "description": "When your Digimon takes damage that would reduce them below half their max HP, they immediately restore HP equal to your Love rank. This triggers once per encounter and automatically — you do not need to declare it. She always finds her footing again."
+    },
+    {
+      "name": "Heart on Her Sleeve",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Love rank 7",
+      "description": "Once per session at the start of your turn you may declare Heart on Her Sleeve. Choose one ally Tamer. For the rest of this encounter all of their Digimon's attack rolls and damage rolls use the higher of their own stat or yours. Your passion becomes their strength. You give everything you have and somehow it is exactly enough."
+    }
+  ]
+}

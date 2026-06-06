@@ -1,0 +1,40 @@
+{
+  "name": "Arresterdramon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Mach Flicker",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Unleashes high-speed punches while bending both of its arms."
+  },
+  "digivolves_from": [
+    "Bushi Agumon",
+    "Guilmon",
+    "Gumdramon",
+    "Hackmon"
+  ],
+  "digivolves_to": [
+    "Arresterdramon: Superior Mode (Brave Snatcher)",
+    "Rize Greymon",
+    "Savior Hackmon",
+    "Megadramon",
+    "Taomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A form that evolved from Gumdramon by removing its Kinkoji . It is clothed in Battle Armor made of a special rubber, which manifests Gumdramon's characteristic elasticity at its maximum and further strengthens its defense. Its wings have gotten larger, enabling high-speed flight. By changing its tail into a Tail Anchor , it has become able to arrest the opponent in addition to tearing them apart. Its Special Moves are unleashing high-speed punches while bending both of its arms ( Mach Flicker ), brandishing its Tail Anchor to chop up the opponent ( Flog Shot ), bisecting them with its super-sized Tail Anchor while performing a single revolution ( Spin Caliber ), and adding to its \" Spiral Shredder \", in which it rapidly spins to cut them to pieces, by becoming countless revolutions of light then cleaving them apart ( Prism Garrett ).",
+  "web_created": true
+}

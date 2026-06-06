@@ -1,0 +1,31 @@
+{
+  "name": "Big Ukkomon",
+  "stage": "Champion",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Violent Punisher",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Swings its countless, supermassive tentacles, crushing and gouging targets over a vast range."
+  },
+  "digivolves_from": [
+    "Ukkomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that is thought to have appeared the moment the ancient Digital World was destroyed. It is said that it sacrificed its own life to summon a Digitama from the sorrow of the Digimon that disappeared one after another as a result of the destruction. However, there are no records of whether this act had been accomplished or not. Although the existence of Ultimates known as the legendary Ten Warriors has been documented during the era of the ancient Digital World, it is presumed that Big Ukkomon also possessed an amount of data equivalent to an Ultimate, but it has not been possible to verify this. Its Special Move is swinging its countless, supermassive tentacles, crushing and gouging targets over a vast range ( Violent Punisher ).",
+  "web_created": true
+}

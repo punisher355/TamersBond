@@ -1,0 +1,38 @@
+{
+  "name": "Dorulumon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Drill Buster",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Rapidly spins the drill on its head and then shoots it."
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Gabumon (Black)"
+  ],
+  "digivolves_to": [
+    "Cerberumon",
+    "Pandamon",
+    "Were Garurumon",
+    "Yaeger Dorulumon",
+    "Cerberumon: Werewolf Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A faithful Beast Digimon with a chivalrous spirit. It usually sticks to rocky, mountainous areas, and often acts alone without flocking with others. The drill on its head is a hardened portion of its hairs, and its \" Drill Buster \", which rapidly spins the drill and then shoots it, boasts unerring accuracy. It specializes in using \" Hit and Away \" tactics as its strategy, where it runs around while on land at high speed to confuse the opponent before inflicting a single blow. Its \" Dorulu Tornado \", which enlarges the drill on its tail and then raises a tornado, is a threat not only in ground combat but also to aerial Digimon, and since Dorulumon can cope against both ground-based and aerial enemies, it can certainly be said to be an all-rounder warrior. Furthermore, its \" Drill Blader \", a risky move in which it rides the drill of its tail and spins itself, striking the opponent with its body, doesn't stop until it pulverizes the opponent. Also, Dorulumon is able to fire its \" Dorulu Cannon \" in collaboration with another Digimon by changing into its \" Bombardment Mode \"."
+}

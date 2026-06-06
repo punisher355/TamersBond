@@ -1,0 +1,51 @@
+{
+  "name": "Alraumon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Plant",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 3,
+    "KNW": 4,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Nemesis Ivy",
+    "element": "Plant",
+    "pr": 2,
+    "tags": "[RANGE 4] [CONFUSE]",
+    "description": "Entwines the opponent in the claws extended from its hands, then disorients them."
+  },
+  "digivolves_from": [
+    "Dorimon",
+    "Tanemon"
+  ],
+  "digivolves_to": [
+    "Aquilamon",
+    "Arbormon",
+    "Geremon",
+    "Ice Devimon",
+    "Icemon",
+    "Igamon",
+    "Kiwimon",
+    "Numemon",
+    "Red Vegimon",
+    "Scumon",
+    "Stingmon",
+    "Togemon",
+    "Vegimon",
+    "Wizarmon",
+    "Woodmon",
+    "Yanmamon",
+    "Youkomon",
+    "Zassoumon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Plant Digimon that accomplished an evolution just like Palmon . It seems that, at noon, it opens up its arms and the flower on its head to perform photosynthesis . The aroma emitted from the flower on its head is definitely inherited from Palmon, so as usual it is intensely foul. Its Special Move is twining the opponent in the claws extended from its hands, then disorienting them ( Nemesis Ivy )."
+}

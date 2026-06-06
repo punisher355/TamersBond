@@ -1,0 +1,41 @@
+{
+  "name": "Kaus Gammamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "UrdaImpulse",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Performs a ramming attack while gliding."
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Gammamon",
+    "Koemon"
+  ],
+  "digivolves_to": [
+    "Bombermon",
+    "Brachimon",
+    "Canoweissmon",
+    "Fumamon",
+    "Ghilliedhumon",
+    "Regulusmon",
+    "Zanmetsumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A form in which Gammamon grew up, and its body turned blue due to its calm and clear mind. It soars like a glider by spreading the membranes under both of its arms, allowing it to fly far from high places, or rise just briefly while gliding using the jet ports on its knees. It is always calm, cool, and collected, and fights by seeing through the opponent's movements. Its Special Moves are performing a ramming attack while gliding ( Urda Impulse ), and a somersault kick that utilizes the jets from its knees ( Lamberta Kick )."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Blikmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 10,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Anti-Magic",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Cures self or ally Digimon from poison, paralysis, and confusion."
+  },
+  "digivolves_from": [
+    "Clockmon",
+    "Tankmon"
+  ],
+  "digivolves_to": [
+    "Boltmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Guidebook ⇨ Japanese A robot-like Digimon. It grows steadily in all aspects except for speed. It has some offensive power, but it is better for developing it into a recovery medicine. Digimon World 2 -Brave Tamer Road- ⇨ English ロボットのようなデジモン。すばやさ以外は順調に成長する。攻撃力もあるが、むしろ回復薬に育てよう。 デジモンワールド2 -ブレイブテイマーズロード- ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Rebellimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Machmon",
+    "Ogremon",
+    "Orgemon",
+    "Raremon"
+  ],
+  "digivolves_to": [
+    "Gundramon",
+    "Heavy Leomon",
+    "Zeke Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon equipped with a high-powered engine. It is said to have evolved from a Digimon driven to the brink of death that took in junk data from its surroundings. It is an outlaw who loots parts from other Machine-species Digimon in order to further strengthen and remodel its body, which is made out of junk. Occasionally, it has been witnessed racing noisily with large gangs of Machmon . Its Special Moves are firing a large quantity of missiles from its left arm ( Vanquish Missile ), and pulverizing the enemy's body as it minces them with the heavy machinery on its right arm ( Maximum Demolisher )."
+}

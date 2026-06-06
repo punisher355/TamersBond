@@ -1,0 +1,52 @@
+{
+  "name": "Gururumon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Chaos Fire",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "12Spews high-temperature flames from its mouth.Strikes the ground to cause dark fire to rise at its enemy."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gaomon",
+    "Hackmon",
+    "Impmon",
+    "Psychemon",
+    "Solarmon",
+    "Tyumon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Astamon",
+    "Black Megalo Growmon",
+    "Blue Meramon",
+    "Holy Angemon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Okuwamon",
+    "Rapidmon Perfect",
+    "Taomon (Silver)",
+    "Triceramon",
+    "Were Garurumon (Black)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon that is very similar to Garurumon . As a fiendish Digimon that lives in the dark, it is a nuisance who causes trouble everywhere. Its Special Move is high-temperature flames spewed from its mouth ( Chaos Fire )."
+}

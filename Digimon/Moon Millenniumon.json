@@ -1,0 +1,35 @@
+{
+  "name": "Moon Millenniumon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Death Crystal",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Summons a black orb that imprisons the enemy in a dimension where time is compressed."
+  },
+  "digivolves_from": [
+    "Chimairamon",
+    "Metal Greymon (Virus)",
+    "Vamdemon"
+  ],
+  "digivolves_to": [
+    "Zeed Millenniumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Existing within Millenniumon 's inner world, it is a soul Digimon. As a result of Millenniumon's dark spirit becoming a Digimon, it does not possess a fixed form. Although it often takes the shape of a crystal, it seems that, due to its hatred and anger against the enemies who oppose it, that shape can be changed. Also, as a soul it does not have substance, and so it is immune to physical attacks. To defeat Moon Millenniumon, one must first defeat Millenniummon, its true form, but it's likely there are virtually no Digimon who are up to that task. Also, even if by some chance Millenniumon is defeated, it is said that it will separate from its now-dead true form and be revived throughout time and space. Its Special Move is \" Death Crystal \", and while it does not possess a corporeal destructive force, it is said that it chops up the opposing Digimon's spirit.",
+  "web_created": true
+}

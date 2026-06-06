@@ -1,0 +1,50 @@
+{
+  "name": "Marin Angemon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 12,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Ocean Love",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Releases heart-shaped bubbles that can damage enemies, heal allies and remove their negative status conditionsor cause them to lose their fighting spirit. The bubbles can also be used to protect those inside them."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Asuramon",
+    "Digitamamon",
+    "Hangyomon",
+    "Hippogriffomon",
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Lilamon",
+    "Lilimon",
+    "Marin Devimon",
+    "Mermaimon",
+    "Piccolomon",
+    "Sirenmon",
+    "Super Starmon",
+    "Superstarmon",
+    "Thetismon",
+    "Tyilinmon",
+    "Whamon Perfect",
+    "Zudomon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A rarely-sighted Fairy Digimon that inhabits the Net Ocean . Although it possesses the name \"Angemon\", biologically, it is actually of a completely different family from the Angemon-species . The ring worn around Marin Angemon's neck is called a Holy Ring , and it is thought that there is some sort of connection between the ring and holy Digimon as Digimon such as Tailmon or Angewomon have been observed wearing the ring. The letters engraved on the ring have yet to be deciphered at present. Although it generally dislikes combat, its Special Move \" Ocean Love \" makes all of its opponents lose their fighting spirit, allowing it to attain victory as a result."
+}

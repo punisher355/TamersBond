@@ -1,0 +1,33 @@
+{
+  "name": "Beelzebumon: Blast Mode",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Death Slinger",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires a destructive wave from theBlasteron its right arm."
+  },
+  "digivolves_from": [
+    "Baalmon",
+    "Neo Devimon",
+    "Skull Satamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An ultimate Demon Lord that raised its power and spirit to their utmost limits. Instead of evolving in a wicked manner, it maintained a calmer mental state, and its three sinister red eyes have become green. It demonstrates power and speed at a level incomparable to its usual state, and four jet-black wings grow from its back. One could almost say that the opponent no longer exists the moment they stand before Beelzebumon when it took on this form. Its right arm is integrated with its Blaster , which fires powerful energy waves to disintegrate everything into atoms. Its Signature Move is firing a destructive wave from the Blaster on its right arm ( Death Slinger ), and its Special Move is drawing a magic circle in front of itself, then firing destructive waves through the circle's center ( Chaos Flare ).",
+  "web_created": true
+}

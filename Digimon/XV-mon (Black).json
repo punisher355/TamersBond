@@ -1,0 +1,43 @@
+{
+  "name": "XV-mon (Black)",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "X-Laser",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Shoots an intense laser beam in the shape of an X from its chest towards the adversary."
+  },
+  "digivolves_from": [
+    "Flamon",
+    "Mushmon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Andromon",
+    "Brachimon",
+    "Holy Angemon",
+    "Megadramon",
+    "Orochimon",
+    "Paildramon",
+    "Skull Satamon",
+    "Yatagaramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Sorry, but no official profile of XV-mon (Black) has been added yet. The following text is just the blurb of St-768 . This virus-attribute mythical dragon manipulates azure lightning to pierce evil! ⇨ English 邪悪を貫く蒼雷を操る、ウイルス種の幻竜。"
+}

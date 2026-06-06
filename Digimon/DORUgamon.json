@@ -1,0 +1,55 @@
+{
+  "name": "DORUgamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Power Metal",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Fires a large iron ball from its mouth."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "DORUmon",
+    "Dracumon",
+    "Funbeemon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gazimon",
+    "Liollmon",
+    "Monodramon",
+    "Psychemon"
+  ],
+  "digivolves_to": [
+    "Cannonbeemon",
+    "Death-X-DORUguremon",
+    "Delumon",
+    "DORUguremon",
+    "Grademon",
+    "Great Gryzmon",
+    "Groundramon",
+    "Lavogaritamon",
+    "Master Tyranomon",
+    "Metal Greymon (Virus)",
+    "Piccolomon",
+    "Rize Greymon",
+    "Tyilinmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A ferocious Beast Dragon Digimon that possesses the disposition of a beast and a dragon, it is such a heavyweight that most Digimon run away just at the sight of its shadow. Although it exhibits the ferocity of a wild beast in battle, it also has the intelligence of a dragon, and is usually very docile. Because it has an old-style Interface on its brow, it is presumed to be an evolution of a \" Prototype Digimon \". Its Special Move is firing a large iron sphere from its mouth, smashing the opponent ( Power Metal ). With its Signature Move, \" Cannonball \", it is able to fire an iron sphere even while charging forth, although it's more powerful if it remains still and accumulates power before firing.",
+  "web_created": true
+}

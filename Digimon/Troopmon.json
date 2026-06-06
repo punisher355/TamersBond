@@ -1,0 +1,33 @@
+{
+  "name": "Troopmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 4,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Хорошо Attack",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Impmon",
+    "Phascomon"
+  ],
+  "digivolves_to": [
+    "Dark Knightmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An artificial Digimon manufactured by stuffing energy stolen from other Digimon within a special rubber body. As it is a machine-like Digimon that can only perform as commanded, it is absolutely incapable of spontaneous behavior. It doesn't get fatigued, it doesn't feel pain, it doesn't fear death, and it doesn't need to sleep. It is definitely a fighting machine. Its collective behavior is pretty basic, and its individual fighting strength is not very great, but that probably isn't able to make a dent in the extent of its confidence in its ability for human wave tactics , just due to its strength of numbers. An injured Troopmon will just exhale its energy filling, transferring it to a new special rubber body which is reborn as a new Troopmon, so it is actually sent out to the battlefield many times over."
+}

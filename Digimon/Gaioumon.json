@@ -1,0 +1,53 @@
+{
+  "name": "Gaioumon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 9,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Rinkazan",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Slices the enemy with the eerie tracks of light left in the wake of itsKikurinswords."
+  },
+  "digivolves_from": [
+    "Black Megalo Growmon",
+    "Butenmon",
+    "DORUguremon",
+    "Death-X-DORUguremon",
+    "Decker Greymon",
+    "Ex-Tyranomon",
+    "Gigadramon",
+    "Grademon",
+    "Hisyaryumon",
+    "Mametyramon",
+    "Master Tyranomon",
+    "Megadramon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Rize Greymon",
+    "Skull Greymon",
+    "Vajramon",
+    "Vermillimon",
+    "Waru Seadramon"
+  ],
+  "digivolves_to": [
+    "Susanoomon",
+    "Omegamon Alter-B",
+    "Susanomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A Dragon Man Digimon that increases its own strength as it wins battles, and is a subspecies of the Greymon-species , which are highly capable as Combat Species Digimon. Discovered within a neglected Oriental computer, there are many parts of its strength which are unmeasured, but it has been confirmed that it possesses an unbelievable combat record from its countless battles. Its uniquely shaped \" Kikurin \" swords, which it acquired due to its combat experience, leave behind eerie tracks of light, and it is said that anything that comes in contact with those tracks will be cut to pieces. Its Special Moves are the tracks of the Kikurin swords ( Rinkazan ), and concentrating all the energy within the atmosphere and then detonating it ( Gaia Reactor ). Also, it has acquired \" Rinkageki \", where it causes those eerie lights to converge all into one point, and using the two Kikurin swords fused together, shoots it at a distant enemy.",
+  "web_created": true
+}

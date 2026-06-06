@@ -1,0 +1,34 @@
+{
+  "name": "Baboongamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Mount Stone",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Hurls the rocks on its arms."
+  },
+  "digivolves_from": [
+    "Gaomon",
+    "Sunarizamon"
+  ],
+  "digivolves_to": [
+    "Gogmamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A very territorial Beast Digimon. It builds its nest in places that differ in elevation such as cliffs or rocky mountains. The characteristic rocks covering parts of its skin regenerate and become harder each time they break. In addition, the individual with the hardest rocks within a troop is the boss in charge of their territory. Its Special Moves are hurling the rocks on its arms ( Mount Stone ), and striking the enemy with its rock-covered tail at tremendous speed ( Glide Rocks )."
+}

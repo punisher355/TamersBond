@@ -1,0 +1,30 @@
+{
+  "name": "Eosmon (Ultimate)",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Eosmon (Perfect)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate-level Eosmon that was born after several of the Eosmon that were created formed a single collective entity as a result of a researcher losing control when things didn't go as planned. It will destroy any obstacle, and act violently just as instructed. It is able to generate new Perfect-level Eosmon from its swollen tail, increasing its subordinates. Its Special Moves are a beam fired from its chest ( Aurora Stream ), slashing the enemy by teleporting ( Cutting Edge ), and enlarging the panels that it protects itself with, causing them to rain down over the enemy, crushing them ( Cruelty Rain )."
+}

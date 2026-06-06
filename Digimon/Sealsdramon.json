@@ -1,0 +1,46 @@
+{
+  "name": "Sealsdramon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Death Behind",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Ambushes the enemy and stabs them in the back with its knife."
+  },
+  "digivolves_from": [
+    "Bokomon",
+    "Commandramon",
+    "Gammamon",
+    "Liollmon",
+    "Tentomon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Cargodramon",
+    "Fumamon",
+    "Hisyaryumon",
+    "Loader Leomon",
+    "Scorpiomon",
+    "Tankdramon",
+    "Vamdemon",
+    "Volcdramon",
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "It is said that only the one that passes the \"Selection-D\", a special selection test that screens through 100 Commandramon , can evolve to Sealsdramon. It is able to move over short distances at speeds that are impossible to perceive with the eyes, and without equipping things like camouflage features or a rifle, it has the ability to bring down its \"Target\" with just its taijutsu . Its primary function is assassination. Its Special Moves are a single blow from a knife sharpened to its limit ( Death Behind ), and measuring the opponent's vital points in an instant ( Scouter Monoeye )."
+}

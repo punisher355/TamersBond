@@ -1,0 +1,59 @@
+{
+  "name": "Peckmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 5,
+    "KNW": 4,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Spiral Claw",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Jumps high into the air, rapidly spins its entire body and pulverizes the enemy with its gigantic claws."
+  },
+  "digivolves_from": [
+    "Agumon Hakase",
+    "Candmon",
+    "Elecmon",
+    "Gaomon",
+    "Gasamon",
+    "Goburimon",
+    "Hawkmon",
+    "Hyokomon",
+    "Kamemon",
+    "Muchomon",
+    "Penmon",
+    "Piyomon",
+    "Renamon"
+  ],
+  "digivolves_to": [
+    "Andiramon (Deva)",
+    "Blossomon",
+    "Jazarichmon",
+    "Karatenmon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Mega Seadramon",
+    "Megalo Growmon",
+    "Piccolomon",
+    "Rize Greymon",
+    "Shawujinmon",
+    "Sinduramon",
+    "Tyilinmon",
+    "Vamdemon",
+    "Yatagaramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Bird Digimon with powerful leg strength, such that it would be faster for it to run than to fly in the air. Its Special Moves are jumping high into the air, rapidly spinning its entire body and pulverizing the enemy with its gigantic claws ( Spiral Claw ), and firing the steel feathers it stores in the undersides of its wings ( Kunaibane ). Also, it specializes in a striking technique in which it pecks the enemy with its sharp beak like a woodpecker ( Thousand Beak )."
+}

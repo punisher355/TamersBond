@@ -1,0 +1,38 @@
+{
+  "name": "Shakamon",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Light",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 18,
+    "LVE": 11,
+    "KNW": 16,
+    "SNC": 18,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Satori Henro Shou",
+    "element": "Light",
+    "pr": 14,
+    "tags": "[RANGE 4] [PARALYZE 2]",
+    "description": "Enlightens those who challenge it to battle that conflict is meaningless by having them endlessly fight against an illusion on top of its palm, so in the end both their mind and body are exhausted."
+  },
+  "digivolves_from": [
+    "Dijiangmon",
+    "Erlangmon",
+    "Jougamon",
+    "Nezhamon",
+    "Shagaramon",
+    "Takutoumon",
+    "Xiangpengmon",
+    "Seiten Gokuwmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "Rumored to be the being closest to the Host Computer in the Digital World , Shakamon is the one that has protected the Eastern Digital World since ancient times. It is a being replete with love, but it will occasionally impose an ordeal upon the Digital World in order to have it leap forward even further. Those ordeals are also Shakamon's love, and it is said that Shakamon is still waiting for the arrival of the Digimon that will overcome the ordeals. It is something meaningless to challenge Shakamon, who understands the underlying principles of heaven and earth. Even if someone challenges it to battle, they would just be endlessly fighting against an illusion on top of Shakamon's palm, so in the end both their mind and body are exhausted. With this \" Satori Henro Shou \", Shakamon enlightens them that conflict is meaningless. Also, it purifies and remedies evil by illuminating the opponent with a halo that cannot be shut out even if they close their eyes ( Reikou Kumo-no-Ito ), and its \" Taijou Shingon \" crushes hostility with a thundering voice, knocking the opponent away beyond the horizon.",
+  "web_created": true
+}

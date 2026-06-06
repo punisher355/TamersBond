@@ -1,0 +1,39 @@
+{
+  "name": "Cres Garurumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 11,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Kijū Engetsutou",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Slashes the opponent with itsKijū Engetsutou."
+  },
+  "digivolves_from": [
+    "Big Mamemon",
+    "Metal Mamemon",
+    "Orochimon",
+    "Valvemon",
+    "Waru Seadramon",
+    "Were Garurumon",
+    "Were Garurumon (Black)"
+  ],
+  "digivolves_to": [
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A final form of Garurumon , it is a subspecies of Metal Garurumon which has become humanoid, unlike Z'd Garurumon , a fellow final form. It is clad in armor made of Gold Digizoid , which deflects attacks, and specializes in swordplay wielding the \" Kijū Engetsutou \" as its weapon. It unleashes its \" Jūrou Daikaiten \", where it spins its entire body and attacks the opponent while turning into a blade, as well as \" Geki: Hyougetsuga \", in which it molds the Kijū Engetsutou into countless forms using ice, and then hurls it at the opponent, as its techniques.",
+  "web_created": true
+}

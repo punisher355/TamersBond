@@ -1,0 +1,35 @@
+{
+  "name": "Huankunmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Korōhō",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Produces a bubble from its fins to envelop the enemy and restrict their movements."
+  },
+  "digivolves_from": [
+    "Pidmon",
+    "Xiquemon"
+  ],
+  "digivolves_to": [
+    "Ravmon",
+    "Xiangpengmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A giant Aquatic Digimon whose whole body is covered in scales boasting a hardness rivaling that of Chrome Digizoid . It has a gentle personality, prefers clear water, and protects the areas around lakes from environmental pollution. When feeding, it will jump out of the lake, move as if it is swimming in the air, and swallow flying Digimon whole to satisfy its appetite. Also, because its large build makes it an easy target, it often blends in with flocks of Xiquemon to travel around. For that reason, whenever it moves, it will surround the flock with a large amount of bubbles to protect itself. Since the bubbles refract light, the entire flock, including Huankunmon itself, become transparent and cannot be seen from their surroundings. Its Special Moves are enveloping the enemy in a bubble produced from its fin to restrict their movements ( Korōhō ), and spitting out countless sharp icicles from its mouth ( Hyōran Kettotsu ). In addition, it generates a whirlpool from out of nowhere, forming a pillar of water that slams into the enemy ( Chōryū Senka )."
+}

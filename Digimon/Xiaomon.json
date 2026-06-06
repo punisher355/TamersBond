@@ -1,0 +1,33 @@
+{
+  "name": "Xiaomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Releases a high-frequency wave that is an effective charm against evil."
+  },
+  "digivolves_from": [
+    "Paomon"
+  ],
+  "digivolves_to": [
+    "Labramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A four-legged Baby Digimon that evolved from Paomon . It is said that Digimon that were created artificially basically only evolve up to their Child-level, and the most often seen artificial Digimon is this Xiaomon. It forms attachments with people enormously easily, and among Digimon it is the easiest to train. Its Special Move, \" Tummo \", releases a high-frequency wave that is an effective charm against evil."
+}

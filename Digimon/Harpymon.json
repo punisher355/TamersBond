@@ -1,0 +1,44 @@
+{
+  "name": "Harpymon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Wind Seeker",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Manipulates the wind, generating a vacuum blade."
+  },
+  "digivolves_from": [
+    "Floramon",
+    "Renamon",
+    "Shamamon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Holy Angemon",
+    "Karatenmon",
+    "Lady Devimon",
+    "Magnamon",
+    "Makuramon",
+    "Pajiramon",
+    "Parrotmon",
+    "Sinduramon",
+    "Pajramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mythical Beast Digimon that evolved through the power of the \" Digimental of Light \". Possessing wing-arms and a female upper body, it is a thief Digimon that is called the \" Snatcher \" from how it steals valuable data (treasure) from databases (ruins). It shows up like a gale, seizing treasure and attacking with its large talons. Although its power is lacking, the continuous attacks unleashed using its speed are terrifying. Its Special Move is manipulating the wind, generating a vacuum blade ( Wind Seeker ). Harpymon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Ms. Sudou Chie from Saitama prefecture .",
+  "web_created": true
+}

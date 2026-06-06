@@ -1,0 +1,56 @@
+{
+  "name": "Thunderballmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Thunderball",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Fires spheres of electricity that can be as powerful as one billion volts."
+  },
+  "digivolves_from": [
+    "Armadimon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Hagurumon",
+    "Kokabuterimon",
+    "Kokuwamon",
+    "Kudamon",
+    "Pulsemon",
+    "Terriermon",
+    "Toy Agumon",
+    "Toy Agumon (Black)"
+  ],
+  "digivolves_to": [
+    "Big Mamemon",
+    "Black Rapidmon",
+    "Bolgmon",
+    "Boutmon",
+    "Giromon",
+    "Knightmon",
+    "Mamemon",
+    "Mametyramon",
+    "Metallife Kuwagamon",
+    "Metal Mamemon",
+    "Piccolomon",
+    "Sephirothmon",
+    "Superstarmon",
+    "Tekkamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Also known as the \" Digimon Dynamo \", it is a Mutation Digimon that is conjectured to be a member of the Mamemon-species . Its tiny body has the properties of a magnet, and is always clad in electricity and discharging lightning. It fires spheres of discharged electricity as much as 10 MV at opponents who are coming to attack it ( Thunder Ball )."
+}

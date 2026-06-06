@@ -1,0 +1,37 @@
+{
+  "name": "Searchmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Jamming Hertz",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Emits radio waves that derange the opponent from theradomeon its back, leaving them in a state of complete confusion."
+  },
+  "digivolves_from": [
+    "Floramon",
+    "Tentomon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Assaultmon",
+    "Atlur Kabuterimon (Blue)",
+    "Jewelbeemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Insect Digimon that evolved through the power of the \" Digimental of Knowledge \". It has \"inquisitive\" habits due to the influence of the \"Digimental of Knowledge\", and it performs information gathering and reconnaissance with the radome (radar) attached to its back. Searchmon can detect the presence of enemies no matter how small their sounds or vibrations are, and also gathers information on them. Its Special Move is emitting radio waves that derange the opponent from the radome on its back, leaving them in a state of complete confusion ( Jamming Hertz ).",
+  "web_created": true
+}

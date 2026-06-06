@@ -1,0 +1,53 @@
+{
+  "name": "Black War Greymon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Ankoku no Gaia Force",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[RANGE 8]",
+    "description": "Takes all of the \"negative emotions\" within this world and concentrates them into one spot, and then fires it."
+  },
+  "digivolves_from": [
+    "Archnemon",
+    "Black Megalo Growmon",
+    "Cyberdramon",
+    "Ex-Tyranomon",
+    "Fantomon",
+    "Flaremon",
+    "Matadrmon",
+    "Megadramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Metal Tyranomon",
+    "Mistymon",
+    "Shakkoumon",
+    "Skull Greymon",
+    "Vamdemon",
+    "Vermillimon",
+    "Waru Seadramon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "Omnimon",
+    "Omegamon Alter-B",
+    "Omnimon Zwart"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Virus-species War Greymon feared as the \" Jet-black Dragon Warrior \". Although its creed and principles are the polar opposite of those of the Virus Busters War Greymon, it exists for the sake of its own peculiar \"Justice\". It detests cowardice and foul play, and doesn't consider itself a fellow of vulgar Digimon even if they are of the same Virus-species. How exactly it converted into a Virus is a mystery, and the \" Brave Shield \" equipped to its back is not engraved with the Crest of Courage . Its Special Move is similar to War Greymon's \" Gaia Force \", except that it takes all of the \"negative emotions\" within this world and concentrates them into one spot, and then fires it ( Ankoku no Gaia Force )."
+}

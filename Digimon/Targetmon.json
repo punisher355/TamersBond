@@ -1,0 +1,35 @@
+{
+  "name": "Targetmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Dengeki Haguhagu Sneaker",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Repeatedly strikes the opponent with the sneakers on both of its arms."
+  },
+  "digivolves_from": [
+    "Hackmon",
+    "Zubamon"
+  ],
+  "digivolves_to": [
+    "Etemon",
+    "Great King Scumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An obstinate-species Puppet Digimon equipped with the extremely wide-angle, high resolution \" Yarimasu Gurasan [N 1] \" (with blur correction), which reliably lock onto the desired target without missing. It performs humiliating attacks on the opponent with the sneakers it seems to have mistakenly put on both its hands. Its Special Moves are repeatedly striking the opponent with the sneakers on both of its arms ( Dengeki Haguhagu Sneaker ), and losing control of itself and charging ( Tongari Head ). Also, no matter how depressed it is when it loses, it is a tough Digimon that will revive itself over and over with the \" Anja Serenade \" in its heart."
+}

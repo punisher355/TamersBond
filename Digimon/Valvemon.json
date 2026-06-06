@@ -1,0 +1,39 @@
+{
+  "name": "Valvemon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 11,
+    "LVE": 7,
+    "KNW": 9,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Mud Pump",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "123Dispatches soldiers from within.Blasts water from its arms.Fires a stream of projectiles like miniature Valvemon."
+  },
+  "digivolves_from": [
+    "Blimpmon",
+    "Garurumon",
+    "Gorimon",
+    "Kenkimon",
+    "Mechanorimon"
+  ],
+  "digivolves_to": [
+    "Cannondramon",
+    "Cres Garurumon",
+    "Metal Garurumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Machine Digimon which boasts of one of the greatest sizes among vehicle Digimon. It is also able to load and carry as many as forty Digimon within its body, and transports them to strategic points. Even if it is attacked during transportation, it possesses enough power to repel its assailants. Its Special Move is dispatching soldiers one after another from within ( Mud Pump )."
+}

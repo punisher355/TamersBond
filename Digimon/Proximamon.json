@@ -1,0 +1,31 @@
+{
+  "name": "Proximamon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 18,
+    "LVE": 12,
+    "KNW": 15,
+    "SNC": 17,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Extinction Cloud",
+    "element": "Neutral",
+    "pr": 15,
+    "tags": "[MELEE]",
+    "description": "Disassembles everything into its smallest units with black particles."
+  },
+  "digivolves_from": [
+    "Siriusmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A mysterious Digimon that is said to govern over destruction and creation, and possess immense power. Since it is a Digimon whose \"theoretical\" manifestation was predicted in a simulation on a high-speed computing device, it is unknown whether it exists in the real Digital World . It has the ability to generate the opposing forces of holy energy and evil energy, and is said to be capable of disassembling every constituent substance in the Digital World with evil energy, and reconstructing the disassembled substances with holy energy to create new ones. Because it disassembles and recreates everything such as the Digimon in its surroundings and the environment merely by existing, there is a risk that the Digital World will be completely rewritten in the blink of an eye as a result of this Digimon manifesting. For that reason, in order to prevent any possible abuse, the simulation data on the evolution requirements for manifesting Proximamon is strictly kept secret. It constantly invokes its \" Extinction Cloud \", in which it disassembles everything into its smallest units with black particles, and its \" Light of Re-creation \", where it uses its huge battleaxe imbued with holy light to recreate what was disassembled into a new existence.",
+  "web_created": true
+}

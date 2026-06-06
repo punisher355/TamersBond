@@ -1,0 +1,33 @@
+{
+  "name": "Olegmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Viking Vuffet",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Swings its axes down vertically over and over, chopping the opponent to bits."
+  },
+  "digivolves_from": [
+    "Astamon",
+    "Blizzarmon",
+    "Daipenmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "As the general of the Gold-thief Army of the \" Big Death-Stars \", it is a super-heavyweight Digimon whose whole body is clad in steel armor. With its army, which runs the whole gamut of atrocities and looting with Aquatic and Marine Beast Digimon, it plunders treasure wherever it travels across the ocean. It has a weakness for gold and silver treasures, so its collected treasures become Olegmon's entire diet, and it increases the strength of Olegmon's armor if it eats enough. Olegmon boasts the most superhuman strength among the other generals, easily wielding its super-heavyweight \" Dual Tomahawk \" pair of axes, and effortlessly hurling them with its \" Dual Tomahawk Boomerang \". If an opponent suffers its \" Viking Vuffet \", in which it swings the axes down vertically over and over, they'll be chopped to bits in the blink of an eye. Also, Olegmon keeps the gigantic shadow called \" Jörmungandr \" in the chest on its right shoulder, and the one called \" Surtr \" in the chest on its left shoulder. Both become fiendish shadows if an opponent is recognized, and \" Jörmungandr \" on its right shoulder takes them away to \" Jötunheimr \", which is said to be the end of the world, with \" Age of Discovery \". Surtr on its left shoulder asks for the opponent's wishes and pretends to grant them with \" Dream Comes True \", but avoids granting the wish using a convenient interpretation from Olegmon, and if on the other hand the opponent stubbornly refuses the wish, it keeps on doling out attacks."
+}

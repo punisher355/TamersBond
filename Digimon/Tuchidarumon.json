@@ -1,0 +1,50 @@
+{
+  "name": "Tuchidarumon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Earth",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Great Weight",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE] [RUSH]",
+    "description": "A heavyweight punch that is profoundly loaded with all of its weight."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Bokomon",
+    "Gabumon",
+    "Gottsumon",
+    "Koemon",
+    "Lalamon",
+    "Lopmon",
+    "Mushmon",
+    "Palmon",
+    "Plotmon",
+    "Psychemon"
+  ],
+  "digivolves_to": [
+    "Andiramon (Deva)",
+    "Delumon",
+    "Gerbemon",
+    "Insekimon",
+    "Jyagamon",
+    "Pandamon",
+    "Pumpmon",
+    "Tekkamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Digimon whose body is mostly made of earth data. It is said that it may be a mutant that was born from a mutation of Yukidarumon . As it possesses a gentle personality, it hates battle, but when push comes to shove, it exhibits the power that it usually doesn't show. Its Special Move is a heavyweight punch that is profoundly loaded with all of its weight ( Great Weight )."
+}

@@ -1,0 +1,49 @@
+{
+  "DIGIMON.SheetTamer": "Tamer Sheet",
+  "DIGIMON.SheetDigimon": "Digimon Sheet",
+
+  "TYPES.Actor.tamer": "Tamer",
+  "TYPES.Actor.digimon": "Digimon",
+  "TYPES.Item.move": "Move",
+  "TYPES.Item.classSkill": "Class Skill",
+
+  "DIGIMON.Stat.attack":  "Attack",
+  "DIGIMON.Stat.speed":   "Speed",
+  "DIGIMON.Stat.spirit":  "Spirit",
+  "DIGIMON.Stat.int":     "Int",
+  "DIGIMON.Stat.defense": "Defense",
+  "DIGIMON.Stat.hp":      "HP",
+
+  "DIGIMON.Crest.courage":     "Courage",
+  "DIGIMON.Crest.friendship":  "Friendship",
+  "DIGIMON.Crest.love":        "Love",
+  "DIGIMON.Crest.knowledge":   "Knowledge",
+  "DIGIMON.Crest.sincerity":   "Sincerity",
+  "DIGIMON.Crest.reliability": "Reliability",
+  "DIGIMON.Crest.hope":        "Hope",
+
+  "DIGIMON.Stage.Fresh":      "Fresh",
+  "DIGIMON.Stage.InTraining": "In-Training",
+  "DIGIMON.Stage.Rookie":     "Rookie",
+  "DIGIMON.Stage.Champion":   "Champion",
+  "DIGIMON.Stage.Ultimate":   "Ultimate",
+  "DIGIMON.Stage.Mega":       "Mega",
+  "DIGIMON.Stage.Ultra":      "Ultra",
+
+  "DIGIMON.Attribute.Vaccine":  "Vaccine",
+  "DIGIMON.Attribute.Virus":    "Virus",
+  "DIGIMON.Attribute.Data":     "Data",
+  "DIGIMON.Attribute.Free":     "Free",
+  "DIGIMON.Attribute.Variable": "Variable",
+  "DIGIMON.Attribute.Unknown":  "Unknown",
+
+  "DIGIMON.Element.Fire":     "Fire",
+  "DIGIMON.Element.Water":    "Water",
+  "DIGIMON.Element.Plant":    "Plant",
+  "DIGIMON.Element.Electric": "Electric",
+  "DIGIMON.Element.Wind":     "Wind",
+  "DIGIMON.Element.Earth":    "Earth",
+  "DIGIMON.Element.Light":    "Light",
+  "DIGIMON.Element.Dark":     "Dark",
+  "DIGIMON.Element.Neutral":  "Neutral"
+}

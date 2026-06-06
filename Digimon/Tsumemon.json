@@ -1,0 +1,42 @@
+{
+  "name": "Tsumemon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Slashs with the claws on its tentacles."
+  },
+  "digivolves_from": [
+    "Kuramon"
+  ],
+  "digivolves_to": [
+    "Agumon (Black)",
+    "Dracumon",
+    "Gabumon (Black)",
+    "Gazimon",
+    "Keramon",
+    "Kotemon",
+    "Pico Devimon",
+    "Shamamon",
+    "Toy Agumon (Black)",
+    "Tukaimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Baby Digimon that further evolved from Kuramon . The tips of its tentacles have become claw-shaped, and its ferocity has also increased. It consumes data at a terrifying speed, causing the Network to go haywire. Not only that, once it has evolved into Tsumemon, it becomes even more difficult to capture due to its fast movement speed. Its Special Move is slashing with the claws on its tentacles ( Nail Scratch )."
+}

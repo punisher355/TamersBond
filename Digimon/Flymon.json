@@ -1,0 +1,55 @@
+{
+  "name": "Flymon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Deadly Sting",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Fires the stinger on its tail to paralyze the opponent's whole body."
+  },
+  "digivolves_from": [
+    "Dokunemon",
+    "Floramon",
+    "Funbeemon",
+    "Gabumon",
+    "Gizamon",
+    "Gottsumon",
+    "Guilmon",
+    "Kunemon",
+    "Mushmon",
+    "Tentomon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Archnemon",
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Cannonbeemon",
+    "Digitamamon",
+    "Dinobeemon",
+    "Giromon",
+    "Jewelbeemon",
+    "Megadramon",
+    "Metal Tyranomon",
+    "Monzaemon",
+    "Okuwamon",
+    "Vamdemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Insect Digimon that possesses gigantic, baleful wings. With its gigantic wings it is able to fly about at extremely high speed, and it generates a great Howling Noise called buzzing while in flight, completely numbing the sense of hearing of those who hear it. Its body is protected by a hard shell, and it pinches the opponent between its large talons and brings death with the super-powerful stinger on its tail. Although the evolutionary processes of Insect Digimon are still unclear, it is thought that it evolved from a Kunemon-species , guessing by the appearance of its face. Its Special Move is firing the stinger on its tail ( Deadly Sting ), and it is said that Digimon who are stung with this stinger have their whole body paralyzed, then their body turns violet and they die. Incidentally, this isn't a problem for it because it is said the stinger grows back indefinitely."
+}

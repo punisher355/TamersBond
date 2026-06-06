@@ -1,0 +1,36 @@
+{
+  "name": "Chamelemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 8,
+    "LVE": 6,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Tongue Whip",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Attacks with its powerful, extensible tongue in the manner of a whip."
+  },
+  "digivolves_from": [
+    "Kokuwamon",
+    "Tentomon"
+  ],
+  "digivolves_to": [
+    "Brachimon",
+    "Paildramon",
+    "Pumpmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Reptile Digimon that evolved through the power of the \" Digimental of Kindness \". Chamelemon's skin has a unique structure, and it has the ability to blend in by scanning the surrounding environment and re-covering the texture of its skin. As a Digimon suited for espionage, it is able to slip through impregnable security and enter databases. For that reason, there are occasions when it is used by various companies in order to enter the databases of rival companies and steal information. Also, it is able to skillfully move both of its eyes, which are equipped with scanning devices, and take in a 360° view. Its Special Move is attacking with its powerful, extensible tongue in the manner of a whip ( Tongue Whip ).",
+  "web_created": true
+}

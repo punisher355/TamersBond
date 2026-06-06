@@ -1,0 +1,25 @@
+{
+  "name": "Fufumon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Kyokyomon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Slime Digimon with an extremely light body that has floated through the air since it was born. When its life is threatened by an assault from a larger opponent, it will thrust at them with the horn on its head to intimidate them with all its might, but because the horn is very soft, the thrust will not injure the opponent. Though it is easy for opponents to target it because it floats very slowly through the air, but if they approach it spit \" Chīsana Tetsu no Toge \" from its mouth to attack.",
+  "web_created": true
+}

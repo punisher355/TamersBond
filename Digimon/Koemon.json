@@ -1,0 +1,55 @@
+{
+  "name": "Koemon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 4,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Mischievous Hoop",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Trips the enemy with a throwing wheel that entangles their leg."
+  },
+  "digivolves_from": [
+    "Gurimon",
+    "Pukamon",
+    "Tunomon",
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Depthmon",
+    "Gorimon",
+    "Greymon",
+    "Grottemon",
+    "Hanumon",
+    "Hookmon",
+    "Igamon",
+    "Kangarumon",
+    "Kaus Gammamon",
+    "Kiwimon",
+    "Kougamon",
+    "Maquinamon",
+    "Revolmon",
+    "Sheepmon",
+    "Shellmon",
+    "Tankmon",
+    "Tuchidarumon",
+    "Wezen Gammamon",
+    "Turbomon",
+    "Mulemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon that has the appearance of an infant monkey. It has enough strength to wield a slingshot the size of its body with ease, and confidence in its abilities to prevent its prey from escaping. It often falls from treetops due to its careless personality. Its stylish traits are its tiger-printed outfit and its white-tipped tail. Its Signature Move is throwing a hoop at the opponent's legs to ensnare them and cause them to fall over ( Mischievous Hoop ). Its Special Move is a shooting attack that boasts of infallible accuracy ( Baby Sling )."
+}

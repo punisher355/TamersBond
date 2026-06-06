@@ -1,0 +1,31 @@
+{
+  "name": "Shoutmon X5B",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Burst Dash Stream",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Cuts the opponent to pieces withBurning Star Crusher, launches them withMeteor Impact, and finishes them off withChaos Flare."
+  },
+  "digivolves_from": [
+    "Shoutmon X5"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The \" Pegasus -wargod Mode \" formed when Beelzebumon granted further power to Shoutmon X5 , which incarnated from five Digimon. Beelzebumon's firepower has added to the full power of Shoutmon X5, who boasts of being unmatched either on land or in the air, boosting its fighting strength exponentially. Its \" Burst Dash Stream \", a series of Special Moves in which it cuts the opponent to pieces with \" Burning Star Crusher \", launches them with \" Meteor Impact \", and finishes them off with \" Chaos Flare \", pours raging waves of bold moves on the opponent in a flash with a three-step wave of attacks. This Pegasus becomes a galloping comet across the sky and makes sport of any kind of opponent with its godlike speed, and with its power, which should surely be praised as divine skill, it is like a wargod sent from heaven to destroy demons.",
+  "web_created": true
+}

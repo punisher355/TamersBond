@@ -1,0 +1,32 @@
+{
+  "name": "Parallelmon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 16,
+    "FRD": 15,
+    "LVE": 15,
+    "KNW": 15,
+    "SNC": 13,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Absorbent Bang",
+    "element": "Neutral",
+    "pr": 14,
+    "tags": "[RANGE 8] [BLAST 2] [DRAIN]",
+    "description": "Absorbs targets with a beam fired from its eye."
+  },
+  "digivolves_from": [
+    "Callismon",
+    "Ulforce V-dramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Mutation Digimon that can freely travel back and forth between the Digital Worlds of other dimensions. It is a fiendish being that devours the data of Digimon in worlds it has crossed into, and its goal is unclear. As the world always falls into chaos whenever the elusive Parallelmon appears, research teams have identified its arrival as a disaster. Its Special Move is absorbing Digimon with a beam fired from its eye ( Absorbent Bang ). When something besides a Digimon gets hit directly by the beam, they are sent flying into another dimension. In addition, it has \" Endless Trance \", in which it launches a unilateral attack from the countless gates it opens around the enemy.",
+  "web_created": true
+}

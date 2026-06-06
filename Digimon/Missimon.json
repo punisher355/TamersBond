@@ -1,0 +1,38 @@
+{
+  "name": "Missimon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Bombmon",
+    "Bommon"
+  ],
+  "digivolves_to": [
+    "Commandramon",
+    "Dracumon",
+    "Gizamon",
+    "Hagurumon",
+    "Penmon",
+    "Tentomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Machine Digimon with a missile for a body. The moment it evolves into Missimon, its missile is ignited and sends it flying non-stop until it further evolves into another Digimon. While it is able to adjust its flight speed to some extent, it is unable to stop moving as it will fall if it does not maintain a sufficient flight speed. It can utilize this speed to do a body tackle ( Missile Crash ), sporting great destructive power, but this attack almost never hits its target due to Missimon's sub-par control."
+}

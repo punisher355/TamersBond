@@ -1,0 +1,31 @@
+{
+  "name": "Shoutmon DX",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 13,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Trident JusFang",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "12A powerful blow from the claws of theTrident JusFangon its left arm.Slashes with the blades on its right arm."
+  },
+  "digivolves_from": [
+    "Boutmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The \" Crusade Mode \", born when Omega Shoutmon , who boasts the swiftest speed, obtained the fighting strength of Zeke Greymon , who boasts unparalleled power, incarnating its high defensive and offensive power without losing Omega Shoutmon's speed by obtaining Zeke Greymon's \" Gold Digizoid \". There is never an opponent too formidable before the \" Crusade Mode \", who boasts high mobility and offensive power. Shoutmon DX possesses a disposition that contrasts clever divinity with ferocious bestiality, deriving from the instincts within Omega Shoutmon and Zeke Greymon. Although it normally has a mild, kind, and friendly personality, once it gets into battle, it has a complete about-face to a warrior burning with fury. It becomes both cool and audacious enough for battles to get violent, and that appearance is fitting to the name of \" Crusade Mode \", as it seems to be one who acts as an agent of divine punishment. The \" Electric Buster Xros \" bayonets equipped to its right arm demonstrate their power in both gun and sword attacks, and the gigantic \" Trident JusFang \" claws on its left arm not only release a powerful blow, but also use that sturdiness to function as a shield. \" Brave Beat Rock Double Xros \" is Shoutmon DX's Final Move. Omega Shoutmon's and Zeke Greymon's flames become one, clothing its body with the hellfire that purifies all corruption. Its appearance when it becomes an incarnation of flame and assaults the opponent looks like a meteor, and completely vaporizes all of the opponents.",
+  "web_created": true
+}

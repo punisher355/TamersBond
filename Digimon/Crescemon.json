@@ -1,0 +1,52 @@
+{
+  "name": "Crescemon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 9,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Lunatic Dance",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Entrances the enemy with its dance-like steps, after which it closes the distance and slashes with theNova Luna, that it wields in both hands."
+  },
+  "digivolves_from": [
+    "Devimon",
+    "Galgomon",
+    "Gaogamon",
+    "Ice Devimon",
+    "Icemon",
+    "Lekismon",
+    "Moosemon",
+    "Starmon",
+    "Yukidarumon",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Belphemon: Rage Mode",
+    "Cherubimon (Virtue)",
+    "Dianamon",
+    "Fros Velgrmon",
+    "Hexeblaumon",
+    "Leviamon",
+    "Lord Knightmon",
+    "Mirage Gaogamon",
+    "Rosemon",
+    "Shine Greymon",
+    "Sleipmon",
+    "Surfimon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Demon Man Digimon with a flexible body, allowing it to perform nimble movements as it attacks its enemies. It excels in battling elegantly, and its power is said to double when it is exposed to moonlight. Its Special Move is entrancing the enemy with its dance-like steps, after which it closes the distance and slashes with the weapons, Nova Luna , that it wields in both hands ( Lunatic Dance ). It is also capable of combining its two Nova Luna weapons to transform it into a bowgun. It can use its weapon when in this form to perform two techniques: firing an arrow of ice ( Ice Archery ), and firing an arrow made from dark energy ( Dark Archery )."
+}

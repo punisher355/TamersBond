@@ -1,0 +1,46 @@
+{
+  "name": "Strabimon",
+  "stage": "Rookie",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Licht Nagel",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Slices up its enemies with claws on both arms that radiate with light."
+  },
+  "digivolves_from": [
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Black Galgomon",
+    "Blimpmon",
+    "Dobermon",
+    "Fangmon",
+    "Gargomon",
+    "Garurumon (Black)",
+    "Goatmon",
+    "Gryzmon",
+    "Mechanorimon",
+    "Meramon",
+    "Strikedramon",
+    "Wendimon",
+    "Wolfmon",
+    "XV-mon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that was transformed into a half-beast, half-man form when Wolfmon 's power was halved. Because it has not lost its \"Combat Instinct\", unlike the similar half-beast, half-man Flamon , it has a ferocious side. For that reason, although it has the appearance of a Child Digimon, it will sometimes rampage enough that even the typical Adult Digimon is unable to control it. As with Flamon, although its power was decreased, it seems that Adult-class Digimon aren't a match for it. Its Special Move is cutting the opponent to pieces with the shining claws on its hands ( Licht Nagel ).",
+  "web_created": true
+}

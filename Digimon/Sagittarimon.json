@@ -1,0 +1,41 @@
+{
+  "name": "Sagittarimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 8,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Judgement Arrow",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Fires an arrow made of the super-metalChrome Digizoid."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Bearmon",
+    "Impmon",
+    "Tentomon"
+  ],
+  "digivolves_to": [
+    "Grappu Leomon",
+    "Indaramon",
+    "Magnamon",
+    "Pajiramon",
+    "Sandiramon",
+    "Pajramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mythical Animal Digimon that evolved through the power of the \" Digimental of Hope \". It is a superior species of the Centalmon family, and it is told that it is a mythical being. Although it is an Armor that pseudo-evolved from an ancient Digimon due to the power of the Digimental , it will sometimes evolve as a mutation among Centalmon (not an Armor Evolution). Because it consumes a large quantity of energy while in this form, it reverts after a short period. Its Special Move is firing an arrow made of the super-metal Chrome Digizoid ( Judgment Arrow ).",
+  "web_created": true
+}

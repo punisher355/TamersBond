@@ -1,0 +1,31 @@
+{
+  "name": "Invisimon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 12,
+    "LVE": 13,
+    "KNW": 13,
+    "SNC": 11,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Invisible Cutter",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Throws theStealth Wingto unleash a slash attack that cannot be seen."
+  },
+  "digivolves_from": [
+    "Oblivimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Remodeled by the Crack Team to be pivotal in diversionary tactics, Invisimon is an Ultimate Digimon that is endowed with optical camouflage functions, and also possesses outstanding mobility due to its body being made of Blue Digizoid . Due to its excellent stealth abilities, even the cracker that it is under the employ of may lose track of its whereabouts, despite its large build. Unless one is extremely skilled, it will be difficult for them to handle Invisimon. It rarely gets involved in intelligence operations, and its main role is basically to disrupt the scene by launching surprise attacks during missions or appearing suddenly and causing a rampage, and create an environment where other Crack Teams and Digimon can easily operate. During battle, it fights by brandishing its partner, the \" Stealth Wing \", which is also endowed with optical camouflage functions. The Stealth Wing can be used as a long-distance navigation unit by being mounted to Invisimon's back, and is also capable of flying solo thanks to its autonomous AI , and by communicating with Invisimon, it can share what it sees from the sky. Its Special Moves are throwing the Stealth Wing , and unleashing a slash attack that cannot be seen ( Invisible Cutter ), and delivering a blow that can penetrate even bedrock, fired from its wrist ( Super Rocket Fist ). Its \" Ultimate Blazar \" is an ultra-wide laser beam that wipes out enemies with the light emitted from its chest."
+}

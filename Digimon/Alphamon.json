@@ -1,0 +1,42 @@
+{
+  "name": "Alphamon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Digitalize of Soul",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "123Spreads the wings on its back and flies up high, then deploys a magic circle even larger than the sky, with which it summons a legendary monster from another dimension.Fires green energy beams from its hands.Fires green energy beams from its hands. If it defeats an enemy with them, it summons a legendary monster from another dimension to take the enemies' place who then joins Alphamon as an ally in battle."
+  },
+  "digivolves_from": [
+    "Cannonbeemon",
+    "Crys Paledramon",
+    "Cyberdramon",
+    "DORUguremon",
+    "Hisyaryumon",
+    "Knightmon",
+    "Metal Fantomon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)"
+  ],
+  "digivolves_to": [
+    "JESmon GX",
+    "Alphamon Ouryuken"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the Holy Knight-type \" Royal Knights \", the highest rank of Network Security which is said to have thirteen members. While it is a Holy Knight, it is said that to the Holy Knights it is a being similar to a deterrent force , and as it doesn't appear in normal times, it is also called the \" Aloof Hermit \" who flutters a blue mantle, and is the \"Royal Knight\" assigned to the place called the \" Empty Seat \". Because it possesses the \" Alpha inForce \" ability, an ultimate force which, in battle, instantaneously replays the elapsed battle, although Alphamon's attacks are over in just an instant, you can't grasp how many attacks it actually unleashed, and in theory, you can only see the final blow that brought down its opponent. It can deploy a magic circle of Digimoji from its hands, which attacks and defends. Its Special Moves are drawing out a convergence of light that was pierced into the center of a magic array and stabbing it through the opponent ( Seiken Gradalpha ), and spreading the wings on its back and flying up high, then deploying a magic circle even larger than the sky, with which it summons a legendary monster from another dimension ( Digitalize of Soul )."
+}

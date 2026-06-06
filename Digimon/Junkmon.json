@@ -1,0 +1,34 @@
+{
+  "name": "Junkmon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 2,
+    "LVE": 4,
+    "KNW": 3,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Hopmon"
+  ],
+  "digivolves_to": [
+    "Komondomon",
+    "Minotaurmon",
+    "Raremon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon with a habit of tossing junk parts into the cannon on its back. It creates a comfortable environment by dismantling structures in its surroundings. If a well-known factory disappears before you know it, then a large number of Junkmon may be responsible. Once it discovers intruders, it drives them away with its \" Parabolic Junk \", where it hits the sack at the bottom of its cannon with its tail, and shoots the junk parts it has amassed out of the cannon. Persistent opponents will suffer its \" Scrap Teeth \", where it bites into them with its prided foreteeth."
+}

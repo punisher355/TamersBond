@@ -1,0 +1,44 @@
+{
+  "name": "Sakuyamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 13,
+    "SNC": 15,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Izuna",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Summons 4 mystical fox spirits that are imbued with the powers of fire, water, wind and thunder that obey and fight for Sakuyamon."
+  },
+  "digivolves_from": [
+    "Doumon",
+    "Fantomon",
+    "Kumbhiramon",
+    "Lilimon",
+    "Mach Gaogamon",
+    "Mephismon",
+    "Monzaemon",
+    "Panjyamon",
+    "Silphymon",
+    "Taomon",
+    "Taomon (Silver)",
+    "Vajramon",
+    "Were Garurumon",
+    "Were Garurumon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that holds the role of a miko , acting as an agent of God 's will. Like Taomon , it freely uses Onmyoudou techniques in battle, and has the ability to employ God Beast-species Digimon. It always carries four pipes on the belt around its waist, within which lurk four kuda-gitsune . It is able to use these kuda-gitsune for everything from attacking to gathering information. Just like Holy Angemon 's Priest Mode , it is able to change into a Miko Mode which administers Shinto rituals. Its Signature Move is attacking the opponent with the four kuda-gitsune carried on its waist ( Izuna ). The four kuda-gitsune possess the attributes of \"Fire\", \"Water\", \"Wind\", and \"Thunder\", respectively. Its Special Move is striking the ground with its \" Kongou Shakujou \", spreading a purifying barrier that exorcises evil spirits ( Kongoukai Mandara ).",
+  "web_created": true
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Mervamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Final Strike Roll",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Performs a forward rolling slash withOlympia Kaidrawn and filled with power."
+  },
+  "digivolves_from": [
+    "Lilimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A God Man Digimon which belongs to the Olympos XII and has the appearance of a woman. It is the matured form of Minervamon that has amassed experience and achievements over time, and its personality has calmed down considerably to become more mature as compared to its time as Minervamon. Becoming Mervamon has caused it to pursue elegance and sensuality, and as its behavior, speech, and conduct are all overflowing with elegance, projecting a sensual atmosphere in its surroundings. It seeks sensuality even in battle, where it displays its refined, elegant dance moves to mesmerize observers. As such, there appear to be a great number of Digimon that became fans of Mervamon from witnessing its dance. Not only can it perform a power-filled, forward rolling slash with its greatsword \" Olympia Kai \" ( Final Strike Roll ), its \" Night Stalker \", in which it extends the \" Medullia \" on its left arm and swallows the opponent whole, will pursue the opponent anywhere, and the toxic mist sprayed from the Medullia 's mouth ( Love Poison ) causes any enemy that inhales it to have their life squeezed out of them by Mervamon's glamor. Its \" Madness Merry-go-round DX \", in which it turns into a tornado by performing a spinning slash which is too quick to be seen, using the \" Olympia Kai \" and \" Medullia \", instantly tears limb from limb any opponent that comes into contact with it.",
+  "web_created": true
+}

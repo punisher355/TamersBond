@@ -1,0 +1,41 @@
+{
+  "name": "Herakle Kabuterimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Electric",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Giga Blaster",
+    "element": "Electric",
+    "pr": 12,
+    "tags": "[RANGE 8]",
+    "description": "Fires an extremely powerful energy beam from its horn."
+  },
+  "digivolves_from": [
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Cannonbeemon",
+    "Dinobeemon",
+    "Jewelbeemon",
+    "Lilamon",
+    "Okuwamon",
+    "Rapidmon Armor",
+    "Vademon"
+  ],
+  "digivolves_to": [
+    "Tyrant Kabuterimon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Ultimate Insect Digimon that evolved with the data of Kabuterimon- and Kuwagamon-species Digimon. It has a gigantic horn and scissors, and it can be said that its form perfectly compensates for the weaknesses of those two types of Digimon, which had opposing natures. Its body shines gold, and it has regained and strengthened the flying ability which Atlur Kabuterimon had lost, so it rushes about the Digital World at supersonic speed. Having now accomplished this Ultimate evolution, there are probably few beings who can rival Herakle Kabuterimon. Its Special Move is an enhanced version of \" Mega Blaster \" ( Giga Blaster ). There isn't anyone who won't be annihilated by this technique.",
+  "web_created": true
+}

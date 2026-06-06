@@ -1,0 +1,53 @@
+{
+  "name": "Whamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Water",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Tsunami",
+    "element": "Water",
+    "pr": 5,
+    "tags": "[RANGE 8] [BLAST 2]",
+    "description": "Spurts out an ultra-high pressure blast of water from its blowhole."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Ganimon",
+    "Gomamon",
+    "Kamemon",
+    "Otamamon",
+    "Palmon",
+    "Penmon",
+    "Shakomon",
+    "Solarmon",
+    "Swimmon"
+  ],
+  "digivolves_to": [
+    "Chimairamon",
+    "Hangyomon",
+    "Mamemon",
+    "Marin Devimon",
+    "Mega Seadramon",
+    "Metal Mamemon",
+    "Shawujinmon",
+    "Vademon",
+    "Waru Seadramon",
+    "Whamon Perfect"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "An Aquatic Digimon that inhabits the \" Net Ocean \" (the Network 's ocean where Digimon were born). Since it lives in the deepest parts of the Net Ocean, it is rarely encountered (the organs that correspond to its eyes have degenerated). It has a ferocious personality, and sometimes attacks by generating an enormous Tsunami . Its Special Move is spurted out from the blowhole on the back of its head at ultra-high pressure ( Jet Arrow )."
+}

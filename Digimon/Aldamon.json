@@ -1,0 +1,34 @@
+{
+  "name": "Aldamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Fire",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 10,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Brahmashira",
+    "element": "Fire",
+    "pr": 8,
+    "tags": "[RANGE 6] [BLAST 3] [BURN 4,1]",
+    "description": "Uses holy flames to manufacture giant ball of flame like the core of the sun, then detonates it."
+  },
+  "digivolves_from": [
+    "Agnimon"
+  ],
+  "digivolves_to": [
+    "Ancient Greymon",
+    "Kaiser Greymon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Flame that has transcended legend by inheriting all the might of one of the legendary Warrior Ten and acquiring unknown abilities. Although it makes many enemies with its rough behavior, its name is derived from the fused form of a god of Indian mythology, and since it possesses both the wildness of a beast and the intelligence of a human, it is a Demon God that fights by converting anger or fear into righteous strength. In battle, it unleashes super-wide ranged attacks that melt everything then burn it up without a trace. This aspect has enough destructive power, in that moment, to bear a close resemblance to the menace of modern nuclear weapons. Its Special Moves are enhancing the holy flames of its \" Digicore \" to their utmost limit, then personally manufacturing the high temperature and high density core of the sun, before detonating it ( Brahmashira ), and the high-speed rapid-firing of the extremely high-temperature shots it unleashes from the \" Rudriya Darpaṇa \" superweapons on both of its arms ( Brahmastra ). [N 1] Also, it is capable of fighting using the Rudriya Darpaṇa in hand-to-hand combat, and it specializes in close combat.",
+  "web_created": true
+}

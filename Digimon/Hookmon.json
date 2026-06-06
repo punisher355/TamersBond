@@ -1,0 +1,54 @@
+{
+  "name": "Hookmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 4,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Captain Cannon",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Fires a gigantic cannonball from its musket."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Koemon",
+    "Otamamon",
+    "Pawn Chessmon (Black)",
+    "Pawn Chessmon (White)",
+    "Sangomon",
+    "Shakomon",
+    "V-mon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Assaultmon",
+    "Captain Hookmon",
+    "Insekimon",
+    "Majiramon",
+    "Mermaimon",
+    "Metal Mamemon",
+    "Mummymon",
+    "Shawujinmon",
+    "Sirenmon",
+    "Waru Seadramon",
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A pirate Digimon with one eye. It ventures the \" Net Ocean \" pursuing the phantom White Whamon , and is a courageous man of the ocean that faces up even to rough seas. Its right hand has become a hook-shaped claw, and once it has ensnared its prey, it won't let go at any cost. Its Special Move is shooting the cannon on its left hand ( Captain Cannon )."
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Queen Chessmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Heart Breaker",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Impales the opponent's vitals with the swords on its armor."
+  },
+  "digivolves_from": [
+    "Bishop Chessmon (White)",
+    "Rook Chessmon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The strongest Digimon of the Chessmon series which possesses extreme range and offensive ability. It is a reliable being that defends the cowardly King Chessmon . That superior offensive ability is a power that sometimes seems rather inhuman. Its catchphrase is, \"God of Chess, bestow pardon!\" Its Special Moves are impaling the opponent's vitals with the swords on its armor ( Heart Breaker ), \" Queen Stamp \", and \" Queen Stick \". Also, it can give the opponent a hard time with its \" Hime no Wagamama \"."
+}

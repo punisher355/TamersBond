@@ -1,0 +1,53 @@
+{
+  "name": "Dukemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 11,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Royal Saber",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Dispatches a strong blow from the holy lanceGram.Fires a beam or lightning bolt fromGram."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Bastemon",
+    "Black Megalo Growmon",
+    "Digitamamon",
+    "Duramon",
+    "Ex-Tyranomon",
+    "Flaremon",
+    "Holy Angemon",
+    "Majiramon",
+    "Megadramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Metal Tyranomon",
+    "Mihiramon",
+    "Paildramon",
+    "Rize Greymon",
+    "Tankdramon",
+    "Vajramon"
+  ],
+  "digivolves_to": [
+    "Dukemon: Crimson Mode",
+    "JESmon GX"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "This Holy Knight Digimon is called one of the \" Royal Knights \" alongside Omegamon and Magnamon . The Royal Knights are Digimon assigned the highest rank of Network Security , so it is absolutely impossible to violate Security in their presence. It is a living contradiction, being a guardian deity of the Net despite being a Virus attribute, and if by any chance its balance is lost, it is possible for it to become a dangerous being . It is clad in holy armor refined and constructed from 99.9% pure Chrome Digizoid , and it wields the holy lance \" Gram \" in its right hand and the holy shield \" Aegis \" in its left. It honors chivalry, and is a loyal vassal towards its lord. Its Special Moves are a strong blow dispatched from the holy lance Gram ( Royal Saber ), and firing a beam which purifies everything from the holy shield Aegis in its left hand ( Final Elysion )."
+}

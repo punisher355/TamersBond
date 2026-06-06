@@ -1,0 +1,35 @@
+{
+  "name": "Baluchimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Psychic Chain",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Constricts the enemy with psychokinetic chains, and drives them away."
+  },
+  "digivolves_from": [
+    "Guilmon"
+  ],
+  "digivolves_to": [
+    "Manticoremon",
+    "Skull Baluchimon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Holy Beast Digimon confirmed to exist in herds in ruins unearthed from beneath Folder Continent . It turns outs that the ruins were once used as a fortress for Angel-species Digimon, and it is presumed that the Baluchimon were the ones that protected the fortress. Although it has a calm and quiet personality, it also has a ferocious side that mercilessly attacks the enemy. It is highly intelligent, and once it immediately discerns the hostility of an intruder, it constricts their body with psychokinetic chains ( Psychic Chain ), and drives them away. It is said that it displays illusions to those who get lost in the ruins unknowingly with the clouds that it spews out ( Cloud Vision ), and leads them out of the ruins while they are in a dream-like state."
+}

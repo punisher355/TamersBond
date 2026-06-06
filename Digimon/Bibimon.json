@@ -1,0 +1,35 @@
+{
+  "name": "Bibimon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "A static electricity-laced tackle."
+  },
+  "digivolves_from": [
+    "Dokimon"
+  ],
+  "digivolves_to": [
+    "Kudamon",
+    "Pulsemon",
+    "Shoutmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Lesser Digimon that evolved from Dokimon . It lacks composure, and is always moving around mischievously. However, because it is not used to dealing with four legs yet, it very often loses its balance in the middle of running and rolls over. When it comes to battle, it uses its \" Minimal Flash \", a static electricity-laced tackle, to fight bravely against the enemy, even though it is a Baby."
+}

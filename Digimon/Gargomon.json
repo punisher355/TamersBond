@@ -1,0 +1,46 @@
+{
+  "name": "Gargomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "White Statue",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Summons a giant demon statue to attack the enemy."
+  },
+  "digivolves_from": [
+    "Gazimon",
+    "Gizamon",
+    "Goburimon",
+    "Kokuwamon",
+    "Lopmon",
+    "Phascomon",
+    "Renamon",
+    "Shamamon",
+    "Strabimon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Cyberdramon",
+    "Mephismon",
+    "Skull Baluchimon",
+    "Skull Greymon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Armor-level Demon Beast Digimon that evolved through the power of the \" Digimental of Light \". It was originally a Devil-type Digimon, but its power was suppressed using restraints, and there are instances where it is employed as a familiar for Angel Digimon. It is said that once it is freed from those restraints, it will exhibit tremendous power. Its Special Move is summoning a giant demon statue, and attacking the enemy ( White Statue )."
+}

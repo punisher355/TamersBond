@@ -1,0 +1,55 @@
+{
+  "name": "Kotemon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 5,
+    "LVE": 2,
+    "KNW": 3,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Fire Men",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Wreathes itsShinaiin flames andaims for the opponent's head."
+  },
+  "digivolves_from": [
+    "Budmon",
+    "Caprimon",
+    "Koromon",
+    "Tsumemon"
+  ],
+  "digivolves_to": [
+    "Black Growmon",
+    "Blimpmon",
+    "Coredramon (Blue)",
+    "Dark Lizamon",
+    "Deadly Axemon",
+    "Dinohumon",
+    "Flare Lizarmon",
+    "Gladimon",
+    "Hanumon",
+    "Igamon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Musyamon",
+    "Revolmon",
+    "Shurimon",
+    "Skull Knightmon",
+    "Starmon",
+    "Turuiemon",
+    "Wizarmon",
+    "Yaksamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Reptile Digimon aiming to become a top-class swordsman amongst Digimon. Despite being untalkative, it is hardworking and diligently undergoes training behind the scenes. Its true appearance is a mystery, as it never removes its defensive gear. Although it has a timid personality and cries easily, it cares deeply for its friends and has a strong sense of justice, also showing its strong-willed side from time to time. Its Signature Move is striking at the enemy's arms with an electrified attack ( Thunder Kote ). Its Special Move is wreathing its Shinai in flames and aiming for the opponent's head ( Fire Men )."
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Gasamon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 2,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Amigasa Spin Kiri",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Spins its body, including its amigasa, and slashes with its knife."
+  },
+  "digivolves_from": [
+    "Onibimon"
+  ],
+  "digivolves_to": [
+    "Manekimon",
+    "Musyamon",
+    "Peckmon",
+    "Shellmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A mysterious Mollusk Digimon with distinctive tentacles that wears an amigasa like a shell. It has a habit of concealing its weapon inside its amigasa. It usually passes itself off as an amigasa, and is said to launch surprise attacks on opponents that carelessly draw near in an attempt to prey on them. For that reason, it frequently clashes with Bushi Agumon , who approaches it to put on the amigasa, but since Gasamon's sword skills are no match for it, it will quickly flee if its surprise attack fails. Its Special Move is spinning its body, including its amigasa, and slashing with its knife ( Amigasa Spin Kiri ). It is believed that its \" Nen'yōeki \", in which it spews a dissolving liquid from the mouth hidden on the underside of its body, is used for melting the opponents it brings down and preying on them."
+}

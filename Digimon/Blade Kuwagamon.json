@@ -1,0 +1,44 @@
+{
+  "name": "Blade Kuwagamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Spark Blade",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Turns into a blade of light and pierces with it."
+  },
+  "digivolves_from": [
+    "Kokabuterimon",
+    "Kokuwamon",
+    "Kudamon",
+    "Otamamon",
+    "Tentomon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Blue)",
+    "Blossomon",
+    "Chimairamon",
+    "Dagomon",
+    "Giromon",
+    "Kyukimon",
+    "Metallife Kuwagamon",
+    "Wisemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Insect-type Machine Digimon whose entire body has been weaponized. Although it is an Adult, it is a rare species whose whole body has been turned into Chrome Digizoid . It has a habit of reacting indiscriminately to anything that moves, and even Ultimate Digimon have been known to get pierced all over their bodies when attacked by a swarm of Blade Kuwagamon, killing them. Its Special Moves are turning into a blade of light and piercing with it ( Spark Blade ), and generating a vacuum wave ( Air Knife )."
+}

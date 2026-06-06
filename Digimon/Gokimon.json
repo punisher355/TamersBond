@@ -1,0 +1,50 @@
+{
+  "name": "Gokimon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Dream Dust",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Causes random heaps of trash to plummet from the sky."
+  },
+  "digivolves_from": [
+    "Dokunemon",
+    "Gaomon",
+    "Goburimon",
+    "Impmon",
+    "Kunemon",
+    "Morphomon",
+    "Sunarizamon",
+    "Tentomon",
+    "Tyumon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Archnemon",
+    "Atlur Kabuterimon (Blue)",
+    "Dinobeemon",
+    "Gerbemon",
+    "Kongoumon",
+    "Okuwamon",
+    "Tonosama Gekomon",
+    "Vamdemon",
+    "Pucchiemon (Green)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Its black-lustered body is exactly like the very cockroach that everyone hates. It moves around stealthily and nimbly, and runs away even faster. Although you can hardly expect it to have offensive or defensive ability, it shines best when it comes to a protracted war due to its immeasurable stamina. Its Special Move is scattering trash ( Dream Dust ).",
+  "web_created": true
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Ketomon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Hopmon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Slime Digimon whose large eyes are its defining characteristic. These eyes have the ability to discern the nature of Digimon, allowing it to detect violent Digimon in advance and warn its allies of the danger. When cornered, it discharges acidic bubbles from its eyes ( Poppin' Tear ), rattling the enemy as it cries.",
+  "web_created": true
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Belial Vamdemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 13,
+    "LVE": 13,
+    "KNW": 13,
+    "SNC": 13,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Pandemonium Flame",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12An extremely high-temperature beam that it fires from its shoulders,SodomandGomorrah.Emits a thick fog of darkness in the environment which confuses the opponent."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Archnemon",
+    "Cho·Hakkaimon",
+    "Holy Angemon",
+    "Indaramon",
+    "Infermon",
+    "Lilimon",
+    "Lucemon: Falldown Mode",
+    "Phelesmon",
+    "Shakkoumon",
+    "Vamdemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Lord Digimon said to be Vamdemon 's final form. Unlike Venom Vamdemon , which lost its intelligence by seeking too much power and was like a beast, it succeeded in surpassing Venom Vamdemon by harmonizing its intelligence alongside all of its other aspects. It possesses an inhumanly cruel personality, and is willing to do anything to achieve its own desires. The organic cannons on both its left and right shoulders, \" Sodom \" and \" Gomorrah \" respectively, leech off of it. Its Special Move is an extremely high-temperature beam that it fires from its shoulders, Sodom and Gomorrah ( Pandemonium Flame )."
+}

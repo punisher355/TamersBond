@@ -1,0 +1,36 @@
+{
+  "name": "Eosmon (Perfect)",
+  "stage": "Ultimate",
+  "attribute": "Unknown",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Eosmon (Adult)",
+    "Hudiemon",
+    "Sunflowmon"
+  ],
+  "digivolves_to": [
+    "Bancho Lilimon",
+    "Eosmon (Ultimate)",
+    "Tiger Vespamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The form Adult-level Eosmon evolved into when a problem occurred as it was carrying out a mission. It deploys even more transparent panels, and has acquired high-speed movement with its enormous wings and high offensive power with its gigantic hands. In addition, it can also create illusions by using them as mirrors to bewilder the enemy. It transforms into its Beast Mode by rearranging its transparent panels, and attacks the enemy. Its Special Moves are crushing the enemy with its gigantic hands ( Beat Press ), unleashing an electric attack from its antennae ( Hexa-thunder ), and throwing the panel-shaped energy in its hands to slash the enemy ( Cutting Edge )."
+}

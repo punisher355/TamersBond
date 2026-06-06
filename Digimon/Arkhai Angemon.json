@@ -1,0 +1,36 @@
+{
+  "name": "Arkhai Angemon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 10,
+    "KNW": 10,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Saint Legion",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Summons several familiars and unleashes them all at once."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "Pidmon"
+  ],
+  "digivolves_to": [
+    "Dominimon",
+    "Hououmon",
+    "Xiangpengmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Principality-type Perfect Digimon of equal rank to Holy Angemon and Angewomon . It has a strong sense of concern for others, and is frequently seen interacting with various Digimon. Perhaps it is because of this personality that its fighting style specializes in defense, and since it also excels in ingenuity, it acts as both an adviser and commander in its assigned unit. It usually appears on the battlefield to protect its Luxmon and Angemon subordinates, while issuing direct commands to support them in battle. It seldom goes on a direct offensive itself, and often employs Gargomon and Manticoremon as familiars , summoning them from a maelstrom of flames using the two \" Holy Chains \" wrapped around its arms. Its Special Moves are summoning several familiars and unleashing them all at once ( Saint Legion ), and amplifying the flames contained within its sacred staff, the \" Holy Rod \", to incinerate the enemy ( Heaven's Flame ). In addition, its support move \" Brave Aura \" envelops its allies in the flames emitted from the Holy Rod , protecting them from enemy attacks."
+}

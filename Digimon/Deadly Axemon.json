@@ -1,0 +1,31 @@
+{
+  "name": "Deadly Axemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Air Slicer",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Runs between opponents at the speed of light, cutting them down."
+  },
+  "digivolves_from": [
+    "Kotemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A younger brother who exchanged cups of brotherhood with Skull Knightmon , it is a brawny fighter replete with nimble movements and limitless physical strength. It faithfully obeys its sworn brother Skull Knightmon, and battles with faith in its sworn brother in order to obtain victory. It shows off lightning-speed movements fast enough that they earned it the alias \" Running Lightning \", and its top speed is so fast that it leaves afterimages. However, fine maneuvers are its weak point, so not only are its linear movements easily read by its opponent, it easily collides with obstacles too. However, if you see its sturdy body smashing through obstacles as if they were nothing and continuing to run with a defiant, thunderous roar, you would probably agree that the name \" Running Lightning \" is appropriate for it. Its Special Moves are running between opponents at the speed of light , who aren't even able to realize before they're cut down ( Air Slicer ), and spewing a powerful solution that dissolves everything ( Aqua Rage ). Furthermore, it has an even stronger technique, \" Aqua Regia \", in which it liquefies itself and swallows up everything in its surroundings."
+}

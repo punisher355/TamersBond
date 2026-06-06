@@ -1,0 +1,33 @@
+{
+  "name": "Black Seraphimon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 14,
+    "LVE": 13,
+    "KNW": 13,
+    "SNC": 11,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Seven Hells[N 1]",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires seven super-heated spheres of darkness."
+  },
+  "digivolves_from": [
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Sephirothmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A form of Seraphimon , the highest ranking Angel Digimon, whose concealed inner resentment tumefied and engulfed it in darkness. Its gold wings and armor have transformed ominously, and it is said that it will fall and become a Demon Lord Digimon if this condition persists for long. Its Special Moves are firing seven super-heated spheres of darkness ( Seven Hells ), and its greatest special technique, which sacrifices its mortal life to incinerate its enemy with hellfire ( Testament ).",
+  "web_created": true
+}

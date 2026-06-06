@@ -1,0 +1,45 @@
+{
+  "name": "Boarmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 4,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Nose Blaster",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Inhales large amounts of air in the atmosphere, and releases it as a high-temperature breath all at once from its snout."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Bakumon",
+    "Bokomon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gazimon",
+    "Liollmon"
+  ],
+  "digivolves_to": [
+    "Caturamon",
+    "Mammon",
+    "Piccolomon",
+    "Vikaralamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mammal Digimon that evolved through the power of the \" Digimental of Courage \". A Digimon that undoubtedly exists to embody the term \"rushing recklessly\", its legs, tail and mane are shrouded in blazing flames. No one can stop a Boarmon from dashing, and according to one theory, it is said that the program that governs Boarmon's thinking has no concept of \"turning\". Because the \" Totsugeki Hitai-ate \" made of Chrome Digizoid is attached to its brow, all obstacles in front of it are completely smashed. Its Special Move is inhaling large amounts of air in the atmosphere, and releasing high-temperature breath from its snout all at once ( Nose Blaster ).",
+  "web_created": true
+}

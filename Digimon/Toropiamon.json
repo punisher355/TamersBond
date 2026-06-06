@@ -1,0 +1,42 @@
+{
+  "name": "Toropiamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 8,
+    "LVE": 11,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Petally Carnage",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Disperses a large amount of explosive pollen from the petals around its neck."
+  },
+  "digivolves_from": [
+    "Chamblemon",
+    "Diatrymon",
+    "Karatuki Numemon",
+    "Parasaurmon",
+    "Sunflowmon",
+    "Vegimon"
+  ],
+  "digivolves_to": [
+    "Amphimon",
+    "Ancient Irismon",
+    "Hydramon",
+    "Spinomon",
+    "Vikemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Plant Digimon that inhabits jungles. It is thought to have evolved into this gaudy appearance by taking in the data of various trees and fruits. Its scent, which is like a mixture of all kinds of fruits, is so intense that those who are not used to it will get knocked out cold. The droplets secreted from its leaves, which act as wings, are so toxic that they can even dissolve iron. Its Special Move is dispersing a large amount of explosive pollen from the petals around its neck ( Petally Carnage ). Also, its \" Tropical Venom \", a gas spewed out of its mouth, is a potent poison that matures within its body, and causes those who inhale it to melt into mush from within."
+}

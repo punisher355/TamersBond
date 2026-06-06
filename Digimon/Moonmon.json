@@ -1,0 +1,35 @@
+{
+  "name": "Moonmon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Spews cold bubbles that glow a bluish-white"
+  },
+  "digivolves_from": [
+    "Yukimi Botamon"
+  ],
+  "digivolves_to": [
+    "Agumon (Black)",
+    "Gazimon",
+    "Lopmon",
+    "Lunamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Baby Digimon with an appearance resembling a falling droplet. Only appearing on bright moonlit nights, there are records of it being sighted near Pokomon , which has a similar habit. A characteristic antenna-like protuberance grows from its head, and swings energetically whenever it is in a good mood. Its Special Move is spewing cold bubbles that glow a bluish-white ( Moonlight Bubble )."
+}

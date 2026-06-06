@@ -1,0 +1,39 @@
+{
+  "name": "Ultimate Brachimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Brachimon",
+    "Canoweissmon",
+    "Chimairamon",
+    "Hisyaryumon",
+    "Kaiser Leomon",
+    "Mametyramon",
+    "Metal Tyranomon",
+    "Skull Baluchimon",
+    "Triceramon",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon who boasts of being the largest on land, and the heaviest. The boosters equipped to its back thrust downwards, supporting the weight of its colossal body, and are used when moving. It has undergone very heavy-duty remodeling, and while its moving speed is by no means fast, its bulky armor makes it unnecessary for it to evade the enemy's attacks, and it is impossible to withstand the recoil of its superweapon, which is fired from the huge gunport on its chest, without being Ultimate Brachimon's weight. Its Special Moves are detonating the energy within its body, and sending out a blast from the huge gunport on its chest ( Ultimate Blast ), and striking with its gigantic tail, shaking even the earth ( Ultimate Quake )."
+}

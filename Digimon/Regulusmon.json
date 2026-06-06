@@ -1,0 +1,37 @@
+{
+  "name": "Regulusmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "KalypBite",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Opens the shield on its left arm wide and bites the enemy with it."
+  },
+  "digivolves_from": [
+    "Betel Gammamon",
+    "Gulus Gammamon",
+    "Kaus Gammamon",
+    "Wezen Gammamon"
+  ],
+  "digivolves_to": [
+    "Arcturusmon",
+    "Siriusmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Evil Dragon Digimon that plots to rule through rage and fear. Despite being a Perfect, it boasts a power that is reminiscent of Megidramon , one of the Four Great Dragons Digimon who is renowned for being the most evil, and so Regulusmon's arrival is nothing short of a disaster. Its body is the source of an infection known as \"GRB\" ( Gulus Realm Burst ) [N 1] , and it is said that Digimon infected with \"GRB Factor\" have their personalities altered and become frenzied. However, the infection has not been confirmed in Digimon that have had the secretion \" Black Digitron \", which is said to be the primary cause of Digimon turning black, mixed in with them. Its Special Moves are opening the shield on its left arm wide and biting the enemy with it ( Kalyp Bite ), firing three penetrating lasers from its shield ( Genierce ), and piercing the enemy with its two-pronged tail ( Dead-end Spike ). In addition, for its greatest threat \" Gran TrES \", it shoots a dark hellfire sphere from its mouth, swallowing not only matter but also light, and erasing everything without leaving a trace."
+}

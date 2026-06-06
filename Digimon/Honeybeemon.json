@@ -1,0 +1,32 @@
+{
+  "name": "Honeybeemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Wind",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Poison Powde",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE] [BURST 1] [POISON 2]",
+    "description": "Scatters a poisonous powder over the opponent's head."
+  },
+  "digivolves_from": [
+    "Kunemon",
+    "Tentomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An Armor-level Insect Digimon that evolved through the power of the \" Digimental of Knowledge \". It moves very quickly due to its tiny body, and its speciality is making sport of the enemy. If it suspects someone is coming at it, it will circle around behind them in the blink of an eye and inflicit a blow from its stinger. Because of its small size, its offensive power is weak, but it has the speed and skill to make up for this. However, it is extremely fond of sweets, and its weakness is that if they are placed in front of it, it can't see anything else but them. Its Special Moves are scattering a poisonous powder over the opponent's head ( Poison Powder ), and a headbutt attack in which it pierces the opponent with the stinger on its head ( Paralyze Sting ). Honeybeemon was adopted from a winning Digimon entry in the \" Bandai-Town FAX Service Digimon Illustration Contest \" which belonged to Ms. Nao Takei from Gunma prefecture .",
+  "web_created": true
+}

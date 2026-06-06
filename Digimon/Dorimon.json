@@ -1,0 +1,40 @@
+{
+  "name": "Dorimon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Spits iron grains from mouth while charging at the enemy."
+  },
+  "digivolves_from": [
+    "Dodomon"
+  ],
+  "digivolves_to": [
+    "Agumon (Black)",
+    "Alraumon",
+    "Armadimon",
+    "DORUmon",
+    "Lopmon",
+    "Monodramon",
+    "Shamamon",
+    "Snow Goburimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Lesser Digimon that can run very quickly, as long as it is going straight. Dorimon often remain wild as they hate to be domesticated, and approaching one is risky as it will recklessly charge and perform a ramming attack. Its ears have grown sharp and hard, doubling as horns and inflicting a little damage on whatever it rams into, though it can't turn when going at speed. Its Special Move is spewing an iron bead out of its mouth while charging at the opponent ( Metal Drop )."
+}

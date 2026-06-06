@@ -1,0 +1,42 @@
+{
+  "name": "Zubaeagermon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Road T(w)o Decade",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Thrusts straight into the enemy's chest while shouting \"Twentiestttt!!\"."
+  },
+  "digivolves_from": [
+    "Gizamon",
+    "Hackmon",
+    "Shoutmon",
+    "Zubamon"
+  ],
+  "digivolves_to": [
+    "Asuramon",
+    "Duramon",
+    "Fantomon",
+    "Grademon",
+    "Knightmon",
+    "Megalo Growmon",
+    "Oboromon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "\"I, who am the Twentiest, will never halt! I'm going to keep on running forth!\" With those words carved into Zubamon 's heart, it evolved into a form that embodies that forward-charging style. Zubaeagermon's policy is simply to continue charging forth without pause, no matter if smooth or rough terrain awaits it, or even if it has to crawl and struggle to continue forward. Its Special Moves are thrusting straight into the enemy's chest while shouting \"Twentiestttt!!\" ( Road T(w)o Decade ), and curling its body into a ball and spinning towards the enemy, slicing them with its tail blade ( Vingtième ). Not only that, by transforming itself into its prided sword form, it is able to slice through any enemy using 100% of its strength."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Titamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Konpaku Shingeki",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Slices through both the armor and body of the enemy in a single slash of theZanjintou, with enough force to strike theirDigicore."
+  },
+  "digivolves_from": [
+    "Cyberdramon",
+    "Dark Superstarmon",
+    "Digitamamon",
+    "Fantomon",
+    "Skull Greymon",
+    "Zudomon"
+  ],
+  "digivolves_to": [
+    "Berserk Titamon",
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The titan of revenge, Titamon, was born from the hatred of the Digimon defeated by the Olympos XII in battles over the sovereignty of the Digital World . It holds the alias of \" One-Man Division \", and bearing the inexhaustible energy of its hatred within its gigantic body, it runs through the battlefield seeking the heads of the Olympos XII. Its large arms are covered in a multitude of skulls, which are all data of the power it has stolen from the enemies it has defeated so far. As its gigantic sword \" Zanjintou \" is a bone sword carved from Skull Greymon 's bones, the hatred filling the sword makes a low growl. The swing of its Special Move, \" Konpaku Shingeki \", slides through the opponent's armor and body with its blade, reaching their Digicore unhindered and chopping it up. If one takes this technique head on, they'll never be able to recover. Its \" Genjin Mukon \", which eviscerates the opponent, causes them to fall into a hallucination that they are still being harrowed even after the Zanjintou is pulled out, so that they don't stop suffering until their spirit dies. Its \" Koou Meigun \" summons shades based on the skulls on both of its arms, which overrun the enemy's forces as an undead legion. This is the reason Titamon is called the \" One-Man Division \", and it is treated as if it were a legion despite being a single being because it is able to instantly summon a mighty host."
+}

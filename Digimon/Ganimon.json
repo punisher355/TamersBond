@@ -1,0 +1,57 @@
+{
+  "name": "Ganimon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 2,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Scissors Execution",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Slices through the enemy with its left claw."
+  },
+  "digivolves_from": [
+    "Mochimon",
+    "Pukamon",
+    "Tokomon"
+  ],
+  "digivolves_to": [
+    "Allomon",
+    "Archelomon",
+    "Coelamon",
+    "Ebidramon",
+    "Galgomon",
+    "Gawappamon",
+    "Gekomon",
+    "Gesomon",
+    "Leomon",
+    "Monochromon",
+    "Mori Shellmon",
+    "Nanimon",
+    "Octmon",
+    "Raremon",
+    "Rukamon",
+    "Seadramon",
+    "Shellmon",
+    "Siesamon",
+    "Snimon",
+    "Submarimon",
+    "Togemogumon",
+    "Tylomon",
+    "Whamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Crustacean Digimon that stuck the metal data dissolved in the Net Ocean to its body, greatly enhancing its combat ability. For offense, it uses the gigantic blade on its left foreleg and the grip of its strong right foreleg, and for defense, its spine-covered shell inflicts damage to attacking opponents, so it has substantial self-confidence when it comes to battle. Its weak points are its joints and belly, but because it's also aware of that, it never shows that chink in its armor. It likes to entrap its opponents, and has a rascally personality. Its Special Move is aiming its left foreleg at the opponent's neck ( Scissors Execution )."
+}

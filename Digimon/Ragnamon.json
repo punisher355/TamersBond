@@ -1,0 +1,32 @@
+{
+  "name": "Ragnamon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 16,
+    "LVE": 18,
+    "KNW": 16,
+    "SNC": 14,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "RagnarökCannon",
+    "element": "Neutral",
+    "pr": 15,
+    "tags": "[RANGE 10] [BLAST 4] [TRUE]",
+    "description": "Blasts a massive energy beam from its chest cannon."
+  },
+  "digivolves_from": [
+    "Arcturusmon",
+    "Siriusmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An Ultimate that boasts the largest size among Digimon. Having taken in the data of an artificial satellite, it possesses a variety of satellite weapons that are enough to annihilate vast areas of ​​the Digital World from high above. However, it requires a large amount of resources to operate, necessitating the support of proficient hackers , so there are few records of it appearing on the battlefield. Its Special Moves are \" Gimlet Gun \", in which it pierces with its tail, \" Spaser \", in which it fires an enormous laser from its head, \" Shuttle Scissors \", in which it seizes the enemy with its right arm and severs them, \" Satellite Buster \", in which it picks off distant enemies with the gun barrels on its shoulders, and \" Ragnarök Cannon \", which is fired from its chest, providing maximum offensive power. In addition, whenever it receives an attack from the enemy, it analyzes it, and is capable of unleashing that attack's power back at them.",
+  "web_created": true
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Gold Numemon (Ultimate)",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Earth",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Gold-durianRush",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Continuously shoots gold poop at the enemy."
+  },
+  "digivolves_from": [
+    "Numemon"
+  ],
+  "digivolves_to": [
+    "Platinum Numemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A subspecies of Numemon , its whole body is gold. It was born from a Numemon that discovered the Goldine Mine and took in its elements. Digimon Crusader ⇨ English ヌメモンの亜種で、全身が金色をしている。ゴルディーヌ鉱山を発見したヌメモンが、その成分を取り込んで誕生した。 デジモンクルセイダー ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K",
+  "web_created": true
+}

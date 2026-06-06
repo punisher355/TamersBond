@@ -1,0 +1,38 @@
+{
+  "name": "Algomon (Perfect)",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 8,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Elimination Line",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Fires a beam from the eyes on its limbs or electrocutes an enemy with its vines."
+  },
+  "digivolves_from": [
+    "Algomon (Adult)",
+    "Chrysalimon",
+    "Flare Lizamon",
+    "Flare Lizarmon",
+    "Wizarmon",
+    "Woodmon"
+  ],
+  "digivolves_to": [
+    "Algomon (Ultimate)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Digimon that was generated from a bug in an algorithm. Due to its high-speed processing ability, it uses its countless ivy tendrils as tentacles, and takes complete control of a vast field. Its Special Moves are using its tentacles to constrict the opponent's powers, completely restricting its movement ( Imprisonment ), and an erasing beam fired from the eyes on its limbs ( Elimination Line ). Also, when it takes control of a vast field it transforms into a parasite called \" Worm Phase \"."
+}

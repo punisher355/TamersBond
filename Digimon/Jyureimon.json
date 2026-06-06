@@ -1,0 +1,56 @@
+{
+  "name": "Jyureimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Plant",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Cherry Bomb",
+    "element": "Plant",
+    "pr": 10,
+    "tags": "[RANGE 5]",
+    "description": "Shoots explosive cherries from its foliage. If swallowed, the cherries cause instant death."
+  },
+  "digivolves_from": [
+    "Arbormon",
+    "Dinohumon",
+    "Ebidramon",
+    "Ice Devimon",
+    "Igamon",
+    "Kabukimon",
+    "Kabuterimon",
+    "Kiwimon",
+    "Kougamon",
+    "Kuwagamon",
+    "Red Vegimon",
+    "Sorcerimon",
+    "Sunflowmon",
+    "Togemon",
+    "Vegimon",
+    "Woodmon"
+  ],
+  "digivolves_to": [
+    "Ancient Troiamon",
+    "Ceresmon",
+    "El Doradimon",
+    "Gran Kuwagamon",
+    "Gulfmon",
+    "Kuzuhamon",
+    "Piemon",
+    "Pinochimon",
+    "Rosemon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "Woodmon evolved further, and as Jyureimon, it is a Digimon that has acquired extreme intelligence and power. Called the \" Lord of the Deep Forest \", it is a terrifying Digimon who tempts Digimon who have gone astray in the dark deep forest to go further and deeper into the woods, so that they will never break out of that forest. The fog it generates from its body displays illusions, tempting the opponent into the forest depths, where it uses its branches like tentacles and ivy to capture the opponent for its own nutrition. If you notice a Woodmon that has lived a long life, it is probably wise to fell it before it evolves to Jyureimon. Its Special Move is the forbidden fruit that grows from the branches on its head ( Cherry Bomb ). It tempts with its fragrant smell, but certain death awaits if this fruit is eaten."
+}

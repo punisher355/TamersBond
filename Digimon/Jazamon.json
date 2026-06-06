@@ -1,0 +1,42 @@
+{
+  "name": "Jazamon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 3,
+    "KNW": 3,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Kokon Pick",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Peck with its hard beak."
+  },
+  "digivolves_from": [
+    "Chocomon",
+    "Gummymon",
+    "Hopmon",
+    "Koromon",
+    "Pyocomon"
+  ],
+  "digivolves_to": [
+    "Birdramon",
+    "Jazardmon",
+    "Komondomon",
+    "Machmon",
+    "Omekamon",
+    "Raremon",
+    "Thunderbirmon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Machine Digimon shaped like a bird. Although it is capable of gliding from high places using its wings, it is unable to uplift itself by flapping them. As it is quite timid and very cautious, it is wary of objects that move in its surroundings regardless of whether it is day or night. Its Special Move is pecking with its hard beak ( Kokon Pick )."
+}

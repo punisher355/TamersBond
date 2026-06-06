@@ -1,0 +1,41 @@
+{
+  "name": "Hover Espimon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Stamper Missile",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Fires missiles from its two rear launchers."
+  },
+  "digivolves_from": [
+    "Commandramon",
+    "Espimon",
+    "Hagurumon",
+    "Kamemon",
+    "Kokuwamon",
+    "Solarmon"
+  ],
+  "digivolves_to": [
+    "Digitamamon",
+    "Manticoremon",
+    "Oblivimon",
+    "Piccolomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Having succeeded in multiple investigations, Espimon has become highly mobilized so that it can obtain more accurate information. It can now navigate over long distances, fly, and dive, and its field of activity extends to the depths of the \" Net Ocean \" and altitudes of up to 20,000m, making it possible for it to investigate hidden Digimon. Its \" Divanish \" optical camouflage has also been updated. It masks the sounds it makes along with its appearance, and is capable of infiltrating or causing a disturbance without being noticed, even when maneuvering at high speeds. Thanks to the VR Goggles on its brow, the target's movements several seconds into the future are predictively displayed, allowing it to act with precision. Its Special Moves include \" Stamper Missile \", in which it fires missiles from its two rear launchers, \" Breast Cannon \", in which it shoots the vulcan cannons on its breast, and \" Doronger \", in which it spreads a smokescreen from both its hands to hide its allies; it has prepared techniques suited for reconnaissance-in-force . Also, it is rumored to be used by the Crack Team for intelligence operations in various locations."
+}

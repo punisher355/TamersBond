@@ -1,0 +1,48 @@
+{
+  "name": "Scorpiomon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 8,
+    "LVE": 10,
+    "KNW": 8,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Blackout",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Blinds the opponent's by disseminating a slightly poisonous mist."
+  },
+  "digivolves_from": [
+    "Ankylomon",
+    "Digmon",
+    "Dobermon",
+    "Gekomon",
+    "Meramon",
+    "Sangloupmon",
+    "Sealsdramon",
+    "Snimon",
+    "Thunderbirmon",
+    "Tortamon"
+  ],
+  "digivolves_to": [
+    "Ancient Beatmon",
+    "Ancient Sphinxmon",
+    "Blastmon",
+    "Gran Kuwagamon",
+    "Grand Dracumon",
+    "Kuzuhamon",
+    "Seraphimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Insect Digimon referred to as the \" Assassin of the Desert \". It sneaks up from behind the opponent while hiding its presence, and pierces the opponent with the venomous stinger at the tip of its tail. The venom that Scorpiomon carries acts faster than the transmission speed of nerve data, killing the opponent before they even realize that they have been stung. It is referred to as an assassin for this reason, since its opponent will not even know of its existence. Its Signature Move, \" Blackout \", blinds the opponent by spraying a slightly poisonous mist. Through this technique, it ensures that the opponent will never lay eyes on it. Its Special Move is attacking with the venomous stinger on its tail tip ( Poison Pierce ). Scorpiomon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Yūsuke Ogura from Okayama Prefecture ."
+}

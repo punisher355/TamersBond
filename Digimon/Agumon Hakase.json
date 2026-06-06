@@ -1,0 +1,47 @@
+{
+  "name": "Agumon Hakase",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 2,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Hakase Bou",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Uses its hat to enchant itself with cleverness."
+  },
+  "digivolves_from": [
+    "Nyaromon",
+    "Babydmon",
+    "Koromon"
+  ],
+  "digivolves_to": [
+    "Bakemon",
+    "Coredramon (Green)",
+    "Devidramon",
+    "Garurumon",
+    "Gawappamon",
+    "Geo Greymon",
+    "Greymon",
+    "Greymon (Blue)",
+    "Peckmon",
+    "Reppamon",
+    "Starmon",
+    "Vegimon",
+    "Wizarmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A genius Agumon that has a doctorate in Digital Monster studies from Digital World University. The badge on its chest is proof of its doctorate. Though it is said that its degree was created by Agumon Hakase itself, it certainly is knowledgeable about Digimon types and territories. Due to its peculiar accent in which it attaches \"Gya\" to the end of its remarks, it is thought to possibly have come from a distant locale. Its Special Moves are to try to enchant itself with cleverness through its hat ( Hakase Bou ), and try to persuade the opponent with its rod ( Hakase Bō )."
+}

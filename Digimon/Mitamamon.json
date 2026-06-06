@@ -1,0 +1,32 @@
+{
+  "name": "Mitamamon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 11,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Gouenrin",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires its blazing wheels along with a gust of wind."
+  },
+  "digivolves_from": [
+    "Kyukimon",
+    "Tyilinmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A holy Digimon that is said to send the souls of Digimon who have done good deeds in their past lives to heaven. It is a collective of the four energies of fire, water, lightning and wind, and it lacks physical form except for its Digicore . Despite being visible, it cannot be touched; only those who have been recognized by Mitamamon itself or Digimon who are on the brink of death are allowed to touch it. However, those who have deduced the location of Mitamamon's Digicore are also capable of touching it; hence, although extremely rare, there are times when it is challenged to battle by rough-tempered Digimon. Because Mitamamon has a calm personality and despises conflict, it very often dismisses battles that it has been challenged to. However, when facing those who have already incurred its wrath, Mitamamon changes into a raging beast that deals to them a crushing blow without mercy. Its Special Moves are shooting its wheels, cloaked in flame, along with a gust of wind ( Gouenrin ), and striking down the enemy with lightning that never misses, unleashed from its eye ( Kaijinraidou ). In addition, it also has a healing technique called \" Kyouka Suigetsu \", where it heals injuries received in battle using the element of water."
+}

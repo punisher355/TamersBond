@@ -1,0 +1,49 @@
+{
+  "name": "Silphymon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Top Gun",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires off energy shots while extending both of its arms ahead of itself."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Aquilamon",
+    "Ice Devimon",
+    "Nefertimon",
+    "Tailmon",
+    "Yaksamon"
+  ],
+  "digivolves_to": [
+    "Armagemon",
+    "Beel Starmon",
+    "Cherubimon (Virtue)",
+    "Dynasmon",
+    "Fujinmon",
+    "Griffomon",
+    "Holydramon",
+    "Hououmon",
+    "Minervamon",
+    "Neptunemon",
+    "Ornismon",
+    "Sakuyamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Man Digimon which Jogress -evolved from Aquilamon and Tailmon . It possesses tenacious leg strength, and its leaping power is said to reach great heights. Also, it is able to fly about by spreading both of its arms and soaring like a glider after leaping high into the sky. Because it processes the information detected by the radar on its ears as images, and transmits it to the head-mounted display equipped to its head, it is able to accurately find the opponent regardless of day and night. Its Special Moves are firing off energy shots while extending both of its arms ahead of itself ( Top Gun ), and gliding at super-speed from the sky above to crash a shock wave into the opponent ( Dual Sonic )."
+}

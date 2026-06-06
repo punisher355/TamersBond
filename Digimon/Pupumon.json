@@ -1,0 +1,25 @@
+{
+  "name": "Pupumon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Puroromon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Slime Digimon which has grown a body as light as a bubble, as well as very thin wings. Its somewhat largish eyes are very sensitive to an object's movement, and if something moves it notices it and immediately springs away, but this does not mean it's a coward, as if it continues to be unkind Pupumon counterattacks. If the opponent approaches, it spits \" Doku no Awa \" from its mouth to attack.",
+  "web_created": true
+}

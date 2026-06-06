@@ -1,0 +1,55 @@
+{
+  "name": "Lighdramon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Lightning Blade",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Fires an electric blade from the lightning-imbued blade on its head."
+  },
+  "digivolves_from": [
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Guilmon",
+    "Hagurumon",
+    "Kokuwamon",
+    "Pico Devimon",
+    "Psychemon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Caturamon",
+    "Cyberdramon",
+    "Digitamamon",
+    "Dinobeemon",
+    "Holy Angemon",
+    "Mach Gaogamon",
+    "Magnamon",
+    "Megalo Growmon",
+    "Metal Tyranomon",
+    "Orochimon",
+    "Paildramon",
+    "Sinduramon",
+    "Were Garurumon",
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Beast Digimon that evolved through the power of the \" Digimental of Friendship \". The \"Digimental of Friendship\" has the attribute of \"Thunder\", and those that don this Digimental fight against their enemies with nimble movements like lightning piercing the ground, and defeat them with electric-based techniques. Its Special Moves are firing an electric blade from the lightning-imbued blade on its head ( Lightning Blade ), and unleashing a powerful electric shock from the three protuberances on its back ( Blue Thunder ).",
+  "web_created": true
+}

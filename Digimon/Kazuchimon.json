@@ -1,0 +1,37 @@
+{
+  "name": "Kazuchimon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Nitou Seirai",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Cuts down the enemy with the lightning swords it holds bydual wieldingthem."
+  },
+  "digivolves_from": [
+    "Boutmon",
+    "Climbmon",
+    "Divemon",
+    "Omega Shoutmon",
+    "Pistmon",
+    "Shootmon",
+    "Tempomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate Digimon that evolved by tempering its body and soul to the limit through unimaginable training. To Kazuchimon, fighting is something it has devoted everything to, and is a sacred rite that must never be desecrated. It is a natural-born warrior who is so immersed in refining its tactics and strategies that it forgets to eat and sleep, and once in battle, it turns into a raging war god and exhibits the strength to take on a thousand warriors. Its Special Moves are cutting down the enemy with the lightning swords it holds by dual wield ing them ( Nitou Seirai ), and erecting a barrier of lightning and forcing them into a one-on-one battle ( Shidou Ittetsu ). In addition, it makes sure to finish them off with its final secret technique \" Shinden Shouraikou \", where it condenses the electrical energy in its surroundings and fires an ultra-high density shot of lightning."
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Orcamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Water",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Vassallo Crush",
+    "element": "Water",
+    "pr": 5,
+    "tags": "[MELEE] [RUSH]",
+    "description": "Pulverizes the opponent with a powerful dolphin kick"
+  },
+  "digivolves_from": [
+    "Penmon",
+    "Renamon"
+  ],
+  "digivolves_to": [
+    "Marin Devimon",
+    "Mermaimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Aquatic Beast Man Digimon that evolved through the power of the \" Digimental of Sincerity \". With a conscientious personality, wearing a life jacket and life preserver , it is an overly cautious type. Although it is clumsy in some areas in that it breaks things by hitting them too much, it is actually a savior of the ocean who has outstanding agility. There are many Digimon that rely on it and come to it for advice. When it comes to battle, the speed of its movements increases; on land, it runs as if it is cutting through the wind, and underwater, it swims elegantly without disturbing the current. If it gets into a pinch, it will call its comrades using high-frequency waves and attack en masse. Its Special Move is pulverizing the enemy with a powerful dolphin kick ( Vassallo Crush ). Orcamon was adopted from a winning Digimon entry in the \" Bandai-Town FAX Service Digimon Illustration Contest \" which belonged to Mr. Shunpei Kanno from Miyagi prefecture .",
+  "web_created": true
+}

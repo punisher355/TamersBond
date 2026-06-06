@@ -1,0 +1,26 @@
+{
+  "name": "Leafmon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Kodokugumon Baby",
+    "Minomon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Slime Digimon which has a breath of fresh greens (a tiny leaf) on its tail. It has many of the elements of a plant and the composition of its body includes chlorophyll , so it photosynthesizes to grow. It possesses a leaf-shaped tail, and the leaf protects it from intense sunlight or when it is raining. Due to its pure nature, it doesn't distrust others even if they are frightening. However, it is just a little bit shy. As it was just born it is unable to battle, but its innocent spirit, overflowing with vitality, can make the surrounding people remember pure feelings that were forgotten, wrapping them in a calm air. However, if one tries to mess with it too much, it will spit acidic bubbles to intimidate them.",
+  "web_created": true
+}

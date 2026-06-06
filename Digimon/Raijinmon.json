@@ -1,0 +1,38 @@
+{
+  "name": "Raijinmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Giant Missile",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[RANGE 8] [BLAST 2]",
+    "description": "Fires intense lightning from its shoulders into its surroundings."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Cyberdramon",
+    "Death-X-DORUguremon",
+    "Giromon",
+    "Kyukimon",
+    "Metallife Kuwagamon",
+    "Rapidmon Armor",
+    "Rapidmon Perfect",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Cyborg Digimon bestowed with the name of the Raijin of Oriental folklore. A fighting-type that is strong in close combat, its Signature Move is \" Blitz Arm \", in which it dishes out a barrage of punches with the same lightning-type arm as Justimon . Its Special Move is charging with the connector on its tail, and firing intense lightning from its shoulders into its surroundings ( Elekugel )."
+}

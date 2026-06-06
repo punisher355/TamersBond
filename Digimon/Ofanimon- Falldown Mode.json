@@ -1,0 +1,30 @@
+{
+  "name": "Ofanimon: Falldown Mode",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Angewomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A form of Ofanimon that was so angry that it suppressed its own emotions and fell into madness. It swelled with anger at the world, where atrocious sins keep mounting no matter how many times they are purged, and it closed off its heart. In order to nip evil in the bud, it hunts whichever opponents it has judged to have become a barrier to justice, and tries to establish a world of what it recognizes as justice. Its Special Move is hunting down the opponent with its \" Flame Hellscythe \", which is shrouded in flames that serve as a weapon, then plunging the hunted soul into hell with hellfire. Also, it has the \" Demon's Crystal \" summoning technique which keeps tormenting them until they die."
+}

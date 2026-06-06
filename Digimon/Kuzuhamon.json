@@ -1,0 +1,47 @@
+{
+  "name": "Kuzuhamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Ura Izuna",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Attacks the opponent with the kuda-gitsune carried on its waist."
+  },
+  "digivolves_from": [
+    "Bastemon",
+    "Bombermon",
+    "Doumon",
+    "Jyureimon",
+    "Karatenmon",
+    "Kyukimon",
+    "Lady Devimon",
+    "Matadrmon",
+    "Pajiramon",
+    "Pajramon",
+    "Scorpiomon",
+    "Taomon",
+    "Taomon (Silver)",
+    "Vamdemon",
+    "Zanmetsumon"
+  ],
+  "digivolves_to": [
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A God Man Digimon that is said to be a Fox-species Digimon that lived long, and transformed to take on a humanoid form. It is said that only those among them of a high level are able to evolve to Sakuyamon , and they normally just evolve to Kuzuhamon. It is versed in ancient magic like Shinto , Onmyoudou , and Shugendou . A single kuda-gitsune lurks within the pipe it carries on the belt around its waist, and it is able to employ this kuda-gitsune to use it for things like attacking and gathering information. Its Signature Move is attacking the opponent with the kuda-gitsune carried on its waist ( Ura Izuna ). Its Special Move is spreading a purifying barrier with its \" Shakujou \" that exorcises evil spirits ( Taizoukai Mandara )."
+}

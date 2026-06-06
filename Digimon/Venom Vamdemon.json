@@ -1,0 +1,45 @@
+{
+  "name": "Venom Vamdemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 10,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Venom Infuse",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Injects a destructive computer virus into the enemy's body by firing beams from its eyes or the eyes on its abdomen, destroying their configuration data."
+  },
+  "digivolves_from": [
+    "Astamon",
+    "Cyberdramon",
+    "Ex-Tyranomon",
+    "Fantomon",
+    "Infermon",
+    "Lucemon: Falldown Mode",
+    "Matadrmon",
+    "Mummymon",
+    "Skull Greymon",
+    "Skull Satamon",
+    "Vamdemon",
+    "Waru Monzaemon",
+    "Wisemon"
+  ],
+  "digivolves_to": [
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "It is a demon beast that has the lower half of a beast and an upper half with a beetle-like shell, and is the true, evolved form of the king of darkness, Vamdemon . As Venom Vamdemon, who has unleashed its hidden power, it has nothing but omnicidal and destructive impulses, and Vamdemon, who originally maintained its gentlemanly conduct, reason, and intelligence, hates exposing its true, ugly form. Its Special Move is injecting a destructive computer virus within the body of the enemy Digimon, destroying all of their configuration data and terminating their functions ( Venom Infuse ).",
+  "web_created": true
+}

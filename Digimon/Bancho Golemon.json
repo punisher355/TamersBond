@@ -1,0 +1,31 @@
+{
+  "name": "Bancho Golemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 12,
+    "LVE": 13,
+    "KNW": 12,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Tenbagaeshi",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Grips the enemy in its right hand and hammer-throws them into the distance."
+  },
+  "digivolves_from": [
+    "Insekimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese One of the BAN-TYO , this Mineral Digimon differs from regular emotionless Golemon in that it acts out of its own will. Its figure stands tall and imposing, unconcerned with its surroundings; its harsh treatment extends to everyone, and it will not show even the slightest sign of leniency. It puts even itself under harsh training by stationing itself in the fiercely inhospitable depths of Infinity Mountain . It is a mysterious Digimon that, although will hardly ever lend a hand to strangers in need of help, will show up even out of nowhere in order to save a comrade with whom it has exchanged blows. With its overwhelming power, it can turn the tables on a disadvantageous situation in one sweep and claim victory. Its Special Moves are gripping the enemy in its right hand and hammer-throwing them into the distance ( Tenbagaeshi ), reflecting the beam fired from the Kanshakudama in its abdomen off of Falling Stones , resulting in an attack with a large area of effect ( Kanshaku Dust ), and impaling the enemy with the gigantic excavator on its left hand, which is capable of pulverizing even Chrome Digizoid ( Yobori Claw Drill ).",
+  "web_created": true
+}

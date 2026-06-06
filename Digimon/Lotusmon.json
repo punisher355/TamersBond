@@ -1,0 +1,38 @@
+{
+  "name": "Lotusmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 9,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Serpent Cure",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires a white aura from thecaduceusit carries in its left hand which governs recovery."
+  },
+  "digivolves_from": [
+    "Archnemon",
+    "Blossomon",
+    "Jet Silphymon",
+    "Lady Devimon",
+    "Lilamon",
+    "Lilimon",
+    "Petaldramon",
+    "Pumpmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Fairy Digimon that has an appearance like the lotus, which is said to be a flower that blooms in heaven. Its personality is lady -like in its calmness and grace, and it possesses the abilities of making people forget the suffering of this sad world and granting them good dreams. However, it will bring down its grand hammer on those that refuse that good will. Its Special Moves are released from the Caduceus , which is held in its left hand and administers restoration and devastation, as a white aura ( Serpent Cure ), and a black aura ( Serpent Ruin ). Also, a seven-colored aura is released from the staff of rainbow-colored flowers that is held in its right hand ( Seven's Fantasia ), and this makes the opponent completely lose its fighting spirit by tempting it into a euphoric fantasy world."
+}

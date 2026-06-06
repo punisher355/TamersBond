@@ -1,0 +1,38 @@
+{
+  "name": "Filmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Lightning Stinger",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Skewers the enemy and injecting energy into them that destroys their data."
+  },
+  "digivolves_from": [
+    "Herissmon",
+    "Loogamon"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Kaiser Leomon",
+    "Mametyramon",
+    "Soloogarmon",
+    "Stiffilmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Man Digimon with many large spikes sprouting out of its body. It has red claws that can pierce through anything, and yellow quills that inject energy into whatever they stab. It has a carefree personality, the kind that likes to collect soft material to help it to sleep comfortably in its nest or search for its favorite foods. Its Special Moves are skewering the enemy with its quills and injecting energy into them that destroys their data ( Lightning Stinger ), and slashing with the claws on both hands without stopping ( Crimson Slash )."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Deckerdramon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Deckerdra-launcher",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[RANGE 8] [BLAST 1]",
+    "description": "Launches a swarm of anti-aircraft missiles from itsDeckerdra-launcher."
+  },
+  "digivolves_from": [
+    "Shoutmon"
+  ],
+  "digivolves_to": [
+    "Shoutmon X5",
+    "Decker Greymon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "Deckerdramon can be said to be a natural enemy of all Flying Digimon. With the terrifying \" Deckerdra-Launcher \" equipped on its back, it also conceals the ability to shoot down any kind of Flying Digimon with a variety of anti-aircraft missiles. It also poses difficulties for flying-type Digimon, in that its low height makes it hard to detect from high altitudes. Its aircraft kill-rate swells particularly while it is in terrain filled with obstacles, where it is difficult to discern the source of its attacks. In terrain with few obstacles, Deckerdramon spreads a smokescreen from its smoke-producing fangs ( Smoky Fang ), and prepares to attack. It doesn't just specialize in anti-aircraft attacks; in ground-to-ground combat, a mighty blow of its \" Heavy Tailhook \" pulverizes the enemy.",
+  "web_created": true
+}

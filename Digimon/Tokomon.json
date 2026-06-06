@@ -1,0 +1,59 @@
+{
+  "name": "Tokomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "element": "Neutral",
+    "name": "Baby Bubble",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Opens its mouth wide and bites the opponent with its shark like teeth."
+  },
+  "digivolves_from": [
+    "Botamon",
+    "Pitchmon",
+    "Poyomon",
+    "Tsubumon"
+  ],
+  "digivolves_to": [
+    "Armadimon",
+    "Bakumon",
+    "Candmon",
+    "Coronamon",
+    "Elecmon",
+    "Gabumon",
+    "Ganimon",
+    "Gottsumon",
+    "Guilmon",
+    "Hackmon",
+    "Hawkmon",
+    "Kamemon",
+    "Kunemon",
+    "Lucemon",
+    "Patamon",
+    "Pico Devimon",
+    "Piyomon",
+    "Shoutmon",
+    "Sistermon Blanc",
+    "Tentomon",
+    "Terriermon",
+    "Tukaimon",
+    "V-mon",
+    "Terriermon Assistant"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A tiny Digimon with limb-like protrusions growing beneath its body (head?). Baby Digimon that have grown limbs are extremely rare, and their appearance is enormously cute. However, caution must be taken; should one carelessly reach a hand out to it just because of its cuteness, it will suddenly open its mouth wide and bite with the closely packed fangs growing within. Having said that, it bears no ill will and has a very innocent personality.",
+  "web_created": true
+}

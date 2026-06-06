@@ -1,0 +1,56 @@
+{
+  "name": "Davis",
+  "season": 2,
+  "img": "Davis.webp",
+  "abilities": [
+    {
+      "name": "Never Back Down",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+)",
+      "description": "Once per encounter when your Digimon fails an attack roll, they may immediately make the same attack again for free as part of the same action. The second roll uses the same target but counts as a separate attack. Missing twice means you try harder next time — not that you stop."
+    },
+    {
+      "name": "Gogglehead",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+)",
+      "description": "Once per encounter you may declare a target as your Digimon's focus. Until the end of the encounter your Digimon deals +2 damage to that target on every hit. Switching focus costs your Free Action. You cannot focus on something without going all in."
+    },
+    {
+      "name": "Sheer Stubbornness",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Never Back Down, Courage rank 4",
+      "description": "When your Digimon would be Paralyzed, Frozen, or Confused, they may make a Reinforce check DN 12 before the status applies. On a success the status is completely negated. On a failure it applies as normal. Davis Tamers do not stay down."
+    },
+    {
+      "name": "Tunnel Vision",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Gogglehead, Courage rank 4",
+      "description": "While your Digimon has an active focus target from Gogglehead, they also gain +2 to all attack rolls against that target. The bonus does not apply to any other target. You have one goal. That is enough."
+    },
+    {
+      "name": "I Won't Give Up",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Sheer Stubbornness, Courage rank 5",
+      "description": "Once per session when your Digimon is reduced to 0 HP at Default Stage and would trigger the cascade, you may spend 8 Hope to refuse it. Your Digimon stays at 1 HP at their current Default Stage. Their Default Stage does not drop. They are still here. They are always still here."
+    },
+    {
+      "name": "One More Round",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Tunnel Vision, Courage rank 5",
+      "description": "Once per encounter at the start of your turn, if your Digimon took damage last round, they gain temporary HP equal to your Courage rank. This happens automatically — you do not need to declare it. Getting hit just makes them more determined."
+    },
+    {
+      "name": "Unstoppable",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Courage rank 7",
+      "description": "Once per session you may declare Unstoppable at the start of your turn. For the rest of this round your Digimon cannot be reduced below 1 HP by any attack, cannot be affected by any status effect, and their attacks cannot miss — every attack roll is treated as a hit regardless of the result. Natural 1s still deal no damage but the attack connects. One round. Absolute. Nothing stops them."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Metal Etemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 12,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Banana Slip",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Trips its opponents by throwing a banana peel."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Black King Numemon",
+    "Chimairamon",
+    "Dagomon",
+    "Etemon",
+    "Gerbemon",
+    "Great King Scumon",
+    "Holy Angemon",
+    "Insekimon",
+    "Loader Leomon",
+    "Metallife Kuwagamon",
+    "Monzaemon",
+    "Okuwamon",
+    "Orochimon",
+    "Rapidmon Perfect",
+    "Tonosama Gekomon",
+    "Volcamon",
+    "Volcdramon",
+    "Waru Monzaemon",
+    "Waru Seadramon"
+  ],
+  "digivolves_to": [
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese The \" King of Digimon \". There once existed a Digimon with unparalleled strength referred to by that name. It set out on a journey of harsh battles in search of the strong, and though it was able to acquire valuable combat data, it was also injured considerably from the constant battling. It then studied its own weaknesses from the data acquired through battling, and has now been perfectly reborn as an ultimate combat machine by full-metal lizing itself. Its body's surface is coated fully in the Chrome Digizoid used by Metal-species Digimon. While its basic combat abilities have been raised to their maximum, its Special Move is tripping the opponent ( Banana Slip ). An invincible fighter which has acquired Strong- and Dirty-style wrestling skills has been born."
+}

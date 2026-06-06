@@ -1,0 +1,38 @@
+{
+  "name": "Omega Shoutmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 10,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Heavy MetalVulcan",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Fires a hail of fiery shots from its chest."
+  },
+  "digivolves_from": [
+    "Bulkmon",
+    "Shoutmon X4"
+  ],
+  "digivolves_to": [
+    "Armamon",
+    "Durandamon",
+    "Kazuchimon",
+    "Magna Kidmon",
+    "Pile Volcamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Omega Shoutmon is a form obtained when Omegamon bestowed the legendary \" Evolution \" upon a Shoutmon that released its boiling hot soul. In addition to its intense passion, it shines gold because its whole body is clad in the Omega inForce , a power received from Omegamon, and its build has also become crisp and sharp. Because of its body's glitter and sharpness, its enemies only see Omega Shoutmon's figure as an afterimage that cannot be pursued. Its \" Heavy Metal Vulcan \", which fires from its chest a hail of shots converted from the passion of its overflowing friendship into firepower, is not only an attack but also becomes an impregnable barrage that keeps opponents away, protecting its comrades. It effuses its passion to justice from the \" V \" on its head and assaults the opponent while shining greater than the sun, eradicating them ( Victorize Banking ). With its \" Hard Rock Damashī \", in which the passion of its courage turns into flames and surges in its fists, it is able to suit its attack to the situation, by striking the opponent when in close range, and hurling the flames when at long range. Its \" Beat Slash \", in which its feet become blades by filling them with the passion of its fighting spirit, kicks and cuts apart the opponent. Its \" Omega the Fusion \", in which it draws the power of the Omega inForce from its whole body, concentrates it into an aura, and shoots it at the opponent, blows away even the morale of those who witness it.",
+  "web_created": true
+}

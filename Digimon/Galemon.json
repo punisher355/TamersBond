@@ -1,0 +1,35 @@
+{
+  "name": "Galemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Hurricane Slicer",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Uses its wings to unleash a large, sharp blade of wind."
+  },
+  "digivolves_from": [
+    "Floramon",
+    "Mushmon",
+    "Pteromon"
+  ],
+  "digivolves_to": [
+    "Grand Galemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Bird Dragon Digimon characterized by its large wings and blade-like horns. Its hardened horns are even more developed than Pteromon 's, allowing it to quickly perceive any abnormalities in its surroundings through the wind they detect, akin to a sixth sense. It is an intelligent species that strikes the first blow by predicting not only environmental changes, but also threats such as enemy invasions or attacks. It is also able to move around on four legs, and before battle, it can crouch down to mask its presence as it approaches the enemy. Since it prefers fruits and nuts as its main food, it has a deep connection to Plant-species Digimon. It has a symbiotic relationship with Plant-species Digimon where they provide Galemon with food, and it protects their territory in return. Its Special Moves are using its wings to unleash a large, sharp blade of wind ( Hurricane Slicer ), and generating a tornado from its mouth to blow the enemy away ( Tornado Thrower )."
+}

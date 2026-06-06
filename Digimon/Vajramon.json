@@ -1,0 +1,54 @@
+{
+  "name": "Vajramon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Rodha",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Strikes the ground with itsBǎo Jiàn, generating fissures and hurling rocks."
+  },
+  "digivolves_from": [
+    "Bullmon",
+    "Devidramon",
+    "Garurumon",
+    "Garurumon (Black)",
+    "Gryzmon",
+    "Kangarumon",
+    "Kyubimon (Silver)",
+    "Musyamon",
+    "Numemon",
+    "Siesamon",
+    "Yaksamon"
+  ],
+  "digivolves_to": [
+    "Anubimon",
+    "Beelzebumon",
+    "Boltmon",
+    "Dukemon",
+    "Gaioumon",
+    "Gokumon",
+    "Grandis Kuwagamon",
+    "Megidramon",
+    "Sakuyamon",
+    "Tactimon",
+    "Xuanwumon",
+    "Zanbamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Ox . A follower of the Four Holy Beasts Digimon Xuanwumon , it is a seeker of truth who aims for both physical and spiritual heights. Its warrior-like personality values honor, and loathes cowardice and effeminacy. With the most well-tempered physical strength among the Deva, it can easily wield its giant twin Bǎo Jiàn that it carries on its waist. Its Special Move is using its forefeet and upper body to strike the ground with its twin Bǎo Jiàn , generating fissures that extend up to 50 m ahead of it ( Rodha ). The resulting shock waves that erupt from underground also causes rocks to be hurled out, inflicting damage on those nearby."
+}

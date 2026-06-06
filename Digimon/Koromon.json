@@ -1,0 +1,62 @@
+{
+  "name": "Koromon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Produces bubbles from its mouth to intimidate opponents."
+  },
+  "digivolves_from": [
+    "Botamon",
+    "Mokumon",
+    "Nyokimon",
+    "Yuramon",
+    "Zurumon"
+  ],
+  "digivolves_to": [
+    "Agumon",
+    "Agumon (Black)",
+    "Betamon",
+    "Candmon",
+    "Dracomon",
+    "Gabumon",
+    "Gaomon",
+    "Goburimon",
+    "Guilmon",
+    "Hackmon",
+    "Jazamon",
+    "Kamemon",
+    "Kotemon",
+    "Kunemon",
+    "Lalamon",
+    "Lucemon",
+    "Monodramon",
+    "Pico Devimon",
+    "Shoutmon",
+    "Toy Agumon",
+    "Tyumon",
+    "V-mon",
+    "Tyumon",
+    "Vorvomon",
+    "Agumon Hakase",
+    "Bushi Agumon",
+    "Modoki Betamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A tiny Digimon that shed the fuzz covering its surface, and whose body grew even bigger. Although it has become able to move around more actively, it is still unable to battle. It can produce bubbles from its mouth to intimidate opponents."
+}

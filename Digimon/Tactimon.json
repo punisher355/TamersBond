@@ -1,0 +1,31 @@
+{
+  "name": "Tactimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Ichi-no-tachi",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Stabs the ground once with Jatetsufūjin-maru, generating an earthquake."
+  },
+  "digivolves_from": [
+    "Vajramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Before Original ⇨ Japanese A soldier Digimon that possesses a peerless sword called \" Jatetsufūjin-maru \". Within the Jatetsufūjin-maru is sealed a sinister power strong enough to split a star in two, so drawing this sword marks the collapse of a star. Therefore, Tactimon battles without drawing the sword, but even so, it exhibits the destructive force of its menace. If it stabs the ground once it generates an earthquake, if twice it awakens one hundred dead warriors, and if thrice it collapses the surrounding land with a shock wave. The Jatetsufūjin-maru , which conceals such power, is not a sword that just anyone can handle. From that alone can you understand the depth of Tactimon's true might. Even more than its merit as a soldier, it excels in strategy with plans which are even said to be, \"ingenuity itself, as if gushing forth like a spring,\" so Tactimon's true merit is not in physical strength but in ingenuity. When Tactimon leads an army, the outcome has already been decided, and it is said that, \"the victory has been decided before it even fought.\" Due to the various plans it has laid out, when Tactimon stands upon the battlefield it has already guaranteed its absolute advantage."
+}

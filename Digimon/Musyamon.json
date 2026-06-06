@@ -1,0 +1,61 @@
+{
+  "name": "Musyamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Kirisute Gomen",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Slashes the enemy with its glowing sword, draining their life force."
+  },
+  "digivolves_from": [
+    "Dracumon",
+    "Gasamon",
+    "Goburimon",
+    "Guilmon",
+    "Hyokomon",
+    "Impmon",
+    "Kotemon",
+    "Kunemon",
+    "Patamon",
+    "Pico Devimon",
+    "Plotmon",
+    "Ryudamon",
+    "Shamamon",
+    "Toy Agumon",
+    "Wankomon",
+    "Zubamon"
+  ],
+  "digivolves_to": [
+    "Asuramon",
+    "Butenmon",
+    "Digitamamon",
+    "Duramon",
+    "Fantomon",
+    "Grademon",
+    "Hisyaryumon",
+    "Karatenmon",
+    "Mummymon",
+    "Oboromon",
+    "Skull Baluchimon",
+    "Vajramon",
+    "Vamdemon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Originally, it was the data of a samurai master from an overseas video game, but it was infected by a computer virus , and evolved to become this armored warrior Digimon. Its countless battles with Digimon have reduced it to its current appearance of a ruthless ochimusha , but this can also be said to be proof of this Digimon's terrifying combat ability and vitality. Musyamon is the very image of a savage warrior who continues to live through its endless battles. The demon sword it wields in its right hand, \" Shiratori-maru \", is engraved with a forbidden curse that causes it to steal the lifeforce of any opponent it cuts, and is said to grow sharper for every thousand Digimon it slays. The Special Move it performs using its Shiratori-maru is \" Kirisute Gomen \". It is considering one day issuing a challenge to Leomon , to have a decisive battle with it and its cherished sword, Shishiou-maru ."
+}

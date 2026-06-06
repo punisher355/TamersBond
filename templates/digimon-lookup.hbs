@@ -1,0 +1,149 @@
+<div class="digimon-lookup-layout">
+
+  {{!-- ══ LEFT: Filters + scrollable results list ══ --}}
+  <div class="lookup-sidebar">
+
+    <div class="lookup-filters">
+      <input class="lookup-search" type="text" placeholder="Search name…" value="{{filters.search}}" autocomplete="off" />
+      <select class="filter-select" data-filter="stage">
+        <option value="">All Stages</option>
+        {{#each stageOptions}}
+        <option value="{{@key}}"{{#if (eq ../filters.stage @key)}} selected{{/if}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <select class="filter-select" data-filter="attribute">
+        <option value="">All Attributes</option>
+        {{#each attributeOptions}}
+        <option value="{{@key}}"{{#if (eq ../filters.attribute @key)}} selected{{/if}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <select class="filter-select" data-filter="element">
+        <option value="">All Elements</option>
+        {{#each elementOptions}}
+        <option value="{{@key}}"{{#if (eq ../filters.element @key)}} selected{{/if}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <button class="clear-filters" type="button">Clear Filters</button>
+    </div>
+
+    <div class="lookup-results">
+      {{#if forms.length}}
+        {{#each forms}}
+        <div class="result-entry{{#if (eq this.name ../selectedName)}} selected{{/if}}"
+             data-item-name="{{this.name}}"
+             data-name="{{this.name}}"
+             data-stage="{{this.system.stage}}"
+             data-attribute="{{this.system.attribute}}"
+             data-element="{{this.system.element}}">
+          <img src="{{this.img}}" alt="" />
+          <span>{{this.name}}</span>
+        </div>
+        {{/each}}
+      {{else}}
+        <div class="lookup-no-forms">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>No forms loaded.<br>Check console (F12) for errors.</p>
+        </div>
+      {{/if}}
+    </div>
+
+  </div>{{!-- end sidebar --}}
+
+  {{!-- ══ RIGHT: Detail panel ══ --}}
+  <div class="lookup-detail">
+
+    {{#if selected}}
+
+    {{!-- Draggable form card --}}
+    <div class="form-card" draggable="true" data-uuid="{{selectedUuid}}">
+      <img class="form-portrait" src="{{selected.img}}" alt="{{selected.name}}" />
+      <div class="form-info">
+        <div class="form-name">
+          {{selected.name}}
+          <button class="open-sheet-btn" type="button" title="Open item sheet"><i class="fas fa-external-link-alt"></i></button>
+        </div>
+        <div class="form-badges">
+          <span class="badge badge-stage">{{stageName}}</span>
+          <span class="badge badge-attr">{{attrName}}</span>
+          <span class="badge badge-elem">{{elemName}}</span>
+          {{#if selected.system.archetype}}
+          <span class="badge badge-arch">{{selected.system.archetype}}</span>
+          {{/if}}
+          {{#if selected.system.size}}
+          <span class="badge badge-size">{{selected.system.size}}</span>
+          {{/if}}
+        </div>
+        <div class="form-stats-grid">
+          {{#each selectedStats}}
+          <div class="stat-cell" style="border-top: 2px solid {{this.color}};">
+            <span class="stat-label">{{this.label}}</span>
+            <span class="stat-value">{{this.value}}</span>
+          </div>
+          {{/each}}
+        </div>
+        <div class="drag-hint"><i class="fas fa-hand-rock"></i> Drag to actor sheet</div>
+      </div>
+    </div>
+
+    {{!-- Signature Move (bonus section — only shown if move exists in digimon-moves pack) --}}
+    {{#if sigMove}}
+    <div class="lookup-section">
+      <div class="section-title">Signature Move</div>
+      <div class="sig-move-card" draggable="true" data-uuid="{{sigMove.uuid}}">
+        <span class="move-name">{{sigMove.name}}</span>
+        <span class="move-meta">{{sigMove.element}} · PR {{sigMove.pr}} ({{sigMove.prDice}})</span>
+        {{#if sigMove.tags}}
+        <span class="move-tags">{{sigMove.tags}}</span>
+        {{/if}}
+        <span class="drag-hint-sm"><i class="fas fa-hand-rock"></i> Drag to add</span>
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Evo sections: always present at a fixed position --}}
+    <div class="evo-sections">
+
+      <div class="lookup-section evo-panel">
+        <div class="section-title">Dedigivolves From</div>
+        <div class="digi-links-grid">
+          {{#if digivolesFrom.length}}
+            {{#each digivolesFrom}}
+            <span class="digi-link {{#if this.exists}}exists{{else}}missing{{/if}}"
+                  data-name="{{this.name}}"
+                  title="{{#if this.exists}}Click to view {{this.name}}{{else}}{{this.name}} — not in database{{/if}}">{{this.name}}</span>
+            {{/each}}
+          {{else}}
+            <span class="evo-empty">No prior forms</span>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="lookup-section evo-panel">
+        <div class="section-title">Digivolves To</div>
+        <div class="digi-links-grid">
+          {{#if digivolvesTo.length}}
+            {{#each digivolvesTo}}
+            <span class="digi-link {{#if this.exists}}exists{{else}}missing{{/if}}"
+                  data-name="{{this.name}}"
+                  title="{{#if this.exists}}Click to view {{this.name}}{{else}}{{this.name}} — not in database{{/if}}">{{this.name}}</span>
+            {{/each}}
+          {{else}}
+            <span class="evo-empty">No further forms</span>
+          {{/if}}
+        </div>
+      </div>
+
+    </div>{{!-- end evo-sections --}}
+
+    {{else}}
+
+    <div class="lookup-empty">
+      <i class="fas fa-dragon"></i>
+      <p>Select a Digimon from the list to view its details.</p>
+    </div>
+
+    {{/if}}
+
+  </div>{{!-- end detail --}}
+
+</div>{{!-- end layout --}}

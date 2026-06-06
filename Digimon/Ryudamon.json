@@ -1,0 +1,55 @@
+{
+  "name": "Ryudamon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 2,
+    "LVE": 3,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Kabutogaeshi",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Withstands the enemy's attacks with its helmet and armor, then counter attacks."
+  },
+  "digivolves_from": [
+    "Chocomon",
+    "Kyokyomon",
+    "Puroromon",
+    "Sakuttomon",
+    "Tunomon",
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Airdramon",
+    "Coelamon",
+    "Coredramon (Green)",
+    "Death-X-DORUgamon",
+    "Deltamon",
+    "Dokugumon",
+    "Geo Greymon",
+    "Ginryumon",
+    "Greymon",
+    "Monochromon",
+    "Musyamon",
+    "Numemon",
+    "Omekamon",
+    "Raptordramon",
+    "Reppamon",
+    "Tobucatmon",
+    "Waspmon",
+    "XV-mon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Beast Digimon that, because it has an old-style Interface on its brow, is presumed to be an experimental \" Prototype Digimon \" from before Digimon were discovered. Although its body is clad in Japanese-style armor high in defensive ability, its movements are nimble, so it fights by resolutely leaping into the opponent's chest. It studies the business of combat as it fights, and possesses Bushikatagi , with bravery and a soul that doesn't fear more powerful Digimon. The data that is said to have been hidden within the deepest parts of its Digicore , during an experiment, is the ferocious combat data of the \"Dragons\" and \"Generals\" of Japanese mythology, and it is said it has the potential to grow into a mighty Digimon. Signature Move: Withstands the opponent's attacks with its armor and helmet, then counterattacks ( Kabutogaeshi ). Its Special Move is leaping into the opponent's chest and firing a blade of iron from its mouth ( Iaijin ).",
+  "web_created": true
+}

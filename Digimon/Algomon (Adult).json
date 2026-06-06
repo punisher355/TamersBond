@@ -1,0 +1,42 @@
+{
+  "name": "Algomon (Adult)",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Volt Line",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Sends an electric shock through the enemy."
+  },
+  "digivolves_from": [
+    "Algomon (Child)",
+    "Gabumon",
+    "Ghostmon",
+    "Labramon"
+  ],
+  "digivolves_to": [
+    "Algomon (Perfect)",
+    "Big Mamemon",
+    "Mamemon",
+    "Metal Greymon",
+    "Metal Tyranomon",
+    "Waru Seadramon",
+    "Were Garurumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A form of Algomon that evolved to Adult whose processing ability has increased abnormally. Its power has also been strengthened, and it can lift up even large enemies with its hands, which have turned into industrial manipulator s . Its Special Moves are restraining the enemy with the tentacles that extend from its mouth ( Imprisonment ), and sending an electric shock through them ( Volt Line )."
+}

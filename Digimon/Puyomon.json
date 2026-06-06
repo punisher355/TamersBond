@@ -1,0 +1,25 @@
+{
+  "name": "Puyomon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Puyoyomon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A soft and sticky Slime Digimon that was discovered in the \" Net Ocean \". Its single, lens-like eye lacks emotional expression, so you can't tell what it's thinking, but it drifts through the sky or the sea, trying to stick to objects and other Digimon with its tentacles. Once it sticks onto something, it will emit tingling static electricity ( Pachipachi Gas ), but this seems to be a form of communication unique to Puyomon rather than an attack. When multiple Puyomon stick to each other, their \" Pachipachi Gas \" becomes more powerful, making it difficult to approach the surrounding area.",
+  "web_created": true
+}

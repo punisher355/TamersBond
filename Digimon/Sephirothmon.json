@@ -1,0 +1,38 @@
+{
+  "name": "Sephirothmon",
+  "stage": "Ultimate",
+  "attribute": "Unknown",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Rumble Blend Number",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Uses attacks with the same attribute as the Warrior Ten."
+  },
+  "digivolves_from": [
+    "Clockmon",
+    "Nanimon",
+    "Thunderballmon",
+    "Mercuremon"
+  ],
+  "digivolves_to": [
+    "Black Seraphimon",
+    "Deathmon",
+    "Murmukusmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Steel which bears the might of one of the legendary Warrior Ten . It possesses thinking like that of a machine, which lacks emotions. By instantly analyzing the enemy, it accurately points out their weaknesses. However, it is very fragile when the enemy makes an action that falls outside of its calculations. Its ten spheres each have the same attribute as the other Warrior Ten, and are able to perform attacks with, and conversely, absorb attacks with those attributes. When the enemy's attack misses or its own attack hits, it gives out a low-pitched, creepy laugh from its eerie mouth. Its Special Move is randomly performing attacks with the same attributes as the Warrior Ten from the sphere in the position where it stopped after shuffling its spheres through its calvaria ( Rumble Blend Number (1-10) ).",
+  "web_created": true
+}

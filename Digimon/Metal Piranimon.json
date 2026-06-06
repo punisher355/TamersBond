@@ -1,0 +1,38 @@
+{
+  "name": "Metal Piranimon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Max-Power Vise",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Uses its Metal Head to bite at maximum power, not letting go until it bites through."
+  },
+  "digivolves_from": [
+    "Cannonbeemon",
+    "Grademon",
+    "Hisyaryumon",
+    "Mametyramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Fantomon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese Within certain parts of the Net Rivers , a swarm of dangerous Virus-species Ultimate Digimon were discovered. Though it is said that the number of Digimon who have become Ultimates is extremely small, there are schools of Metal Piranimon which will get their teeth into any Digimon who passes into their territory, killing it immediately. There are razor-sharp teeth in its \" Metal Head \", and because its tenacious jaw functions like a vise, it bites and completely rends every armor. However, because the Metal Head feature is extremely heavy, it keeps its balance with the weight attached to its tail fin. Also, if the red button on its calvaria is pressed then it will simply come off, and be replaced with a new Metal Head . Its Special Moves are biting and rending the opponent from every direction ( 3D Razor ), and using the Metal Head at maximum power so that it doesn't release until it bites through ( Max-Power Vise ).",
+  "web_created": true
+}

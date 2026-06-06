@@ -1,0 +1,42 @@
+{
+  "name": "Tai",
+  "season": 1,
+  "img": "Tai.webp",
+  "abilities": [
+    {
+      "name": "Lead From the Front",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+)",
+      "description": "Once per encounter you may use Call Out as a Free Action on another character's turn, not just your own. Your voice carries even when it is not your moment."
+    },
+    {
+      "name": "Reckless Push",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+)",
+      "description": "When you force a digivolution and the roll succeeds, your Digimon gains +3 to their next attack roll this round. Living dangerously pays off."
+    },
+    {
+      "name": "Burning Courage",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Courage rank 4",
+      "description": "When your Digimon is digivolved above their Default Stage, they deal +2 bonus damage on every attack. The higher the risk, the harder they hit."
+    },
+    {
+      "name": "No Retreat",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Courage rank 4",
+      "description": "When your Digimon hits 0 HP above Default Stage, before the cascade triggers you may spend 5 Hope to keep them at 1 HP and maintain their current stage until the end of this round. They are still in the fight."
+    },
+    {
+      "name": "Push the Limit",
+      "row": 3,
+      "expCost": 800,
+      "requirements": "Both Row 2 abilities, Courage rank 6",
+      "description": "Your Digimon may now digivolve up to 3 stages above Default Stage instead of the normal 2 stage maximum. The Hope costs and corruption rules still apply. Some limits were made to be broken."
+    }
+  ]
+}

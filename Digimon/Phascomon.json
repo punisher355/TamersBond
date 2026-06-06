@@ -1,0 +1,46 @@
+{
+  "name": "Phascomon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 4,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Caprimon",
+    "Pyocomon",
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Baromon",
+    "Evilmon",
+    "Gargomon",
+    "Leomon",
+    "Mad Leomon",
+    "Porcupamon",
+    "Sangloupmon",
+    "Shadramon",
+    "Troopmon",
+    "Wendimon",
+    "Wizarmon",
+    "Yukidarumon",
+    "Mad Leomon: Armed Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Beast Digimon which inhabits the dark \" Evil Forest \" that is spread vast across the Dark Area . It always curls up in a treetop and sleeps often. At a glance, it seems like it's harmless, but it is a fully-fledged Demon Digimon, and there have been many injuries reported from it leaping from the treetop and attacking people as soon as they let their guard down. Its Special Moves are sleep wave emitted from its sleepy-looking eyes ( Evil Snore ), and sharp claws containing paralyzing venom ( Eucalyptus Claw )."
+}

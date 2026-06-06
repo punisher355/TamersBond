@@ -1,0 +1,33 @@
+{
+  "name": "Bio Thunderbirmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Gottsumon",
+    "Impmon"
+  ],
+  "digivolves_to": [
+    "Bio Darkdramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Toei Digimon Analyzer Digimon Data File ⇨ Japanese A Bio Digimon modified by Kurata . When merging with a human , both its strength and speed increase compared to what it was before being remodeled. Toei Animation | Digimon Savers ⇨ English 倉田に改造されたバイオデジモン。人間と融合することで、改造される前とは、スピード・パワーともにアップしている。 東映アニメーション｜デジモンセイバーズ ⇨ Japanese Digimon Savers ⇨ English バイオサンダーバーモン、バイオクアトルモン、バイオステゴモン 倉田に改造されたバイオデジモンだ。人間と融合することによって、改造される前とは、スピード・パワー共にアップしているぞ。 デジモンセイバーズ Text Dialogue ⇨ Japanese Digimon Savers Digimon Data File ⇨ English 倉田に改造されたバイオデジモン。聖と融合したことによって新たな力を得た。 必殺技「 サンダーストーム 」は、電撃をまとった翼を羽ばたかせ稲妻の嵐を巻き起こす技。 倉田からさらに強力なデジモンデータを与えられ、バイオダークドラモンに進化。 デジモンセイバーズ デジモンデータファイル ⇨ Japanese Digimon Savers Digimon Data File ⇨ English 今回紹介するのはバイオサンダーバーモン。 倉田に改造されたバイオデジモンの一体だ。本来のサンダーバーモンはアーマー体の巨鳥型デジモン。だが、聖と融合することで、より強力な力を持つバイオデジモンとなった。得意技の「 サンダーストーム 」は電撃をまとった翼を羽ばたかせ稲妻の嵐を巻き起こす技だ。聖は、デジモン狩りを楽しむために倉田と手を組んでバイオデジモンとなったんだ。倉田からさらに強力なデジモンデータを与えられ、究極体・バイオダークドラモンに進化。???だけにするなど、卑劣な戦法で大とシャイングレイモンを苦しめた。しかし、シャイングレイモンの新たな力「 ジオグレイソード 」の発動によって倒されたんだ。 では、デジモンデータファイル、また来週！ デジモンセイバーズ デジモンデータファイル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ Japanese By fusing with a human, he has become a Bio-Hybrid with increased power and speed. His Thunderstorm electric shocks are also powerful. Digimon Series Memorial Book: Digimon Animation Chronicle ⇨ English 人間との融合により、通常よりもパワー、スピードを強化したバイオハイブリッド体。「 サンダーストーム 」にようる電撃も強力である。 デジモンシリーズ メモリアルブック デジモンアニメーションクロニクル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

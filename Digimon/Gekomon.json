@@ -1,0 +1,52 @@
+{
+  "name": "Gekomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Crush Symphony",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Crushes the enemy from within using ultra-high frequency vibrations."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Dracumon",
+    "Elecmon",
+    "Ganimon",
+    "Gizamon",
+    "Gottsumon",
+    "Otamamon",
+    "Shakomon",
+    "Tentomon",
+    "Tyumon",
+    "Modoki Betamon"
+  ],
+  "digivolves_to": [
+    "Brachimon",
+    "Hangyomon",
+    "Hippogriffomon",
+    "Mega Seadramon",
+    "Okuwamon",
+    "Scorpiomon",
+    "Sirenmon",
+    "Tankdramon",
+    "Vamdemon",
+    "Whamon Perfect"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese An Amphibian Digimon that charms those around it with a pleasant voice that is hard to imagine by looking at its bizarre appearance. The chords produced from the three holes at the tip of its tongue and the ad-libbing of the horn coiled around its neck allow it to control the opponent's emotions as it pleases. It is rumored to be born when a famous piece is written in music composition software, so it has become sort of a status symbol among the musicians of the world. Its Special Move is crushing the enemy from within using ultra-high frequency vibrations ( Crush Symphony )."
+}

@@ -1,0 +1,13 @@
+# Foundry LevelDB directories (auto-generated from .db files, don't share)
+packs/*/
+
+# Claude Code local settings (per-developer, not shared)
+.claude/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.suo

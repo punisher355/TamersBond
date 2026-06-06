@@ -1,0 +1,57 @@
+{
+  "name": "Dark Tyranomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Fire Blast",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Breathes super-powerful flames, changing its surroundings into a sea of fire."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Bakumon",
+    "Betamon",
+    "Clear Agumon",
+    "Dracomon",
+    "Elecmon",
+    "Gazimon",
+    "Gizamon",
+    "Guilmon",
+    "Monodramon",
+    "Pico Devimon",
+    "Terriermon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Brachimon",
+    "Chimairamon",
+    "Gigadramon",
+    "Mametyramon",
+    "Master Tyranomon",
+    "Megadramon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Metal Tyranomon",
+    "Skull Greymon",
+    "Vamdemon",
+    "Vermillimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Dinosaur Digimon whose body was corroded by a vicious computer virus . Although it was originally a Tyranomon-species Digimon, it was infected by a vicious computer virus, causing a bug in its flesh's configuration data and transforming it into a frenzied Digimon. Its body turned black, its arms grew sturdier than Tyranomon 's, and its offensive power grew. It identifies anything reflected in its eyes as an enemy and starts attacking, becoming completely frenzied. With its Special Move \" Fire Blast \", a super-powerful jet of flames, it transforms all of its surroundings into a sea of flames."
+}

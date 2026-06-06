@@ -1,0 +1,58 @@
+{
+  "name": "Magnamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Plasma Shoot",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[RANGE 4]",
+    "description": "12Fires one or more shots of ball-shaped plasmaFires a swarm of missiles from its armor."
+  },
+  "digivolves_from": [
+    "Coatlmon",
+    "Digmon",
+    "Fladramon",
+    "Gold V-dramon",
+    "Harpymon",
+    "Holsmon",
+    "Lighdramon",
+    "Lynxmon",
+    "Maildramon",
+    "Mantaraymon",
+    "Nefertimon",
+    "Opossummon",
+    "Opossumon",
+    "Pegasmon",
+    "Pipismon",
+    "Sagittarimon",
+    "Sethmon",
+    "Shadramon",
+    "Sheepmon",
+    "Shurimon",
+    "Submarimon",
+    "Togemogumon",
+    "Yaksamon",
+    "Dark Maildramon"
+  ],
+  "digivolves_to": [
+    "Giga Seadramon",
+    "Imperialdramon: Dragon Mode",
+    "Imperialdramon: Fighter Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese An Armor-level Holy Knight Digimon that evolved through the power of the \"Digimental of Miracles\". The \" Digimental of Miracles \" possesses the attribute of \"Metal\", and is made of the super-metal \" Chrome Digizoid \". It possesses not only tremendous defensive ability, but also offensive power equivalent to that of an Ultimate Digimon or even greater, and it is also a member of the \" Royal Knights \". Those who acquire the power of the \" Digimental of Miracles \" are able to overcome any predicament they fall into through that miraculous power, and as such it is appropriately referred to as a Miracle Item. Its Special Moves are firing a shot of ball-shaped plasma ( Plasma Shoot ), and rapidly compressing space, then immediately and explosively expanding it, sweeping away surrounding enemies with a golden laser beam ( Shining Gold Solar Storm ).",
+  "web_created": true
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Kinkakumon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Kibakusou",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Swings theShichisei Kanaboufrom overhead and pulverizes the whole ground."
+  },
+  "digivolves_from": [
+    "Fujamon",
+    "Jellymon",
+    "Takinmon"
+  ],
+  "digivolves_to": [
+    "Cho·Hakkaimon",
+    "Majiramon",
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Kinkakumon is a rampaging girl that is feared as one of the \"Gold and Silver Oni Brothers\" alongside its little brother Ginkakumon . Since it's the type to rush headlong into a love affair, it's a romantic Digimon that will begin violently attacking if there's a Digimon it's interested in. In addition, because it is a thoughtless person prone to making silly mistakes and jumping to the wrong conclusion, if it falls in love with its opponent then the misunderstanding will cause a ruckus. Because it has a confident personality but is naive in the ways of love, it strikes the opponent and sends them soaring if it's bashful, and strikes them dolefully if it's snubbed, so no matter how many lives the opponent it likes has, they aren't enough. Its Special Move is swinging its \" Shichisei Kanabou \" from overhead and pulverizing the whole ground ( Kibakusou ). Its \" Dokidokidokyūn \", in which it discharges a high-tension current from its whole body, is an all-purpose technique that excels in offense and defense. Its lightning-speed, surprise kick technique \" Raikou Kishū \" conceals an electric shock in its foot and has a paralyzing effect on the opponent."
+}

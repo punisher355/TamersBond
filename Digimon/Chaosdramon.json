@@ -1,0 +1,42 @@
+{
+  "name": "Chaosdramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 13,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 12,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Hyper Mugen Cannon",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires a superdreadnought-class energy wave from its two artillery cannons."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Brachimon",
+    "Canoweissmon",
+    "Chimairamon",
+    "Death-X-DORUguremon",
+    "Groundramon",
+    "Loader Leomon",
+    "Metal Greymon",
+    "Paildramon",
+    "Tankdramon"
+  ],
+  "digivolves_to": [
+    "Apocalymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese It is said that Mugendramon , who was built by combining the parts of many Cyborg-species Digimon, demonstrated abilities beyond imagination, and that the experiment succeeded. Adding enhancements to further improve that Mugendramon resulted in Chaosdramon, who possesses a deep crimson Metal Body . Its body is made of \" Red Digizoid \", which was repurified from the super-metal Chrondigizoit to only improve its hardness, thus it is able to deflect any attack and destroy anything. Also, the version of the program that was set in its Digicore automatically performs improvements to make it even more destructive. Chaosdramon is also the Digimon that the leader of the Crack Team primarily employs as its agent. Its Special Move is a superdreadnought-class energy wave fired from its two artillery cannons ( Hyper Mugen Cannon )."
+}

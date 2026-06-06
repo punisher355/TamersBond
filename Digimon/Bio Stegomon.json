@@ -1,0 +1,33 @@
+{
+  "name": "Bio Stegomon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Gottsumon",
+    "Patamon"
+  ],
+  "digivolves_to": [
+    "Bio Spinomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Toei Digimon Analyzer Digimon Data File ⇨ Japanese A Bio Digimon modified by Kurata . When merging with a human, both its strength and speed increase compared to what it was before being remodeled. Toei Animation | Digimon Savers ⇨ English 倉田に改造されたバイオデジモン。人間と融合することで、改造される前とは、スピード・パワーともにアップしている。 東映アニメーション｜デジモンセイバーズ ⇨ Japanese Digimon Savers ⇨ English バイオサンダーバーモン、バイオクアトルモン、バイオステゴモン 倉田に改造されたバイオデジモンだ。人間と融合することによって、改造される前とはスピード、パワー共にアップしているぞ。 デジモンセイバーズ Text Dialogue Digimon Savers Digimon Data File ⇨ English デジモンセイバーズ デジモンデータファイル ⇨ Japanese Digimon Savers Digimon Data File ⇨ English 今回紹介するのはバイオステゴモン。 では、デジモンデータファイル、また来週！ デジモンセイバーズ デジモンデータファイル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ Japanese A stegosaurus-type Bio-Digimon. It moves swiftly despite its sturdy body, and its sword-like dorsal fin, which fires from its back in the Shell Needle Rain , is a threat. Digimon Series Memorial Book: Digimon Animation Chronicle ⇨ English ステゴサウルス型のバイオデジモン。頑丈な巨体に似合わず動きも素早く、「 シェルニードルレイン 」で背中から発射される剣のような背びれは脅威となる。 デジモンシリーズ メモリアルブック デジモンアニメーションクロニクル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

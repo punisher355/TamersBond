@@ -1,0 +1,37 @@
+{
+  "name": "Jazarichmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Messer Spira",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE] [PUSH]",
+    "description": "Charges while spinning at high speed."
+  },
+  "digivolves_from": [
+    "Jazardmon",
+    "Omekamon",
+    "Peckmon",
+    "Thunderbirmon"
+  ],
+  "digivolves_to": [
+    "Hououmon",
+    "Metallicdramon",
+    "Tiger Vespamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Digimon that flies at the speed of sound , and has been specialized for aerial battles. Dogfight s are its specialty, and the number of enemies it has fought and shot down is immeasurable. It is considered to be top class in the Digital World when it comes to aerial combat matches, and is said to compare favorably with Wingdramon . Since it has legs, it can fly unhindered at sonic speeds even when doing low passes or flying in areas with many obstacles. Its Special Moves are charging while spinning at high speed ( Messer Spiral ), and intercepting the enemy with a laser fired from its tail, even if they get behind it ( N.S.B.M )."
+}

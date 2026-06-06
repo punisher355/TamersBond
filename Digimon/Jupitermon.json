@@ -1,0 +1,39 @@
+{
+  "name": "Jupitermon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Mabolt",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Constructs an array of tiny thunder clouds, summoned by exchanging blows with the opponent using the hammers in both of its hands, which automatically looses thunderbolts at those it judges as evil or those who hinder its arbitration."
+  },
+  "digivolves_from": [
+    "Aegiochusmon",
+    "Aegiochusmon: Blue",
+    "Aegiochusmon: Dark",
+    "Aegiochusmon: Green",
+    "Aegiochusmon: Holy",
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode"
+  ],
+  "digivolves_to": [
+    "Jupitermon: Wrath Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the Olympos XII , it is a Digimon that rules over thunder and weather as the god that presides over the skies. It is always judging good and evil on the battlefield, and metes out divine punishment to those who choose evil. It makes the decisions dispassionately, wholly excluding any emotion from its judgments. It is said that if someone who continues to disagree with Jupitermon's judgment challenges Jupitermon and wins, the judgment will be overruled, but it said that none yet exist who could overturn it. If it exchanges blows with the opponent using the hammers in both of its hands, it is able to summon tiny thunder clouds. Its \" Mabolt \", which constructs an array of these thunder clouds, automatically looses thunderbolts at those it judges as evil or those who hinder its arbitration. Its \" Punish Judge \" engraves a seal on the bodies of the opponents struck by its hammers and bestows a reprieve to their punishments. If it decides to carry out the sentence, they are smote with the thunder of an immense electric current, and the punishment is executed. Its \" Wide Plasment \", which converts its body into extremely high-voltage plasma, is Jupitermon's greatest Special Move. It inflicts divine punishment all around Jupitermon, and all those who are touched by it are completely disintegrated."
+}

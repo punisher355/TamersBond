@@ -1,0 +1,48 @@
+{
+  "name": "Ouryumon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 12,
+    "SNC": 15,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Eiseiryūoujin",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires an attack from the swords in both hands."
+  },
+  "digivolves_from": [
+    "Brachimon",
+    "Cannonbeemon",
+    "Cargodramon",
+    "Crys Paledramon",
+    "Gerbemon",
+    "Grademon",
+    "Gyukimon",
+    "Lilamon",
+    "Mametyramon",
+    "Metal Fantomon",
+    "Oboromon",
+    "Skull Baluchimon",
+    "Tankdramon",
+    "Whamon Perfect",
+    "SkullBaluchimon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "Alphamon Ouryuken"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Ouryumon is an imaginary Digimon born from the \"Daydream of a Digicore \". It is a form that had even the Digicore's own creativity miraculously released through the Interface on its brow, and evolved. Possibly because it naturally possessed the ferocious combat data of the \"Dragons\" and \"Generals\" of Japanese myth within its Digicore, the form created by its Digicore is a \" Warrior Dragon \", clad in frightening, majestic Japanese armor and holding swords in both of its hands. The left-hand sword is the \" Gairyū Sadaijin \", and the right-hand sword is the \" Gairyū Udaijin \". The blades of the wings on its back are called the \" Gaiba Daimeijin \". Its Special Moves are firing from the swords in both hands ( Eiseiryūoujin ), and rampaging like the earthflow of a mighty river, cutting everything apart while charging ( Ougai ). There is a theory that this technique has its roots in Huanglongmon 's Special Move, \" Oukai \", although it isn't confirmed.",
+  "web_created": true
+}

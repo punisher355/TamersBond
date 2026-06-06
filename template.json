@@ -1,0 +1,288 @@
+{
+  "Actor": {
+    "types": ["tamer", "digimon"],
+    "templates": {
+      "base": {
+        "biography": ""
+      }
+    },
+    "tamer": {
+      "templates": ["base"],
+      "exp": {
+        "total": 1500,
+        "spent": 0
+      },
+      "crests": {
+        "courage":     { "rank": 1, "modifier": 0, "autoModifier": 0 },
+        "friendship":  { "rank": 1, "modifier": 0, "autoModifier": 0 },
+        "love":        { "rank": 1, "modifier": 0, "autoModifier": 0 },
+        "knowledge":   { "rank": 1, "modifier": 0, "autoModifier": 0 },
+        "sincerity":   { "rank": 1, "modifier": 0, "autoModifier": 0 },
+        "reliability": { "rank": 1, "modifier": 0, "autoModifier": 0 },
+        "hope":        { "rank": 1, "modifier": 0, "autoModifier": 0, "current": 0, "perTurn": 0 }
+      },
+      "skills": {
+        "courage": {
+          "blitz":    { "rank": 1 },
+          "ironclad": { "rank": 1 },
+          "crusher":  { "rank": 1 },
+          "ghost":    { "rank": 1 },
+          "roar":     { "rank": 1 }
+        },
+        "friendship": {
+          "scan":      { "rank": 1 },
+          "rally":     { "rank": 1 },
+          "broadcast": { "rank": 1 }
+        },
+        "love": {
+          "mend":  { "rank": 1 },
+          "radar": { "rank": 1 },
+          "tame":  { "rank": 1 }
+        },
+        "knowledge": {
+          "decode":   { "rank": 1 },
+          "jackIn":   { "rank": 1 },
+          "modify":   { "rank": 1 },
+          "trace":    { "rank": 1 },
+          "archive":  { "rank": 1 },
+          "command":  { "rank": 1 },
+          "playback": { "rank": 1 }
+        },
+        "sincerity": {
+          "firewall":  { "rank": 1 },
+          "reinforce": { "rank": 1 },
+          "coreDrive": { "rank": 1 }
+        },
+        "reliability": {
+          "zeroError": { "rank": 1 },
+          "fieldOps":  { "rank": 1 },
+          "recovery":  { "rank": 1 }
+        }
+      },
+      "hp": {
+        "value": 10,
+        "max": 10,
+        "temp": 0
+      },
+      "class": "",
+      "sheetColor": "#4a90d9",
+      "sheetBgColor": "#f0ece4",
+      "identity": {
+        "age": "",
+        "pronouns": "",
+        "primaryCrest": "",
+        "appearance": "",
+        "personality": "",
+        "background": "",
+        "want": "",
+        "fear": "",
+        "flaw": "",
+        "notes": ""
+      },
+      "currency": { "digidollars": 0, "realMoney": 0 },
+      "equipped": { "digivice": "", "clothing": "", "accessory": "" }
+    },
+    "digimon": {
+      "templates": ["base"],
+      "tamerLink": "",
+      "currentFormId": "",
+      "currentStage":    "rookie",
+      "defaultStage":    "rookie",
+      "maxDefaultStage": "rookie",
+      "attribute": "free",
+      "element":   "neutral",
+      "species":   "",
+      "nickname":  "",
+      "digivolutionLine": "",
+      "appearance":  "",
+      "personality": "",
+      "howWeMet":    "",
+      "notes":       "",
+      "sheetColor":   "#2ecc71",
+      "sheetBgColor": "#f0ece4",
+      "stats": {
+        "courage":     { "base": 0, "invested": 0, "conditional": 0 },
+        "friendship":  { "base": 0, "invested": 0, "conditional": 0 },
+        "love":        { "base": 0, "invested": 0, "conditional": 0 },
+        "knowledge":   { "base": 0, "invested": 0, "conditional": 0 },
+        "sincerity":   { "base": 0, "invested": 0, "conditional": 0 },
+        "reliability": { "base": 0, "invested": 0, "conditional": 0 }
+      },
+      "hp": {
+        "value": 10,
+        "max":   10,
+        "temp":  0
+      },
+      "downTrack": { "pips": 0 },
+      "corruption": {
+        "isCorrupted":      false,
+        "corruptForm":      "",
+        "corruptMoveAdded": false
+      },
+      "exp": {
+        "total": 1500,
+        "spent": 0
+      },
+      "skills": {
+        "courage": {
+          "blitz":    { "rank": 1 },
+          "ironclad": { "rank": 1 },
+          "crusher":  { "rank": 1 },
+          "ghost":    { "rank": 1 },
+          "roar":     { "rank": 1 }
+        },
+        "friendship": {
+          "scan":      { "rank": 1 },
+          "rally":     { "rank": 1 },
+          "broadcast": { "rank": 1 }
+        },
+        "love": {
+          "mend":  { "rank": 1 },
+          "radar": { "rank": 1 },
+          "tame":  { "rank": 1 }
+        },
+        "knowledge": {
+          "decode":   { "rank": 1 },
+          "jackIn":   { "rank": 1 },
+          "modify":   { "rank": 1 },
+          "trace":    { "rank": 1 },
+          "archive":  { "rank": 1 },
+          "command":  { "rank": 1 },
+          "playback": { "rank": 1 }
+        },
+        "sincerity": {
+          "firewall":  { "rank": 1 },
+          "reinforce": { "rank": 1 },
+          "coreDrive": { "rank": 1 }
+        },
+        "reliability": {
+          "zeroError": { "rank": 1 },
+          "fieldOps":  { "rank": 1 },
+          "recovery":  { "rank": 1 }
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": ["move", "classSkill", "gear", "attack", "status", "digimonForm"],
+    "templates": {},
+    "move": {
+      "element": "neutral",
+      "pr": 1,
+      "effect": "",
+      "tags": {
+        "melee":     false,
+        "range":     false, "rangeX":    4,
+        "pierce":    false,
+        "trueHit":   false,
+        "burst":     false, "burstX":    2,
+        "blast":     false, "blastX":    2,
+        "chain":     false, "chainX":    2, "chainY":   3,
+        "charge":    false,
+        "counter":   false,
+        "rush":      false,
+        "burn":      false, "burnX":     2, "burnY":    3,
+        "freeze":    false,
+        "paralyze":  false, "paralyzeX": 1,
+        "blind":     false,
+        "confuse":   false,
+        "drain":     false,
+        "push":      false,
+        "heal":      false,
+        "regen":     false, "regenX":    1
+      },
+      "minStage": "rookie",
+      "isSignature": false,
+      "isActive": false
+    },
+    "classSkill": {
+      "class": "",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "",
+      "description": "",
+      "automation": {
+        "trigger": "none",
+        "enabled": false,
+        "notes": ""
+      }
+    },
+    "attack": {
+      "actionType": "attack",
+      "element": "neutral",
+      "pr": 2,
+      "effect": "",
+      "tags": {
+        "melee":     false,
+        "range":     false, "rangeX":    4,
+        "pierce":    false,
+        "trueHit":   false,
+        "burst":     false, "burstX":    2,
+        "blast":     false, "blastX":    2,
+        "chain":     false, "chainX":    2, "chainY":   3,
+        "charge":    false,
+        "counter":   false,
+        "rush":      false,
+        "burn":      false, "burnX":     2, "burnY":    3,
+        "freeze":    false,
+        "paralyze":  false, "paralyzeX": 1,
+        "blind":     false,
+        "confuse":   false,
+        "drain":     false,
+        "push":      false,
+        "heal":      false,
+        "regen":     false, "regenX":    1
+      }
+    },
+    "status": {
+      "statusType": "custom",
+      "x": 0,
+      "y": 0,
+      "description": "",
+      "source": ""
+    },
+    "digimonForm": {
+      "stage": "rookie",
+      "attribute": "free",
+      "element": "neutral",
+      "archetype": "",
+      "size": "Medium",
+      "stats": {
+        "courage": 0,
+        "friendship": 0,
+        "love": 0,
+        "knowledge": 0,
+        "sincerity": 0,
+        "reliability": 0
+      },
+      "signatureMove": "",
+      "digivolves_from": [],
+      "digivolves_to": []
+    },
+    "gear": {
+      "itemType": "equipment",
+      "target": "both",
+      "timing": "basic-action",
+      "cost": { "digidollars": 0, "realMoney": 0, "special": "" },
+      "quantity": 1,
+      "effect": "",
+      "isEquipped": false,
+      "bonuses": {
+        "courage": 0, "friendship": 0, "love": 0,
+        "knowledge": 0, "sincerity": 0, "reliability": 0, "hope": 0,
+        "hpDamageReduction": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "skillBonuses": {
+          "blitz": 0, "ironclad": 0, "crusher": 0, "ghost": 0, "roar": 0,
+          "scan": 0, "rally": 0, "broadcast": 0,
+          "mend": 0, "radar": 0, "tame": 0,
+          "decode": 0, "jackIn": 0, "modify": 0, "trace": 0, "archive": 0, "command": 0, "playback": 0,
+          "firewall": 0, "reinforce": 0, "coreDrive": 0,
+          "zeroError": 0, "fieldOps": 0, "recovery": 0
+        }
+      },
+      "notes": ""
+    }
+  }
+}

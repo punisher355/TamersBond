@@ -1,0 +1,48 @@
+{
+  "name": "Black Rapidmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Golden Triangle",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Fires a beam from its whole body that disassembles the enemy's data."
+  },
+  "digivolves_from": [
+    "Black Galgomon",
+    "Centalmon",
+    "Dinohumon",
+    "Galgomon",
+    "Garurumon (Black)",
+    "Gorimon",
+    "Lynxmon",
+    "Prairiemon",
+    "Seadramon",
+    "Thunderballmon",
+    "Wendimon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Black Saint Galgomon",
+    "Justimon: Critical Arm",
+    "Metal Garurumon",
+    "Pile Volcamon",
+    "Saint Galgomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A black form of Rapidmon made for night combat after \" Black Digitron \" was mixed into its body. Despite falling, its speed allows it to move without making a sound. Its ability to capture enemies with its ear-shaped radar remains unchanged, and it specializes in fighting in the dark, and it can be said to be almost impossible to win against Black Rapidmon in night combat. Its Special Moves are rapid-firing homing missiles from its revolver and both of its arms ( Rapid Fire ), and firing a beam from its whole body that disassembles the enemy's data ( Golden Triangle ).",
+  "web_created": true
+}

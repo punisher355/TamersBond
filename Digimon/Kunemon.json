@@ -1,0 +1,61 @@
+{
+  "name": "Kunemon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Plant",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 3,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Electric Thread",
+    "element": "Electric",
+    "pr": 4,
+    "tags": "[RANGE 3] [PARALYZE 3]",
+    "description": "Spews an electrically-charged thread of silk from its hard beak"
+  },
+  "digivolves_from": [
+    "Koromon",
+    "Minomon",
+    "Mochimon",
+    "Pyocomon",
+    "Tanemon",
+    "Tokomon",
+    "Tunomon"
+  ],
+  "digivolves_to": [
+    "Airdramon",
+    "Bakemon",
+    "Centalmon",
+    "Dokugumon",
+    "Drimogemon",
+    "Flymon",
+    "Gokimon",
+    "Honeybeemon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Musyamon",
+    "Nanimon",
+    "Numemon",
+    "Orgemon",
+    "Raremon",
+    "Red Vegimon",
+    "Scumon",
+    "Shellmon",
+    "Snimon",
+    "Tyranomon",
+    "Vegimon",
+    "Yanmamon",
+    "Ogremon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Larva Digimon which has lightning patterns all over its body. As young insectoid Digimon are very unique beings among other Digimon, its evolved form is still unknown, but Kunemon's discovery implies that the existence of Insect Digimon other than Kabuterimon will likely be confirmed eventually. Although it is uncertain whether the lightning patterns on the body part considered to be its face can are organs equivalent to eyes, because they change shape in accordance with its emotions, it is said that they probably are indeed eyes. Its personality is fairly malicious. Its Special Move is an electrically-charged thread of silk spewed from its hard beak ( Electric Thread ). Those entangled in this thread will get knocked out by the intense electric shock."
+}

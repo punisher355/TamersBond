@@ -1,0 +1,35 @@
+{
+  "name": "Gyukimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 9,
+    "SNC": 9,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Yatsuka Senbaku",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Restrains the enemy with spider thread it spits from the mouth of its lower body, then spews toxic liquid."
+  },
+  "digivolves_from": [
+    "Dokugumon",
+    "Ginryumon"
+  ],
+  "digivolves_to": [
+    "Ouryumon",
+    "Zanbamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Beast Digimon with an ox-like upper body and a spider lower body. With a brutal and insidious personality, it is a monster that chases after those who see it for days, and launches surprise attacks from behind every night. Despite its large build, it skillfully uses its spider legs to move quietly without making a sound. The bells hanging from the tips of its horns emit a sound only when it attacks, so those who have seen Gyukimon will constantly be frightened by the sound of the bells. The dissonance produced by the bells deprives the opponent of their senses, making Gyukimon's attacks advantageous. Its Special Moves are restraining the enemy with spider thread that it spits out from the mouth of its lower body and then spewing a highly toxic liquid ( Yatsuka Senbaku ), and throwing the cylinders equipped to its abdomen to spread a poisonous gas ( Majin Byōtan ). Digimon that sense the approach of Gyukimon and run far away are reliably brought down with its \" Senhō Tsuchigumo \", the weapon on its left arm."
+}

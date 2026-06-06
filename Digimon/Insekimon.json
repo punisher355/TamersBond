@@ -1,0 +1,58 @@
+{
+  "name": "Insekimon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Cosmo Flash",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "123Emits a mysterious, cosmic energy wave.Shoots energy balls that send what they hit to another dimension.Opens a hole in space, then releases a meteor shower of cosmic energy from it."
+  },
+  "digivolves_from": [
+    "Ankylomon",
+    "Bomber Nanimon",
+    "Centalmon",
+    "Depthmon",
+    "Drimogemon",
+    "Golemon",
+    "Hookmon",
+    "Icemon",
+    "Jungle Mojyamon",
+    "Leomon",
+    "Nanimon",
+    "Nefertimon",
+    "Nise Drimogemon",
+    "Pidmon",
+    "Tuchidarumon",
+    "Yukidarumon"
+  ],
+  "digivolves_to": [
+    "Ancient Volcamon",
+    "Baihumon",
+    "Bancho Golemon",
+    "Belphemon: Sleep Mode",
+    "Boltmon",
+    "Cherubimon (Virtue)",
+    "Dianamon",
+    "EBEmon",
+    "Metal Etemon",
+    "Metal Garurumon",
+    "Ornismon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A form of Gottsumon which for some reason had the meteorite data within the ore data it possesses appear on its surface. It is made from a hard material which only exists in space, and possesses powerful defensive ability. Its Special Move is emitting a mysterious, cosmic energy wave ( Cosmo Flash )."
+}

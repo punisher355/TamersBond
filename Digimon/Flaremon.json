@@ -1,0 +1,52 @@
+{
+  "name": "Flaremon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 8,
+    "KNW": 9,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Gurenjūouha",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Concentrates flames and a lion's spirit in its fist and fires them as a lion-shaped energy wave."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "Firamon",
+    "Geo Greymon",
+    "Greymon",
+    "Lavorvomon",
+    "Leomon",
+    "Lynxmon",
+    "Meramon",
+    "Pidmon"
+  ],
+  "digivolves_to": [
+    "Ancient Volcamon",
+    "Apollomon",
+    "Black War Greymon",
+    "Dukemon",
+    "Heavy Leomon",
+    "Marsmon",
+    "Mirage Gaogamon",
+    "Rosemon",
+    "Saber Leomon",
+    "Seraphimon",
+    "Victory Greymon",
+    "War Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Although its regal mane and imposing manner may be intimidating at first glance, this strong-willed Beast Man Digimon will brave any hardship for the sake of its comrades. Its Special Moves are concentrating flames and the spirit of a lion into its fist, and firing it as an energy wave in the shape of a lion ( Gurenjūouha ), as well as dishing out a mad flurry of grappling moves using its blazing punches and kicks to strike the enemy repeatedly ( Kurenai Shishi no Mai ). Not only that, it is able to unleash from its mouth together with a roar a purifying shockwave that burns everything down, disintegrating the enemy's data ( Seisei no Houkou )."
+}

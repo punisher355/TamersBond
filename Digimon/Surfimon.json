@@ -1,0 +1,32 @@
+{
+  "name": "Surfimon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 11,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Crescemon",
+    "Shawujinmon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Although it is an Aquatic-species Digimon, it is a Digimon that has been improved so that it can move quickly, even out of water. Its pride is high and it has a lone wolf personality that hates schooling like fish. Its Special Moves are rotating the spikes growing over its body like that of a chainsaw to attack and defend simultaneously ( Barrier Blade ), and accelerating to the speed of light and charging with the \" Dash Slider \" hoverboard it projects from the third eye on its head ( Lightning Cutter )."
+}

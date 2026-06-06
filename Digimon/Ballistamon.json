@@ -1,0 +1,34 @@
+{
+  "name": "Ballistamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Horn Breaker",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Heroically uses its horn to fling the opponent."
+  },
+  "digivolves_from": [
+    "Hagurumon"
+  ],
+  "digivolves_to": [
+    "Atlur Ballistamon",
+    "Locomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A heavyweight Digimon that possesses bulky metallic armor and overwhelming power. It appears warlike at first glance, but because of its gentle personality, preferring harmony to conflict, it will never attack first. However, if it gets into a fight, it becomes a powerful and matchless fighter that swings its stout arms and wipes out the opponent. With its heavy armor and great power, its potential for both offense and defense is great, and it specializes in one-hit knockout attacks that capitalize on its power, which is such that any of its strikes that manage to connect will leave a huge dent. However, its overly heavy body can be its ruin, not to mention its lack of nimbleness, so it has difficulty fighting fast-moving opponents. Its \" Heavy Speaker \", which emits a low tone from the speaker in its belly and shatters the opponent, conceals the power to smash rocks and shake mountains, and the level of that power rises when it gets hungry. Also, the horn on its head, which is indispensable in close-combat, is Ballistamon's pride, and it hates for it to be carelessly touched. Its \" Horn Breaker \", in which it heroically uses this horn to fling the opponent, is Ballistamon's Signature Move. Also, Ballistamon is able to lend its heavy armor and power to another Digimon by changing into its \" Enhanced-armor Mode \"."
+}

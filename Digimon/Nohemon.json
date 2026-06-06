@@ -1,0 +1,38 @@
+{
+  "name": "Nohemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Derision Crow",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Causes the opponent to completely lose their fighting spirit using its derisive way with words and laughter."
+  },
+  "digivolves_from": [
+    "Falcomon",
+    "Gottsumon",
+    "Kudamon",
+    "Swimmon"
+  ],
+  "digivolves_to": [
+    "Andiramon",
+    "Jyagamon",
+    "Yatagaramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Puppet Digimon that evolved through the power of the \" Digimental of Purity \". It is a Digimon that has a scarecrow-like appearance, but in actuality, the crow on its right arm is its true form. The crow skillfully manipulates the scarecrow with its psychic abilities, bewildering the enemy. Since its true form is a cunning crow, telling lies and exaggerated things is its specialty, but it is also an expert archer who never misses. Its Special Move is the crow, its true form, causing the opponent to completely lose their fighting spirit using its derisive way with words and laughter ( Derision Crow ).",
+  "web_created": true
+}

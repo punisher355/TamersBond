@@ -1,0 +1,46 @@
+{
+  "name": "Dinorexmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 11,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Ogre Flame",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires super-high temperature shells in a semi-liquid state similar to magma from its mouth."
+  },
+  "digivolves_from": [
+    "Gogmamon",
+    "Hisyaryumon",
+    "Kaiser Leomon",
+    "Mametyramon",
+    "Megadramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Fantomon",
+    "Metal Greymon",
+    "Skull Baluchimon",
+    "Triceramon",
+    "Vulturemon",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [
+    "Huanglongmon",
+    "Omnimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "This carnivorous Dinosaur Digimon is named the \" King of Terror \" due to the strength it possesses far in excess of other Dinosaur Digimon, as well as the unparalleled ferocious nature it displays in battle. It seizes the opponent with its talons, which are almost half as long as its body, then snaps and brandishes its gigantic jaws at them to end their life. Its exceedingly brutal behaviour gives it a battle style that flourishes in a world where only the fittest survive, and is probably the reason it is called the \"King\". Also, partly due to it fighting with other Dinorexmon, it is said that their population is very small. Its Special Moves are seizing and killing the opponent with its talons ( Splatter Hunting ), and firing extremely high-temperature grenades, with a semi-fluid form similar to magma, from its mouth ( Ogre Flame ). Even if these extremely high-temperature grenades don't hit the opponent, they nevertheless raze the surrounding area the moment they land."
+}

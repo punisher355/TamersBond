@@ -1,0 +1,45 @@
+{
+  "name": "Shurimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Momiji Oroshi",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Spins the shurikens at the tips of its extendable limbs to attack the enemy."
+  },
+  "digivolves_from": [
+    "Goburimon",
+    "Kotemon",
+    "Plotmon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Dinobeemon",
+    "Doumon",
+    "Garudamon",
+    "Karatenmon",
+    "Knightmon",
+    "Kyukimon",
+    "Lilimon",
+    "Magnamon",
+    "Mummymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mutation Digimon that evolved through the power of the \" Digimental of Purity \". The \"Digimental of Purity\" has the attribute of \"Plant\", and those that don this Digimental have the ability to blend in with nature, conceal themselves within the wind like leaves fluttering, and land precise attacks by emerging from the enemy's blind spots. It can be said that its appearance is definitely that of a ninja. Its Signature Move is spinning the shurikens at the tips of its extendable limbs to attack the enemy ( Momiji Oroshi ). Its Special Move is throwing the big shuriken on its back at the opponent from high in the air ( Kusanagi ). (\" Kusanagi \" and \" Momiji Oroshi \" are also the names of its shuriken.)",
+  "web_created": true
+}

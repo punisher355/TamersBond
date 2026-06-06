@@ -1,0 +1,36 @@
+{
+  "name": "Sepikmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 7,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Spirit Boomerang",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "A cursed weapon that contains the spirits of the dead. It makes sport of the enemy with its ever-changing trajectory."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Floramon",
+    "Shamamon"
+  ],
+  "digivolves_to": [
+    "Vademon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Demon Man Digimon that evolved through the power of the \" Digimental of Friendship \". Due to the power of its strange mask, it is able to speak with the spirits of the dead. It usually lurks in the depths of the Digital World 's jungles, and rarely ever appears before others. According to one theory, it is said that Sepikmon never leaves the jungle because the spirits of the dead are its only friends, and that it has no living ones. While in the Digital World's jungles, should you hear voices speaking as though in conversation despite no one being around, it would be best to leave without doing anything. Otherwise, you might end up being made into one of Sepikmon's friends. Its Special Move is a cursed weapon within which the spirits of the dead are sealed ( Spirit Boomerang ). It makes sport of the enemy with its ever-changing trajectory.",
+  "web_created": true
+}

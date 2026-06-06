@@ -1,0 +1,51 @@
+{
+  "name": "Hyougamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Snow Punch",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Dishes out a cold-packed punch."
+  },
+  "digivolves_from": [
+    "Bearmon",
+    "Blucomon",
+    "Clear Agumon",
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gomamon",
+    "Lunamon",
+    "Muchomon",
+    "Snow Goburimon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Black Megalo Growmon",
+    "Blue Meramon",
+    "Crys Paledramon",
+    "Fantomon",
+    "Frozomon",
+    "Gigadramon",
+    "Panjyamon",
+    "Vamdemon",
+    "Waru Monzaemon",
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A species of Orgemon that inhabits cold places. It is very territorial, and will attack in rage the moment anyone takes even a step into its territory (apparently, there are times when it gets into territorial disputes with Mojyamon ). Its Special Move is dishing out a cold-packed punch ( Snow Punch )."
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Pinochimon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Bullet Hammer",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Packs gunpowder into its revolver-style hammer, and strikes with itor shoots bullets from it."
+  },
+  "digivolves_from": [
+    "Catch Mamemon",
+    "Delumon",
+    "Digitamamon",
+    "Ex-Tyranomon",
+    "Jyureimon",
+    "Lilamon",
+    "Lilimon",
+    "Mamemon",
+    "Pumpmon",
+    "Shawujinmon",
+    "Skull Greymon",
+    "Tekkamon",
+    "Waru Monzaemon"
+  ],
+  "digivolves_to": [
+    "Apocalymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Built from the body of a cursed Jyureimon , it is an Ultimate Puppet Digimon. It is thought that it was probably a single fiendish hacker that constructed Pinochimon from Jyureimon's data. It has an appearance like a marionette , but it can move under its own volition. Its personality is detestable, as it tells fibs, and when a computer presents false information, it is the work of Pinochimon. Its Special Move is packing gunpowder into its revolver-style hammer, then striking with its strongest technique ( Bullet Hammer ). If one suffers this attack, they will probably vanish without a trace, not just from the hammer's blow but also from the explosion of the gunpowder."
+}

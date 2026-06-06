@@ -1,0 +1,33 @@
+{
+  "name": "Voltobautamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Palazzi Valzer",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Uses magic to make copies of the \"Spiedini\" swords its carries on its waist and sends them flying from every direction."
+  },
+  "digivolves_from": [
+    "Archnemon",
+    "Marin Devimon",
+    "Vamdemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The vilest, most wicked Digimon rooted in pure evil, it was formed when the \" Grudgeful Hand \"—born from the malice data that fills the Dark Area —forced Piemon to absorb Vamdemon . It has neither Piemon's nor Vamdemon's sense of self, and acts according to the Grudgeful Hand's will. Its intention is to eradicate light so that it can corrode the world with darkness. Its Special Move is using magic to make copies of the \" Spiedini \" swords it carries on its waist and sending them flying ( Palazzi Valzer ). It takes pleasure in slowly torturing the enemy and watching them writhe in agony, and finally ends their life by sending them flying from all directions simultaneously as its grand finale. Also, it has \" Quarzione \", in which the bullets fired from its two \" Ala di Pollo \" guns lodge themselves inside the enemy's body, attacking and annihilating them from within."
+}

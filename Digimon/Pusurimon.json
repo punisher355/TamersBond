@@ -1,0 +1,33 @@
+{
+  "name": "Pusurimon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Curls itself into a ball and does a jump-tackle while spinning."
+  },
+  "digivolves_from": [
+    "Pusumon"
+  ],
+  "digivolves_to": [
+    "Herissmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A quadrupedal Lesser Digimon with yellow spines growing from its back. It is always running around energetically, though it will sometimes appear to stop in its tracks when in reality it has just fallen asleep on the spot. Its Signature Move is causing the fur covering its body to stand and harden, then curling itself into a ball and doing a jump-tackle while spinning ( Chikuchiku Rolling )."
+}

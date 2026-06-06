@@ -1,0 +1,43 @@
+{
+  "name": "Digmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Gold Rush",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Rapidly spins the drills on its snout and both of its hands, performing a simultaneous attack with its drills."
+  },
+  "digivolves_from": [
+    "Sunarizamon",
+    "Tentomon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Giromon",
+    "Holy Angemon",
+    "Jyagamon",
+    "Magnamon",
+    "Mummymon",
+    "Paildramon",
+    "Scorpiomon",
+    "Volcamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Armor-level Insect Digimon which evolved through the power of the \" Digimental of Knowledge \". The \"Digimental of Knowledge\" has the attribute of \"Earth\", and those that don this Digimental wield the power to manipulate the earth. As can be seen from its unique form, it never loses to any Digimon in underground battles. Its Signature Move is impacting the ground with its spinning drills, causing a fissure ( Big Crack ). Its Special Move is rapidly spinning the drills on its snout and both of its hands, performing a simultaneous attack with its drills ( Gold Rush )."
+}

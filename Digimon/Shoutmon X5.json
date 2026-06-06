@@ -1,0 +1,35 @@
+{
+  "name": "Shoutmon X5",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Meteor Buster Attack",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Runs up to the stratosphere, then becomes a meteorite and rams into the opponent, carving out a giant crater in not just the opponent, but also in the land around them for several hundred meters."
+  },
+  "digivolves_from": [
+    "Shoutmon X3",
+    "Deckerdramon"
+  ],
+  "digivolves_to": [
+    "Ancient Garurumon",
+    "Shoutmon X5B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The \" Finalist Mode \", born when the hearts of five Digimon came together. It is a form of the \" Victory Mode \", who primarily specializes in ground battles, that obtained the power of flight as the ultimate power-up. Its \" Meteor Buster Attack \", in which it runs up to the stratosphere , then becomes a meteorite and rams into the opponent, carves out a giant crater in not just the opponent, but also in the land around them for several hundred meters. Also, its \" Meteor Impact \", in which it concentrates all of its energy into its arm, then releases it as it rams into the opponent from close range, is a Special Move that reliably brings down the opponent.",
+  "web_created": true
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Metamormon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Neo Devimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon with the terrifying ability to copy the abilities of the opponents that it battles and transform into said monsters. After transformation, the opponent's abilities and original strength are added to its own, so it will always be stronger than they are! It pulverizes the opponent with its Special Move \" Transceirave \". Virus. Ultimate. Digimon Adventure V-Tamer 01 ⇨ English 戦った相手の能力をコピーし、そのモンスターに変身できる恐るべき能力を持つデジモン。変身後は相手の能力＋本来の強さが加わるため、相手よりも必ず強くなる！必殺技「 トランシーレイヴ 」で相手を粉砕する。Vi種。究極体。 デジモンアドベンチャーＶテイマー０１ ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "El Doradimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Jyureimon",
+    "Piccolomon",
+    "Shawujinmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Mutation Digimon that once wandered into the research data for ancient ruins on a neglected computer, and over a long period time unified with that data. Once its head, arms, and legs are retracted, it looks indistinguishable from the ruins of an ancient fortress. The enormous quantity of research data it holds has turned it into a slow-witted Digimon with a large build; nevertheless, bringing it down is likely a difficult task, even if it is attacked by scores of Digimon. It is the very definition of an impregnable Digimon. Its Special Moves are charging the opponent with its large body and breaking through, even while under attack ( Golden Road ), and striking with its gigantic foot, shaking the earth ( Meteor Earthquake ). Also, it can bite through the opponent with the power of its mighty jaws ( Giant Nipper )."
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Indaramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Adhomukha",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Blows into its trumpet shell to generate destructive ultrasonic waves or blast enemies with the attacks the shell has absorbed."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Ice Devimon",
+    "Ogremon",
+    "Orgemon",
+    "Pegasmon",
+    "Sagittarimon",
+    "Soulmon",
+    "Unimon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Belial Vamdemon",
+    "Kuzuhamon: Miko Mode",
+    "Murmukusmon",
+    "Parasimon",
+    "Zhuqiaomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Horse . As a follower of the Four Holy Beasts Digimon Zhuqiaomon , it has an intolerably arrogant personality. When it opens its mouth only bragging comes out, and it is constantly fussing over the glossiness of its mane and tail. It indulges in its talents, and ridicules those who work hard. Among the Deva, it is on especially bad terms with Vajramon . Though it fusses over its appearance, in battle it is comparatively unrefined; using the gigantic Bǎo Bèi trumpet shell tied to its arms, it beats the opponent down by wielding it like a cudgel. Its Special Move is blowing the Bǎo Bèi using its tremendous lung capacity, generating ultrasonic waves ( Adhomukha )."
+}

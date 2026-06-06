@@ -1,0 +1,557 @@
+<form class="{{cssClass}} flexcol" autocomplete="off"
+      style="--tamer-accent: {{system.sheetColor}}; --tamer-bg: {{system.sheetBgColor}}">
+
+  {{!-- Header --}}
+  <header class="sheet-header flexcol">
+    <input class="charname" name="name" type="text" value="{{actor.name}}" placeholder="Tamer Name" />
+    <div class="header-panels flexrow">
+
+      {{!-- Portrait --}}
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+
+      {{!-- HP --}}
+      <div class="header-panel flexcol">
+        <span class="header-panel-label">HP</span>
+        <div class="hp-main-row flexrow">
+          <input type="number" class="hp-value-input" name="system.hp.value" value="{{system.hp.value}}" />
+          <span class="hp-sep">/</span>
+          <span class="hp-max-display">{{system.hp.max}}</span>
+        </div>
+        <div class="hp-temp-row flexrow">
+          <span class="hp-temp-label">Temp</span>
+          <input type="number" class="hp-temp-input" name="system.hp.temp" value="{{system.hp.temp}}" />
+        </div>
+      </div>
+
+      {{!-- Hope --}}
+      <div class="header-panel flexcol">
+        <span class="header-panel-label" style="color: {{hope.color}}">Hope</span>
+        <div class="hope-current-row flexrow">
+          <input type="number" class="hope-current-input" name="system.crests.hope.current"
+                 value="{{hope.current}}" style="color: {{hope.color}}" />
+          <span class="hope-sep">/</span>
+          <span class="hope-max-display">{{hope.max}}</span>
+        </div>
+        <div class="hope-perturn-row flexrow">
+          <span class="hope-pt-label">Per Turn</span>
+          <input type="number" class="hope-pt-input" name="system.crests.hope.perTurn"
+                 value="{{hope.perTurn}}" />
+        </div>
+      </div>
+
+      {{!-- EXP --}}
+      <div class="header-panel flexcol">
+        <span class="header-panel-label">EXP</span>
+        <div class="exp-line flexrow">
+          <span class="exp-line-label">Total</span>
+          <input type="number" name="system.exp.total" value="{{system.exp.total}}" />
+        </div>
+        <div class="exp-line flexrow">
+          <span class="exp-line-label">Spent</span>
+          <span class="exp-line-value">{{system.exp.spent}}</span>
+        </div>
+        <div class="exp-line flexrow">
+          <span class="exp-line-label">Avail</span>
+          <span class="exp-line-value exp-available">{{system.exp.available}}</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  {{!-- Tabs --}}
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="crests">Crests</a>
+    <a class="item" data-tab="skills">Skills</a>
+    <a class="item" data-tab="classes">Classes</a>
+    <a class="item" data-tab="combat">Combat</a>
+    <a class="item" data-tab="items">Items</a>
+    <a class="item" data-tab="status">Status</a>
+    <a class="item" data-tab="bio">Biography</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    {{!-- Crests tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="crests">
+      <h3 class="section-header">Crest Stats</h3>
+      <div class="crests-grid">
+
+        {{#each crestList}}
+        <div class="crest-block" style="border-top: 3px solid {{this.color}}">
+          {{!-- Image sits as background behind all content --}}
+          <img class="crest-img" src="{{this.img}}" alt="{{this.label}}" />
+
+          {{!-- All text/controls sit on top of the image --}}
+          <div class="crest-content">
+            <label class="crest-name" style="color: {{this.color}}">{{this.label}}</label>
+
+            <div class="crest-rank-row flexrow">
+              <button type="button" class="stat-decrease rank-btn"
+                      data-stat="{{this.key}}"
+                      {{#unless this.canDowngrade}}disabled{{/unless}}>−</button>
+              <span class="crest-rank-value">{{this.rank}}</span>
+              <button type="button" class="stat-increase rank-btn"
+                      data-stat="{{this.key}}"
+                      {{#unless this.canUpgrade}}disabled{{/unless}}>+</button>
+            </div>
+
+            <span class="crest-arrow">→ {{this.digimonStat}}</span>
+
+            <div class="crest-modifiers">
+              <div class="crest-mod-row flexrow">
+                <span class="crest-mod-label">Manual</span>
+                <input type="number" class="crest-mod-input"
+                       name="system.crests.{{this.key}}.modifier"
+                       value="{{this.modifier}}" />
+              </div>
+              <div class="crest-mod-row flexrow">
+                <span class="crest-mod-label">Buffs</span>
+                <span class="crest-mod-auto">{{this.autoModifier}}</span>
+              </div>
+              {{#if this.showEffective}}
+              <div class="crest-mod-row crest-effective-row flexrow">
+                <span class="crest-mod-label">Total</span>
+                <span class="crest-effective-value">{{this.effective}}</span>
+              </div>
+              {{/if}}
+            </div>
+
+            {{#if this.upgradeCost}}
+            <span class="crest-cost">Next: {{this.upgradeCost}} EXP</span>
+            {{else}}
+            <span class="crest-cost crest-maxed">MAX</span>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+
+        {{!-- Hope — derived: highest crest rank × 5, read-only pool --}}
+        <div class="crest-block hope-block" style="border-top: 3px solid {{hope.color}}">
+          <img class="crest-img" src="{{hope.img}}" alt="Hope" />
+          <div class="crest-content">
+            <label class="crest-name" style="color: {{hope.color}}">Hope</label>
+            <div class="crest-rank-row flexrow">
+              <span class="crest-rank-value hope-pool" style="color: {{hope.color}}">{{hope.max}}</span>
+            </div>
+            <span class="crest-arrow">→ Digivolution pool</span>
+            <span class="crest-cost">Rank {{hope.rank}} × 5</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {{!-- Skills tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="skills">
+      {{#each skillGroups}}
+      <div class="skill-group">
+        <div class="skill-group-header flexrow"
+             style="border-left-color: {{this.statColor}}">
+          <span class="skill-stat-name" style="color: {{this.statColor}}">{{this.statLabel}}</span>
+          <span class="skill-stat-rank">Rank {{this.statRank}}</span>
+        </div>
+        {{#each this.skills}}
+        <div class="skill-row flexrow{{#if this.isPrestige}} skill-prestige{{/if}}{{#if this.atCap}} skill-at-cap{{/if}}">
+          <span class="skill-name"
+                data-tip-title="{{this.label}}"
+                data-tip-desc="{{this.description}}"
+                data-tip-example="{{this.example}}">{{this.label}}</span>
+          <span class="skill-formula">{{this.rollFormula}}</span>
+          <div class="skill-rank-controls flexrow">
+            <button type="button" class="skill-decrease rank-btn"
+                    data-stat="{{../statKey}}" data-skill="{{this.key}}"
+                    {{#unless this.canDowngrade}}disabled{{/unless}}>−</button>
+            <span class="skill-rank{{#if this.isPrestige}} skill-rank-prestige{{/if}}">{{this.rank}}</span>
+            <button type="button" class="skill-increase rank-btn"
+                    data-stat="{{../statKey}}" data-skill="{{this.key}}"
+                    {{#unless this.canUpgrade}}disabled{{/unless}}>+</button>
+          </div>
+          {{#if this.upgradeCost}}
+          <span class="skill-cost">{{this.upgradeCost}}</span>
+          {{else}}
+          <span class="skill-cost skill-maxed">MAX</span>
+          {{/if}}
+          <button type="button" class="skill-roll-btn"
+                  data-stat="{{../statKey}}"
+                  data-skill="{{this.key}}"
+                  data-label="{{this.label}}"
+                  title="Roll {{this.rollFormula}}">
+            <i class="fas fa-dice-d6"></i>
+          </button>
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+    </div>
+
+    {{!-- Classes tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="classes">
+      <h3 class="section-header">Class Abilities
+        <span class="stage-cap-note">EXP comes from the same pool as stats and skills</span>
+      </h3>
+
+      {{#if classItems.length}}
+      <div class="class-items-list">
+        {{#each classItems}}
+        <div class="class-item-card dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <div class="class-item-header flexrow">
+            <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+            <span class="class-item-name class-item-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            <span class="tag class-item-tree">{{this.system.class}}</span>
+            <span class="tag class-item-row-tag">Row {{this.system.row}}</span>
+            <span class="class-item-cost">{{this.system.expCost}} EXP</span>
+            <button type="button" class="class-item-to-chat" data-item-id="{{this.id}}" title="Post to chat">
+              <i class="fas fa-comment"></i>
+            </button>
+            <button type="button" class="class-item-delete" data-item-id="{{this.id}}" title="Remove ability">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+          {{#if this.system.requirements}}
+          <p class="class-item-req"><em>Req: {{this.system.requirements}}</em></p>
+          {{/if}}
+          <p class="class-item-desc">{{this.system.description}}</p>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="placeholder-text">No class abilities yet. Drag abilities from the <strong>Tamer Classes</strong> compendium pack to add them.</p>
+      {{/if}}
+
+    </div>
+
+    {{!-- Combat tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="combat">
+      {{#if moves.length}}
+      <h3 class="section-header">Moves</h3>
+      <p class="hint">Drag Move items from the sidebar to add.</p>
+      <div class="moves-list" style="margin-top:6px;">
+        {{#each moves}}
+        <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name move-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+            {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          <div class="move-row-actions">
+            <button type="button" class="tamer-move-roll move-action-btn" data-item-id="{{this.id}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+            <button type="button" class="tamer-move-to-chat move-action-btn" data-item-id="{{this.id}}" title="Post to chat">
+              <i class="fas fa-comment"></i>
+            </button>
+            <button type="button" class="tamer-move-delete move-action-btn" data-item-id="{{this.id}}" title="Remove">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+      <h3 class="section-header">Actions</h3>
+      <p class="hint">Click a name to open and edit. Click <i class="fas fa-dice-d20"></i> to roll. Drag Attack or Move items from the sidebar to add them.</p>
+      {{#if attacks.length}}
+      <div class="moves-list" style="margin-top:6px;">
+        {{#each attacks}}
+        <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name attack-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+            {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
+          </div>
+          {{#if (eq this.system.actionType "attack")}}
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          {{/if}}
+          {{#if (eq this.system.actionType "utility")}}
+          <span class="tag" style="background:#888;">FREE</span>
+          {{/if}}
+          {{#if (eq this.system.actionType "grapple")}}
+          <span class="tag" style="background:#a06030;">GRAPPLE</span>
+          {{/if}}
+          <div class="move-row-actions">
+            <button type="button" class="attack-roll move-action-btn" data-item-id="{{this.id}}" title="Use / Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+            <button type="button" class="attack-delete move-action-btn" data-item-id="{{this.id}}" title="Remove">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No actions yet. Drag Attack items here to add them.</p>
+      {{/if}}
+    </div>
+
+    {{!-- Items tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="items">
+
+      <h3 class="section-header">Currency</h3>
+      <div class="currency-panel flexrow">
+        <div class="currency-field flexcol">
+          <label>DigiDollars (DD)</label>
+          <input type="number" name="system.currency.digidollars" value="{{system.currency.digidollars}}" />
+        </div>
+        <div class="currency-field flexcol">
+          <label>Real World Money</label>
+          <input type="number" name="system.currency.realMoney" value="{{system.currency.realMoney}}" />
+        </div>
+      </div>
+
+      <h3 class="section-header" style="margin-top:10px;">Equipment Slots
+        <span class="stage-cap-note">One item per slot · drag from the Season 1 Items compendium</span>
+      </h3>
+      {{#each gearSlots}}
+      <div class="gear-slot-block">
+        <div class="gear-slot-header flexrow">
+          <span class="gear-slot-label">{{this.label}}</span>
+          {{#if this.equipped}}
+          <img src="{{this.equipped.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="gear-equipped-name gear-open dd-item-row" data-item-id="{{this.equipped.id}}" draggable="true" style="cursor:grab;" title="Drag to Items sidebar to save · click to open">{{this.equipped.name}}</span>
+          <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.equipped.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
+          <button type="button" class="gear-unequip gear-action-btn" data-item-id="{{this.equipped.id}}" title="Unequip"><i class="fas fa-minus-circle"></i></button>
+          {{else}}
+          <span class="gear-slot-empty">— empty —</span>
+          {{/if}}
+        </div>
+        {{#each this.all}}
+        {{#unless this.system.isEquipped}}
+        <div class="gear-item-row flexrow gear-unequipped dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+          <button type="button" class="gear-equip gear-action-btn" data-item-id="{{this.id}}" title="Equip"><i class="fas fa-shield-alt"></i></button>
+          <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
+          <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
+        </div>
+        {{/unless}}
+        {{/each}}
+      </div>
+      {{/each}}
+
+      {{#if equipmentItems.length}}
+      <h3 class="section-header" style="margin-top:10px;">Equipment</h3>
+      <div class="gear-items-list">
+        {{#each equipmentItems}}
+        <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+          <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
+          <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#if supplyItems.length}}
+      <h3 class="section-header" style="margin-top:10px;">Supplies</h3>
+      <div class="gear-items-list">
+        {{#each supplyItems}}
+        <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+          <span class="gear-quantity">×{{this.system.quantity}}</span>
+          <button type="button" class="gear-use gear-action-btn" data-item-id="{{this.id}}" title="Use one"><i class="fas fa-hand-pointer"></i></button>
+          <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
+          <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#if foodItems.length}}
+      <h3 class="section-header" style="margin-top:10px;">Food</h3>
+      <div class="gear-items-list">
+        {{#each foodItems}}
+        <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+          <span class="gear-quantity">×{{this.system.quantity}}</span>
+          <button type="button" class="gear-use gear-action-btn" data-item-id="{{this.id}}" title="Eat one"><i class="fas fa-utensils"></i></button>
+          <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
+          <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#unless equipmentItems.length}}
+      {{#unless supplyItems.length}}
+      {{#unless foodItems.length}}
+      <p class="placeholder-text" style="margin-top:8px;">No carried items yet. Drag from the <strong>Season 1 Items</strong> compendium.</p>
+      {{/unless}}{{/unless}}{{/unless}}
+
+    </div>
+
+    {{!-- Status tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="status">
+      <h3 class="section-header">Active Conditions</h3>
+      <div class="status-add-row flexrow">
+        <select class="status-type-picker">{{selectOptions statusTypeOptions}}</select>
+        <button type="button" class="status-add-btn">+ Add Condition</button>
+      </div>
+
+      {{#if statusItems.length}}
+      <div class="status-active-list">
+        {{#each statusItems}}
+        <div class="status-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="status-type-badge" style="background:{{this.color}}"><i class="{{this.icon}}"></i></span>
+          <span class="status-item-name">{{this.name}}</span>
+          {{#if this.system.source}}<span class="status-source">from {{this.system.source}}</span>{{/if}}
+          {{#if this.hasX}}
+          <span class="status-adjust-group">
+            <span class="status-adjust-label">{{this.xLabel}}</span>
+            <button type="button" class="status-x-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <span class="status-adjust-val">{{this.system.x}}</span>
+            <button type="button" class="status-x-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </span>
+          {{/if}}
+          {{#if this.hasY}}
+          <span class="status-adjust-group">
+            <span class="status-adjust-label">{{this.yLabel}}</span>
+            <button type="button" class="status-y-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <span class="status-adjust-val">{{this.system.y}}</span>
+            <button type="button" class="status-y-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </span>
+          {{/if}}
+          <button type="button" class="status-remove move-action-btn" data-item-id="{{this.id}}" title="Remove condition"><i class="fas fa-times"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No active conditions.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top: 12px">Condition Reference</h3>
+      <div class="status-conditions">
+        <div class="status-row">
+          <span class="status-name">BURN X,Y</span>
+          <span class="status-desc">Take X damage at start of turn. Lasts Y ticks. Stacks: take higher X, add Y counters.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">FREEZE</span>
+          <span class="status-desc">Cannot act. End of turn: roll 1d20 + Love, DN 14 to break. Also breaks on any damage.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">PARALYZE X</span>
+          <span class="status-desc">Speed halved. 1–3 stacks: choose Basic OR Move, not both. 4+ stacks: no actions. Lose 1 stack per turn. Nat 20 clears all stacks.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">BLIND</span>
+          <span class="status-desc">−4 to all attack hit rolls for the duration.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">CONFUSE</span>
+          <span class="status-desc">Start of turn: roll 1d20 + Friendship, DN 14 to snap out. Fail: must attack the nearest ally.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">DRAIN</span>
+          <span class="status-desc">On hit, attacker regains HP equal to half damage dealt (min 1).</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">PUSH</span>
+          <span class="status-desc">On hit, target pushed away. Spaces = attacker Courage − defender Courage (min 1).</span>
+        </div>
+      </div>
+
+      <h3 class="section-header" style="margin-top: 12px">Resting</h3>
+      <div class="combat-reference">
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Short Rest</span>
+          <span class="combat-ref-value">15–30 min. Recovery check — both Tamer and Digimon restore HP equal to roll. No Hope restored.</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Long Rest</span>
+          <span class="combat-ref-value">8–10 hours. Full HP and Hope restored. Digimon Default Stage +1 (up to max). Learned moves can be rearranged.</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Hunger</span>
+          <span class="combat-ref-value">Miss 1 meal: Hope pool halved. Miss 2: quartered. Miss 3: one-eighth.</span>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Bio tab --}}
+    <div class="tab flexcol bio-tab" data-group="primary" data-tab="bio">
+
+      <div class="bio-section">
+        <h4 class="bio-section-title">The Basics</h4>
+        <div class="bio-row">
+          <div class="bio-field bio-field-sm">
+            <label>Age</label>
+            <input type="text" name="system.identity.age" value="{{system.identity.age}}" placeholder="How old are you?" />
+          </div>
+          <div class="bio-field bio-field-sm">
+            <label>Pronouns</label>
+            <input type="text" name="system.identity.pronouns" value="{{system.identity.pronouns}}" placeholder="they/them" />
+          </div>
+          <div class="bio-field bio-field-sm">
+            <label>Primary Crest</label>
+            <select name="system.identity.primaryCrest">
+              <option value="" {{#unless system.identity.primaryCrest}}selected{{/unless}}>— Choose —</option>
+              <option value="courage"     {{#if (eq system.identity.primaryCrest "courage")}}selected{{/if}}>Courage</option>
+              <option value="friendship"  {{#if (eq system.identity.primaryCrest "friendship")}}selected{{/if}}>Friendship</option>
+              <option value="love"        {{#if (eq system.identity.primaryCrest "love")}}selected{{/if}}>Love</option>
+              <option value="knowledge"   {{#if (eq system.identity.primaryCrest "knowledge")}}selected{{/if}}>Knowledge</option>
+              <option value="sincerity"   {{#if (eq system.identity.primaryCrest "sincerity")}}selected{{/if}}>Sincerity</option>
+              <option value="reliability" {{#if (eq system.identity.primaryCrest "reliability")}}selected{{/if}}>Reliability</option>
+              <option value="hope"        {{#if (eq system.identity.primaryCrest "hope")}}selected{{/if}}>Hope</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="bio-section">
+        <h4 class="bio-section-title">Identity</h4>
+        <div class="bio-field">
+          <label>Appearance</label>
+          <textarea name="system.identity.appearance" rows="3" placeholder="What do you look like? How do you carry yourself?">{{system.identity.appearance}}</textarea>
+        </div>
+        <div class="bio-field">
+          <label>Personality</label>
+          <textarea name="system.identity.personality" rows="3" placeholder="How do you act? What do others notice about you first?">{{system.identity.personality}}</textarea>
+        </div>
+      </div>
+
+      <div class="bio-section">
+        <h4 class="bio-section-title">Inner Life</h4>
+        <div class="bio-field">
+          <label>What do you want?</label>
+          <textarea name="system.identity.want" rows="2" placeholder="Your dream, your driving goal, what you're reaching for.">{{system.identity.want}}</textarea>
+        </div>
+        <div class="bio-field">
+          <label>What do you fear?</label>
+          <textarea name="system.identity.fear" rows="2" placeholder="What keeps you up at night? What would break you?">{{system.identity.fear}}</textarea>
+        </div>
+        <div class="bio-field">
+          <label>Your flaw</label>
+          <textarea name="system.identity.flaw" rows="2" placeholder="What gets in your own way? What do others have to work around?">{{system.identity.flaw}}</textarea>
+        </div>
+      </div>
+
+      <div class="bio-section">
+        <h4 class="bio-section-title">Your Story</h4>
+        <div class="bio-field">
+          <label>Background</label>
+          <textarea name="system.identity.background" rows="5" placeholder="Where did you come from? How did you end up here? What happened before?">{{system.identity.background}}</textarea>
+        </div>
+      </div>
+
+      <div class="bio-section">
+        <h4 class="bio-section-title">Notes</h4>
+        <div class="bio-field">
+          <textarea name="system.identity.notes" rows="4" placeholder="Anything else — secrets, connections, hooks, loose ends.">{{system.identity.notes}}</textarea>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+</form>

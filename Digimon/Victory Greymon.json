@@ -1,0 +1,41 @@
+{
+  "name": "Victory Greymon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 11,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Trident Gaia",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Splits theDramon Breaker, equips the pieces to its arms, concentrates all the atmosphere's energy into the swordtips, and fires it."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Ex-Tyranomon",
+    "Flaremon",
+    "Grademon",
+    "Mega Seadramon",
+    "Megalo Growmon (Orange)",
+    "Metal Greymon",
+    "Piccolomon",
+    "Rize Greymon",
+    "Skull Greymon",
+    "Vermillimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A subspecies of War Greymon , whose body is clad in armor of the super-metal \" Chrome Digizoid \", it easily wields its gigantic sword, and is the \" Dragon Warrior of Heroes \" that fights against its opponents with unique sword techniques. Its Special Moves are wielding its gigantic crushing sword \" Dramon Breaker \" to perform a heroic sword technique that's closer to striking than to slashing, pulverizing the opponent ( Dramon Breaker ), and splitting the Dramon Breaker and equipping the pieces to its arms, then concentrating all of the energy in the atmosphere into the tips of its sword and firing it ( Trident Gaia ). Also, it has a unique sword technique named \" Victory Charge \" which allows it to reflect an opponent's attack with its gigantic sword. In addition, Victory Greymon possesses an evolutionary code that differs from Digimon that were naturally born in the Digital World, and it is thought to be a Digimon that evolved from a Digitama produced by artificial data intervention.",
+  "web_created": true
+}

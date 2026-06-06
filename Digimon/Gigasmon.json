@@ -1,0 +1,33 @@
+{
+  "name": "Gigasmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Earthquake",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Strikes and raises up the ground with intense force after a huge jump."
+  },
+  "digivolves_from": [
+    "Grottemon"
+  ],
+  "digivolves_to": [
+    "Ancient Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Earth which bears the might of one of the legendary Warrior Ten . It is an earth giant that materialized by coalescing soil from the ground and the components of the atmosphere. At the moment of its materialization, it quenched at a high temperature, and its skin changed to one of super-hardness surpassing that of ceramics. Its personality and thoughts are just as arrogant as Grottemon 's. Due to it becoming gigantic, it has become more overconfident and its tactics are also extremely violent. Fundamentally, because it makes light of its opponents, it thinks that fighting them is boring and will often yawn during battle. Its Special Moves are striking and raising up the ground with intense force after a huge jump ( Earthquake ), and stretching out its arms and then unleashing a double lariat by rapidly spinning ( Hurricane Bomber ).",
+  "web_created": true
+}

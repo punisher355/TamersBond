@@ -1,0 +1,28 @@
+{
+  "name": "Yukimi Botamon",
+  "stage": "Fresh",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby I",
+  "size": "Tiny",
+  "stats": {
+    "CRG": 0,
+    "FRD": 0,
+    "LVE": 0,
+    "KNW": 0,
+    "SNC": 0,
+    "RLB": 0
+  },
+  "signature_move": null,
+  "digivolves_from": [],
+  "digivolves_to": [
+    "Hiyarimon",
+    "Moonmon",
+    "Nyaromon",
+    "Tunomon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Baby Digimon whose whole body is covered in fluffy, white hair. It is considered a species of Botamon , and was named \"Yukimi Botamon\" after its white body, but the details are not clearly known. It is weak to heat, and tends to prefer cold places, so its body feels cold to the touch. Its attack technique is breathing out freezing cold air ( Diamond Dust ). When Yukimi Botamon exhales, the moisture in the air freezes, and falls while brilliantly glittering.",
+  "web_created": true
+}

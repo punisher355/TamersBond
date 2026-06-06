@@ -1,0 +1,35 @@
+{
+  "name": "Junomon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 13,
+    "SNC": 15,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Love Basket",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Summons thunderclouds to enhanceJupitermon's power."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Shakkoumon",
+    "Shutumon"
+  ],
+  "digivolves_to": [
+    "Junomon: Hysteric Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the Olympos XII , it is Jupitermon 's partner . It stands upon the battlefield as a lover and defender of Jupitermon, where it predicts, detects, and eliminates the insurgents who defy Jupitermon's will. Maybe it's because of its profound love for Jupitermon and personality overflowing with affection, but it has a grasp on all of Jupitermon's habits. Its Special Moves are repeatedly stabbing the enemy with the katars equipped to both its arms ( Needle Hive ), and auto-attacking surrounding enemies with its sentient lances ( Grace Lance ). Also, it has a technique befitting of a partner where it enhances Jupitermon's power with \" Love Basket \", in which it summons thunderclouds.",
+  "web_created": true
+}

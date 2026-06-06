@@ -1,0 +1,48 @@
+{
+  "name": "Witchmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Dark",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Aquary Pressure",
+    "element": "Water",
+    "pr": 7,
+    "tags": "[RANGE 5] [PIERCE]",
+    "description": "Attacks with water of such extremely high pressure that it is enough to penetrate steel."
+  },
+  "digivolves_from": [
+    "Ghostmon",
+    "Impmon",
+    "Palmon",
+    "Patamon",
+    "Plotmon",
+    "Shamamon",
+    "Terriermon",
+    "Tukaimon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Angewomon",
+    "Bastemon",
+    "Holy Angemon",
+    "Lady Devimon",
+    "Lilimon",
+    "Mistymon",
+    "Neo Devimon",
+    "Wisemon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Digimon which has the appearance of a witch, it came along from \" Witchelny \", the Digital World of another dimension, in pursuit of its rival, Wizarmon . In its native Witchelny it mastered the sorcery ( high-level programming language ) of wind and water, and in order to gain an advantage on Wizarmon, who aims to become a great wizard, it followed and diligently trains in this Digital World. It's a little cruel, it has great pride, and it despises customs and rules. Its Special Moves are a sharp wind carrying magical power ( Baluluna Gale ), and the extremely high water pressure of its \" Aquary Pressure \", enough to penetrate steel."
+}

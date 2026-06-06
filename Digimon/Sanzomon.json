@@ -1,0 +1,34 @@
+{
+  "name": "Sanzomon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "To Shishun-kyou",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Brings the hearts of wild Digimon back to their senses by making them listen to endless words of gratitude."
+  },
+  "digivolves_from": [
+    "Hakubamon",
+    "Tailmon"
+  ],
+  "digivolves_to": [
+    "Erlangmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Monk Digimon that is journeying around the Digital World in order to achieve enlightenment. It overcomes many difficult ordeals, and as training it imposes asceticism on its own body, day and night. Although Sanzomon doesn't carry any weapons at all, it unleashes various techniques by reciting sutras. It brings the hearts of wild Digimon back to their senses by making them listen to endless words of gratitude ( To Shishun-kyou ). Sanzomon manifests the ordeals that it has suffered and showers them on the opponent ( Kochou Mu-kyou ). It displays an illusion that its scattered rosary beads are endlessly attacking from all directions in order to crush their spirit ( Mugen Danmaku Shin-kyou ), and so forth. The purified energy necessary to achieve enlightenment is accumulated in Sanzomon's Digicore , and it's rumored that if you steal this then you will be released from every injury or terminal disease and acquire immortality, which draws in Digimon that are impelled by greed, and those chasing after it are numerous. However, enemies are not the only ones who are drawn to Sanzomon, as there are also troubled Digimon with their own various issues. It is said that among those, there are also Digimon searching for answers and truth that adore Sanzomon and journey along with it."
+}

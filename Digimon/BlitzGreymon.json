@@ -1,0 +1,36 @@
+{
+  "name": "BlitzGreymon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Plasma Stake",
+    "element": "Electric",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Reinforces its heavyweight grappling with electricity, striking with the \"Plasma Stakes\" on both arms, which send electric current flowing into even the sturdiest of structures and destroying them from within."
+  },
+  "digivolves_from": [
+    "Anomalocarimon",
+    "Mamemon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Metal Tyranomon",
+    "Neo Devimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An ultimate form of Greymon-species Digimon, it is a subspecies of War Greymon armed with electric-powered weapons. It reinforces its heavyweight grappling with electricity, striking with the \" Plasma Stakes \" on both arms, which send electric current flowing into even the sturdiest of structures and destroying them from within. It is capable of rotating the \" Thunder Verniers \" on its back to face forward, from which it fires electricity, or using them while faced backwards to propel it forward. Not only that, it is capable of releasing plasma particles into its surroundings and using them to erect a barrier around it ( Elec Guard ).",
+  "web_created": true
+}

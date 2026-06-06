@@ -1,0 +1,38 @@
+{
+  "name": "Rhinomon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Ain Soph Aur",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Cloaks itself in a barrier made of light emitted from the \"Ain Soph Aur\" jewels embedded in its armor, then charges into the opponent."
+  },
+  "digivolves_from": [
+    "Hagurumon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "DORUguremon",
+    "Holy Angemon",
+    "Megadramon",
+    "Metal Greymon (Virus)",
+    "Metal Mamemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mammal Digimon that evolved through the power of the \" Digimental of Miracles \". It is clad in armor made of Chrome Digizoid ; not only is it thick, this armor is covered in a reflective surface that renders it incapable of being destroyed even by laser-based attacks, let alone physical ones. Also, despite its sluggish appearance, it is able to move at speeds abnormally fast for its size by using its excessive power to move its body. Its Special Move is cloaking itself in a barrier made of light emitted from the \" Ain Soph Aur \" jewels embedded in its armor, then charging into the enemy ( Atomic Burst ). Digimon on the receiving end of this technique are disintegrated into digital data composed of \"0\"s and \"1\"s, the smallest units of data, and never return to their original state.",
+  "web_created": true
+}

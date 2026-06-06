@@ -1,0 +1,34 @@
+{
+  "name": "Kuzuhamon: Miko Mode",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 10,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Ura Izuna",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Attacks the opponent with the kuda-gitsune carried on its waist."
+  },
+  "digivolves_from": [
+    "Doumon",
+    "Indaramon",
+    "Taomon",
+    "Vikaralamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A form Kuzuhamon takes when it performs Shinto rituals and listens to God 's will. It seldom fights in Miko Mode , but has strengthened its ability to exorcise evil spirits."
+}

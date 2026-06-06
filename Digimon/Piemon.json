@@ -1,0 +1,59 @@
+{
+  "name": "Piemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Trump Sword",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Draws several swords from the sheathes on its back and flings them at its opponent."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Blue Meramon",
+    "Death Meramon",
+    "Digitamamon",
+    "Doumon",
+    "Etemon",
+    "Fantomon",
+    "Gigadramon",
+    "Hippogriffomon",
+    "Infermon",
+    "Jokermon",
+    "Jyureimon",
+    "Lady Devimon",
+    "Makuramon",
+    "Matadrmon",
+    "Mega Seadramon",
+    "Mephismon",
+    "Monzaemon",
+    "Phelesmon",
+    "Piccolomon",
+    "Pumpmon",
+    "Skull Greymon",
+    "Skull Satamon",
+    "Tekkamon",
+    "Vamdemon",
+    "Wisemon"
+  ],
+  "digivolves_to": [
+    "Apocalymon",
+    "Lucemon: Satan Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A strange-looking and elusive Demon Man Digimon that is completely shrouded in mystery. Demon Man Digimon have many mysterious qualities, and since Demon- and Undead-species are basically beings from another dimension, their true forms are not totally understood. Why it appeared, and the purpose of its existence are also unclear; there are currently no means of clarifying those questions. However, its strength is without equal, and if you happen to stumble across Piemon, you probably won't be able to do anything but curse your fate. Its Special Move is an inescapable technique in which it teleports the four swords that pierce the \" Magic Box \" on its back, causing them to skewer the opponent in the following instant ( Trump Sword ).",
+  "web_created": true
+}

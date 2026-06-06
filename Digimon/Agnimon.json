@@ -1,0 +1,44 @@
+{
+  "name": "Agnimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Fire",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Burning Salamander",
+    "element": "Fire",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Unleashes a blazing dragon from its flame-clad fist."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Coronamon",
+    "Flamon",
+    "Goburimon",
+    "Gottsumon",
+    "Guilmon",
+    "Patamon"
+  ],
+  "digivolves_to": [
+    "Death Meramon",
+    "Matadrmon",
+    "Metal Tyranomon",
+    "Rize Greymon",
+    "Aldamon",
+    "Vritramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Digimon that possesses power over Flame which bears the might of one of the legendary Warrior Ten . Because its \" Digicore \" is wrapped in the Spiritual Fire which is called a holy blaze, it is able to freely manipulate flames. It is an incarnation of the \" Firewall \" that defends the Net , and is also a guardian deity. Because of its easily fired-up personality, it has a soldier-like aspect that practices mental training with yoga exercises, and its way of speaking is somewhat archaic, like a kenpo artist. In battle, it fights by freely using Oriental martial arts, and accumulates flames at one point of its body with a trick that focuses its spirit, to raise its offensive ability. Its Special Moves are unleashing a blazing dragon from its flame-clad fist ( Burning Salamander ), and unleashing a whirlwind kick of flames ( Salamander Break ).",
+  "web_created": true
+}

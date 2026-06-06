@@ -1,0 +1,38 @@
+{
+  "name": "Ranamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Rain Stream",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Concentrates heavy rain over an enemy and crushes them."
+  },
+  "digivolves_from": [
+    "Gizamon",
+    "Otamamon",
+    "Shakomon"
+  ],
+  "digivolves_to": [
+    "Pajiramon",
+    "Sirenmon",
+    "Calamaramon",
+    "Pajramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Water which bears the might of one of the legendary Warrior Ten . It has a sharp intuition and an unstable mood, possibly because it had been in an area that was mostly active in a section of the ocean within a weather forecasting system. Its emotions are erratic; when it is in good mood, it shows off how graceful and lady -like it is, but when it gets upset, it cries hysterically like a baby. In battle, it rarely attacks directly, and mainly does so indirectly by manipulating rain. However, since its combat abilities are intense when it is emotionally overwrought, its attacks are especially uncontrollable while it is crying. Its Special Moves are concentrating heavy rain over an enemy and crushing them ( Rain Stream ), and dissolving all enemies with acid rain ( Jealousy Rain ).",
+  "web_created": true
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Mococomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Spews out sticky cumulus clouds to slow down the opponent."
+  },
+  "digivolves_from": [
+    "Fukamon"
+  ],
+  "digivolves_to": [
+    "Fujamon",
+    "Kakamon",
+    "Kamemon",
+    "Takinmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Smoke Digimon that evolved from Fukamon , who used to just float wherever the wind took it, it has also grown fangs and now moves vigorously. Mococomon is revered as the \"origin of all evolution\" in the Eastern Digital World , and it is said that even ferocious Digimon rarely lay their hands on it. However, this doesn't mean that it is completely out of the woods, and when it senses that it is in danger, it uses its \" Nen'un \" to spew out sticky cumulus clouds and slow down the opponent, and then seizes the opportunity to flee."
+}

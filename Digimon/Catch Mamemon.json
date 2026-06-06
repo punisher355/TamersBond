@@ -1,0 +1,43 @@
+{
+  "name": "Catch Mamemon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Magic Arm",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Grabs an enemy and changes them into a plush toy."
+  },
+  "digivolves_from": [
+    "Galgomon",
+    "Geremon",
+    "Grottemon",
+    "Guardromon",
+    "Platinum Scumon",
+    "Starmon",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Justimon: Blitz Arm",
+    "Metal Garurumon (Black)",
+    "Pinochimon",
+    "Platinum Numemon",
+    "Prince Mamemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Mutation Digimon that evolved from a Mamemon that fused with file management software data. It has a serious personality and an uncompromising side, and seems to think that managing Digitama is its duty. It is also capable of walking instead of floating, by using its arm parts as legs. Its Special Move is catching any Digimon that try to lay their hands on the Digitama, and in order to ensure that they do not retaliate, it uses a mysterious power to turn them into a plush toy and carries them away ( Magic Arm ). Not only that, its slots start spinning the moment it makes a catch; if they land on triple sevens, its \" Miracle Bomb \" activates, turning the captured Digimon into a bomb and using it to attack. It is said that the power of the bomb corresponds to the power of the captured Digimon.",
+  "web_created": true
+}

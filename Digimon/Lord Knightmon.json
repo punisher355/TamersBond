@@ -1,0 +1,40 @@
+{
+  "name": "Lord Knightmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Spiral Masquerade",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Chops up the opponent with the four sash-blades that extend from its armor."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Crescemon",
+    "Grappu Leomon",
+    "Holy Angemon",
+    "Knightmon",
+    "Mistymon",
+    "Shutumon",
+    "Taomon (Silver)"
+  ],
+  "digivolves_to": [
+    "JESmon GX"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Holy Knight Digimon which is the monarch which presides over all Knightmon and is one of the \" Royal Knights \". More than morality, Lord Knightmon is faithful to what it personally regards as \"Justice\", and that end justifies their means. If it will bring about lasting peace, Lord Knightmon will find merit there, even with \"Rule by Power\". In its entirety, it has unparalleled ruthlessness in the execution of its duties, and it shows no compassion for the weak. Its Special Moves are chopping up the opponent with the four sash-blades that extend from its armor ( Spiral Masquerade ), and instantly coming into point-blank range, shooting the opponent in the chest with shock waves from the Pile Bunker on its right arm ( Urgent Fear )."
+}

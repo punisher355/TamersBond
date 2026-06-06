@@ -1,0 +1,33 @@
+{
+  "name": "Polar Bearmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Corkscrew Kick",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Uses its gun barrels like a jet pack and slashes the enemy with its skis while performing a spinning kick."
+  },
+  "digivolves_from": [
+    "Yukidarumon"
+  ],
+  "digivolves_to": [
+    "Skadimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ice-Snow Digimon that Digimon from snowy areas evolve into by taking in data related to winter sports. It has the ability to create tools made of ice, and typically makes skis and poles to freely slide around snow fields. It enters the dens of Mojyamon and Hyougamon as it skis about, and often causes trouble. It also uses its ice axe to dig a den, and builds snow huts to secure shelter. It frequently visits the small snow country of \" Thrymheimr \", and some individuals have been confirmed to take on the role of constructing homes for other Digimon. Its Special Moves are turning its gun barrels toward the ground, using them like a jet pack to take off, and slashing the enemy with its skis while performing a spinning kick ( Corkscrew Kick ), and pouring on a barrage of snowballs from its bazooka with tremendous force ( Winter Gunnery )."
+}

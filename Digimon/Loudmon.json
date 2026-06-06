@@ -1,0 +1,33 @@
+{
+  "name": "Loudmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "MetallicaEdge",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Tears through the enemy with its claws, which have been sharpened by sound-induced vibrations."
+  },
+  "digivolves_from": [
+    "Punkmon"
+  ],
+  "digivolves_to": [
+    "Heavy Metaldramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that evolved by taking in data from a variety of musical equipment and violent rock music, the armor covering its whole body is equipped with several features, such as speakers that amplify the sound taken in from the mic on its chest, and an effector that processes its voice. It deploys its main speakers during battle, and starts singing at a very loud volume. Those who face it are unable to perform at their best due to being exposed to the roaring sound emitted from its entire body, while Loudmon itself becomes even more excited by the sound. To Loudmon, fighting is synonymous with acts known as live performances and gigs, and it is a unique Digimon with an unusual way of thinking where putting on an all-out performance is more important than winning or losing itself. After battle, it has a habit of praising the opponent for showing their full strength, and working together with them for a while. Its Special Moves are tearing through the enemy with its claws, which have been sharpened by sound-induced vibrations ( Metallica Edge ), and shouting into the mic on its chest, focusing and then unleashing maximum volume shockwaves from the speakers on both its shoulders ( Deep Purple Blaster )."
+}

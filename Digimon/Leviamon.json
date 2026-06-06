@@ -1,0 +1,41 @@
+{
+  "name": "Leviamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Rostrum",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "12Destroys everything with its gigantic jawsFires a beam or stream of water from its mouth."
+  },
+  "digivolves_from": [
+    "Blue Meramon",
+    "Crescemon",
+    "Dagomon",
+    "Digitamamon",
+    "Marin Devimon",
+    "Megalo Growmon",
+    "Piranimon",
+    "Skull Seadramon",
+    "Tonosama Gekomon",
+    "Waru Seadramon",
+    "Whamon Perfect"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese The strongest monster existing in the Digital World , it is called the \" Devil Beast \" out of terror of the exceedingly mighty power that this monster possesses and is counted as one of the \" Seven Great Demon Lords \". This extensive monster, said to possess gigantic jaws which could guzzle down even the Digital World, is reported to sleep in the depths of the Net Ocean nearest to the Dark Area , and if it is awakened, it will despise any Digimon at the top, and will cause other Demon Lord Digimon and even Angel Digimon to run away in fear. However, as the existence of the limits on Digimon are decoded, its own appears similar to nothingness, and it is said that it builds the foundation for the existence of wickedness in the Digital World. Its Special Moves are destroying everything with its gigantic jaws ( Rostrum ), and mowing everything down with its long tails ( Cauda )."
+}

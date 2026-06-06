@@ -1,0 +1,35 @@
+{
+  "name": "Rafflesimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Ballet Gun",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "12Fires its sleeve like a cannon, using the large flower petals that dance around it as reflectors.Uses the shots from its sleeve with its reflectors to form a net that imprisons the opponent."
+  },
+  "digivolves_from": [
+    "Archnemon",
+    "Blossomon",
+    "Jewelbeemon",
+    "Lilimon",
+    "Lucemon: Falldown Mode"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate-level Fairy Digimon said to be the largest flower in the Digital World . While its appearance is so beautiful that it enraptures all who lay eyes upon it, the stench it emits is out of this world. There are a number of people who fell for Rafflesimon's beauty at first sight and sought to find it again after a single glance. However, Rafflesimon's lifespan is short, and its life processes will cease after just several days have passed. Because of the extremely low likelihood of being able to catch sight of a Rafflesimon, it is also known as the \" Miraculous Flower \". Despite its circumstances, Rafflesimon never expresses any pessimism about its looming death, constantly yearning to live a normal life and dancing elegantly till its very last. Its Special Move is firing its sleeve like a cannon ( Ballet Gun ). It utilizes the large flower petals that dance around it as reflectors, reflecting its shots so that no enemy can escape. Not only that, it can also shed scales from its body ( Wisselen ). These scales cause anyone whose body they have latched onto to lose consciousness and turn into Rafflesimon's servants."
+}

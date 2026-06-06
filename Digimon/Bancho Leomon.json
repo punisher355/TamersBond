@@ -1,0 +1,49 @@
+{
+  "name": "Bancho Leomon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Flash Bancho Punch",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Releases a fist packed with fighting spirit honed to its utmost limit."
+  },
+  "digivolves_from": [
+    "Cerberumon",
+    "Chimairamon",
+    "Etemon",
+    "Gerbemon",
+    "Grappu Leomon",
+    "Lilamon",
+    "Mach Gaogamon",
+    "Monzaemon",
+    "Pandamon",
+    "Panjyamon",
+    "Rize Greymon",
+    "Taomon",
+    "Volcamon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Whamon Perfect"
+  ],
+  "digivolves_to": [
+    "Chaosmon",
+    "Chaosmon Valdur Arm"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Beast Man Digimon which lives faithful only to the \"Justice\" in which it trusts. It is said that only Digimon who continue to emerge victorious in battles with fierce champions, without their spirit being \"broken\", are able to acquire the title of \" Bancho \", and only five Digimon which possess this title have been confirmed in the recorded history of the Digital World . As it is a boss that only serves its own \"Justice\", if something becomes an obstacle to that \"Justice\", it will see them as \"Evil\" even if they are a being like the Royal Knights or the Three Archangels , and they will become an enemy that it has to eliminate. The \" GAKU-RAN \" worn over its shoulders is endowed with a defensive function that negates 89.9% of the opponent's physical strikes. Its Special Moves are unleashing its \" Shishiraouzan \" from its prided tantō , \" Otokodama \", and releasing a fist packed with fighting spirit honed to its utmost limit ( Flash Bancho Punch ).",
+  "web_created": true
+}

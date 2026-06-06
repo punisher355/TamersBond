@@ -1,0 +1,36 @@
+{
+  "name": "Blitzmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Thor Hammer",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Gathers lightning by clasping its hands together, then dynamically swings them down."
+  },
+  "digivolves_from": [
+    "Kokabuterimon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Blue)",
+    "Rhino Kabuterimon",
+    "Nanomon (Digimon)",
+    "Bolgmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Thunder which bears the might of one of the legendary Ten Warriors . Its keen movements, unbecoming of its large build, are a technique to form a high voltage current running throughout its body. It generates a special magnetic field that produces an anti-gravity state in its vicinity, and is capable of high-speed movement. Its overflowing thunder power comes out as sparks from various parts of its body, and although Blitzmon looks mechanical, its personality is, in contrast, expressive and human. Its language is troll ish , but it additionally conveys excess warmth. In battle, its underwater mobility is weak due to the nature of its wrestler-like style. Its Special Moves are clasping its hands together, then dynamically swinging them down ( Thor Hammer ), and making lightning fall from the sky like rain ( Mjölnir Thunder ).",
+  "web_created": true
+}

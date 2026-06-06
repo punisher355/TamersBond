@@ -1,0 +1,43 @@
+{
+  "name": "Kougamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Dark",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 7,
+    "FRD": 7,
+    "LVE": 5,
+    "KNW": 5,
+    "SNC": 4,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Kouga-ryū Kage Bunshin",
+    "element": "Dark",
+    "pr": 5,
+    "tags": "[RANGE 4] [CHAIN 2,3]",
+    "description": "Forms clones of itself, which attack the enemy simultaneously."
+  },
+  "digivolves_from": [
+    "Koemon",
+    "Lalamon",
+    "Monodramon",
+    "Mushmon",
+    "Palmon",
+    "Shamamon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Death Meramon",
+    "Jyureimon",
+    "Karatenmon",
+    "Lilamon",
+    "Lilimon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A shinobi Digimon who dons a purple mask and lives in the darkness. It travels the Digital World in order to hone its Kouga-style ninjutsu . It is rarely encountered as it often moves from shadow to shadow in order to avoid being seen by others. Its Special Move is forming clones of itself, which attack the enemy simultaneously ( Kouga-ryū Kage Bunshin )."
+}

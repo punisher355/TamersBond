@@ -1,0 +1,32 @@
+{
+  "name": "Ogudomon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 18,
+    "FRD": 13,
+    "LVE": 12,
+    "KNW": 17,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Catedral",
+    "element": "Neutral",
+    "pr": 13,
+    "tags": "[MELEE]",
+    "description": "Produces a shock wave from its \"mouth\"."
+  },
+  "digivolves_from": [
+    "Beelzebumon",
+    "Belphemon: Sleep Mode"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Ogudomon is a grotesque Super Demon Lord who has seven legs and eyes, as well as an eighth eye. As it includes the whole of the Digital World 's sins, and moreover, is a mysterious personification with the ability to atone for them all, the power of a Digimon with even a small amount of malice is counterbalanced, and it is impossible for it to defeat Ogudomon. Its Special Moves are running wild after its own lusts ( Oratio Grandioloqua ), and a shock-wave played from its mouth ( Catedral ). Also, it pulverizes its opponent with its gigantic legs ( Gradus ).",
+  "web_created": true
+}

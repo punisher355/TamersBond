@@ -1,0 +1,41 @@
+{
+  "name": "Ancient Garurumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Sharpness Claymore",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Cuts the enemy into pieces with its greatswords."
+  },
+  "digivolves_from": [
+    "Beowolfmon",
+    "Shoutmon X5",
+    "Sirenmon",
+    "Splashmon",
+    "Were Garurumon",
+    "Were Garurumon (Black)"
+  ],
+  "digivolves_to": [
+    "Lucemon: Satan Mode",
+    "Susanoomon",
+    "Omegamon Alter-B",
+    "Susanomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Possessing the attribute of \"Light\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is called the \" Supreme Shining Beast \". Ancient Garurumon's abilities were later passed on to the \"Beast Digimon\". It is said that in the previous crusade, it survived to the end alongside Ancient Greymon , and sealed away Lucemon . Its Special Moves are brandishing its two greatswords with a dazzling brilliance and cutting the opponent to pieces ( Sharpness Claymore ), and completely halting the movement of electrons with super-cold air at absolute zero and a super-ray of light ( Absolute Zero ).",
+  "web_created": true
+}

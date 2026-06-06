@@ -1,0 +1,48 @@
+{
+  "name": "Caturamon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 8,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Śwabhojana",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Generates a massive earthquake and shock wave by striking the ground withBǎo Chuí"
+  },
+  "digivolves_from": [
+    "Boarmon",
+    "Dobermon",
+    "Garurumon (Black)",
+    "Gryzmon",
+    "Knight Chessmon (Black)",
+    "Knight Chessmon (White)",
+    "Kyubimon",
+    "Lighdramon",
+    "Lynxmon",
+    "Opossummon",
+    "Opossumon",
+    "Siesamon"
+  ],
+  "digivolves_to": [
+    "Baihumon",
+    "Beelzebumon",
+    "Hi Andromon",
+    "Justimon: Critical Arm",
+    "Parasimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Before ⇨ Japanese One of the \" Deva Digimon\", it is a Perfect Digimon whose appearance resembles the Dog . As a follower of the Four Holy Beasts Digimon Baihumon , it looks after its fellow followers Makuramon and Sinduramon as if they were its younger brothers (those two, however, do not appear to be very appreciative of it). Its sense of justice is strong, and it will not be satisfied until it sorts everything clearly into black or white. When its comrades are quarreling, it will sometimes serve as a moderator or presiding judge; it transforms itself into the Bǎo Chuí , a gigantic hammer, and delivers the verdict between guilt and innocence. Its Special Move is generating a massive earthquake accompanied by a shock wave by striking the ground with the Bǎo Chuí ( Śwabhojana )."
+}

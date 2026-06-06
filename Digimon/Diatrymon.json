@@ -1,0 +1,43 @@
+{
+  "name": "Diatrymon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Mega Dash Impact",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "A tempestuous ramming attack."
+  },
+  "digivolves_from": [
+    "Falcomon",
+    "Goburimon",
+    "Muchomon",
+    "Patamon",
+    "Penmon",
+    "Piyomon"
+  ],
+  "digivolves_to": [
+    "Andiramon",
+    "Garudamon",
+    "Sinduramon",
+    "Toropiamon",
+    "Tyilinmon",
+    "Yatagaramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ancient Bird Digimon that possesses powerful leg strength, and is called a living fossil . Its wings do not have sufficient surface area for flight, but to compensate, it is endowed with powerful, muscular legs and is capable of sprinting at speeds exceeding 200 km/h. Also, it has an extremely ferocious personality, and has a habit of regarding anything that moves as an enemy and swooping down on it. Not only that, the feathers that cover its whole body contain metal, making it difficult to inflict damage on Diatrymon without using a considerably powerful attack. Its Special Moves are a tempestuous ramming attack ( Mega Dash Impact ), and a gigantic roar which damages an extensive area ( Destruction Roar )."
+}

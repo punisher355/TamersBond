@@ -1,0 +1,51 @@
+{
+  "name": "Kiwimon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Plant",
+  "archetype": "Tank",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Little Pecker",
+    "element": "Plant",
+    "pr": 7,
+    "tags": "[RANGE 6]",
+    "description": "Spits explosiveChibi Kiwimonat the enemy that return to it afterwards."
+  },
+  "digivolves_from": [
+    "Alraumon",
+    "Bearmon",
+    "Floramon",
+    "Gabumon",
+    "Gazimon",
+    "Hawkmon",
+    "Koemon",
+    "Palmon",
+    "Penmon",
+    "Piyomon",
+    "Renamon"
+  ],
+  "digivolves_to": [
+    "Blossomon",
+    "Delumon",
+    "Grappu Leomon",
+    "Jyureimon",
+    "Lilamon",
+    "Lilimon",
+    "Piccolomon",
+    "Sirenmon",
+    "Sinduramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A mythical, ancient Digimon that was said to have been overhunted to extinction due to the spread of the Internet . Although it is a Bird Digimon, its wings have completely degenerated so it is unable to fly in the air. Furthermore, it possesses the makeup of a Plant-type and is able to perform photosynthesis with the leaf-like things growing on its head, providing itself with nourishment. It has no other ways of defending itself aside from the hard shell that covers its head, and it is easily attacked by intruders due to its docile personality. Its Special Move is attacking the enemy using the Chibi Kiwimon it conceals within its body ( Little Pecker ). It is a terrifying technique in which the Chibi Kiwimon, whose beaks are extremely hard just like Kiwimon, explode when hit. Despite being completely charred after exploding, the Chibi Kiwimon return safely."
+}

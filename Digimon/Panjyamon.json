@@ -1,0 +1,60 @@
+{
+  "name": "Panjyamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Hyoujūken",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires a blast of freezing air in the shape of a lion's head from its fist."
+  },
+  "digivolves_from": [
+    "Gaogamon",
+    "Garurumon",
+    "Garurumon (Black)",
+    "Hyougamon",
+    "Ice Devimon",
+    "Icemon",
+    "Ikkakumon",
+    "Jungle Mojyamon",
+    "Kyubimon",
+    "Leomon",
+    "Liamon",
+    "Meramon",
+    "Paledramon",
+    "Sorcerimon",
+    "Togemogumon",
+    "Yukidarumon"
+  ],
+  "digivolves_to": [
+    "Bancho Leomon",
+    "Dinotigermon",
+    "Duftmon",
+    "Fros Velgrmon",
+    "Gankoomon",
+    "Heavy Leomon",
+    "Holydramon",
+    "Mirage Gaogamon",
+    "Regulumon",
+    "Saber Leomon",
+    "Sakuyamon",
+    "Sakuyamon: Miko Mode",
+    "Skull Mammon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Beast Man Digimon of proud justice. For some Leomon , who go through repeated training day after day in order to defend justice, it is a form that acquired power over the cold in the freezing lands of the Digital World 's Ice-Snow Area , and evolved. By being in the cold, it tempered its mighty will and body, and they cannot be broken by any attack. Its Special Move is firing a fist packed with cold air ( Hyoujūken ).",
+  "web_created": true
+}

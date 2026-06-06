@@ -1,0 +1,60 @@
+{
+  "name": "Sunflowmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Plant",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Sunshine Beam",
+    "element": "Light",
+    "pr": 7,
+    "tags": "[RANGE 4] [BLAST 2] [BLIND]",
+    "description": "Fires rays of sunlight from all of its petals."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Floramon",
+    "Gaomon",
+    "Gomamon",
+    "Hagurumon",
+    "Lalamon",
+    "Mushmon",
+    "Palmon",
+    "Renamon",
+    "Tentomon",
+    "Toy Agumon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Angewomon",
+    "Atlur Kabuterimon (Red)",
+    "Cannonbeemon",
+    "Delumon",
+    "Dinobeemon",
+    "Eosmon (Perfect)",
+    "Gerbemon",
+    "Holy Angemon",
+    "Jewelbeemon",
+    "Jyureimon",
+    "Lilamon",
+    "Lilimon",
+    "Mach Gaogamon",
+    "Pumpmon",
+    "Rize Greymon",
+    "Toropiamon",
+    "Whamon Perfect"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Plant Digimon which has an appearance like the sunflower . If it bathes in the sun's light it becomes very energetic, and even its offensive power rises. On days when the weather is good it will also flap the leaves on its back to fly around. Its Special Moves are firing rays of sunlight from all of its petals ( Sunshine Beam ), and slapping the opponent in the face with a smile on its face ( Smiley Slap ). Furthermore, that smile is feared for its eeriness. Also, it can wave its tail-like stalk, firing off its thorns ( Cactus Tail )."
+}

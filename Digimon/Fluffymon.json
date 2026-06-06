@@ -1,0 +1,33 @@
+{
+  "name": "Fluffymon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "A headbutt that capitalizes on its speed."
+  },
+  "digivolves_from": [
+    "Yolkmon"
+  ],
+  "digivolves_to": [
+    "Pteromon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Small Bird Digimon that operates while hiding within the luscious leaves of the forest trees. Although it is still unable to fly due to its wings being undeveloped, it is agile enough to dash up vertical tree trunks in one go. Its Special Move is a headbutt that capitalizes on its speed ( Birdy Head ). Once it sees that the invading enemy has been intimidated by this technique, it will flee as fast as it can."
+}

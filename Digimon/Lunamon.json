@@ -1,0 +1,49 @@
+{
+  "name": "Lunamon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Tear Shoot",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[RANGE 4]",
+    "description": "Concentrates power in its forehead antenna, then fires a beautiful water orb at the opponent."
+  },
+  "digivolves_from": [
+    "Moonmon",
+    "Nyaromon",
+    "Pukamon",
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Coredramon (Blue)",
+    "Gaogamon",
+    "Garurumon",
+    "Hyougamon",
+    "Icemon",
+    "Lekismon",
+    "Mad Leomon",
+    "Sangloupmon",
+    "Sistermon Ciel",
+    "Sistermon Noir",
+    "Sorcerimon",
+    "Tailmon",
+    "Tylomon",
+    "Yukidarumon",
+    "Mad Leomon: Armed Mode"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Mammal Digimon which has an appearance like a rabbit, born from the fusion of moon-watching data. With its large ears, it is able to recognize sounds from any distance, and despite its timidity, it develops attachments easily and can't stand being alone. Its Special Moves are scratching with claws that are lovely at first glance, but are filled with dark power ( Luna Claw ), and concentrating power in its forehead antenna, then firing a beautiful water orb at the opponent ( Tear Shoot ). Also, it is able to twirl its ears, swallowing up the opponent in the vortex of bubbles generated ( Lop-ear Ripple )."
+}

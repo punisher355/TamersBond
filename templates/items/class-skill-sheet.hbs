@@ -1,0 +1,63 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header flexrow" style="gap: 12px; padding: 8px; background: #1a1a2e; color: #c8d8e8;">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"
+         style="width:72px;height:72px;border:2px solid #3a3a5e;border-radius:4px;cursor:pointer;object-fit:contain;flex-shrink:0;" />
+    <input class="charname" name="name" type="text" value="{{item.name}}" placeholder="Ability Name"
+           style="flex:1;background:transparent;border:none;border-bottom:1px solid #3a3a5e;color:#c8d8e8;font-size:1.3em;" />
+  </header>
+
+  <section class="sheet-body" style="padding:10px; display:flex; flex-direction:column; gap:8px; overflow-y:auto; flex:1;">
+
+    {{!-- Core info row --}}
+    <div class="form-group flexrow" style="gap:10px; align-items:center; flex-wrap:wrap;">
+      <label style="min-width:70px; font-weight:700; font-size:0.85em; color:#6a6a7e;">Class Tree</label>
+      <input type="text" name="system.class" value="{{system.class}}"
+             placeholder="e.g. Tai, Davis, Takato…" style="flex:1; min-width:120px;" />
+      <label style="min-width:30px; font-weight:700; font-size:0.85em; color:#6a6a7e;">Row</label>
+      <input type="number" name="system.row" value="{{system.row}}" min="1" max="4" style="width:50px;" />
+      <label style="min-width:60px; font-weight:700; font-size:0.85em; color:#6a6a7e;">EXP Cost</label>
+      <input type="number" name="system.expCost" value="{{system.expCost}}" min="0" style="width:70px;" />
+    </div>
+
+    <div class="form-group flexcol" style="gap:4px;">
+      <label style="font-weight:700; font-size:0.85em; color:#6a6a7e;">Requirements</label>
+      <textarea name="system.requirements" rows="2" style="resize:vertical; font-size:0.85em;"
+                placeholder="e.g. Courage rank 3+, at least 1 Row 1 ability">{{system.requirements}}</textarea>
+    </div>
+
+    <div class="form-group flexcol" style="gap:4px;">
+      <label style="font-weight:700; font-size:0.85em; color:#6a6a7e;">Description / Effect</label>
+      <textarea name="system.description" rows="7" style="resize:vertical; font-size:0.85em;"
+                placeholder="What does this ability do?">{{system.description}}</textarea>
+    </div>
+
+    {{!-- Automation section --}}
+    <div style="border-top:1px solid #ddd; padding-top:8px;">
+      <label style="font-weight:700; font-size:0.85em; color:#6a6a7e; display:block; margin-bottom:6px;">
+        Automation
+        {{#if system.automation.enabled}}<span class="tag-preview-inline">enabled</span>{{/if}}
+      </label>
+
+      <div class="form-group flexrow" style="gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:6px;">
+        <label style="font-weight:700; font-size:0.85em; color:#6a6a7e; min-width:55px;">Enabled</label>
+        <input type="checkbox" name="system.automation.enabled"
+               {{#if system.automation.enabled}}checked{{/if}} />
+        <label style="font-weight:700; font-size:0.85em; color:#6a6a7e; min-width:45px;">Trigger</label>
+        <select name="system.automation.trigger" style="flex:1; min-width:140px;">
+          {{selectOptions triggerOptions selected=system.automation.trigger}}
+        </select>
+      </div>
+
+      <div class="form-group flexcol" style="gap:4px;">
+        <label style="font-weight:700; font-size:0.85em; color:#6a6a7e;">Automation Notes</label>
+        <textarea name="system.automation.notes" rows="4" style="resize:vertical; font-size:0.85em;"
+                  placeholder="Describe what this should do when triggered — plan the logic here before it's coded.">{{system.automation.notes}}</textarea>
+      </div>
+
+      <p style="font-size:0.78em; color:#aaa; font-style:italic; margin:4px 0 0;">
+        No automation runs yet — use this section to plan the logic for later.
+      </p>
+    </div>
+
+  </section>
+</form>

@@ -1,0 +1,34 @@
+{
+  "name": "Noble Pumpmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 13,
+    "SNC": 11,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Trick or TreatWallace",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Manifests giant pumpkin-shaped bombs in the air to blow up everything around it."
+  },
+  "digivolves_from": [
+    "Baalmon",
+    "Fantomon",
+    "Grademon",
+    "Pumpmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The Ultimate of Pumpmon that took on a gentlemanly attire. Neither good nor evil, it maintains a neutral stance, and aims to bring smiles to all Digimon. With its cheerful personality and mischievous behavior, which it shows from time to time, it can easily get along with any Digimon, so there are no Digimon that treat Noble Pumpmon unkindly. It makes pumpkin dishes that everyone craves over using the \" Wassamu Ring Jack \" [N 1] staff it holds in its hand, and serves them to the Digimon it has befriended. Its Special Moves are manifesting giant pumpkin-shaped bombs in the air and blowing up everything around it ( Trick or Treat Wallace ), and pouring a huge amount of pumpkin soup into the enemy's body and causing them to explode ( Atlantic Dam )."
+}

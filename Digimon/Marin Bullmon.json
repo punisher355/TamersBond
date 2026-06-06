@@ -1,0 +1,34 @@
+{
+  "name": "Marin Bullmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Hydro Demolisher",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Shoots a high pressure stream of water from its mouth"
+  },
+  "digivolves_from": [
+    "Shellmon"
+  ],
+  "digivolves_to": [
+    "Ariemon",
+    "Ryugumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Mollusk Digimon whose whole body is covered in a mucus-like veil, it is often seen coexisting with Digimon such as Shellmon and Sangomon , who are also classified as Mollusk-types. Although it has an extremely strong sense of territoriality, and is merciless towards invading enemies that enter its territory, it also has a side with a strong sense of kinship, in which it tries to protect the Digimon it is in a symbiotic relationship with. The mucus that covers its entire body is slimy, and reduces friction to the utmost limits. Since strikes and slashes are all hindered by its mucus, it boasts high defensive power despite its soft body surface. In exchange, its movements are very sluggish, so it camouflages itself by slipping into the sand beneath the sea, and making only the tentacles protruding from the device on its back be visible. It preys on enemies that enter its territory by dragging them into the sand with its tentacles that extend from the ocean floor, so if one spots Marin Bullmon's tentacles, they should be cautious of its surprise attacks. Its Special Moves are shooting a high water pressure stream from its mouth ( Hydro Demolisher ), and spraying a viscous, poisonous liquid from the tubular organs concealed within its arms ( Toxic Spread )."
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Kumbhiramon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 10,
+    "LVE": 7,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Krimíśa",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Splits itself into six bodies and positions them in a hexagram barrier, sealing the opponent inside, then smashing them with theBǎo Chǔ, deleting them completely."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Bitmon",
+    "Bullmon",
+    "Gaogamon",
+    "Kyubimon",
+    "Leomon",
+    "Lynxmon",
+    "Opossummon",
+    "Opossumon",
+    "Prairiemon"
+  ],
+  "digivolves_to": [
+    "Anubimon",
+    "Beelzebumon",
+    "Sakuyamon",
+    "Xuanwumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Rat . As a follower of the Four Holy Beasts Digimon Xuanwumon , who boasts of its great wisdom, it is a sage who plays the part of the \"challenger\" in Xuanwumon's Zen Kōan s . With the psychology of anyone but Xuanwumon, it is mostly able to see ahead, and has a habit of bewildering the opponent by announcing their next move. Though it uses sarcasm with an acrimonious tone, it charmingly ends all of its sentences with \"~chū\". As it's not very strong, it's not suited for flinging itself at the opponent, but by means of its powerful abilities of telekinesis, it freely operates a giant steel pestle as big as its own body, the Bǎo Chǔ . Its Special Move is splitting itself into six bodies and positioning them in a hexagram barrier, sealing the opponent inside, then smashing them with the Bǎo Chǔ , deleting them completely ( Krimíśa )."
+}

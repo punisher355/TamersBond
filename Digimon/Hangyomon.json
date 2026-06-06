@@ -1,0 +1,52 @@
+{
+  "name": "Hangyomon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 10,
+    "KNW": 6,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Strike Fishing",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Throws or stabs the enemy with its cherished harpoon, \"Torrent\"."
+  },
+  "digivolves_from": [
+    "Coelamon",
+    "Ebidramon",
+    "Gawappamon",
+    "Gekomon",
+    "Gesomon",
+    "Hanumon",
+    "Icemon",
+    "Manbomon",
+    "Octmon",
+    "Raremon",
+    "Shima Unimon",
+    "Tylomon",
+    "Whamon",
+    "Yanmamon"
+  ],
+  "digivolves_to": [
+    "Ancient Mermaimon",
+    "Marin Angemon",
+    "Metal Seadramon",
+    "Neptunemon",
+    "Pukumon",
+    "Suijinmon",
+    "Vikemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Aquatic Beast Man Digimon clothed in a wetsuit . It has a cheerful personality, and is always swimming around the \" Net Ocean \". Its specialty is moving in the water, and in battle it uses the high-speed, underwater mobility Motor on its back, and uses a fighting style that capitalizes on its speed. Its Special Move is stabbing the enemy with its cherished harpoon, \" Torrent \" ( Strike Fishing )."
+}

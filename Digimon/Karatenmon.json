@@ -1,0 +1,50 @@
+{
+  "name": "Karatenmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Shōgekiha",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Flaps its jet black wings, driving its feathers into the opponent with a shock wave."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Devidramon",
+    "Fugamon",
+    "Harpymon",
+    "Igamon",
+    "Kougamon",
+    "Mojyamon",
+    "Musyamon",
+    "Peckmon",
+    "Saberdramon",
+    "Shadramon",
+    "Shurimon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Barbamon",
+    "Giga Seadramon",
+    "Goddramon",
+    "Kuzuhamon",
+    "Tengumon",
+    "Valdurmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Man Digimon which has an appearance like a Shugenja . It is a follower of the Daitengu Digimon , and its face is the epitome of a crow. It excels in Shugendo , and freely manipulates its Genriki . The two swords that Karatenmon possesses are called the \" Irataka no Ken \", and contain strong magical powers. Its Signature Move, \" Satori \", consists of reading the opponent's spirit to anticipate their attacks. Its Special Move is flapping its jet black wings, driving its feathers into the opponent with a shock wave ( Shougekiha ). Karatenmon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Shima Masaki from Ibaraki prefecture ."
+}

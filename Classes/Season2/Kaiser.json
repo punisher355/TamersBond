@@ -1,0 +1,56 @@
+{
+  "name": "Kaiser",
+  "season": 2,
+  "img": "Kaiser.webp",
+  "abilities": [
+    {
+      "name": "Dark Spiral",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 4+)",
+      "description": "Once per encounter as a Basic Action, target one enemy Digimon within 4 spaces. Make a Command check DN 12. On a success that Digimon takes -2 to all attack rolls and -2 to their Reliability until the end of the encounter — their own instincts are working against them. The Kaiser does not defeat enemies. He degrades them."
+    },
+    {
+      "name": "Calculated Cruelty",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 4+)",
+      "description": "When your Digimon attacks an enemy that is currently affected by any status effect, they deal +Knowledge rank bonus damage. You target the already-broken. Efficiency is not callousness. It is just better tactics."
+    },
+    {
+      "name": "Control Freak",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Dark Spiral, Knowledge rank 5",
+      "description": "Dark Spiral can now be used on two targets simultaneously in the same action. Both targets must be within 4 spaces. Make one Command check — if it succeeds both targets are affected. The Kaiser never wastes a move on one problem when one move can solve two."
+    },
+    {
+      "name": "Genius Protocol",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Knowledge rank 5",
+      "description": "Once per encounter as a Free Action, you may declare one specific move an enemy Digimon used this round. Until the end of the encounter your Digimon takes half damage from that move. You watched. You adapted. You already have the counter."
+    },
+    {
+      "name": "Absolute Dominance",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Control Freak, Knowledge rank 6",
+      "description": "Once per encounter when your Digimon defeats an enemy Digimon, all remaining enemies within 3 spaces of the defeated Digimon gain the Paralyze 1 status. They saw what happened. They hesitate. Fear is a resource. The Kaiser uses all of them."
+    },
+    {
+      "name": "No Escape",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Genius Protocol, Knowledge rank 6",
+      "description": "Once per encounter as a Free Action after an enemy Digimon moves, you may force them to stop 1 space short of their intended destination. Make a Command check DN 14. On a success their movement ends immediately. They do not go where they planned. They go where you allow."
+    },
+    {
+      "name": "Digimon Emperor",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Knowledge rank 8",
+      "description": "Once per session at the start of your turn you may activate Digimon Emperor. Until the end of the encounter all enemies within 6 spaces take -3 to all attack rolls and -3 to their Reliability. All allies within 6 spaces gain +3 to all attack rolls. The Kaiser does not fight battles. He decides their outcomes before they begin. The field is his. Every piece on it moves because he permits it."
+    }
+  ]
+}

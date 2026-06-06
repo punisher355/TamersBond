@@ -1,0 +1,49 @@
+{
+  "name": "Matadrmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Dark",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 8,
+    "KNW": 8,
+    "SNC": 10,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Chouzetsu Rappashū",
+    "element": "Dark",
+    "pr": 8,
+    "tags": "[MELEE] [DRAIN]",
+    "description": "Attacks with a mighty kick from the sky."
+  },
+  "digivolves_from": [
+    "Agnimon",
+    "Bakemon",
+    "Dobermon",
+    "Ogremon",
+    "Orgemon",
+    "Porcupamon",
+    "Sangloupmon",
+    "Turuiemon"
+  ],
+  "digivolves_to": [
+    "Barbamon",
+    "Black War Greymon",
+    "Gokumon",
+    "Grand Dracumon",
+    "Kuzuhamon",
+    "Piemon",
+    "Plutomon",
+    "Seraphimon",
+    "Slash Angemon",
+    "Venom Vamdemon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A bloodsucking martial artist Digimon that performs a magnificent dance. It is said that it was born from the folk-dance database of a certain museum, and that it has mastered the unique steps of the \" Bulldog \". It uses its fluttering garment to deceive the opponent, and when the opponent drops its guard from a glance at the soft-colored cloth, it falls upon them with the countless rapiers stocked on its arms. Because it is a vampire, it can't survive unless it sucks a Digimon's blood, but as not just anyone will do, it seeks only the blood of strong Digimon and seems to constantly be moving from place to place. Its Special Moves are its \" Thousand Arrow \", unleashed from rapiers stocked on its arms, and a mighty kicking technique drawn from its unique martial art, the \"Bulldog\" ( Chouzetsu Rappashū ).",
+  "web_created": true
+}

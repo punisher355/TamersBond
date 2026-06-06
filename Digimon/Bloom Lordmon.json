@@ -1,0 +1,35 @@
+{
+  "name": "Bloom Lordmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Multiple Seed",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Shoots countless seeds from the petals on its left shoulder like a machine gun."
+  },
+  "digivolves_from": [
+    "Ajatarmon",
+    "Blossomon",
+    "Jewelbeemon",
+    "Lilimon",
+    "Piccolomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Fairy Digimon in the form of a plant clad in armor, it is a kind-hearted knight that fights to protect nature. It accumulates energy by absorbing sunlight through the flowers on its shoulders. The power it exhibits once that energy has been raised to its limit is said to even rival that of the Royal Knights . It has the ability to turn any foul weather into fine weather, and creates battlefields that always work to its advantage when out in the open. Its Special Moves are shooting countless seeds from the petals on its left shoulder like a machine gun ( Multiple Seed ), and piercing the enemy with the flower spear it holds in its right hand ( Sprout Rush ). In addition, it fires an extremely wide beam with the huge sword of light that emerges from within its flower spear only when it has bloomed ( Gran del Sol )."
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Berserk Titamon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 18,
+    "FRD": 17,
+    "LVE": 13,
+    "KNW": 11,
+    "SNC": 14,
+    "RLB": 16
+  },
+  "signature_move": {
+    "name": "Senjin Kishinzan",
+    "element": "Neutral",
+    "pr": 14,
+    "tags": "[MELEE] [BURST 2]",
+    "description": "Splits the Zanjinto into two swords, slashes multiple times with both — then unleashes a giant energy blast from its body."
+  },
+  "digivolves_from": [
+    "Titamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Sorry, but no official profile of Berserk Titamon has been added yet. ⇨ English Template:K",
+  "web_created": true
+}

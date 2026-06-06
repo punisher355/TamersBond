@@ -1,0 +1,51 @@
+{
+  "name": "Black Megalo Growmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 8,
+    "LVE": 10,
+    "KNW": 8,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Atomic Blaster",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Fires from both gunports on its chest, destroying the enemy on the atomic level."
+  },
+  "digivolves_from": [
+    "Black Growmon",
+    "Coredramon (Blue)",
+    "Coredramon (Green)",
+    "Fugamon",
+    "Growmon",
+    "Growmon (Orange)",
+    "Gururumon",
+    "Hyougamon",
+    "Ikkakumon",
+    "Meramon",
+    "Ogremon",
+    "Orgemon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Belphemon: Rage Mode",
+    "Black War Greymon",
+    "Chaos Dukemon",
+    "Darkdramon",
+    "Dukemon",
+    "Gaioumon",
+    "Megidramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Perfect Cyborg Digimon that evolved from Black Growmon . Like Black Growmon, its Virus-species nature is expressed by its darker appearance, and it is called the \" Black Destroyer Dragon \". Its upper body has been metallized with the super-metal, \" Chrome Digizoid \", and it is able to take flight with the two vernier attached to its shoulders. Also, since the cable-like object extending from the back section is extensible, it can be used to impale the opponent. Its Signature Move is cutting the opponent to pieces with the \" Pendulum Blades \" on its arms ( Double Edge ). Its Special Move is an attack fired from both of the gunports on its chest that destroys the opponent on the atomic level ( Atomic Blaster )."
+}

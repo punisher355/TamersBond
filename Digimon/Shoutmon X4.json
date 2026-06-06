@@ -1,0 +1,35 @@
+{
+  "name": "Shoutmon X4",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Burning Star Crusher",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Cuts any opponent in two with a single stroke."
+  },
+  "digivolves_from": [
+    "Pulsemon"
+  ],
+  "digivolves_to": [
+    "Boutmon",
+    "Omega Shoutmon",
+    "Tyilinmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A miraculous form called the \" Victory Mode \", born from four Digimon's powerful desire to gain absolute victory. Its raison d'être is nothing but enforcing this conviction. That power is tremendous, and it isn't a mistake to count it as one of the strongest Digimon. Its main specialty is in battling on the ground, where it can cut any opponent in two with a single stroke, even if they are moving about quickly ( Burning Star Crusher ), use a comeback punch that will find it a way out of any predicament ( Three Impact ), and so forth. Incidentally, it can also hurl a wave from the Star Sword DX ( Burning Star Slasher ).",
+  "web_created": true
+}

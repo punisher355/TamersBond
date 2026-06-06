@@ -1,0 +1,35 @@
+{
+  "name": "Imperialdramon: Paladin Mode",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 11,
+    "KNW": 11,
+    "SNC": 15,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Omega Blade",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Slashes or stabs a foe with theOmega Blade, resetting and clearing their configuration data."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Dinobeemon",
+    "Mummymon",
+    "Paildramon",
+    "Pucchiemon (Green)"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A form of the Ancient Dragon Warrior Digimon Imperialdramon: Fighter Mode that acquired the power of the holy knight Omegamon , powering up and changing form into a legendary holy knight ( Paladin Mode ). As the final, strongest form of Imperialdramon that was told of since ancient times, it descended in a time of great disruption in the ancient Digital World, and rescued the world from complete collapse. However, all of the details of that era are a mystery, and if research into Digimon and the Digital World progresses, it is likely that they will eventually be clarified. Its Special Move is cutting the opponent in two with a single stroke of its ultimate \" Omega Blade \" sword, resetting and clearing their configuration data.",
+  "web_created": true
+}

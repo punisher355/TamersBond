@@ -1,0 +1,33 @@
+{
+  "name": "Takutoumon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Tenseizan",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Unleashes a blade of light by swinging its treasure sword."
+  },
+  "digivolves_from": [
+    "Sagomon"
+  ],
+  "digivolves_to": [
+    "Shakamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A God Man Digimon born from the data of a certain warrior from Chinese legend. It is a hero who despises deceiving others, and uses its sword to resolve actions that deviate from the path of righteousness. It frequently imposes its own sense of justice onto others, and since it does not even make the effort to explain itself again, it often fights alone. It has abandoned dialogue with anyone else and remains extremely taciturn, possibly because it believes that one's own thoughts are enough as long as they make sense to oneself. When forced into a conservation with someone, Takutoumon's white mouse-shaped, mechanical pet \" Paishū \" [N 1] will speak on its behalf. As such, whenever Takutoumon speaks itself, it is limited to when it has something particularly important to say. Also, its treasure tool \" Bǎo Tǎ \", which contains data from Shakamon , is housed within the gauntlet on its left palm, and since it can use this to seal away the opponent's fighting spirit, Takutoumon forces the Digimon that oppose it to become more docile. Its Special Moves are unleashing a blade of light from its swung treasure sword ( Tenseizan ), and projecting an enlarged Bǎo Tǎ above the opponent's head and dropping it on them, crushing them ( Tettensaisai )."
+}

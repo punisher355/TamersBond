@@ -1,0 +1,45 @@
+{
+  "name": "Omegamon Alter-B",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 11,
+    "LVE": 18,
+    "KNW": 11,
+    "SNC": 18,
+    "RLB": 17
+  },
+  "signature_move": {
+    "name": "Garuru Sword",
+    "element": "Neutral",
+    "pr": 15,
+    "tags": "[MELEE]",
+    "description": "With the Garuru Sword on the right arm, perform a multi-hit attack."
+  },
+  "digivolves_from": [
+    "Ancient Garurumon",
+    "Ancient Greymon",
+    "Black War Greymon",
+    "Blitz Greymon",
+    "Chaos Dukemon",
+    "Cres Garurumon",
+    "Gaioumon",
+    "Gran Kuwagamon",
+    "Kuzuhamon",
+    "Mastemon",
+    "Metal Etemon",
+    "Metal Seadramon",
+    "Rust Tyranomon",
+    "Titamon",
+    "Venom Vamdemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The \" Black Digitron \" secretion, which completely turned Omegamon Alter-S black, was deliberately mixed in by someone, causing it to temporarily take on this black form. Although its power is heightened while it is in this form, it lost its sense of self, leaving it in a berserk state.",
+  "web_created": true
+}

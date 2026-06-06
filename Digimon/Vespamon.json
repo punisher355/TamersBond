@@ -1,0 +1,36 @@
+{
+  "name": "Vespamon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Mach Stinger",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "An attack using the \"Royal Lance\", a spear that is shrouded in a beam."
+  },
+  "digivolves_from": [
+    "Forgebeemon"
+  ],
+  "digivolves_to": [
+    "Ancient Beatmon",
+    "Gran Kuwagamon",
+    "Queenbeemon",
+    "Tiger Vespamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon that is considered to be one of the elite within the aerial, covert honey base, \" Royal Base \". While Cannonbeemon protects the base over a vast range with its large body, Vespamon is in charge of defending key facilities, using its inexhaustible supply of stamina and speed as assets. Protecting the queen, Queenbeemon —the highest ranked at the base—above all else, Vespamon are known as the \"Royal Guard\" elite guards, and it is said that a handful of the strongest among them are awarded codenames and evolve into Tiger Vespamon . It fights placing an emphasis on cooperation with its comrades, and will not hesitate to sacrifice its life for the queen or the base. Its Special Move is an attack using the \" Royal Lance \", a spear that is shrouded in a beam ( Mach Stinger ). In its \" Bee Phalanx \" tactical formation, it deploys a hexagonal beam shield from the \" Royal Shield \", and shoots energy from the spear at its ready."
+}

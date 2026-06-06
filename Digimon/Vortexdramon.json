@@ -1,0 +1,31 @@
+{
+  "name": "Vortexdramon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 11,
+    "SNC": 13,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Frozen Gust",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Anabsolute zerowind cold enough to freeze even oceans."
+  },
+  "digivolves_from": [
+    "Grand Galemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Bird Dragon Digimon considered as one of the heroes belonging to the Vortex Warriors . Its body is made up of turbulent wind energy. It soars through the sky like a gale while lighting up the earth everywhere with its shining wings. It has also been seen flying around the battlefield, carrying a Digimon known as the \" Whirlwind General \" long ago on its back. Moreover, while it is a ferocious dragon, it also possesses the aspects of a powerful magician. It controls a variety of Wind Sorcery by combining four types of magic together—Earth, Water, Fire, and Wind. Its Special Moves are an absolute zero wind cold enough to freeze even oceans ( Frozen Gust ), and a scorching-hot wind that incinerates the enemy along with the earth ( Blazing Gust ). In addition, it transforms its arms into a gigantic blade and sends out a slash accompanied by a whirlwind ( Laevateinn )."
+}

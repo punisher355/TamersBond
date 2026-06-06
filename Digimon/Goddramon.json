@@ -1,0 +1,47 @@
+{
+  "name": "Goddramon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "God Flame",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Explodes its holy spirit, instantly mowing down enemies in all directions.Shoots a stream of flames from its closed fists."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Cyberdramon",
+    "Gigadramon",
+    "Hisyaryumon",
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Karatenmon",
+    "Master Tyranomon",
+    "Megadramon",
+    "Paildramon",
+    "Shakkoumon",
+    "Super Starmon",
+    "Superstarmon",
+    "Triceramon",
+    "Vermillimon"
+  ],
+  "digivolves_to": [
+    "Huanglongmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A God Dragon Digimon with six hardened wings and a body that shines gold. On its arm is the proof that it is a holy Digimon, and it is considered a kind of Holy-species Digimon from where it wears its Holy Ring . Goddramon is one of the \" Four Great Dragons Digimon\"; the four of them are Goddramon, Holydramon , Qinglongmon , and Megidramon . Also, the tiny dragon Digimon sealed within the vambrace on Goddramon's right hand is called \" Amon of Red Flame\", who governs over \"Destruction\", [N 1] and the one sealed within the vambrace on its left hand is called \" Umon of Blue Thunder\", who governs over \"Regeneration\". [N 2] to attack its opponents. Its Special Move is exploding its holy spirit, instantly mowing down the opponents in every direction ( God Flame )."
+}

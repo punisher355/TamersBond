@@ -1,0 +1,91 @@
+<div class="class-lookup-layout">
+
+  {{!-- ══ LEFT: Filters + class list ══ --}}
+  <div class="lookup-sidebar">
+
+    <div class="lookup-filters">
+      <input class="lookup-search" type="text" placeholder="Search class…" value="{{filters.search}}" autocomplete="off" />
+      <select class="filter-select" data-filter="season">
+        <option value="">All Seasons</option>
+        <option value="Season 1"{{#if (eq filters.season "Season 1")}} selected{{/if}}>Season 1</option>
+        <option value="Season 2"{{#if (eq filters.season "Season 2")}} selected{{/if}}>Season 2</option>
+      </select>
+      <button class="clear-filters" type="button">Clear</button>
+    </div>
+
+    <div class="lookup-results">
+      {{#if classes.length}}
+        {{#each classes}}
+        <div class="result-entry{{#if (eq this.name ../selectedName)}} selected{{/if}}"
+             data-name="{{this.name}}"
+             data-season="{{this.season}}">
+          <img src="{{this.img}}" alt="" />
+          <div class="entry-text">
+            <span class="entry-label">{{this.name}}</span>
+            <span class="entry-meta">{{this.layerCount}} layer{{#if (gt this.layerCount 1)}}s{{/if}} · {{this.abilityCount}} abilities</span>
+          </div>
+        </div>
+        {{/each}}
+      {{else}}
+        <div class="lookup-no-forms">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>No classes loaded.<br>Check console (F12) for errors.</p>
+        </div>
+      {{/if}}
+    </div>
+
+  </div>{{!-- end sidebar --}}
+
+  {{!-- ══ RIGHT: Detail panel ══ --}}
+  <div class="lookup-detail">
+
+    {{#if selectedClass}}
+
+    {{!-- Class header card --}}
+    <div class="class-card">
+      <img class="class-portrait" src="{{selectedClass.img}}" alt="{{selectedClass.name}}" />
+      <div class="class-info">
+        <div class="class-name">{{selectedClass.name}}</div>
+        <div class="class-meta-badges">
+          <span class="badge badge-season">{{selectedClass.season}}</span>
+          <span class="badge badge-layers">{{layerCount}} Layer{{#if (gt layerCount 1)}}s{{/if}}</span>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Layer sections --}}
+    {{#each layers}}
+    <div class="lookup-section">
+      <div class="section-title">{{this.label}}</div>
+      {{#each this.abilities}}
+      <div class="ability-card">
+        <div class="ability-header">
+          <span class="ability-name">{{this.name}}</span>
+          <span class="badge badge-exp">{{this.expCost}} EXP</span>
+          {{#if this.uuid}}
+          <button class="open-ability-btn" type="button" title="Open item sheet" data-uuid="{{this.uuid}}">
+            <i class="fas fa-external-link-alt"></i>
+          </button>
+          {{/if}}
+        </div>
+        {{#if this.requirements}}
+        <div class="ability-req"><i class="fas fa-lock"></i> {{this.requirements}}</div>
+        {{/if}}
+        <div class="ability-desc">{{this.description}}</div>
+      </div>
+      {{/each}}
+    </div>
+    {{/each}}
+
+    {{else}}
+
+    <div class="lookup-empty">
+      <i class="fas fa-user-graduate"></i>
+      <p>Select a class from the list to view its abilities and layers.</p>
+    </div>
+
+    {{/if}}
+
+  </div>{{!-- end detail --}}
+
+</div>{{!-- end layout --}}

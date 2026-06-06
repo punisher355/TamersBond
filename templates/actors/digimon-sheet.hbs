@@ -1,0 +1,669 @@
+<form class="{{cssClass}} flexcol" autocomplete="off"
+      style="--digimon-accent: {{system.sheetColor}}; --digimon-bg: {{system.sheetBgColor}}">
+
+  {{!-- Corruption banner --}}
+  {{#if isCorrupted}}
+  <div class="corruption-banner">
+    ⚠ CORRUPTED — GM Controlled — {{system.corruption.corruptForm}}
+  </div>
+  {{/if}}
+
+  {{!-- Header --}}
+  <header class="sheet-header flexcol">
+    <input class="charname" name="name" type="text" value="{{actor.name}}" placeholder="Digimon Name" />
+    {{#if system.attribute}}
+    <div class="digi-quickref-bar">
+      <span class="digi-quickref-pill digi-quickref-attr">{{system.attribute}}</span>
+      {{#if system.element}}<span class="digi-quickref-pill digi-quickref-elem">{{system.element}}</span>{{/if}}
+    </div>
+    {{/if}}
+    <div class="header-panels flexrow">
+
+      {{!-- Portrait --}}
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+
+      {{!-- HP --}}
+      <div class="header-panel flexcol">
+        <span class="header-panel-label">HP</span>
+        <div class="hp-main-row flexrow">
+          <input type="number" class="hp-value-input" name="system.hp.value" value="{{system.hp.value}}" />
+          <span class="hp-sep">/</span>
+          <span class="hp-max-display">{{hpMax}}</span>
+        </div>
+        <div class="hp-temp-row flexrow">
+          <span class="hp-temp-label">Temp</span>
+          <input type="number" class="hp-temp-input" name="system.hp.temp" value="{{system.hp.temp}}" />
+        </div>
+      </div>
+
+      {{!-- Stage --}}
+      <div class="header-panel flexcol">
+        <span class="header-panel-label">Stage</span>
+        <span class="digi-stage-current">{{currentStageLabel}}</span>
+        <span class="digi-stage-sub">Default: {{defaultStageLabel}}</span>
+      </div>
+
+      {{!-- EXP (Digimon has its own separate pool) --}}
+      <div class="header-panel flexcol">
+        <span class="header-panel-label">EXP</span>
+        <div class="exp-line flexrow">
+          <span class="exp-line-label">Total</span>
+          <input type="number" name="system.exp.total" value="{{digiExp.total}}" />
+        </div>
+        <div class="exp-line flexrow">
+          <span class="exp-line-label">Spent</span>
+          <span class="exp-line-value">{{digiExp.spent}}</span>
+        </div>
+        <div class="exp-line flexrow">
+          <span class="exp-line-label">Avail</span>
+          <span class="exp-line-value exp-available">{{digiExp.available}}</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  {{!-- Tabs --}}
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="stats">Stats</a>
+    <a class="item" data-tab="skills">Skills</a>
+    <a class="item" data-tab="moves">Moves & Combat</a>
+    <a class="item" data-tab="status">Status</a>
+    <a class="item" data-tab="bio">Biography</a>
+    <a class="item" data-tab="digivolution">Digivolution</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    {{!-- Stats tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="stats">
+
+      <div class="tamer-link-row flexrow">
+        <label>Linked Tamer</label>
+        <select name="system.tamerLink">
+          {{selectOptions tamerChoices selected=system.tamerLink}}
+        </select>
+        {{#if linkedTamer}}
+        <span class="linked-tamer-name">{{linkedTamer.name}}</span>
+        {{/if}}
+      </div>
+
+      <h3 class="section-header">Combat Stats
+        <span class="stage-cap-note">({{currentStageLabel}} stage)</span>
+      </h3>
+      <p class="hint">Base = species/form value. Tamer = linked tamer's crest rank. Invested = EXP spent. No stage cap on invested stats.</p>
+
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Stat</th>
+            <th title="Species base for this form">Base</th>
+            <th title="Linked Tamer's crest rank for this stat">Tamer</th>
+            <th title="EXP-invested — never resets on evolution">Invested</th>
+            <th title="Temporary buffs/debuffs — cleared each encounter">Cond.</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each statList}}
+          <tr>
+            <td class="stat-label" style="border-left: 3px solid {{this.color}}">
+              <img class="stat-crest-icon" src="{{this.crestImg}}" title="{{this.label}}" />
+              <div class="stat-label-text">
+                {{this.label}}
+                <span class="stat-source">{{this.combatName}}</span>
+              </div>
+            </td>
+            <td><input type="number" name="system.stats.{{this.key}}.base"        value="{{this.base}}" /></td>
+            <td class="tamer-bonus" style="color: {{this.color}}">{{this.tamerBonus}}</td>
+            <td class="invested-cell">
+              <div class="stat-invest-controls flexrow">
+                <button type="button" class="stat-invest-btn digi-stat-decrease"
+                        data-stat="{{this.key}}"
+                        {{#unless this.canDowngrade}}disabled{{/unless}}
+                        title="Refund 1 rank ({{this.invested}} × 100)">−</button>
+                <span class="stat-invest-display">{{this.invested}}</span>
+                <button type="button" class="stat-invest-btn digi-stat-increase"
+                        data-stat="{{this.key}}"
+                        {{#unless this.canUpgrade}}disabled{{/unless}}
+                        title="Invest {{this.upgradeCost}} EXP">+</button>
+                <span class="stat-invest-cost">{{this.upgradeCost}}</span>
+              </div>
+            </td>
+            <td><input type="number" name="system.stats.{{this.key}}.conditional" value="{{this.conditional}}" /></td>
+            <td class="stat-total">{{this.total}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+      <p class="hint hp-formula-note">
+        <strong>HP Max</strong> = 10 + (Sincerity × 2) — {{hpFormula}}
+      </p>
+
+    </div>
+
+    {{!-- Skills tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="skills">
+      <p class="hint">
+        Digimon skill ranks are set by their Form — they cannot spend EXP on skills. Roll bonus = own stat total.
+        {{#unless linkedTamer}}
+        <strong>No Tamer linked — tamer bonuses are 0.</strong>
+        {{/unless}}
+      </p>
+
+      {{#each skillGroups}}
+      <div class="skill-group">
+        <div class="skill-group-header flexrow" style="border-left-color: {{this.statColor}}">
+          <span class="skill-stat-name" style="color: {{this.statColor}}">{{this.statLabel}}</span>
+          <span class="skill-stat-rank">Tamer Rank {{this.tamerStatRank}}</span>
+        </div>
+        {{#each this.skills}}
+        <div class="skill-row flexrow digi-skill-row">
+          <span class="skill-name digi-skill-name"
+                data-tip-title="{{this.label}}"
+                data-tip-desc="{{this.description}}"
+                data-tip-example="{{this.example}}">{{this.label}}</span>
+          <span class="skill-formula">{{this.rollFormula}}</span>
+          <button type="button" class="skill-roll-btn digi-skill-roll-btn"
+                  data-stat="{{../statKey}}"
+                  data-skill="{{this.key}}"
+                  data-label="{{this.label}}"
+                  title="Roll {{this.rollFormula}}">
+            <i class="fas fa-dice-d6"></i>
+          </button>
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+    </div>
+
+    {{!-- Moves & Combat tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="moves">
+
+      <h3 class="section-header">Current Moves
+        <span class="stage-cap-note">{{activeCount}}/3 learned slots</span>
+      </h3>
+      <p class="hint">Your active moves for this session. Change selections at long rest.</p>
+
+      {{#if sigMove}}
+      <div class="moves-list">
+        <div class="move-row flexrow move-row-sig dd-item-row" data-item-id="{{sigMove.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{sigMove.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name move-open" data-item-id="{{sigMove.id}}" style="cursor:pointer;" title="Open item sheet">{{sigMove.name}}</span>
+            {{#if sigMove.tagsString}}<span class="move-tags-string">{{sigMove.tagsString}}</span>{{/if}}
+            {{#if sigMove.system.effect}}<span class="move-effect">{{sigMove.system.effect}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{sigMove.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{sigMove.system.pr}}</span>
+          <span class="tag move-stage-tag">{{sigMove.system.minStage}}+</span>
+          <span class="tag move-sig">★ Sig</span>
+          <div class="move-row-actions">
+            <button type="button" class="attack-roll move-action-btn" data-item-id="{{sigMove.id}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+            <button type="button" class="move-to-chat move-action-btn" data-item-id="{{sigMove.id}}" title="Post to chat">
+              <i class="fas fa-comment"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if activeMoves.length}}
+      <div class="moves-list">
+        {{#each activeMoves}}
+        <div class="move-row flexrow move-row-active dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name move-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+            {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          <span class="tag move-stage-tag">{{this.system.minStage}}+</span>
+          <div class="move-row-actions">
+            <button type="button" class="attack-roll move-action-btn" data-item-id="{{this.id}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+            <button type="button" class="move-to-chat move-action-btn" data-item-id="{{this.id}}" title="Post to chat">
+              <i class="fas fa-comment"></i>
+            </button>
+            <button type="button" class="move-deactivate move-action-btn" data-item-id="{{this.id}}" title="Remove from active moves">
+              <i class="fas fa-minus-circle"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No active moves chosen — select from the Move Pool below.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top: 12px">Move Pool
+        <span class="stage-cap-note">Drag Move items from the sidebar to add</span>
+      </h3>
+      <p class="hint">All known moves. Click the checkmark to set as active (max 3). Signature move is always available.</p>
+
+      {{#if poolMoves.length}}
+      <div class="moves-list">
+        {{#each poolMoves}}
+        <div class="move-row flexrow dd-item-row{{#if this.system.isSignature}} move-row-sig{{/if}}{{#if this.isActive}} move-row-active{{/if}}" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name move-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+            {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          <span class="tag move-stage-tag">{{this.system.minStage}}+</span>
+          {{#if this.system.isSignature}}<span class="tag move-sig">★ Sig</span>{{/if}}
+          {{#if this.isActive}}<span class="tag" style="background:#27ae60;">✓ Active</span>{{/if}}
+          <div class="move-row-actions">
+            {{#if this.canActivate}}
+            <button type="button" class="move-activate move-action-btn" data-item-id="{{this.id}}" title="Set as active move">
+              <i class="fas fa-check-circle"></i>
+            </button>
+            {{/if}}
+            {{#if this.canDeactivate}}
+            <button type="button" class="move-deactivate move-action-btn" data-item-id="{{this.id}}" title="Remove from active moves">
+              <i class="fas fa-minus-circle"></i>
+            </button>
+            {{/if}}
+            <button type="button" class="move-to-chat move-action-btn" data-item-id="{{this.id}}" title="Post to chat">
+              <i class="fas fa-comment"></i>
+            </button>
+            <button type="button" class="move-delete move-action-btn" data-item-id="{{this.id}}" title="Remove move">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No moves in pool. Drag Move items from the sidebar to add them.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top: 12px">Attacks</h3>
+      {{#if attacks.length}}
+      <div class="moves-list" style="margin-top:6px;">
+        {{#each attacks}}
+        <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name attack-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+            {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
+          </div>
+          {{#if (eq this.system.actionType "attack")}}
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          {{/if}}
+          {{#if (eq this.system.actionType "utility")}}
+          <span class="tag" style="background:#888;">FREE</span>
+          {{/if}}
+          {{#if (eq this.system.actionType "grapple")}}
+          <span class="tag" style="background:#a06030;">GRAPPLE</span>
+          {{/if}}
+          <div class="move-row-actions">
+            <button type="button" class="attack-roll move-action-btn" data-item-id="{{this.id}}" title="Use / Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+            <button type="button" class="attack-delete move-action-btn" data-item-id="{{this.id}}" title="Remove">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No attacks yet. Drag Attack items here to add them.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top: 12px">Combat Reference</h3>
+      <div class="combat-reference">
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Hit Roll</span>
+          <span class="combat-ref-value">1d20 + <strong>Courage</strong> vs target <strong>Reliability</strong> + 10</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Nat 20</span>
+          <span class="combat-ref-value">Critical hit — auto hit + double final damage</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Nat 1</span>
+          <span class="combat-ref-value">Critical fail — auto miss, no damage</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Damage</span>
+          <span class="combat-ref-value">PR dice + <strong>Knowledge</strong> − target <strong>Love</strong> · min 1</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Multipliers</span>
+          <span class="combat-ref-value">Attribute first, then element. Max ×3.0, min ×0.25. Final min 1.</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Movement</span>
+          <span class="combat-ref-value"><strong>Friendship</strong> total in spaces per turn</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Attribute</span>
+          <span class="combat-ref-value">Vaccine beats Virus · Virus beats Data · Data beats Vaccine · each ×2</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Element</span>
+          <span class="combat-ref-value">Weakness ×1.5 · Resistance (own element) ×0.5 · Neutral ×1</span>
+        </div>
+      </div>
+
+    </div>
+
+    {{!-- Status tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="status">
+
+      <h3 class="section-header">Active Conditions</h3>
+      <div class="status-add-row flexrow">
+        <select class="status-type-picker">{{selectOptions statusTypeOptions}}</select>
+        <button type="button" class="status-add-btn">+ Add Condition</button>
+      </div>
+
+      {{#if statusItems.length}}
+      <div class="status-active-list">
+        {{#each statusItems}}
+        <div class="status-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="status-type-badge" style="background:{{this.color}}"><i class="{{this.icon}}"></i></span>
+          <span class="status-item-name">{{this.name}}</span>
+          {{#if this.system.source}}<span class="status-source">from {{this.system.source}}</span>{{/if}}
+          {{#if this.hasX}}
+          <span class="status-adjust-group">
+            <span class="status-adjust-label">{{this.xLabel}}</span>
+            <button type="button" class="status-x-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <span class="status-adjust-val">{{this.system.x}}</span>
+            <button type="button" class="status-x-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </span>
+          {{/if}}
+          {{#if this.hasY}}
+          <span class="status-adjust-group">
+            <span class="status-adjust-label">{{this.yLabel}}</span>
+            <button type="button" class="status-y-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <span class="status-adjust-val">{{this.system.y}}</span>
+            <button type="button" class="status-y-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </span>
+          {{/if}}
+          <button type="button" class="status-remove move-action-btn" data-item-id="{{this.id}}" title="Remove condition"><i class="fas fa-times"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No active conditions.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top: 16px">Condition Reference</h3>
+      <div class="status-conditions">
+        <div class="status-row">
+          <span class="status-name">BURN X,Y</span>
+          <span class="status-desc">Take X damage at start of turn. Lasts Y ticks. Stacks: take higher X, add Y counters.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">FREEZE</span>
+          <span class="status-desc">Cannot act. End of turn: roll 1d20 + Love, DN 14 to break. Also breaks on any damage.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">PARALYZE X</span>
+          <span class="status-desc">Speed halved. 1–3 stacks: choose Basic OR Move, not both. 4+ stacks: no actions. Lose 1 stack per turn. Nat 20 clears all.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">BLIND</span>
+          <span class="status-desc">−4 to all attack hit rolls.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">CONFUSE</span>
+          <span class="status-desc">Start of turn: roll 1d20 + Friendship, DN 14 to snap out. Fail: must attack nearest ally.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">DRAIN</span>
+          <span class="status-desc">Attacker regains HP equal to half damage dealt (min 1) on hit.</span>
+        </div>
+        <div class="status-row">
+          <span class="status-name">PUSH</span>
+          <span class="status-desc">On hit, push target away. Spaces = attacker Courage − defender Courage (min 1).</span>
+        </div>
+      </div>
+
+    </div>
+
+    {{!-- Biography tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="bio">
+
+      <h3 class="section-header">Appearance</h3>
+      <div class="bio-field">
+        <textarea name="system.appearance" rows="4" placeholder="What does this Digimon look like?">{{system.appearance}}</textarea>
+      </div>
+
+      <h3 class="section-header" style="margin-top:12px;">Their Nature</h3>
+      <div class="bio-field">
+        <label>Personality</label>
+        <textarea name="system.personality" rows="4" placeholder="How does this Digimon act?">{{system.personality}}</textarea>
+      </div>
+
+      <h3 class="section-header" style="margin-top:12px;">Your Bond</h3>
+      <div class="bio-field">
+        <label>How We Met</label>
+        <textarea name="system.howWeMet" rows="4" placeholder="The story of how Tamer and Digimon found each other…">{{system.howWeMet}}</textarea>
+      </div>
+
+      <h3 class="section-header" style="margin-top:12px;">Notes</h3>
+      <div class="bio-field">
+        <textarea name="system.notes" rows="6" placeholder="Anything else worth remembering…">{{system.notes}}</textarea>
+      </div>
+
+    </div>
+
+    {{!-- Digivolution tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="digivolution">
+
+      {{!-- Current Form --}}
+      <h3 class="section-header">Current Form</h3>
+      {{#if currentFormData}}
+      <div class="digi-current-form-card digi-form-row dd-item-row" data-item-id="{{currentFormData.id}}" draggable="true"
+           title="Drag to the Items sidebar to save a copy of this form"
+           style="cursor:grab;">
+        <div style="display:flex; align-items:flex-start; gap:10px;">
+
+          {{!-- Form portrait --}}
+          <img src="{{currentFormData.img}}" alt="{{currentFormData.name}}"
+               style="width:96px; height:96px; object-fit:contain; border:1px solid #ccc;
+                      border-radius:4px; background:#f5f0e8; flex-shrink:0;" />
+
+          {{!-- Form details --}}
+          <div style="flex:1; min-width:0;">
+            <div class="digi-form-card-header flexrow" style="align-items:center; flex-wrap:wrap; gap:4px; margin-bottom:4px;">
+              <strong class="digi-form-card-name">{{currentFormData.name}}</strong>
+              <span class="tag">{{currentFormData.stageLabel}}</span>
+              <span class="tag">{{currentFormData.attribute}}</span>
+              <span class="tag">{{currentFormData.element}}</span>
+              <button type="button" class="form-open move-action-btn" data-item-id="{{currentFormData.id}}" title="Open form sheet"
+                      style="margin-left:auto;">
+                <i class="fas fa-external-link-alt"></i>
+              </button>
+            </div>
+            {{#if currentFormData.signatureMove}}
+            <div class="hint" style="margin-bottom:4px;">Sig. Move: <strong>{{currentFormData.signatureMove}}</strong></div>
+            {{/if}}
+            <table class="stats-table digi-form-stats-mini">
+              <thead><tr><th>CRG</th><th>FRD</th><th>LVE</th><th>KNW</th><th>SNC</th><th>RLB</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="stat-total">{{currentFormData.stats.courage}}</td>
+                  <td class="stat-total">{{currentFormData.stats.friendship}}</td>
+                  <td class="stat-total">{{currentFormData.stats.love}}</td>
+                  <td class="stat-total">{{currentFormData.stats.knowledge}}</td>
+                  <td class="stat-total">{{currentFormData.stats.sincerity}}</td>
+                  <td class="stat-total">{{currentFormData.stats.reliability}}</td>
+                </tr>
+              </tbody>
+            </table>
+            {{#if currentFormData.digivolves_to.length}}
+            <div class="hint" style="margin-top:4px;">
+              Digivolves to: {{#each currentFormData.digivolves_to}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}
+            </div>
+            {{/if}}
+          </div>
+
+        </div>
+      </div>
+      {{else}}
+      <p class="no-items">No current form set. Drag a form from the <strong>Digimon Forms</strong> compendium below, then click Set Current.</p>
+      {{/if}}
+
+      {{!-- Known Forms --}}
+      <h3 class="section-header" style="margin-top:12px;">Known Forms
+        <span class="stage-cap-note">Drag from compendium to add · Drag row to Items sidebar to save</span>
+      </h3>
+      {{#if knownForms.length}}
+      <div class="moves-list">
+        {{#each knownForms}}
+        <div class="move-row flexrow digi-form-row dd-item-row{{#if this.isCurrent}} move-row-active{{/if}}"
+             data-item-id="{{this.id}}" draggable="true"
+             title="Drag to the Items sidebar to save a copy" style="cursor:grab;">
+          <img src="{{this.img}}" alt="{{this.name}}"
+               style="width:36px; height:36px; object-fit:contain; border-radius:3px;
+                      background:#f5f0e8; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name">{{this.name}}</span>
+            <span class="hint" style="font-size:0.8em;">{{this.stageLabel}} · {{this.system.attribute}} · {{this.system.element}}</span>
+          </div>
+          {{#if this.isCurrent}}<span class="tag" style="background:#27ae60;">★ Current</span>{{/if}}
+          <div class="move-row-actions">
+            {{#unless this.isCurrent}}
+            <button type="button" class="form-set-current move-action-btn" data-item-id="{{this.id}}" title="Set as current form">
+              <i class="fas fa-star"></i>
+            </button>
+            {{/unless}}
+            <button type="button" class="form-open move-action-btn" data-item-id="{{this.id}}" title="View form">
+              <i class="fas fa-eye"></i>
+            </button>
+            <button type="button" class="form-remove move-action-btn" data-item-id="{{this.id}}" title="Remove form">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No known forms yet.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top:12px;">Stage</h3>
+      <div class="digi-stage-panel">
+        <div class="digi-stage-row flexrow">
+          <span class="digi-stage-row-label">Current Stage</span>
+          <select class="digi-stage-select digi-stage-select-current" name="system.currentStage">
+            {{selectOptions stageOptions selected=system.currentStage}}
+          </select>
+        </div>
+        <div class="digi-stage-row flexrow">
+          <span class="digi-stage-row-label">Default Stage</span>
+          <select class="digi-stage-select" name="system.defaultStage">
+            {{selectOptions stageOptions selected=system.defaultStage}}
+          </select>
+        </div>
+        <div class="digi-stage-row flexrow">
+          <span class="digi-stage-row-label">Max Default Stage</span>
+          <select class="digi-stage-select" name="system.maxDefaultStage">
+            {{selectOptions stageOptions selected=system.maxDefaultStage}}
+          </select>
+        </div>
+      </div>
+
+      {{!-- Digivolve button --}}
+      <div class="digivolve-btn-panel" style="margin-top:12px;">
+        {{#if canDigivolve}}
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:0.9em;">
+            <span>Next stage: <strong>{{digivolveTarget}}</strong></span>
+            <span class="tag">Full cost: {{digivolveCost}} Hope</span>
+            {{#if linkedTamer}}
+            <span class="tag" style="background:#3498db; color:#fff;">{{linkedTamer.name}}: {{hopeAvailable}} Hope</span>
+            {{else}}
+            <span class="hint">(no Tamer linked)</span>
+            {{/if}}
+          </div>
+          <button type="button" class="digivolve-roll-btn"
+                  style="padding:8px 0; font-size:1.05em; cursor:pointer; border-radius:4px;">
+            <i class="fas fa-dna"></i> Digivolve to {{digivolveTarget}}!
+          </button>
+        </div>
+        {{else}}
+        {{#if noNextStageForms}}
+        <p class="hint">No known forms at {{digivolveTarget}} stage yet — drag one from the Digimon Forms compendium to Known Forms first.</p>
+        {{else}}
+        <p class="hint">No further digivolution available from current stage.</p>
+        {{/if}}
+        {{/if}}
+      </div>
+
+      <h3 class="section-header" style="margin-top: 12px">Forcing a Digivolution</h3>
+      <p class="hint">You can spend less than the full Hope cost to digivolve. Roll d100 and beat the threshold. Only allowed during combat.</p>
+      <div class="digivolution-force-table">
+        <table class="stats-table">
+          <thead><tr><th>Stage</th><th>Full Cost</th><th>Threshold Formula</th></tr></thead>
+          <tbody>
+            <tr><td>Rookie</td><td>3 Hope</td><td>(1 − spent/3) × 20 — roll above to succeed</td></tr>
+            <tr><td>Champion</td><td>6 Hope</td><td>(1 − spent/6) × 35 — roll above to succeed</td></tr>
+            <tr><td>Ultimate</td><td>10 Hope</td><td>(1 − spent/10) × 55 — roll above to succeed</td></tr>
+            <tr><td>Mega</td><td>15 Hope</td><td>(1 − spent/15) × 80 — roll above to succeed</td></tr>
+          </tbody>
+        </table>
+        <p class="hint">Full Hope cost = 0 threshold (always clean). Roll at or below threshold = corruption.</p>
+      </div>
+
+      <h3 class="section-header" style="margin-top: 12px">Calming a Corrupted Digimon</h3>
+      <p class="hint">Any Tamer/Digimon can use their Basic Action to attempt a Mend skill check.</p>
+      <div class="digivolution-force-table">
+        <table class="stats-table">
+          <thead><tr><th>Corrupted Stage</th><th>Mend DN</th><th>On Success</th></tr></thead>
+          <tbody>
+            <tr><td>Rookie</td><td>DN 12</td><td rowspan="4">Reverts to Default Stage −1. Cannot digivolve until next long rest.</td></tr>
+            <tr><td>Champion</td><td>DN 16</td></tr>
+            <tr><td>Ultimate</td><td>DN 20</td></tr>
+            <tr><td>Mega</td><td>DN 24</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      {{!-- Corruption --}}
+      <h3 class="section-header" style="margin-top: 12px">Corruption</h3>
+      <div class="corruption-panel{{#if isCorrupted}} corruption-active{{/if}}">
+        <div class="corruption-header-row flexrow">
+          <span class="corruption-status-label">
+            {{#if isCorrupted}}⚠ CORRUPTED{{else}}Clean{{/if}}
+          </span>
+          <button type="button" class="corruption-toggle">
+            {{#if isCorrupted}}End Corruption{{else}}Trigger Corruption{{/if}}
+          </button>
+        </div>
+        {{#if isCorrupted}}
+        <div class="bio-field">
+          <label>Corrupt Form Name</label>
+          <input type="text" name="system.corruption.corruptForm"
+                 value="{{system.corruption.corruptForm}}"
+                 placeholder="GM enters the corrupt form name" />
+        </div>
+        <div class="corruption-reminders">
+          <p>Costs no Hope per turn. GM controlled.</p>
+          <p>Targets closest Digimon or Tamer. Prefers type-advantage targets.</p>
+          <p>Ends when: all enemies defeated, this Digimon defeated, or all others submit.</p>
+          <p>Corrupt form's signature move is permanently added to the pool.</p>
+        </div>
+        {{/if}}
+      </div>
+
+    </div>
+
+  </section>
+</form>

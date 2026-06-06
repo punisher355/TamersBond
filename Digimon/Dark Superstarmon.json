@@ -1,0 +1,46 @@
+{
+  "name": "Dark Superstarmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Dark Explosion",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Attacks with the exploded fragments of a supernova."
+  },
+  "digivolves_from": [
+    "Black Tailmon",
+    "Dobermon",
+    "Gaogamon",
+    "Knight Chessmon (Black)",
+    "Meramon",
+    "Numemon",
+    "Starmon",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Ancient Greymon",
+    "Ancient Volcamon",
+    "Beel Starmon",
+    "Darkdramon",
+    "Metal Garurumon (Black)",
+    "Ravmon",
+    "Titamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Produced from the observational data of a black hole , it is a Digimon steeped in darkness. It has left behind its dreams and its wishes, and it appears to be so heavily burdened by its past that it uses its sunglasses to shut out all light. Its Special Moves are attacking with the exploded fragments of a supernova ( Dark Explosion ), using a black fog that covers everything in darkness ( Schwarz Nebel ), and creating a hole that swallows the surrounding bodies ( Dark Hole )."
+}

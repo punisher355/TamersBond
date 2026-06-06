@@ -1,0 +1,45 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+  <header class="sheet-header flexrow" style="background:#1a1a2e; color:#c8d8e8; padding:8px; gap:12px; align-items:center;">
+    <img class="item-image" src="{{item.img}}" data-edit="img" title="{{item.name}}"
+         style="width:72px; height:72px; border:2px solid #4a90d9; border-radius:4px; cursor:pointer; object-fit:contain; flex-shrink:0;" />
+    <input class="charname" name="name" type="text" value="{{item.name}}"
+           style="flex:1; background:transparent; border:none; border-bottom:1px solid #4a90d9; color:#c8d8e8; font-size:1.3em; font-weight:bold; padding:2px 4px;" />
+  </header>
+
+  <section class="sheet-body" style="padding:10px 12px; overflow-y:auto; flex:1; background:#f0ece4; display:flex; flex-direction:column; gap:10px;">
+
+    <div class="form-group">
+      <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">Type</label>
+      <select name="system.statusType">
+        {{selectOptions statusTypeOptions selected=system.statusType}}
+      </select>
+    </div>
+
+    {{#if hasX}}
+    <div class="form-group">
+      <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">{{xLabel}}</label>
+      <input type="number" name="system.x" value="{{system.x}}" />
+    </div>
+    {{/if}}
+
+    {{#if hasY}}
+    <div class="form-group">
+      <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">{{yLabel}}</label>
+      <input type="number" name="system.y" value="{{system.y}}" />
+    </div>
+    {{/if}}
+
+    <div class="form-group">
+      <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">Source</label>
+      <input type="text" name="system.source" value="{{system.source}}" placeholder="Who applied this?" />
+    </div>
+
+    <div class="form-group">
+      <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">Description</label>
+      <textarea name="system.description" rows="4" placeholder="Additional notes...">{{system.description}}</textarea>
+    </div>
+
+  </section>
+
+</form>

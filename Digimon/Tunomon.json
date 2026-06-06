@@ -1,0 +1,59 @@
+{
+  "name": "Tunomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Shoots slightly acidic bubbles from its mouth."
+  },
+  "digivolves_from": [
+    "Pitchmon",
+    "Punimon",
+    "Yukimi Botamon"
+  ],
+  "digivolves_to": [
+    "Betamon",
+    "Blucomon",
+    "Dracomon",
+    "Dracumon",
+    "Elecmon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gaomon",
+    "Goburimon",
+    "Gomamon",
+    "Gumdramon",
+    "Hagurumon",
+    "Koemon",
+    "Kunemon",
+    "Monodramon",
+    "Penmon",
+    "Pico Devimon",
+    "Psychemon",
+    "Ryudamon",
+    "Shakomon",
+    "Shamamon",
+    "Snow Goburimon",
+    "V-mon",
+    "Zubamon",
+    "Modoki Betamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A tiny Digimon that hardened one of the feelers it had on its head as Punimon . It has evolved in a more animal-like direction from Punimon, and is covered in tufty body hair. It is still at the peak of playfulness, and it has a prank-loving personality, but its combat instinct has not awakened."
+}

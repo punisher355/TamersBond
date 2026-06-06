@@ -1,0 +1,35 @@
+{
+  "name": "Beowolfmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Licht Angriff",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Assaults the opponent withRoland 2, first with several homing missiles, then a laser beam."
+  },
+  "digivolves_from": [
+    "Garummon",
+    "Reppamon"
+  ],
+  "digivolves_to": [
+    "Ancient Garurumon",
+    "Duftmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Light that has transcended legend by inheriting all the might of one of the legendary Warrior Ten and acquiring unknown abilities. It is a strong-armed warrior that possesses both the wildness of a beast and the intelligence of a human, and can easily swing down its double-bladed greatsword \" Trinität \" with one hand. In battle, it coolly sizes up the situation and fights without getting heated up, but it believes in the way of the warrior, of fighting for its comrades and challenging strong opponents. It has the \" Roland 2 \" [N 1] missile pod on its left hand for use in long-range combat, and specializes in both long-range and short-range combat. Its Special Moves are a powerful combination of heavy fire that assaults the opponent with several homing missiles fired from the Roland 2 , then brings them down with its main armament ( Licht Angriff ), and swinging the greatsword Trinität at subluminal speed from overhead, instantly cutting the opponent to pieces ( Zweihänder ).",
+  "web_created": true
+}

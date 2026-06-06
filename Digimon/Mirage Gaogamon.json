@@ -1,0 +1,48 @@
+{
+  "name": "Mirage Gaogamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Double Crescent Mirage",
+    "element": "Wind",
+    "pr": 11,
+    "tags": "[RANGE 8]",
+    "description": "Fires crescent moon-shaped shock waves from its hands."
+  },
+  "digivolves_from": [
+    "Black Mach Gaogamon",
+    "Blue Meramon",
+    "Crescemon",
+    "Flaremon",
+    "Gerbemon",
+    "Lilamon",
+    "Mammon",
+    "Mega Seadramon",
+    "Pandamon",
+    "Panjyamon",
+    "Rize Greymon",
+    "Shawujinmon",
+    "Tyilinmon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Whamon Perfect"
+  ],
+  "digivolves_to": [
+    "Omnimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Beast Knight Digimon whose whole body is clad in Chrome Digizoid armor. As a result of moving at incomparable speeds, the opponent is deceived when it witnesses it as a phenomenon similar to a mirage. Its Special Moves are firing crescent moon-shaped shock waves from its hands ( Double Crescent Mirage ), and a superdreadnought-class strike in which it concentrates its body's energy, then fires it from the mouth on its chest. ( Full Moon Blaster ). Also, it can run through like a hurricane, instantly cutting the opponent to pieces ( Gale Claw ).",
+  "web_created": true
+}

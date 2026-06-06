@@ -1,0 +1,41 @@
+{
+  "name": "Opossumon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Mad Balloon Bomb",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Breeds powerful computer viruses in the balloons it holds, bursting them as they lightly float over the enemy's head."
+  },
+  "digivolves_from": [
+    "Bokomon",
+    "Labramon"
+  ],
+  "digivolves_to": [
+    "Caturamon",
+    "Cho·Hakkaimon",
+    "Kumbhiramon",
+    "Magnamon",
+    "Makuramon",
+    "Mammon",
+    "Pajiramon",
+    "Sinduramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Beast Digimon which evolved through the power of the \" Digimental of Kindness \". Its cute looks and trademark colorful balloons make it seem like a Puppet Digimon that came from a fairy tale village. However, when it gets attacked and becomes angered, it spreads around balloons stocked with powerful computer viruses , and then detonates them. It prefers dry, sandy soil, and usually hides under the sand with only its balloons showing above. The way it moves above ground is hopping through the air, holding onto its balloons. It is an annoying fellow who isn't that fast, but that doesn't mean it is easy to catch. Its Special Move, \" Mad Balloon Bomb \", is a terrifying technique that breeds powerful computer viruses in the balloons it holds in its hand, bursting them as they lightly float over the enemy's head during battle.",
+  "web_created": true
+}

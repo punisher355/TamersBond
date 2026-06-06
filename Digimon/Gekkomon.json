@@ -1,0 +1,33 @@
+{
+  "name": "Gekkomon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Smash Beat",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Strikes with with its freely-extendable tongue."
+  },
+  "digivolves_from": [
+    "Kekkomon"
+  ],
+  "digivolves_to": [
+    "Arma Lizamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A brightly colored Reptile Digimon that inhabits the tropical rainforests of the Digital World . Since the surface of its body acts as camouflage in its tropical rainforest habitat, it is difficult to find despite its gaudy appearance. Its fingers and toes have organs that allow it to stick to anything, and because it lives its life clinging to things such as trees or boulders, it rarely descends to the ground. Although personality varies from individual to individual, most of them are of a curious and cheerful nature. Its Special Move is striking with with its freely-extendable tongue ( Smash Beat ). It can even knock out Digimon of a higher Level if it lands a clean hit. Also, it has various attack techniques where it utilizes its tongue such as \" Break Throw \", in which it wraps its tongue around objects in its surroundings and then throws them, and \" Swing Tackle \", wherein it wraps its tongue around things like the surrounding trees, and swings itself around using centrifugal force to perform a ramming attack. Gekkomon's tail is autotomous , and when it falls into a predicament, it has a habit of severing its own tail and fleeing once it has attracted the opponent's attention. As a shortened tail is considered to be proof of cowardice, those with tails that are longer and have fewer defects are recognized as the stronger ones among fellow Gekkomon.",
+  "web_created": true
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Sora",
+  "season": 1,
+  "img": "Sora.webp",
+  "abilities": [
+    {
+      "name": "Read the Room",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "At the start of each encounter you may make a free Radar check (DN 10). On a success the GM tells you one piece of information about the battlefield — a hidden enemy, a terrain hazard, or a weak point."
+    },
+    {
+      "name": "Steady Hands",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "When you make a Recovery or Mend check, add your Love rank as a bonus to the roll on top of the normal skill formula. Care given with precision goes further."
+    },
+    {
+      "name": "Protective Instinct",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Love rank 4",
+      "description": "When an ally within 2 spaces is targeted by an attack, you may use your Free Action to move up to 2 spaces toward them as an off-turn free action. This triggers before the hit resolves."
+    },
+    {
+      "name": "Rally Cry",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Love rank 4",
+      "description": "As a Basic Action, choose one ally Digimon. They immediately remove one stack of any status effect currently affecting them. Can be used as many times per encounter as you have Basic Actions to spend."
+    },
+    {
+      "name": "Field Medic",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Steady Hands, Love rank 5",
+      "description": "When you successfully use Recovery during a short rest, both your Tamer AND your Digimon restore HP equal to double the roll result instead of the normal amount."
+    },
+    {
+      "name": "Never Too Late",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Rally Cry, Love rank 5",
+      "description": "Once per session when a Digimon in your party would enter egg state, you may immediately spend 10 Hope to prevent it. That Digimon instead stabilizes at In-Training stage with 1 HP."
+    },
+    {
+      "name": "Heart of the Team",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Love rank 7",
+      "description": "Once per session at the start of your turn you may activate Heart of the Team. All allied Tamers and Digimon restore HP equal to your Love rank. This does not cost an action."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Mercuremon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Generous Mirror",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "It reflects an attack with itsIrony no Tate, or uses theIrony no Tateto fire a blast of light."
+  },
+  "digivolves_from": [
+    "Hagurumon",
+    "Kokuwamon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Sinduramon",
+    "Wisemon",
+    "Sephirothmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Steel which bears the might of one of the legendary Warrior Ten . It acts as an advisor among the Evil Warriors , to whom it imparts its wisdom. Due to its aristocratic tendencies, it often obsesses over making sure things are done to its liking; this obsession carries over into battle, where it explains its tactics and the splendor of the equipment it uses one by one. While its brilliant mind allows it to come up with various strategies, at the same time, it often ends up arguing with itself in a fast-paced soliloquy because of it. The powerful mirrors on both of its arms are referred to as the Irony no Tate , and they reflect any damage dealt to it by the opponent's attacks back at the opponent. It also utilises a peculiar trick where it reflects itself in its mirror, then proceeds to enter the mirror and vanish without a trace. Its Special Moves are reflecting the opponent's attacks back at it with its Irony no Tate ( Generous Mirror ), and reversing the properties of the opponent's attacks and offsetting them ( Offset Reflector ).",
+  "web_created": true
+}

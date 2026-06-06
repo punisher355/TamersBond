@@ -1,0 +1,42 @@
+{
+  "name": "Plesiomon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Sorrow Blue",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Sings with a high-pitched, crystal-clear voice, wrapping the listener in sorrow and making them lose their fighting spirit."
+  },
+  "digivolves_from": [
+    "Anomalocarimon",
+    "Brachimon",
+    "Chimairamon",
+    "Dagomon",
+    "Marin Chimairamon",
+    "Marin Devimon",
+    "Megadramon",
+    "Mermaimon",
+    "Tonosama Gekomon",
+    "Whamon Perfect",
+    "Zudomon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A previously imaginary Digimon discovered within the computer of a British cryptozoology research institute. It was a Digimon that had already been rumored among researchers . Although it rarely makes an appearance, it seems to show up when visibility is reduced due to being shrouded in fog. It is a mysterious being whose appearance gives the impression of being polished to shine white. It sings with a high-pitched, crystal-clear voice, wrapping the listener in sorrow and making them lose their fighting spirit ( Sorrow Blue )."
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Justimon: Accel Arm",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 11,
+    "LVE": 12,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Trinity Arm",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Transforms its right arm into theAccel Arm,Critical Arm, orBlitz Arm."
+  },
+  "digivolves_from": [
+    "Cyberdramon",
+    "Garudamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A \"Hero of Justice\"-type Digimon wearing a flapping red muffler. Its sense of justice burns hot, and as it is a Digimon that never overlooks unjust acts or evil deeds, it is an existence which Baby Digimon aspire to. It comes along like the wind, swings down its hammer of Justice, and leaves like the wind. Also, it seems to like taking a decisive pose atop a cliff while facing the setting sun. By switching out the three plugs on its right shoulder, which are equipped to the \" Extend Transmitter \" on its back, it can make its arm transform into the power-type \" Accel Arm \", the lightning-type \" Blitz Arm \", or the cutter-type \" Critical Arm \". Its Signature Move is transforming its arm into the three types ( Trinity Arm ), and the destructive force of its Special Move \" Justice Kick \" is said to reach 45 tons. (*This image is of the \"Accel Arm\")"
+}

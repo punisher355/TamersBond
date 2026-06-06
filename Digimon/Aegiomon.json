@@ -1,0 +1,38 @@
+{
+  "name": "Aegiomon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Attract Echo",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Plays a song with itsSyrinxthat makes listeners lose their sense of self and see only Aegiomon."
+  },
+  "digivolves_from": [
+    "Elecmon",
+    "Elecmon (Violet)"
+  ],
+  "digivolves_to": [
+    "Aegiochusmon",
+    "Aegiochusmon: Blue",
+    "Aegiochusmon: Dark",
+    "Aegiochusmon: Green",
+    "Aegiochusmon: Holy"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A God Man Digimon that has an appearance fusing the lower body of a goat with the upper body of a human. As a member of the same musical troupe as Sirenmon , it is usually playing the pipes called \" Syrinx \" hung at its waist and enjoying the music. Although it has a peace-loving personality and doesn't really like to fight, the power it conceals within is unquantified, and when Aegiomon fights to protect something, it exhibits unique talent for combat. It is said that by playing the \" Attract Echo \", which attracts the attention of those who hear it, on the Syrinx it possesses, Aegiomon snatches away the sense of self of those who continue to listen to its sound, and blinds them to everything but its figure. With this, it can produce an opportunity for other Digimon to flee, or a chance for them to pursue. Its Special Moves are hurling a sharp, backwards kick with its prided goat legs ( Iron Trust ), and beating the opponent while releasing the electricity circulating within its body from a portion of its arms, numbing the opponent's sensitivity and dulling their movements ( Stun Beat Blow ).",
+  "web_created": true
+}

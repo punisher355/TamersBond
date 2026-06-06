@@ -1,0 +1,39 @@
+{
+  "name": "Huanglongmon",
+  "stage": "Mega II",
+  "attribute": "Data",
+  "element": "Wind",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 11,
+    "LVE": 17,
+    "KNW": 13,
+    "SNC": 17,
+    "RLB": 18
+  },
+  "signature_move": {
+    "name": "Taikyoku",
+    "element": "Neutral",
+    "pr": 13,
+    "tags": "[RANGE 8] [BLAST 5] [TRUE]",
+    "description": "12Disassembles everything in theDigital Worldinto the two extremes of light and darkness.Summons a yin-yang symbol, then shoots a massive blast of light and darkness from its mouth through it."
+  },
+  "digivolves_from": [
+    "Baihumon",
+    "DORUgoramon",
+    "Dinorexmon",
+    "Goddramon",
+    "Holydramon",
+    "Mugendramon",
+    "Qinglongmon",
+    "Xuanwumon",
+    "Zhuqiaomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese Ruling over the \" Four Holy Beasts \" who protect the east, west, south, and north of the Digital World , it is an emperor Digimon who is enshrined in the center and rules the \"land (world)\". An angel Digimon that descended in the distant past had sealed it in the deepest, darkest place within the earth. The Four Holy Beasts lost their ruler because of this, causing a struggle for hegemony among them, but an equilibrium is maintained at present. It is a being of both good and evil, and is called the \" Taiji \" of light and darkness . It has eight eyes and twelve external Digicores , and its gigantic body is covered in scales of the special \" Huanglong Ore \" that boasts of absolute hardness, so inflicting even a single wound upon it is impossible. Its Special Moves are continuously disassembling everything in the Digital World into the two extremes of light and darkness throughout eternity, until eventually it turns all to nothingness ( Taikyoku ), and generating a gigantic typhoon of an earthflow on the scale of a natural disaster ( Oukai ). Huanglong Ore As the ore from which \" Chrondigizoit \" is derived, it is a virtual ore that boasts of absolute hardness. Only Huanglong Ore is able to actually scratch Huanglong Ore, and because there is no method available to compare it with other minerals and metals, it is impossible to measure its hardness. Despite this extreme hardness, its weight is extremely great, so it is not suitable for things like weapons or armor. It is also highly scarce, and can only be found deep underground. Not only that, it is said that it requires many, many years—far more than since the age of myth—to unify Huanglong Ore with living things, and at present no other Digimon has been discovered to have unified with this super-hard ore besides Huanglongmon. As Chrondigizoit resolves these downsides, one could say it is an excellent rare metal.",
+  "web_created": true
+}

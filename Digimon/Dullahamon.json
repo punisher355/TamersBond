@@ -1,0 +1,31 @@
+{
+  "name": "Dullahamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 11,
+    "SNC": 13,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "BercilakEdge",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "A surging combo attack in which it swings its chained head."
+  },
+  "digivolves_from": [
+    "Fantomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Ghost Digimon that rides its ethereal, cherished horse \" Cóiste Bodhar \", seeking the lives of Digimon who are close to death. Its head and body, linked by chains, each have a will of their own, and display an excellent combination in battle. On the other hand, it has frequently been seen running about in the wilderness at night as if its body were being manipulated by its rampaging head. Its Special Moves are a surging combo attack in which it swings its chained head ( Bercilak Edge ), and dragging the opponent into a floating coffin with its ghostly hands ( Sleepy Hollow ). When trapped in these coffins, their physical data breaks down, and they become part of the spirits that enshroud Dullahamon.",
+  "web_created": true
+}

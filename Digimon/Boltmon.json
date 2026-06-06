@@ -1,0 +1,45 @@
+{
+  "name": "Boltmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 11,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Tomahawk Steiner",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Easily wields its giganticbattle axeand throws it like a boomerang."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Asuramon",
+    "Big Mamemon",
+    "Blikmon",
+    "Blue Meramon",
+    "Death Meramon",
+    "Insekimon",
+    "Metal Greymon (Virus)",
+    "Pumpmon",
+    "Taomon",
+    "Taomon (Silver)",
+    "Tekkamon",
+    "Vajramon",
+    "Volcamon",
+    "Zudomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A prototype Cyborg Digimon constructed at the same time as Andromon . Unlike the machine-based Andromon, the flesh-based Boltmon possessed emotions, as well as power that surpassed Andromon's; however, it was difficult to control and ran wild, and thus the matter was covered up. It is an unfortunate Digimon whose own existence was denied, and so it wanders within the darkness of its sorrow. Its Special Move is wielding its gigantic battle axe with ease ( Tomahawk Steiner )."
+}

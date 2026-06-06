@@ -1,0 +1,37 @@
+{
+  "name": "Zanmetsumon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 7,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Goren Danreizan",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "A combo attack with its five swords."
+  },
+  "digivolves_from": [
+    "Betel Gammamon",
+    "Gulus Gammamon",
+    "Kaus Gammamon",
+    "Wezen Gammamon"
+  ],
+  "digivolves_to": [
+    "Kuzuhamon",
+    "Siriusmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A swordmaster Digimon that freely wields five swords. It wanders the Digital World and devotes itself to battle, thinking only about honing its sword techniques. It is capable of unleashing slash attacks in all directions from the swords it holds in its four hands and the one equipped to its tail, so it is difficult even for those with considerable skill to avoid them completely. Its Special Moves are a combo attack with its five swords ( Goren Danreizan ), and slashing from five directions simultaneously ( Gojū Rasendachi ). It also has a technique called \" Gokumon-Shibari \", in which it lets out a huge roar from the maw on its torso to restrict the opponent's movements, but because it believes in slaughtering its opponent only by slashing them, it rarely performs this."
+}

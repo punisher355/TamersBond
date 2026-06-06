@@ -1,0 +1,59 @@
+{
+  "name": "Sangloupmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "DORUmon",
+    "Dracumon",
+    "Gaomon",
+    "Gazimon",
+    "Hagurumon",
+    "Herissmon",
+    "Impmon",
+    "Lunamon",
+    "Penmon",
+    "Phascomon",
+    "Plotmon"
+  ],
+  "digivolves_to": [
+    "Angewomon",
+    "Archnemon",
+    "Astamon",
+    "Cerberumon",
+    "Death-X-DORUguremon",
+    "Lucemon: Falldown Mode",
+    "Matadrmon",
+    "Mephismon",
+    "Oleamon",
+    "Pajiramon",
+    "Phelesmon",
+    "Scorpiomon",
+    "Skull Baluchimon",
+    "Vamdemon",
+    "Were Garurumon (Black)",
+    "SkullBaluchimon",
+    "Cerberumon: Werewolf Mode",
+    "Pajramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A noble, bloodsucking wolf Digimon. It is a considerably old species of Digimon, and is said to have survived since the Genesis of the Digital World . Digimon who have had their blood sucked by Sangloupmon have all the information drawn out of their Digicores , cease vital functions, and die. Sangloupmon is able to instantly move to different places as it rushes about the Net by breaking down its data into packet s of its own volition. For this reason, it is said to be very difficult to capture Sangloupmon. Its Special Moves are flinging thousands of tiny blades and instantaneously skewering the opponent from within ( Sticker Blade ), and disassembling its own data and melting into the opponent's shadow ( Black Mind )."
+}

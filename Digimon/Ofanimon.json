@@ -1,0 +1,40 @@
+{
+  "name": "Ofanimon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Eden's Javelin",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Stabs the enemy with its javelin.Fires a ray of holy light from its javelin."
+  },
+  "digivolves_from": [
+    "Andiramon (Deva)",
+    "Angewomon",
+    "Asuramon",
+    "Bastemon",
+    "Holy Angemon",
+    "Lady Devimon",
+    "Meicrackmon",
+    "Neo Devimon",
+    "Piccolomon",
+    "Tyilinmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Ophan Digimon that is the final form of feminine Angel Digimon. It is one of the Three Archangel Digimon who protect the Digital World's core \" Kernel \" ( God 's domain), alongside Seraphimon and Cherubimon . As the Digital World's Holy Mother -like being, it imparts the loving and merciful side of God, while Seraphimon is the executor of the enlightened God's laws, and Cherubimon is the guardian of God and its wisdom; each has their own duty. Its Special Moves are \" Eden's Javelin \" and \" Sefirot Crystal \".",
+  "web_created": true
+}

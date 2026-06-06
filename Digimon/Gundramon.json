@@ -1,0 +1,36 @@
+{
+  "name": "Gundramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 11,
+    "LVE": 12,
+    "KNW": 13,
+    "SNC": 11,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Gewaltschwärmer",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires a volley in all directions."
+  },
+  "digivolves_from": [
+    "Gigadramon",
+    "Master Blimpmon",
+    "Metal Tyranomon",
+    "Orochimon",
+    "Rebellimon",
+    "Tankdramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A large Digimon with a massive quantity of firearms. Possessing outstanding firepower, Gundramon, Magna Kidmon and Beel Starmon are collectively known as the \" Three Musketeers \" by many Digimon. Furthermore, Gundramon is part of the Crack Team , and is positioned for use in combat just like Mugendramon . It is faster than Mugendramon, and has high maneuverability such that it instantly moves within firing range. The burning smell of cartridges permeates through the 100% full metal comprising its body, so it is a bitter, hard-boiled Digimon. Its Special Moves are picking off the enemy's vitals with the six-chambered revolvers on both of its hands ( Der Blitz ), pinning the enemy to the ground with its feet and shooting them at point-blank range ( Platzenkreuz ), in addition, it has \" Gewaltschwärmer \", a volley fired in all directions."
+}

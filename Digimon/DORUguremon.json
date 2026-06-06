@@ -1,0 +1,57 @@
+{
+  "name": "DORUguremon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Metal Meteor",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[RANGE 7] [BLAST 2] [PIERCE]",
+    "description": "Fires an iron ball of super-high mass more than ten times greater than its body."
+  },
+  "digivolves_from": [
+    "Cyclomon",
+    "DORUgamon",
+    "Death-X-DORUgamon",
+    "Garurumon",
+    "Garurumon (Black)",
+    "Greymon (Blue)",
+    "Growmon",
+    "Omekamon",
+    "Paledramon",
+    "Raptordramon",
+    "Reppamon",
+    "Rhinomon",
+    "Waspmon",
+    "XV-mon"
+  ],
+  "digivolves_to": [
+    "Alphamon",
+    "Breakdramon",
+    "Death-X-DORUgoramon",
+    "Death-X-mon",
+    "Dinotigermon",
+    "Examon",
+    "Gaioumon",
+    "Gaioumon: Itto Mode",
+    "Giga Seadramon",
+    "Grandis Kuwagamon",
+    "Sleipmon",
+    "Spinomon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A colossal Beast Dragon Digimon whose form was released through the Interface on its brow by the potent life-force data of the legendary beast, the \"Dragon\", which slept within the deepest parts of its Digicore , and that holds the alias of \" Final Enemy \". With its overwhelming stature it can demolish any dauntlessly courageous Digimon, and even the attacks of the \" Nightmare Soldiers \" are deflected with one sweep of its wing. It is highly intelligent, and won't reveal its existence carelessly, so it is difficult to even detect it. Its Special Moves are firing a supermassive iron sphere more than ten times its own size, crushing the opponent in one hit ( Metal Meteor ), and skewering the opponent before flinging them up into the sky ( Bloody Tower ).",
+  "web_created": true
+}

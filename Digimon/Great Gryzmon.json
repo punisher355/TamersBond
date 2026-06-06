@@ -1,0 +1,36 @@
+{
+  "name": "Great Gryzmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Tōkonsō",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Tears the enemy to pieces with its flaming claws."
+  },
+  "digivolves_from": [
+    "DORUgamon",
+    "Gryzmon"
+  ],
+  "digivolves_to": [
+    "Callismon",
+    "Cherubimon (Vice)",
+    "Marsmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Calling itself the strongest martial artist in the Digital World , it is a Digimon whose motto is to \"entertain spectators above all in battle\". Its performance in combat captivates the surrounding Digimon watching on, livening up the battlefield. It is also a hard worker that always trains so that it can live up to its audience's expectations. In addition, a match against Pile Volcamon , who is considered to be its eternal rival, is a big event that draws in many spectators. Its Special Moves are tearing the enemy to pieces with its flaming claws ( Tōkonsō ), and igniting the poison mist it spews from its mouth to trigger an explosion ( Bakugiri ). Finally, the most popular bold move among its audience is \" GGS \", in which it strikes the opponent with a sonic lariat in a special ring it summons from the earth."
+}

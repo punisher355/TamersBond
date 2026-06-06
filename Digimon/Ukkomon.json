@@ -1,0 +1,33 @@
+{
+  "name": "Ukkomon",
+  "stage": "Rookie",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 4,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Whirlpool Spin",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Rotates its body like a spinning top and performs a ramming attack."
+  },
+  "digivolves_from": [
+    "Poromon"
+  ],
+  "digivolves_to": [
+    "Big Ukkomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A mythical Ancient Species Digimon whose activity records remain in the ancient Digital World . Rumor has it that Ukkomon can grant the wishes of others, and it is said that because of this, many Digimon gathered around Ukkomon and flourished, forming villages. However, records of Ukkomon's activities were lost with the destruction of the ancient Digital World, and it is thought that it had become extinct. Its Special Moves are rotating its body like a spinning top and performing a ramming attack ( Whirlpool Spin ), and hijacking the consciousness of an opponent that meets its gaze ( Liar Dream )."
+}

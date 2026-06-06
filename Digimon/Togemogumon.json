@@ -1,0 +1,39 @@
+{
+  "name": "Togemogumon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Hail Machine Gun",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Fires the crystals on its back all at once."
+  },
+  "digivolves_from": [
+    "Ganimon",
+    "Mushmon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Chimairamon",
+    "Magnamon",
+    "Panjyamon",
+    "Skull Satamon",
+    "Vermillimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mammal Digimon that evolved through the power of the \" Digimental of Friendship \". Ultra-low temperature ice crystals stick out from its back like a pincushion. Touching even one of these crystals is enough to freeze you in an instant, so simply defending itself has become its greatest offense. Togemogumon is sluggish, but because its defending is also an attack in itself, it is balanced in both offense and defense. Its Special Move is firing the crystals on its back all at once ( Hail Machine Gun ). Togemogumon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Kameda Takaaki from Tottori prefecture .",
+  "web_created": true
+}

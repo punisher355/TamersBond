@@ -1,0 +1,33 @@
+{
+  "name": "Ancient Wisemon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 9,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Laplace no Ma",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "123Calculates the coordinates to the spirit world and imprisons the opponent for eternity in a separate universe.Accesses theAkashic Recordsand rewrites the past and future.Vanishes into green light and reforms itself. Its arms become spindly and it emits purple flames."
+  },
+  "digivolves_from": [
+    "Wisemon"
+  ],
+  "digivolves_to": [
+    "Lucemon: Satan Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Possessing the attribute of \"Steel\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is the wisest person in the Digital World. Due to the Akashic Records which record all of the excellent intellects of ancient times, it is said that there is nothing which Ancient Wisemon doesn't know. It is a sage that possesses the knowledge of the distant past, but can also forecast the distant future. Also, it is said that Ancient Wisemon's mirror body is connected to the spirit world (another universe). Ancient Wisemon's abilities were later passed on to the \"Mutation Digimon\". Its Special Moves are calculating the coordinates to the spirit world with ultimate wisdom and imprisoning the opponent for eternity in that separate universe ( Laplace no Ma ), and summoning the ultimate evil god from that universe ( Elder Sign )."
+}

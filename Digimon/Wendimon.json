@@ -1,0 +1,50 @@
+{
+  "name": "Wendimon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Destroyed Voice",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Howls out a destructive soundwave."
+  },
+  "digivolves_from": [
+    "DORUmon",
+    "Gazimon",
+    "Goburimon",
+    "Keramon",
+    "Labramon",
+    "Lopmon",
+    "Phascomon",
+    "Strabimon",
+    "Terriermon",
+    "Terriermon Assistant"
+  ],
+  "digivolves_to": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Black Rapidmon",
+    "Death Meramon",
+    "Marin Devimon",
+    "Master Tyranomon",
+    "Mephismon",
+    "Shawujinmon",
+    "Sinduramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Lopmon underwent a \" Dark Evolution \" due to anger and hatred, becoming a brutal Beast Man Digimon. It is not completely \"evil\", and deep within its heart it possesses the gentle side it had while it was Lopmon. However, its \"warmth\" can be broken by the power of its anger, so that it runs the whole gamut of destruction. Also, it has the ability to manipulate time and space, and is able to warp by passing through other dimensions, as well as to create a special space. Its Special Moves are destroying even rocks with a shock wave ( Destroyed Voice ), and swinging both of its arms like clubs ( Club Arm )."
+}

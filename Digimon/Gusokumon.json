@@ -1,0 +1,36 @@
+{
+  "name": "Gusokumon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Ebidramon",
+    "Seadramon",
+    "Shellmon",
+    "Tobiumon"
+  ],
+  "digivolves_to": [
+    "Neptunemon",
+    "Regalecusmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Crustacean Digimon that lurks at the bottom of the ocean, at a depth that light fails to reach. It is also known for being a long-lived Digimon, capable of long-term biological activity while consuming a miniscule amount of energy. Weak, injured Digimon that occasionally sink to the bottom of the ocean turn into its prey. It barely ever moves on its own accord. In addition to fighting back against intruders that draw near with the sharp \" Brunt Claws \" on its forelimbs, when facing a large number of enemies, it defends itself by firing countless \" Colony Torpedoes \", small fish-shaped biological weapons, from its back. Although the underwater speed of these biological weapons is slow, their nature is similar to that of mines in that they trigger a huge explosion on contact."
+}

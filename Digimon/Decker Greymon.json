@@ -1,0 +1,36 @@
+{
+  "name": "Decker Greymon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 10,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Plasma Deckerdra-Launcher",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires an explosive plasma shot from the cannon on its right arm."
+  },
+  "digivolves_from": [
+    "Deckerdramon",
+    "Greymon"
+  ],
+  "digivolves_to": [
+    "Blitz Greymon",
+    "Gaioumon",
+    "War Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The \" Assault-strike Mode \", which added Deckerdramon 's offensive and assault abilities to Metal Greymon 's power, is a form that has attained a balance between offensive, defensive, and locomotive abilities. Decker Greymon's comprehensive combat strength is equivalent to that of a battalion composed of 324 combat-type Digimon, so even if a hypothetical group of enemies tried to lie in wait for it, with its great firepower and tenacious defensive power, and its ability to cover ground without trouble from any kind of rough terrain, it will trample the enemy line in a violent assault. It is worth mentioning that it can \"target multiple opponents with multiple Special Moves simultaneously\", and thanks to this ability, Decker Greymon can fight against an army corps even on its own. Also, the energy that is enhanced within its body to its utmost limit grants Decker Greymon a final bold move. It is not the end even if one is able to take Decker Greymon down. The immense energy that is released instantaneously from Decker Greymon's body becomes a tremendous shock wave that scorches the earth within a 10km radius.",
+  "web_created": true
+}

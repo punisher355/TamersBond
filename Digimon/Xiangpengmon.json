@@ -1,0 +1,34 @@
+{
+  "name": "Xiangpengmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Raikōben",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Generates thunderclouds and looses countless thunderbolts over the target area where the enemy is."
+  },
+  "digivolves_from": [
+    "Arkhai Angemon",
+    "Huankunmon"
+  ],
+  "digivolves_to": [
+    "Shakamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Holy Bird Digimon referred to as a phantom, it has a body large enough to cover a mountain. It usually sleeps peacefully at the depths of the Net Ocean . While sleeping, Xiangpengmon's data regulates the surrounding environment. Whenever it senses another area of the ocean where the environment has deteriorated, it will awaken, move there to improve that environment, and then return to sleep. Because of its huge size, each time it leaps from the surface and flaps its wings, it shakes the atmosphere, causing all kinds of abnormal weather. Also, while it is in the ocean, several Aquatic Digimon use the crevices all over its body as a nest. In addition, these Aquatic Digimon provide Xiangpengmon with energy little by little, forming a symbiotic relationship that supplies it with nourishment while it sleeps. None of its Special Moves target individuals; they are all wide-ranging, specialized techniques that indiscriminately annihilate a large number of enemies. There is \" Raikōben \", in which it generates thunderclouds and looses countless thunderbolts over the target area where the enemy is, \" Shinsaiga \", wherein it fires the spears on both of its wings from high above to shatter the earth, and \" Tensei Kaikai \", where it hurls an enormous sphere created from a large amount of seawater towards the ground."
+}

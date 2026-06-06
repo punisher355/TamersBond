@@ -1,0 +1,59 @@
+{
+  "name": "Atlur Kabuterimon (Blue)",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Electric",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 6,
+    "LVE": 9,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Horn Buster",
+    "element": "Electric",
+    "pr": 10,
+    "tags": "[RANGE 4] [CHAIN 2,3]",
+    "description": "Blasts fire from its rear end and rockets at the enemy, slamming into it with its horn."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "Blade Kuwagamon",
+    "Blitzmon",
+    "Butterflamon",
+    "Chrysalimon",
+    "Digmon",
+    "Dokugumon",
+    "Exermon",
+    "Flymon",
+    "Forgebeemon",
+    "Gokimon",
+    "Kabuterimon",
+    "Kuwagamon",
+    "Monochromon",
+    "Searchmon",
+    "Shadramon",
+    "Snimon",
+    "Stingmon",
+    "Tailmon",
+    "Tortamon",
+    "Vegimon",
+    "Waspmon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Craniummon",
+    "Gran Kuwagamon",
+    "Herakle Kabuterimon",
+    "Holydramon",
+    "Saint Galgomon",
+    "Sleipmon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An evolution of Kabuterimon that was discovered within the tropical region of the Net Area . It is almost 1.5 times Kabuterimon's size, and is quite large among Insect Digimon. While its flight abilities have regressed to a certain extent, the strength of its horn, which is its main weapon, has soared. Also, muscular tissues have appeared on the base of its forelimbs, so its grappling ability has also improved. Its behavior, with the exception of its survival instincts, has been observed to consist of protecting the weak, and there are even times when its behavior has appeared knight-like. Its Special Move is stabbing the opponent with its gigantic horn ( Horn Buster )."
+}

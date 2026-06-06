@@ -1,0 +1,42 @@
+{
+  "name": "Ancient Beatmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Calamity Thunder",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "A calamitous thunder which brings about super-disasters."
+  },
+  "digivolves_from": [
+    "Archnemon",
+    "Cannonbeemon",
+    "Climbmon",
+    "Jewelbeemon",
+    "Metallife Kuwagamon",
+    "Okuwamon",
+    "Rhino Kabuterimon",
+    "Scorpiomon",
+    "Vespamon"
+  ],
+  "digivolves_to": [
+    "Apocalymon",
+    "Tyrant Kabuterimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Possessing the attribute of \"Thunder\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it has an appearance fused from many insects such as the Rhinoceros beetle and Stag beetle . Its shell has a hardness rivaling that of Chrome Digizoid , so the falx on both of its arms can cut through anything, and it can easily lift up objects hundreds of times its own weight. Ancient Beatmon's abilities were later passed on to the \"Insect Digimon\". Its Special Moves are a calamitous thunder which brings about super-disasters ( Calamity Thunder ), and a super-electrical attack with a thousand times the power of Giga Blaster ( Tera Blaster )."
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Growmon (Orange)",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Exhaust Flame",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Breathes out a scorching burst of flames with a roar."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Clear Agumon",
+    "Guilmon",
+    "Patamon",
+    "Toy Agumon"
+  ],
+  "digivolves_to": [
+    "Black Megalo Growmon",
+    "Gigadramon",
+    "Groundramon",
+    "Megalo Growmon",
+    "Megalo Growmon (Orange)",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Mihiramon",
+    "Orochimon",
+    "Rize Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Growmon that became an orange-colored Data-type. Compared to the Virus-type, its usual personality is calmer, but it will quickly become agitated if something occurs. Its Special Move is spewing out a powerful blaze with a roar ( Exhaust Flame )."
+}

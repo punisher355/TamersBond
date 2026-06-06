@@ -1,0 +1,49 @@
+{
+  "name": "Mugendramon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Mugen Cannon",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires superdreadnought-class energy waves from its two cannons."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Atlur Ballistamon",
+    "Fantomon",
+    "Mamemon",
+    "Marin Devimon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Monzaemon",
+    "Rapidmon Perfect",
+    "Skull Greymon",
+    "Tankdramon",
+    "Triceramon",
+    "Vermillimon",
+    "Nanomon (Digimon)",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "Apocalymon",
+    "Huanglongmon",
+    "Omnimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The Digital World's strongest Digimon, whose body is 100% full metal . It was built by synthesizing the parts of many Cyborg Digimon, and it is thought that all of the Cyborg Digimon produced so far were merely prototypes for the completion of Mugendramon. Its power is at a level that would overwhelm other Digimon, and it possesses an intellect which boasts incomparable throughput , but it is a purely mechanical Digimon that does not possess its own will. Instead, someone planted a program containing evil intentions within the Digicore at the center of its body, and Mugendramon is supplied with infinite power from that malice-filled Digicore. Its Special Move is superdreadnought-class energy waves fired from its two cannons ( ∞ Cannon ).",
+  "web_created": true
+}

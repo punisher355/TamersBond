@@ -1,0 +1,34 @@
+{
+  "name": "Ariemon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 13,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Rakubaku Sōchū",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Extends the ribbon wrapped around its shell staff to capture the enemy."
+  },
+  "digivolves_from": [
+    "Darumamon",
+    "Marin Bullmon"
+  ],
+  "digivolves_to": [
+    "Enmamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Aquatic Digimon that is said to cure all kinds of illnesses and wounds. It prophesizes the numerous calamities and plagues that visit the Digital World , and has been witnessed appearing in various places issuing warnings. Although it has a form resembling a mermaid, it is capable of moving around while floating lightly, and even on land. However, it will gradually dry up if it stays away from the water. The portion of it that looks like hair is composed of seawater data, which can freely change shape and be used in a variety of ways; sometimes offensively, sometimes defensively, and on other occasions, as a bed for young Digimon. A Digimon brimming with a compassionate spirit, it often refrains from causing unnecessary harm, regardless of who the enemy is, and sticks to just capturing them. Also, it works to defend the ecosystem by conjuring large shells for young Aquatic-species Digimon, which are provided as safe hiding places to protect them. Its Special Moves are extending the ribbon wrapped around its shell staff to capture the enemy ( Rakubaku Sōchū ), transforming the seawater surrounding its staff into a spear to pierce the enemy ( Hatō Shinsō ), and using seawater with healing powers to cleanse any wounds or illnesses ( Jōryū Kaiyu )."
+}

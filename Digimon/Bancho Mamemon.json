@@ -1,0 +1,31 @@
+{
+  "name": "Bancho Mamemon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 12,
+    "LVE": 14,
+    "KNW": 12,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Golden Rush",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Uses its favourite clubsOugon Batto, to beat enemies to a pulp."
+  },
+  "digivolves_from": [
+    "Mamemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the Digimon that have acquired the title of \" Bancho \", it fights strongly in spite of its small stature, and has a personality that sports a chivalrous spirit and deeply overflowing emotions. As it tries to rebel against the rules of the Digital World , it lives an independent life. It similarly extends a hand to those Digimon who feel ill at ease with and isolated from the world, and from living together they have formed a group called the \" Mame-mon Rengō \". However, continuing to betray the rules of the world is not an easy task for them, and although Bancho Mamemon has had to fight those Digimon who aim to usurp it as leader under the pretense of a rebirth of the group several times over, the collective power of the Mame-mon Rengō have made those usurpers withdraw. It is thought that it acquired the title of Bancho from being able to avoid enemies without losing its own family as well in all kinds of predicaments. As with Bancho Leomon , it wears a GAKU-RAN that negates the impact of physical attacks, and this defensive effect is often used to protect its companions. Its Special Moves are using its favourite clubs Ougon Batto , to beat enemies to a pulp ( Golden Rush ), and hammering out its brotherly Black Hickeys from the Ougon Batto ( Senbon Dokkān ). Moreover, it has a Technique called \" Bukkomi Otokodama \", wherein it extends the prison chains sported on its entire body as it charges towards the enemy.",
+  "web_created": true
+}

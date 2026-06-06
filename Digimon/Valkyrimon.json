@@ -1,0 +1,42 @@
+{
+  "name": "Valkyrimon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 12,
+    "LVE": 15,
+    "KNW": 12,
+    "SNC": 13,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Fenrir Sword",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Slashes at and freezes the opponent with a cursed, absolute zero sword, bringing their vital functions to a halt."
+  },
+  "digivolves_from": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Andromon",
+    "Angewomon",
+    "Chimairamon",
+    "Holy Angemon",
+    "Knightmon",
+    "Savior Hackmon",
+    "Skull Satamon",
+    "Taomon",
+    "Taomon (Silver)",
+    "Tyilinmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Warrior Digimon of Norse mythology. It is accompanied by the golden bird \" Freyja \", which informs it if danger approaches. Also, it is said that it produces an aurora from the shining armor it wears, which resurrects the data of heroes that have fallen in battle, and returns them to a new Digitama . It is the possessor of such speed that it shows up like a gale, then slashes at the opponent with a swiftness too quick to catch with the eyes. Its Special Moves are a cursed, absolute zero sword that slashes at and freezes the opponent, bringing their vital functions to a halt ( Fenrir Sword ), and an unerring arrow ( Aurvandil no Ya ). Valkyrimon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Naohisa Tamura from Chiba prefecture .",
+  "web_created": true
+}

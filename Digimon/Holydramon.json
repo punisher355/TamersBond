@@ -1,0 +1,48 @@
+{
+  "name": "Holydramon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Holy Flame",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Strikes the opponent with the light energy of all justice in the form of a spiraling flame. Those who suffer this technique have their forms instantaneously erased."
+  },
+  "digivolves_from": [
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Dinobeemon",
+    "Garudamon",
+    "Holy Angemon",
+    "Holy Angemon: Priest Mode",
+    "Lilimon",
+    "Metal Greymon",
+    "Okuwamon",
+    "Orochimon",
+    "Panjyamon",
+    "Shakkoumon",
+    "Silphymon",
+    "Were Garurumon (Black)",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "Huanglongmon",
+    "Lucemon: Satan Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The ultimate form of god beast Digimon. Its heroic appearance is reminiscent of a ruler of the sky. There are few who have seen its appearance, and it has not even been entirely confirmed where it usually is. However, it is said that it suddenly appeared out of nowhere once when a gigantic evil energy was generated in the Digital World , and laid waste to the evil with its vast power. Its Special Move is striking the opponent with the light energy of all justice ( Holy Flame ). Those who suffer this technique have their forms instantaneously erased."
+}

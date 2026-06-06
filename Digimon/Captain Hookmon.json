@@ -1,0 +1,30 @@
+{
+  "name": "Captain Hookmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Rage Giga Anchor",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Hookmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Captain Hookmon is a reliable and heroic ship's captain Digimon who commands a pirate ship that cruises the Digital World . It excels in the art of survival, but the duty to support its subordinates weighs heavily on it, and it knows first-hand just how difficult that is. Therefore, it maintains a gentlemanly conduct even when faced with those it dislikes, showing its skill not only at seafaring but also in worldly wisdom. It isn't such a brute as to initiate battles without good reason, but if challenged to a battle it will meet the enemy with all its power. The \" Rage Giga Anchor \" equipped to its hand expresses Captain Hookmon's intimidating air to its opponents just by being held up, and Captain Hookmon specializes in violent fighting styles that make use of its \" Pirate's Punisher \", which has both slashing and gunfire functionality. The \" Leg Revolver \" fitted to its right leg is a technique suited for surprise attacks, but Captain Hookmon is such a gentleman that it takes it upon itself to give a warning before firing it."
+}

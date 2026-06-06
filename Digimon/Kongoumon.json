@@ -1,0 +1,36 @@
+{
+  "name": "Kongoumon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 8,
+    "LVE": 11,
+    "KNW": 8,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Teppou",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "An intense barraginghariteunleashed from its six arms."
+  },
+  "digivolves_from": [
+    "Gokimon",
+    "Kabuterimon",
+    "Shadramon"
+  ],
+  "digivolves_to": [
+    "Bancho Stingmon",
+    "Gran Kuwagamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Insect Digimon that evolved through the power of the \" Digimental of Miracles \". It is a heavyweight Power Fighter with a metal body that shines gold all over. It brings about miracles with its \" Vajra \", the sacred weapons it holds in its six hands, and is well-versed in all divine works. It is said that Kongoumon has been an agent of God on earth since ancient times, separate from Angel Digimon. Its Special Move is an intense barraging harite unleashed from its six arms ( Teppou ).",
+  "web_created": true
+}

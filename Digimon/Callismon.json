@@ -1,0 +1,39 @@
+{
+  "name": "Callismon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Deep Forest",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Tears the enemy apart with its sharp claws, causing their data to disintegrate."
+  },
+  "digivolves_from": [
+    "Grappu Leomon",
+    "Great Gryzmon",
+    "Monzaemon",
+    "Vamdemon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Zudomon"
+  ],
+  "digivolves_to": [
+    "Parallelmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Demon Beast Digimon with an appearance resembling a bear. Although it is considered to be a Digimon that evolved from the Gryzmon line, all Callismon are mutants that evolved from individuals that underwent data abnormalities. It is unknown whether the data abnormalities responsible for this occurred suddenly or were caused intentionally, and because its population is small, there are many mysteries surrounding it such as its ecology and evolution requirements. It has extremely high combat ability, owing to its hugely developed arms and armaments, and exhibits a ferocious nature that will not stop attacking the opponent until they are defeated. Its Special Moves are tearing the enemy apart with its sharp claws, causing their data to disintegrate ( Deep Forest ), and firing homing shots from the three gun barrels equipped to its right arm ( Rodeo Bullet ).",
+  "web_created": true
+}

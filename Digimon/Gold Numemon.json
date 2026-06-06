@@ -1,0 +1,47 @@
+{
+  "name": "Gold Numemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Earth",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Gold-durianRush",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Continuously throws gold poop."
+  },
+  "digivolves_from": [
+    "Armadimon",
+    "Betamon",
+    "Funbeemon",
+    "Gaomon",
+    "Hagurumon",
+    "Lalamon",
+    "Piyomon",
+    "Renamon",
+    "Solarmon",
+    "Zubamon"
+  ],
+  "digivolves_to": [
+    "Black King Numemon",
+    "Monzaemon",
+    "Vademon",
+    "Waru Monzaemon",
+    "Waru Seadramon",
+    "Gigantic Numemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A subspecies of Numemon whose whole body shines gold, it also specializes in aerial attacks as a result of gaining wings. It takes in gold data from mines in the Digital World , and has more defensive power than Numemon. One would have expected it to have grown fond of cleanliness with it shining gold, but its Special Move is continuously throwing gold poop ( Gold - durian Rush ). Also, in its \" Gold Excrement \", it throws gigantic poop.",
+  "web_created": true
+}

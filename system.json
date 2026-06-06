@@ -1,0 +1,78 @@
+{
+  "id": "digital-destiny",
+  "title": "Digital Destiny",
+  "description": "A Foundry VTT system for the Digital Destiny Digimon TTRPG.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Megan",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "digimon-ttrpg.js"
+  ],
+  "styles": [
+    "styles/digimon-ttrpg.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "season1-classes",
+      "label": "Season 1 Class Abilities",
+      "path": "packs/season1-classes.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
+      "name": "season2-classes",
+      "label": "Season 2 Class Abilities",
+      "path": "packs/season2-classes.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
+      "name": "season1-items",
+      "label": "Season 1 Items",
+      "path": "packs/season1-items.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
+      "name": "base-items",
+      "label": "Base Items",
+      "path": "packs/base-items.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
+      "name": "digimon-forms",
+      "label": "Digimon Forms",
+      "path": "packs/digimon-forms.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
+      "name": "digimon-moves",
+      "label": "Digimon Signature Moves",
+      "path": "packs/digimon-moves.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    }
+  ],
+  "socket": false,
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "flags": {}
+}

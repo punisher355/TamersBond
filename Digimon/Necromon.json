@@ -1,0 +1,31 @@
+{
+  "name": "Necromon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 13,
+    "SNC": 15,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Soul Striker",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Stabs theGrave-Bladeinto its opponent, penetrating their defenses and completely destroying theirDigicore."
+  },
+  "digivolves_from": [
+    "Fantomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Ghost Digimon of the highest class that took in data from various ghosts and horrors on the Net . Its characteristic gravestone-like sword, the \" Grave-Blade \", is a brutal weapon that brings death to those who touch it, despite being blunt. If it encounters a superior Digimon as it wanders around, it will bring them down by stabbing them with the Grave-Blade without making a sound. As such, it takes pleasure in absorbing and consuming the fading data of the Digimon it defeats with the lantern it holds. The data it absorbs with its lantern is recorded in the \" Necronomicon \", the book that it carries in its hand, and can be summoned as an apparition during battle. While it possesses the powerful ability to manipulate the dead, it is considerably weak against light and holy power, so it never appears before Digimon that bear such power. Its Special Moves are stabbing the Grave-Blade into the opponent as if it were an actual gravestone, penetrating their defenses, and completely destroying their Digicore ( Soul Striker ), and summoning the data of the Digimon it has absorbed as apparitions all at once, and annihilating the opponent with an army that will not stop regardless of how injured they are ( Apparition Legion )."
+}

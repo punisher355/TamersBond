@@ -1,0 +1,58 @@
+{
+  "name": "Ankylomon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Megaton Press",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Leaps into the air and body-slams the enemy, crushing them under its weight."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Armadimon",
+    "Gizamon",
+    "Gomamon",
+    "Gottsumon",
+    "Kokuwamon",
+    "Patamon",
+    "Psychemon",
+    "Tentomon",
+    "Zubamon",
+    "Modoki Betamon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Archnemon",
+    "Brachimon",
+    "Groundramon",
+    "Holy Angemon",
+    "Insekimon",
+    "Mammon",
+    "Marin Chimairamon",
+    "Paildramon",
+    "Piccolomon",
+    "Scorpiomon",
+    "Shakkoumon",
+    "Skull Greymon",
+    "Triceramon",
+    "Vikaralamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Ankylosaur Digimon whose whole body is covered in hardened skin. Not only is its skin hardened, but it also has hard protuberances coming out all over, and so its charge attack has extraordinary destructive power. As a fundamental result of being a herbivorous Digimon, it is not ferocious, but it is decidedly not timid, and possesses a brave personality. Its Special Moves are leaping high into the sky despite its appearance, then crushing the opponent under its large build ( Megaton Press ), and violently beating the opponent with the iron sphere on the tip of its tail ( Tail Hammer ). Those that suffer this technique have their body's wire frame completely shattered.",
+  "web_created": true
+}

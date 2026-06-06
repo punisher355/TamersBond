@@ -1,0 +1,34 @@
+{
+  "name": "Duftmon: Leopard Mode",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 13,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Wolkenkratzer",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Causes towering pillars of bedrock to appear from the ground, tossing the opponent."
+  },
+  "digivolves_from": [
+    "Were Garurumon",
+    "Were Garurumon (Black)"
+  ],
+  "digivolves_to": [
+    "JESmon GX"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "In \" Leopard Mode \", its Special Moves are causing towering pillars of bedrock to appear from the ground, tossing the opponent ( Wolkenkratzer ), and running across the land and flying through the sky, tearing the opponent apart from every angle ( Blockade ). Also, the spherical tip of Duftmon's tail generates globe-shaped energy mines that become its weapon \" Eroberung \", which it strategically encircles the opponent with.",
+  "web_created": true
+}

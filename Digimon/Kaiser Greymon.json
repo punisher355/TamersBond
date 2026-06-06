@@ -1,0 +1,40 @@
+{
+  "name": "Kaiser Greymon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 13,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Kuzuryūjin[N 1]",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Releases the eight dragon's veins dwelling within Gaia, then becomes the final dragon itself and pulverizes the opponent with its greatsword.Plunges theRyūgonkeninto the ground, from which it unleashes nine spectral dragons made of fire which seek the opponent."
+  },
+  "digivolves_from": [
+    "Aldamon",
+    "Megalo Growmon",
+    "Metal Greymon",
+    "Rize Greymon",
+    "Super Starmon",
+    "Superstarmon",
+    "Vritramon"
+  ],
+  "digivolves_to": [
+    "Susanoomon",
+    "Susanomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Transcendent-species Digimon that possesses power over Flame which is said to have surpassed even the might of the legendary Ten Warriors . It is said to bear the power of the nine dragon's vein s that flow through Gaia , and it has been prophesied that if it can restrain the might of the nine dragons, it will demonstrate unfathomable ability and even be able to rule Gaia. It is said that, in order to control their power, it possesses the \" Ryūgonken \" in which the dragon's souls are sealed. Its Special Moves are firing arrows from the \" Ryūgonken \", whose flames are so intense that they become a white light ( Enryūgeki ), and releasing the eight dragon's veins dwelling within Gaia, then becoming the final dragon itself and pulverizing the opponent with its greatsword ( Kuzuryūjin ).",
+  "web_created": true
+}

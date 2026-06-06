@@ -1,0 +1,48 @@
+{
+  "name": "Omekamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Rakugaki Rocket",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Fires off the pen it carries like a rocket."
+  },
+  "digivolves_from": [
+    "Blucomon",
+    "DORUmon",
+    "Funbeemon",
+    "Hagurumon",
+    "Jazamon",
+    "Ryudamon",
+    "Toy Agumon"
+  ],
+  "digivolves_to": [
+    "Cannonbeemon",
+    "Crys Paledramon",
+    "DORUguremon",
+    "Grademon",
+    "Hisyaryumon",
+    "Jazarichmon",
+    "Metal Fantomon",
+    "Pumpmon",
+    "Superstarmon",
+    "Tekkamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon born from the data of a certain computer's design drawing. It doesn't know who it is, so for now, it dresses as one of the holy \" Royal Knights \", who are famous among Digimon. Its \" Rakugaki Rocket \", which fires off the pen it carries on its back like a rocket, stains the body, annoying other Digimon. As for the pen, it seems it found it within a certain computer's art software. Its Special Move is its unexpectedly powerful \" Omeka Kick \"."
+}

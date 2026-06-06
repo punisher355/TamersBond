@@ -1,0 +1,62 @@
+{
+  "name": "Dagomon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Forbidden Trident",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Throws its trident with tremendous physical strength."
+  },
+  "digivolves_from": [
+    "Aquilamon",
+    "Blade Kuwagamon",
+    "Chrysalimon",
+    "Coelamon",
+    "Depthmon",
+    "Devidramon",
+    "Devimon",
+    "Ebidramon",
+    "Ice Devimon",
+    "Liamon",
+    "Mantaraymon",
+    "Octmon",
+    "Pegasmon",
+    "Raremon",
+    "Revolmon",
+    "Scumon",
+    "Seadramon",
+    "Shellmon",
+    "Sorcerimon"
+  ],
+  "digivolves_to": [
+    "Ancient Megatheriumon",
+    "Demon",
+    "EBEmon",
+    "Giga Seadramon",
+    "Leviamon",
+    "Metal Etemon",
+    "Metal Seadramon",
+    "Neptunemon",
+    "Plesiomon",
+    "Pukumon",
+    "Skull Mammon",
+    "Vulcanusmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A wicked god Digimon referred to as the \" Sinful Priest of the Ocean Floor \". It is thought to have evolved from a computer virus that would infect computers aboard ships, messing up their bearings and course. It bundles up its innumerable, multiplying tentacles and takes on a humanoid appearance, but its true form is a strange evolution of a Mollusk Digimon. Its Special Move is throwing its trident with tremendous physical strength ( Forbidden Trident ). For its defeated opponents, it holds the rosary around its neck and adopts a pose similar to mourning."
+}

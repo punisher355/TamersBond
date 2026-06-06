@@ -1,0 +1,56 @@
+{
+  "name": "Cody",
+  "season": 2,
+  "img": "Cody.webp",
+  "abilities": [
+    {
+      "name": "Kendo Stance",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Reliability rank 3+)",
+      "description": "Once per encounter at the start of your turn you may declare Kendo Stance. Until the start of your next turn your Digimon gains +3 to their Reliability stat. They take hits better when you are composed. Stance ends if your Digimon attacks — committing to a strike means leaving the defensive position."
+    },
+    {
+      "name": "Measured Step",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Reliability rank 3+)",
+      "description": "Once per encounter as a Free Action on your turn, choose one enemy within 4 spaces of your Digimon. Make a Zero Error check DN 12. On a success you identify the optimal attack angle — your Digimon's next attack against that enemy ignores half their Love stat damage reduction, rounded down."
+    },
+    {
+      "name": "Hold the Line",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Kendo Stance, Reliability rank 4",
+      "description": "While Kendo Stance is active your Digimon also gains +2 to all attack rolls. You are not hiding behind that wall — you are waiting for the right moment to strike through it."
+    },
+    {
+      "name": "Measured Response",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
+      "description": "Once per encounter when your Digimon is attacked and takes damage, you may use your Free Action to immediately make a Zero Error check DN 12. On a success your Digimon's next attack this round deals bonus damage equal to the damage they just received, up to a maximum of your Reliability rank x 2. You absorb information. You respond precisely."
+    },
+    {
+      "name": "Counter Strike",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Hold the Line, Reliability rank 5",
+      "description": "While Kendo Stance is active, when your Digimon is attacked and the attack misses, they may immediately make a free Basic Attack against the attacker as a Free Action. This does not end Kendo Stance. Patience is not passivity."
+    },
+    {
+      "name": "Unbroken Code",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "At least 1 Row 2 ability, Reliability rank 5",
+      "description": "Once per encounter when your Digimon is targeted by a Confuse, Blind, or Freeze status effect, you may make a Firewall check DN 14 as a Free Action off-turn. On a success the status is completely negated. Cody's principles extend to his partner. What he will not let break in himself, he will not let break in them."
+    },
+    {
+      "name": "Perfect Form",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Reliability rank 7",
+      "description": "Once per session at the start of your turn you may activate Perfect Form. For the rest of this encounter Kendo Stance no longer ends when your Digimon attacks — you maintain the defensive position through every strike. Your Digimon gains the full benefits of Kendo Stance and Hold the Line permanently for the duration, and Counter Strike triggers on every miss regardless of whether you declared the stance this turn. Cody does not reach Perfect Form. Perfect Form is simply what Cody looks like when he stops holding back."
+    }
+  ]
+}

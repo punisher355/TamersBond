@@ -1,0 +1,39 @@
+{
+  "name": "Fla Wizarmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Fire",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Magic Ignition",
+    "element": "Fire",
+    "pr": 5,
+    "tags": "[RANGE 6] [BURN 3,2]",
+    "description": "Shoots a blue fireball from its staff."
+  },
+  "digivolves_from": [
+    "Bokomon",
+    "Candmon",
+    "Guilmon",
+    "Pico Devimon",
+    "Tentomon"
+  ],
+  "digivolves_to": [
+    "Mistymon",
+    "Waru Monzaemon",
+    "Wisemon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Demon Man Digimon that Armor Evolved with the \" Digimental of Courage \". It is full of confidence and shows its true face, the exact opposite of Wizarmon , who is shy and does not show its uncovered face. It wields two matchstick-like staffs, which further enhance the effectiveness of its fire sorcery ( high-level programming language ). Its Signature Move is \" Magic Ignition \". Its Special Move is changing its surroundings into a firestorm ( Fire Cloud ).",
+  "web_created": true
+}

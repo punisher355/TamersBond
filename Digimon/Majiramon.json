@@ -1,0 +1,49 @@
+{
+  "name": "Majiramon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 8,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Vedhaka",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Disappears into a swirl of light in the sky from which it fires 108 shiningBǎo Shǐ, or breathes flames from its mouth."
+  },
+  "digivolves_from": [
+    "Coatlmon",
+    "Devidramon",
+    "Fladramon",
+    "Geo Greymon",
+    "Greymon",
+    "Greymon (Blue)",
+    "Hookmon",
+    "Karatuki Numemon",
+    "Kinkakumon",
+    "Mikemon",
+    "Siesamon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Cthyllamon",
+    "Dukemon",
+    "Hououmon",
+    "Megidramon",
+    "Qinglongmon",
+    "Vikemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Dragon . As a follower of the Four Holy Beasts Digimon Qinglongmon , it is extremely calculating and hates to even lift a finger if it won't benefit itself. However, if it realizes that something will benefit itself, it will want to poke its head in no matter what the thing is. It has a habit of putting a price on everything, and expressing various matters by their cost in money. During battle, it shoots through the opponent with the Bǎo Shǐ , which are the hairs of its tail and whiskers transformed (Incidentally, one Bǎo Shǐ is worth ¥ 5,000). Its Special Move is disappearing into the center of a swirl of light summoned in the sky, then firing 108 shining Bǎo Shǐ , burying a horde of opponents in just an instant ( Vedhaka ). It possesses ¥540,000 worth of destructive power."
+}

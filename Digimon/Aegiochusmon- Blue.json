@@ -1,0 +1,33 @@
+{
+  "name": "Aegiochusmon: Blue",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Penetra-laser",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[RANGE 4] [BLAST 2] [PIERCE]",
+    "description": "Fires a beam from the fingertips of itsMechanization Powered Arm."
+  },
+  "digivolves_from": [
+    "Aegiomon"
+  ],
+  "digivolves_to": [
+    "Jupitermon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A God Man Digimon which synthesized the abilities of various species, using a humanoid body as a base. This synthesis of species is said to have resulted from the pursuit of the ultimate state, or omnipotence, dramatically altering its appearance to match its surroundings. This form is composed of data taken from the Cyborg-species, so the Cyborg-species data lying dormant within its body focuses itself on its upper body, particularly its left side, centered upon the crystal in its chest. It is equipped with a release for the characteristic power of the Cyborg-species, and a lock-on function which doesn't miss its designated target. Its gigantic left arm, the \" Mechanization Powered Arm \", has the ability to attach and detach, and is able to independently pursue and attack a locked opponent. Its Special Moves are firing a beam from the fingertips of the \" Mechanization Powered Arm \" ( Penetra-laser ), and flying and slashing the opponent with the wings equipped to its back ( Wing Cutter ). Furthermore, it can charge energy in the palm of the \" Mechanization Powered Arm \" while it's still attached, then release it in a charge at the enemy ( Powered Ignition ).",
+  "web_created": true
+}

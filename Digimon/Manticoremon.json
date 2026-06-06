@@ -1,0 +1,39 @@
+{
+  "name": "Manticoremon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 10,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Trinity Gospel",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires energy shots from the three mouths on its head and arms."
+  },
+  "digivolves_from": [
+    "Baluchimon",
+    "Black Tailmon Uver.",
+    "Hover Espimon",
+    "Reppamon",
+    "Tia Ludomon"
+  ],
+  "digivolves_to": [
+    "Ancient Greymon",
+    "Deathmon (Black)",
+    "Devitamamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A ferocious Demon Beast Digimon that prefers the Digicores of Virus Digimon. It is employed by Angel-species Digimon, who noticed its fixation on fiendish viruses. It lacks intelligence and reason, and its sole raison d'être is simply to crave for and consume the data of others. Its Special Moves are firing energy shots from the three mouths on its head and arms ( Trinity Gospel ), and skewering the enemy with its three tails and injecting a strong acid into their body ( Acid Injection ). There are times when even the Angel-species Digimon that employed Manticoremon are unable to control it due to the extreme brutality it displays during battle."
+}

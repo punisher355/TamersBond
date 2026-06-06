@@ -1,0 +1,41 @@
+{
+  "name": "Maildramon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Iron Press",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[RANGE 4] [BLAST 2]",
+    "description": ""
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Bokomon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Hippogriffomon",
+    "Magnamon",
+    "Megalo Growmon",
+    "Metal Greymon (Virus)",
+    "Metal Tyranomon",
+    "Paildramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An Armor-level Cyborg Digimon that evolved through the power of the \" Digimental of Miracles \". Possessing armor made of Chrome Digizoid , this dragon is the servant of Knightmon , and rushes about the battlefield carrying Knightmon on its back. As you would expect with the largely-built Knightmon riding it, Maildramon is also an exceptional size, so both its power and stamina are something worth mentioning. It is definitely a \" Moving Fortress \". Its Special Move is crushing the opponent under its large build ( Iron Press ).",
+  "web_created": true
+}

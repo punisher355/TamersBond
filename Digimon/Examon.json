@@ -1,0 +1,37 @@
+{
+  "name": "Examon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 9,
+    "SNC": 10,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Avalon's Gate",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Impales the enemy withAmbrosiusand detonates all of its special shells, annihilating the enemy from within."
+  },
+  "digivolves_from": [
+    "Cyberdramon",
+    "DORUguremon",
+    "Master Tyranomon",
+    "Megadramon",
+    "Megalo Growmon (Orange)",
+    "Okuwamon",
+    "Rize Greymon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Holy Knight Digimon which is one of the Digital World's sacred guardians, the \" Royal Knights \". As it is a Digimon which possesses an extraordinary data size, traditional digital tools were unable to completely render it, and its existence was discovered because it finally became possible to render it with the use of state-of-the-art digital tools. Though it belongs to the Royal Knights, it is simultaneously a being which stands at the top of all Dragon Digimon, and holds the alias of \" Dragon Emperor \". It possesses the gigantic, sentient wings \" Caledfwlch \" and the gigantic lance \" Ambrosius \". The Caledfwlch is a unique set of wings composed entirely of Chrome Digizoid , and at Caledfwlch 's own will, it can at times change into wings for flight, or into a shield which defends Examon. The lance \" Ambrosius \" is loaded with special shells stocked with viruses which possess various effects, so Examon's attacks are quite diverse. Its Special Moves are stabbing the opponent with the Ambrosius and exploding all of its special shells, annihilating them from within ( Avalon's Gate ), and rocketing up to the exosphere and conducting a high-powered laser firing ( Pendragon's Glory ). Also, its \" Dragonic Impact \", in which it dives from the exosphere and performs a ramming attack shrouded in heat from friction with the atmosphere, mops up swaths of enemies with its accompanying shock wave.",
+  "web_created": true
+}

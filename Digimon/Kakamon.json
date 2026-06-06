@@ -1,0 +1,36 @@
+{
+  "name": "Kakamon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 2,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Enkō Kaitendan",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Curls its body up into a ball and charges forth."
+  },
+  "digivolves_from": [
+    "Mococomon"
+  ],
+  "digivolves_to": [
+    "Ginkakumon",
+    "Hanumon",
+    "Lianpumon",
+    "Turuiemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon with beautiful red and gold fur. In particular, Kakamon's mohawk-like hair is its trademark, which it always takes care of. It inhabits vast areas in the Eastern Digital World , and can be found throughout. It has a cheerful nature that likes singing and music, and when it encounters other Digimon, it proudly goes around making them listen to its songs. Also, while Pandamon is known to be popular in the Eastern Digital World, many Kakamon yearn for its lone wolf lifestyle, as evidenced by the Pandamon stickers on its headphones. Its Special Moves are curling its body up into a ball and charging forth ( Enkō Kaitendan ), and dishing out sound waves by shouting with its well-trained singing voice ( Kinshikō )."
+}

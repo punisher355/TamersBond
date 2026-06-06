@@ -1,0 +1,41 @@
+{
+  "name": "Herissmon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Lightning Fur",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Shoots lightning-coated quills."
+  },
+  "digivolves_from": [
+    "Bowmon",
+    "Pusurimon",
+    "Yarmon"
+  ],
+  "digivolves_to": [
+    "Damemon",
+    "Filmon",
+    "Loogarmon",
+    "Maquinamon",
+    "Sangloupmon",
+    "Turbomon",
+    "Mulemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "It is brimming with curiosity and will lose sight of its surroundings once it finds something to fixate on, although it is also highly cautious and will make its hard, needle-like quills stand on end when it is afraid, curling up into a ball until no sign of danger remains. However, it gets very attached to those it has warmed up to, and will show them its favorite treasures that it keeps stashed in its fur. It seems to have a habit of going on guard whenever it spots a Tailmon , due to having been bullied several times in the past. Its Special Moves are attacking the opponent by shooting lightning-coated quills ( Lightning Fur ), and curling its body up into a ball and charging forth ( Kenzan Dive )."
+}

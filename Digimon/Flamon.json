@@ -1,0 +1,39 @@
+{
+  "name": "Flamon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 3,
+    "KNW": 3,
+    "SNC": 4,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Baby Salamander",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "12Fires off an aura of flames.Flips through the air covered in fire."
+  },
+  "digivolves_from": [
+    "Peti Meramon"
+  ],
+  "digivolves_to": [
+    "Agnimon",
+    "Airdramon",
+    "Flare Lizamon",
+    "Meramon",
+    "Strikedramon",
+    "V-dramon",
+    "XV-mon (Black)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that was transformed into a half-beast, half-man form when Agnimon lost its power. It is missing the \"Combat Instinct\" that Digimon naturally possess, and moreover, it has lost power. However, it is a being that has inherited a Spirit of the legendary Ten Warriors who possess ultimate strength, so although it has lost power, ordinary Adult-class Digimon aren't a match for it. If anything, it has kindness inappropriate for a Digimon and is similar to a Child Digimon, counterbalancing its mischievous part. Its Special Move is firing off an aura of flames ( Baby Salamander ).",
+  "web_created": true
+}

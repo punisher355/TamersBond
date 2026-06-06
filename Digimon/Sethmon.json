@@ -1,0 +1,35 @@
+{
+  "name": "Sethmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 7,
+    "LVE": 5,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Heat Storm",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Attacks the opponent with a hot wind that rages in the desert."
+  },
+  "digivolves_from": [
+    "Guilmon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Magnamon",
+    "Megalo Growmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Demon Beast Digimon that evolved through the power of the \" Digimental of Love \". Because the power of the Digimental of Love was too great, it was unable to control it, and so it was converted into the power of hatred. Its body is colored an ominous red, and it has the power to create calamitous storms. As it is the polar opposite of Holsmon , it is thought that they are the embodiments of the duality of love and hatred possessed by the \"Digimental of Love\". Its Special Moves are a hot wind that rages in the desert ( Heat Storm ), and striking with its two gigantic tusks ( Tusk Driver ).",
+  "web_created": true
+}

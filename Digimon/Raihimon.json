@@ -1,0 +1,34 @@
+{
+  "name": "Raihimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Schwarz Lehrsatz",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Disables the laws of physics in the area and brings down the opponent."
+  },
+  "digivolves_from": [
+    "Löwemon"
+  ],
+  "digivolves_to": [
+    "Ancient Sphinxmon",
+    "Dinotigermon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Darkness that has transcended legend by inheriting all the might of one of the legendary Ten Warriors and acquiring unknown abilities. There are none who have seen this hero, and due to the fact that it doesn't leave behind so much as evidence of the opponents it has confronted, it is called the \" Guardian Emperor of Darkness \". Its Special Moves are disabling all of the laws of physics in the surrounding region and bringing down the opponent ( Schwarz Lehrsatz ), and an attack fired from the eyes of the lion on its head ( Rot Kreuz ).",
+  "web_created": true
+}

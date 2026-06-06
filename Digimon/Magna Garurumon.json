@@ -1,0 +1,37 @@
+{
+  "name": "Magna Garurumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 13,
+    "LVE": 13,
+    "KNW": 11,
+    "SNC": 12,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Machine Gun Destroy",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "123Simultaneously fires all its artillery weapons at all locked targets, then pulverizes its main target at high speed.Empties each of its artillery weapons in turn, discards them, then fires twin beams from its chest armor before entering its Detached state.While airborne, fires a barrage from itsStrike Phantomat the target."
+  },
+  "digivolves_from": [
+    "Mach Gaogamon",
+    "Metal Mamemon",
+    "Rapidmon Perfect",
+    "Were Garurumon"
+  ],
+  "digivolves_to": [
+    "Susanoomon",
+    "Susanomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Transcendent-species Digimon that possesses power over Light which is said to have surpassed even the might of the legendary Ten Warriors . It specializes in moving at light speed , and when its aviation unit is equipped it is able to fly at subluminal speeds. Also, its chest armor, its long-range firing \" Sniper Phantom \" on its right arm, and its mid-range firing \" Strike Phantom \" on its left arm are capable of being detached, although this decreases a portion of its firepower. By spinning at high altitudes, the \" Laser Sights \" on its chest are capable of locking onto all anti-air and anti-ground targets, so as soon as it spins at an extremely high altitude and confirms its targets, it commences a full-scale attack. It seems that it's already too late to escape from Magna Garurumon. Its Special Moves are conducting a simultaneous firing of all its guns at all the locked targets, then violently pulverizing the main target at high speed ( Machine Gun Destroy ), and after detaching its chest armor, accelerating to speeds that exceed the subluminal and reach the superluminal level, then erasing everything that comes in contact with any of the bands of light ( Starlight Velocity )."
+}

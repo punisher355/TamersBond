@@ -1,0 +1,35 @@
+{
+  "name": "Bishop Chessmon (White)",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Bishop Laser",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires a long ray of light from its staff."
+  },
+  "digivolves_from": [
+    "Knight Chessmon (Black)",
+    "Knight Chessmon (White)"
+  ],
+  "digivolves_to": [
+    "King Chessmon",
+    "Queen Chessmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Puppet Digimon that freely uses technical arts. The reach of its attacks is very wide, so it can strike at long-range enemies. Its catchphrase is, \"Oh Lord, give me strength!\" Its Special Moves are a long ray of light fired from its staff ( Bishop Laser ), and annihilating the opponent with a cruciform magic circle ( Bishop Cross ). Also, it can freely wield its staff in close combat, bewitching the opponent ( Magical Stick )."
+}

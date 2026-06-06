@@ -1,0 +1,54 @@
+{
+  "name": "Sorcerimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Crystal Cloud",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Summons snow clouds with its staff, causing massive blizzard."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Goburimon",
+    "Gomamon",
+    "Impmon",
+    "Kamemon",
+    "Lunamon",
+    "Pico Devimon",
+    "Plotmon",
+    "Shamamon",
+    "Tentomon",
+    "V-mon",
+    "Wormmon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Andiramon (Deva)",
+    "Asuramon",
+    "Blue Meramon",
+    "Dagomon",
+    "Holy Angemon",
+    "Jyureimon",
+    "Panjyamon",
+    "Piccolomon",
+    "Shakkoumon",
+    "Wisemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Wizarmon 's comrade who came from \" Witchelny \", the Digital World of another dimension. It is adept in light and ice sorcery ( high-level programming language s ), and when it offers prayer, it can heal wounds with its holy power. Its Special Move is summoning a snow cloud from its snow crystal-affixed staff, generating an immense blizzard ( Crystal Cloud )."
+}

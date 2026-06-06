@@ -1,0 +1,46 @@
+{
+  "name": "Dracomon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Fire",
+  "archetype": "Tank",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 3,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Baby Breath",
+    "element": "Fire",
+    "pr": 4,
+    "tags": "[RANGE 4]",
+    "description": "Blows high temperature breath at the opponent."
+  },
+  "digivolves_from": [
+    "Babydmon",
+    "Koromon",
+    "Tunomon"
+  ],
+  "digivolves_to": [
+    "Coredramon (Blue)",
+    "Coredramon (Green)",
+    "Dark Tyranomon",
+    "Deltamon",
+    "Fladramon",
+    "Geo Greymon",
+    "Ginryumon",
+    "Seadramon",
+    "Stingmon",
+    "Tuskmon",
+    "Tyranomon",
+    "V-dramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "An ancient, pure-blooded Dragon Digimon that is said to be the \"Progenitor\" of all Dramon -type Digimon. It possesses physical ability to a degree that could not be imagined from its small build, and both its power and its quick wits are top class among Child Digimon. Although its personality is ferocious, Dracomon can show its gentle side only to the others it has recognized. It has wings, but it is unable to fly because they are not sufficiently developed. Also, it has a nature whose primary trait is wanting to collect \"shiny things\", with an especially strange attachment to gems and metals, and it eats and assimilates its favorite things. Its Special Moves are breathing out a high temperature sigh at the opponent ( Baby Breath ), and spinning its whole body to deliver a blow with its tail ( Tail Smash ). Amongst the scales that cover Dracomon's whole body, there is one scale that is called the \" Gekirin \". If it is touched there, Dracomon loses its mind to an excess of anger, and indiscriminately fires its \" G Shurunen \", a beam shot in which it makes the horns on its head glow intensely, then fires from its mouth.",
+  "web_created": true
+}

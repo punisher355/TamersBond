@@ -1,0 +1,31 @@
+{
+  "name": "King Chessmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Bishop Chessmon (White)",
+    "Rook Chessmon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A king Digimon maneuvering behind the scenes in order to build the great Chessmon empire. However, nobody knows what kind of thing a Chessmon empire is, and because of the environs, they aren't even interested. Since it is a coward it almost never attacks by itself, and it's only fast when it comes to running away in an emergency. Its catchphrase is, \"He that fights and runs away may live to fight another day!\" However, it also has an intellect that is surprisingly on the same level as a supercomputer. Its Special Move is attacking by itself as a last resort ( Checkmate ). If its own life is at stake, this technique possesses superior offensive power. Also, it can produce a body double of itself using the \" King Stick \" it always carries. Its \" King Dash \", in which it quickly runs away, is also its forte among Signature Moves."
+}

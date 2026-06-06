@@ -1,0 +1,33 @@
+{
+  "name": "Aegiochusmon: Green",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Plant",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 9,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Bramble Bite",
+    "element": "Plant",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Changes the thorns at the end of itsBusterinto an evil spirit that bites the enemy."
+  },
+  "digivolves_from": [
+    "Aegiomon"
+  ],
+  "digivolves_to": [
+    "Jupitermon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A God Man Digimon which synthesized the abilities of various species, using a humanoid body as a base. This synthesis of species is said to have resulted from the pursuit of the ultimate state, or omnipotence, dramatically altering its appearance to match its surroundings. This form is composed of data taken from the Plant-species, so the Plant-species lying dormant within its body establishes itself as an upper body and arms, centered upon the crystal in its chest. Because it is based on the Plant-species, its weight is especially light compared to the other forms. It is able to fire sturdy thorns from the Busters equipped to both of its arms, and perform tricky movements that hook its thorns in various places similar to Rope Action , or perform others that are used for offense and defense. Its keen movements which capitalize on its equipment and agility can definitely be said to be this form's greatest distinction. Its Special Moves are summoning thorns transformed into an evil spirit, which snaps at the opponent ( Bramble Bite ), and shooting numerous thorns from its entire body, tearing the surrounding opponents to pieces over a wide range ( Plant Zone Cradle ). Also, as a Standard Move, it has a technique called \" Charging Strike \" which pierces the opponent's head with its horn using a high speed charge that capitalizes on its legs.",
+  "web_created": true
+}

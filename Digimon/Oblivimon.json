@@ -1,0 +1,33 @@
+{
+  "name": "Oblivimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 7,
+    "SNC": 10,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Waste Abduction",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Seizes an enemy with its tentacles and overloads their minds with trash data, incapacitating them."
+  },
+  "digivolves_from": [
+    "Hover Espimon"
+  ],
+  "digivolves_to": [
+    "Invisimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Whenever a Digimon loses their memories or their behavior becomes erratic, those around it should beware of Oblivimon's presence. Covered in a flying saucer-like shell, this Cyborg Digimon vanishes as it silently draws near. After drawing nearer until it is directly above its target, it captures them by freely manipulating its tentacles, and takes them into its body. The tips of its tentacles are equipped with multipurpose manipulators capable of hacking and performing attacks. The Digimon captured and taken in with its tentacles have their memories absorbed from within, and the data is stored in the biological storage on the upper part of its body. Digimon who have had information extracted from them are then expelled from the opening on the lower part of its body, but lose all of their memories. Also, Oblivimon can send the hemispheric remote terminals equipped to its lower body into narrow spaces that it cannot penetrate. They are each capable of operating independently, and are excellent pieces of equipment responsible for reconnaissance, intelligence, and even assisting in attacks. When employed by the Crack Team , it is often in charge of leading intelligence operations teams with Espimon or Hover Espimon . Its Special Moves are sending huge amounts of trash data into the enemies it seizes with its tentacles, causing an overflow in their thinking and rendering them incapacitated ( Waste Abduction ), and firing a laser beam from the opening on its lower body at the enemy from above ( Unidentified Aerial Phenomenon )."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Bosamon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Slaps the opponent with its ears."
+  },
+  "digivolves_from": [
+    "Pyonmon"
+  ],
+  "digivolves_to": [
+    "Angoramon",
+    "Dracumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Lesser Digimon that evolved from Pyonmon . Its bangs have grown out, hiding its eyes, so it can now move around without worrying about others looking at it. Its shy personality has changed into one that is calm. It now has two long ears and its sense of hearing has further developed. It is able to perceive sound in three dimensions, and listening to conversations between fellow Digimon from a distance has become its hobby. It has a lot of information about things that it has not experienced firsthand thanks to that. It hates fighting; it is able to quickly detect the approach of an enemy, which prompts it to leave the area. Even if its escape route is blocked, it will use its combo attack \" Mikkomi \", in which it slaps the opponent with its ears, and take the opportunity to hide while the opponent is still startled."
+}

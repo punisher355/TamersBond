@@ -1,0 +1,33 @@
+{
+  "name": "Regalecusmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 13,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 11,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "BrionaStrike",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Pierces the enemy with the sword in its right hand, accompanied by a flash of lightning."
+  },
+  "digivolves_from": [
+    "Gusokumon",
+    "Marin Chimairamon",
+    "Piranimon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese An aloof Aquatic Digimon who hates grouping with others. It is a pirate who repeatedly assaults and plunders the feeding grounds and territories of other Digimon, and is also the ruler of the abyss that stands at the apex of the food chain due to its overwhelming power. Its sword—which it made after tearing off a Zudomon 's horn—and the giant pincer on its left arm are symbols of awe that strike fear into those who lay their eyes upon them. Its Special Moves are piercing the enemy with the sword in its right hand, accompanied by a flash of lightning ( Briona Strike ), and blowing away everything around it, including seawater, with plasma discharged from its pincer ( Reactor Discharge )."
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Karatuki Numemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Earth",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 8,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Shell's Attack",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Hides its body within its shell and uses it to do a tackle."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Gaomon",
+    "Gizamon",
+    "Kamemon",
+    "Kodokugumon Child",
+    "Otamamon",
+    "Psychemon",
+    "Sangomon",
+    "Shakomon",
+    "Swimmon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Black King Numemon",
+    "Digitamamon",
+    "Mach Gaogamon",
+    "Majiramon",
+    "Mammon",
+    "Mega Seadramon",
+    "Orochimon",
+    "Pandamon",
+    "Rize Greymon",
+    "Shawujinmon",
+    "Sirenmon",
+    "Tekkamon",
+    "Tonosama Gekomon",
+    "Toropiamon",
+    "Tyilinmon",
+    "Waru Seadramon",
+    "Gigantic Numemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Crustacean Digimon, it was a Numemon that made use of its intelligence and found a shell to cover itself in order to protect its body. As a result, while it is slightly more intelligent than Numemon, it in turn grew a cowardly personality, and will retreat into its shell in shock at even the slightest disturbance. Its defense is extremely high while it is holed up in its shell, remaining firm even when it is kicked or stepped on. Its Special Move is hiding its body within its shell and using its shell to do a tackle ( Shell's Attack ), and throwing the large amounts of poop it has stored within its shell ( Jukusei Unchi ).",
+  "web_created": true
+}

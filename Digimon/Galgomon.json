@@ -1,0 +1,57 @@
+{
+  "name": "Galgomon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Gatling Arm",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[RANGE 4]",
+    "description": "Fires bullets or lasers from the vulcans on both of its arms."
+  },
+  "digivolves_from": [
+    "Bearmon",
+    "Bokomon",
+    "Ganimon",
+    "Gaomon",
+    "Gazimon",
+    "Hagurumon",
+    "Labramon",
+    "Lopmon",
+    "Plotmon",
+    "Psychemon",
+    "Shoutmon",
+    "Sistermon Blanc",
+    "Terriermon",
+    "Toy Agumon",
+    "Terriermon Assistant"
+  ],
+  "digivolves_to": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Black Rapidmon",
+    "Catch Mamemon",
+    "Crescemon",
+    "Jyagamon",
+    "Mach Gaogamon",
+    "Megalo Growmon",
+    "Metal Mamemon",
+    "Pandamon",
+    "Rapidmon Armor",
+    "Rapidmon Perfect"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A Beast Man Digimon that evolved from Terriermon and is a Hunter Digimon skilled in hunting. Despite its outward appearance, it uses attacks of unparalleled accuracy and its nimble movements to reliably bring down the opponent. Its leg strength is strong enough for it to jump sky high, and it is also able to spread out its ears to glide. Although it usually has a cheerful personality, it gets out of hand once it is angered. It is obsessed with its cherished \" D-VI'S 503xx \" jeans. Its Special Moves are the vulcan s on both of its arms ( Gatling Arm ), and getting under the opponent's bosom, then thrusting up a Gatling Arm from below ( Dumdum Upper )."
+}

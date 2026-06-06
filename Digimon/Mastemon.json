@@ -1,0 +1,35 @@
+{
+  "name": "Mastemon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 14,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 10,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Holy Desire",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Destroys evildoers with arrows of light fired from its right arm."
+  },
+  "digivolves_from": [
+    "Angewomon",
+    "Lady Devimon",
+    "Meicrackmon"
+  ],
+  "digivolves_to": [
+    "Omegamon Alter-B"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Angel Digimon that is said to have appeared when the Digital World was visited by an unprecedented crisis, and an Angel Digimon and Fallen Angel Digimon in conflict with each other united and achieved Jogress Evolution . It links with gates and controls the forces of the Angel and Fallen Angel families it summons from another Digital World to overcome any predicament. It is because of the nature possessed by Mastemon, known as the \" Tactician from Another World \", that it unifies both families who are usually hostile to each other. Although it is a Jogress Evolution of two conflicting Digimon itself, it has a one-track mind, and helps out Digimon in various situations by freely manipulating the energies of light and darkness, and also attacks formidable enemies on its own. Its Special Moves are destroying evildoers with arrows of light fired from its right arm ( Holy Desire ), crushing and deleting captured opponents with its left hand including their Digicores ( Dark Despair ), and creating a gate by fusing the energies of light and darkness from both of its arms together, and consigning the enemy to oblivion within another dimension ( Chaos Degrade ).",
+  "web_created": true
+}

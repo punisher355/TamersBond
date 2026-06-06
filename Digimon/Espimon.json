@@ -1,0 +1,35 @@
+{
+  "name": "Espimon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Caprimon",
+    "Kakkinmon"
+  ],
+  "digivolves_to": [
+    "Black Tailmon Uver.",
+    "Hover Espimon",
+    "Reppamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Cyborg Digimon that immediately flies in to investigate whenever it catches wind of gossip or suspicion circulating in the Digital World . It will boldly go undercover in order to find out the truth, even in places inhabited by dangerous Digimon. When it toggles its eyes to Search Mode , it is able to clearly see objects several kilometers away. Also, it activates its \" Divanish \", which applies an optical camouflage to its body, by pressing the switch on its abdomen, and blends in with its surroundings, allowing it to perform reconnaissance without being discovered. Its Signature Move is the self-propulsive, timed \" Mot Bomb \", which it uses according to the situation, such as attacking the enemy or making a decoy. Rumor has it that the Crack Team measures their cracking ability by controlling Espimon, but it is unclear whether this is true or not."
+}

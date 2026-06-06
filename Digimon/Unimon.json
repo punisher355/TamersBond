@@ -1,0 +1,61 @@
+{
+  "name": "Unimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 8,
+    "LVE": 5,
+    "KNW": 4,
+    "SNC": 5,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Holy Shot",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Spits a qigong shot from its mouth."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Cutemon",
+    "Elecmon",
+    "Gaomon",
+    "Lucemon",
+    "Morphomon",
+    "Patamon",
+    "Penmon",
+    "Piyomon",
+    "Plotmon",
+    "Shakomon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Asuramon",
+    "Chimairamon",
+    "Giromon",
+    "Hippogriffomon",
+    "Holy Angemon",
+    "Indaramon",
+    "Mach Gaogamon",
+    "Mamemon",
+    "Mammon",
+    "Monzaemon",
+    "Okuwamon",
+    "Piccolomon",
+    "Rapidmon Perfect",
+    "Sinduramon",
+    "Skull Satamon",
+    "Tyilinmon",
+    "Vademon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A composite Digimon that has both the horn of the Unicorn , the legendary holy beast, and the wings of the Pegasus . With the gigantic wings growing from its back, it instantly runs about the world of the Computer Network , stabbing enemies with the sharp horn extending from its brow. A wild(?) Unimon has a rough temperament like a restive horse, but once tamed, it can be handled as if it was the tamer's own limbs. Its Special Move is a Qigong shot spewed from its gigantic mouth ( Holy Shot )."
+}

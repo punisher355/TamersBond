@@ -1,0 +1,33 @@
+{
+  "name": "Rhamphomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Crystal Cannon",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Fires an ultrahigh-speed crystal cannonball from its mouth."
+  },
+  "digivolves_from": [
+    "Monodramon"
+  ],
+  "digivolves_to": [
+    "Azhdarmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Pterosaur Digimon with large, membranous wings. Possessing remarkable flight capabilities, Rhamphomon is able to seize even Digimon that are bigger than itself with both its feet while flying. It soars from the ground to the skies in one swoop, and spends most of the day in the air, circling around riding air currents. If it spots prey as it circles around, it will fold its wings, perform a nosedive, and swoop down on them. When it brings down its prey, it stuns them with its \" Crystal Cannon \", in which it fires an ultrahigh-speed crystal cannonball from its mouth, or its \" Hammer Strike \", in which it swings the crystal on the tip of its tail to strike them. After that, it finishes them off by slamming them into the ground with its \" No Hope Fall \", where it seizes stunned prey with both its feet, soars, and then throws them down from high in the sky. Depending on the individual, there are some that use a derivative technique called \" Crystal Rain \", wherein it fires its Crystal Cannon twice in a row, causing the crystal cannonballs to collide in mid-flight and shatter, turning them into pellets."
+}

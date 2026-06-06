@@ -1,0 +1,44 @@
+{
+  "name": "Darcmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "La Pucelle",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "A magnificent sword technique using its slender sword,La Pucelle."
+  },
+  "digivolves_from": [
+    "Bakumon",
+    "Labramon",
+    "Lucemon",
+    "Patamon",
+    "Plotmon",
+    "Shoutmon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Angewomon",
+    "Duramon",
+    "Lady Devimon",
+    "Piccolomon",
+    "Wisemon",
+    "Hippogriffomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A low-ranking Angel Digimon which has the appearance of a woman. It is in the advance forces of Angel Digimon, and its figure which always cuts through the vanguard to battle is said to almost be a \" Goddess of the Battlefield \". Its Special Move is a magnificent sword technique using its slender blade \" La Pucelle \" ( Baptême d'Amour ).",
+  "web_created": true
+}

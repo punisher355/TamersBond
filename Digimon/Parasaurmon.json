@@ -1,0 +1,37 @@
+{
+  "name": "Parasaurmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Palsy Sweet",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE] [BURST 2] [PARALYZE 2]",
+    "description": "Spews a numbing gas out of its mouth, depriving invading enemies of their freedom."
+  },
+  "digivolves_from": [
+    "Palmon",
+    "Pomumon",
+    "Tinkermon"
+  ],
+  "digivolves_to": [
+    "Ajatarmon",
+    "Lilimon",
+    "Toropiamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A gentle Dinosaur Digimon that lives in a warm climate. The fruit-like organs around its long neck sprinkle a sweet scent into its surroundings. This scent has the role of informing the herd of their position, and it seems that the scent differs slightly depending on the individual. It is often attacked by other Digimon that are drawn in by its scent, but it deprives invading enemies of their freedom with the numbing gas \" Palsy Sweet \" that it spews out of its mouth. In battle, it emits its \" Wavy Oktavist \", a super-low-pitched cry that crushes even rocks, at a loud volume, and engulfs several tens of meters around it in a whirlpool of destruction."
+}

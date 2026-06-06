@@ -1,0 +1,54 @@
+{
+  "name": "Loader Leomon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Boring Storm",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Produces an attack by the extremely high-speed rotation of its mane."
+  },
+  "digivolves_from": [
+    "Aquilamon",
+    "Bao Hackmon",
+    "Drimogemon",
+    "Gryzmon",
+    "Leomon",
+    "Liamon",
+    "Machmon",
+    "Mad Leomon",
+    "Mad Leomon: Armed Mode",
+    "Minotaurmon",
+    "Raremon",
+    "Revolmon",
+    "Sealsdramon"
+  ],
+  "digivolves_to": [
+    "Ancient Sphinxmon",
+    "Baihumon",
+    "Chaosdramon",
+    "Darkdramon",
+    "Dinotigermon",
+    "Grand Locomon",
+    "Heavy Leomon",
+    "Metal Etemon",
+    "Metal Garurumon",
+    "Saber Leomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Machine Digimon that was produced when CAD data for construction machinery leaked onto its server, then fused with the configuration data of a Beast Digimon. Its mane has become a pneumatic drill , and it works primarily in tunnel construction and in the Chrondigizoit mines. The Chrondigizoit mines are often surrounded by a solid layer of bedrock, so it boasts both power and stamina, as well as top-class performance among Machine Digimon. There are many Loader Leomon with a stubborn personality due to their pride in their work, but there are many people with the viewpoint that states, \"Loader Leomon is just quarrelsome.\" It seems that one mine, which had the best deposits in the world, was blown away by a fight between Loader Leomon. Its Special Moves are an attack produced by the extremely high-speed rotation of its mane ( Boring Storm ), and striking with the iron sphere on its tail ( Loader Morning Star )."
+}

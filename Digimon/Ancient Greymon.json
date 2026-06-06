@@ -1,0 +1,39 @@
+{
+  "name": "Ancient Greymon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Gaia Tornado",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Gathers the spirit of the land to create a tornado that swallows up the opponent and blows them away."
+  },
+  "digivolves_from": [
+    "Aldamon",
+    "Dark Superstarmon",
+    "Gigasmon",
+    "Manticoremon"
+  ],
+  "digivolves_to": [
+    "Lucemon: Satan Mode",
+    "Susanoomon",
+    "Omegamon Alter-B",
+    "Susanomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Possessing the attribute of \"Flame\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is told that its strength surpasses that of current Ultimates, and it is certainly an \"Ultimate\" being. Ancient Greymon's abilities were later passed on to the \"Dragon Digimon\", such as the Greymon-species . It is said that in the previous crusade, it survived to the end alongside Ancient Garurumon , and sealed away Lucemon . Its Special Moves are gathering the spirit of the land and creating a tornado to swallow up the opponent and blow them away ( Gaia Tornado ), and inducing a super-detonation over the surrounding kilometers with an intense flash ( Omega Burst )."
+}

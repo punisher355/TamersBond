@@ -1,0 +1,44 @@
+{
+  "name": "Marsmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Corona Sanctions",
+    "element": "Fire",
+    "pr": 10,
+    "tags": "[MELEE] [BURST 2]",
+    "description": "Attacks with a magnificent aerial assault while clad in flames."
+  },
+  "digivolves_from": [
+    "Asuramon",
+    "Bastemon",
+    "Blue Meramon",
+    "Cerberumon",
+    "Death Meramon",
+    "Flaremon",
+    "Great Gryzmon",
+    "Hippogriffomon",
+    "Lady Devimon",
+    "Lamortmon",
+    "Makuramon",
+    "Mephismon",
+    "Oleamon",
+    "Piccolomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A member of the enigmatic \" Olympos XII \", it is a Digimon \" God of War \" with the appearance of a panther -man. The Olympos XII lie in the shadows and possess ability rivaling that of the guardian deities of the Net , the \" Royal Knights \", and each protects its own domain while maintaining a position of neutrality regarding the incidents which arise in the Digital World . Marsmon is well-versed in all sorts of combat techniques known throughout the world, including underhanded techniques, and has absolute confidence in battles against others in the same weight class. While Marsmon typically uses wrestling techniques, it is so fixated on victory and glory that when push comes to shove, it will not hesitate to use concealed weapons such as its \" Tria Knuckle \" or \" Metal Cothurnus \". However, its true power is exhibited when it uses its bare hands and feet. Its Special Move is a magnificent aerial assault performed while clad in flames ( Corona Sanctions ).",
+  "web_created": true
+}

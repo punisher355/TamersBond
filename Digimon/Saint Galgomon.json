@@ -1,0 +1,51 @@
+{
+  "name": "Saint Galgomon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Giant Missile",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[RANGE 8] [BLAST 2]",
+    "description": "Fires gigantic megaton-class missiles from the gun turrets on its shoulders."
+  },
+  "digivolves_from": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Andromon",
+    "Atlur Kabuterimon (Blue)",
+    "Atlur Kabuterimon (Red)",
+    "Black Rapidmon",
+    "Bolgmon",
+    "Cannonbeemon",
+    "Cyberdramon",
+    "Etemon",
+    "Grappu Leomon",
+    "Mach Gaogamon",
+    "Makuramon",
+    "Metal Mamemon",
+    "Pajiramon",
+    "Pajramon",
+    "Rapidmon Armor",
+    "Rapidmon Perfect",
+    "Triceramon",
+    "Volcamon",
+    "Were Garurumon",
+    "Were Garurumon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A colossal Machine Digimon whose whole body has become a mass of weapons. The amount of weapons it has equipped rivals that of Metal Garurumon (Incidentally, while Metal Garurumon uses cold-based weapons, Saint Galgomon uses heat-based weapons). Each of its weapons, such as its lasers, missiles, bazookas, vulcan s , and flamethrowers, are concealed. Although its speed is considerably slow, because it puts all of that energy into power, it possesses unbelievable destructive force. Because its lack of speed is compensated for by its weapons, it is able to cope with attacks from every direction without moving even a little. Its Special Moves are a volley firing of its firearms ( Burst Shot ) and firing a gigantic megaton-class missile from the gun turrets on its shoulders ( Giant Missile )."
+}

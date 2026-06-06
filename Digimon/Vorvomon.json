@@ -1,0 +1,40 @@
+{
+  "name": "Vorvomon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 2,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Petit Flame",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Spews out a small, high-temperature flame from its mouth."
+  },
+  "digivolves_from": [
+    "Koromon",
+    "Peti Meramon"
+  ],
+  "digivolves_to": [
+    "Birdramon",
+    "Lavorvomon",
+    "Maquinamon",
+    "Meramon",
+    "Tyranomon",
+    "Turbomon",
+    "Mulemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon made of a solid, hot ore. It has wings on both of its arms and is able to fly for up to a few seconds, but gets tired easily. It is very passionate, so the more excited it gets, the hotter its horns and claws will become. Its Special Move is spewing out a small but high-temperature flame from its mouth ( Petit Flame )."
+}

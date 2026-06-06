@@ -1,0 +1,33 @@
+{
+  "name": "Shishimamon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "KōsōKagura",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Uses its glowing claws to tear the enemy apart as if it were dancing."
+  },
+  "digivolves_from": [
+    "Siesamon"
+  ],
+  "digivolves_to": [
+    "Amaterasumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Holy Beast Digimon capable of absorbing darkness and transforming it into light. It is also known as the \" Devourer of Night \" because the intense light that it emits from transforming darkness instantly lights up the night of the Digital World as if it were daytime. Although it is thought to evolve into an Ultimate possessing holy power based on that ability, it is said that it also has the potential to evolve into an evil Digimon due to the effects of the darkness it has absorbed. Its Special Move is using its glowing claws—which contain the power of light—to tear the enemy apart as if it were dancing ( Kōsō Kagura ). Its \" Mafutsu-no-shakkō \", in which it converts all of the darkness it has absorbed into light, compresses it, and then fires it from the inside of its cape as a gigantic shot of light, is said to destroy any evil it comes into contact with."
+}

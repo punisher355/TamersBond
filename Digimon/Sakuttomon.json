@@ -1,0 +1,36 @@
+{
+  "name": "Sakuttomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Sakumon"
+  ],
+  "digivolves_to": [
+    "Hackmon",
+    "Ludomon",
+    "Ryudamon",
+    "Spadamon",
+    "Zubamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Baby Digimon that evolved from Sakumon , and that now has two blades. Its balance has been stabilized by the blades now positioned on its left and right side, as well as with the addition of its small feet. While it has stopped rolling around and become more active, getting stuck in a ceiling or wall will cause it to be unable to move."
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Pajramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 8,
+    "SNC": 8,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Vahnijvala",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[RANGE 8] [CONFUSE]",
+    "description": "Bellows out a sound wave that puts those who hear it to sleep."
+  },
+  "digivolves_from": [
+    "Devimon",
+    "Harpymon",
+    "Leomon",
+    "Numemon",
+    "Opossummon",
+    "Ranamon",
+    "Sagittarimon",
+    "Sangloupmon",
+    "Sheepmon",
+    "Turuiemon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Cannondramon",
+    "Diablomon",
+    "Gulfmon",
+    "Kuzuhamon",
+    "Rosemon",
+    "Saint Galgomon",
+    "Zhuqiaomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Sheep . As a follower of the Four Holy Beasts Digimon Zhuqiaomon , it is a powerful figure who rules the world of dreams. It doesn't befriend the other Deva and is always calm, never changing its mind. Among the Deva, it has surprisingly many secrets whose truth is not divulged, and it is also known as the Dark Deva . Its personality is cruel, and lacks feelings of consideration for others. The arrows of light fired off from its Bǎo Gōng , which it never parts with even for a moment, have the power to knock out the opponent. Its Special Move is confining the opponent within a nightmare world from which they cannot awaken, by means of its special arrows ( Vahnijvala ). Among the Deva, only Kumbhiramon is able to counter it, through the power of its thoughts.",
+  "web_created": true
+}

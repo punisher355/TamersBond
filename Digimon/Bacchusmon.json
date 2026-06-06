@@ -1,0 +1,34 @@
+{
+  "name": "Bacchusmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 10,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Cook of the Hell",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Wraps up the opponent in both of its hands, transforming their configuration data into drinking snacks, and then eats them."
+  },
+  "digivolves_from": [
+    "Digitamamon",
+    "Orochimon",
+    "Piccolomon",
+    "Tonosama Gekomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the Olympos XII , it styles itself the Digital World 's foremost drinker. It is very caring with a cheerful personality, and gathers Child or Adult Digimon to hold parties day and night. Because it is able to distill any kind of alcohol within its body, it is said that at parties it answers the requests of the Digimon it has befriended and treats them to alcohol. It prefers the taste of fruit wine, and its favorite fruit wine is something fermented from the sweets borne by the \" Karpos Hulē \" forest carried on Ceresmon 's back, so whenever it can snatch a moment it eagerly requests Ceresmon to \"Let me brew fruit wine.\" For that reason, it is on very good terms with Ceresmon, and they often act together. Its Special Moves are wrapping up the opponent in both of its hands, transforming their configuration data into drinking snacks, and then eating them ( Cook of the Hell ), and refining alcohol mixed with deadly poisons that cause sleep or paralysis within its body, and then pouring it over the opponent to leave them incapacitated ( Party of the Heaven ). In addition, in its \" Reverse of the Dead \", where Bacchusmon fires the data it has consumed from the large mouth on its abdomen at the opponent as a destructive beam when it becomes too intoxicated and the patterns on its body turn pale, it takes in data and increases its power each time it hits an opposing Digimon, so its power in annihilation warfare against great numbers of enemies is unfathomable. Also, the data of Bacchusmon's distilled poison has become an object of study for the Crack Team , and the rumor questioning whether Bacchusmon's poison data is related to the preparation of bacteriological weapons and is part of a plot to assassinate an important person is whispered as if it were true.",
+  "web_created": true
+}

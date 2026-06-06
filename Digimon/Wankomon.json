@@ -1,0 +1,36 @@
+{
+  "name": "Wankomon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 2,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Gōhakukyū",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Throws its ball with its tail, and crushes the enemy with the ball as it enlarges above their head."
+  },
+  "digivolves_from": [
+    "Onibimon"
+  ],
+  "digivolves_to": [
+    "Kokeshimon",
+    "Musyamon",
+    "Siesamon",
+    "Tenkomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A likeable, heroic Beast Digimon with an intense loyalty to the Digimon or Tamer it chooses as its master. It is often seen sleeping in sunny places, but in actuality, it is constantly checking for any danger in its surroundings using its keen sense of smell. Since it always carries a ball around, which it rolls and plays with by itself, Wankomon would be very delighted if someone played with it. Its Special Move is using its tail to throw its ball, filled with mysterious power, and crushing the enemy with the ball, which enlarges above their head ( Gōhakukyū ). When it senses danger, it hardens its body like stone with its \" Ishidzuchi no Tei \", defending itself even from the attacks of superior opponents."
+}

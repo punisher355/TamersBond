@@ -1,0 +1,31 @@
+{
+  "name": "Gaioumon: Itto Mode",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 13,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Senpū Baku",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Restricts the opponent's movements with a tornado unleashed from theKikurin."
+  },
+  "digivolves_from": [
+    "DORUguremon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The form of a Gaioumon defeated in battle that acquired new strength after unimaginable training. The oni data sleeping within its Digicore has awakened, and its fighting style has changed to Ittō-ryū . Having mastered \" Tenrin Ittō-ryū \", kenjutsu passed down in the Eastern Digital World , Gaioumon specializes in \"silent\" swordplay in which it instantly cuts down its opponents without even making a sound. Once prepared for battle, it is almost impossible to approach Gaioumon without leaving any openings. Its Special Moves are restricting the opponent's movements with a tornado unleashed from the \" Kikurin \" ( Senpū Baku ), and charging at lightning speed and then bisecting them with the Kikurin , which surges with lightning ( Kikurin Issen: Gouraizan ). In addition, its secret technique \" Touka Seihitsu \", in which it cuts down enemies in its surroundings with a single stroke of its sword, is said to quietly bring the battle to an end without them even realizing that they have been cut by their adversary.",
+  "web_created": true
+}

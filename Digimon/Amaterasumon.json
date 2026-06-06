@@ -1,0 +1,33 @@
+{
+  "name": "Amaterasumon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 9,
+    "LVE": 12,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Idzu no Mitama",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Bisects the opponent with red-bladed swords that manifest from the ornaments on its arms."
+  },
+  "digivolves_from": [
+    "Shishimamon"
+  ],
+  "digivolves_to": [
+    "Enmamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Amaterasumon is the being that rules over the sun in the Eastern Digital World . Due to the ornaments on its body, it is rumored to have a connection with Susanoomon . It usually lives in an area above the clouds called Senkūkai . If there is an emergency or whenever its feelings get hurt, it transforms the ornaments on its arms and turns into its Ama-no-Iwato Mode , and since it cuts off contact with the outside world, it causes disruptions to the sun system during that time. Its Special Move is bisecting the opponent with red-bladed swords that manifest from the ornaments on its arms ( Idzu no Mitama ). Its \" Rikugō Shōtetsusen \", in which it deploys all the parts on its arms and its back ring, and emits an intense light that focuses the power of the sun, is just like the sun shining down everywhere, incinerating enemies without a trace, no matter where they are."
+}

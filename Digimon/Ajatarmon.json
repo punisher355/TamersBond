@@ -1,0 +1,35 @@
+{
+  "name": "Ajatarmon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Assault Hatchet",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Strikes the enemy with an all-purpose hatchet that cuts down even large trees in an instant."
+  },
+  "digivolves_from": [
+    "Parasaurmon",
+    "Vegimon"
+  ],
+  "digivolves_to": [
+    "Bloom Lordmon",
+    "Spinomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Plant Digimon that lives in groups similar to tribes. They have established small civilizations deep in the jungle. Generally speaking, they are taciturn and do not speak very much, and when hunting in groups, they contact each other through hand gesture s and bring down their prey with excellent coordination. Although it is short-tempered and has a violent disposition, it prides itself as a hunter and has a pure heart. Its Special Moves are striking the enemy with its mighty hatchet that fells even large trees in an instant ( Assault Hatchet ), and restraining them with the tentacles growing from the back of its head ( Tied-up Ivy ). When facing opponents that attack from a distance, it counterattacks with its \" Shotgun Moss \", in which it shoots the poisonous grass needles that grow from its head like hair to restrict their movements."
+}

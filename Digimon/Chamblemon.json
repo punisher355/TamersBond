@@ -1,0 +1,34 @@
+{
+  "name": "Chamblemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Sweepore",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Releases spores that attach to the enemy, and sprout into mushrooms containing their drained vitality."
+  },
+  "digivolves_from": [
+    "Kodokugumon Child"
+  ],
+  "digivolves_to": [
+    "Marin Chimairamon",
+    "Toropiamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Plant Digimon in the shape of an extremely poisonous mushroom. It is a mystery whether it evolved from Mushmon , or if it is another variant. Although it is often seen as being weak, it is quite the ruffian. If anyone approaches it carelessly, its floating \" Sweepore \" spores will attach to them, and sprout into mushrooms containing their drained vitality. If one picks and eats them, they will be brimming with energy, and it seems that among them, the Data-type mushrooms are especially delicious. Its Special Move is releasing mushroom bombs of various sizes all at once ( Champignon Bomb ). With the ensuing fumes and spores, it transforms the area into a mushroom bed."
+}

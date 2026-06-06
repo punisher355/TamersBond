@@ -1,0 +1,32 @@
+{
+  "name": "Bryweludramon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 12,
+    "LVE": 12,
+    "KNW": 12,
+    "SNC": 12,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Guren Storm",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Unleashes a blaze from its flaming wings."
+  },
+  "digivolves_from": [
+    "Piccolomon",
+    "Raiji Ludomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate Legend-Arms shield Digimon, virtually all of its body is comprised of shields and has taken the form of a dragon. By attaining the data of \"Legendary Shields\" from mythology and video games, it evolved to become a shield with absolute hardness that cannot be scratched by any attack. While appearance-wise it seems to be made from Red Digizoid , the extent of its hardness cannot be analyzed. Bryweludramon has two standalone AI units, \" Gause \" and \" Fay \", which allow it to see in all directions. \" Gause \" and \" Fay \" also possess barriers made from flames, and are able to extend the range of their barriers to cover even Bryweludramon. Because \" Gause \" and \" Fay \" are capable of acting independently of Bryweludramon no matter how far they are separated, it is said that they are even capable of covering the entire world with their barriers. Although Bryweludramon may be the strongest shield, it seems that its barriers have been broken and bested by its nemesis, Durandamon . Its Special Moves are unleashing a blaze from its flaming wings ( Guren Storm ), and detaching its wings to put up a barrier of flame while charging towards the enemy ( Blast Smash ). Transformation is the most valuable asset of a Legend-Arms; should one wield Bryweludramon while it is transformed into a shield, no enemy would be willing to keep up their assault."
+}

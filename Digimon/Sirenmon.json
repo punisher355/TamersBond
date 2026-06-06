@@ -1,0 +1,41 @@
+{
+  "name": "Sirenmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "No.1<<Polyphony>>",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Sings a song in a highsoprano, whose notes suffuse the listener's heart and numb their free will, leaving them at Sirenmon's mercy."
+  },
+  "digivolves_from": [
+    "Angemon",
+    "Ebidramon",
+    "Gekomon",
+    "Hookmon",
+    "Karatuki Numemon",
+    "Kiwimon",
+    "Ranamon"
+  ],
+  "digivolves_to": [
+    "Ancient Garurumon",
+    "Ancient Mermaimon",
+    "Marin Angemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A God Man Digimon which has an outward appearance like a blending of bird and fish. Its personality is cheerful, and it is always singing pleasant songs throughout the skies and seas. Its voice has a miraculously sweet sound and actually has an eight octave range from very high notes to very low notes, and it brings tranquility even to devastated battlefields with its singing voice. It is said that by healing its listeners and performing good deeds, it will continue on to a shining evolution. The notes of its Dai'ikkyoku ( Polyphony ) , sung in a high soprano , suffuse the listener's heart and numbs their free will, leaving them at Sirenmon's mercy. Its solemn Dainikyoku ( Aria ) , sung in a low bass , becomes a deep bass frequency wave which flattens the enemy through their semicircular canals , so that they are unable to even stand. Daisankyoku ( Canon ) , a technique which attacks the enemy using its singing voice as note-shaped shots. The notes it hits are said to have the marvellous trait of ricocheting to always strike their targets, even separate enemies. Each technique also has the characteristic of increasing in power if there are others singing alongside Sirenmon, corresponding to their quantity. Even the weak gain great power by singing in chorus with Sirenmon."
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Crys Paledramon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Frozen Claw",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Tears the enemy to pieces with the ice claws equipped to both of its arms, and then freezes their wounds."
+  },
+  "digivolves_from": [
+    "Hyougamon",
+    "Omekamon",
+    "Paledramon"
+  ],
+  "digivolves_to": [
+    "Alphamon",
+    "Ancient Megatheriumon",
+    "Hexeblaumon",
+    "Ouryumon",
+    "Skadimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Dragon Man Digimon that only a select few Paledramon are said to be able to evolve into. Its developed icy shell has changed into armor that covers its entire body, drastically raising its defensive and offensive power. Thanks to the icicles mounted on its wings, it now remains unaffected even when facing the hottest of Digimon. In addition, it can also control air currents due to the cold air it blasts from its thrusters, allowing it to fly at higher speeds even during snowstorms. Its Special Moves are tearing the enemy to pieces with the ice claws equipped to both of its arms, and then freezing their wounds ( Frozen Claw ), and generating a snowsquall which causes everything around it to be frozen in ice, including the enemy ( Callous Dimension )."
+}

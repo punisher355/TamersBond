@@ -1,0 +1,35 @@
+{
+  "name": "Lavorvomon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Great Flame",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Takes a deep breath and spits out the largest fireball it can make."
+  },
+  "digivolves_from": [
+    "Vorvomon"
+  ],
+  "digivolves_to": [
+    "Flaremon",
+    "Lavogaritamon",
+    "Volcamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon whose entire body is made out of lava, and spouts mineral dust as it goes about its activities. It is poor at flying despite having wings, so it mainly moves about by crawling on the ground. Contrary to its sluggish appearance, its crawling speed is extremely fast, and it closes in on the enemy in an instant. Although it has a friendly personality and will let those it trusts near it without any reservations, others tend to stay as far away as they can from it out of fear that the flammable mineral dust it spouts may cause an explosion. Its Special Move is taking a deep breath and spitting out the largest fireball it can make ( Great Flame ). Not only that, it can also use its forearms to lunge at and slam onto the opponent ( Earth-stamp )."
+}

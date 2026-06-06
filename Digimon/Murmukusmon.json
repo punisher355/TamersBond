@@ -1,0 +1,38 @@
+{
+  "name": "Murmukusmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 11,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Gehenna Flame",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Spits hellfire from its mouth to inflict death and eternal suffering.Conjures a gigantic sphere of flame many times its own size.[citation needed]"
+  },
+  "digivolves_from": [
+    "Holy Angemon",
+    "Indaramon",
+    "Mummymon",
+    "Phelesmon",
+    "Sephirothmon",
+    "Skull Satamon",
+    "Wisemon",
+    "Hippogriffomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Although it was originally a high-ranking Angel Digimon, it fell from grace and became a Demon Lord Digimon. It is in the ruling class of the Nightmare Soldiers , with the title of \" Count \", and it manages thirty legions of demons. Also, it is attended by the Mythical Beast Digimon Griffomon , which it uses as its own hands and feet. Its Special Move is spewing hellfire, which is said to inflict eternal suffering even in death ( Gehenna Flame ).",
+  "web_created": true
+}

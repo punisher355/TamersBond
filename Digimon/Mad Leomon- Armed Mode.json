@@ -1,0 +1,40 @@
+{
+  "name": "Mad Leomon: Armed Mode",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "The Lion Sleeps Tonight",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Shakes its arm so violently it seems as if it is trying to shake its chainsaw off, cutting through anything in its way no matter organic or not."
+  },
+  "digivolves_from": [
+    "Elecmon",
+    "Elecmon (Violet)",
+    "Gazimon",
+    "Impmon",
+    "Liollmon",
+    "Lunamon",
+    "Phascomon"
+  ],
+  "digivolves_to": [
+    "Grappu Leomon",
+    "Loader Leomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The \" Weapon-frenzy Mode \" of Mad Leomon , who gave itself a chainsaw as well as even more modifications. Due to its repeated modifications and unbalanced chainsaw, intense pain is always running through its body, enraging Mad Leomon. Because it is unable to stay still, due to its pain, it sees anything reflected in its eyes as an enemy, and attacks. For its \" The Lion Sleeps Tonight \", which looks as if it is trying to completely shake off its arm and detach the chainsaw, it chops things up without caring whether they are alive or inanimate. The Lion \"Sleeps\" when its hunger is satisfied, that is, when it has preyed upon an opponent. In order for the Lion to sleep, it must also defeat that opponent. For its \" Lion Heart \", in which its destructive impulses come to the surface, it runs wild and pierces the ground with its chainsaw, creating fissures which swallow the opponent. The appearance of the torn and broken ground is the very embodiment of Mad Leomon: Armed Mode's mind.",
+  "web_created": true
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Spadamon",
+  "stage": "Rookie",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 3,
+    "SNC": 3,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Sugar Pound",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "CoversBlue Bladein a blade-shaped blue aura and slashes with it."
+  },
+  "digivolves_from": [
+    "Kakkinmon",
+    "Sakuttomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the legendary \" Legend-Arms \" who, according to legend, \"if held by an angel will save the world, and if held by a demon will destroy the world\", it is a Weapon Digimon that transforms itself into a weapon. Although its personality is earnest and serious, it has a side that is weak to pressure. Its combat abilities are low, but it shows its true merit once it becomes a weapon.",
+  "web_created": true
+}

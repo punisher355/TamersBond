@@ -1,0 +1,37 @@
+{
+  "name": "Cupimon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Puttimon"
+  ],
+  "digivolves_to": [
+    "Impmon",
+    "Lucemon",
+    "Patamon",
+    "Plotmon",
+    "Terriermon",
+    "Terriermon Assistant"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Small Angel Digimon that evolved from Puttimon . It likes benevolence and loves making everyone happy, contrary to when it was a Puttimon. In particular, it is referred to as the \" Angel of Charity \", and it specializes in bringing about feelings of \"Love\" in every person. It is always flying around the Digital World 's skies, sprinkling love on everyone while making them feel happy. It is said that even a large Digimon with great fighting spirit will cease battling once it encounters Cupimon. Its Special Move is generating a ring of light from the protuberance on its calvaria and throwing it at the opponent ( Angel Ring )."
+}

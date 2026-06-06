@@ -1,0 +1,38 @@
+{
+  "name": "Jungle Mojyamon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Earth",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 7,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Jungle Punch",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE] [RUSH]",
+    "description": "12Utilises the power of the wilderness to dish out a punch with all its might.Punches the opponent while singing."
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Gizamon",
+    "Gottsumon",
+    "Palmon"
+  ],
+  "digivolves_to": [
+    "Insekimon",
+    "Panjyamon",
+    "Vamdemon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A Digimon that inhabits the depths of the jungle. It views its territory as a sacred land, and will not forgive anyone who intrudes upon its territory. Its Special Move is utilising the power of the wilderness to dish out a punch with all its might ( Jungle Punch )."
+}

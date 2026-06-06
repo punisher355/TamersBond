@@ -1,0 +1,45 @@
+{
+  "name": "Giga Seadramon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 13,
+    "SNC": 15,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Giga Sea Destroyer",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires an energy torpedo from the cannon in its mouth."
+  },
+  "digivolves_from": [
+    "Black King Numemon",
+    "DORUguremon",
+    "Dagomon",
+    "Death-X-DORUguremon",
+    "Grademon",
+    "Karatenmon",
+    "Magnamon",
+    "Marin Chimairamon",
+    "Stiffilmon",
+    "Tonosama Gekomon",
+    "Waru Seadramon",
+    "Zudomon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "Apocalymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "As a successful elaboration on Metal Seadramon , it demonstrates the fastest speed of movement and strongest ability for interception under the sea. In order to further expand its sphere of influence, the Crack Team constructed this massive Digimon in absolute secrecy and endowed it with the ability to control the sea and possession of a cruising range which covers the vast Net Ocean . Its overall length exceeds even that of Whamon , and since Digimon belonging to the Crack Team , such as Chaosdramon , can be loaded in its interior, it is no longer a lone Digimon, and it seems possible to say that it is an assault landing ship for which it isn't known when and where it will appear on the Net Ocean, or when it will launch an attack. Its Special Moves are firing an energy torpedo from the cannon in its mouth ( Giga Sea Destroyer ), and strafing with countless anti-aircraft energy shells fired from the launchers on its back ( Sky Wave ).",
+  "web_created": true
+}

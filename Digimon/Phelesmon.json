@@ -1,0 +1,45 @@
+{
+  "name": "Phelesmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Boogiemon",
+    "Dark Lizamon",
+    "Devidramon",
+    "Devimon",
+    "Evilmon",
+    "Pucchiemon",
+    "Sangloupmon",
+    "Turuiemon"
+  ],
+  "digivolves_to": [
+    "Belial Vamdemon",
+    "Demon",
+    "Grand Dracumon",
+    "Murmukusmon",
+    "Pharaohmon",
+    "Piemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Fallen Angel Digimon shaped like an aristocrat. In exchange for granting someone their desires, it is said that it will snatch away their soul. It is said that it is a Boogiemon that advanced and evolved, but the details are still uncertain. Its Signature Move is changing the opponent into a black stone statue ( Black Statue ). Its Special Move is driving the enemy to insanity with a curse-filled shout ( Demon's Shout )."
+}

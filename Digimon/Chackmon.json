@@ -1,0 +1,38 @@
+{
+  "name": "Chackmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 6,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Tsurararara~",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "12Takes the shape of an icicle and pounces at the opponent.Transforms into a patch of ice spikes that can stick to surfaces."
+  },
+  "digivolves_from": [
+    "Bearmon",
+    "Gomamon",
+    "Lopmon",
+    "Penmon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Daipenmon",
+    "Blizzarmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Ice which bears the might of one of the legendary Warrior Ten . It styles itself as holding rank as a member of a polar army's polar region defense force. Since it replies that the matter's top secret if you ask anything about it, the truth is unknown. It's thought to be largely something it dreamed up. However, its operation of the Launcher it carries (nicknamed Romeo ) and its precision conduct in battle are genuine, and its survivalist knowledge also has a strong, truly reliable existence. Since it rarely acts of its own volition, it primarily operates in response to someone's requests or orders. It will have nothing to do if nobody is relying on it, and is likely to worry about its purpose in life and get completely depressed. The shots fired from its Launcher are special snowballs, so there are several varieties according to purpose. Its Special Moves are taking the shape of an icicle and pouncing at the opponent ( Tsurararara~ ), and blindly firing supercooled snowballs from the Launcher ( Snow Bomber ).",
+  "web_created": true
+}

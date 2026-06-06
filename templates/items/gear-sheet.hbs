@@ -1,0 +1,123 @@
+<form class="{{cssClass}} flexcol gear-item-sheet" autocomplete="off">
+
+  {{!-- Header --}}
+  <header class="sheet-header flexrow" style="gap:10px; padding:8px; background:#1a1a2e; color:#c8d8e8; flex:0 0 auto;">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"
+         style="width:72px;height:72px;border:2px solid #3a3a5e;border-radius:4px;cursor:pointer;object-fit:contain;flex-shrink:0;" />
+    <input class="charname" name="name" type="text" value="{{item.name}}" placeholder="Item Name"
+           style="flex:1;background:transparent;border:none;border-bottom:1px solid #3a3a5e;color:#c8d8e8;font-size:1.3em;" />
+  </header>
+
+  <section class="sheet-body gear-body" style="padding:10px; display:flex; flex-direction:column; gap:10px; overflow-y:auto; flex:1;">
+
+    {{!-- Type + Target + Timing row --}}
+    <div class="gear-meta-row">
+      <div class="gear-meta-field">
+        <label class="gear-field-label">Type</label>
+        <select name="system.itemType">
+          {{selectOptions itemTypeOptions selected=system.itemType}}
+        </select>
+      </div>
+
+      {{#if showTarget}}
+      <div class="gear-meta-field">
+        <label class="gear-field-label">Target</label>
+        <select name="system.target">
+          {{selectOptions targetOptions selected=system.target}}
+        </select>
+      </div>
+      {{/if}}
+
+      {{#if showTiming}}
+      <div class="gear-meta-field">
+        <label class="gear-field-label">Timing</label>
+        <select name="system.timing">
+          {{selectOptions timingOptions selected=system.timing}}
+        </select>
+      </div>
+      {{/if}}
+
+      {{#if isConsumable}}
+      <div class="gear-meta-field gear-meta-field-sm">
+        <label class="gear-field-label">Qty</label>
+        <input type="number" name="system.quantity" value="{{system.quantity}}" min="0" style="width:60px;" />
+      </div>
+      {{/if}}
+    </div>
+
+    {{!-- Cost --}}
+    <div class="gear-section">
+      <div class="gear-section-title">Cost</div>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label">DigiDollars (DD)</label>
+        <input type="number" name="system.cost.digidollars" value="{{system.cost.digidollars}}" min="0" class="gear-cost-input" />
+        <label class="gear-cost-label">Real World $</label>
+        <input type="number" name="system.cost.realMoney"   value="{{system.cost.realMoney}}"   min="0" class="gear-cost-input" />
+      </div>
+      <div class="gear-cost-row" style="margin-top:4px;">
+        <label class="gear-cost-label">Special</label>
+        <input type="text" name="system.cost.special" value="{{system.cost.special}}"
+               placeholder="e.g. Loot only, GM determined, Quest reward" style="flex:1;" />
+      </div>
+    </div>
+
+    {{!-- Effect --}}
+    <div class="gear-section">
+      <div class="gear-section-title">Effect</div>
+      <textarea name="system.effect" rows="5" style="width:100%; resize:vertical; font-size:0.88em; font-family:inherit;"
+                placeholder="Describe what this item does. Copy from the book.">{{system.effect}}</textarea>
+    </div>
+
+    {{!-- Bonuses (slotted + equipment only) --}}
+    {{#unless isConsumable}}
+    <div class="gear-section">
+      <div class="gear-section-title">
+        Bonuses
+        <span class="gear-section-hint">— applied automatically when equipped</span>
+      </div>
+
+      <div class="gear-bonus-grid">
+        <div class="gear-bonus-col">
+          <div class="gear-bonus-group-title">Crest Stats</div>
+          <div class="gear-sb-row"><span>Courage</span>    <input type="number" name="system.bonuses.courage"     value="{{system.bonuses.courage}}" class="gear-bonus-input" /></div>
+          <div class="gear-sb-row"><span>Friendship</span> <input type="number" name="system.bonuses.friendship"  value="{{system.bonuses.friendship}}" class="gear-bonus-input" /></div>
+          <div class="gear-sb-row"><span>Love</span>       <input type="number" name="system.bonuses.love"        value="{{system.bonuses.love}}" class="gear-bonus-input" /></div>
+          <div class="gear-sb-row"><span>Knowledge</span>  <input type="number" name="system.bonuses.knowledge"   value="{{system.bonuses.knowledge}}" class="gear-bonus-input" /></div>
+          <div class="gear-sb-row"><span>Sincerity</span>  <input type="number" name="system.bonuses.sincerity"   value="{{system.bonuses.sincerity}}" class="gear-bonus-input" /></div>
+          <div class="gear-sb-row"><span>Reliability</span><input type="number" name="system.bonuses.reliability" value="{{system.bonuses.reliability}}" class="gear-bonus-input" /></div>
+          <div class="gear-sb-row"><span>Hope Pool</span>  <input type="number" name="system.bonuses.hope"        value="{{system.bonuses.hope}}" class="gear-bonus-input" /></div>
+
+          <div class="gear-bonus-group-title" style="margin-top:8px;">Combat</div>
+          <div class="gear-sb-row"><span>HP Dmg Reduce</span><input type="number" name="system.bonuses.hpDamageReduction" value="{{system.bonuses.hpDamageReduction}}" class="gear-bonus-input" /></div>
+          <div class="gear-sb-row"><span>Attack Bonus</span> <input type="number" name="system.bonuses.attackBonus"       value="{{system.bonuses.attackBonus}}" class="gear-bonus-input" /></div>
+          <div class="gear-sb-row"><span>Damage Bonus</span> <input type="number" name="system.bonuses.damageBonus"       value="{{system.bonuses.damageBonus}}" class="gear-bonus-input" /></div>
+        </div>
+
+        <div class="gear-bonus-col">
+          <div class="gear-bonus-group-title">Skill Bonuses</div>
+          {{#each skillGroups}}
+          <div class="gear-skb-group">
+            <span class="gear-skb-stat" style="color:{{this.color}}">{{this.label}}</span>
+            {{#each this.skills}}
+            <div class="gear-sb-row">
+              <span>{{this.label}}</span>
+              <input type="number" name="system.bonuses.skillBonuses.{{this.key}}" value="{{this.bonus}}" class="gear-bonus-input" />
+            </div>
+            {{/each}}
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <p class="gear-bonus-hint">Leave 0 for no bonus. Supports negative values (penalties).</p>
+    </div>
+    {{/unless}}
+
+    {{!-- Notes --}}
+    <div class="gear-section">
+      <div class="gear-section-title">GM Notes</div>
+      <textarea name="system.notes" rows="2" style="width:100%; resize:vertical; font-size:0.85em; font-family:inherit;"
+                placeholder="Internal notes, rulings, reminders — not shown to players.">{{system.notes}}</textarea>
+    </div>
+
+  </section>
+</form>

@@ -1,0 +1,39 @@
+{
+  "name": "Stegomon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Shell Needle Rain",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Shoots the blades on its back up into the sky, which rain down on the enemy."
+  },
+  "digivolves_from": [
+    "Guilmon",
+    "Hagurumon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Monzaemon",
+    "Orochimon",
+    "Rapidmon Perfect",
+    "Vermillimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Stegosaur Digimon that evolved through the power of the \" Digimental of Friendship \". It has countless blades on its back. These blades are used for performing counterattacks as well as defending itself from the enemy's attacks, and Stegomon is able to will them to move in its desired direction. It sometimes attacks with the spikes on its tail; generally, however, it is said that it mostly tanks the enemy's attacks and then repels them with its blades. Its Special Move is shooting the blades on its back up into the sky, which rain down on the enemy ( Shell Needle Rain ). Few Digimon can evade the downpour of blades, but should they manage to fully evade the attack, Stegomon will have lost all of its blades and become completely exposed; hence, it seems that it seldom uses this attack.",
+  "web_created": true
+}

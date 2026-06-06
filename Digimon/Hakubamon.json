@@ -1,0 +1,34 @@
+{
+  "name": "Hakubamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Hekiryūsō",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Tears the opponent to pieces with its sharp, golden claws."
+  },
+  "digivolves_from": [
+    "Kamemon",
+    "Takinmon"
+  ],
+  "digivolves_to": [
+    "Sanzomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Holy Beast Digimon whose appearance resembles a horse, but also possesses draconic features such as sharp claws, long thin whiskers, and scales. It lives alone in mountainous regions without forming herds. Its white and gold fur and dragon scales repel flames, and there are occasions when it goes around rescuing Baby and Child Digimon that fail to escape during wildfires. Although it generally refuses to let anyone ride on its back due to its refined nature, it is said that only Sanzomon has been seen riding on its back and traveling with it on Hakubamon's own accord. Its Special Move is tearing the opponent to pieces with its sharp, golden claws ( Hekiryūsō ). Its \" Enmeishu \", in which it fires the beads around its neck at the opponent, is said to pursue those with ill intent to the ends of the earth, beating and burning them."
+}

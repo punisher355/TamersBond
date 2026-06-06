@@ -1,0 +1,56 @@
+{
+  "name": "Kari S1",
+  "season": 1,
+  "img": "Kari.webp",
+  "abilities": [
+    {
+      "name": "Break Through",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Love rank 3",
+      "description": "Once per encounter when your Digimon makes an attack that would have an unfavorable element multiplier (x0.5), you may declare Break Through before damage is calculated. Strip the element multiplier entirely — only attribute matchup applies to this attack."
+    },
+    {
+      "name": "Cheer",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Friendship rank 3",
+      "description": "When an ally makes a skill check and fails, you may spend Hope equal to your Friendship rank to boost their result by your Friendship rank. Declared after the roll but before the GM rules on the outcome."
+    },
+    {
+      "name": "Gatomon's Legacy",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Any 1 Row 1 ability, Champion digivolution unlocked",
+      "description": "Your Digimon's Max Default Stage increases by 1 permanently. Their Default Stage can now reach one stage higher than the campaign maximum allows for other Digimon. Cannot push beyond Mega."
+    },
+    {
+      "name": "Loud and Clear",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Cheer, Friendship rank 4",
+      "description": "Once per encounter Cheer is free — costs no Hope. After that first free use it still costs Hope equal to your Friendship rank as normal."
+    },
+    {
+      "name": "Push Further",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Break Through, Love rank 4",
+      "description": "Break Through can now be used additional times per encounter by spending 4 Hope per use after the first. The first use each encounter is still free."
+    },
+    {
+      "name": "Light the Way",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Push Further, Love rank 5",
+      "description": "Break Through can now be used on any allied Digimon's attack, not just your own. When an ally is hitting into an elemental resistance, you may declare Break Through on their behalf. Hope cost still applies and comes from your pool."
+    },
+    {
+      "name": "Rally the Team",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Loud and Clear, Friendship rank 5",
+      "description": "When you spend Hope to boost an ally's skill check with Cheer and the roll still fails, the Hope cost is fully refunded. You only pay when the boost actually works."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Zhuqiaomon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 11,
+    "KNW": 13,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Kouen",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Fires from its wings swirling flames comparable to solar prominences."
+  },
+  "digivolves_from": [
+    "Delumon",
+    "Grappu Leomon",
+    "Hippogriffomon",
+    "Indaramon",
+    "Mihiramon",
+    "Pajiramon",
+    "Pajramon",
+    "Sandiramon",
+    "Yatagaramon"
+  ],
+  "digivolves_to": [
+    "Huanglongmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "One of the Four Holy Beasts who protect the Digital World, it guards the South and manipulates incandescent flames. Reigning since the age of myth, its existence has passed into legend, and it is extremely difficult to track down. Also, it is difficult to overthrow with the power of an ordinary Ultimate, and its power is set as the highest authority among other Digimon, so it is surely the epitome of a god. Zhuqiaomon's temperament is the roughest among the Four Holy Beast Digimon, and it incinerates anything that approaches it without reason. Its Special Move is a swirl of flames comparable to the prominences which jet out with a solar eruption ( Kouen ).",
+  "web_created": true
+}

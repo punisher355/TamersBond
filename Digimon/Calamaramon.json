@@ -1,0 +1,33 @@
+{
+  "name": "Calamaramon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Water",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Nero Corso",
+    "element": "Water",
+    "pr": 8,
+    "tags": "[RANGE 6] [POISON 2]",
+    "description": "Spews out corrosive ink from its mouth."
+  },
+  "digivolves_from": [
+    "Ranamon"
+  ],
+  "digivolves_to": [
+    "Shagaramon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Water which bears the might of one of the legendary Warrior Ten . It has a half-human, half-beast appearance, and its tentacles are used offensively and defensively to either attack the enemy by rapidly spinning them, or guard its body by gathering them together to form a wall. If it is unable to win while attacking and defending with its tentacles, it will retract its body into its mantle and perform a powered-up attack in the form of a giant squid. The flexibility of its mantle is superior to that of its tentacles, so external physical attacks are ineffective. Although it is better at operating underwater or in the air, on land, it skillfully manipulates its ten tentacles to move around like a huge hermit crab. Its personality is sly and short-tempered like a witch. Its Special Moves are spewing corrosive ink from its mouth ( Nero Corso ), and hardening its mantle, spinning like a drill, and then smashing into the enemy ( Titanic Charge ).",
+  "web_created": true
+}

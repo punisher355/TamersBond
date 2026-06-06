@@ -1,0 +1,54 @@
+{
+  "name": "Big Mamemon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 6,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Big Smiley Bomber",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Uses itsMamemonfollowers as weapons.Creates a bomb from its fist and throws it."
+  },
+  "digivolves_from": [
+    "Algomon (Adult)",
+    "Clockmon",
+    "Dokugumon",
+    "Icemon",
+    "Mechanorimon",
+    "Meramon",
+    "Shellmon",
+    "Starmon",
+    "Tankmon",
+    "Thunderballmon",
+    "Tylomon",
+    "Wizarmon",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Boltmon",
+    "Cres Garurumon",
+    "Grand Locomon",
+    "Jijimon",
+    "Metal Garurumon",
+    "Nidhoggmon",
+    "Platinum Numemon",
+    "Prince Mamemon",
+    "Tonosama Mamemon",
+    "War Greymon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Mutation Digimon that acts as a boss-like figure towards Mamemon , which hold the alias of \" Smiley Bomber \". It's said that it is actually an aggregation of Mamemon. While regular Mamemon are around the same size as Baby Digimon, they possess a degree of power unimaginable from their appearance; however, as its name suggests, Big Mamemon is dozens or even hundreds of times the size of a Mamemon. That said, the reason why it is considered a \"Mamemon\" even at this size is still unclear. Its personality is extremely gentle, and it hates conflict and battle. It is always playing with its Mamemon followers. Its Special Move is using its Mamemon followers themselves as weapons ( Big Smiley Bomber ). It's rumored that it decreases in size after using this technique.",
+  "web_created": true
+}

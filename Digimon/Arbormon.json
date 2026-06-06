@@ -1,0 +1,40 @@
+{
+  "name": "Arbormon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Machine Gun Dance",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Unleashes continuous kicks from unexpected directions with its extensible limbs."
+  },
+  "digivolves_from": [
+    "Alraumon",
+    "Armadimon",
+    "Dokunemon",
+    "Pomumon"
+  ],
+  "digivolves_to": [
+    "Jyureimon",
+    "Vikaralamon",
+    "Zamielmon",
+    "Nanomon (Digimon)",
+    "Petaldramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Wood which bears the might of one of the legendary Warrior Ten . The blueprints of a medieval , wooden karakuri puppet converted into its data, so its gimmicks are surprisingly archaic. You can't tell what it's thinking due to its lack of facial expression and being taciturn, and it is usually treated literally like a puppet by its comrades, but once a battle begins, it makes sport of the enemy with its keen and tricky movements. It is able to shoot strong ivy from the tubes on its back and manipulate the opponent like a marionette. Although its skin is fireproof, its insides and joints are vulnerable to fire. Its Special Moves are unleashing continuous kicks from unexpected directions with its strange movements ( Machine Gun Dance ), and firing an enormous seed from the opening in its chest, causing ivy to spread all over the opponent's body ( Blockade Seed ).",
+  "web_created": true
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Cerberumon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Inferno Gate",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Opens the \"gates of Hell\" that are engraved in the earth, thrusting the opponent down into the jet-blackDark Area."
+  },
+  "digivolves_from": [
+    "Devidramon",
+    "Dinohumon",
+    "Dobermon",
+    "Dogmon",
+    "Dorulumon",
+    "Drimogemon",
+    "Fangmon",
+    "Garurumon",
+    "Gryzmon",
+    "Ice Devimon",
+    "Kyubimon",
+    "Mojyamon",
+    "Monochromon",
+    "Sangloupmon",
+    "Siesamon",
+    "Symbare Angoramon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Ancient Sphinxmon",
+    "Anubimon",
+    "Baihumon",
+    "Bancho Leomon",
+    "Barbamon",
+    "Beelzebumon",
+    "Diarbbitmon",
+    "Grand Dracumon",
+    "Marsmon",
+    "Mercurymon",
+    "Metal Garurumon",
+    "Metal Garurumon (Black)",
+    "Plutomon",
+    "Saber Leomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Demon Beast Digimon called the \" Watchdog of Hell \". The claws on its legs are hard enough to easily tear through low-purity Chrome Digizoid . Also, its body is protected by a hard living shell, which has the ability to instantly repair any damage it incurs. The armor on its shoulders each possess sentience, and are able to instantly sense an attack coming from any direction, then report it to Cerberumon's central body. Its Signature Move, \" Inferno Gate \", is opening a \"Hell Gate\" engraved in the earth, then casting the opponent through it to the jet-black Dark Area . Its Special Move is a scorching flamethrower ( Hellfire )."
+}

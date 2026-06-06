@@ -1,0 +1,43 @@
+{
+  "name": "Porcupamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 7,
+    "SNC": 4,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Madness Broach",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Stabs the opponent with its pointed body hair."
+  },
+  "digivolves_from": [
+    "Angoramon",
+    "Dracumon",
+    "Goburimon",
+    "Phascomon",
+    "Pico Devimon",
+    "Shamamon"
+  ],
+  "digivolves_to": [
+    "Astamon",
+    "Lamortmon",
+    "Matadrmon",
+    "Mephismon",
+    "Skull Baluchimon",
+    "SkullBaluchimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese Categorized as one of the Red Data Digimon species, it is a rare Digimon threatened with extinction. Although it was not originally a species that inhabited the Dark Area , it was driven off by various species of Digimon, and now it lives in the Dark Area. Its body is covered in a special leather material, and its wicked-looking suit is thought to be camouflage to help it stay alive in the Dark Area, where struggles for survival are at their fiercest. Its Special Moves are stabbing the opponent with its pointed body hair ( Madness Broach ), and slashing at them with its edged claws ( Slap and Rip )."
+}

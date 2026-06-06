@@ -1,0 +1,41 @@
+{
+  "name": "Kudamon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Dangan Senpū",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Strikes the opponent with the whole cartridge while spinning its body."
+  },
+  "digivolves_from": [
+    "Bibimon",
+    "Kyaromon"
+  ],
+  "digivolves_to": [
+    "Blade Kuwagamon",
+    "Flare Lizarmon",
+    "Nohemon",
+    "Numemon",
+    "Reppamon",
+    "Seahomon",
+    "Submarimon",
+    "Thunderballmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Holy Beast Digimon that is always wreathed around a holy cartridge and never separates from it. It is said that day after day, it accumulates holy power within the earring on its left ear, and that the stored power is great enough to have influence on its next evolution. It has a calm, cool, and collected personality, conducting a precise assessment of the situation even in combat, and attaining the advantage in battle. Conversely, when it gets outnumbered, it possesses a defensive technique in which it goes into its cartridge and settles down. Its Special Moves are striking with the whole cartridge while spinning its body ( Dangan Senpū ), and blinding with a great radiance emitted from its earring ( Zekkoushou )."
+}

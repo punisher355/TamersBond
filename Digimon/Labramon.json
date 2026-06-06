@@ -1,0 +1,55 @@
+{
+  "name": "Labramon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 3,
+    "SNC": 4,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Cure Liqueur",
+    "element": "Neutral",
+    "pr": 2,
+    "tags": "[MELEE]",
+    "description": "Restores and optimizes the data of weakened Digimon."
+  },
+  "digivolves_from": [
+    "Algomon (Baby II)",
+    "Xiaomon"
+  ],
+  "digivolves_to": [
+    "Algomon (Adult)",
+    "Baromon",
+    "Black Galgomon",
+    "Coelamon",
+    "Darcmon",
+    "Devidramon",
+    "Dobermon",
+    "Dogmon",
+    "Galgomon",
+    "Gaogamon",
+    "Growmon",
+    "Ikkakumon",
+    "Leomon",
+    "Kyubimon",
+    "Mantaraymon",
+    "Mojyamon",
+    "Opossumon",
+    "Siesamon",
+    "Strikedramon",
+    "Tobucatmon",
+    "Wendimon",
+    "XV-mon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon with an appearance resembling a real dog. It is said that the Child level is the final form of artificial Digimon, and although the prevailing view says that it won't evolve further than this, there exist unconfirmed reports of it having evolved further than that, too. Perhaps, some sort of miracle might stimulate an evolution in Labramon. It is exceedingly faithful to its Tamer , and feels called to protect them. Its Signature Move \" Cure Liqueur \" restores and optimizes the data of weakened Digimon. Its Special Move is generating a hyper-oscillation with a powerful bark ( Retriever-bark )."
+}

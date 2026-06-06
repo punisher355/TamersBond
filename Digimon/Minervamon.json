@@ -1,0 +1,42 @@
+{
+  "name": "Minervamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 13,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Strike Roll",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "A forward rolling slash withOlympiathat splits the ground."
+  },
+  "digivolves_from": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Digitamamon",
+    "Hisyaryumon",
+    "Lady Devimon",
+    "Lilamon",
+    "Lilimon",
+    "Monzaemon",
+    "Orochimon",
+    "Silphymon",
+    "Were Garurumon (Black)",
+    "Yatagaramon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A God Man Digimon which belongs to the Olympos XII and has the appearance of a maiden. Though it has an extremely short physique, it possesses superhuman strength it uses to freely wield a greatsword as large as its own body. It possesses a cheerful personality due to its childlike innocence, but when its emotions become violently unstable, it gets into a bad mood which causes selfish and willful (problematic) behavior that no one can help it cope with. Its Special Moves are a forward rolling slash unleashed from its greatsword \" Olympia \" ( Strike Roll ) and a horizontal spinning slash too quick to catch with the eyes ( Madness Merry-go-round ). \" Strike Roll \" splits the ground, and \" Madness Merry-go-round \" creates a large tornado."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Mimicmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Dead Shot",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "The weapon on its left arm which also loaded from the Digimon it has sealed. Its power has dropped dramatically due to the data being compressed."
+  },
+  "digivolves_from": [
+    "Patamon",
+    "Shoutmon"
+  ],
+  "digivolves_to": [
+    "Duramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Adult Digimon that is thought to have mutated from security software used for protecting computer terminals. As a result of capturing and taking in Virus-types that invade its territory like a trap, its own Attribute has become Virus as well. There are numerous Digimon sealed within its body, and the arms and horn coming out of its cage all originate from other Digimon. The weapon on its left arm \" Dead Shot \", which is its main equipment, is also loaded from the Digimon it has sealed, though their power has been lowered significantly due to the data being compressed. Its Special Move is depriving the enemy of their freedom with the mist released from its cage ( Hinder Miasma ). Many Digimon that are immobilized by this technique are incorporated into Mimicmon's body."
+}

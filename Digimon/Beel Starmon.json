@@ -1,0 +1,33 @@
+{
+  "name": "Beel Starmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 12,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 13,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "FlyBullet",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Homes in on the enemy's vitals with the \"Fly Bullet\" fired from the Rizoma de Loto."
+  },
+  "digivolves_from": [
+    "Dark Superstarmon",
+    "Lady Devimon",
+    "Silphymon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that splendidly manipulates twin pistols, and is also called the \" Beelzebumon Lady \" due to its appearance. Its cherished twin pistols, the \" Rizoma de Loto \", are like little sisters to the \" Berenjena \" possessed by Beelzebumon . It opens up to everybody without hesitation, and in particular, it is close friends with many gun-wielding Digimon, and has been given the nickname \" Beelko \" by Magna Kidmon and the like . However, it is at loggerheads with the solitary Beelzebumon, so although it recognizes its competence, it keeps a slight distance. It is dressed in a jet-black leather suit, and it wears a muffler that is able to transform according to use such as for offense and defense or wings. Its Special Move is homing in on the enemy's vitals with the \" Fly Bullet \" fired from the Rizoma de Loto . Furthermore, it can also stab and tear through enemies with the knives stocked on the Rizoma de Loto ( Double Claw ), and wildly fire the guns hidden in the heels of its boots with a keen Senpukyaku ( Hurricane Screw Shot )."
+}

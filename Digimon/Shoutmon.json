@@ -1,0 +1,50 @@
+{
+  "name": "Shoutmon",
+  "stage": "Rookie",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 3,
+    "KNW": 4,
+    "SNC": 4,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Soul Crusher",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "12Uses its mic to amplify the heated emotions blazing within its chest, then bashes the opponent.Uses its mic to amplify its emotions before shouting a stream of fire at the enemy."
+  },
+  "digivolves_from": [
+    "Bibimon",
+    "Gigimon",
+    "Koromon",
+    "Pickmon",
+    "Tokomon"
+  ],
+  "digivolves_to": [
+    "Bulkmon",
+    "Darcmon",
+    "Galgomon",
+    "Geremon",
+    "Greymon",
+    "Growmon",
+    "Guardromon (Gold)",
+    "Mimicmon",
+    "Numemon",
+    "Red V-dramon",
+    "Reppamon",
+    "Scumon",
+    "Zubaeagermon",
+    "Deckerdramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A ferocious Digimon with extremely high aggressiveness due to its hot-blooded enthusiasm. However, it is friendly towards its comrades, and its friendship with other Digimon, surpassing species, can be deepened even further if they are recognized by Shoutmon. There is a unique feature to Shoutmon's singing that converts its passion to energy, and it can perform an attack called \" Soul Crusher \", which uses its mic to amplify the heated emotions blazing within its chest, then bash the opponent. Because passion is the very source of the attack, it will definitely inflict damage no matter the target, and since Shoutmon won't give up fighting unless its passion disappears, this is the reason Shoutmon is said to be a ferocious Digimon with high aggressiveness. On one hand it seems ferocious, but on the other it is said to love music and songs, and it likes to hum songs with natural sounding background music like the sound of the wind, raindrops, the murmuring of a river, or the stirring of leaves on a tree. Because it can often become too enthusiastic in its song, accidentally letting off its \" Soul Crusher \" even though there aren't any enemies, it's probably safest to leave the spot at once if Shoutmon starts singing, so that it doesn't notice you. Shoutmon itself is said to have the mysterious trait of always having its McField -brand mic [N 1] in its possession, and a Shoutmon without the mic is not really a Shoutmon. It is said that a Shoutmon that has completely lost its mic will rapidly lose power from the shock of not being a Shoutmon anymore, and before long it will have wasted away. Therefore, you should never play a practical joke like hiding the mic. Incidentally, its \" Rowdy Rocker \" lets it wield the mic as in bōjutsu , so it is excellent not only in scuffling matches but also in performances.",
+  "web_created": true
+}

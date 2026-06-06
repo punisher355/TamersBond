@@ -1,0 +1,40 @@
+{
+  "name": "Siriusmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 11,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "Photon Blaster",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires light beam shots from its \"Sylvia\" cannon-blades."
+  },
+  "digivolves_from": [
+    "Bombermon",
+    "Canoweissmon",
+    "Fumamon",
+    "Ghilliedhumon",
+    "Metal Greymon",
+    "Regulusmon",
+    "Zanmetsumon"
+  ],
+  "digivolves_to": [
+    "Proximamon",
+    "Ragnamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Ultimate-level Light Dragon Digimon that is affiliated with the group of justice, the Virus Busters . Whenever it senses a voice crying for help or malice, even from far away, it will descend like a comet and bring down the enemy with the \" Sylvia \" composite cannon-blades equipped to both its arms. However, it is a kind-hearted being who brightens up everything around it such that if it senses a change of heart in its opponent during battle, it will lay down its arms and open up to them. Its Special Moves are firing light beam shots from the Sylvia ( Photon Blaster ), and a blade of order with which, using its blade deployed in the forward position, it bisects the enemy ( Cosmo Blade ). In addition, it is said that the white flash from its \" Brea quasar \"—in which it slings a slash of starlight contained within its blade, as if chasing after the \" Photon Blaster \" that it fired, causing the combined shot of light and slash to explode in range of the enemy—looks like a meteor from remote areas. Also, even if the Sylvia get destroyed, it has a trump card up its sleeve, \" Planet Knuckle \", in which it packs its fists with life energy.",
+  "web_created": true
+}

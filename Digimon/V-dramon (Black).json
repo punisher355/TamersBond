@@ -1,0 +1,40 @@
+{
+  "name": "V-dramon (Black)",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "V-Breath Arrow",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Shoots an arrow of blue-white heat in the shape of a 'V'."
+  },
+  "digivolves_from": [
+    "Guilmon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Cyberdramon",
+    "Delumon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Orochimon",
+    "Tekkamon",
+    "Velgrmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Sorry, but no official profile of V-dramon (Black) has been added yet. The following text is just the blurb of Bo-552 . This blue-black mythical dragon exhibits even greater ferocity! ⇨ English 獰猛さを増した、蒼黒の幻竜！"
+}

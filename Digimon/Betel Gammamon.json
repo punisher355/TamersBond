@@ -1,0 +1,41 @@
+{
+  "name": "Betel Gammamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Sorblow",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Punches the enemy with the flames it amasses in its hands."
+  },
+  "digivolves_from": [
+    "Bokomon",
+    "Gammamon"
+  ],
+  "digivolves_to": [
+    "Bombermon",
+    "Brachimon",
+    "Canoweissmon",
+    "Chimairamon",
+    "Fumamon",
+    "Ghilliedhumon",
+    "Regulusmon",
+    "Zanmetsumon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A form in which Gammamon grew up, and its body turned red due to the flames of its blazing heart. Its agility has increased, and its power and speed in close combat have risen even more. The power of its attacks doubles as the excitement of its emotions swells. Its Special Moves are \" Sorblow \", in which it punches the enemy with the flames it amasses in its hands, and \" Sorshot \", in which it hurls the flames in its hands, albeit less powerful.",
+  "web_created": true
+}

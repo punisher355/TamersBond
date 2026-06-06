@@ -1,0 +1,59 @@
+{
+  "name": "Pumpmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Trick or Treat",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Manifests a gigantic pumpkin in the air and squashes the opponent with it."
+  },
+  "digivolves_from": [
+    "Bakemon",
+    "Chamelemon",
+    "Devidramon",
+    "Dokugumon",
+    "Evilmon",
+    "Flare Lizamon",
+    "Flare Lizarmon",
+    "Garurumon",
+    "Golemon",
+    "Jazardmon",
+    "Omekamon",
+    "Paledramon",
+    "Ponchomon",
+    "Submarimon",
+    "Sunflowmon",
+    "Togemon",
+    "Tuchidarumon",
+    "Wizarmon",
+    "Woodmon",
+    "Yanmamon"
+  ],
+  "digivolves_to": [
+    "Beelzebumon",
+    "Boltmon",
+    "Dinotigermon",
+    "Lotusmon",
+    "Noble Pumpmon",
+    "Piemon",
+    "Pinochimon",
+    "Rosemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A plush toy Digimon with a pumpkin head. There's an urban legend that says Pumpmon came to be when mutations developed in a computer virus created during the season of the Western holiday of \" Halloween \". However, though it doesn't inflict any harm at all because it was not a malignant virus, its external appearance belies its possession of powerful offensive ability. As you can tell even from looking at its blank face, a rare expression of emotions is characteristic of Puppet Digimon. Its Special Move is manifesting a gigantic pumpkin in the air, and then squash ing the opponent with it ( Trick or Treat )."
+}

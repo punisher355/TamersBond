@@ -1,0 +1,33 @@
+{
+  "name": "Destromon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 6,
+    "LVE": 7,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "San Renshōhō",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Fires the turrets on its arms."
+  },
+  "digivolves_from": [
+    "Damemon"
+  ],
+  "digivolves_to": [
+    "Hi Andromon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Perfect Digimon that took in the data of the most powerful battleship in the world. It boasts a size capable of transporting combat Digimon and the like, and once it reaches a strike point, it will join the battle with its overwhelming destructive power. Its armaments include the \" San Renshōhō \" on its arms, the \" Juggernaut Blast \", which is fired from its chest, and the \" Long-Range Buster Cannon \" on its back, all of which have high firepower, so not even dust will be left behind when attacked by Destromon."
+}

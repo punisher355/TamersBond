@@ -1,0 +1,41 @@
+{
+  "name": "Boogiemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Death Clash",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Stabs the opponent with its trident."
+  },
+  "digivolves_from": [
+    "Arkadimon Child",
+    "Impmon",
+    "Mushmon",
+    "Pico Devimon",
+    "Wormmon"
+  ],
+  "digivolves_to": [
+    "Death Meramon",
+    "Mephismon",
+    "Neo Devimon",
+    "Phelesmon",
+    "Waru Monzaemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An eerie-looking Demon Man Digimon. Numerous tattoos containing evil incantations are carved onto its body, and it is apparently capable of casting as many spells as it has tattoos. Rather than fight head-on, it is a coward that usually lies in wait and launches ambush attacks on the enemy from the darkness. Its Special Move is stabbing the enemy with the trident it wields in its right hand ( Death Clash )."
+}

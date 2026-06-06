@@ -1,0 +1,40 @@
+{
+  "name": "Mori Shellmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Water",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Pile Shell",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE] [RUSH]",
+    "description": "Tucks its limbs inside its hard shell, and then charges while spinning."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Dokunemon",
+    "Ganimon",
+    "Palmon",
+    "Psychemon"
+  ],
+  "digivolves_to": [
+    "Anomalocarimon",
+    "Digitamamon",
+    "Triceramon",
+    "Vermillimon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "web_created": true,
+  "description": "A companion of Shellmon that lives in swampland deep in the forest. The color of its body and its habitat are different to Shellmon's, and it is thought that the color of its body changes depending on where it lives. Although it usually stays inside its hard shell, it has an aggressive personality like the belligerent Shellmon, and because of its large body and strength, it is unwise to approach Mori Shellmon's territory and make it angry. Its Special Moves are tucking its limbs inside its hard shell, and then charging while spinning ( Pile Shell ), and spewing dense fog from its mouth that displays illusions ( Mind Fog )."
+}

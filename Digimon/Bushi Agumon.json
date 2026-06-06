@@ -1,0 +1,38 @@
+{
+  "name": "Bushi Agumon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Fire",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Choukousoku Ichimonjigiri",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Super High-Speed Horizontal Slash"
+  },
+  "digivolves_from": [
+    "Koromon"
+  ],
+  "digivolves_to": [
+    "Arresterdramon",
+    "Geo Greymon",
+    "Greymon",
+    "Greymon (Blue)",
+    "Manbomon",
+    "Reppamon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A wandering super-swordsman -- my name is Bushi Agumon. The family crest adorning its chest is proof of its status as a super-swordsman, at least according to Bushi Agumon itself, though there's no denying that its swordsmanship is first-rate. However, the meaning behind its 'super-swordsman' title is a mystery. Its Special Moves are \" Choukousoku Ichimonjigiri \" and \" Chouteisoku Ichimonjigiri \". It appears to excel at attacking at varied paces.",
+  "web_created": true
+}

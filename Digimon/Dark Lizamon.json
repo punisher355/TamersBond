@@ -1,0 +1,47 @@
+{
+  "name": "Dark Lizamon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Dread Fire",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Incinerates the enemy's spirit with flames of darkness."
+  },
+  "digivolves_from": [
+    "Armadimon",
+    "Bakumon",
+    "Bearmon",
+    "Betamon",
+    "Candmon",
+    "Dokunemon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gottsumon",
+    "Kotemon",
+    "Monodramon",
+    "Shamamon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Ex-Tyranomon",
+    "Metal Tyranomon",
+    "Phelesmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon whose whole body is covered in flames of darkness that burn quietly. As it is the form of a Flare Lizamon that evolved into a Virus-type, it has a cool-headed personality. Its Special Move is incinerating the enemy's spirit with flames of darkness ( Dread Fire ).",
+  "web_created": true
+}

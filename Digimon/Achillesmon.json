@@ -1,0 +1,36 @@
+{
+  "name": "Achillesmon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 14,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Anemodarmenos",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE] [BURST 2] [CONFUSE]",
+    "description": "Confuses the enemy with afterimages caused by its high-speed movement."
+  },
+  "digivolves_from": [
+    "Boutmon",
+    "Climbmon",
+    "Divemon",
+    "Pistmon",
+    "Shootmon",
+    "Tempomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An Ultimate Digimon that evolved by becoming adept in every kind of sport from all times and places, and mastering them. It possesses heart, technique, and physique, and is a true seeker that is always training, and never boasts about its tenacious power. Its extreme physical ability has no weakness es , and so it achieves victory without leaving any openings, not only in sports, but also in battle. The shields on its feet act as boosters, and are widely used for things such as its \" Anemodarmenos \", where it confuses the enemy with afterimages caused by its high-speed movement, and \" Asteroeidis \", a kicking technique that it dishes out using its swift speed. Its Special Move is throwing its divine spear and ensuring that it pierces the enemy's Digicore ( Lónkhē Adistakto ).",
+  "web_created": true
+}

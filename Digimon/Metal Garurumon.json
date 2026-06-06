@@ -1,0 +1,61 @@
+{
+  "name": "Metal Garurumon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 10,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 13,
+    "RLB": 12
+  },
+  "signature_move": {
+    "name": "CocytusBreath",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Spews cold air at absolute zero that completely freezes the enemy."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Andromon",
+    "Big Mamemon",
+    "Black Rapidmon",
+    "Blossomon",
+    "Brachimon",
+    "Cerberumon",
+    "Garudamon",
+    "Groundramon",
+    "Insekimon",
+    "Loader Leomon",
+    "Mach Gaogamon",
+    "Mammon",
+    "Megadramon",
+    "Megalo Growmon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Metal Mamemon",
+    "Paildramon",
+    "Pandamon",
+    "Parrotmon",
+    "Shawujinmon",
+    "Tyilinmon",
+    "Valvemon",
+    "Waru Seadramon",
+    "Were Garurumon",
+    "Were Garurumon (Black)",
+    "Zudomon"
+  ],
+  "digivolves_to": [
+    "Gabumon -Yujo no Kizuna-",
+    "Omnimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese The final form of Garurumon , powered up by metallizing almost its entire body. Not only has it retained its natural keenness when it underwent metallization, but it can also pulverize the opponent with the countless weapons concealed throughout its body. It radiates invisible lasers from the four Laser Sights on the tip of its nose, and because it is able to analyze the targets before it using all of its sensors, such as infrared rays and X-rays , it is impossible to escape Metal Garurumon even when among the darkness outside of its field of vision. Also, it can release beam-shaped wings from the arms extending from its back, allowing it to fly about the Net Space at extremely high speed. Its Special Move is spewing cold air at absolute zero that completely freezes everything ( Cocytus Breath ). Anyone that suffers this attack has their vital functions instantly brought to a halt. In addition, it wipes out the opponent with its \" Garuru Tomahawk \", in which it launches a gigantic missile called a Freeze Bomber from its chest, and \" Grace Cross Freezer \", in which it fires its weapons all at once."
+}

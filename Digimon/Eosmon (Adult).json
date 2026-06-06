@@ -1,0 +1,33 @@
+{
+  "name": "Eosmon (Adult)",
+  "stage": "Champion",
+  "attribute": "Unknown",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 6,
+    "LVE": 5,
+    "KNW": 8,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Monodramon",
+    "Morphomon"
+  ],
+  "digivolves_to": [
+    "Eosmon (Perfect)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An artificial Digimon that was created based on a certain Digimon . The prevailing view that the Child level is the final form of artificial Digimon has been refuted due to the passion of researchers with the changing times, allowing them to evolve to the Adult level. Because Eosmon lacks emotion and moves according to the researcher's instructions, its good or wicked actions are down to the researcher. Its transparent, panel-shaped wings are used in its \" Mirror Guard \", where it spreads them to protect itself or the target, and in its \" Mirror Dust \", where it detaches them and sends them flying at the enemy. Furthermore, it has the Special Move \" Bolt Rip \", in which it mixes its scale s with electric shocks gathered in its palms and fires them at the enemy."
+}

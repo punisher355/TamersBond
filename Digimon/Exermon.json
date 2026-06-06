@@ -1,0 +1,39 @@
+{
+  "name": "Exermon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 6,
+    "SNC": 6,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Insec Mind",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "A telepathic ability that manifests using its antennae as a medium."
+  },
+  "digivolves_from": [
+    "Pulsemon"
+  ],
+  "digivolves_to": [
+    "Atlur Kabuterimon (Blue)",
+    "Boutmon",
+    "Climbmon",
+    "Divemon",
+    "Pistmon",
+    "Shootmon",
+    "Tempomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that evolved from yoga lesson data. It mainly lives in high mountainous regions, and fights using its own style of taijutsu , which incorporates unique movements similar to those of a mollusk. It has an excellent sense of balance in that it supports its own weight with the stinger on its rump, and its core always remains stable regardless of what unnatural pose it takes. It absorbs sunlight through its antennae, and converts it into electrical energy within its body. When it comes to battle, it confuses intruders with its telepathic ability \" Insec Mind \", which manifests using its antennae as a medium. Its Special Move is touching the opponent with its palms, which act as positive and negative electrodes, delivering an electric shock ( Defibrilla - shock )."
+}

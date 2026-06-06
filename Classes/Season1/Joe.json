@@ -1,0 +1,56 @@
+{
+  "name": "Joe",
+  "season": 1,
+  "img": "Joe.webp",
+  "abilities": [
+    {
+      "name": "Always Prepared",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Reliability rank 3+)",
+      "description": "At the start of each session you may declare one Supply your character happened to pack. The GM must approve it — no rare Digital World items or major combat advantages. Simple supplies only: bandages, rope, a map, a Digi-Ration. Must be used this session; cannot be carried forward."
+    },
+    {
+      "name": "Field Dressing",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Reliability rank 3+)",
+      "description": "Once per encounter as your Basic Action, make a Recovery check DN 10. On a success restore HP to any one target equal to your Recovery roll result. This can be used on Digimon."
+    },
+    {
+      "name": "Calculated Risk",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
+      "description": "Once per encounter before any roll is made, you may declare Calculated Risk. Spend 2 Hope and take -2 to the roll — if you succeed the effect is doubled (double healing, double status duration, double damage)."
+    },
+    {
+      "name": "Triage",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Field Dressing, Reliability rank 4",
+      "description": "Field Dressing can now target two characters in the same action. Split the healing however you choose between the two targets."
+    },
+    {
+      "name": "Emergency Protocol",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Triage, Reliability rank 5",
+      "description": "Once per session when any allied Digimon triggers the cascade, you may immediately make a Recovery check DN 14 as a Free Action off-turn. On a success that Digimon stabilizes one stage higher than the cascade result."
+    },
+    {
+      "name": "Steady the Line",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "At least 1 Row 2 ability, Reliability rank 5",
+      "description": "At the start of each encounter before turns begin, you may spend your Free Action to grant all allied Digimon temporary HP equal to your Reliability rank."
+    },
+    {
+      "name": "The Backup Plan",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Reliability rank 7",
+      "description": "Once per session when the encounter looks lost — all allied Digimon at Default Stage or below, or two or more in egg state — you may activate The Backup Plan as a Free Action. All egg-state Digimon return at In-Training with 1 HP. All Digimon at In-Training or Rookie gain 10 temporary HP."
+    }
+  ]
+}

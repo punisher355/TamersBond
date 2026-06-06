@@ -1,0 +1,33 @@
+{
+  "name": "Crossmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Kaiser Phoenix",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Performs a ramming attack with its full metal body."
+  },
+  "digivolves_from": [
+    "Delumon",
+    "Hippogriffomon",
+    "Tyilinmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Giant Bird Digimon whose body is clad in gold armor. The armor that covers its whole body is made of Chrome Digizoid , so it deflects every attack. Also, Crossmon is even said to be an evolved form of the Perfect Digimon, Parrotmon . It is said that it is Crossmon's duty to annihilate the invaders that enter the Digital World. Its Special Moves are performing a ramming attack with its full metal body ( Kaiser Phoenix ), and a white ray which reduces the opponent to ash ( Mystic Break ). Crossmon was adopted from a winning Digimon entry in the \" Digimon Web Dot-art Contest \" which belonged to Mr. Shun Nabetou from Fukuoka prefecture ."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Fujinmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "MarutCyclone",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Knocks the enemy away with strong winds.Spins to slice the enemy repeatedly with itsCritical Arms."
+  },
+  "digivolves_from": [
+    "Cyberdramon",
+    "Garudamon",
+    "Silphymon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Cyborg Digimon bestowed with the name of the Fūjin of Oriental folklore. As a Light Fighter that battles with light movements, it specializes in close combat. Its Special Moves are cutting the enemy to pieces with the same cutter-type arm as Justimon ( Critical Arm ), and knocking the enemy away with strong winds ( Marut Cyclone ).",
+  "web_created": true
+}

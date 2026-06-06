@@ -1,0 +1,31 @@
+{
+  "name": "Apollomon: Whispered",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 18,
+    "FRD": 18,
+    "LVE": 12,
+    "KNW": 13,
+    "SNC": 12,
+    "RLB": 16
+  },
+  "signature_move": {
+    "name": "Arrow of Whispered",
+    "element": "Neutral",
+    "pr": 15,
+    "tags": "[MELEE]",
+    "description": "Fires blue flames from the shining jewels on its hands as arrows."
+  },
+  "digivolves_from": [
+    "Apollomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The general of the Sun-wheel Army of the \" Big Death-Stars \". It leads an army of Beast and Beast Man Digimon which have adapted to various environments and evolved. Their operational goals are unknown. It is an individual that was born as an offshoot, due to a bug triggered by an outburst of the heartless combat instinct and pride restrained within Apollomon . Its blue flames are imbued with madness and heat exceeding Apollomon, but the precision of its techniques has diminished. Its Special Move is firing blue flames as arrows from the shining jewels on its hands ( Arrow of Whispered ). \" Sun of Sorrows \", a bold move which strikes with an orb of gigantic indigo flames.",
+  "web_created": true
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Gumdramon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 4,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Ran-gum Break",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Randomly flails itsShippodzuchiin all directions."
+  },
+  "digivolves_from": [
+    "Babydmon",
+    "Pickmon",
+    "Pukamon",
+    "Tunomon"
+  ],
+  "digivolves_to": [
+    "Arresterdramon",
+    "Bao Hackmon",
+    "Geremon",
+    "Numemon",
+    "Scumon",
+    "Tailmon",
+    "Turuiemon",
+    "V-dramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon which possesses a flexible Shippodzuchi that can extend anywhere. Its body is also very soft and elastic, and it moves around dynamically using its whole body like a spring. It is also able to fly at its running speed with its tiny wings. Its personality is very mischievous, so it's a showoff. In order to attract attention, it dives right in the middle of any kind of dangerous situation and rages around, not stopping until it stands out from everyone. Its potential is concealing its considerable, unfathomable power, but is inhibited by the \" Kinkoji \" it wears on its tail. Its Special Moves are freely wielding its Shippodzuchi as a hammer ( Ran-gum Break ), swinging down its super-sized Shippodzuchi while carrying out a forward handspring ( Jacked Hammer ), and a single blow struck with its Shippodzuchi while performing continuous forward somersaults at high speed to generate flames ( Fire Vortex )."
+}

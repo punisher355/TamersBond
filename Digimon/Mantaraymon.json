@@ -1,0 +1,42 @@
+{
+  "name": "Mantaraymon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Water",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 7,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 4,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Paralyze Tai",
+    "element": "Water",
+    "pr": 6,
+    "tags": "[MELEE] [PARALYZE 3]",
+    "description": "Pierces the enemy's body with the electrified Stun Needle on the end of its tail"
+  },
+  "digivolves_from": [
+    "Gazimon",
+    "Gizamon",
+    "Goburimon",
+    "Labramon",
+    "Otamamon",
+    "Shakomon"
+  ],
+  "digivolves_to": [
+    "Dagomon",
+    "Magnamon",
+    "Marin Devimon",
+    "Whamon Perfect",
+    "SkullBaluchimon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "An Armor-level Aquatic Digimon that evolved through the power of the \" Digimental of Sincerity \". Based on its appearance, it looks like an offensive speed-type Digimon, but on the contrary, it is actually a Digimon with a calm disposition that elegantly swims in the vast Net Ocean . However, it is difficult to capture on radar because of its unique figure so it is called the \" Stealth of the Deep \", and it is often used for reconnaissance or treated as underwater bombardment among those who abuse Mantaraymon. For that reason, it is said to be overhunted and threatened with extinction. Also, Digimon that assault Mantaraymon always have the tables turned against them with an intense blow from the Stun Needle on its tail. Its Special Move is using the Stun Needle to pierce the enemy Digimon's body ( Paralyze Tail ).",
+  "web_created": true
+}

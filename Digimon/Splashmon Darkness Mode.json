@@ -1,0 +1,31 @@
+{
+  "name": "Splashmon Darkness Mode",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "Tiger Typhoon",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Consumes everything."
+  },
+  "digivolves_from": [
+    "Splashmon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The general of the Water-tiger Army of the \" Big Death-Stars \". By changing itself into a liquid and moving from liquid to liquid, it is able to take the shape of a human or Digimon at will. For this reason, spying is its specialty, and it puts all the information it acquired together, then relays it to its Cyborg Digimon to implement its strategies. No matter the tactics, it always puts being beautiful as its top priority, and its personality is such that it will reject tactics that sully its own beauty. Although it leads an army, its faith is only in its own beauty, so it doesn't have even an iota of anything like mutual trust, even for the Digimon in its army. The cute, multi-colored \" Drippin \" water-spirits composed and formed within its body, in contrast to their appearance, each possess an offensive ability of frightening degree, including close-combat, abnormal condition, and detonation abilities, according to their color. It has become a word-of-mouth rumor that among \"Drippin\" there exists one packed with Splashmon's obsession, the \"Miraculous Beauty Fluid\" that turns the skin glossy. The army of Drippin that are fired with its \" Poisonous Force \" paralyze the enemy force's chain of command, causing the battlefield to fall into chaos. Furthermore, with its \" Hydro Pressure \", which shoots water of high pressure and speed from its fingertips, and its \" Bead-drown \", which instantly gathers trace elements and converts them to liquid around the opponent's head, it possesses techniques that can cause abnormal conditions. When Splashmon gets wounded and is driven into a corner, it unzips the zippers all over its body and reveals the true form of Splashmon lying within. Those who saw this form, let alone the one who wounded it, are driven to death with its \" Tiger Typhoon \", which consumes everything. However, because its true form is, against its will, simply hideous, it absolutely hates exposing this form.",
+  "web_created": true
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Parasimon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 14,
+    "SNC": 10,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Electric Bind",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Binds the opponent with its elongated tentacles and unleashes an intense electric shock."
+  },
+  "digivolves_from": [
+    "Anomalocarimon",
+    "Archnemon",
+    "Caturamon",
+    "Gerbemon",
+    "Indaramon",
+    "Infermon",
+    "Vikaralamon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A special Digimon that can't survive without leeching off of other beings, even though it is an Ultimate. Parasimon is powerless when by itself, but when it gathers in numbers, it can easily defeat Adult-level Digimon. When Parasimon leeches off of another, it can draw out the host Digimon's abilities to their utmost limit, exhibiting a terrifying power. Also, it can amplify the host's desires, and it is capable of taking advantage of those weaknesses. The existence of Parasite Digimon types other than Parasimon has been confirmed, and the influence of Parasite Digimon, in addition to viralization, is considered the cause of berserk Digimon. Its Special Move is binding the opponent with its elongated tentacles and unleashing an intense electric shock ( Electric Bind )."
+}

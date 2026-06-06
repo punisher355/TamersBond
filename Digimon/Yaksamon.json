@@ -1,0 +1,50 @@
+{
+  "name": "Yaksamon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Ittouryoudan",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "12Fires a shock wave by crossing its twobokutō.Merges its twobokutōinto a single longer, glowing blade, and attacks with it."
+  },
+  "digivolves_from": [
+    "Dracumon",
+    "Goburimon",
+    "Hagurumon",
+    "Kotemon",
+    "Mushmon",
+    "Renamon",
+    "Snow Goburimon",
+    "Wormmon",
+    "Yuki Agumon"
+  ],
+  "digivolves_to": [
+    "Asuramon",
+    "Cyberdramon",
+    "Death Meramon",
+    "Knightmon",
+    "Kyukimon",
+    "Lady Devimon",
+    "Magnamon",
+    "Metal Tyranomon",
+    "Silphymon",
+    "Vajramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Demon Man Digimon that evolved through the power of the \" Digimental of Purity \". It exhibits power like a fierce god, and although its offensive power is tremendous, it has a side that protects the weak with its strong sense of devotion, righteousness, and respect . Also, it excels in the secret arts, and is capable of mastering any supernatural power. It is very taciturn and has a calm, cool, and collected personality. Its Special Moves are a shock wave fired by crossing its two bokutō ( Ittouryoudan ), and manipulating the opponent like a puppet with a bewitching look ( Kugutsu no Jutsu ).",
+  "web_created": true
+}

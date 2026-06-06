@@ -1,0 +1,62 @@
+{
+  "name": "Blue Meramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 6,
+    "LVE": 8,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Cold Flame",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "12Breathes out an icy cold flame.Shoots icy fireballs from its hands."
+  },
+  "digivolves_from": [
+    "Angemon",
+    "Bakemon",
+    "Birdramon",
+    "Coredramon (Blue)",
+    "Devimon",
+    "Fladramon",
+    "Garurumon",
+    "Garurumon (Black)",
+    "Growmon",
+    "Gururumon",
+    "Hyougamon",
+    "Ice Devimon",
+    "Icemon",
+    "Kyubimon",
+    "Lynxmon",
+    "Meramon",
+    "Mojyamon",
+    "Sorcerimon",
+    "Yukidarumon"
+  ],
+  "digivolves_to": [
+    "Barbamon",
+    "Boltmon",
+    "Darkdramon",
+    "Demon",
+    "Gankoomon",
+    "Hououmon",
+    "Leviamon",
+    "Marsmon",
+    "Mirage Gaogamon",
+    "Pharaohmon",
+    "Piemon",
+    "Rosemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Flame Digimon that burns with higher temperature flames than the Adult-level Meramon . Its Special Move is inflicting burns on the opponent with supercooled air ( Ice Phantom ).",
+  "web_created": true
+}

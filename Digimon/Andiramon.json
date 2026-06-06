@@ -1,0 +1,54 @@
+{
+  "name": "Andiramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 7,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Meditation Cure",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Recovers from any kind of damage in an instant."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Devimon",
+    "Diatrymon",
+    "Galgomon",
+    "Goatmon",
+    "Lekismon",
+    "Nohemon",
+    "Tailmon",
+    "Turuiemon",
+    "Wendimon",
+    "Wizarmon"
+  ],
+  "digivolves_to": [
+    "Cherubimon (Vice)",
+    "Cherubimon (Virtue)",
+    "Diablomon",
+    "Duftmon",
+    "Hououmon",
+    "Mercurymon",
+    "Minervamon",
+    "Qinglongmon",
+    "Ravmon",
+    "Rosemon",
+    "Saint Galgomon",
+    "Valkyrimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Perfect Digimon which has the appearance of the \" Rabbit \" from among the twelve holy beasts of oriental legends. It is able to freely manipulate the \" qi \" flowing within its body, allowing it to interact with softness as well as hardness, so that at times it moves flexibly as if it were flowing, and at other times it unleashes heavy blows like iron. Its Signature Move is recovering from any kind of damage in an instant ( Meditation Cure ). Its Special Move is hardening its body tissue to the level of Chrome Digizoid by liberating all of the energy within its body, then unleashing a mighty blow ( Mantra Chant )."
+}

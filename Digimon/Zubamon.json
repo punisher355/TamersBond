@@ -1,0 +1,45 @@
+{
+  "name": "Zubamon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 3,
+    "LVE": 5,
+    "KNW": 4,
+    "SNC": 4,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Twenty Dive",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "Charges head-first at the opponent."
+  },
+  "digivolves_from": [
+    "Kakkinmon",
+    "Sakuttomon",
+    "Tunomon"
+  ],
+  "digivolves_to": [
+    "Ankylomon",
+    "Bao Hackmon",
+    "Buraimon",
+    "Dokugumon",
+    "Ginryumon",
+    "Gold Numemon",
+    "Guardromon (Gold)",
+    "Musyamon",
+    "Tankmon",
+    "Targetmon",
+    "Zubaeagermon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the \" Legend-Arms \", who are capable of transforming themselves into weapons. A legend about the Legend-Arms goes, “if held by an angel it will save the world, and if held by a demon it will destroy the world.” Zubamon carries the ”Twentiest” data, and often shouts out “I am the Twentiest!” despite not understanding what it means. It despises crookedness, and is constantly seeking sharpness. A day where its battles, jokes, and sharpness turn out well will leave it in high spirits. Although it has a technique, \" Twenty Dive \", in which it charges head-first, Zubamon's true power is exhibited while it is in its weapon form."
+}

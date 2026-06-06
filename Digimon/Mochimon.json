@@ -1,0 +1,58 @@
+{
+  "name": "Mochimon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "element": "Neutral",
+    "name": "Baby Bubble",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Spits out elastic bubbles towards the opponent."
+  },
+  "digivolves_from": [
+    "Bubbmon",
+    "Choromon",
+    "Poyomon",
+    "Zurumon"
+  ],
+  "digivolves_to": [
+    "Angoramon",
+    "Candmon",
+    "Dokunemon",
+    "Elecmon",
+    "Funbeemon",
+    "Ganimon",
+    "Goburimon",
+    "Gottsumon",
+    "Hackmon",
+    "Hagurumon",
+    "Impmon",
+    "Kamemon",
+    "Kokabuterimon",
+    "Kunemon",
+    "Lalamon",
+    "Morphomon",
+    "Otamamon",
+    "Penmon",
+    "Piyomon",
+    "Solarmon",
+    "Tentomon",
+    "Tyumon",
+    "Wormmon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "Possessing elastic skin, this soft-bodied Digimon uses the protuberances on the underside of its body to toddle about. It came to be called \"Mochimon\" from how it inflates its body when it gets worked up, causing it to look like mochi . However, it possesses great intellect unimaginable from its appearance, leading to speculation that it originated from a computer's dictionary feature. It understands human languages, and is sometimes seen freely deforming its body as if attempting communication. It produces mochi -like elastic bubbles to restrict the opponent's movement.",
+  "web_created": true
+}

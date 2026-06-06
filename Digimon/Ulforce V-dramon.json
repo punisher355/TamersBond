@@ -1,0 +1,42 @@
+{
+  "name": "Ulforce V-dramon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Shining V Force",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Fires a ray of energy from the massive V on its chest."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Cyberdramon",
+    "Digitamamon",
+    "Megadramon",
+    "Megalo Growmon",
+    "Metal Greymon",
+    "Metal Tyranomon",
+    "Paildramon",
+    "Wingdramon"
+  ],
+  "digivolves_to": [
+    "JESmon GX",
+    "Parallelmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Current Original ⇨ Japanese A Holy Knight Digimon based on a legend that only appears within a certain \"Prophecy\", handed down from the ancient Digital World. In that \"Prophecy\" is written the appearance of the \" Royal Knights \", the guardian deities of the Network, and based on the \"Prophecy\", it is said that the Digimon that are called the \"Royal Knights\" will assemble at the time of the Digital World's greatest crisis. Ulforce V-dramon possesses the swiftest speed among the \"Royal Knights\", and there is no one that can follow its movements. Also, its body is wrapped in holy armor made of the lightest rare metal \" Blue Chrondigizoit \", which is rare even among Chrome Digizoid , so it can cleave the sky and split the earth. It can extend weapons and a shield from the \" V Bracelets \" equipped to both of its arms. Its Special Move is a beam which strafes across from the \" V \"-shaped armor on its chest ( Shining V-Force ).",
+  "web_created": true
+}

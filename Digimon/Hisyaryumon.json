@@ -1,0 +1,59 @@
+{
+  "name": "Hisyaryumon",
+  "stage": "Ultimate",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 8,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 8,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Seiryūjin",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "12Transforms into a gigantic steel katana and bisects the enemy in a single stroke.Spins vertically, forming its body into a circle and slicing the enemy."
+  },
+  "digivolves_from": [
+    "Airdramon",
+    "Allomon",
+    "Coelamon",
+    "Dinohumon",
+    "Dokugumon",
+    "Musyamon",
+    "Numemon",
+    "Omekamon",
+    "Paledramon",
+    "Raptordramon",
+    "Seadramon",
+    "Sealsdramon",
+    "Tobucatmon",
+    "Waspmon",
+    "XV-mon"
+  ],
+  "digivolves_to": [
+    "Alphamon",
+    "Brigadramon",
+    "Dinorexmon",
+    "Dinotigermon",
+    "Gaioumon",
+    "Goddramon",
+    "Medieval Dukemon",
+    "Metal Piranimon",
+    "Minervamon",
+    "Nidhoggmon",
+    "Tiger Vespamon",
+    "Ultimate Brachimon",
+    "Zanbamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Dragon Digimon clad in thick, shining scalemail and who soars the skies unbounded, taking this form when the fierce combat data of the \"dragon\" and \"general\" that lay slumbering in the depths of its Digicore was released by the Interface on its forehead. It has great mobility, allowing it control over nearly the entirety of the vast Net airspace. Its demeanor is usually sagacious and calm, akin to a god; however, the moment the crystal-like orbs it holds in both hands are scratched, its wrath will be incurred, turning it into a god of anger that will attack with all its might. Not only that, it is said that the orbs in its two hands are in actuality the souls of its fallen comrades; the orb in its right hand is the soul of \" Kinryū \", while the orb in its left hand is the soul of \" Kakuryū \", and Digicore information lies hidden within each of them. Its Special Moves are transforming itself into gigantic katana made of steel and bisecting the enemy in a single stroke ( Seiryūjin ), as well as surrounding the enemy from all directions and attacking ( Jūouguruma )."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Ancient Troiamon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "EpeiusGimmick",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Attacks by simultaneously operating every gimmick throughout its body."
+  },
+  "digivolves_from": [
+    "Jyureimon"
+  ],
+  "digivolves_to": [
+    "Apocalymon",
+    "Lucemon: Satan Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Possessing the attribute of \"Wood\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it boasts of the greatest size among the Ancient Digimon. Various mechanisms are set within its body, and it displays tricky attacks and movements. Ancient Troiamon's abilities were later passed on to the \"Plant Digimon\". Its Special Moves are attacking by simultaneously operating every gimmick throughout its body ( Epeius Gimmick ), and shooting super-massive shells from the huge cannons in its mouth and chest ( Surprise Cannon )."
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Bio Lotusmon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Plant",
+  "archetype": "Speed",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 15,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 12,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Seven's Fantasia",
+    "element": "Plant",
+    "pr": 10,
+    "tags": "[RANGE 8] [CONFUSE]",
+    "description": "Fires a seven-colored aura from its flower-ended staff that makes the opponent lose their fighting spirit."
+  },
+  "digivolves_from": [
+    "Archnemon",
+    "Lilamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "Digimon Analyzer ⇨ Japanese Bio Lotusmon A Bio-Hybrid that is the fusion of human and Digimon. Its Special Move is Seven's Fantasia . Its seven-colored aura will make you lose your fighting spirit! — Digimon Savers: \"Showdown Between Geniuses! Thoma vs Nanami\" Digimon Savers ⇨ English バイオロトスモン バイオロトスモン：人間とデジモンが融合したバイオハイブリッド体だ。必殺技は セブンズファンタジア 。七色のオーラが戦意を喪失させるぞ。 — デジモンセイバーズ 「天才対決！トーマVSナナミ」 デジモンセイバーズ ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ Japanese A Bio Digimon that has the appearance of a lotus flower. By predicting Thoma 's tactics, it displayed reaction rates surpassing even Mirage Gaogamon . It makes the opponent lose their fighting spirit with \" Seven's Fantasia \", which releases a seven-colored aura. Digimon Series Memorial Book: Digimon Animation Chronicle ⇨ English 蓮の花の姿をしたバイオデジモン。トーマの作戦を予測し、ミラージュガオガモンをも上回る反応速度を見せた。七色のオーラを放つ「 セブンズファンタジア 」で敵の戦意を喪失させる。 デジモンシリーズ メモリアルブック デジモンアニメーションクロニクル ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K",
+  "web_created": true
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Punkmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Blitzkrieg Bop",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Sends out jets of flames from the brass knuckles on its hands and then pounds the opponent."
+  },
+  "digivolves_from": [
+    "Impmon"
+  ],
+  "digivolves_to": [
+    "Loudmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that evolved by taking in data on music and fashion from punk rock culture . Its personality is aggressive and rebellious, as if embodying the anarchic spirituality of punk rock. It is an anarchist at heart who rarely listens to what others say, and hates being ordered around or being part of a group. It prefers flashy battles, and will do anything to liven up the atmosphere, such as getting attacked deliberately to show itself off. However, when there is no audience, it cannot get excited, and has a bad habit of losing its temper. During battle, it uses the guitar pick-shaped tip of its tail to strike against the ground or walls, creating a rhythm to hype itself up. The way it opens its mask wide to let out a distinctive roar is the epitome of a punk rocker. Its Special Moves are sending out jets of flames from the brass knuckles on its hands and then pounding the opponent, branding them with the Digimoji for \"PUNK\" ( Blitzkrieg Bop ), and firing a blue flame shot from its mouth ( Anarchist Flame )."
+}

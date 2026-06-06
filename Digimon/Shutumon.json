@@ -1,0 +1,37 @@
+{
+  "name": "Shutumon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Wind",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Gilgamesh Slicer",
+    "element": "Wind",
+    "pr": 10,
+    "tags": "[MELEE] [BURST 1]",
+    "description": "Cuts the opponent and the atmosphere around it to pieces with the claws on its hands and feet."
+  },
+  "digivolves_from": [
+    "Cockatrimon",
+    "Fairimon"
+  ],
+  "digivolves_to": [
+    "Griffomon",
+    "Junomon",
+    "Lilithmon",
+    "Lord Knightmon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Wind which bears the might of one of the legendary Ten Warriors . At a glance, it looks like a composed adult woman, but although it perplexes its opponents with its languid behavior, it actually has an impish personality that loves to capriciously embarrass people. It does things like purposefully telling its opponent unhappy fortunes or startling them. In battle, it seldom takes the initiative and helps out, but although you don't see its efforts, it will sometimes risk the possibility of getting into trouble. Once it feels so inclined, it glides freely through the sky, manipulating the wind and knocking out the opponent with a secret Mesopotamia n spell. Its Special Moves are cutting the opponent and the atmosphere around it to pieces with the claws on its hands and feet ( Gilgamesh Slicer ), and flying up into the air and hurling the feathers of its hair and wings as pointed arrows ( Wind of Pain ).",
+  "web_created": true
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Poromon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "element": "Neutral",
+    "name": "Baby Bubble",
+    "pr": 1,
+    "tags": "[RANGE 4]"
+  },
+  "digivolves_from": [
+    "Pururumon"
+  ],
+  "digivolves_to": [
+    "Gabumon",
+    "Hawkmon",
+    "Pomumon",
+    "Tinkermon",
+    "Ukkomon",
+    "Wormmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Small Bird Digimon that evolved from Pururumon , and can now fly at low altitudes. It has small feathers growing closely packed on its body, and unusually for a Baby Digimon, it has wings. Its most charming feature is the feather ornament attached to its head, so it maintains it intently. It has a fundamentally tidy personality, but because it cannot turn its neck(?) even if it wants to groom itself, it relies on its comrades. Its Signature Move \" Pororo Breeze \" is flapping its wings to raise a cloud of sand, then seizing the opportunity to flee when the opponent flinches.",
+  "web_created": true
+}

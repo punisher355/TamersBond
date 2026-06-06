@@ -1,0 +1,61 @@
+{
+  "name": "Turuiemon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Gauntlet",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "A striking technique using the \"Tokaku Tessou\" on both of its arms, it is a combo-attack technique unleashed with a great leap and rabbit-like agility."
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gaomon",
+    "Gizamon",
+    "Gumdramon",
+    "Kakamon",
+    "Kotemon",
+    "Lalamon",
+    "Lopmon",
+    "Patamon",
+    "Psychemon",
+    "Renamon",
+    "Solarmon",
+    "Takinmon",
+    "Terriermon",
+    "Terriermon Assistant"
+  ],
+  "digivolves_to": [
+    "Andiramon",
+    "Andiramon (Deva)",
+    "Cyberdramon",
+    "Holy Angemon",
+    "Knightmon",
+    "Mach Gaogamon",
+    "Makuramon",
+    "Matadrmon",
+    "Megadramon",
+    "Monzaemon",
+    "Pajiramon",
+    "Phelesmon",
+    "Rapidmon Perfect",
+    "Pajramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A martial artist Digimon discovered within the hinterlands of a Chinese mountain province. It wandered the world in pursuit of its mortal enemy, the viruses that exploit e-mails to do evil. Although it is blessed with exceptional potential for Ch'uan Fa , it is still developing its skills. It practices Togaken , a style it invented itself. Its Signature Move is a quick and stealthy Ch'uan Fa which capitalizes on its great leaping power ( Ninjinken ) [N 1] . Its Special Move is a striking technique using the \" Tokaku Tessou \" [N 2] on both of its arms ( Gauntlet ). It is a combo-attack technique unleashed with a great leap and rabbit-like agility.",
+  "web_created": true
+}

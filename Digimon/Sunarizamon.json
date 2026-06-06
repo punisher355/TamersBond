@@ -1,0 +1,40 @@
+{
+  "name": "Sunarizamon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 5,
+    "SNC": 2,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Grit Nail",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Transforms its forelimbs to being claw-shaped and scratches with them."
+  },
+  "digivolves_from": [
+    "Goromon",
+    "Wanyamon"
+  ],
+  "digivolves_to": [
+    "Baboongamon",
+    "Digmon",
+    "Gokimon",
+    "Golemon",
+    "Landramon",
+    "Togemon",
+    "Tortamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Reptile Digimon that mainly acts in groups while camouflaging itself in desert areas. By controlling the amount of sand that makes up its body, it is able to expand and contract, and transform its limbs and tail. It is difficult to detect once it has blended in with the desert, and it is not uncommon for one to think that there is quicksand, but turns out to be hordes of Sunarizamon. It defends itself from intruders with its \" Grit Nail \", where it transforms its forelimbs to being claw-shaped and scratches with them, and \" Sand Blast \", which shaves off the enemy's body with sand that it spits out aggressively.",
+  "web_created": true
+}

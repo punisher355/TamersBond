@@ -1,0 +1,60 @@
+{
+  "name": "Hanumon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Dohatsuten",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Hardens its fur to metallic hardness and shoots needle-like hairs from its body."
+  },
+  "digivolves_from": [
+    "Armadimon",
+    "Bakumon",
+    "Bokomon",
+    "Candmon",
+    "Commandramon",
+    "Gabumon",
+    "Gabumon (Black)",
+    "Gazimon",
+    "Gizamon",
+    "Gottsumon",
+    "Kakamon",
+    "Kamemon",
+    "Koemon",
+    "Kokabuterimon",
+    "Kotemon",
+    "Loogamon",
+    "Lucemon",
+    "Psychemon",
+    "Shamamon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Andromon",
+    "Cyberdramon",
+    "Doumon",
+    "Gokuwmon",
+    "Hangyomon",
+    "Kyukimon",
+    "Mammon",
+    "Mihiramon",
+    "Taomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A legendary Beast Man Digimon covered in golden-colored body fur. Although there have been many sightings of it reported in the Central Asian area of the Network , evidence proving its existence has not been found as of yet. It is extremely rare, and is said to be treated as a phantom Digimon by a group of people due to its exceptional skill in repelling malicious computer viruses and similar entities. There have also been rumors of it circling the Network at high speed while riding atop something resembling a cloud or puff of smoke. Its Special Move is further hardening its metallic body fur and shooting them out ( Dohatsuten )."
+}

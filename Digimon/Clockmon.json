@@ -1,0 +1,55 @@
+{
+  "name": "Clockmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 7,
+    "FRD": 4,
+    "LVE": 5,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Chrono Breaker",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Destroys the \"time\" flowing through the opponent's body."
+  },
+  "digivolves_from": [
+    "Candmon",
+    "Clear Agumon",
+    "Commandramon",
+    "Gottsumon",
+    "Hagurumon",
+    "Impmon",
+    "Kokuwamon",
+    "Solarmon",
+    "Terriermon",
+    "Toy Agumon"
+  ],
+  "digivolves_to": [
+    "Andiramon (Deva)",
+    "Andromon",
+    "Big Mamemon",
+    "Blikmon",
+    "Death Meramon",
+    "Ex-Tyranomon",
+    "Giromon",
+    "Knightmon",
+    "Mamemon",
+    "Metal Tyranomon",
+    "Wisemon",
+    "Zudomon",
+    "Nanomon (Digimon)",
+    "Sephirothmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The protector of time that governs the computer's timer. It manages the \"Time\" and \"Space\" of all computers and networks, and it is able to freely advance and rewind time between the years 1900 and 1999. Because it possesses an extremely dangerous, terrifying ability, it always maintains a neutral standpoint and doesn't participate in the conflict between Vaccines and Viruses. For that reason, it is said that if it ever tilts toward either side of the balance, the Digital World will collapse. Its Special Move is destroying the \"time\" flowing through the opponent's body ( Chrono Breaker ). It is impossible for a Digimon whose \"time\" was frozen with this attack to recover."
+}

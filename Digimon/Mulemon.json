@@ -1,0 +1,41 @@
+{
+  "name": "Mulemon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Iron Gallop",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Uses its powerful hind legs to deliver an intense kick."
+  },
+  "digivolves_from": [
+    "Gabumon",
+    "Herissmon",
+    "Koemon",
+    "Otamamon",
+    "Renamon",
+    "Toy Agumon",
+    "Vorvomon",
+    "Terriermon Assistant"
+  ],
+  "digivolves_to": [
+    "Mockingbirdmon",
+    "Maneuvermon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Machine Digimon modeled after a quadrupedal beast. Its body, which looks fragile at first glance, is actually very sturdily built, and also possesses both the balance and mobility to travel across a variety of rough terrain. Aside from its four legs, it has extendable robotic arms within its body, which are powerful enough to grab objects and place them on its back, and hurl small Digimon with ease. Since it is extremely good at carrying things due to those characteristics, it is a courier in the Digital World that occasionally transports luggage, or small Digimon on its back to their destinations. Although it shows a strong sense of duty in regard to carrying things, and has a personality that one can consider to be very diligent, it has a bad habit of trying to travel along a set route in a straight line no matter what, and also has a violent side where it will try to forcibly remove anything that stands in its way. Its Special Moves are utilizing its powerful leg strength to deliver an intense kick with its hind legs ( Iron Gallop ), and using its arms to draw out the missiles stored within its back and then launching them ( Rodeo Missile ).",
+  "web_created": true
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Arkadimon Ultimate",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Dark",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 15,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "Dot Matrix",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE] [DRAIN]",
+    "description": "An invisible attack that uses a lot of energy, but takes a chunk of the opponent's data, restoring Arkadimon while doing damage"
+  },
+  "digivolves_from": [
+    "Arkadimon Perfect",
+    "Infermon",
+    "Vamdemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "Hacker's Memory Collectors ⇨ Japanese A cursed Digimon artificially created based on the data of various Digimon. Its nature is to evolve by absorbing its opponent's data, but it is unclear if it possesses any sense of self. Because these details are unknown, it is currently being investigated, but it is thought that Arkadimon's existence is the greatest threat to the Digital World , and must never be. Its Special Moves are disassembling the opponent's data into a particle state and absorbing it ( Dot Matrix ), and the most wicked blow that completely erases them from the Digital World, forcibly expelling their data ( Exile Spear ). Digimon Story: Cyber Sleuth Hacker's Memory ⇨ English 様々なデジモンのデータを元に人為的に創られた呪われしデジモン。相手のデータを吸収することで成長進化する性質を持つが、自我を持っているかは判っていない。詳細は不明で現在調査中であるがアルカディモンの存在はデジタルワールドにとって最大の脅威であり、在ってはならないものだろう。必殺技は相手のデータを粒子状に分解して吸収する「 ドットマトリックス 」と、デジタルワールドから完全消去して、データを強制追放する最凶の一撃「 イグザイルスピア 」 デジモンストーリー サイバースルゥース ハッカーズメモリー ⇨ Japanese A cursed Digimon artificially created based on the data of various Digimon. Its nature is to evolve by absorbing its opponent's data, but it is unclear if it possesses any sense of self. Because these details are unknown, it is currently being investigated, but it is thought that Arkadimon's existence is the greatest threat to the Digital World , and must never be. Digimon Collectors ⇨ English 様々なデジモンのデータを元に人為的に創られた呪われしデジモン。相手のデータを吸収することで成長進化する性質を持つが、自我を持っているかは判っていない。詳細は不明で現在調査中であるがアルカディモンの存在はデジタルワールドにとって最大の脅威であり、在ってはならないものだろう。 デジモンコレクターズ ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ Japanese An Ultimate that absorbs dark energy. It is said to be virtually invincible, and completely disassembles data regardless of who the opponent is. Its Special Move is \" Dot Matrix \". Digimon Visual Dictionary ⇨ English 闇のエネルギーを吸収した究極体。ほぼ無敵といわれ、どんな相手もデータ分解してしまう。必殺技は、「 ドットマトリクス 」。 デジモン大図鑑 ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K ⇨ English Template:K",
+  "web_created": true
+}

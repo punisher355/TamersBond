@@ -1,0 +1,3413 @@
+/* ================================================
+   Digital Destiny — Foundry VTT System Stylesheet
+   ================================================ */
+
+/* --- Sheet chrome --- */
+.digital-destiny.sheet .window-content {
+  padding: 0;
+  overflow: hidden;
+  background: #f0ece4;
+}
+
+.digital-destiny.sheet form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header --- */
+.digital-destiny .sheet-header {
+  background: #1a1a2e;
+  color: #e0d8c8;
+  padding: 6px 8px 8px;
+  gap: 5px;
+  flex: 0 0 auto;
+}
+
+.digital-destiny .charname {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--tamer-accent, #4a90d9);
+  color: #e0d8c8;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  padding: 1px 4px 3px;
+}
+
+.digital-destiny .charname:focus {
+  outline: none;
+  border-bottom-color: var(--tamer-accent, #7ab8f5);
+}
+
+.digital-destiny .digi-quickref-bar {
+  display: flex;
+  gap: 6px;
+  padding: 2px 4px 4px;
+  flex-wrap: wrap;
+}
+
+.digital-destiny .digi-quickref-pill {
+  font-size: 0.72em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.digital-destiny .digi-quickref-attr { background: #6a3fa0; }
+.digital-destiny .digi-quickref-elem { background: #1a6b8a; }
+
+/* Four-panel row */
+.digital-destiny .header-panels {
+  gap: 6px;
+  align-items: stretch;
+}
+
+.digital-destiny .profile-img {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 2px solid var(--tamer-accent, #4a90d9);
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+}
+
+/* Shared panel card */
+.digital-destiny .header-panel {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 5px;
+  padding: 5px 8px;
+  gap: 3px;
+  min-width: 0;
+}
+
+.digital-destiny .header-panel-label {
+  font-size: 0.68em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #90a8c0;
+  font-weight: 700;
+}
+
+/* --- HP panel --- */
+.digital-destiny .hp-main-row {
+  gap: 4px;
+  align-items: baseline;
+}
+
+.digital-destiny .hp-value-input {
+  width: 44px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid var(--tamer-accent, #4a90d9);
+  color: #e0d8c8;
+  font-size: 1.15em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+.digital-destiny .hp-sep {
+  color: #607080;
+  font-size: 0.9em;
+}
+
+.digital-destiny .hp-max-display {
+  font-size: 1.0em;
+  font-weight: 600;
+  color: #a0c0d8;
+}
+
+.digital-destiny .hp-temp-row {
+  gap: 4px;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.digital-destiny .hp-temp-label {
+  font-size: 0.7em;
+  color: #70a0c0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.digital-destiny .hp-temp-input {
+  width: 38px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid #4a7090;
+  color: #a0c8e0;
+  font-size: 0.85em;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+/* --- Hope panel --- */
+.digital-destiny .hope-current-row {
+  gap: 4px;
+  align-items: baseline;
+}
+
+.digital-destiny .hope-current-input {
+  width: 44px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid #7d5fa6;
+  font-size: 1.15em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+.digital-destiny .hope-sep {
+  color: #607080;
+  font-size: 0.9em;
+}
+
+.digital-destiny .hope-max-display {
+  font-size: 1.0em;
+  font-weight: 600;
+  color: #a090c8;
+}
+
+.digital-destiny .hope-perturn-row {
+  gap: 4px;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.digital-destiny .hope-pt-label {
+  font-size: 0.7em;
+  color: #7060a0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.digital-destiny .hope-pt-input {
+  width: 38px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid #4a3a70;
+  color: #a090c8;
+  font-size: 0.85em;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+/* --- EXP panel --- */
+.digital-destiny .exp-line {
+  gap: 5px;
+  align-items: center;
+}
+
+.digital-destiny .exp-line-label {
+  font-size: 0.7em;
+  color: #7090a8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  min-width: 30px;
+}
+
+.digital-destiny .exp-line input[type="number"] {
+  width: 52px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid var(--tamer-accent, #4a90d9);
+  color: #e0d8c8;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1px 3px;
+  font-size: 0.88em;
+}
+
+.digital-destiny .exp-line-value {
+  font-size: 0.88em;
+  color: #c0d0e0;
+}
+
+.digital-destiny .exp-available {
+  color: #80d890;
+  font-weight: 600;
+}
+
+.digital-destiny .identity-row {
+  gap: 8px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.digital-destiny .field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.digital-destiny .field-group label {
+  font-size: 0.75em;
+  color: #a0b8c8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.digital-destiny .field-group select,
+.digital-destiny .field-group input {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid var(--tamer-accent, #4a90d9);
+  color: #e0d8c8;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 0.85em;
+}
+
+/* --- Tabs --- */
+.digital-destiny .sheet-tabs {
+  background: #16213e;
+  border-bottom: 2px solid var(--tamer-accent, #4a90d9);
+  padding: 0 8px;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  flex: 0 0 auto;  /* never grow — only as tall as the tab text */
+}
+
+/* Inactive tabs: small and muted */
+.digital-destiny .sheet-tabs .item {
+  color: #607080;
+  padding: 2px 8px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.1s;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.digital-destiny .sheet-tabs .item:hover {
+  color: #a0b8c8;
+}
+
+/* Active tab: clearly selected, still compact */
+.digital-destiny .sheet-tabs .item.active {
+  color: var(--tamer-accent, #4a90d9);
+  border-bottom-color: var(--tamer-accent, #4a90d9);
+  font-size: 1.05em;
+  padding: 4px 14px;
+  letter-spacing: 0.05em;
+}
+
+/* --- Sheet body --- */
+.digital-destiny .sheet-body {
+  padding: 10px 12px;
+  overflow-y: auto;
+  flex: 1 1 0;    /* grow to fill all remaining space */
+  min-height: 0;  /* required for overflow-y scroll to work inside a flex column */
+  background: var(--tamer-bg, #f0ece4);
+}
+
+.digital-destiny .tab {
+  display: none;
+}
+
+.digital-destiny .tab.active {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* --- Section headers --- */
+.digital-destiny .section-header {
+  background: #1a1a2e;
+  color: var(--tamer-accent, #4a90d9);
+  padding: 4px 8px;
+  margin: 4px 0 0;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-left: 3px solid var(--tamer-accent, #4a90d9);
+}
+
+/* --- Rank +/- buttons (shared by crests and skills) --- */
+.digital-destiny .rank-btn {
+  width: 22px;
+  height: 22px;
+  background: #1a1a2e;
+  color: #c8d8e8;
+  border: 1px solid var(--tamer-accent, #4a90d9);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.digital-destiny .rank-btn:hover:not(:disabled) {
+  background: var(--tamer-accent, #4a90d9);
+  color: #fff;
+}
+
+.digital-destiny .rank-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* --- Tamer: crest stats grid --- */
+.digital-destiny .crests-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 6px 0;
+}
+
+.digital-destiny .crest-block {
+  position: relative;        /* contains the absolute image */
+  overflow: hidden;          /* clips image to rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+  padding: 6px 8px;
+  gap: 0;                    /* crest-content handles its own gap */
+}
+
+/* Image fills the entire card as a background layer */
+.digital-destiny .crest-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.45;
+  z-index: 0;
+  pointer-events: none;
+  padding: 4px;
+}
+
+/* All text/controls sit on top of the image */
+.digital-destiny .crest-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+}
+
+.digital-destiny .crest-name {
+  font-weight: 700;
+  font-size: 0.85em;
+  text-align: center;
+  text-shadow: 0 0 6px #fff, 0 0 3px #fff;
+}
+
+.digital-destiny .crest-rank-row {
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.digital-destiny .crest-rank-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  min-width: 28px;
+  text-align: center;
+  color: #1a1a2e;
+  text-shadow: 0 0 8px #fff, 0 0 4px #fff;
+}
+
+
+.digital-destiny .crest-arrow {
+  font-size: 0.7em;
+  color: #506070;
+  font-style: italic;
+  text-shadow: 0 0 4px #fff, 0 0 2px #fff;
+}
+
+.digital-destiny .crest-cost {
+  font-size: 0.65em;
+  color: #506070;
+  text-align: center;
+  text-shadow: 0 0 4px #fff, 0 0 2px #fff;
+}
+
+.digital-destiny .crest-maxed {
+  color: #2a7a2a;
+  font-weight: 600;
+}
+
+/* Crest modifier section */
+.digital-destiny .crest-modifiers {
+  width: 100%;
+  border-top: 1px solid #e0d8cc;
+  margin-top: 3px;
+  padding-top: 3px;
+}
+
+.digital-destiny .crest-mod-row {
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 1px 2px;
+}
+
+.digital-destiny .crest-mod-label {
+  font-size: 0.62em;
+  color: #8090a0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.digital-destiny .crest-mod-input {
+  width: 40px;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  border: 1px solid #c8c0b4;
+  border-radius: 3px;
+  padding: 1px 2px;
+  color: #1a1a2e;
+}
+
+.digital-destiny .crest-mod-auto {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #4a7a9a;
+  min-width: 24px;
+  text-align: right;
+}
+
+.digital-destiny .crest-effective-row {
+  border-top: 1px dashed #d0c8bc;
+  margin-top: 2px;
+  padding-top: 2px;
+}
+
+.digital-destiny .crest-effective-value {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #1a1a2e;
+  min-width: 24px;
+  text-align: right;
+}
+
+/* --- Header: spent display + hope inline --- */
+.digital-destiny .exp-spent-display {
+  font-weight: 600;
+  color: #d0a060;
+  min-width: 36px;
+  text-align: center;
+}
+
+.digital-destiny .hope-inline {
+  margin-left: auto;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* --- Skills tab --- */
+.digital-destiny .skill-group {
+  margin-bottom: 6px;
+}
+
+.digital-destiny .skill-group-header {
+  background: #1a1a2e;
+  border-left: 4px solid #4a90d9;
+  padding: 3px 8px;
+  margin-bottom: 3px;
+  border-radius: 2px;
+  align-items: center;
+  gap: 8px;
+}
+
+.digital-destiny .skill-stat-name {
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.digital-destiny .skill-stat-rank {
+  color: #7090a8;
+  font-size: 0.72em;
+  margin-left: auto;
+}
+
+.digital-destiny .skill-row {
+  background: #fff;
+  border: 1px solid #d8d0c4;
+  border-radius: 3px;
+  padding: 2px 6px;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 2px;
+  min-height: 26px;
+}
+
+.digital-destiny .skill-row.skill-prestige {
+  background: #fdf4ff;
+  border-color: #9060b0;
+}
+
+.digital-destiny .skill-name {
+  font-size: 0.82em;
+  font-weight: 600;
+  min-width: 108px;
+  color: #1a1a2e;
+}
+
+.digital-destiny .skill-formula {
+  font-size: 0.72em;
+  color: #7090a8;
+  font-family: monospace;
+  min-width: 54px;
+}
+
+.digital-destiny .skill-rank-controls {
+  gap: 4px;
+  align-items: center;
+}
+
+.digital-destiny .skill-rank {
+  font-size: 0.95em;
+  font-weight: bold;
+  min-width: 16px;
+  text-align: center;
+  color: #1a1a2e;
+}
+
+.digital-destiny .skill-rank-prestige {
+  color: #8040b0;
+}
+
+.digital-destiny .skill-cost {
+  font-size: 0.68em;
+  color: #8090a0;
+  min-width: 28px;
+  text-align: right;
+}
+
+.digital-destiny .skill-maxed {
+  color: #4a9a4a;
+  font-weight: 600;
+}
+
+.digital-destiny .skill-roll-btn {
+  margin-left: auto;
+  background: #1a1a2e;
+  color: var(--tamer-accent, #4a90d9);
+  border: 1px solid var(--tamer-accent, #4a90d9);
+  border-radius: 3px;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 0.72em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.digital-destiny .skill-roll-btn:hover {
+  background: var(--tamer-accent, #4a90d9);
+  color: #fff;
+}
+
+/* --- Digimon: tamer link & down track --- */
+.digital-destiny .tamer-link-row,
+.digital-destiny .down-track-row {
+  gap: 8px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.digital-destiny .tamer-link-row label,
+.digital-destiny .down-track-row label {
+  font-weight: 600;
+  font-size: 0.85em;
+  min-width: 90px;
+}
+
+.digital-destiny .tamer-link-row select {
+  flex: 1;
+}
+
+.digital-destiny .down-track-btn {
+  width: 28px;
+  height: 28px;
+  background: #1a1a2e;
+  color: #e0d8c8;
+  border: 1px solid #4a90d9;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.digital-destiny .down-track-value {
+  font-size: 1.1em;
+  font-weight: bold;
+  min-width: 48px;
+  text-align: center;
+}
+
+/* --- Digimon: stats table --- */
+.digital-destiny .stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85em;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.digital-destiny .stats-table th {
+  background: #1a1a2e;
+  color: #a0b8c8;
+  padding: 5px 6px;
+  text-align: center;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.digital-destiny .stats-table td {
+  padding: 3px 5px;
+  text-align: center;
+  border-bottom: 1px solid #e8e0d0;
+}
+
+.digital-destiny .stats-table tr:last-child td {
+  border-bottom: none;
+}
+
+.digital-destiny .stats-table tr:nth-child(even) td {
+  background: #f8f4ee;
+}
+
+.digital-destiny .stats-table td.stat-label {
+  text-align: left;
+  font-weight: 600;
+  padding-left: 8px;
+  color: #1a1a2e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.digital-destiny .stat-label-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.digital-destiny .stats-table input[type="number"] {
+  width: 48px;
+  text-align: center;
+  border: 1px solid #d0c8b8;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+.digital-destiny .stats-table .tamer-bonus {
+  color: #4a90d9;
+  font-weight: 600;
+}
+
+.digital-destiny .stats-table .stat-total {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: #1a1a2e;
+}
+
+.digital-destiny .hp-stat-row td {
+  background: #eef4ee !important;
+}
+
+.digital-destiny .hp-current {
+  gap: 8px;
+  align-items: center;
+  padding: 6px 10px;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.digital-destiny .hp-current input {
+  width: 60px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: 1px solid #4a90d9;
+  border-radius: 4px;
+}
+
+/* --- Moves tab --- */
+.digital-destiny .hint {
+  font-size: 0.8em;
+  color: #7090a8;
+  font-style: italic;
+  margin: 0 0 6px;
+}
+
+.digital-destiny .moves-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.digital-destiny .move-row {
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  padding: 5px 10px;
+  gap: 8px;
+  align-items: center;
+}
+
+.digital-destiny .move-name {
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.digital-destiny .tag {
+  font-size: 0.75em;
+  background: #1a1a2e;
+  color: #a0b8c8;
+  border-radius: 3px;
+  padding: 1px 6px;
+  white-space: nowrap;
+}
+
+.digital-destiny .move-sig {
+  background: #2e1a00;
+  color: #ffd060;
+}
+
+.digital-destiny .move-effect {
+  flex: 1;
+  font-size: 0.8em;
+  color: #506070;
+  font-style: italic;
+}
+
+.digital-destiny .no-items {
+  color: #9090a0;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+/* --- Skill roll dialog --- */
+.skill-roll-dialog .roll-formula-preview {
+  background: #1a1a2e;
+  color: #a0c8e8;
+  font-family: monospace;
+  font-size: 0.9em;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.skill-roll-dialog .mod-list-header {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7090a8;
+  padding: 0 4px 3px;
+  border-bottom: 1px solid #d0c8b8;
+  margin-bottom: 4px;
+  align-items: center;
+}
+
+.skill-roll-dialog .mod-amount-head {
+  margin-left: auto;
+  padding-right: 30px;
+}
+
+.skill-roll-dialog .modifier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 6px;
+  min-height: 4px;
+}
+
+.skill-roll-dialog .modifier-row {
+  gap: 6px;
+  align-items: center;
+}
+
+.skill-roll-dialog .mod-reason {
+  flex: 1;
+  border: 1px solid #c0c8d0;
+  border-radius: 4px;
+  padding: 3px 7px;
+  font-size: 0.88em;
+  font-family: inherit;
+}
+
+.skill-roll-dialog .mod-value {
+  width: 64px;
+  border: 1px solid #c0c8d0;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 0.88em;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.skill-roll-dialog .mod-remove {
+  width: 22px;
+  height: 22px;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9em;
+  line-height: 1;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.skill-roll-dialog .mod-remove:hover {
+  background: #962d22;
+}
+
+.skill-roll-dialog .mod-add-btn {
+  width: 100%;
+  background: #f0f4f8;
+  border: 1px dashed #a0b8c8;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 0.82em;
+  color: #4a7090;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.skill-roll-dialog .mod-add-btn:hover {
+  background: #e0ecf4;
+  border-color: #4a90d9;
+  color: #4a90d9;
+}
+
+/* Chat flavor for skill rolls */
+.roll-mods {
+  color: #506070;
+  font-size: 0.88em;
+  font-style: italic;
+}
+
+/* --- Skill name tooltip (JS-positioned, outside scroll container) --- */
+.digital-destiny .skill-name {
+  cursor: default;
+}
+
+.digital-destiny .skill-hover-tip {
+  display: none;
+  position: absolute;
+  width: 300px;
+  background: #1a1a2e;
+  color: #d8e8f0;
+  border: 1px solid #4a90d9;
+  border-radius: 8px;
+  padding: 12px 14px;
+  z-index: 200;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.55);
+  pointer-events: none;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.digital-destiny .skill-hover-tip.visible,
+.digital-destiny .skill-hover-tip[style*="display: block"],
+.digital-destiny .skill-hover-tip[style*="display:block"] {
+  display: flex;
+}
+
+.digital-destiny .skill-tip-title {
+  font-size: 1em;
+  font-weight: 700;
+  color: #7ab8f5;
+  border-bottom: 1px solid #2a3a5e;
+  padding-bottom: 6px;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.digital-destiny .skill-tip-desc {
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: #c8d8e8;
+  display: block;
+}
+
+.digital-destiny .skill-tip-example {
+  font-size: 0.84em;
+  color: #90a8c0;
+  line-height: 1.4;
+  border-top: 1px solid #2a3a5e;
+  padding-top: 6px;
+  margin-top: 2px;
+  display: block;
+}
+
+/* --- Placeholder tabs --- */
+.digital-destiny .placeholder-text {
+  color: #9090a0;
+  font-style: italic;
+  text-align: center;
+  padding: 40px 20px;
+  border: 2px dashed #d0c8b8;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+/* --- Biography textarea (general) --- */
+.digital-destiny textarea {
+  width: 100%;
+  min-height: 60px;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 0.9em;
+  resize: vertical;
+  background: #fff;
+}
+
+/* --- Biography tab layout --- */
+.digital-destiny .bio-tab {
+  overflow-y: auto;
+  padding: 8px 12px;
+  gap: 0;
+}
+
+.digital-destiny .bio-section {
+  border-left: 3px solid var(--tamer-accent, #4a90d9);
+  padding-left: 10px;
+  margin-bottom: 14px;
+}
+
+.digital-destiny .bio-section-title {
+  margin: 0 0 6px 0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--tamer-accent, #4a90d9);
+  font-weight: 700;
+}
+
+.digital-destiny .bio-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.digital-destiny .bio-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.digital-destiny .bio-field-sm {
+  width: auto;
+  flex: 1 1 120px;
+}
+
+.digital-destiny .bio-field label {
+  font-size: 0.78em;
+  font-weight: 600;
+  color: #3a3a4e;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.digital-destiny .bio-field input[type="text"],
+.digital-destiny .bio-field select {
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  padding: 4px 7px;
+  font-size: 0.9em;
+  font-family: inherit;
+  background: #fff;
+  color: #1a1a2e;
+}
+
+.digital-destiny .bio-field select {
+  cursor: pointer;
+}
+
+.digital-destiny .bio-field input[type="text"]:focus,
+.digital-destiny .bio-field select:focus,
+.digital-destiny .bio-field textarea:focus {
+  outline: none;
+  border-color: var(--tamer-accent, #4a90d9);
+  box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.25);
+}
+
+/* ================================================
+   Digimon sheet overrides
+   ================================================ */
+
+/* Bio section accent follows digimon color */
+.digital-destiny.digimon .bio-section {
+  border-left-color: var(--digimon-accent, #2ecc71);
+}
+.digital-destiny.digimon .bio-section-title {
+  color: var(--digimon-accent, #2ecc71);
+}
+
+/* Sheet background */
+.digital-destiny.digimon.sheet .window-content {
+  background: var(--digimon-bg, #f0ece4);
+}
+
+/* --- Corruption banner --- */
+.digital-destiny .corruption-banner {
+  background: #8b0000;
+  color: #ffd0d0;
+  font-weight: 700;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 4px 8px;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+/* --- Header stage panel --- */
+.digital-destiny .digi-stage-current {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--digimon-accent, #2ecc71);
+  line-height: 1.1;
+}
+
+.digital-destiny .digi-stage-sub {
+  font-size: 0.72em;
+  color: #7090a8;
+  font-style: italic;
+}
+
+/* --- EXP "no tamer" message --- */
+.digital-destiny .exp-no-tamer {
+  font-size: 0.72em;
+  color: #8090a0;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* --- Stats tab: small crest icon inline with stat name --- */
+.digital-destiny .stat-crest-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 4px;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* --- Stats tab: stat label with source --- */
+.digital-destiny .stat-source {
+  display: block;
+  font-size: 0.65em;
+  color: #8090a0;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+}
+
+.digital-destiny .stage-cap-note {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #7090a8;
+  margin-left: 8px;
+}
+
+/* --- Linked tamer name display --- */
+.digital-destiny .linked-tamer-name {
+  font-size: 0.8em;
+  color: #4a90d9;
+  font-style: italic;
+  margin-left: 4px;
+}
+
+/* --- Moves tab improvements --- */
+.digital-destiny .move-row-sig {
+  border-left: 3px solid #ffd060;
+  background: #fdfaf0;
+}
+
+.digital-destiny .move-name-block {
+  flex: 1;
+  gap: 2px;
+  min-width: 0;
+}
+
+.digital-destiny .move-name-block .move-name {
+  min-width: 0;
+}
+
+.digital-destiny .move-name-block .move-effect {
+  font-size: 0.76em;
+  color: #607080;
+  font-style: italic;
+}
+
+.digital-destiny .move-element-tag { background: #1a2e3a; }
+.digital-destiny .move-pr-tag      { background: #2a1a3a; }
+.digital-destiny .move-stage-tag   { background: #1a3a1a; }
+
+/* --- Digivolution tab --- */
+.digital-destiny .digi-stage-panel {
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.digital-destiny .digi-stage-row {
+  gap: 10px;
+  align-items: center;
+}
+
+.digital-destiny .digi-stage-row-label {
+  font-size: 0.82em;
+  font-weight: 600;
+  color: #3a3a4e;
+  min-width: 140px;
+}
+
+.digital-destiny .digi-stage-select {
+  flex: 1;
+  font-size: 0.9em;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+
+.digital-destiny .digi-stage-select-current {
+  font-weight: 700;
+  color: var(--digimon-accent, #2ecc71);
+  border-color: var(--digimon-accent, #2ecc71);
+}
+
+/* --- Down track pips --- */
+.digital-destiny .down-track-panel {
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.digital-destiny .down-track-pips {
+  gap: 6px;
+}
+
+.digital-destiny .down-pip {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #c0392b;
+  background: transparent;
+  display: block;
+}
+
+.digital-destiny .down-pip-filled {
+  background: #c0392b;
+}
+
+.digital-destiny .down-track-label {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #3a3a4e;
+  margin-left: auto;
+}
+
+.digital-destiny .down-track-key {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.digital-destiny .dtk-row {
+  font-size: 0.78em;
+  color: #8090a8;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.digital-destiny .dtk-active {
+  background: #fff0f0;
+  color: #c0392b;
+  font-weight: 600;
+  border-left: 3px solid #c0392b;
+}
+
+/* --- Corruption panel --- */
+.digital-destiny .corruption-panel {
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.digital-destiny .corruption-panel.corruption-active {
+  background: #fff5f5;
+  border-color: #c0392b;
+  border-width: 2px;
+}
+
+.digital-destiny .corruption-header-row {
+  gap: 10px;
+  align-items: center;
+}
+
+.digital-destiny .corruption-status-label {
+  font-weight: 700;
+  font-size: 0.9em;
+  color: #c0392b;
+}
+
+.digital-destiny .corruption-toggle {
+  margin-left: auto;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.digital-destiny .corruption-toggle:hover {
+  background: #962d22;
+}
+
+.digital-destiny .corruption-panel:not(.corruption-active) .corruption-toggle {
+  background: #4a4a6a;
+}
+
+.digital-destiny .corruption-panel:not(.corruption-active) .corruption-toggle:hover {
+  background: #2a2a4a;
+}
+
+.digital-destiny .corruption-reminders {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.digital-destiny .corruption-reminders p {
+  font-size: 0.8em;
+  color: #c0392b;
+  margin: 0;
+  padding: 1px 0;
+}
+
+/* --- Stats tab: invest +/- controls (table cell context) --- */
+.digital-destiny .invested-cell {
+  padding: 2px 0;
+}
+
+.digital-destiny .stat-invest-controls {
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+.digital-destiny .stat-invest-btn {
+  width: 18px;
+  height: 18px;
+  min-width: unset;
+  padding: 0;
+  font-size: 0.85em;
+  line-height: 1;
+  background: #1a1a2e;
+  color: #c8d8e8;
+  border: 1px solid #3a3a5e;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.digital-destiny .stat-invest-btn:hover:not(:disabled) {
+  background: var(--digimon-accent, #2ecc71);
+  color: #fff;
+  border-color: var(--digimon-accent, #2ecc71);
+}
+
+.digital-destiny .stat-invest-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.digital-destiny .stat-invest-display {
+  font-size: 0.9em;
+  font-weight: 600;
+  min-width: 18px;
+  text-align: center;
+  color: #c8d8e8;
+}
+
+.digital-destiny .stat-invest-cost {
+  font-size: 0.78em;
+  color: #7090a8;
+  min-width: 28px;
+  text-align: right;
+}
+
+/* --- Combat reference block (used in both sheets) --- */
+.digital-destiny .combat-reference {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.digital-destiny .combat-ref-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 5px 8px;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  font-size: 0.85em;
+  align-items: flex-start;
+}
+
+.digital-destiny .combat-ref-label {
+  font-weight: 700;
+  min-width: 110px;
+  color: #3a3a4e;
+  flex-shrink: 0;
+}
+
+.digital-destiny .combat-ref-value {
+  color: #555;
+  line-height: 1.4;
+}
+
+/* --- Status conditions block (used in both sheets) --- */
+.digital-destiny .status-conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.digital-destiny .status-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 5px 8px;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  font-size: 0.85em;
+  align-items: flex-start;
+}
+
+.digital-destiny .status-name {
+  font-weight: 700;
+  font-family: monospace;
+  min-width: 110px;
+  color: #c0392b;
+  flex-shrink: 0;
+}
+
+.digital-destiny .status-desc {
+  color: #555;
+  line-height: 1.4;
+}
+
+/* --- Down track pips (numbered) --- */
+.digital-destiny .down-track-pip {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #c0392b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 700;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.digital-destiny .down-track-pip.pip-filled {
+  background: #c0392b;
+  color: #fff;
+}
+
+.digital-destiny .down-track-pip.pip-empty {
+  background: transparent;
+  color: #c0392b;
+}
+
+/* --- HP formula note below stats table --- */
+.digital-destiny .hp-formula-note {
+  text-align: center;
+  padding: 6px;
+  background: #f8f4ee;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+/* --- Digivolution force table --- */
+.digital-destiny .digivolution-force-table {
+  margin-bottom: 8px;
+}
+
+/* --- Equipment slots (tamer items tab) --- */
+.digital-destiny .equipment-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.digital-destiny .equipment-slot-row {
+  gap: 10px;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.digital-destiny .slot-label {
+  font-weight: 700;
+  min-width: 80px;
+  font-size: 0.9em;
+  color: #3a3a4e;
+  flex-shrink: 0;
+}
+
+/* --- Currency panel (tamer items tab) --- */
+.digital-destiny .currency-panel {
+  gap: 16px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+}
+
+.digital-destiny .currency-field {
+  gap: 4px;
+}
+
+.digital-destiny .currency-field label {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #6a6a7e;
+}
+
+.digital-destiny .currency-field input {
+  width: 100px;
+}
+
+/* --- Classes tab item cards --- */
+.digital-destiny .class-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.digital-destiny .class-item-card {
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.digital-destiny .class-item-header {
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.digital-destiny .class-item-name {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #1a1a2e;
+  flex: 1;
+  min-width: 120px;
+}
+
+.digital-destiny .class-item-tree {
+  background: #1a1a2e;
+  color: #c8d8e8;
+  font-size: 0.75em;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.digital-destiny .class-item-row-tag {
+  background: #3a3a5e;
+  color: #c8d8e8;
+  font-size: 0.75em;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.digital-destiny .class-item-cost {
+  font-size: 0.8em;
+  color: #7090a8;
+  font-weight: 600;
+}
+
+.digital-destiny .class-item-delete {
+  background: transparent;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.digital-destiny .class-item-delete:hover {
+  opacity: 1;
+  background: #fff0f0;
+}
+
+.digital-destiny .class-item-req {
+  font-size: 0.78em;
+  color: #8090a8;
+  margin: 0;
+}
+
+.digital-destiny .class-item-desc {
+  font-size: 0.85em;
+  color: #444;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.digital-destiny .class-ref-block {
+  margin-top: 16px;
+  padding: 10px 12px;
+  background: #f8f4ee;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+}
+
+.digital-destiny .class-ref-title {
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #3a3a4e;
+  margin: 0 0 4px 0;
+}
+
+.digital-destiny .class-ref-text {
+  font-size: 0.8em;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* -----------------------------------------------
+   Class Skill Sheet — tabs
+   ----------------------------------------------- */
+.digital-destiny.class-skill .cs-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #3a3a5e;
+  background: #12122a;
+  padding: 0 8px;
+  flex-shrink: 0;
+}
+
+.digital-destiny.class-skill .cs-tabs .item {
+  padding: 6px 14px;
+  color: #8888aa;
+  cursor: pointer;
+  font-size: 0.85em;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+.digital-destiny.class-skill .cs-tabs .item.active {
+  color: #c8d8e8;
+  border-bottom-color: #7d5fa6;
+}
+
+.digital-destiny.class-skill .cs-body {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.digital-destiny.class-skill .cs-body .tab {
+  display: none;
+}
+
+.digital-destiny.class-skill .cs-body .tab.active {
+  display: flex;
+}
+
+/* -----------------------------------------------
+   Move Tags — checkbox grid
+   ----------------------------------------------- */
+.digital-destiny .tag-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+}
+
+.digital-destiny .tag-category {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.digital-destiny .tag-cat-label {
+  font-weight: 700;
+  font-size: 0.72em;
+  color: #6a6a7e;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2px;
+}
+
+.digital-destiny .tag-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82em;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+}
+
+.digital-destiny .tag-row input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.digital-destiny .tag-param {
+  width: 42px;
+  padding: 1px 4px;
+  font-size: 0.9em;
+  border: 1px solid #b0b8c8;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.digital-destiny .tag-param:disabled {
+  opacity: 0.35;
+  background: #e8e8e8;
+}
+
+.digital-destiny .tag-hint {
+  color: #999;
+  font-size: 0.85em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.digital-destiny .tag-preview-inline {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: #4a6a8a;
+  font-family: monospace;
+  margin-left: 6px;
+}
+
+/* -----------------------------------------------
+   Move rows — action buttons
+   ----------------------------------------------- */
+.digital-destiny .move-row-actions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.digital-destiny .move-action-btn {
+  background: transparent;
+  border: none;
+  color: #8090a0;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  opacity: 0.55;
+}
+
+.digital-destiny .move-action-btn:hover {
+  opacity: 1;
+  background: #f0f4f8;
+  color: #2a4a6a;
+}
+
+.digital-destiny .move-delete.move-action-btn:hover {
+  background: #fff0f0;
+  color: #c0392b;
+}
+
+.digital-destiny .move-tags-string {
+  font-size: 0.72em;
+  font-family: monospace;
+  color: #5a7a9a;
+  font-weight: 600;
+}
+
+/* -----------------------------------------------
+   Post to chat — class-item-card button
+   ----------------------------------------------- */
+.digital-destiny .class-item-to-chat {
+  background: transparent;
+  border: none;
+  color: #4a6a8a;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.digital-destiny .class-item-to-chat:hover {
+  opacity: 1;
+  background: #e8f4ff;
+}
+
+/* -----------------------------------------------
+   Chat card (shared by moves + class skills)
+   ----------------------------------------------- */
+.dd-chat-card {
+  border: 1px solid #c8c0b0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #fafaf8;
+}
+
+.dd-chat-title {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 5px 0;
+}
+
+.dd-chat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.dd-chat-req {
+  font-size: 0.82em;
+  color: #7a8898;
+  margin: 0 0 4px 0;
+}
+
+.dd-chat-desc {
+  font-size: 0.88em;
+  color: #333;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.move-tags-inline {
+  font-family: monospace;
+  font-size: 0.85em;
+}
+
+/* -----------------------------------------------
+   Gear items — Items tab
+   ----------------------------------------------- */
+.digital-destiny .gear-slot-block {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin-bottom: 5px;
+  background: #faf8f4;
+}
+
+.digital-destiny .gear-slot-header {
+  align-items: center;
+  gap: 6px;
+  min-height: 26px;
+}
+
+.digital-destiny .gear-slot-label {
+  font-weight: 700;
+  font-size: 0.82em;
+  color: #3a3a5e;
+  min-width: 72px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.digital-destiny .gear-equipped-name {
+  flex: 1;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #1a5a2a;
+}
+
+.digital-destiny .gear-slot-empty {
+  flex: 1;
+  font-size: 0.85em;
+  color: #bbb;
+  font-style: italic;
+}
+
+.digital-destiny .gear-item-row {
+  align-items: center;
+  gap: 4px;
+  padding: 3px 0;
+  border-top: 1px solid #f0ece4;
+}
+
+.digital-destiny .gear-item-row.gear-unequipped {
+  padding-left: 12px;
+  opacity: 0.75;
+}
+
+.digital-destiny .gear-item-name {
+  flex: 1;
+  font-size: 0.87em;
+  color: #333;
+}
+
+.digital-destiny .gear-quantity {
+  font-size: 0.82em;
+  font-weight: 700;
+  color: #4a6a8a;
+  min-width: 26px;
+  text-align: right;
+}
+
+.digital-destiny .gear-action-btn {
+  background: transparent;
+  border: none;
+  color: #8090a0;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.78em;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.digital-destiny .gear-action-btn:hover {
+  opacity: 1;
+  background: #e8f0f8;
+  color: #2a4a6a;
+}
+
+.digital-destiny .gear-action-delete:hover {
+  background: #fff0f0;
+  color: #c0392b;
+}
+
+.digital-destiny .gear-items-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #faf8f4;
+  padding: 4px 8px;
+}
+
+/* -----------------------------------------------
+   Gear sheet — stat bonus grid
+   ----------------------------------------------- */
+.digital-destiny .gear-stat-bonuses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px 8px;
+  background: #f4f0ec;
+  border: 1px solid #d8d0c8;
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+
+.digital-destiny .gear-sb-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82em;
+}
+
+.digital-destiny .gear-sb-row span {
+  min-width: 68px;
+  color: #444;
+  font-weight: 600;
+}
+
+.digital-destiny .gear-sb-row input[type="number"] {
+  width: 46px;
+  text-align: center;
+  border: 1px solid #c0b8b0;
+  border-radius: 3px;
+  padding: 1px 3px;
+  font-size: 0.95em;
+}
+
+/* -----------------------------------------------
+   Gear sheet — skill bonus grid
+   ----------------------------------------------- */
+.digital-destiny .gear-skill-bonuses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 10px;
+  background: #f4f0ec;
+  border: 1px solid #d8d0c8;
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+
+.digital-destiny .gear-skb-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.digital-destiny .gear-skb-stat {
+  font-weight: 700;
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2px;
+  margin-bottom: 1px;
+}
+
+.digital-destiny .gear-skb-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8em;
+  color: #333;
+}
+
+.digital-destiny .gear-skb-row span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.digital-destiny .gear-skb-row input[type="number"] {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #c0b8b0;
+  border-radius: 3px;
+  padding: 1px 2px;
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------------
+   Interactive Attack Card (chat)
+   ----------------------------------------------- */
+
+.dd-attack-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Roll breakdown table */
+.dd-roll-breakdown {
+  background: #f0ece6;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.dd-roll-row {
+  display: flex;
+  gap: 6px;
+  font-size: 0.85em;
+  align-items: baseline;
+}
+.dd-roll-label {
+  font-weight: 700;
+  color: #555;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+.dd-roll-detail {
+  color: #222;
+  flex: 1;
+}
+.dd-no-target-note .dd-roll-detail {
+  color: #888;
+  font-style: italic;
+}
+.dd-mod-chip {
+  display: inline-block;
+  background: #e0dcd4;
+  border-radius: 3px;
+  padding: 0 4px;
+  margin-right: 3px;
+  font-size: 0.9em;
+}
+
+/* Target sections */
+.dd-targets {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dd-target-section {
+  border: 1px solid #d0c8bc;
+  border-radius: 5px;
+  padding: 6px 8px;
+  background: #fafaf8;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dd-target-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.dd-target-name {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #1a1a2e;
+}
+.dd-hit-badge {
+  font-size: 0.82em;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+}
+.dd-hit-detail {
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-left: 2px;
+}
+.dd-badge-hit      { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.dd-badge-miss     { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.dd-badge-neutral  { background: #e2e8f0; color: #4a5568; border: 1px solid #cbd5e0; }
+.dd-crit-tag       { background: #ffd700; color: #333; border: 1px solid #c8a600; font-size: 0.78em; vertical-align: middle; }
+
+/* Damage section */
+.dd-dmg-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top: 1px dashed #ccc;
+  padding-top: 5px;
+}
+.dd-dmg-breakdown {
+  font-size: 0.84em;
+  color: #444;
+}
+.dd-crit-note {
+  color: #c00;
+  font-size: 0.88em;
+  margin-left: 4px;
+}
+
+/* Multiplier button rows */
+.dd-mult-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.dd-mult-label {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #666;
+  min-width: 60px;
+}
+.dd-mult-btn {
+  font-size: 0.78em;
+  padding: 2px 7px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background: #eee;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.4;
+  transition: background 0.1s, border-color 0.1s;
+}
+.dd-mult-btn:hover {
+  background: #d0e8ff;
+  border-color: #6aaddd;
+}
+.dd-mult-btn.active {
+  background: #2a6496;
+  color: #fff;
+  border-color: #1a4870;
+  font-weight: 700;
+}
+
+/* Final damage + apply row */
+.dd-final-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+.dd-final-row > span {
+  font-size: 0.9em;
+  color: #222;
+}
+.dd-final-value {
+  font-size: 1.1em;
+  color: #c00;
+}
+.dd-apply-btn {
+  font-size: 0.8em;
+  padding: 3px 10px;
+  background: #2d6a2d;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.15s;
+}
+.dd-apply-btn:hover:not(:disabled) {
+  background: #1e4d1e;
+}
+.dd-apply-btn.dd-applied,
+.dd-apply-btn:disabled {
+  background: #888;
+  cursor: default;
+}
+.dd-applied-note {
+  font-size: 0.8em;
+  color: #555;
+  font-style: italic;
+}
+
+/* Dialog sections */
+.dd-dialog-section {
+  margin-bottom: 4px;
+}
+.dd-dialog-section-label {
+  font-weight: 700;
+  font-size: 0.88em;
+  color: #2a6496;
+  margin-bottom: 4px;
+}
+.dd-dialog-dmg {
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+  margin-top: 6px;
+}
+.dd-grapple-note {
+  font-size: 0.82em;
+  margin: 2px 0 6px;
+  color: #a06030;
+}
+
+/* ── Gear Item Sheet ────────────────────────────────────────────────────────── */
+.gear-item-sheet .gear-body {
+  background: var(--tamer-bg, #f0ece4);
+}
+.gear-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-end;
+}
+.gear-meta-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 130px;
+}
+.gear-meta-field-sm {
+  flex: 0 0 70px;
+  min-width: 70px;
+}
+.gear-field-label {
+  font-weight: 700;
+  font-size: 0.78em;
+  color: #6a6a7e;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.gear-section {
+  border-top: 1px solid #ddd;
+  padding-top: 8px;
+}
+.gear-section-title {
+  font-weight: 700;
+  font-size: 0.82em;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+}
+.gear-section-hint {
+  font-weight: 400;
+  font-size: 0.8em;
+  color: #999;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.gear-cost-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.gear-cost-label {
+  font-size: 0.82em;
+  color: #666;
+  min-width: 90px;
+}
+.gear-cost-input {
+  width: 80px;
+}
+.gear-bonus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.gear-bonus-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.gear-bonus-group-title {
+  font-weight: 700;
+  font-size: 0.78em;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 4px 0 2px;
+  border-bottom: 1px solid #ddd;
+}
+.gear-bonus-input {
+  width: 52px;
+  text-align: center;
+}
+.gear-skb-group {
+  margin-bottom: 4px;
+}
+.gear-skb-stat {
+  font-weight: 700;
+  font-size: 0.78em;
+  display: block;
+  margin-bottom: 1px;
+}
+.gear-bonus-hint {
+  font-size: 0.78em;
+  color: #999;
+  margin: 4px 0 0;
+  font-style: italic;
+}
+
+/* ── Sheet Details dialog ───────────────────────────────────────────────────── */
+.dd-details-form {
+  padding: 4px 2px;
+  font-size: 0.9em;
+}
+.dd-det-section {
+  margin-bottom: 14px;
+}
+.dd-det-section-title {
+  font-weight: 700;
+  font-size: 1em;
+  border-bottom: 2px solid #999;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #333;
+}
+.dd-det-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+.dd-det-label {
+  min-width: 140px;
+  font-weight: 600;
+  color: #444;
+}
+.dd-det-hint {
+  font-size: 0.82em;
+  color: #888;
+  font-style: italic;
+  font-weight: normal;
+}
+.dd-det-hint-block {
+  font-size: 0.82em;
+  color: #888;
+  font-style: italic;
+  margin: 0 0 6px;
+}
+.dd-det-input {
+  width: 56px;
+  text-align: center;
+}
+.dd-det-input-wide {
+  width: 72px;
+  text-align: center;
+}
+.dd-det-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88em;
+}
+.dd-det-table th {
+  background: #444;
+  color: #fff;
+  padding: 3px 6px;
+  text-align: center;
+  font-weight: 600;
+}
+.dd-det-table td {
+  padding: 3px 5px;
+  border-bottom: 1px solid #e0ddd6;
+  text-align: center;
+}
+.dd-det-table tbody tr:hover {
+  background: #f5f0e8;
+}
+.dd-det-stat-name {
+  text-align: left !important;
+  font-weight: 600;
+}
+.dd-det-readonly {
+  color: #888;
+  font-style: italic;
+}
+.dd-det-total {
+  font-weight: 700;
+  color: #222;
+}
+
+/* ── Status conditions ─────────────────────── */
+.status-add-row { gap: 8px; margin-bottom: 8px; align-items: center; }
+.status-type-picker { flex: 1; }
+.status-add-btn { white-space: nowrap; }
+.status-active-list { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+.status-item-row {
+  background: #fff; border: 1px solid #ddd; border-radius: 4px;
+  padding: 5px 8px; gap: 8px; align-items: center; flex-wrap: wrap;
+}
+.status-type-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 0.75em; flex: 0 0 auto;
+}
+.status-item-name { font-weight: 600; font-size: 0.9em; flex: 1; min-width: 80px; }
+.status-source { font-size: 0.78em; color: #888; font-style: italic; }
+.status-adjust-group { display: inline-flex; align-items: center; gap: 3px; }
+.status-adjust-label { font-size: 0.75em; color: #666; }
+.status-adjust-val { min-width: 20px; text-align: center; font-weight: 700; }
+.status-remove { color: #c0392b !important; padding: 2px 6px !important; }
+.dd-status-note { color: #2ecc71; font-size: 0.85em; }
+
+/* ── Initiative chat card ──────────────────── */
+.dd-init-row { display: flex; align-items: center; justify-content: space-between; padding: 4px 0; font-size: 0.9em; color: #444; }
+.dd-init-label { color: #666; }
+.dd-init-speed { font-size: 1.15em; color: #2c3e50; }
+.dd-init-result { text-align: right; margin-top: 6px; font-size: 1.05em; border-top: 1px solid #ddd; padding-top: 6px; }
+.dd-init-hint { font-size: 0.78em; color: #888; margin-left: 6px; }
+
+/* ================================================
+   DigimonForm Item Sheet  (.digimon-form-card)
+   ================================================ */
+
+.digital-destiny.sheet.item.digimon-form .window-content {
+  background: #0e1226;
+  padding: 0;
+}
+
+.digimon-form-card {
+  background: #0e1226;
+  color: #e8e0d0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+}
+
+/* Header */
+.dfc-header {
+  display: flex;
+  gap: 14px;
+  padding: 14px 14px 10px;
+  border-bottom: 2px solid #2a3560;
+  background: #111830;
+  flex-shrink: 0;
+}
+
+.dfc-portrait-wrap {
+  flex-shrink: 0;
+}
+
+.dfc-portrait {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 2px solid #2a3560;
+  background: #1a2040;
+  cursor: pointer;
+  display: block;
+}
+
+.dfc-header-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.dfc-name {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #4a6fa5;
+  color: #e8e0d0;
+  font-size: 1.35em;
+  font-weight: bold;
+  width: 100%;
+  padding: 2px 4px 4px;
+}
+.dfc-name:focus { outline: none; border-bottom-color: #7ab8f5; }
+
+/* Badges */
+.dfc-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.dfc-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.72em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.dfc-badge-stage { background: #2a5298; }
+.dfc-badge-attr  { background: #2e7d32; }
+.dfc-badge-elem  { background: #6a1b9a; }
+.dfc-badge-size  { background: #4a4a4a; }
+
+/* Meta grid (stage/attr/elem/size/sig-move selects) */
+.dfc-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+}
+
+.dfc-field { display: flex; flex-direction: column; gap: 2px; }
+.dfc-field-wide { grid-column: span 2; }
+
+.dfc-field label {
+  font-size: 0.68em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8aa0c8;
+}
+
+.dfc-field select,
+.dfc-field input[type="text"] {
+  background: #1a2040;
+  border: 1px solid #2a3560;
+  border-radius: 4px;
+  color: #e8e0d0;
+  padding: 3px 6px;
+  font-size: 0.85em;
+  width: 100%;
+}
+.dfc-field select:focus,
+.dfc-field input[type="text"]:focus {
+  outline: none;
+  border-color: #4a6fa5;
+}
+
+/* Body */
+.dfc-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dfc-section-title {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8aa0c8;
+  border-bottom: 1px solid #2a3560;
+  padding-bottom: 3px;
+}
+
+/* Stat grid */
+.dfc-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.dfc-stat-cell {
+  background: #111830;
+  border-radius: 5px;
+  padding: 6px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.dfc-crest-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.dfc-stat-label {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8aa0c8;
+}
+
+.dfc-stat-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #2a3560;
+  color: #e8e0d0;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  width: 50px;
+  padding: 1px 2px;
+}
+.dfc-stat-input:focus { outline: none; border-bottom-color: #4a6fa5; }
+
+/* Digivolution chain rows */
+.dfc-chain-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.85em;
+}
+.dfc-chain-label {
+  color: #8aa0c8;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.dfc-chain-names { color: #c8d8f0; }
+
+/* UUID row */
+.dfc-uuid-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #1e2a4a;
+}
+
+.dfc-uuid-label {
+  font-size: 0.68em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8aa0c8;
+  white-space: nowrap;
+}
+
+.dfc-uuid-display {
+  flex: 1;
+  background: #0a0f1e;
+  border: 1px solid #1e2a4a;
+  border-radius: 4px;
+  color: #5a7aaa;
+  font-size: 0.72em;
+  font-family: monospace;
+  padding: 3px 6px;
+  cursor: text;
+  min-width: 0;
+}
+.dfc-uuid-display:focus { outline: none; border-color: #4a6fa5; }
+
+.dfc-uuid-copy {
+  background: #1a2040;
+  border: 1px solid #2a3560;
+  border-radius: 4px;
+  color: #8aa0c8;
+  cursor: pointer;
+  padding: 3px 7px;
+  font-size: 0.8em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.dfc-uuid-copy:hover { background: #2a3560; color: #e8e0d0; }
+
+/* ================================================
+   Digimon Lookup Application
+   ================================================ */
+
+.digital-destiny.digimon-lookup .window-content {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a2e;
+  color: #e0d8c8;
+}
+
+.digimon-lookup-layout {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  font-size: 1.02em;
+}
+
+/* ── Left sidebar: filters + scrollable list ── */
+
+.digimon-lookup .lookup-sidebar {
+  width: 248px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #2a2a4e;
+  background: #16162a;
+}
+
+.digimon-lookup .lookup-filters {
+  padding: 8px;
+  border-bottom: 1px solid #2a2a4e;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.digimon-lookup .lookup-search {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid #3a3a6e;
+  color: #e0d8c8;
+  border-radius: 3px;
+  padding: 4px 7px;
+  font-size: 0.85em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.digimon-lookup .lookup-search::placeholder { color: #6070a0; }
+.digimon-lookup .lookup-search:focus { outline: none; border-color: #4a90d9; }
+
+.digimon-lookup .filter-select {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid #3a3a6e;
+  color: #e0d8c8;
+  border-radius: 3px;
+  padding: 3px 6px;
+  font-size: 0.8em;
+  width: 100%;
+  cursor: pointer;
+}
+
+.digimon-lookup .filter-select option { background: #1a1a2e; color: #e0d8c8; }
+
+.digimon-lookup .clear-filters {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #3a3a6e;
+  color: #7080a0;
+  border-radius: 3px;
+  padding: 3px 0;
+  font-size: 0.77em;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.digimon-lookup .clear-filters:hover { background: rgba(255,255,255,0.12); color: #e0d8c8; }
+
+.digimon-lookup .lookup-results {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.digimon-lookup .result-entry {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  color: #9098b0;
+  font-size: 0.84em;
+  user-select: none;
+}
+
+.digimon-lookup .result-entry img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 2px;
+  flex-shrink: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.digimon-lookup .result-entry:hover {
+  background: rgba(255,255,255,0.06);
+  color: #e0d8c8;
+  border-left-color: #4a90d9;
+}
+
+.digimon-lookup .result-entry.selected {
+  background: rgba(74,144,217,0.18);
+  color: #e0d8c8;
+  border-left-color: #4a90d9;
+  font-weight: 600;
+}
+
+/* ── Right detail panel ── */
+
+.digimon-lookup .lookup-detail {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Draggable form card */
+.digimon-lookup .form-card {
+  display: flex;
+  gap: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 10px;
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.digimon-lookup .form-card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: #4a90d9;
+}
+
+.digimon-lookup .form-card:active { cursor: grabbing; }
+
+.digimon-lookup .form-portrait {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.15);
+  flex-shrink: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+.digimon-lookup .form-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.digimon-lookup .form-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e0d8c8;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.digimon-lookup .open-sheet-btn {
+  background: none;
+  border: 1px solid #2a4060;
+  color: #4a7090;
+  border-radius: 2px;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  font-size: 0.5em;
+  cursor: pointer;
+  line-height: 1;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digimon-lookup .open-sheet-btn:hover {
+  border-color: #4a90d9;
+  color: #4a90d9;
+}
+
+.digimon-lookup .form-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.digimon-lookup .badge {
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.digimon-lookup .badge-stage { background: #4a90d9; color: #fff; }
+.digimon-lookup .badge-attr  { background: #2ecc71; color: #1a1a2e; }
+.digimon-lookup .badge-elem  { background: #c0392b; color: #fff; }
+.digimon-lookup .badge-arch  { background: #7d5fa6; color: #fff; }
+.digimon-lookup .badge-size  { background: #444466; color: #c0c8e0; }
+
+.digimon-lookup .form-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.digimon-lookup .stat-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3px 2px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 3px;
+}
+
+.digimon-lookup .stat-label {
+  font-size: 0.62em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #7888a8;
+  font-weight: 700;
+}
+
+.digimon-lookup .stat-value {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #e0d8c8;
+  line-height: 1.2;
+}
+
+.digimon-lookup .drag-hint {
+  font-size: 0.7em;
+  color: #3a5070;
+  margin-top: auto;
+}
+
+/* Shared section container */
+.digimon-lookup .lookup-section {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 5px;
+  padding: 8px 10px;
+  flex-shrink: 0;
+}
+
+.digimon-lookup .section-title {
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #7888a8;
+  font-weight: 700;
+  margin-bottom: 7px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 4px;
+}
+
+/* Draggable signature move card */
+.digimon-lookup .sig-move-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: grab;
+}
+
+.digimon-lookup .sig-move-card:hover {
+  background: rgba(0,0,0,0.35);
+  border-color: #4a90d9;
+}
+
+.digimon-lookup .sig-move-card:active { cursor: grabbing; }
+
+.digimon-lookup .move-name  { font-weight: 700; color: #e0d8c8; font-size: 0.95em; }
+.digimon-lookup .move-meta  { font-size: 0.8em; color: #8090b0; }
+.digimon-lookup .move-tags  { font-size: 0.78em; color: #7ab8f5; font-style: italic; }
+.digimon-lookup .drag-hint-sm { font-size: 0.68em; color: #3a5070; margin-left: auto; }
+
+/* Digivolves-to link pills */
+.digimon-lookup .digi-links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.digimon-lookup .digi-link {
+  font-size: 0.81em;
+  padding: 2px 9px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  line-height: 1.6;
+}
+
+.digimon-lookup .digi-link.exists {
+  color: #d8e0f0;
+  border-color: rgba(255,255,255,0.14);
+  cursor: pointer;
+  user-select: none;
+}
+
+.digimon-lookup .digi-link.exists:hover {
+  background: rgba(74,144,217,0.2);
+  border-color: #4a90d9;
+  color: #7ab8f5;
+}
+
+.digimon-lookup .digi-link.missing {
+  color: #c0392b;
+  border-color: rgba(192,57,43,0.2);
+  cursor: default;
+}
+
+/* Evo sections: two-column fixed layout */
+.digimon-lookup .evo-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 10px 10px;
+}
+
+.digimon-lookup .evo-panel {
+  min-height: 60px;
+}
+
+.digimon-lookup .evo-empty {
+  font-size: 0.8em;
+  color: #3a4060;
+  font-style: italic;
+  padding: 4px 2px;
+}
+
+/* Empty state */
+.digimon-lookup .lookup-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: #3a4a6a;
+  gap: 14px;
+}
+
+.digimon-lookup .lookup-empty i { font-size: 3em; }
+.digimon-lookup .lookup-empty p  { font-size: 0.88em; text-align: center; margin: 0; }
+
+.digimon-lookup .lookup-no-forms {
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #c0392b;
+  font-size: 0.82em;
+  text-align: center;
+}
+
+.digimon-lookup .lookup-no-forms i { font-size: 1.6em; }
+
+/* Compendium tab header button */
+.digimon-lookup-header-btn {
+  font-size: 0.8em;
+  padding: 2px 10px;
+  cursor: pointer;
+  background: rgba(74,144,217,0.15);
+  border: 1px solid #4a90d9;
+  color: #4a90d9;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+.digimon-lookup-header-btn:hover {
+  background: rgba(74,144,217,0.3);
+  color: #7ab8f5;
+}
+
+/* ══════════════════════════════════════════
+   Class Lookup
+   ══════════════════════════════════════════ */
+
+.digital-destiny.class-lookup .window-content {
+  padding: 0;
+  background: #0f0f1e;
+  overflow: hidden;
+}
+
+.class-lookup-layout {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar — reuses the same structural rules as digimon-lookup */
+.class-lookup .lookup-sidebar {
+  width: 220px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  background: #13132a;
+  border-right: 1px solid #2a2a4a;
+}
+
+.class-lookup .lookup-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border-bottom: 1px solid #2a2a4a;
+  flex-shrink: 0;
+}
+
+.class-lookup .lookup-search {
+  background: #1a1a3a;
+  border: 1px solid #3a3a6a;
+  border-radius: 3px;
+  color: #c8d8e8;
+  padding: 4px 8px;
+  font-size: 0.82em;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+.class-lookup .lookup-search::placeholder { color: #6070a0; }
+.class-lookup .lookup-search:focus { outline: none; border-color: #d4a017; }
+
+.class-lookup .filter-select {
+  background: #1a1a3a;
+  border: 1px solid #3a3a6a;
+  border-radius: 3px;
+  color: #c8d8e8;
+  padding: 4px 6px;
+  font-size: 0.8em;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+.class-lookup .filter-select option { background: #1a1a2e; color: #e0d8c8; }
+
+.class-lookup .clear-filters {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid #3a3a5e;
+  color: #8090b0;
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-size: 0.78em;
+  cursor: pointer;
+  font-family: inherit;
+}
+.class-lookup .clear-filters:hover { background: rgba(255,255,255,0.12); color: #e0d8c8; }
+
+.class-lookup .lookup-results {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.class-lookup .result-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #1e1e3a;
+  transition: background 0.1s;
+}
+.class-lookup .result-entry img {
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  object-fit: contain;
+  border: 1px solid #2a2a4a;
+  flex-shrink: 0;
+}
+.class-lookup .result-entry:hover  { background: rgba(212,160,23,0.10); }
+.class-lookup .result-entry.selected {
+  background: rgba(212,160,23,0.18);
+  border-left: 3px solid #d4a017;
+}
+
+.class-lookup .entry-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.class-lookup .entry-label {
+  font-size: 0.85em;
+  color: #c8d8e8;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.class-lookup .entry-meta {
+  font-size: 0.72em;
+  color: #6a7a9a;
+}
+
+/* Detail panel */
+.class-lookup .lookup-detail {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #0f0f1e;
+}
+
+/* Class header card */
+.class-lookup .class-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.class-lookup .class-portrait {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 2px solid #d4a017;
+  flex-shrink: 0;
+}
+
+.class-lookup .class-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.class-lookup .class-name {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #e8d8a0;
+}
+
+.class-lookup .class-meta-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Badges — shared base from digimon-lookup, new variants here */
+.class-lookup .badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+.class-lookup .badge-season  { background: #7d5fa6; color: #fff; }
+.class-lookup .badge-layers  { background: #d4a017; color: #1a1a2e; }
+.class-lookup .badge-exp     { background: #2a5298; color: #c8e0ff; font-size: 0.72em; padding: 2px 6px; }
+
+/* Layer sections */
+.class-lookup .lookup-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.class-lookup .section-title {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d4a017;
+  border-bottom: 1px solid #2a2a3e;
+  padding-bottom: 4px;
+}
+
+/* Ability cards */
+.class-lookup .ability-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 5px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.class-lookup .ability-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.class-lookup .ability-name {
+  font-weight: 700;
+  color: #e0d8c8;
+  font-size: 0.92em;
+  flex: 1;
+}
+
+.class-lookup .open-ability-btn {
+  background: transparent;
+  border: 1px solid #3a3a5e;
+  color: #6080a0;
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 0.72em;
+  cursor: pointer;
+  line-height: 1.4;
+}
+.class-lookup .open-ability-btn:hover { color: #d4a017; border-color: #d4a017; }
+
+.class-lookup .ability-req {
+  font-size: 0.78em;
+  color: #8a7a50;
+  font-style: italic;
+}
+.class-lookup .ability-req i { margin-right: 4px; font-size: 0.85em; }
+
+.class-lookup .ability-desc {
+  font-size: 0.82em;
+  color: #a0b0c0;
+  line-height: 1.5;
+}
+
+/* Empty state */
+.class-lookup .lookup-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #3a4a6a;
+}
+.class-lookup .lookup-empty i { font-size: 3em; }
+.class-lookup .lookup-empty p { font-size: 0.88em; text-align: center; margin: 0; }
+
+.class-lookup .lookup-no-forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 10px;
+  color: #c0392b;
+  font-size: 0.82em;
+  text-align: center;
+}
+.class-lookup .lookup-no-forms i { font-size: 1.6em; }
+
+/* Class Lookup header button (gold, distinct from blue Digimon Lookup button) */
+.class-lookup-header-btn {
+  font-size: 0.8em;
+  padding: 2px 10px;
+  cursor: pointer;
+  background: rgba(212,160,23,0.15);
+  border: 1px solid #d4a017;
+  color: #d4a017;
+  border-radius: 3px;
+  font-family: inherit;
+}
+.class-lookup-header-btn:hover {
+  background: rgba(212,160,23,0.3);
+  color: #f0c84a;
+}

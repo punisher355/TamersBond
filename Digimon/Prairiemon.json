@@ -1,0 +1,41 @@
+{
+  "name": "Prairiemon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Sonic Ear",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Accelerates the blades on both of its ears to the speed of sound and then slashes the enemy."
+  },
+  "digivolves_from": [
+    "Lopmon",
+    "Renamon",
+    "Shamamon",
+    "Terriermon"
+  ],
+  "digivolves_to": [
+    "Andiramon (Deva)",
+    "Black Rapidmon",
+    "Jyagamon",
+    "Kumbhiramon",
+    "Monzaemon",
+    "Taomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Beast Digimon that evolved through the power of the \" Digimental of Kindness \". It spends its time burrowing in dry land, and is able to dig underground at a speed of 100 km/h using the large claws on both of its arms. Its nature of behaving in colonies has been confirmed, and although it rarely ever appears on the surface due to its timid personality, it has a habit of sunbathing in groups on fine days with calm weather, so Prairiemon researchers will probably need to read a weather map. When it is assaulted by the enemy and falls into a predicament, it will fight back with its \" Sonic Ear \", which accelerates the blades on both of its ears to the speed of sound and then slashes the enemy, but more often than not, it will flee by quickly burrowing into the ground.",
+  "web_created": true
+}

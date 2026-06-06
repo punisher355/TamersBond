@@ -1,0 +1,61 @@
+{
+  "name": "Orochimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "SakeBreath",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Makes the opponent completely drunk by intoxicating them with its alcohol-laden breath."
+  },
+  "digivolves_from": [
+    "Allomon",
+    "Chrysalimon",
+    "Cyclomon",
+    "Deltamon",
+    "Dinohumon",
+    "Dokugumon",
+    "Ginryumon",
+    "Gorimon",
+    "Greymon",
+    "Greymon (Blue)",
+    "Growmon",
+    "Growmon (Orange)",
+    "Hi-Commandramon",
+    "Karatuki Numemon",
+    "Lighdramon",
+    "Stegomon",
+    "V-dramon (Black)",
+    "XV-mon",
+    "XV-mon (Black)"
+  ],
+  "digivolves_to": [
+    "Bacchusmon",
+    "Cres Garurumon",
+    "Gundramon",
+    "Holydramon",
+    "Metal Etemon",
+    "Minervamon",
+    "Nidhoggmon",
+    "Shin Monzaemon",
+    "Xuanwumon",
+    "Imperialdramon: Dragon Mode",
+    "Imperialdramon: Fighter Mode"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A gigantic Demon Dragon Digimon which possesses eight heads. However, seven among its eight heads are dummies, and the black head in the middle is the only real one. The roots of Orochimon's creation are old, and although it was a being such that it raged in all its fury in the ancient Digital World , and drove some areas to devastation, it was sealed by the servant of a \"being\" which sought to preserve the harmony of the Digital World. Its Signature Move is to make the opponent completely drunk by intoxicating them with its alcohol-laden breath ( Sake Breath ). Its Special Move is turning the tip of its tail into a sharp blade and then cutting the opponent to pieces ( Ame no Murakumo ). Orochimon was adopted from a winning Digimon illustration entry in the \" Bandai-Town FAX Service Digimon Illustration Contest \" which belonged to Mr. Noritake Furuta from Niigata prefecture ."
+}

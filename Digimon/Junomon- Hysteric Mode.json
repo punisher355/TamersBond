@@ -1,0 +1,31 @@
+{
+  "name": "Junomon: Hysteric Mode",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 11,
+    "FRD": 12,
+    "LVE": 17,
+    "KNW": 11,
+    "SNC": 18,
+    "RLB": 18
+  },
+  "signature_move": {
+    "name": "Welcome Lost",
+    "element": "Neutral",
+    "pr": 15,
+    "tags": "[MELEE]",
+    "description": "Continuously stabs the opponent with the lances on both its arms, destroying their life-force."
+  },
+  "digivolves_from": [
+    "Junomon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Another form of Junomon , it was an evil personality sleeping within the innermost depths of its heart, but was awakened. The forces opposing its beloved Jupitermon are never-ending, and if their time together diminishes, it begins drowning in the darkness of its jealousy. Its vitality gradually drains from its countenance, and when it is entirely filled with darkness, a mask of another face manifests. The surrounding Digimon that it sees through this mask are all perceived as evil, so it runs the whole gamut of slaughter. However, this form is never noticed by Jupitermon, so it never suffers the judgment of good and evil. Its Special Moves are continuously stabbing the opponent with the lances on both its arms, destroying their life-force ( Welcome Lost ), and crushing the enemies it captures with the chains covering its whole body after they spit out words of confession ( Lingrudge ). Its \" Liar Banishment \" causes a hologram of Jupitermon to appear, and enemies that lay their eyes upon it are vaporized in an instant.",
+  "web_created": true
+}

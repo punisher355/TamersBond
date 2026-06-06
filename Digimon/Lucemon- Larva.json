@@ -1,0 +1,31 @@
+{
+  "name": "Lucemon: Larva",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Light",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 12,
+    "LVE": 15,
+    "KNW": 12,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Divine Atonement",
+    "element": "Light",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Summons a pillar of evil energy to attack the enemy."
+  },
+  "digivolves_from": [
+    "Lucemon: Falldown Mode"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The true form of Lucemon which operates Satan Mode as its shadow. It hides itself within the orb of darkness carried by Satan Mode, \" Gehenna \", and its existence is said to be the epitome of Lucemon 's evil will.",
+  "web_created": true
+}

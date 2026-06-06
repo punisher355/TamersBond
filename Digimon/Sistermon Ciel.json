@@ -1,0 +1,38 @@
+{
+  "name": "Sistermon Ciel",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Shirotsume Ichimonji-giri",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Cuts down the enemy without making a sound by using its cherished swordShirotsume-Ichimonji."
+  },
+  "digivolves_from": [
+    "Dracumon",
+    "Lunamon",
+    "Sistermon Blanc"
+  ],
+  "digivolves_to": [
+    "Cho·Hakkaimon",
+    "Lady Devimon",
+    "Pandamon",
+    "Sistermon Ciel (Awake)"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon wearing a veil modeled after a mouse, it is Sistermon Blanc 's elder sister as well as the twin sister of Noir . Instead of traveling together with Noir and Blanc, it roams around the Digital World investigating unusual phenomena and reports its findings to Gankoomon . Despite its gentle personality, it is strong-willed and popular with the Digimon residing in the places it visits. While it is friendly and leads a peaceful life by day, by night it turns into an assassin who hunts down any troublemakers it receives word of. It has a cherished sword named Shirotsume-Ichimonji , and its Signature Move is cutting down the enemy without making a sound ( Shirotsume-Ichimonji-giri ). Not only that, it also utilizes various assassination techniques such as rapid-throwing the two knives it hides within its sleeves ( Byakusai ), and luring the enemy in until they let their guard down, then stabbing them in their vitals at close range using the knives planted on its feet ( Tohhou ).",
+  "web_created": true
+}

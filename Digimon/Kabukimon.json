@@ -1,0 +1,35 @@
+{
+  "name": "Kabukimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Sakura Fubuki",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Violently sweeps the back of its head, then emits a blinding, stinging light from the faces on its hands that knocks out the opponent while they're fascinated by the beauty of that storm of petals."
+  },
+  "digivolves_from": [
+    "Plotmon",
+    "Shamamon"
+  ],
+  "digivolves_to": [
+    "Doumon",
+    "Jyureimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Mutation Digimon that evolved through the power of the \" Digimental of Purity \". It has large flowers blooming from its head and hands, and walks on two feet. It normally absorbs nutrients by planting both feet firmly into the ground while squatting to cut a mie . It dislikes being under the sun, which is unusual for a Plant-species; instead, it usually prefers to hide in the shadows, but it also loves artificially illuminated spaces. It is characterized by its peculiar appearance and actions, which tend to draw attention to it, and its behaviour is both bizarre yet extravagant. When it comes to battle, its colourful motions and the way it cuts a mie —as if knowing how exactly to steal the spotlight—display such beauty to make even its adversaries momentarily falter. Its Special Moves are captivating the enemy with a beautiful blizzard of petals blowing from the back of its head, then emitting a blinding, stinging light from the faces on its hands to knock the enemy out while they are still entranced ( Sakura Fubuki ), and drawing circles with its head to generate centrifugal force that tapers and sharpens the petals on its head, which it then thrusts into the enemy like shuriken ( Renjishi ).",
+  "web_created": true
+}

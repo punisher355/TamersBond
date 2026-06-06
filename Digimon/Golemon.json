@@ -1,0 +1,60 @@
+{
+  "name": "Golemon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 5,
+    "LVE": 7,
+    "KNW": 6,
+    "SNC": 7,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Curse Crimson",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Fires super-heated gases from the small stacks on its back or from its mouth."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon (Black)",
+    "Armadimon",
+    "Bakumon",
+    "Bearmon",
+    "Betamon",
+    "Goburimon",
+    "Gottsumon",
+    "Hagurumon",
+    "Muchomon",
+    "Piyomon",
+    "Plotmon",
+    "Solarmon",
+    "Sunarizamon"
+  ],
+  "digivolves_to": [
+    "Giromon",
+    "Gogmamon",
+    "Insekimon",
+    "Knightmon",
+    "Lady Devimon",
+    "Mammon",
+    "Metal Greymon",
+    "Metal Greymon (Virus)",
+    "Metal Tyranomon",
+    "Pandamon",
+    "Pumpmon",
+    "Triceramon",
+    "Volcamon",
+    "Vulturemon",
+    "Zudomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Rock/Mineral Digimon that was discovered from the digital analysis of an ancient curse. Ancient, forbidden incantations spelling \"plague\", \"curse\", and \"misfortune\" are carved onto its back, and it seems those incantations protect it from the gas that it emits. About 90% of its body is composed of rock data, and it survives by fastening its arms and legs. It is an emotionless Digimon that will not take action without being ordered to."
+}

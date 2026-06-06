@@ -1,0 +1,51 @@
+{
+  "name": "Octmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 6,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Kaimei Bokujū",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Shoots a bullet packed with potently toxic ink."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Ganimon",
+    "Gomamon",
+    "Kamemon",
+    "Keramon",
+    "Kokuwamon",
+    "Otamamon",
+    "Penmon",
+    "Sangomon",
+    "Shakomon"
+  ],
+  "digivolves_to": [
+    "Asuramon",
+    "Brachimon",
+    "Dagomon",
+    "Digitamamon",
+    "Hangyomon",
+    "Marin Chimairamon",
+    "Marin Devimon",
+    "Mega Seadramon",
+    "Tonosama Gekomon",
+    "Vamdemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Mollusk Digimon that was discovered from the virus used by a fiendish hacker to crash a rival's research computer. It has a nasty habit of collecting things; the tips of its tentacles are affixed with claws obtained from a Devidramon 's data, and it is clad throughout with Digi-Treasure which it gathered from the bottom of the Net Ocean . Fujitsumon , a kind of tiny Shellfish-type Digimon, cling to the pot it wears on its head. These Fujitsumon develop their senses, and it is thought that they have formed a symbiotic relationship so that if they sense danger they inform Octmon. Its Special Move is shooting a bullet packed with potently toxic ink ( Kaimei Bokujū )."
+}

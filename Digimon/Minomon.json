@@ -1,0 +1,36 @@
+{
+  "name": "Minomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Throws a hard, pinecone-shaped object at the enemy."
+  },
+  "digivolves_from": [
+    "Leafmon"
+  ],
+  "digivolves_to": [
+    "Kokuwamon",
+    "Kunemon",
+    "Tentomon",
+    "Wormmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon that is an evolution of Leafmon , and went into a tough outer shell. On days with good weather, or when it's in a good mood, it sticks its face out of its shell and vegetates. It hangs onto high places with the ivy (hair?) growing from its head, and moves by hanging onto large Digimon, but if it's over a short distance, it is also able to move by floating through the air. Due to its vegetative personality, it has a fault of not easily showing its emotions on its face. Also, as solitude is its \"specialty\", it has the inner fortitude to not be discouraged even if it gets worried and anxious. Its Special Move is throwing a hard, pine cone-shaped substance ( Pinecone )."
+}

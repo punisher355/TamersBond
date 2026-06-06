@@ -1,0 +1,38 @@
+{
+  "name": "Tyrant Kabuterimon",
+  "stage": "Mega II",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 17,
+    "FRD": 14,
+    "LVE": 11,
+    "KNW": 18,
+    "SNC": 13,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Shine of Bee",
+    "element": "Neutral",
+    "pr": 15,
+    "tags": "[MELEE] [BURST 4] [BURN 2,1]",
+    "description": "Unleashes an unblockable incandescent explosion from its entire body that instantly reduces all its opponents to ash."
+  },
+  "digivolves_from": [
+    "Ancient Beatmon",
+    "Bancho Stingmon",
+    "Gran Kuwagamon",
+    "Grandis Kuwagamon",
+    "Herakle Kabuterimon",
+    "Queenbeemon",
+    "Shivamon",
+    "Tiger Vespamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "The \" King of Bugs \" which governs all Insect Digimon. Its stronghold, the \" Under Forest \", exists deep underneath the darkest forest, and it is said that it only moves at night. It is able to manipulate every Insect Digimon at will, so it almost never fights in person. Due to the high density Chrome Digizoid which compose its shell, it is thought to be impossible for ordinary Digimon to even scratch it. The red-hot explosion which it emits from its entire body ( Shine of Bee ) is impossible to defend against, and instantly reduces all of its opponents to ash. Also, its \" Bee Cyclone \" summons all of its insect followers, to construct an impenetrable wall of bugs.",
+  "web_created": true
+}

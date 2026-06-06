@@ -1,0 +1,31 @@
+{
+  "name": "Sistermon Noir (Awake)",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Mickey Bullet (Satoru)",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "A more powerful version ofMickey Bullet."
+  },
+  "digivolves_from": [
+    "Sistermon Noir"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "Another form of Sistermon Noir . Wearing the wimple on its head causes the Holy Stigma to appear on its chest, awakening its power. Its keenness has risen due the feral power drawn out by its awakening, and it brings down the enemy with a stooped-over stance.",
+  "web_created": true
+}

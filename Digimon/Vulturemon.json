@@ -1,0 +1,35 @@
+{
+  "name": "Vulturemon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 11,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Reaper Strike",
+    "element": "Neutral",
+    "pr": 9,
+    "tags": "[MELEE]",
+    "description": "Shoots at the opponent's vitals with theCND-96rifle on its right arm."
+  },
+  "digivolves_from": [
+    "Golemon",
+    "Togemon"
+  ],
+  "digivolves_to": [
+    "Dinorexmon",
+    "Pharaohmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Digimon whose cruelty is unrivaled, it prioritizes its own interests above all else. Feared as the \" Reaper of Dust \", it has excellent eyesight such that it can snipe its targets even in sandstorms. It wears its camouflage cloak in open areas to hide itself, and waits for an opportunity to arise. Then, it quietly brings down the enemy using the outstanding silencing performance of its \" CND-96 \" rifle, which fires compressed sand. Its Special Moves are shooting at the opponent's vitals with the CND-96 on its right arm ( Reaper Strike ), and tearing them to pieces with the scythe attached to the CND-96 ( Desert Deathscythe ). When cornered by masses of enemies, it turns the tables against them with its \" Wither Wing \", in which it shoots out hordes of condors made of sand."
+}

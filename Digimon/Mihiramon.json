@@ -1,0 +1,46 @@
+{
+  "name": "Mihiramon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 9,
+    "LVE": 11,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Vimohana",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Strikes the ground with itsBǎo Bànggenerating a shock wave over the surrounding area."
+  },
+  "digivolves_from": [
+    "Birdramon",
+    "Bitmon",
+    "Garurumon",
+    "Growmon (Orange)",
+    "Hanumon",
+    "Holsmon",
+    "Lynxmon",
+    "Siesamon"
+  ],
+  "digivolves_to": [
+    "Baihumon",
+    "Beelzebumon",
+    "Dukemon",
+    "Hououmon",
+    "Qinglongmon",
+    "Xuanwumon",
+    "Zhuqiaomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "One of the \" Deva Digimon\", it is a Perfect Digimon with a form resembling the Tiger . As a follower of the Four Holy Beasts Digimon Qinglongmon , it is the biggest ruffian among the Deva, though it is also a brilliant tactician that specializes in reading the terrain. With its tremendous speed, faster than the wind when racing across the land and quicker than a sound when soaring through the sky on its two wings, it runs down the opponent. In battle, it cuts the opponent apart with its sharp fangs and claws, and it has mastered the \" Bǎo Bàng \", which is its tail transformed into an octagonal three-section staff . Its Special Move is striking the ground with the Bǎo Bàng , generating a shock wave over the surrounding area ( Vimohana )."
+}

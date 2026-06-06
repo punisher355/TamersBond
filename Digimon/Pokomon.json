@@ -1,0 +1,33 @@
+{
+  "name": "Pokomon",
+  "stage": "In-Training",
+  "attribute": "Free",
+  "element": "Neutral",
+  "archetype": "Baby II",
+  "size": "Small",
+  "stats": {
+    "CRG": 1,
+    "FRD": 1,
+    "LVE": 1,
+    "KNW": 1,
+    "SNC": 1,
+    "RLB": 1
+  },
+  "signature_move": {
+    "name": "Baby Bubble",
+    "element": "Neutral",
+    "pr": 1,
+    "tags": "[RANGE 4]",
+    "description": "Transforms into a stone and releases a poisonous gas."
+  },
+  "digivolves_from": [
+    "Relemon"
+  ],
+  "digivolves_to": [
+    "Renamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A nocturnal Baby Digimon that evolved from Relemon . Due to it only acting in the evening and on moonlit nights, it is said that its existence is close to an illusion. For that reason, it confers a kind of status among Tamers to raise a Pokomon. It will grow into an extremely heartening Digimon depending on how it was raised. It always acts to avoid public notice, and although it is difficult to capture Pokomon, who is swift and speedy despite its appearance, it will show up without thinking if you set out its favorite food of fried tofu. Its Special Move is changing into a stone that spouts a toxic gas ( Sesshou-seki )."
+}

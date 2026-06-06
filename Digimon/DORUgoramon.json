@@ -1,0 +1,38 @@
+{
+  "name": "DORUgoramon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Brave Metal",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Puts its body and soul into a terrifying assault on the enemy consisting of both melee attacks and a blast of flame."
+  },
+  "digivolves_from": [
+    "Aero V-dramon",
+    "Death-X-DORUguremon",
+    "Gigadramon",
+    "Grademon",
+    "Paildramon",
+    "Mega Seadramon"
+  ],
+  "digivolves_to": [
+    "Huanglongmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "DORUgoramon is an imaginary Digimon born from the \"Daydream of a Digicore \". It is a form that had even the Digicore's own creativity miraculously released through the Interface on its brow, and evolved. Possibly because it naturally possessed the potent life-force data of the legendary beast, the \"Dragon\", within its Digicore, the form created by its Digicore is a mighty avatar of \"Destruction\", and is an incarnation of the \" Ultimate Enemy \". Its Special Moves are putting its body and soul into a terrifying assault ( Brave Metal ), and releasing a destructive shock wave ( DORU Din )."
+}

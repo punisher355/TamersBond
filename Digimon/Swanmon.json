@@ -1,0 +1,42 @@
+{
+  "name": "Swanmon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 6,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "DownTornado",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Spreads its wings, and engulfs the opponent in an intensely whirling cold wind and feathers, tearing them apart with its sharp-pointed feathers."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Hawkmon",
+    "Muchomon",
+    "Patamon",
+    "Penmon",
+    "Piyomon",
+    "Plotmon"
+  ],
+  "digivolves_to": [
+    "Holy Angemon",
+    "Makuramon",
+    "Sinduramon",
+    "Superstarmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Bird Digimon that evolved through the power of the \" Digimental of Love \". The appearance of its white body, long neck and wings spread out is divine. It has a habit of preferring to live in cold regions, and it is said that when Swanmon passes through the Network , computers \" Freeze \". It used to be a species that behaved in bevies, but lately it often acts alone. Although the cause is unknown, it is said that a rise in atmospheric temperature within the Digital World may be the reason. Its Special Move is \" Down Tornado \". It spreads its wings, and engulfs the opponent in an intensely whirling cold wind and feathers, tearing them apart with its sharp-pointed feathers.",
+  "web_created": true
+}

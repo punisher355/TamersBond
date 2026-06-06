@@ -1,0 +1,42 @@
+{
+  "name": "Gladimon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 4,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Wheel Rush",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Performs a spinning slash with the rapiers in its hands."
+  },
+  "digivolves_from": [
+    "Bearmon",
+    "Kotemon",
+    "Otamamon",
+    "Terriermon",
+    "V-mon"
+  ],
+  "digivolves_to": [
+    "Knightmon",
+    "Mametyramon",
+    "Metal Mamemon",
+    "Mummymon",
+    "Mistymon",
+    "Volcamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A novice Warrior Digimon that is active on the front line s of the battlefield. It moves quickly due to having a small physique and being lightly equipped, and cuts its way into enemy lines as a scout. It also specializes in tactics where it creates formations in collaboration with its comrades, so its combat ability when in a platoon is high as well. It is said that only those who continue to win on the battlefield evolve into great warriors. Its Special Moves are performing a spinning slash with the rapiers in its hands ( Wheel Rush ), and mincing the enemy with its long arms as if it were dancing ( Sword Dancer )."
+}

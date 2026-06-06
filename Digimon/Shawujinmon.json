@@ -1,0 +1,56 @@
+{
+  "name": "Shawujinmon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 11,
+    "FRD": 7,
+    "LVE": 7,
+    "KNW": 10,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Kouyoujou: Kamon no Jin",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Raises a waterspout by freely spinning its astonishing super-heavyweight class \"Kouyoujou\" staff."
+  },
+  "digivolves_from": [
+    "Bakemon",
+    "Dinohumon",
+    "Gaogamon",
+    "Geo Greymon",
+    "Hookmon",
+    "Karatuki Numemon",
+    "Numemon",
+    "Peckmon",
+    "Reppamon",
+    "Starmon",
+    "Tylomon",
+    "Wendimon",
+    "Whamon",
+    "Shooting Starmon"
+  ],
+  "digivolves_to": [
+    "Barbamon",
+    "El Doradimon",
+    "Metal Garurumon",
+    "Metal Seadramon",
+    "Mirage Gaogamon",
+    "Pinochimon",
+    "Ravmon",
+    "Shine Greymon",
+    "Sleipmon",
+    "Surfimon",
+    "Vikemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Man Digimon banished from the Digital World 's heaven. Although it is a calm and collected Digimon, it is said that a certain Digicore was sealed among the nine beads of its necklace, and if even one bead is lost it will be transformed once again into a terrifying Digimon. Its Special Moves are raising a waterspout by freely spinning its astonishing super-heavyweight class \" Kouyoujou \" staff ( Kouyoujou: Kamon no Jin ), and striking the ground with its staff to shatter it and release a raging current ( Kouyoujou: Taki no Jin ). Also, for close combat it can stab with the crescent-moon shaped blade ( Getsugazan )."
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Zamielmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 7,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 9,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Snipe Headshot",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[RANGE 8] [TRUE]",
+    "description": "Shoots an arrow through the opponent's head."
+  },
+  "digivolves_from": [
+    "Arbormon",
+    "Zassoumon"
+  ],
+  "digivolves_to": [],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "The general of the Wood-spirit Army of the \" Big Death-Stars \". It has dominion over many Fairy and Plant Digimon which are able to blend in with the land of meadows and forests to camouflage themselves. It goes forward with things in a calm and collected manner, and in surprise attacks, pincer attacks, exterminations, feints, blitzes, guerrilla attacks, or any other tactic it pleases, it directs its army to make the extermination of its enemies successful. As enabling such a strategy definitely needs strict iron discipline, it possesses enough of a cool head that in situations where its subordinates throw its movements out of order, it snipes from anywhere to deal with it. No matter what the strategy is, its own actions are considered to hold the key to success, so it shoots through the opponent's head with its \" Snipe Headshot \" while rushing about the battlefield. Its body is trained in various techniques, and it freely draws the techniques out in order to fire arrows from its hands with its \" Arrow Lance \", slash with its \" Bow Cutter \" that uses the bow on the side of its abdomen as a blade, and trick-fire with its \" Foot Shot \" that it prepared in its feet. Even if it is surrounded by a group, it slashes at its neighbors with its \" Turbulence Arrow \", then fires arrows into the distance and shoots the opponents dead with its random firing, without missing a single shot. When facing formidable and gigantic opponents, it deals with them using its \" The World Shot \", a bold move that concentrates energy into the gigantic \" Indra \" arrow that is set on its abdomen, then pierces it into the opponent's core.",
+  "web_created": true
+}

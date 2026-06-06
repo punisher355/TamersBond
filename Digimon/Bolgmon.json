@@ -1,0 +1,35 @@
+{
+  "name": "Bolgmon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 8,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 9,
+    "SNC": 10,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "Ultimate Thunder",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Collects and then fires all of its electrical energy from both its arms."
+  },
+  "digivolves_from": [
+    "Thunderballmon",
+    "Blitzmon"
+  ],
+  "digivolves_to": [
+    "Grandis Kuwagamon",
+    "Saint Galgomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Digimon that possesses power over Thunder which bears the might of one of the legendary Ten Warriors . It has a cautious and prudent personality because it was discovered in a defense system created in reference to the Scarab treasure chamber in the deepest part of a pyramid . During battle, it patiently serves as a shield for its comrades using its sturdy armor and endures the opponent's attacks, but if it reaches its critical point it will go on an intense offensive with all of its gunports until even the opponent's form is reduced to nothing. Because its heavy weight lowers its mobility, it is basically the one in charge of logistical support. However, in close-range battles it obliterates the opponent with its various armaments. Its Special Moves are collecting and then firing all of its energy from both of its arms ( Ultimate Thunder ), and firing an extremely high-speed positron laser from its head-turret ( Field Destroyer ).",
+  "web_created": true
+}

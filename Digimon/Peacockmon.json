@@ -1,0 +1,39 @@
+{
+  "name": "Peacockmon",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 5,
+    "LVE": 8,
+    "KNW": 6,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Rainbow Shower",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]",
+    "description": "Radiates a beam from its laser wings that burns the opponent to cinders."
+  },
+  "digivolves_from": [
+    "Bokomon",
+    "Piyomon",
+    "Toy Agumon"
+  ],
+  "digivolves_to": [
+    "Aero V-dramon",
+    "Cyberdramon",
+    "Garudamon",
+    "Lilimon",
+    "Megadramon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "An Armor-level Machine Digimon that evolved through the power of the \" Digimental of Miracles \". When certain Bird Digimon perform normal evolution, they have the potential to become Delumon , but there are rare cases where they evolve into Peacockmon using the Digimental of Miracles. Its body is made of blue metallic Chrome Digizoid , and it is able to fly at extremely high speeds by producing laser-shaped wings from portions of both of its arms. Its Special Move is a unique beam radiated from its laser wings ( Rainbow Shower ). If you suffer this attack, your whole body will be burned to cinders.",
+  "web_created": true
+}

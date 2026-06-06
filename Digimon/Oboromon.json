@@ -1,0 +1,37 @@
+{
+  "name": "Oboromon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Chiyorozu-no-tachi",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "A slash attack from its blade."
+  },
+  "digivolves_from": [
+    "Dokugumon",
+    "Ginryumon",
+    "Musyamon",
+    "Zubaeagermon"
+  ],
+  "digivolves_to": [
+    "Ouryumon",
+    "Zanbamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Undead Digimon that lives in graveyards like a ghost, it is a berserker that fights by any means necessary without ever backing down against superior opponents. It is thought that the reason it has an unusually intense obsession with victory is because it has taken in a large amount of hatred data from the Digimon it has defeated. On the other hand, it has virtually no sense of self, and when it isn't fighting, it wanders around graveyards sluggishly, and has occasionally been seen conversing suspiciously with the beast skull fused to its left arm. Although the blade protruding from the skull is brittle and breaks easily, it has the characteristic of regenerating over and over again each time it breaks. Its Special Moves are a slash attack from its blade ( Chiyorozu-no-tachi ), and detaching its onibi lower body to burn a vast area with flames ( Rashōmon ). Also, in addition to changing shape freely, the \" Yūgen \" scarf around its neck is capable of operating independently. It has versatile functions such as wrapping around and capturing the enemy, or striking them hard with the whole of the cloth."
+}

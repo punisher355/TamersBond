@@ -1,0 +1,40 @@
+{
+  "name": "Pawn Chessmon (White)",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Medium",
+  "stats": {
+    "CRG": 2,
+    "FRD": 2,
+    "LVE": 5,
+    "KNW": 2,
+    "SNC": 5,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Pawn Buckler",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE] [RUSH]",
+    "description": "Charges with its buckler held up."
+  },
+  "digivolves_from": [
+    "Budmon"
+  ],
+  "digivolves_to": [
+    "Angemon",
+    "Gold V-dramon",
+    "Hookmon",
+    "Knight Chessmon (Black)",
+    "Knight Chessmon (White)",
+    "Platinum Scumon",
+    "Revolmon",
+    "Starmon"
+  ],
+  "needs_review": false,
+  "review_notes": "automation",
+  "description": "A Puppet Digimon that was born from data leaking out of a chess game supercomputer. Its power is weak, but it is promoted when it strives for prominence, and it is an ordinary pawn that conceals the mystery that it is said to possess Ultimate-class power. Its catchphrase is, \"I only advance!\" It considers its fellows who are striving for prominence ahead of it to be its rivals. Its Special Moves are stabbing with its spear ( Pawn Spear ), and charging with its buckler held up ( Pawn Buckler ). Also, when it procures rear support from its comrades, it can use a special formation that can halt the attacks of even a Perfect-class Digimon ( Pyramid Formation ).",
+  "web_created": true
+}

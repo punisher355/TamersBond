@@ -1,0 +1,38 @@
+{
+  "name": "Grand Locomon",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 15,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 15,
+    "SNC": 14,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Destroyed Crash",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "12Crashes into the opponent with its spiked wheel at speed.Turns the wheel into a spiked ball and fires it at the enemy in segments."
+  },
+  "digivolves_from": [
+    "Atlur Ballistamon",
+    "Big Mamemon",
+    "Cannonbeemon",
+    "Gigadramon",
+    "Loader Leomon",
+    "Locomon",
+    "Master Blimpmon",
+    "Nanomon (Digimon)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Ultimate Vehicle-species Digimon that evolved from Locomon . It broke through the limits on the speeds sought by Locomon, and so it rushes about within the Network at super-speeds. It has an extremely strong competitive spirit and the personality of reckless types, and since its power is also incomparable, those who suffer Grand Locomon's assault are smashed to smithereens. Although Locomon was not able to run when there wasn’t any rails, when Grand Locomon is in a place where there aren't any rails, it is able to just produce rails to run on itself. Its Special Move is crashing into the opponent with its spiked wheel at speed ( Destroyed Crash )."
+}

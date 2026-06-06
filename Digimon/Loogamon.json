@@ -1,0 +1,40 @@
+{
+  "name": "Loogamon",
+  "stage": "Rookie",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 3,
+    "LVE": 2,
+    "KNW": 4,
+    "SNC": 5,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Howling Fire",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Shoots flames imbued with magical power from its mouth"
+  },
+  "digivolves_from": [
+    "Bowmon",
+    "Peti Meramon"
+  ],
+  "digivolves_to": [
+    "Bakemon",
+    "Dokugumon",
+    "Filmon",
+    "Hanumon",
+    "Loogarmon",
+    "Snatchmon",
+    "Tyranomon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Beast Digimon that is, because of the outdated Interface on its brow, presumed to be an experimental \" Prototype Digimon \" from before Digimon were discovered. It is said that the data of the warg from real-world mythology is embedded within the deepest parts of its Digicore , and it exhibits behavior so violent you would not expect it from a Child. It may look like a cute puppy at first glance, but those who approach it carelessly will find themselves on the receiving end of a fierce counterattack. Its nature is such that it will recognize those who can control it as its master, and despite being difficult to tame, it can become a reliable companion if one is able to build a relationship of trust with it. Its Special Moves are shooting flames imbued with magical power from its mouth ( Howling Fire ), and biting with its sharp fangs as it spins ( Spiral Bite )."
+}

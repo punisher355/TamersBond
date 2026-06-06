@@ -1,0 +1,35 @@
+{
+  "name": "Susanoomon",
+  "stage": "Mega II",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 18,
+    "LVE": 11,
+    "KNW": 16,
+    "SNC": 18,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Yakusa-no-Ikazuchi",
+    "element": "Light",
+    "pr": 14,
+    "tags": "[MELEE] [BLAST 3]",
+    "description": "12PointsZERO-ARMS: Orochi's sword of light at the heavens, which rain incessant lightning bolts.Summons a spiraling thundercloud from which eight dragons of lightning emerge to attack the enemy."
+  },
+  "digivolves_from": [
+    "Ancient Garurumon",
+    "Ancient Greymon",
+    "Gaioumon",
+    "Kaiser Greymon",
+    "Magna Garurumon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Told of in Oriental legends, it is the strongest destructive god and the god which governs over regeneration. It is told that when the Network System descends into chaos, it will erase the existing system, and create a new one. Its Special Moves are slicing and stabbing everything in the world with the sword of light emanated from the \" ZERO-ARMS: Orochi \" ( Ama-no-Habakiri ), and an ultimate technique in which it points the sword of light (emanated from the ZERO-ARMS: Orochi ) at the heavens, which then rain incessant bolts of lightning upon the ground ( Yakusa-no-Ikazuchi )."
+}

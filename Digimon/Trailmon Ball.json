@@ -1,0 +1,33 @@
+{
+  "name": "Trailmon Ball",
+  "stage": "Champion",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 4,
+    "SNC": 7,
+    "RLB": 8
+  },
+  "signature_move": {
+    "name": "Cool Running",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Hagurumon",
+    "Solarmon",
+    "Toy Agumon",
+    "Toy Agumon (Black)"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "\"Diginorimon\": A type of Trailmon that traverses the deserts of the Digital World. Takuya and his friends were riding with seven other people, instead of the one person normally permitted on board. The seats are cramped, and Takuya and Kouji 's frustration is at an all-time high... Digimon Series Memorial Book: Digimon Animation Chronicle ⇨ English 「デジノリモン」：デジタルワールドの砂漠を横断するトレイルモンの一種。本来は１人乗りのところうを、拓也たちは７人で乗っていた。座席も狭いので、拓也と輝二の不満も最高潮に......。 デジモンシリーズ メモリアルブック デジモンアニメーションクロニクル"
+}

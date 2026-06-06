@@ -1,0 +1,41 @@
+{
+  "name": "Valdurmon",
+  "stage": "Mega",
+  "attribute": "Vaccine",
+  "element": "Light",
+  "archetype": "Support",
+  "size": "Huge",
+  "stats": {
+    "CRG": 10,
+    "FRD": 13,
+    "LVE": 13,
+    "KNW": 15,
+    "SNC": 11,
+    "RLB": 10
+  },
+  "signature_move": {
+    "name": "Purge Shine",
+    "element": "Light",
+    "pr": 12,
+    "tags": "[MELEE] [BURST 1]",
+    "description": ""
+  },
+  "digivolves_from": [
+    "Delumon",
+    "Garudamon",
+    "Hippogriffomon",
+    "Karatenmon",
+    "Mamemon",
+    "Paildramon",
+    "Skull Baluchimon",
+    "Wingdramon",
+    "SkullBaluchimon"
+  ],
+  "digivolves_to": [
+    "Chaosmon Valdur Arm"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A mythical Holy Bird Digimon that inhabits the stratosphere 40 km up in the sky. It possesses six gigantic wings, and when it spreads them to their widest its wingspan reaches as much as 30 m. According to legend it is the guardian of the sky, and it is told that it is an ancient Digimon that has existed since the creation of the Digital World . Valdurmon's feathers normally emit the holy light of its \" Purge Shine \", cladding its body in a barrier that 100% invalidates any attacks with an evil will. Its Special Move is amplifying the purifying light of \" Purge Shine \" to its maximum and emitting it ( Aurora Undulation ). This technique is said to have the power to pulverize even a star, and because it is emitted at the speed of light , it is nearly impossible to evade.",
+  "web_created": true
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Soulmon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Trickster",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 8,
+    "LVE": 4,
+    "KNW": 6,
+    "SNC": 8,
+    "RLB": 4
+  },
+  "signature_move": {
+    "name": "Necro Magic",
+    "element": "Neutral",
+    "pr": 7,
+    "tags": "[MELEE]",
+    "description": "Releases the souls of the dead upon the enemy as a stream of glowing particles, a swarm of bats, darkness, or a monstrous ghostly hand."
+  },
+  "digivolves_from": [
+    "Candmon",
+    "Dracumon",
+    "Gaomon",
+    "Keramon",
+    "Kokuwamon",
+    "Lalamon",
+    "Pico Devimon",
+    "Shamamon",
+    "Tukaimon"
+  ],
+  "digivolves_to": [
+    "Fantomon",
+    "Indaramon",
+    "Infermon",
+    "Lady Devimon",
+    "Metal Greymon (Virus)",
+    "Metal Fantomon",
+    "Mummymon",
+    "Vamdemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Ghost Digimon constructed from a cursed virus program. As it was a Bakemon that took in data of mages that appear in fantasy stories, the black hat it wears raises its magical power. Because of that, its attacks that make use of curses or magic are tremendously powerful. Its Special Move is releasing the souls of the dead upon the enemy ( Necro Magic )."
+}

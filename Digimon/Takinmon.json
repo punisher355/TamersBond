@@ -1,0 +1,36 @@
+{
+  "name": "Takinmon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 4,
+    "LVE": 3,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Mōchūkaku",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Charges into the opponent with its horns."
+  },
+  "digivolves_from": [
+    "Mococomon"
+  ],
+  "digivolves_to": [
+    "Hakubamon",
+    "Kinkakumon",
+    "Lianpumon",
+    "Turuiemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Beast Digimon that resides in mountainous regions, characterized by its golden fur and ox-like appearance. Its golden fur has traces of telekinetic energy, and is capable of protecting it from precipitous weather and attacks. It can generate telekinetic energy from its horns to levitate things like boulders, and on such occasions, its horns shine gold. Not only does it use its telekinesis for attacks, but also to clear mountain paths. It seems that it sometimes accidentally makes Gottsumon float, leading to disputes. Its Special Move is charging into the opponent with its horns ( Mōchūkaku ). Its \" Ganshōdan \", in which it uses its telekinesis to control and shoot boulders, is extremely difficult to completely defend against as the boulders home in telekinetically, even if they are dodged."
+}

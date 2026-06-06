@@ -1,0 +1,57 @@
+{
+  "name": "Mephismon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Berserker",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 8,
+    "LVE": 6,
+    "KNW": 10,
+    "SNC": 8,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Baromon",
+    "Black Growmon",
+    "Bomber Nanimon",
+    "Boogiemon",
+    "Devidramon",
+    "Devimon",
+    "Dinohumon",
+    "Duskmon",
+    "Evilmon",
+    "Gargomon",
+    "Kyubimon",
+    "Kyubimon (Silver)",
+    "Meramon",
+    "Ogremon",
+    "Orgemon",
+    "Porcupamon",
+    "Sangloupmon",
+    "Wendimon"
+  ],
+  "digivolves_to": [
+    "Belphemon: Rage Mode",
+    "Demon",
+    "Gran Kuwagamon",
+    "Grand Dracumon",
+    "Gulfmon",
+    "Marsmon",
+    "Metal Seadramon",
+    "Piemon",
+    "Sakuyamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Fallen Angel Digimon which has the appearance of a giant male goat. It is also a dark being born from the lingering thought-data of an Apocalymon that attempted to destroy all life. Like Apocalymon, its governing principle is the extermination of all life. It specializes in the black magic of the Dark-species, and its personality is endlessly cruel. However, it is highly intelligent, and is also a tactician. Its Signature Move \" Black Sabbath \" is a dark incantation in which it prays for a festival of death. Those who hear this spell will soon die. Its Special Move is generating a cloud of darkness which causes everything to decay ( Death Cloud )."
+}

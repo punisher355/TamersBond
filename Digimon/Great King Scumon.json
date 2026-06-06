@@ -1,0 +1,36 @@
+{
+  "name": "Great King Scumon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Speed",
+  "size": "Large",
+  "stats": {
+    "CRG": 10,
+    "FRD": 11,
+    "LVE": 6,
+    "KNW": 7,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Unchi Nage",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Throws poop."
+  },
+  "digivolves_from": [
+    "Platinum Scumon",
+    "Scumon",
+    "Targetmon"
+  ],
+  "digivolves_to": [
+    "King Etemon",
+    "Metal Etemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "The King of Scumon who rules over a landfill called \" Dust Kingdom \", its size is gargantuan. It wears something similar to a crown and is highly intelligent, and attacks with brute force in addition to throwing poop. Its Special Moves are a familiar cowardly technique ( Unchi Nage ), and falling swiftly after performing a high jump ( King Stamp ). The damage done both physically and mentally when suffering its \" King Stamp \" is said to be unfathomable."
+}

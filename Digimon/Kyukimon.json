@@ -1,0 +1,48 @@
+{
+  "name": "Kyukimon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 8,
+    "SNC": 7,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Blade Twister",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Creates a tornado around the enemy, and minces them with vacuum blades."
+  },
+  "digivolves_from": [
+    "Blade Kuwagamon",
+    "Dinohumon",
+    "Hanumon",
+    "Igamon",
+    "Kyubimon",
+    "Kyubimon (Silver)",
+    "Reppamon",
+    "Shurimon",
+    "Siesamon",
+    "Yaksamon",
+    "Youkomon"
+  ],
+  "digivolves_to": [
+    "Barbamon",
+    "Gokumon",
+    "Kuzuhamon",
+    "Mitamamon",
+    "Raijinmon",
+    "Slash Angemon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Bewitching Beast Digimon with an appearance resembling the \" Kamaitachi \", a legendary yōkai . The hairs that cover it from head to toe indiscriminately tear anything in its surroundings to pieces with their sharp edges, so it is truly a deadly weapon-like bladed beast. It is also fast, tearing its whole body to shreds as it raises a whirlwind. Its Special Moves are creating a tornado around the enemy, and mincing them with vacuum blades ( Blade Twister ), and shooting diamond-shaped seals from its brow ( Sanrensei )."
+}

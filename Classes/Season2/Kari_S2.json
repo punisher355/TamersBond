@@ -1,0 +1,56 @@
+{
+  "name": "Kari S2",
+  "season": 2,
+  "img": "Kari_S2.webp",
+  "abilities": [
+    {
+      "name": "Gentle Command",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Love rank 3",
+      "description": "Once per encounter as a Basic Action, choose one non-boss enemy Digimon within 4 spaces. Make a Tame check DN 13. On a success that Digimon skips their next turn entirely — not stunned, not confused, simply still. They felt something in her presence and could not move against it. On a failure nothing happens and the action is spent."
+    },
+    {
+      "name": "Steadying Presence",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Sincerity rank 3",
+      "description": "Once per session at the start of an encounter, all friendly Digimon on the field immediately remove all negative status effects before the first turn begins. You do not make noise. You do not make speeches. You simply being there makes everyone steadier."
+    },
+    {
+      "name": "Voice of Light",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Gentle Command, Love rank 4",
+      "description": "Gentle Command can now target two non-boss enemy Digimon in the same action — both must be within 4 spaces. Make one Tame check against both. If it succeeds both are affected. If it fails neither is. The reach of her presence is wider than anyone expects."
+    },
+    {
+      "name": "Anchor",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Steadying Presence, Sincerity rank 4",
+      "description": "Steadying Presence now also grants all friendly Digimon on the field resistance to Confuse and Blind status effects — if either would be applied they may immediately reroll the triggering effect with +3. Kari keeps people from coming apart. Quietly. Completely."
+    },
+    {
+      "name": "Still Waters",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Voice of Light, Love rank 5",
+      "description": "Once per session as your Basic Action, choose one enemy Digimon. Make a Tame check — on a success that Digimon becomes completely passive for 2 rounds. They do not attack, move, or use abilities. If the affected Digimon takes any damage during this time the effect ends immediately and they return to normal. At the end of the 2 rounds they also return to normal. Kari does not always need her partner to win a fight. Sometimes she just needs a moment."
+    },
+    {
+      "name": "Unshakeable",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Anchor, Sincerity rank 5",
+      "description": "Once per encounter as a Free Action off-turn when an allied Digimon would gain a negative status effect, you may spend 3 Hope to completely negate it. The effect never applies. This can be used on any allied Digimon within 6 spaces. You hold people together. You have always held people together."
+    },
+    {
+      "name": "Radiance",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Love rank 6 AND Sincerity rank 6",
+      "description": "Once per session as a Basic Action, activate Radiance. Every enemy Digimon within 6 spaces must make a Firewall check DN 15. On a failure they cannot target any allied Digimon until the start of your next turn — they may still move and act freely but any attack aimed at an ally automatically misses regardless of the roll. Boss Digimon make this check but are not immune to failure. The light does not ask permission."
+    }
+  ]
+}

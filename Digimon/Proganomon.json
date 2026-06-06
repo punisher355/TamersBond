@@ -1,0 +1,34 @@
+{
+  "name": "Proganomon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Large",
+  "stats": {
+    "CRG": 6,
+    "FRD": 6,
+    "LVE": 11,
+    "KNW": 6,
+    "SNC": 10,
+    "RLB": 11
+  },
+  "signature_move": {
+    "name": "Tricone Bit Demolisher",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]",
+    "description": "Uses its rapidly spinning claws to pulverize the opponent, along with their armor."
+  },
+  "digivolves_from": [
+    "Landramon"
+  ],
+  "digivolves_to": [
+    "Magneticdramon",
+    "Pyramidimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Mineral Digimon with a turtle-like appearance that primarily inhabits desert regions. It uses its drills and excavators to break through bedrock and move underground, but each time it does so, it triggers earthquakes, causing hollows in the ground and the ground to collapse. At night, it retracts its hind legs into its shell, and travels long distances by expelling the sand and gravel stored in its body in search of a safe place to sleep. Most of its shell, which makes up more than half the volume of its body, is comprised of mineral data, so whenever a Proganomon gets erased, only its shell remains like a fossil. Sand-dwelling Digimon sometimes take up residence in the left-behind shell. Its Special Moves are using its rapidly spinning claws to pulverize the opponent, along with their armor ( Tricone Bit Demolisher ), and firing the drills on its shell like missiles ( Drill Emission )."
+}

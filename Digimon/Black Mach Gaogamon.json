@@ -1,0 +1,33 @@
+{
+  "name": "Black Mach Gaogamon",
+  "stage": "Ultimate",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 9,
+    "KNW": 10,
+    "SNC": 6,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Howling Cannon",
+    "element": "Neutral",
+    "pr": 10,
+    "tags": "[MELEE]",
+    "description": "Unleashes an ultrasonic wave attack with its howl."
+  },
+  "digivolves_from": [
+    "Black Gaogamon"
+  ],
+  "digivolves_to": [
+    "Mirage Gaogamon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Cyborg Digimon that carries rocket engines with enormous propulsive power on its back. The sudden introduction of \" Black Digitron \" into its body resulted in it taking on this black form. Although it is now able to stay airborne for longer periods at a time, its maximum speed has decreased. Its Special Moves are circling the opponent with maximum thrust and unleashing an extremely high-speed barrage ( Gaoga Tornado ), and a blow of its fist boasting supreme impact strength ( Winning Knuckle ). Also, it can attack with the ultrasonic waves released in a single howl ( Howling Cannon ).",
+  "web_created": true
+}

@@ -1,0 +1,56 @@
+{
+  "name": "TK S2",
+  "season": 2,
+  "img": "Tk_S2.webp",
+  "abilities": [
+    {
+      "name": "Prepared This Time",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Hope pool 20+ (any crest rank 4+)",
+      "description": "At the start of each encounter before turns begin, you may spend 3 Hope to grant your Digimon temporary HP equal to your highest crest stat rank. You saw what unpreparedness cost last time. You planned for it."
+    },
+    {
+      "name": "Not Flinching",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Hope pool 20+ (any crest rank 4+)",
+      "description": "Once per encounter when your Digimon is targeted by an attack, you may spend 4 Hope to grant them +5 to their Reliability for that attack only. You have been in bad situations before. You know how to hold."
+    },
+    {
+      "name": "Rally Point",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Prepared This Time, Hope pool 25+",
+      "description": "Once per encounter as a Basic Action, choose one allied Digimon that is below half their max HP. They immediately restore HP equal to your Hope pool divided by 5, rounded down. You always know who needs it most."
+    },
+    {
+      "name": "Keep Going",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Not Flinching, Hope pool 25+",
+      "description": "Once per encounter when your Digimon would revert due to Hope running out, you may spend any amount of remaining Hope — even 0 — to delay the reversion by 1 round. This can only be used once per encounter. One more round. You always find one more round."
+    },
+    {
+      "name": "Light It Up",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Rally Point, Hope pool 30+",
+      "description": "Once per session at the start of your turn you may declare Light It Up. All allied Digimon immediately restore HP equal to your highest crest stat rank. All allied Tamers restore 5 Hope. This does not cost an action. Hope is not a resource TK hoards. It is something he gives away."
+    },
+    {
+      "name": "The Right Moment",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Keep Going, Hope pool 30+",
+      "description": "Once per session you may use your Free Action to hold your turn. At any point before your next turn begins you may interrupt any other character's action — ally or enemy — to act immediately. Move, use an item, digivolve, anything except attack. TK has learned when to wait and when to move."
+    },
+    {
+      "name": "Fortress",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Hope pool 40+",
+      "description": "Once per session at the start of your turn you may activate Fortress. While Fortress is active you pay Hope equal to your highest crest stat rank at the start of each of your turns instead of your normal maintenance cost — this covers your own Digimon's upkeep as well. All other allied Tamers pay half their normal per-turn Hope cost, rounded down, for as long as Fortress is active. Fortress ends when your Hope hits 0, when you choose to end it as a Free Action on your turn, or when the encounter ends. You carry the weight so nobody else has to."
+    }
+  ]
+}

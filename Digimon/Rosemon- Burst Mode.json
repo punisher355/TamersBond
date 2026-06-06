@@ -1,0 +1,31 @@
+{
+  "name": "Rosemon: Burst Mode",
+  "stage": "Mega",
+  "attribute": "Data",
+  "element": "Neutral",
+  "archetype": "Tank",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 10,
+    "SNC": 14,
+    "RLB": 14
+  },
+  "signature_move": {
+    "name": "Charité",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]",
+    "description": "Amplifies the aura of its mantle, gently wraps it around the opponent, and then annihilates them."
+  },
+  "digivolves_from": [
+    "Lilamon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Current Original ⇨ Japanese A Rosemon that has temporarily reached the limits of its abilities through Burst Evolution, it is a unique form which wears an aura of love and beauty. Its Special Moves are amplifying the aura of its mantle, gently wrapping it around the opponent, and then annihilating them ( Charité ), and releasing lasers of a blown kiss from its lips ( Aguichant Lèvres ). Also, it can shoot the \" Tiferets \" that it wears, jewels engraved with the symbol of love and beauty, at the opponent."
+}

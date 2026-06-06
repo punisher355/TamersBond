@@ -1,0 +1,62 @@
+{
+  "name": "Armadimon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Earth",
+  "archetype": "Berserker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 2,
+    "LVE": 3,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Scratch Beat",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Strikes the opponent with the elongated claws on its forelegs."
+  },
+  "digivolves_from": [
+    "Caprimon",
+    "Dorimon",
+    "Gummymon",
+    "Nyaromon",
+    "Tokomon",
+    "Upamon"
+  ],
+  "digivolves_to": [
+    "Angemon",
+    "Ankylomon",
+    "Aquilamon",
+    "Arbormon",
+    "Archelomon",
+    "Cyclomon",
+    "Dark Lizamon",
+    "Deltamon",
+    "Dokugumon",
+    "Geremon",
+    "Gold Numemon",
+    "Golemon",
+    "Gorimon",
+    "Hanumon",
+    "Meicoomon",
+    "Monochromon",
+    "Numemon",
+    "Scumon",
+    "Shellmon",
+    "Snimon",
+    "Tankmon",
+    "Thunderballmon",
+    "Togemon",
+    "Tortamon",
+    "Tuskmon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Mammal Digimon whose body is covered in a hard shell. It has a carefree, charming personality, but occasionally gets hurt if it gets carried away. Just like V-mon and the others, Armadimon is a descendant of an ancient species, so it is able to perform special Armor evolutions. Its Signature Move is striking the opponent with the elongated claws on its forelegs ( Scratch Beat ). Its Special Move is curling up its body and rushing the opponent ( Rolling Stone ).",
+  "web_created": true
+}

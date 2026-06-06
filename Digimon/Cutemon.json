@@ -1,0 +1,33 @@
+{
+  "name": "Cutemon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Medium",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 3,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 2
+  },
+  "signature_move": {
+    "name": "Kizunaol",
+    "element": "Neutral",
+    "pr": 3,
+    "tags": "[MELEE]",
+    "description": "Heals wounds with light from its hands."
+  },
+  "digivolves_from": [
+    "Pyocomon"
+  ],
+  "digivolves_to": [
+    "Unimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A mischievous and peppy but timid Fairy Digimon that lives in cold areas. Although they may look like large rabbit-ears, it has not ears, but a kind of sense organ with which it can sense the approach of other Digimon in no time. Thanks to this, it is extremely rare to catch sight of Cutemon, because it will immediately hide itself. If you do happen to catch sight of one, it is either a rare fortune, or Cutemon is mischievously luring you into a trap. Its trademark muffler is beyond imagination with its insulating properties, as it is very warm. If you are able to obtain one, you can call yourself lucky. It has the ability to heal wounds, and if it's in the vicinity of an injured Digimon, it will come closer, taking care not to be noticed, and heal that Digimon. Its scratches and cuts are already healed before it realizes what's going on, due to Cutemon's cute and mischievous nature."
+}

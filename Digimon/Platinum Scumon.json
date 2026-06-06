@@ -1,0 +1,47 @@
+{
+  "name": "Platinum Scumon",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Medium",
+  "stats": {
+    "CRG": 8,
+    "FRD": 5,
+    "LVE": 4,
+    "KNW": 8,
+    "SNC": 6,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Rare Metal Unchi",
+    "element": "Neutral",
+    "pr": 6,
+    "tags": "[RANGE 4] [PUSH]",
+    "description": "Flings metallic, shining poop at the enemy."
+  },
+  "digivolves_from": [
+    "Dokunemon",
+    "Hackmon",
+    "Hagurumon",
+    "Keramon",
+    "Otamamon",
+    "Palmon",
+    "Pawn Chessmon (Black)",
+    "Pawn Chessmon (White)",
+    "Tukaimon",
+    "Tyumon"
+  ],
+  "digivolves_to": [
+    "Catch Mamemon",
+    "Etemon",
+    "Great King Scumon",
+    "Mamemon",
+    "Metal Mamemon",
+    "Vademon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "A po*p-shaped Digimon that shines like platinum. It is a species of Scumon that absorbed the data of minor metals , giving it a luxurious appearance, but its abilities are at the same level as Scumon's. It appears to not have powered-up in any significant way. Its Special Move is flinging metallic, shining po*p at the enemy ( Rare Metal Unchi ).",
+  "web_created": true
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Grand Dracumon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Fortress",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 15,
+    "KNW": 9,
+    "SNC": 14,
+    "RLB": 15
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 11,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Astamon",
+    "Cerberumon",
+    "Chimairamon",
+    "Matadrmon",
+    "Mephismon",
+    "Phelesmon",
+    "Scorpiomon",
+    "Skull Satamon",
+    "Vamdemon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Demon Beast Digimon that is considered the king of vampire Digimon. It has kept a castle in the Dark Area since ancient times, and it boasts of such power that even the Seven Great Demon Lords cannot interfere with it. It has a gentlemanly demeanor, and because of the \"Charm\" effect within the voice Grand Dracumon exudes, there have been anecdotes that it has led many of the Angel Digimon who have come to subdue it into falling down . It is told that it possesses an undying body, and although it is said that it is connected to the details of how the Dark Area came to be within the Digital World, or that it knows the truth of the mysterious evolution, \" Death-X \", because it's not an easy feat to even reach its castle in the first place, it can only be said that questioning it about these mysteries would be extremely difficult. Its Special Moves are instantly transforming all of the opponents into ice crystals ( Crystal Revolution ), and an evil eye that imprisons within darkness the hearts of the opponents that gaze at it ( Eye of the Gorgon )."
+}

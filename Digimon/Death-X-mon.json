@@ -1,0 +1,30 @@
+{
+  "name": "Death-X-mon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Attacker",
+  "size": "Huge",
+  "stats": {
+    "CRG": 14,
+    "FRD": 9,
+    "LVE": 10,
+    "KNW": 15,
+    "SNC": 12,
+    "RLB": 13
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "DORUguremon"
+  ],
+  "digivolves_to": [],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "Since it doesn't have its own Digicore , this type of program cannot be classified as a Digimon, and although it appears solid, it has no actual substance. If it detects a Digicore it will absorb it into its body and disassemble it, then reassemble it in a perpetually repeating set of processes named \" Process 0 \" through \" Process F \". Although it is a simple program, it is conjectured that defeating it is within the realm of impossibility. Unless there are Digicores nearby, it will go into stasis, but as long as there are Digicores it will not cease."
+}

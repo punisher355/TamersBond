@@ -1,0 +1,46 @@
+{
+  "name": "Coredramon (Green)",
+  "stage": "Champion",
+  "attribute": "Virus",
+  "element": "Fire",
+  "archetype": "Tank",
+  "size": "Large",
+  "stats": {
+    "CRG": 5,
+    "FRD": 4,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 7,
+    "RLB": 6
+  },
+  "signature_move": {
+    "name": "Green Flare Breath",
+    "element": "Fire",
+    "pr": 7,
+    "tags": "[RANGE 4] [BURN 3,2]",
+    "description": "Breathes searing green-colored flame upon the target, which burns and saturates down to theDigicore."
+  },
+  "digivolves_from": [
+    "Agumon",
+    "Agumon Hakase",
+    "Coronamon",
+    "DORUmon",
+    "Dracomon",
+    "Goburimon",
+    "Guilmon",
+    "Ryudamon"
+  ],
+  "digivolves_to": [
+    "Black Megalo Growmon",
+    "Groundramon",
+    "Megalo Growmon",
+    "Mega Seadramon",
+    "Savior Hackmon",
+    "Skull Greymon",
+    "Triceramon",
+    "Wingdramon"
+  ],
+  "needs_review": false,
+  "review_notes": "",
+  "description": "Digimon bearing the name \" Dramon \" always have Dragon-factor data in their Digicore , and the higher the percentage of that data, the more the shape of their body resembles a Dragon-type; however, Coredramon's Dragon-factor data has reached 100%, so it is undoubtedly a pure-blooded Dragon Digimon. The green-skinned Coredramon is said to be the evolved form of a Dracomon that ingested large quantities of a rare gem called \" Green Malachite \", which is mined in dense woodland with trees over a century old. Although this type of Coredramon is not good at flying, it has highly developed leg strength, allowing it to run at speeds that are unimaginable from its physique. Its Special Moves are unleashing a scorching breath that shines green ( Green Flare Breath ), and using its powerful tail to deliver a painful blow to the opponent ( Strike Bomber ). \" Green Flare Breath \" is very highly penetrative, allowing it to pass through the body surface's texture data and inflict damage directly on the Digicore. Like Dracomon, it has a scale referred to as the \" Gekirin \"; if it is touched there, it loses its mind to an excess of anger and indiscriminately uses its \" G Shurunen-II \", in which it makes the horns on its head glow intensely, then fires a diffuse laser beam from its mouth."
+}

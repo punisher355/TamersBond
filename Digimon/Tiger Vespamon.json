@@ -1,0 +1,46 @@
+{
+  "name": "Tiger Vespamon",
+  "stage": "Mega",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Huge",
+  "stats": {
+    "CRG": 9,
+    "FRD": 9,
+    "LVE": 14,
+    "KNW": 14,
+    "SNC": 11,
+    "RLB": 9
+  },
+  "signature_move": {
+    "name": "Mach Stinger V",
+    "element": "Neutral",
+    "pr": 12,
+    "tags": "[MELEE]",
+    "description": "Stings the opponent with the twin blades,Royal Meister."
+  },
+  "digivolves_from": [
+    "Andromon",
+    "Cannonbeemon",
+    "Dinobeemon",
+    "Duramon",
+    "Eosmon (Perfect)",
+    "Grademon",
+    "Hisyaryumon",
+    "Jazarichmon",
+    "Jewelbeemon",
+    "Metal Fantomon",
+    "Okuwamon",
+    "Rapidmon Perfect",
+    "Savior Hackmon",
+    "Vespamon"
+  ],
+  "digivolves_to": [
+    "Tyrant Kabuterimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A Cyborg Digimon that defends the mysterious \"aerial, covert honey base, Royal Base \". Vespamon boasts an astounding degree of stamina that could not be imagined from its slight and thorny silhouette, and it never stops moving during combat. The best of the best, said to be the top 0.08%, are inducted into the \"covert honey corps, Royal Commando\", and awarded a codename. Its codename \" Tiger \" comes from the fact that it is by far the best in solo combat, and it wields twin blades shaped like tiger fangs, the \" covert honey arms , Royal Meister \". Its Special Move is stinging the opponent with the twin blades, Royal Meister ( Mach Stinger V ). [N 1]",
+  "web_created": true
+}

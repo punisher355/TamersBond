@@ -1,0 +1,43 @@
+{
+  "name": "Manbomon",
+  "stage": "Champion",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Support",
+  "size": "Large",
+  "stats": {
+    "CRG": 4,
+    "FRD": 7,
+    "LVE": 8,
+    "KNW": 5,
+    "SNC": 6,
+    "RLB": 5
+  },
+  "signature_move": {
+    "name": "Balloon Mine",
+    "element": "Neutral",
+    "pr": 5,
+    "tags": "[MELEE]",
+    "description": "Spews out a large amount of \"mini Manbomon-shaped bubbles\" from its mouth."
+  },
+  "digivolves_from": [
+    "Betamon",
+    "Gaomon",
+    "Gazimon",
+    "Gomamon",
+    "Guilmon",
+    "Jellymon",
+    "Otamamon",
+    "Bushi Agumon"
+  ],
+  "digivolves_to": [
+    "Giromon",
+    "Hangyomon",
+    "Rize Greymon",
+    "Thetismon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "An Armor-level Mutation Digimon that evolved through the power of the \" Digimental of Light \". It is an extremely rare Digimon that is seldom seen even in the Net Ocean . It usually moves about by drifting with the current near the water surface, but when battling an enemy, it moves at an astonishing speed using the propeller on its tail fin. It is said that the patterns on the surface of its body carry meaning, and that these patterns differ from individual to individual, but whether or not this is true cannot be ascertained due to how few sightings of it there are. Not only that, it is a precious species that produces antibodies against computer viruses within its body. Its Special Moves are spewing out a large amount of \"mini Manbomon-shaped bubbles\" from its mouth ( Balloon Mine ) and continuously pummeling the opponent with the gloves on both of its hands without distraction ( Global Glove )."
+}

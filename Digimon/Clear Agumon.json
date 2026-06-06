@@ -1,0 +1,59 @@
+{
+  "name": "Clear Agumon",
+  "stage": "Rookie",
+  "attribute": "Vaccine",
+  "element": "Neutral",
+  "archetype": "Mystic",
+  "size": "Medium",
+  "stats": {
+    "CRG": 3,
+    "FRD": 3,
+    "LVE": 4,
+    "KNW": 5,
+    "SNC": 3,
+    "RLB": 3
+  },
+  "signature_move": {
+    "name": "Precious Flare",
+    "element": "Neutral",
+    "pr": 4,
+    "tags": "[MELEE]",
+    "description": "12Spits out a toy flame.Random-fires flame-shaped toy missiles."
+  },
+  "digivolves_from": [
+    "Gummymon",
+    "Pukamon"
+  ],
+  "digivolves_to": [
+    "Angemon",
+    "Black Galgomon",
+    "Clockmon",
+    "Dark Tyranomon",
+    "Dogmon",
+    "Flare Lizamon",
+    "Geo Greymon",
+    "Geremon",
+    "Greymon",
+    "Greymon (Blue)",
+    "Growmon (Orange)",
+    "Guardromon",
+    "Guardromon (Gold)",
+    "Hyougamon",
+    "Ice Devimon",
+    "Igamon",
+    "Numemon",
+    "Pidmon",
+    "Revolmon",
+    "Rinkmon",
+    "Scumon",
+    "Shima Unimon",
+    "Tankmon",
+    "Tortamon",
+    "V-dramon",
+    "XV-mon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "description": "A subspecies of Toy Agumon whose whole body is made up of unique, clear plastic blocks. It is a very rare Digimon, and is said to have been created by a child just like Toy Agumon, but is difficult to find, and it has been estimated that the likelihood of doing so is one thousandth that of Toy Agumon. Its personality is just like Toy Agumon's, and despite being cowardly, it possesses a heart of justice that cannot turn a blind eye to evil. Its Special Moves are spitting out a toy flame ( Precious Flare ), and similarly, launching a toy missile from its mouth ( Dream Missile ).",
+  "web_created": true
+}

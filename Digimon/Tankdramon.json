@@ -1,0 +1,48 @@
+{
+  "name": "Tankdramon",
+  "stage": "Ultimate",
+  "attribute": "Virus",
+  "element": "Neutral",
+  "archetype": "Balanced",
+  "size": "Large",
+  "stats": {
+    "CRG": 9,
+    "FRD": 10,
+    "LVE": 9,
+    "KNW": 9,
+    "SNC": 8,
+    "RLB": 7
+  },
+  "signature_move": {
+    "name": "",
+    "element": "Neutral",
+    "pr": 8,
+    "tags": "[MELEE]"
+  },
+  "digivolves_from": [
+    "Dobermon",
+    "Gekomon",
+    "Hi-Commandramon",
+    "Raptordramon",
+    "Sealsdramon",
+    "Tankmon",
+    "Tyranomon",
+    "Waspmon",
+    "Wezen Gammamon"
+  ],
+  "digivolves_to": [
+    "Aegisdramon",
+    "Brigadramon",
+    "Chaosdramon",
+    "Darkdramon",
+    "Dukemon",
+    "Gundramon",
+    "Mugendramon",
+    "Ouryumon",
+    "Seraphimon"
+  ],
+  "needs_review": true,
+  "review_notes": "automation",
+  "web_created": true,
+  "description": "A Machine Digimon which functions as the riot-suppression and assault-extermination for the mechanized \" D-Brigade \". It specializes in the extermination of hordes of \"Targets\", and it boasts overwhelming firepower. It is equipped with radar which is able to lock onto thirty \"Targets\" simultaneously, and if one Tankdramon supplements its \"Targets\" by data-linking to other Tankdramon, it is said to be impossible to escape. Also, its mission survival rate is very high, and it is said that so far only one has ever been shot down during a sortie. Its Special Move is its \" Striver Cannon \" firing a shell loaded with a mini-nuke , reducing everything within a 30 km radius to scorched earth. Also, in close-combat it uses the \" Blast Gatling \" beside its cannon, which can fire all 3600 bullets in one second."
+}
