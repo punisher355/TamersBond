@@ -72,7 +72,7 @@
   ],
   "socket": false,
   "url": "",
-  "manifest": "",
-  "download": "",
+  "manifest": "https://raw.githubusercontent.com/punisher355/TamersBond/master/system.json",
+  "download": "https://github.com/punisher355/TamersBond/archive/refs/heads/master.zip",
   "flags": {}
 }
