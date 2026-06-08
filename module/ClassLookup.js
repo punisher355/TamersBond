@@ -188,6 +188,20 @@ export class ClassLookup extends Application {
       });
     });
 
+    // Make each ability card draggable — drops a classSkill Item onto any actor sheet
+    root.querySelectorAll(".ability-card[data-uuid]").forEach(card => {
+      const uuid = card.dataset.uuid;
+      if (!uuid) return;
+      card.setAttribute("draggable", "true");
+      card.addEventListener("dragstart", ev => {
+        ev.stopPropagation();
+        const payload = JSON.stringify({ type: "Item", uuid });
+        ev.dataTransfer.setData("text/plain", payload);
+        ev.dataTransfer.setData("application/json", payload);
+        ev.dataTransfer.effectAllowed = "copy";
+      });
+    });
+
     this._applyDomFilters(root);
   }
 

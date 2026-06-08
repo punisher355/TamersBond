@@ -3033,11 +3033,44 @@
 }
 
 .digimon-lookup .digi-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-size: 0.81em;
-  padding: 2px 9px;
+  padding: 2px 7px 2px 4px;
   border-radius: 3px;
   border: 1px solid transparent;
   line-height: 1.6;
+}
+
+.digimon-lookup .digi-link-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 2px;
+  flex-shrink: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.digimon-lookup .digi-link-preview {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #1a1a2e;
+  border: 1px solid rgba(74,144,217,0.4);
+  border-radius: 5px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+  z-index: 999;
+  pointer-events: none;
+}
+
+.digimon-lookup .digi-link:hover .digi-link-preview {
+  display: block;
 }
 
 .digimon-lookup .digi-link.exists {
@@ -3330,6 +3363,30 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.class-lookup .ability-card[draggable="true"] {
+  cursor: grab;
+  transition: border-color 0.15s;
+}
+
+.class-lookup .ability-card[draggable="true"]:hover {
+  border-color: #d4a017;
+}
+
+.class-lookup .ability-card[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+.class-lookup .ability-drag-hint {
+  font-size: 0.68em;
+  color: #4a3a10;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.class-lookup .ability-card[draggable="true"]:hover .ability-drag-hint {
+  color: #a07820;
 }
 
 .class-lookup .ability-header {

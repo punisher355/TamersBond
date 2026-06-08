@@ -49,6 +49,13 @@
       "system": "digital-destiny"
     },
     {
+      "name": "season2-items",
+      "label": "Season 2 Items",
+      "path": "packs/season2-items.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
       "name": "base-items",
       "label": "Base Items",
       "path": "packs/base-items.db",

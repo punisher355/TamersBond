@@ -120,7 +120,7 @@ DIGIMON.prDice = {
   1:  "1d4",  2:  "1d6",  3:  "1d8",  4:  "1d10", 5:  "1d12",
   6:  "2d6",  7:  "2d8",  8:  "2d10", 9:  "2d12",
   10: "3d8",  11: "3d10", 12: "3d12",
-  13: "4d8",  14: "4d10", 15: "4d12"
+  13: "4d10", 14: "4d12", 15: "5d10"
 };
 
 // Tamer crest → Digimon combat role (for display on crest block)

@@ -86,6 +86,17 @@ export class DigimonLookup extends Application {
     }
   }
 
+  // Colon-named Digimon (e.g. "Beelzebumon: Blast Mode") are stored in files as
+  // "Beelzebumon- Blast Mode" — if the pack entry still has the mystery-man placeholder,
+  // try to find the image using that dash-space convention.
+  _resolveImg(form) {
+    if (!form) return "icons/svg/mystery-man.svg";
+    const img = form.img;
+    if (img && img !== "icons/svg/mystery-man.svg") return img;
+    const safeName = form.name.replace(/:\s*/g, "- ");
+    return `systems/digital-destiny/assets/Digimon/${safeName}.webp`;
+  }
+
   async getData() {
     // Packs are pre-loaded by open(); this is only a fallback
     if (this._allForms === null) await this._loadPacks();
@@ -125,15 +136,15 @@ export class DigimonLookup extends Application {
         this._sigMoveItem = null;
       }
 
-      digivolvesTo = (sys.digivolves_to ?? []).map(name => ({
-        name,
-        exists: this._formsByName.has(name)
-      }));
+      digivolvesTo = (sys.digivolves_to ?? []).map(name => {
+        const form = this._formsByName.get(name);
+        return { name, exists: !!form, img: this._resolveImg(form) };
+      });
 
-      digivolesFrom = (sys.digivolves_from ?? []).map(name => ({
-        name,
-        exists: this._formsByName.has(name)
-      }))
+      digivolesFrom = (sys.digivolves_from ?? []).map(name => {
+        const form = this._formsByName.get(name);
+        return { name, exists: !!form, img: this._resolveImg(form) };
+      });
     }
 
     const stageKey = this._selected?.system.stage ?? "";
@@ -145,6 +156,7 @@ export class DigimonLookup extends Application {
       selectedName: this._selected?.name ?? null,
       selected:     this._selected ?? null,
       selectedUuid: this._selected?.uuid ?? "",   // plain string — uuid getter blocked by Handlebars in V14
+      selectedImg:  this._selected ? this._resolveImg(this._selected) : null,
       selectedStats,
       stageName:     D.stageLabels[stageKey] ?? stageKey,
       attrName:      attrRaw ? attrRaw.charAt(0).toUpperCase() + attrRaw.slice(1) : "",

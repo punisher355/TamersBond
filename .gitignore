@@ -1,6 +1,10 @@
 # Foundry LevelDB directories (auto-generated from .db files, don't share)
 packs/*/
 
+# Local-only update tooling
+update.sh
+update.log
+
 # Claude Code local settings (per-developer, not shared)
 .claude/
 

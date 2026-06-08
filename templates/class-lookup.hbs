@@ -58,7 +58,7 @@
     <div class="lookup-section">
       <div class="section-title">{{this.label}}</div>
       {{#each this.abilities}}
-      <div class="ability-card">
+      <div class="ability-card" data-uuid="{{this.uuid}}">
         <div class="ability-header">
           <span class="ability-name">{{this.name}}</span>
           <span class="badge badge-exp">{{this.expCost}} EXP</span>
@@ -66,6 +66,7 @@
           <button class="open-ability-btn" type="button" title="Open item sheet" data-uuid="{{this.uuid}}">
             <i class="fas fa-external-link-alt"></i>
           </button>
+          <span class="ability-drag-hint"><i class="fas fa-hand-rock"></i> Drag to sheet</span>
           {{/if}}
         </div>
         {{#if this.requirements}}

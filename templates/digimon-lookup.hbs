@@ -56,7 +56,7 @@
 
     {{!-- Draggable form card --}}
     <div class="form-card" draggable="true" data-uuid="{{selectedUuid}}">
-      <img class="form-portrait" src="{{selected.img}}" alt="{{selected.name}}" />
+      <img class="form-portrait" src="{{selectedImg}}" alt="{{selected.name}}" onerror="this.onerror=null;this.src='icons/svg/mystery-man.svg'" />
       <div class="form-info">
         <div class="form-name">
           {{selected.name}}
@@ -110,7 +110,11 @@
             {{#each digivolesFrom}}
             <span class="digi-link {{#if this.exists}}exists{{else}}missing{{/if}}"
                   data-name="{{this.name}}"
-                  title="{{#if this.exists}}Click to view {{this.name}}{{else}}{{this.name}} — not in database{{/if}}">{{this.name}}</span>
+                  title="{{#if this.exists}}Click to view {{this.name}}{{else}}{{this.name}} — not in database{{/if}}">
+              <img class="digi-link-img" src="{{this.img}}" alt="" onerror="this.onerror=null;this.src='icons/svg/mystery-man.svg'" />
+              {{this.name}}
+              <img class="digi-link-preview" src="{{this.img}}" alt="" onerror="this.onerror=null;this.src='icons/svg/mystery-man.svg'" />
+            </span>
             {{/each}}
           {{else}}
             <span class="evo-empty">No prior forms</span>
@@ -125,7 +129,11 @@
             {{#each digivolvesTo}}
             <span class="digi-link {{#if this.exists}}exists{{else}}missing{{/if}}"
                   data-name="{{this.name}}"
-                  title="{{#if this.exists}}Click to view {{this.name}}{{else}}{{this.name}} — not in database{{/if}}">{{this.name}}</span>
+                  title="{{#if this.exists}}Click to view {{this.name}}{{else}}{{this.name}} — not in database{{/if}}">
+              <img class="digi-link-img" src="{{this.img}}" alt="" onerror="this.onerror=null;this.src='icons/svg/mystery-man.svg'" />
+              {{this.name}}
+              <img class="digi-link-preview" src="{{this.img}}" alt="" onerror="this.onerror=null;this.src='icons/svg/mystery-man.svg'" />
+            </span>
             {{/each}}
           {{else}}
             <span class="evo-empty">No further forms</span>
