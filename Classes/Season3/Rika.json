@@ -1,0 +1,63 @@
+{
+  "name": "Rika",
+  "season": 3,
+  "img": "Rika.webp",
+  "abilities": [
+    {
+      "name": "Queen's Precision",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+)",
+      "description": "When your Digimon lands a hit, you may choose to forgo any status effect tags on the attack. If you do, deal +2 additional damage."
+    },
+    {
+      "name": "Ice Wall",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+)",
+      "description": "Once per encounter as a Free Action after your Digimon is targeted by an attack — before the hit rolls — you may force the attacker to reroll their hit roll and take the lower result."
+    },
+    {
+      "name": "Ruthless Efficiency",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Sincerity rank 4",
+      "description": "When your Digimon defeats an enemy this encounter, they gain +2 to all attack rolls for the remainder of the encounter."
+    },
+    {
+      "name": "Cold Read",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Sincerity rank 4",
+      "description": "Once per encounter as a Free Action on your turn, name a stat — Courage, Friendship, Love, Knowledge, Sincerity, or Reliability. The GM tells you whether the target enemy's total in that stat is lower than, equal to, or higher than your Digimon's total."
+    },
+    {
+      "name": "Digimon Queen",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Ruthless Efficiency, Sincerity rank 5",
+      "description": "When your Digimon deals enough damage in a single hit to reduce a target to 0 HP, they may immediately make one additional Basic Attack against an adjacent enemy as a Free Action."
+    },
+    {
+      "name": "I Don't Need Anyone",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Ice Wall, Sincerity rank 5",
+      "description": "Ice Wall can now be used once per encounter against each individual enemy rather than once per encounter total. Once you know how someone fights the wall is always ready for them."
+    },
+    {
+      "name": "Grudging Respect",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "At least 1 Row 2 ability, Sincerity rank 5",
+      "description": "Once per session, choose one ally Digimon. Until the end of the encounter your Digimon and that ally each gain +2 to all damage rolls when within 3 spaces of each other."
+    },
+    {
+      "name": "The Digimon Queen Needs No One. Except Maybe One Person.",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Any two Row 3 abilities, Sincerity rank 7",
+      "description": "Once per session at the start of your turn you may activate this ability. Your Digimon immediately gains temporary HP equal to your Sincerity rank x 4. While temporary HP remains your Digimon deals +4 bonus damage on all attacks. Temporary HP from this ability is lost before regular HP and is removed at end of encounter."
+    }
+  ]
+}

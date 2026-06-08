@@ -1,0 +1,55 @@
+{
+  "name": "Control Spire Fragment",
+  "source": "season2",
+  "img": "ControlSpireFragment.webp",
+  "type": "supply",
+  "target": "both",
+  "timing": "basic-action",
+  "cost": {
+    "digidollars": 0,
+    "real_money": 0,
+    "special": "Loot only \u2014 found near destroyed Control Spires"
+  },
+  "effect": "Once per encounter as a Basic Action, place this fragment within 2 spaces. Until the start of your next turn all Digimon within 3 spaces of the fragment \u2014 ally and enemy alike \u2014 cannot digivolve or dedigivolve. The fragment crumbles after use.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "Single use. Affects allies and enemies. Lasts until start of your next turn."
+}

@@ -7,8 +7,9 @@
       <input class="lookup-search" type="text" placeholder="Search class…" value="{{filters.search}}" autocomplete="off" />
       <select class="filter-select" data-filter="season">
         <option value="">All Seasons</option>
-        <option value="Season 1"{{#if (eq filters.season "Season 1")}} selected{{/if}}>Season 1</option>
-        <option value="Season 2"{{#if (eq filters.season "Season 2")}} selected{{/if}}>Season 2</option>
+        {{#each seasons}}
+        <option value="{{this}}"{{#if (eq this ../filters.season)}} selected{{/if}}>{{this}}</option>
+        {{/each}}
       </select>
       <button class="clear-filters" type="button">Clear</button>
     </div>

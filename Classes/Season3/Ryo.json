@@ -1,0 +1,56 @@
+{
+  "name": "Ryo",
+  "season": 3,
+  "img": "Ryo.webp",
+  "abilities": [
+    {
+      "name": "Legendary Status",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+, at least one other stat rank 4+)",
+      "description": "Once per session when you enter an encounter, you may declare Legendary Status as a Free Action. One enemy of your choice — not a boss — immediately focuses their attention on your Digimon for the first two rounds, preferring to attack them over other targets when able."
+    },
+    {
+      "name": "Been Here Before",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+, at least one other stat rank 4+)",
+      "description": "After you fail a skill check, add +3 to your result. This may turn a failure into a success."
+    },
+    {
+      "name": "Monodramon's Edge",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Courage rank 4",
+      "description": "Your Digimon's first attack each encounter automatically hits — no hit roll required."
+    },
+    {
+      "name": "Tactical History",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Courage rank 4",
+      "description": "At the start of each encounter before turns begin, you may name one move type by tag — MELEE, RANGE, BURST, BLAST, CHARGE, or COUNTER. Until the end of the round your Digimon takes -2 damage from attacks with that tag."
+    },
+    {
+      "name": "The Long Road",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Monodramon's Edge, Courage rank 5",
+      "description": "Once per session at any point during an encounter, you may spend 10 Hope to immediately restore your Digimon to their current maximum Default Stage at full HP for that stage — even if the cascade has reduced their Default Stage below that point. After using this ability your Digimon cannot digivolve above their Default Stage for the rest of the session."
+    },
+    {
+      "name": "Legendary Tamer",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Tactical History, Courage rank 5",
+      "description": "Legendary Status is now usable once per encounter instead of once per session. Additionally the focused enemy takes -2 to all attack rolls while Legendary Status is active and your Digimon is their primary target."
+    },
+    {
+      "name": "I've Already Won This Fight",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Courage rank 7",
+      "description": "Once per session after an enemy declares an attack but before any rolls are made, you may activate this ability. The attack misses automatically. No roll required."
+    }
+  ]
+}

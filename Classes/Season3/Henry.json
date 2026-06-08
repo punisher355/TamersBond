@@ -1,0 +1,56 @@
+{
+  "name": "Henry",
+  "season": 3,
+  "img": "Henry.webp",
+  "abilities": [
+    {
+      "name": "Measured Response",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Friendship rank 3+)",
+      "description": "When your Digimon is attacked, if you have not taken your turn yet this round, you may use a Free Action to grant your Digimon +3 to their Reliability for that attack only."
+    },
+    {
+      "name": "Tactical Restraint",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Friendship rank 3+)",
+      "description": "Once per encounter as a Free Action on your turn, choose one enemy Digimon within 6 spaces. That enemy's Speed is treated as 2 lower when determining turn order next round."
+    },
+    {
+      "name": "Calculated Peace",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Friendship rank 4",
+      "description": "Once per encounter as your Basic Action, you may attempt to de-escalate a non-boss enemy. Make a Rally skill check DN 16. On a success the enemy skips their next action. This does not work on enemies that have been attacked this encounter."
+    },
+    {
+      "name": "Cover Fire",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Friendship rank 4",
+      "description": "Once per encounter when an ally Digimon within 4 spaces is targeted, your Digimon may make a single Basic Attack against that attacker as a Free Action before the attack resolves."
+    },
+    {
+      "name": "Last Resort",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Calculated Peace, Friendship rank 5",
+      "description": "Once per encounter as your Basic Action, Henry's Digimon takes a completely defensive stance. Until the start of Henry's next turn all damage dealt to any allied Digimon within 3 spaces is reduced by your Friendship rank. Your Digimon cannot attack while the stance is active."
+    },
+    {
+      "name": "Momentai",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Cover Fire, Friendship rank 5",
+      "description": "Once per session as a Free Action, you may declare Momentai. All allies within 6 spaces who can hear you immediately remove one negative status effect."
+    },
+    {
+      "name": "The Hardest Kind of Strong",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Friendship rank 7",
+      "description": "Once per session at the start of an encounter, before any turns begin, you may declare your intent not to initiate offensive action this encounter. While you have not attacked — your Digimon has not targeted an enemy with a damage-dealing move — all allied Digimon gain +2 to Reliability and +2 to their Love stat for damage reduction. The moment your Digimon deals damage the bonus ends."
+    }
+  ]
+}

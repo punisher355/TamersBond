@@ -1,0 +1,56 @@
+{
+  "name": "Jeri",
+  "season": 3,
+  "img": "Jeri.webp",
+  "abilities": [
+    {
+      "name": "Gentle Presence",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "When you use the Mend skill on an ally — Tamer or Digimon — add your Love rank as a flat bonus to the result on top of the normal skill formula."
+    },
+    {
+      "name": "Leomon's Lesson",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "Once per encounter when your Digimon is at 25% HP or below they may use their Move Action as a Free Action this round."
+    },
+    {
+      "name": "Hold On",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Love rank 4",
+      "description": "Once per encounter when your Digimon would trigger the cascade at Default Stage, you may spend 6 Hope to have them stabilise at 1 HP instead. Default Stage does not drop."
+    },
+    {
+      "name": "Puppet Show",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Love rank 4",
+      "description": "Once per encounter as a Free Action, you may use your puppet to distract one enemy within 4 spaces. That enemy takes -2 to their next attack roll."
+    },
+    {
+      "name": "Grief and Light",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Hold On, Love rank 5",
+      "description": "Once per session at the start of your turn you may spend 5 Hope. All allied Digimon immediately restore HP equal to your Love rank x 2. This does not cost your Basic Action."
+    },
+    {
+      "name": "What Leomon Taught Me",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Leomon's Lesson, Love rank 5",
+      "description": "When your Digimon is at 50% HP or below they may use moves they know from one stage higher than their current stage. Stage lock rules are suspended for your Digimon only while this condition is active."
+    },
+    {
+      "name": "Still Here",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Love rank 7",
+      "description": "Once per session when your partner Digimon is reduced to 0 HP, you may immediately activate Still Here. The cascade resolves normally — but before it does, restore HP to your Digimon equal to your Love rank. Then immediately take a bonus turn outside of normal turn order. This bonus turn does not count toward your turn in the current round."
+    }
+  ]
+}

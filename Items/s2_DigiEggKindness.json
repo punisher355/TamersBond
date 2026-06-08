@@ -1,0 +1,57 @@
+{
+  "name": "Digi-Egg of Kindness",
+  "source": "season2",
+  "img": "DigiEggKindness.webp",
+  "type": "digi-egg",
+  "target": "digimon",
+  "timing": "basic-action",
+  "cost": {
+    "digidollars": 0,
+    "real_money": 0,
+    "special": "Loot only \u2014 cannot be purchased"
+  },
+  "effect": "When the Tamer spends their Basic Action, the Digimon immediately Armor Digivolves into Bucchiemon. The form lasts 7 turns. No Hope cost. Reusable once per encounter. Not consumed on use. Does not occupy an equipment slot. Compatible species documented in the Season 2 Digimon compendium.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "Duration: 7 turns. No Hope cost. 1/encounter. No equipment slot used.",
+  "armor_form": "Bucchiemon",
+  "element": "Neutral"
+}

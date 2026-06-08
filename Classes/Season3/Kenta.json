@@ -1,0 +1,49 @@
+{
+  "name": "Kenta",
+  "season": 3,
+  "img": "Kenta.webp",
+  "abilities": [
+    {
+      "name": "I Read About This",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 3+)",
+      "description": "Once per session at the start of an encounter, you automatically learn one piece of information about one enemy of your choice — their Attribute, their Element, or whether they are stronger or weaker than your Digimon overall. No check required."
+    },
+    {
+      "name": "Unlikely Protector",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 3+)",
+      "description": "Once per encounter when an ally Tamer within 2 spaces takes damage that would reduce them to 0 HP, you may spend 4 Hope to take half that damage yourself instead — rounding the halved amount down. The ally takes the other half and may survive at 1 HP or higher."
+    },
+    {
+      "name": "Deep Archive",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "I Read About This, Knowledge rank 4",
+      "description": "I Read About This now reveals two pieces of information instead of one on the same target."
+    },
+    {
+      "name": "Tiny But Fierce",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Knowledge rank 4",
+      "description": "When your Digimon is attacked by a Digimon that is at a higher stage than yours, you may reduce the attacker's hit chance by 1, applied before the roll."
+    },
+    {
+      "name": "Kotemon Wouldn't Have Been So Bad Either",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Deep Archive, Knowledge rank 5",
+      "description": "Once per session before any roll is made, you may declare that you have researched this specific situation. The GM must tell you the exact DN of the roll before you commit to attempting it."
+    },
+    {
+      "name": "Heart Patter",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Tiny But Fierce, Knowledge rank 5",
+      "description": "Once per session as a Free Action, MarineAngemon bestows Heart Patter on one allied Digimon within 3 spaces. That Digimon immediately restores HP equal to your Knowledge rank x 3."
+    }
+  ]
+}

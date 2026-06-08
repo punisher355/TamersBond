@@ -13,6 +13,7 @@ import { registerCombatHooks }      from "./module/combat.js";
 import { DigitalDestinyCombat }     from "./module/DigitalDestinyCombat.js";
 import { DigimonLookup }            from "./module/DigimonLookup.js";
 import { ClassLookup }              from "./module/ClassLookup.js";
+import { ItemLookup }               from "./module/ItemLookup.js";
 
 const BLANK_TAGS = {
   melee: false, range: false, rangeX: 4,
@@ -69,6 +70,16 @@ Hooks.once("init", () => {
   console.log("Digital Destiny | Initializing system");
 
   CONFIG.DIGIMON = DIGIMON;
+
+  // Replace all default Foundry status effects with just Defeated
+  CONFIG.statusEffects = [
+    {
+      id:      "defeated",
+      name:    "Defeated",
+      icon:    "icons/svg/skull.svg",
+      overlay: true
+    }
+  ];
 
   Handlebars.registerHelper("eq", (a, b) => a === b);
   Handlebars.registerHelper("gt", (a, b) => a > b);
@@ -144,15 +155,52 @@ Hooks.once("init", () => {
     "systems/digital-destiny/templates/items/status-sheet.hbs",
     "systems/digital-destiny/templates/items/digimon-form-sheet.hbs",
     "systems/digital-destiny/templates/digimon-lookup.hbs",
-    "systems/digital-destiny/templates/class-lookup.hbs"
+    "systems/digital-destiny/templates/class-lookup.hbs",
+    "systems/digital-destiny/templates/item-lookup.hbs"
   ]);
 });
 
 registerCombatHooks();
 
+// Actors currently being HP-corrected to 1 — guards against re-entrant hook firing
+const _defeatedLock = new Set();
+
+// When HP hits 0 or below: apply Defeated state and reset HP to 1.
+// Defeated is cleared manually by the GM via the token HUD (right-click → Defeated).
+Hooks.on("updateActor", async (actor, changes) => {
+  if (!game.user.isGM) return;
+  if (_defeatedLock.has(actor.id)) return;
+
+  const newHp = foundry.utils.getProperty(changes, "system.hp.value");
+  if (newHp === undefined || newHp > 0) return;
+
+  // Lock before any awaits so the HP correction update doesn't re-trigger this
+  _defeatedLock.add(actor.id);
+  try {
+    await actor.update({ "system.hp.value": 1 });
+  } finally {
+    _defeatedLock.delete(actor.id);
+  }
+
+  // Apply skull overlay to every token for this actor on the current scene
+  const tokens = canvas.tokens?.placeables?.filter(t => t.actor?.id === actor.id) ?? [];
+  for (const token of tokens) {
+    await token.document.update({ overlayEffect: "icons/svg/skull.svg" });
+  }
+
+  // Mark the combatant as defeated in the active encounter tracker
+  const combat = game.combat;
+  if (combat) {
+    const combatants = combat.combatants.filter(c => c.actorId === actor.id);
+    for (const c of combatants) {
+      if (!c.defeated) await c.update({ defeated: true });
+    }
+  }
+});
+
 // Expose lookups on game object so they're callable from macros
 Hooks.once("ready", () => {
-  game.digitalDestiny = { lookup: DigimonLookup, classLookup: ClassLookup };
+  game.digitalDestiny = { lookup: DigimonLookup, classLookup: ClassLookup, itemLookup: ItemLookup };
 });
 
 // Add a "Digimon Lookup" button to both the Actors and Compendium sidebar tabs.
@@ -199,6 +247,27 @@ function _injectClassLookupButton(html) {
 Hooks.on("renderActorDirectory",     (_a, html) => _injectClassLookupButton(html));
 Hooks.on("renderCompendiumDirectory",(_a, html) => _injectClassLookupButton(html));
 Hooks.on("renderItemDirectory",      (_a, html) => _injectClassLookupButton(html));
+
+function _injectItemLookupButton(html) {
+  const root = (html instanceof jQuery) ? html[0] : html;
+  if (!root || root.querySelector(".item-lookup-header-btn")) return;
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "item-lookup-header-btn";
+  btn.title = "Open Item Lookup";
+  btn.innerHTML = '<i class="fas fa-shopping-bag"></i> Item Lookup';
+  btn.addEventListener("click", () => ItemLookup.open());
+  const slot =
+    root.querySelector(".header-actions") ??
+    root.querySelector(".action-buttons") ??
+    root.querySelector(".directory-header") ??
+    root.querySelector("header");
+  if (slot) slot.prepend(btn);
+}
+
+Hooks.on("renderActorDirectory",     (_a, html) => _injectItemLookupButton(html));
+Hooks.on("renderCompendiumDirectory",(_a, html) => _injectItemLookupButton(html));
+Hooks.on("renderItemDirectory",      (_a, html) => _injectItemLookupButton(html));
 
 // Auto-add default action items to every new actor
 Hooks.on("createActor", async (actor) => {

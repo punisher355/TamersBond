@@ -1,0 +1,55 @@
+{
+  "name": "Digivice Tag",
+  "source": "season3",
+  "img": "DigiviceTag.webp",
+  "type": "accessory",
+  "target": "tamer",
+  "timing": "passive",
+  "cost": {
+    "digidollars": 0,
+    "real_money": 0,
+    "special": "Loot only \u2014 story reward"
+  },
+  "effect": "+5 to your Hope pool. Also functions as a card holder \u2014 you may carry 10 additional Modify Cards beyond your normal carrying capacity.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 5
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "+10 Modify Card carry capacity."
+}

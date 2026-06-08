@@ -1,0 +1,49 @@
+{
+  "name": "Kazu",
+  "season": 3,
+  "img": "Kazu.webp",
+  "abilities": [
+    {
+      "name": "Trash Talk",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Reliability rank 3+)",
+      "description": "Once per encounter as a Free Action on your turn, choose one visible enemy. That enemy must succeed on a Firewall skill check DN 12 or take -2 to their next attack roll."
+    },
+    {
+      "name": "Guardromon's Partner",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Reliability rank 3+)",
+      "description": "Once per encounter as a Free Action, when an allied Digimon within your Friendship rank x 2 spaces is about to take damage, you may swap places with that Digimon and take the damage yourself instead. The damage number is whatever was going to be applied to the ally — it is not recalculated through your own resistances, weaknesses, or Love stat. You simply take the number."
+    },
+    {
+      "name": "All In",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
+      "description": "Once per encounter before your Digimon makes an attack roll, you may declare All In. Double the damage dice on that attack if it hits. If it misses, your Digimon cannot make any attacks next round — they are completely off balance."
+    },
+    {
+      "name": "Comeback Kid",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
+      "description": "When your Digimon misses an attack roll, their next attack roll this encounter gains +4."
+    },
+    {
+      "name": "Better Than I Look",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "All In, Reliability rank 5",
+      "description": "All In no longer causes your Digimon to lose their next round's attacks on a miss — they take -2 to their next attack roll instead."
+    },
+    {
+      "name": "Cheerleader",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Comeback Kid, Reliability rank 5",
+      "description": "Once per encounter as a Free Action on your turn, choose one enemy Digimon. Until the start of your next turn all allied Digimon that attack that target gain +1 to their attack rolls against it."
+    }
+  ]
+}

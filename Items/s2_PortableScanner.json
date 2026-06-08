@@ -1,0 +1,55 @@
+{
+  "name": "Portable Scanner",
+  "source": "season2",
+  "img": "PortableScanner.webp",
+  "type": "equipment",
+  "target": "tamer",
+  "timing": "basic-action",
+  "cost": {
+    "digidollars": 300,
+    "real_money": 120,
+    "special": ""
+  },
+  "effect": "As a Basic Action, scan one visible Digimon or Digital World structure within 6 spaces. Learn their Attribute, Element, and two combat stats of your choice. Grants +1 to all Decode skill rolls involving Digital World systems.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 1,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "Reveals Attribute, Element, and 2 combat stats. Range 6."
+}

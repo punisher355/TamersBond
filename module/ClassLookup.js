@@ -32,37 +32,32 @@ export class ClassLookup extends Application {
   }
 
   async _loadPacks() {
-    const allPackIds = [...game.packs.keys()];
-    console.log("ClassLookup | Available packs:", allPackIds.join(", "));
-
     this._allSkills = [];
 
-    const packDefs = [
-      { name: "season1-classes", season: "Season 1" },
-      { name: "season2-classes", season: "Season 2" }
-    ];
+    // Auto-detect all season class packs (season1-classes, season2-classes, season3-classes, …)
+    const classPacks = [...game.packs.values()]
+      .filter(p => /^season\d+-classes$/i.test(p.metadata.name))
+      .sort((a, b) => {
+        const n = s => parseInt(s.metadata.name.replace(/\D/g, ""));
+        return n(a) - n(b);
+      });
 
-    for (const { name: packName, season } of packDefs) {
-      const pack =
-        game.packs.get(`digital-destiny.${packName}`) ??
-        game.packs.find(p => p.metadata.name === packName);
+    console.log("ClassLookup | Found packs:", classPacks.map(p => p.metadata.name).join(", "));
 
-      if (!pack) {
-        console.warn(`ClassLookup | Pack 'digital-destiny.${packName}' not found.`);
-        continue;
-      }
-
+    for (const pack of classPacks) {
+      const num    = pack.metadata.name.replace(/\D/g, "");
+      const season = `Season ${num}`;
       try {
         await pack.getIndex();
         const docs = await pack.getDocuments();
-        console.log(`ClassLookup | Loaded ${docs.length} skills from ${packName}`);
+        console.log(`ClassLookup | Loaded ${docs.length} skills from ${pack.metadata.name}`);
         for (const doc of docs) {
-          doc._season          = season;
-          doc._packCollection  = pack.collection;
+          doc._season         = season;
+          doc._packCollection = pack.collection;
           this._allSkills.push(doc);
         }
       } catch (err) {
-        console.error(`ClassLookup | Error loading ${packName}:`, err);
+        console.error(`ClassLookup | Error loading ${pack.metadata.name}:`, err);
       }
     }
 
@@ -137,13 +132,20 @@ export class ClassLookup extends Application {
       }));
     }
 
+    const seasons = [...new Set([...this._classesByName.values()].map(c => c.season))]
+      .sort((a, b) => {
+        const n = s => parseInt(s.replace(/\D/g, ""));
+        return n(a) - n(b);
+      });
+
     return {
       classes:       allClasses,
       selectedName:  this._selected ?? null,
       selectedClass,
       layers,
       layerCount:    layers.length,
-      filters:       { ...this._filters }
+      filters:       { ...this._filters },
+      seasons
     };
   }
 

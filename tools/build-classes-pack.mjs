@@ -1,57 +1,91 @@
 #!/usr/bin/env node
 // Run: node tools/build-classes-pack.mjs
-// Reads every .json file in Classes/Season1/ and Classes/Season2/ and writes
-// packs/season1-classes.db and packs/season2-classes.db (NeDB format).
-// After running, delete the packs/season1-classes/ and packs/season2-classes/
-// LevelDB directories (if they exist), then restart Foundry.
+//
+// Reads every .json file in Classes/Season1/ and Classes/Season2/ and:
+//   1. Writes packs/season1-classes.db and packs/season2-classes.db  (NeDB source of truth)
+//   2. Wipes and repopulates the matching LevelDB directories for Foundry v14
+//
+// Foundry must be closed when you run this.
+// After running, just open Foundry — both class compendiums will be ready immediately.
 
-import { readdir, readFile, writeFile, access } from "fs/promises";
+import { readdir, readFile, writeFile, access, rm, mkdir } from "fs/promises";
 import { constants } from "fs";
 import { join, dirname, basename } from "path";
 import { fileURLToPath } from "url";
+import { createHash } from "crypto";
+import { ClassicLevel } from "/opt/foundry/resources/app/node_modules/classic-level/index.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT       = join(__dirname, "..");
-const CLASS_DIRS = [
-  { dir: join(ROOT, "Classes", "Season1"), out: join(ROOT, "packs", "season1-classes.db") },
-  { dir: join(ROOT, "Classes", "Season2"), out: join(ROOT, "packs", "season2-classes.db") }
-];
+const ROOT = join(__dirname, "..");
 
-// Deterministic 16-char ID — stable across re-runs so actor/UUID references don't break.
-function makeId(str) {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let h = 5381;
-  for (let i = 0; i < str.length; i++) h = ((h * 33) ^ str.charCodeAt(i)) >>> 0;
-  let id = "", seed = h;
-  for (let i = 0; i < 16; i++) {
-    id   += chars[seed % chars.length];
-    seed  = ((seed * 1664525) + 1013904223) >>> 0;
-  }
-  return id;
+// Auto-detect every SeasonN folder inside Classes/
+const classesRoot = join(ROOT, "Classes");
+const seasonFolders = (await readdir(classesRoot, { withFileTypes: true }))
+  .filter(e => e.isDirectory() && /^Season\d+$/i.test(e.name))
+  .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+
+const CLASS_DIRS = seasonFolders.map(e => ({
+  dir: join(classesRoot, e.name),
+  db:  `season${e.name.replace(/\D/g, "")}-classes`,
+}));
+
+function stableId(str) {
+  return createHash("sha256").update(str.toLowerCase()).digest("hex").slice(0, 16);
 }
 
-// Resolve the img field from the JSON.
-// Accepts a short filename ("Izzy.webp") or a full Foundry path.
-// Checks assets/DigiDestined/ first, then assets/ root, falls back to ability icon.
 async function resolveImg(raw) {
   if (!raw) return "icons/svg/ability.svg";
-
-  // Already a full path — use as-is
   if (raw.includes("/")) return raw;
-
-  // Short filename — look in assets/DigiDestined/
   const local = join(ROOT, "assets", "DigiDestined", raw);
   try {
     await access(local, constants.F_OK);
     return `systems/digital-destiny/assets/DigiDestined/${raw}`;
-  } catch { /* not found there */ }
-
-  // Fall back to generic ability icon
-  console.warn(`  ⚠ Image not found for "${raw}" — using default icon`);
-  return "icons/svg/ability.svg";
+  } catch {
+    console.warn(`  ⚠ Image not found for "${raw}" — using default icon`);
+    return "icons/svg/ability.svg";
+  }
 }
 
-for (const { dir, out } of CLASS_DIRS) {
+async function writeLevelDB(dirPath, entries) {
+  await rm(dirPath, { recursive: true, force: true });
+  await mkdir(dirPath, { recursive: true });
+  const db = new ClassicLevel(dirPath, { valueEncoding: "utf8" });
+  await db.open();
+  const batch = db.batch();
+  for (const [id, json] of entries) batch.put(`!items!${id}`, json);
+  await batch.write();
+  await db.close();
+}
+
+// Ensure every detected season has a pack entry in system.json
+const systemJsonPath = join(ROOT, "system.json");
+const systemJson = JSON.parse(await readFile(systemJsonPath, "utf8"));
+let systemJsonDirty = false;
+
+for (const { db } of CLASS_DIRS) {
+  const seasonNum = db.replace(/\D/g, "");
+  if (!systemJson.packs.some(p => p.name === db)) {
+    systemJson.packs.splice(
+      systemJson.packs.findIndex(p => p.name === `season${parseInt(seasonNum) - 1}-classes`) + 1,
+      0,
+      {
+        name:   db,
+        label:  `Season ${seasonNum} Class Abilities`,
+        path:   `packs/${db}.db`,
+        type:   "Item",
+        system: "digital-destiny"
+      }
+    );
+    console.log(`  Added "${db}" pack to system.json`);
+    systemJsonDirty = true;
+  }
+}
+
+if (systemJsonDirty) {
+  await writeFile(systemJsonPath, JSON.stringify(systemJson, null, 2) + "\n", "utf8");
+}
+
+for (const { dir, db } of CLASS_DIRS) {
   let files;
   try {
     files = (await readdir(dir)).filter(f => f.endsWith(".json")).sort();
@@ -60,7 +94,7 @@ for (const { dir, out } of CLASS_DIRS) {
     continue;
   }
 
-  const lines = [];
+  const entries = [];
 
   for (const file of files) {
     const raw       = JSON.parse(await readFile(join(dir, file), "utf8"));
@@ -71,10 +105,8 @@ for (const { dir, out } of CLASS_DIRS) {
     console.log(`  ${className} (${abilities.length} abilities) → ${basename(img)}`);
 
     for (const ability of abilities) {
-      const entry = {
-        // ID is derived from "ClassName::AbilityName" — never changes as long as names don't change,
-        // so compendium UUIDs remain stable across every rebuild.
-        _id:  makeId(`${className}::${ability.name}`),
+      const doc = {
+        _id:  stableId(`${className}::${ability.name}`),
         name: ability.name,
         type: "classSkill",
         img,
@@ -91,10 +123,18 @@ for (const { dir, out } of CLASS_DIRS) {
           description:  ability.description  ?? ""
         }
       };
-      lines.push(JSON.stringify(entry));
+      entries.push([doc._id, JSON.stringify(doc)]);
     }
   }
 
-  await writeFile(out, lines.join("\n") + "\n", "utf8");
-  console.log(`Wrote ${lines.length} abilities → ${out}\n`);
+  const dbPath  = join(ROOT, "packs", `${db}.db`);
+  const lvlPath = join(ROOT, "packs", db);
+
+  await writeFile(dbPath, entries.map(([, j]) => j).join("\n") + "\n", "utf8");
+  console.log(`  Wrote ${entries.length} abilities -> packs/${db}.db`);
+
+  await writeLevelDB(lvlPath, entries);
+  console.log(`  packs/${db}/  (LevelDB ready)\n`);
 }
+
+console.log("  Done! Open Foundry VTT — both class compendiums are ready.");

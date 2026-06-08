@@ -1,0 +1,55 @@
+{
+  "name": "Funeral Dress",
+  "source": "season3",
+  "img": "FuneralDress.webp",
+  "type": "clothing",
+  "target": "tamer",
+  "timing": "passive",
+  "cost": {
+    "digidollars": 0,
+    "real_money": 60,
+    "special": ""
+  },
+  "effect": "+2 to all Mend and Firewall skill rolls while equipped. The GM may grant advantage on Mend checks made to calm corrupted Digimon while wearing this outfit.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 2,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 2,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "GM may grant advantage on Mend checks to calm corrupted Digimon."
+}

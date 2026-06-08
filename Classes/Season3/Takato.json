@@ -1,0 +1,42 @@
+{
+  "name": "Takato",
+  "season": 3,
+  "img": "Takato.webp",
+  "abilities": [
+    {
+      "name": "Drawing Strength",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+)",
+      "description": "Once per session during a short rest, you may describe your Digimon performing a new technique you imagined for them. Until the next long rest your Digimon gains access to one additional move from their pool as a fifth active slot — it does not replace their signature move or any of their three learned moves. The move must be one your Digimon has access to at their current stage."
+    },
+    {
+      "name": "Never Give Up",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+)",
+      "description": "Once per encounter when your Digimon would fail an attack roll by 3 or less — falling just short of the hit threshold — the attack grazes. A graze deals half normal damage, bypasses no defences, and triggers no additional effects."
+    },
+    {
+      "name": "Gogglehead's Resolve",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Courage rank 4",
+      "description": "When your Digimon is at half HP or below they deal +3 bonus damage on all attacks."
+    },
+    {
+      "name": "Partner's Glow",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Courage rank 4",
+      "description": "At the start of each of your turns, if your Digimon is digivolved above their Default Stage, you may spend 2 Hope to grant them +2 to their next attack roll AND +2 damage on that attack."
+    },
+    {
+      "name": "Biomerge Ready",
+      "row": 3,
+      "expCost": 800,
+      "requirements": "Both Row 2 abilities, Courage rank 6",
+      "description": "Your Tamer may now participate in Biomerge Digivolution. See Part 2: Rules for full details. Additionally, when you initiate Biomerge, the corruption check gains +2 to the roll."
+    }
+  ]
+}

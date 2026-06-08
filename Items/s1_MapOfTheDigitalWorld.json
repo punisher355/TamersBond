@@ -1,0 +1,14 @@
+{
+  "name": "Map of the Digital World",
+  "source": "season1",
+  "img": "MapDigitalWorld.webp",
+  "type": "equipment",
+  "target": "tamer",
+  "timing": "basic-action",
+  "cost": { "digidollars": 200, "real_money": 0, "special": "Digital World merchants, rare" },
+  "effect": "Grants +3 to all Field Ops skill rolls involving navigation in the Digital World. Once per session as a Basic Action, consult the map — the GM reveals one piece of geographic information about the surrounding area.",
+  "stat_bonuses": { "courage":0,"friendship":0,"love":0,"knowledge":0,"sincerity":0,"reliability":0,"hope":0 },
+  "combat_bonuses": { "hp_damage_reduction":0,"attack_bonus":0,"damage_bonus":0 },
+  "skill_bonuses": { "blitz":0,"ironclad":0,"crusher":0,"ghost":0,"roar":0,"scan":0,"rally":0,"broadcast":0,"mend":0,"radar":0,"tame":0,"decode":0,"jackIn":0,"modify":0,"trace":0,"archive":0,"command":0,"playback":0,"firewall":0,"reinforce":0,"coreDrive":0,"zeroError":0,"fieldOps":3,"recovery":0 },
+  "notes": "+3 Field Ops (navigation only, Digital World). 1/session: GM reveals geographic info."
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Princess Ballgown",
+  "source": "season1",
+  "img": "PrincessBallgown.webp",
+  "type": "clothing",
+  "target": "tamer",
+  "timing": "passive",
+  "cost": { "digidollars": 0, "real_money": 200, "special": "" },
+  "effect": "+3 to all Broadcast skill rolls while equipped. Impossible to ignore. Also imposes -2 to all Blitz and Ghost skill rolls — it is very hard to sprint or sneak in a ballgown.",
+  "stat_bonuses": { "courage":0,"friendship":0,"love":0,"knowledge":0,"sincerity":0,"reliability":0,"hope":0 },
+  "combat_bonuses": { "hp_damage_reduction":0,"attack_bonus":0,"damage_bonus":0 },
+  "skill_bonuses": { "blitz":-2,"ironclad":0,"crusher":0,"ghost":-2,"roar":0,"scan":0,"rally":0,"broadcast":3,"mend":0,"radar":0,"tame":0,"decode":0,"jackIn":0,"modify":0,"trace":0,"archive":0,"command":0,"playback":0,"firewall":0,"reinforce":0,"coreDrive":0,"zeroError":0,"fieldOps":0,"recovery":0 },
+  "notes": "+3 Broadcast, -2 Blitz, -2 Ghost."
+}

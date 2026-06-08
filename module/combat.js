@@ -289,6 +289,7 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   const rolls = [hitRoll, ...(dmgRoll ? [dmgRoll] : [])];
   await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
+    whisper: game.users.filter(u => u.isGM).map(u => u.id),
     rolls,
     content
   });

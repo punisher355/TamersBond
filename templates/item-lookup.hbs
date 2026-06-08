@@ -1,0 +1,116 @@
+<div class="item-lookup-layout">
+
+  {{!-- ══ LEFT: Filters + item list ══ --}}
+  <div class="lookup-sidebar">
+
+    <div class="il-filters">
+      <input class="il-search" type="text" placeholder="Search items…" value="{{filters.search}}" autocomplete="off" />
+      <select class="il-select" data-filter="source">
+        <option value="">All Sources</option>
+        {{#each sources}}
+        <option value="{{this}}"{{#if (eq this ../filters.source)}} selected{{/if}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <select class="il-select" data-filter="type">
+        <option value="">All Types</option>
+        {{#each types}}
+        <option value="{{this}}"{{#if (eq this ../filters.type)}} selected{{/if}}>{{this}}</option>
+        {{/each}}
+      </select>
+      <button class="il-clear" type="button">Clear</button>
+    </div>
+
+    <div class="il-results">
+      {{#if items.length}}
+        {{#each items}}
+        <div class="il-entry{{#if (eq this.id ../selectedId)}} selected{{/if}}"
+             data-id="{{this.id}}"
+             data-name="{{this.name}}"
+             data-source="{{this.sourceLabel}}"
+             data-type="{{this.itemType}}">
+          <img src="{{this.img}}" alt="" />
+          <div class="il-entry-text">
+            <span class="il-entry-name">{{this.name}}</span>
+            <span class="il-entry-meta">{{this.itemType}} · {{this.sourceLabel}}</span>
+          </div>
+        </div>
+        {{/each}}
+      {{else}}
+        <div class="il-empty-list">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>No items loaded.<br>Run the build tool then restart Foundry.</p>
+        </div>
+      {{/if}}
+    </div>
+
+  </div>
+
+  {{!-- ══ RIGHT: Detail panel ══ --}}
+  <div class="il-detail">
+
+    {{#if detail}}
+
+    <div class="il-item-card"
+         {{#if detail.uuid}}data-uuid="{{detail.uuid}}" draggable="true" title="Drag to character sheet"{{/if}}>
+      <img class="il-item-portrait" src="{{detail.img}}" alt="{{detail.name}}" />
+      <div class="il-item-info">
+        <div class="il-item-name">{{detail.name}}</div>
+        <div class="il-badges">
+          <span class="il-badge il-badge-source">{{detail.sourceLabel}}</span>
+          <span class="il-badge il-badge-type">{{detail.itemType}}</span>
+          <span class="il-badge">{{detail.target}}</span>
+          <span class="il-badge">{{detail.timing}}</span>
+        </div>
+        <div class="il-badges" style="margin-top:4px;">
+          <span class="il-badge il-badge-cost">Cost: {{detail.cost}}</span>
+        </div>
+      </div>
+    </div>
+
+    {{#if detail.effect}}
+    <div class="il-section">
+      <div class="il-section-title">Effect</div>
+      <div class="il-section-body">{{detail.effect}}</div>
+    </div>
+    {{/if}}
+
+    {{#if detail.hasBonuses}}
+    <div class="il-section">
+      <div class="il-section-title">Bonuses</div>
+      <div class="il-bonus-chips">
+        {{#each detail.statBonuses}}
+        <span class="il-badge il-badge-bonus">{{this.label}} +{{this.value}}</span>
+        {{/each}}
+        {{#each detail.combatBonuses}}
+        <span class="il-badge il-badge-bonus">{{this.label}} +{{this.value}}</span>
+        {{/each}}
+        {{#each detail.skillBonuses}}
+        <span class="il-badge il-badge-bonus">{{this.label}} +{{this.value}}</span>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+
+    {{#if detail.notes}}
+    <div class="il-section">
+      <div class="il-section-title">Notes</div>
+      <div class="il-section-body il-notes">{{detail.notes}}</div>
+    </div>
+    {{/if}}
+
+    {{#if detail.uuid}}
+    <div class="il-drag-hint"><i class="fas fa-hand-rock"></i> Drag the card above onto a character sheet to add this item</div>
+    {{/if}}
+
+    {{else}}
+
+    <div class="il-empty">
+      <i class="fas fa-shopping-bag"></i>
+      <p>Select an item from the list to view its details.</p>
+    </div>
+
+    {{/if}}
+
+  </div>
+
+</div>

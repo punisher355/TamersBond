@@ -1,8 +1,8 @@
 {
   "id": "digital-destiny",
-  "title": "Digital Destiny",
-  "description": "A Foundry VTT system for the Digital Destiny Digimon TTRPG.",
-  "version": "0.2.0",
+  "title": "Tamers Bond",
+  "description": "A Foundry VTT system for the Tamers Bond Digimon TTRPG.",
+  "version": "0.3.0",
   "compatibility": {
     "minimum": "11",
     "verified": "14"
@@ -42,6 +42,13 @@
       "system": "digital-destiny"
     },
     {
+      "name": "season3-classes",
+      "label": "Season 3 Class Abilities",
+      "path": "packs/season3-classes.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
       "name": "season1-items",
       "label": "Season 1 Items",
       "path": "packs/season1-items.db",
@@ -52,6 +59,13 @@
       "name": "season2-items",
       "label": "Season 2 Items",
       "path": "packs/season2-items.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
+      "name": "season3-items",
+      "label": "Season 3 Items",
+      "path": "packs/season3-items.db",
       "type": "Item",
       "system": "digital-destiny"
     },
