@@ -2,7 +2,7 @@
   "id": "digital-destiny",
   "title": "Digital Destiny",
   "description": "A Foundry VTT system for the Digital Destiny Digimon TTRPG.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "compatibility": {
     "minimum": "11",
     "verified": "14"
