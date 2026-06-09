@@ -23,6 +23,8 @@ const BLANK_TAGS = {
   charge: false, counter: false, rush: false,
   burn: false, burnX: 2, burnY: 3,
   freeze: false, paralyze: false, paralyzeX: 1,
+  poison: false, poisonX: 1,
+  sleep: false,
   blind: false, confuse: false, drain: false, push: false,
   heal: false, regen: false, regenX: 1
 };
@@ -71,14 +73,11 @@ Hooks.once("init", () => {
 
   CONFIG.DIGIMON = DIGIMON;
 
-  // Replace all default Foundry status effects with just Defeated
+  // Replace all default Foundry status effects with only the ones used by this system
   CONFIG.statusEffects = [
-    {
-      id:      "defeated",
-      name:    "Defeated",
-      icon:    "icons/svg/skull.svg",
-      overlay: true
-    }
+    { id: "defeated", name: "Defeated", icon: "icons/svg/skull.svg",  overlay: true },
+    { id: "poisoned", name: "Poisoned", icon: "icons/svg/poison.svg" },
+    { id: "sleep",    name: "Sleep",    icon: "icons/svg/sleep.svg"  }
   ];
 
   Handlebars.registerHelper("eq", (a, b) => a === b);

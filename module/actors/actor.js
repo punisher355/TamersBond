@@ -64,8 +64,8 @@ export class DigitalDestinyActor extends Actor {
       crestRestore: Math.floor(pool * 0.50)
     };
 
-    // Tamer HP uses effective sincerity
-    const HP_BASE = 8, HP_PER_SINCERITY = 3;
+    // Tamer HP: 12 + (sincerity rank × 4)
+    const HP_BASE = 12, HP_PER_SINCERITY = 4;
     const sincerity     = system.crests.sincerity ?? {};
     const sincEffective = (sincerity.rank ?? 1) + (sincerity.gearBonus ?? 0);
     system.hp.max   = HP_BASE + sincEffective * HP_PER_SINCERITY;
@@ -105,8 +105,9 @@ export class DigitalDestinyActor extends Actor {
                                + (system.stats[stat].conditional ?? 0);
     }
 
+    // Digimon HP: 20 + (total Sincerity × 4)
     const sinTotal  = system.stats.sincerity?.total ?? 0;
-    system.hp.max   = 10 + sinTotal * 2;
+    system.hp.max   = 20 + sinTotal * 4;
     system.hp.value = Math.min(system.hp.value ?? system.hp.max, system.hp.max);
 
     system.hope = crests.hope?.rank ?? 0;

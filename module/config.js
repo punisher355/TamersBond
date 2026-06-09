@@ -299,6 +299,8 @@ DIGIMON.statusTypes = {
   drain:    { label: "Drain",    color: "#27ae60", icon: "fas fa-tint",              hasX: false, hasY: false },
   push:     { label: "Push",     color: "#a04030", icon: "fas fa-expand-arrows-alt", hasX: false, hasY: false },
   regen:    { label: "Regen",    color: "#2ecc71", icon: "fas fa-heartbeat",         hasX: true,  hasY: false, xLabel: "HP/Turn" },
+  poison:   { label: "Poison",   color: "#52be80", icon: "fas fa-skull-crossbones",  hasX: true,  hasY: false, xLabel: "Stacks" },
+  sleep:    { label: "Sleep",    color: "#8e44ad", icon: "fas fa-moon",              hasX: false, hasY: false },
   custom:   { label: "Custom",   color: "#666666", icon: "fas fa-star",              hasX: true,  hasY: true,  xLabel: "X Value", yLabel: "Y Value" }
 };
 
@@ -325,5 +327,7 @@ export function computeTagString(tags) {
   if (tags.push)     p.push("[PUSH]");
   if (tags.heal)     p.push("[HEAL]");
   if (tags.regen)    p.push(`[REGEN ${tags.regenX ?? 1}]`);
+  if (tags.poison)   p.push(`[POISON ${tags.poisonX ?? 1}]`);
+  if (tags.sleep)    p.push("[SLEEP]");
   return p.join(" ");
 }

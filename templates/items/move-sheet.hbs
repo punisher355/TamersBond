@@ -162,6 +162,19 @@
                    {{#if system.tags.push}}checked{{/if}} />
             PUSH <span class="tag-hint">— push target (Courage difference in spaces, min 1)</span>
           </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.poison" data-param-for="poison"
+                   {{#if system.tags.poison}}checked{{/if}} />
+            POISON
+            <input class="tag-param" type="number" name="system.tags.poisonX" data-tag="poison"
+                   value="{{system.tags.poisonX}}" min="1" max="10" />
+            <span class="tag-hint">stacks — triggers on natural 15+, deals stacks dmg at start of turn</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.sleep" data-param-for=""
+                   {{#if system.tags.sleep}}checked{{/if}} />
+            SLEEP <span class="tag-hint">— target skips next turn; breaks on taking damage</span>
+          </label>
         </div>
 
         <div class="tag-category">
