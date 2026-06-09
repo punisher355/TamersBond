@@ -1,0 +1,58 @@
+{
+  "name": "Takuya",
+  "season": 4,
+  "img": "Takuya.webp",
+  "crest": "Courage",
+  "entryRequirement": "Courage rank 3",
+  "abilities": [
+    {
+      "name": "First to Move",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+)",
+      "description": "At the start of each encounter your partner Digimon may immediately move up to 2 spaces before the first turn begins. This movement does not cost an action."
+    },
+    {
+      "name": "I Can Take It",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+)",
+      "description": "Once per encounter when your partner Digimon takes damage that would reduce them below half their maximum HP for their current stage, they gain temporary HP equal to your Courage rank."
+    },
+    {
+      "name": "Burning Will",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Courage rank 4",
+      "description": "Once per encounter when your partner Digimon's attack misses, their next attack roll this turn gains +3."
+    },
+    {
+      "name": "Against the Odds",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Courage rank 4",
+      "description": "Your partner Digimon deals +2 damage on all attacks while they are below half their maximum HP."
+    },
+    {
+      "name": "Blaze of Glory",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Burning Will, Courage rank 5",
+      "description": "Once per session when your partner Digimon would be reduced to 0 HP, you may spend 8 Hope to keep them at 1 HP instead. They do not cascade. They do not dedigivolve."
+    },
+    {
+      "name": "Push Through",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Against the Odds, Courage rank 5",
+      "description": "Once per encounter at the start of your turn, if your partner Digimon took damage last round, they may immediately move up to 2 spaces as a Free Action."
+    },
+    {
+      "name": "Unified Flame",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Courage rank 7",
+      "description": "Once per session at the start of your turn you may declare Unified Flame. For the rest of this encounter your partner Digimon deals +3 damage on all attacks and cannot be reduced below 1 HP by any single hit — if they are at 1 HP and take any further damage, that damage applies normally. Additionally at the start of each of your turns, if your partner Digimon's HP is below 5, it is immediately restored to 5. This lasts until the end of the encounter or until your Hope hits 0."
+    }
+  ]
+}

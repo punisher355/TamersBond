@@ -1,0 +1,58 @@
+{
+  "name": "Zoe",
+  "season": 4,
+  "img": "Zoe.webp",
+  "crest": "Sincerity",
+  "entryRequirement": "Sincerity rank 3",
+  "abilities": [
+    {
+      "name": "Unyielding",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+)",
+      "description": "Once per encounter when your partner Digimon takes damage, they may immediately move up to 2 spaces as a Free Action."
+    },
+    {
+      "name": "Honest Threat",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+)",
+      "description": "Once per encounter as a Free Action, choose one enemy Digimon within 4 spaces of your partner. That enemy takes -2 to their next attack roll."
+    },
+    {
+      "name": "Stand Your Ground",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Sincerity rank 4",
+      "description": "Once per encounter when your partner Digimon is pushed, knocked back, or forcibly moved by an enemy ability, you may negate the movement entirely."
+    },
+    {
+      "name": "Raw Edge",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Sincerity rank 4",
+      "description": "Once per encounter your partner Digimon may make one additional attack as a Free Action at the end of their turn. This attack deals half damage."
+    },
+    {
+      "name": "Speak Plainly",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Stand Your Ground, Sincerity rank 5",
+      "description": "Once per session at the start of an encounter, choose one ally. For this encounter that ally's partner Digimon gains +2 to all attack rolls."
+    },
+    {
+      "name": "Full Commitment",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Raw Edge, Sincerity rank 5",
+      "description": "Once per encounter when your partner Digimon uses a move with the CHARGE tag, they deal +4 damage on that attack."
+    },
+    {
+      "name": "Absolute Honesty",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Sincerity rank 7",
+      "description": "Once per session at the start of your turn you may activate Absolute Honesty by spending Hope equal to your Sincerity rank. Until the end of this encounter your partner Digimon cannot miss — every attack roll is treated as a hit regardless of the result. A natural 1 deals no damage but the attack still connects, all status effects apply as if it were a hit, and any abilities that trigger on a hit trigger normally."
+    }
+  ]
+}

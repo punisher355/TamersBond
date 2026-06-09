@@ -1,0 +1,58 @@
+{
+  "name": "Tommy",
+  "season": 4,
+  "img": "Tommy.webp",
+  "crest": "Love",
+  "entryRequirement": "Love rank 3",
+  "abilities": [
+    {
+      "name": "Looked After",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "At the start of each encounter your partner Digimon gains temporary HP equal to your Love rank."
+    },
+    {
+      "name": "Quiet Determination",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "Once per encounter when your partner Digimon takes damage, they gain +1 to all attack rolls for the rest of this round. It stacks up to +3."
+    },
+    {
+      "name": "I Can Do This",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Love rank 4",
+      "description": "Once per encounter when your partner Digimon's HP drops below half their maximum for their current stage, they gain +2 to all damage rolls for the rest of the encounter."
+    },
+    {
+      "name": "Protect Them Back",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Love rank 4",
+      "description": "Once per encounter when an enemy Digimon adjacent to your partner Digimon initiates a grapple against an allied Digimon, you may force that grapple to target your partner Digimon instead."
+    },
+    {
+      "name": "Growing Up",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "I Can Do This, Looked After, Love rank 5",
+      "description": "Once per session at the start of an encounter, your partner Digimon's temporary HP from Looked After is doubled."
+    },
+    {
+      "name": "Steady Resolve",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Protect Them Back, Love rank 5",
+      "description": "Once per encounter when your partner Digimon is targeted by a grapple, your partner Digimon gains +3 to their grapple resistance check."
+    },
+    {
+      "name": "Not a Kid Anymore",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Love rank 7",
+      "description": "Once per session as a Free Action on your turn, you may spend any amount of your own HP — leaving yourself at a minimum of 1 HP — to grant that same amount as temporary HP to yourself, your partner Digimon, and all allied Digimon currently on the field."
+    }
+  ]
+}

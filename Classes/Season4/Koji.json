@@ -1,0 +1,58 @@
+{
+  "name": "Koji",
+  "season": 4,
+  "img": "Koji.webp",
+  "crest": "Reliability",
+  "entryRequirement": "Reliability rank 3",
+  "abilities": [
+    {
+      "name": "Calculated Strike",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Reliability rank 3+)",
+      "description": "Once per encounter before your partner Digimon makes an attack roll, you may add your Reliability rank to the roll."
+    },
+    {
+      "name": "Stand Alone",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Reliability rank 3+)",
+      "description": "When your partner Digimon is the only allied Digimon currently on the field, they gain +2 to all defensive checks."
+    },
+    {
+      "name": "Precise Form",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
+      "description": "Once per encounter your partner Digimon may reroll one attack roll and take the higher result."
+    },
+    {
+      "name": "Cold Read",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
+      "description": "Once per encounter as a Free Action, name one enemy Digimon. Until the end of this round your partner Digimon's attacks against that target ignore 2 points of damage reduction."
+    },
+    {
+      "name": "Lone Wolf Stance",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Precise Form, Reliability rank 5",
+      "description": "Once per encounter at the start of your turn, you may declare Lone Wolf Stance. Until the start of your next turn your partner Digimon cannot be targeted by status effects."
+    },
+    {
+      "name": "The Right Move",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Cold Read, Reliability rank 5",
+      "description": "Once per session after your partner Digimon's attack hits, you may deal maximum damage instead of rolling."
+    },
+    {
+      "name": "Twin Souls",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Reliability rank 7",
+      "description": "Once per session at the start of your turn you may activate Twin Souls. For the rest of this encounter your partner Digimon gains +3 to all attack rolls and all damage rolls. Additionally when they would take damage you may spend 3 Hope to reduce it by your Reliability rank."
+    }
+  ]
+}

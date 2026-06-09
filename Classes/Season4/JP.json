@@ -1,0 +1,58 @@
+{
+  "name": "JP",
+  "season": 4,
+  "img": "JP.webp",
+  "crest": "Friendship",
+  "entryRequirement": "Friendship rank 3",
+  "abilities": [
+    {
+      "name": "Backup Plan",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Friendship rank 3+)",
+      "description": "Once per encounter when an allied Digimon within 3 spaces takes damage, your partner Digimon gains +2 to their next attack roll."
+    },
+    {
+      "name": "Crowd Presence",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Friendship rank 3+)",
+      "description": "Your partner Digimon gains +1 to all attack rolls for each allied Digimon currently on the field, up to a maximum of +3."
+    },
+    {
+      "name": "Take the Hit",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Friendship rank 4",
+      "description": "Once per encounter when an allied Digimon within 2 spaces would take damage, your partner Digimon may take that damage instead."
+    },
+    {
+      "name": "Group Momentum",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Friendship rank 4",
+      "description": "Once per encounter at the start of your turn, if at least two allied Digimon acted last round, your partner Digimon gains temporary HP equal to your Friendship rank."
+    },
+    {
+      "name": "Thunder Formation",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Take the Hit, Friendship rank 5",
+      "description": "Once per encounter as a Basic Action, choose one allied Digimon within 3 spaces. Until the start of your next turn that Digimon gains +3 to their damage resistance."
+    },
+    {
+      "name": "Never Alone",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Group Momentum, Friendship rank 5",
+      "description": "Once per session when your partner Digimon would trigger the defeat cascade, you may spend 6 Hope to prevent it if there is at least one other allied Digimon still on the field."
+    },
+    {
+      "name": "For Everyone",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Friendship rank 7",
+      "description": "Once per session at the start of an encounter, all allied Digimon and Tamers on the field — including yourself — gain temporary HP equal to your Friendship rank x3."
+    }
+  ]
+}

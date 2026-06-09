@@ -49,6 +49,13 @@
       "system": "digital-destiny"
     },
     {
+      "name": "season4-classes",
+      "label": "Season 4 Class Abilities",
+      "path": "packs/season4-classes.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
       "name": "season1-items",
       "label": "Season 1 Items",
       "path": "packs/season1-items.db",
@@ -87,6 +94,13 @@
       "name": "digimon-moves",
       "label": "Digimon Signature Moves",
       "path": "packs/digimon-moves.db",
+      "type": "Item",
+      "system": "digital-destiny"
+    },
+    {
+      "name": "season4-items",
+      "label": "Season 4 Items",
+      "path": "packs/season4-items.db",
       "type": "Item",
       "system": "digital-destiny"
     }

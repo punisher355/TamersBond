@@ -1,0 +1,55 @@
+{
+  "name": "Frozen Berry Cluster",
+  "source": "season4",
+  "img": "FrozenBerryCluster.webp",
+  "type": "food",
+  "target": "digimon",
+  "timing": "outside-combat",
+  "cost": {
+    "digidollars": 45,
+    "real_money": 0,
+    "special": "Free \u2014 foraged in cold regions / 45 DD at merchants"
+  },
+  "effect": "Counts as a meal for Digimon only. Prevents hunger. Restores 8 HP to the Digimon and grants them +1 to all defensive checks for the current session.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "Digimon only. +8 HP. +1 to all defensive checks this session."
+}

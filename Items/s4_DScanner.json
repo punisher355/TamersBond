@@ -1,0 +1,55 @@
+{
+  "name": "D-Scanner",
+  "source": "season4",
+  "img": "DScanner.webp",
+  "type": "digivice",
+  "target": "tamer",
+  "timing": "passive",
+  "cost": {
+    "digidollars": 0,
+    "real_money": 0,
+    "special": "Loot only \u2014 cannot be purchased"
+  },
+  "effect": "Must be equipped to digivolve your partner. Glows when wild or hostile Digimon are within 6 spaces. As a Free Action, scan one visible enemy to learn their Attribute and Element. As a Basic Action, perform a deep scan on one visible enemy to learn their Attribute, Element, and one combat stat of your choice. The D-Scanner supports digivolution up to Mega stage. Compatible with Spirit items \u2014 required to use any Legendary Spirit your Tamer carries.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "Required to use Legendary Spirits. Cap: Mega. Free Action: Attribute + Element. Basic Action: deep scan + 1 combat stat."
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Trailmon Bento",
+  "source": "season4",
+  "img": "TrailmonBento.webp",
+  "type": "food",
+  "target": "tamer",
+  "timing": "outside-combat",
+  "cost": {
+    "digidollars": 90,
+    "real_money": 35,
+    "special": "Sold on Trailmon routes"
+  },
+  "effect": "Counts as a meal for the Tamer. Prevents hunger. Restores 10 HP and grants +1 to all Core Drive and Reinforce skill rolls for the current session.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 1,
+    "coreDrive": 1,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "+10 HP. +1 Core Drive and Reinforce this session."
+}

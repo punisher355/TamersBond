@@ -1,0 +1,55 @@
+{
+  "name": "Frontier Goggles",
+  "source": "season4",
+  "img": "FrontierGoggles.webp",
+  "type": "clothing",
+  "target": "tamer",
+  "timing": "passive",
+  "cost": {
+    "digidollars": 0,
+    "real_money": 25,
+    "special": ""
+  },
+  "effect": "+2 to all Radar skill rolls while equipped.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 2,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": ""
+}

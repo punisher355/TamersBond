@@ -1,0 +1,55 @@
+{
+  "name": "Spirit Resonance Charm",
+  "source": "season4",
+  "img": "SpiritResonanceCharm.webp",
+  "type": "supply",
+  "target": "tamer",
+  "timing": "basic-action",
+  "cost": {
+    "digidollars": 200,
+    "real_money": 0,
+    "special": "rare"
+  },
+  "effect": "Once as a Basic Action, attune this charm to one Legendary Spirit in your possession. Until the end of the session digivolving into the form linked to that Spirit costs 2 fewer Hope. The charm is consumed after the session ends.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "Reduces digivolution Hope cost by 2 for one linked Spirit form, for the rest of the session. Consumed at session end."
+}
