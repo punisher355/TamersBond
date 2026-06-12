@@ -1,0 +1,59 @@
+{
+  "name": "Keenan (Digital Origin)",
+  "season": 5,
+  "img": "Keenan.webp",
+  "crest": "Courage / Sincerity",
+  "entryRequirement": "Courage rank 3 and Sincerity rank 3 (both required)",
+  "treeNote": "A Tamer may hold abilities from both the Digital Origin tree and the Redeemed tree simultaneously. Origin abilities do not require relinquishing Redeemed abilities or vice versa.",
+  "abilities": [
+    {
+      "name": "Pack Instinct",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+ and Sincerity rank 3+)",
+      "description": "While the Tamer with this class is within 1 space of their partner Digimon, the partner gains +2 to all attack rolls. The bonus drops immediately if the Tamer moves further away."
+    },
+    {
+      "name": "Raised Wild",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Courage rank 3+ and Sincerity rank 3+)",
+      "description": "Once per encounter when the Tamer with this class fails a skill check while in the Digital World, they may immediately reroll it using Sincerity instead of the original stat."
+    },
+    {
+      "name": "Feral Coordination",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Pack Instinct, Courage rank 4",
+      "description": "While Pack Instinct's bonus is active, once per encounter when the partner Digimon hits with an attack, the Tamer with this class may immediately follow up as a Free Action with a Brawl check DN 10 against the same target. On a success the target is Slowed until the end of their next turn. On a failure nothing additional happens."
+    },
+    {
+      "name": "Distrust of Rules",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Sincerity rank 4",
+      "description": "Once per encounter when the Tamer with this class is targeted by a social skill check from an NPC — an attempt to intimidate, deceive, or persuade them — they may make a free Sincerity check DN 10 to recognise the attempt. On a success the check automatically fails."
+    },
+    {
+      "name": "Reach Them",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Feral Coordination, Courage rank 5",
+      "description": "Once per session the Tamer with this class may spend their Basic Action to reach out to a corrupted allied Digimon. Make a Sincerity check DN 13. On a success the Digimon dedigivolves one stage and loses the corruption status immediately. On a failure the attempt has no effect and cannot be tried again this session on the same Digimon."
+    },
+    {
+      "name": "Not Your Enemy",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "At least 1 Row 2 ability, Sincerity rank 5",
+      "description": "Once per session when a wild or neutral Digimon would initiate combat against the party, the Tamer with this class may attempt to communicate with them before the encounter begins. Make a Sincerity check DN 13. On a success the Digimon pauses — the encounter does not begin and the GM determines their response. On a failure combat proceeds as normal."
+    },
+    {
+      "name": "Two Who Are One",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Courage rank 7 and Sincerity rank 7",
+      "description": "Once per session at the start of the Tamer's turn, they may activate Two Who Are One. Until the end of the encounter: Pack Instinct's bonus increases to +4. Feral Coordination no longer requires both to be within 1 space — its range extends to the Tamer's Sincerity rank in spaces. Whenever either the Tamer or their partner Digimon is healed, the other also restores HP equal to half the amount healed (rounded down)."
+    }
+  ]
+}

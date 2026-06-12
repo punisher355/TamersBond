@@ -1,0 +1,58 @@
+{
+  "name": "Duskmon",
+  "season": 4,
+  "img": "Duskmon.webp",
+  "crest": "Knowledge",
+  "entryRequirement": "Knowledge rank 3",
+  "abilities": [
+    {
+      "name": "Mark the Target",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 3+)",
+      "description": "Once per encounter as a Free Action, designate one enemy Digimon as Marked. While Marked, that enemy takes -2 to all attack rolls. Only one enemy can be Marked at a time. Switching the Mark costs your Free Action."
+    },
+    {
+      "name": "Predator's Patience",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 3+)",
+      "description": "Once per encounter if your partner Digimon does not attack on their turn, they gain +4 to their next attack roll on their following turn."
+    },
+    {
+      "name": "Tear Apart",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Mark the Target, Knowledge rank 4",
+      "description": "When your partner Digimon hits a Marked enemy, that enemy loses 1 point of damage resistance until the end of the encounter. This stacks — each hit reduces their resistance by 1 more."
+    },
+    {
+      "name": "Eyes Everywhere",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Knowledge rank 4",
+      "description": "Once per encounter as a Free Action, you may learn the current HP total of any one visible enemy. Additionally your partner Digimon deals +2 damage to any enemy currently below half their maximum HP."
+    },
+    {
+      "name": "Relentless",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Tear Apart, Knowledge rank 5",
+      "description": "Your partner Digimon's attacks against a Marked enemy cannot be interrupted or redirected — abilities that would force your partner to retarget or miss their Marked enemy automatically fail against them."
+    },
+    {
+      "name": "Isolate",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Eyes Everywhere, Knowledge rank 5",
+      "description": "Once per encounter as a Basic Action, choose one enemy Digimon. Until the end of the round that enemy cannot be healed, cannot receive buffs, and cannot benefit from any ally's protective abilities."
+    },
+    {
+      "name": "The Dark Warrior",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Knowledge rank 7",
+      "description": "Once per session at the start of your turn you may declare The Dark Warrior. Mark up to two enemies simultaneously for the rest of this encounter — both are Marked at once, costs and effects apply to both. Additionally while The Dark Warrior is active your partner Digimon deals +3 damage on all attacks against Marked enemies. This lasts until the end of the encounter or until both Marked enemies are defeated."
+    }
+  ]
+}

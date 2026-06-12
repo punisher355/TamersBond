@@ -1,0 +1,58 @@
+{
+  "name": "Yoshino",
+  "season": 5,
+  "img": "Yoshino.webp",
+  "crest": "Love",
+  "entryRequirement": "Love rank 3",
+  "abilities": [
+    {
+      "name": "Cover",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "Once per encounter when an allied Tamer or Digimon is hit by an attack, the Tamer with this class may use their Free Action off-turn to reduce the damage dealt by their Love rank."
+    },
+    {
+      "name": "Open the Door",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Love rank 3+)",
+      "description": "Once per round on the Tamer's turn, one allied Tamer of their choice may immediately take a Free Action as if it were their own turn. This does not consume that ally's Free Action for the round."
+    },
+    {
+      "name": "Cover II",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Cover, Love rank 4",
+      "description": "Cover may now be used twice per encounter instead of once."
+    },
+    {
+      "name": "Not Yet",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Open the Door, Love rank 4",
+      "description": "Once per encounter when an enemy declares an attack against an allied Tamer, the Tamer with this class may use Open the Door off-turn to give that allied Tamer a Free Action before the attack resolves."
+    },
+    {
+      "name": "Shut Down",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Cover II, Love rank 5",
+      "description": "When the Tamer with this class uses Cover, the attacker loses their Move Action on their next turn."
+    },
+    {
+      "name": "Any Time",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Not Yet, Love rank 5",
+      "description": "Open the Door can now be used off-turn as a Free Action — not just on the Tamer's own turn. Once per round regardless of whose turn it is."
+    },
+    {
+      "name": "All of It",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Love rank 7",
+      "description": "Once per session the Tamer with this class may give up their entire turn. Two allied Tamers of their choice each immediately take a full bonus turn with all of their normal actions available. These bonus turns resolve one at a time in the order the Tamer with this class chooses. The Tamer with this class takes no actions this round."
+    }
+  ]
+}

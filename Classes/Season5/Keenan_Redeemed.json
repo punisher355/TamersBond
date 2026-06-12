@@ -1,0 +1,59 @@
+{
+  "name": "Keenan (Redeemed)",
+  "season": 5,
+  "img": "Keenan.webp",
+  "crest": "Love / Sincerity",
+  "entryRequirement": "At least 2 abilities from the Keenan Origin tree, Love rank 3",
+  "treeNote": "A Tamer may hold abilities from both the Digital Origin tree and the Redeemed tree simultaneously. Origin abilities do not require relinquishing Redeemed abilities or vice versa.",
+  "abilities": [
+    {
+      "name": "I Can Learn This",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (2+ Origin abilities, Love rank 3+)",
+      "description": "Once per session when the Tamer with this class fails a skill check involving human social interaction — Broadcast, Negotiate, or a similar context-specific check — they do not simply fail. They earn a free retry later this session on a comparable check with +2 to the roll."
+    },
+    {
+      "name": "Common Ground",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (2+ Origin abilities, Love rank 3+)",
+      "description": "When the Tamer with this class makes a social skill check against a hostile Digimon, they gain a bonus equal to their Sincerity rank. They grew up among Digimon. That is not something that goes away."
+    },
+    {
+      "name": "Bridge Between Worlds",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Common Ground, Love rank 4",
+      "description": "The bonus from Common Ground now extends to all allied Tamers making social skill checks against hostile Digimon in the same interaction. The Tamer with this class speaks first and the door opens for everyone behind them."
+    },
+    {
+      "name": "Worth Protecting",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "I Can Learn This, Love rank 4",
+      "description": "Once per session when the party is in a non-combat social situation, the Tamer with this class may spend a Free Action to draw on their history. The GM grants the party one piece of information about the current situation they would not otherwise have — a Digimon's true motive, a hidden danger, or a fact that changes how they approach what comes next."
+    },
+    {
+      "name": "Two Worlds, One Heart",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Bridge Between Worlds, Love rank 5",
+      "description": "Once per encounter the Tamer with this class may spend 4 Hope as a Free Action to grant both themselves and their partner Digimon resistance to the next hit that would reduce either of them below half their current HP. That hit deals half its damage to whichever of them it targets."
+    },
+    {
+      "name": "I Know Who I Am",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Worth Protecting, Love rank 5",
+      "description": "The Tamer with this class is immune to social skill checks made against them by hostile Digimon. Additionally once per session when a Digimon NPC is hostile to the party, the Tamer may make a Sincerity check DN 14 as a Basic Action. On a success the Digimon's disposition shifts from hostile to neutral for the rest of the scene."
+    },
+    {
+      "name": "The Boy Who Came Home",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 Redeemed abilities, Love rank 7",
+      "description": "Once per session at the start of the Tamer's turn, they may activate this ability. All allied Tamers and Digimon currently on the field gain temporary HP equal to this Tamer's Love rank × 2. For the rest of this encounter the Sincerity rank bonus from Common Ground applies to all social checks the party makes — not just those against hostile Digimon."
+    }
+  ]
+}

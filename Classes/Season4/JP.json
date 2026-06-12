@@ -20,7 +20,7 @@
       "description": "Your partner Digimon gains +1 to all attack rolls for each allied Digimon currently on the field, up to a maximum of +3."
     },
     {
-      "name": "Take the Hit",
+      "name": "Shield the Pack",
       "row": 2,
       "expCost": 500,
       "requirements": "At least 1 Row 1 ability, Friendship rank 4",
@@ -37,7 +37,7 @@
       "name": "Thunder Formation",
       "row": 3,
       "expCost": 700,
-      "requirements": "Take the Hit, Friendship rank 5",
+      "requirements": "Shield the Pack, Friendship rank 5",
       "description": "Once per encounter as a Basic Action, choose one allied Digimon within 3 spaces. Until the start of your next turn that Digimon gains +3 to their damage resistance."
     },
     {

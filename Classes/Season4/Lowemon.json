@@ -1,0 +1,59 @@
+{
+  "name": "Löwemon",
+  "season": 4,
+  "img": "Lowemon.webp",
+  "crest": "Sincerity",
+  "entryRequirement": "Sincerity rank 3 AND Knowledge rank 3",
+  "note": "A Tamer who has also unlocked Duskmon's tree may purchase Löwemon Row 1 abilities at 50 EXP discount each.",
+  "abilities": [
+    {
+      "name": "Shadow's Guard",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+, Knowledge rank 3+)",
+      "description": "Once per encounter when an allied Digimon adjacent to your partner Digimon is targeted by an attack, your partner Digimon may use their Free Action to step in front of the attack. Your partner takes the hit instead. This triggers before the attack roll — the attacker must roll against your partner's stats, not the original target's."
+    },
+    {
+      "name": "Purified Edge",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Sincerity rank 3+, Knowledge rank 3+)",
+      "description": "Once per encounter your partner Digimon may apply a Weaken status to one enemy on a successful hit — the target takes -2 to their next attack roll."
+    },
+    {
+      "name": "Weight of What Was",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Shadow's Guard, Sincerity rank 4",
+      "description": "When your partner Digimon uses Shadow's Guard and takes the hit on behalf of an ally, they deal +4 damage on their next attack this encounter."
+    },
+    {
+      "name": "Still Standing",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "At least 1 Row 1 ability, Sincerity rank 4",
+      "description": "Once per encounter at the end of any round in which your partner Digimon took damage, they may immediately move up to 2 spaces as a Free Action."
+    },
+    {
+      "name": "Brother's Watch",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Weight of What Was, Sincerity rank 5",
+      "description": "Once per session when an allied Tamer is reduced to 0 HP, your partner Digimon immediately gains +3 to all attack and damage rolls for the rest of the encounter. The bonus does not require an action to activate — it triggers the moment the Tamer falls."
+    },
+    {
+      "name": "Light Left Behind",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Still Standing, Sincerity rank 5",
+      "description": "Once per encounter as a Basic Action, choose one allied Digimon. Remove all negative status effects from them. Additionally that Digimon gains +2 to all attack rolls until the end of the round."
+    },
+    {
+      "name": "The Other Side",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Sincerity rank 7",
+      "description": "Once per session at the start of your turn you may declare The Other Side. For the rest of this encounter your partner Digimon gains the following: when they take damage on behalf of an ally using Shadow's Guard, they take only half that damage. When they defeat an enemy, the nearest allied Digimon restores HP equal to your Sincerity rank. When your Hope hits 0, this ability ends but your partner Digimon stays at their current stage for 1 additional round before reverting."
+    }
+  ]
+}

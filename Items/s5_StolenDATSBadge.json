@@ -1,0 +1,55 @@
+{
+  "name": "Stolen DATS Badge",
+  "source": "season5",
+  "img": "StolenDATSBadge.webp",
+  "type": "equipment",
+  "target": "tamer",
+  "timing": "basic-action",
+  "cost": {
+    "digidollars": 0,
+    "real_money": 0,
+    "special": "Loot only \u2014 cannot be purchased"
+  },
+  "effect": "As a Basic Action, present this badge to bluff your way past low-level DATS checkpoints or convince Digimon that you have official authority. Make a Broadcast check DN 11. On a success the bluff holds for this scene. On a failure you are identified and the GM determines the consequence. Does not work on DATS agents who know the bearer personally.",
+  "stat_bonuses": {
+    "courage": 0,
+    "friendship": 0,
+    "love": 0,
+    "knowledge": 0,
+    "sincerity": 0,
+    "reliability": 0,
+    "hope": 0
+  },
+  "combat_bonuses": {
+    "hp_damage_reduction": 0,
+    "attack_bonus": 0,
+    "damage_bonus": 0
+  },
+  "skill_bonuses": {
+    "blitz": 0,
+    "ironclad": 0,
+    "crusher": 0,
+    "ghost": 0,
+    "roar": 0,
+    "scan": 0,
+    "rally": 0,
+    "broadcast": 0,
+    "mend": 0,
+    "radar": 0,
+    "tame": 0,
+    "decode": 0,
+    "jackIn": 0,
+    "modify": 0,
+    "trace": 0,
+    "archive": 0,
+    "command": 0,
+    "playback": 0,
+    "firewall": 0,
+    "reinforce": 0,
+    "coreDrive": 0,
+    "zeroError": 0,
+    "fieldOps": 0,
+    "recovery": 0
+  },
+  "notes": "Broadcast check DN 11. Fails against agents who know the bearer. One scene per use."
+}

@@ -10,7 +10,7 @@
     "real_money": 35,
     "special": ""
   },
-  "effect": "As a Basic Action, make a melee attack using your Reliability skill rank instead of your Digimon's Courage \u2014 this is a Tamer attack, not a Digimon attack. Deals 1d6 + Reliability rank damage. Does not benefit from Digimon stats or abilities.",
+  "effect": "A practice sword carried into the Digital World. As a Basic Action, make a melee attack using your Reliability skill rank instead of your Digimon's Courage \u2014 this is a Tamer attack, not a Digimon attack. Deals 1d6 + Reliability rank damage. Does not benefit from Digimon stats or abilities.",
   "stat_bonuses": {
     "courage": 0,
     "friendship": 0,

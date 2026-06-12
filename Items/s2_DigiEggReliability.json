@@ -10,7 +10,7 @@
     "real_money": 0,
     "special": "Loot only \u2014 cannot be purchased"
   },
-  "effect": "When the Tamer spends their Basic Action, the Digimon immediately Armor Digivolves into Submarimon. The form lasts 7 turns. No Hope cost. Reusable once per encounter. Not consumed on use. Does not occupy an equipment slot. Compatible species documented in the Season 2 Digimon compendium.",
+  "effect": "When the Tamer spends their Basic Action, the Digimon immediately Armor Digivolves into Submarimon. The form lasts 7 turns. No Hope cost. Compatible species are documented in the Season 2 Digimon compendium. See Part 2: Rules for full Armor Digivolution rules.",
   "stat_bonuses": {
     "courage": 0,
     "friendship": 0,

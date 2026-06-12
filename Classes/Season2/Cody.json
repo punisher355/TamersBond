@@ -25,7 +25,7 @@
       "description": "While Kendo Stance is active your Digimon also gains +2 to all attack rolls. You are not hiding behind that wall — you are waiting for the right moment to strike through it."
     },
     {
-      "name": "Measured Response",
+      "name": "Calculated Response",
       "row": 2,
       "expCost": 500,
       "requirements": "At least 1 Row 1 ability, Reliability rank 4",

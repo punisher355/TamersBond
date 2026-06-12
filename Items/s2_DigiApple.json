@@ -10,7 +10,7 @@
     "real_money": 0,
     "special": "Digital World foraging or merchants"
   },
-  "effect": "Restore 6 HP to one Digimon. Tamers can eat them too but they are too sweet for most human tastes.",
+  "effect": "Restore 6 HP to one Digimon.",
   "stat_bonuses": {
     "courage": 0,
     "friendship": 0,

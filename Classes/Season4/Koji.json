@@ -6,7 +6,7 @@
   "entryRequirement": "Reliability rank 3",
   "abilities": [
     {
-      "name": "Calculated Strike",
+      "name": "Precision Shot",
       "row": 1,
       "expCost": 300,
       "requirements": "Entry requirement met (Reliability rank 3+)",
@@ -27,7 +27,7 @@
       "description": "Once per encounter your partner Digimon may reroll one attack roll and take the higher result."
     },
     {
-      "name": "Cold Read",
+      "name": "Exposed Weakness",
       "row": 2,
       "expCost": 500,
       "requirements": "At least 1 Row 1 ability, Reliability rank 4",
@@ -44,7 +44,7 @@
       "name": "The Right Move",
       "row": 3,
       "expCost": 700,
-      "requirements": "Cold Read, Reliability rank 5",
+      "requirements": "Exposed Weakness, Reliability rank 5",
       "description": "Once per session after your partner Digimon's attack hits, you may deal maximum damage instead of rolling."
     },
     {

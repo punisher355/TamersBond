@@ -10,7 +10,7 @@
     "real_money": 0,
     "special": "Loot only \u2014 cannot be purchased"
   },
-  "effect": "As a Free Action, check the D-Terminal to identify which Digi-Eggs in your possession are compatible with your partner's current form. As a Basic Action, interface with Digital World data structures within reach. Grants +2 to all Archive skill rolls when used to look up Digimon data. Cannot be used for Jack In or Decode checks.",
+  "effect": "A handheld device paired with the D-3 Digivice. As a Free Action, check the D-Terminal to identify which Digi-Eggs in your possession are compatible with your partner's current form. As a Basic Action, interface with Digital World data structures within reach \u2014 similar to the Laptop but faster and more portable. Grants +2 to all Archive skill rolls when used to look up Digimon data. Cannot be used for Jack In or Decode checks \u2014 it is a reference device, not a hacking tool.",
   "stat_bonuses": {
     "courage": 0,
     "friendship": 0,

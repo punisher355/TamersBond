@@ -91,8 +91,8 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     }
 
     const sinTotal    = _statTotals.sincerity ?? 0;
-    context.hpMax     = 10 + sinTotal * 2;
-    context.hpFormula = `10 + (${sinTotal} Sincerity × 2) = ${context.hpMax}`;
+    context.hpMax     = 20 + sinTotal * 4;
+    context.hpFormula = `20 + (${sinTotal} Sincerity × 4) = ${context.hpMax}`;
 
     // Combat stat rows — six crest stats, no hard cap on invested
     context.statList = CREST_ORDER.map(key => {
@@ -258,7 +258,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       statTotals[key]   = (s.base ?? 0) + tb + (s.invested ?? 0) + (s.conditional ?? 0);
     }
     const sinTotal = statTotals.sincerity ?? 0;
-    const hpMax    = 10 + sinTotal * 2;
+    const hpMax    = 20 + sinTotal * 4;
     const expAvail = (sys.exp?.total ?? 0) - (sys.exp?.spent ?? 0);
 
     const statRows = CREST_ORDER.map(key => {
@@ -280,7 +280,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
           <div class="dd-det-section-title">HP</div>
           <div class="dd-det-row">
             <span class="dd-det-label">Max HP formula</span>
-            <span>10 + (${sinTotal} Sincerity × 2) = <strong>${hpMax}</strong></span>
+            <span>20 + (${sinTotal} Sincerity × 4) = <strong>${hpMax}</strong></span>
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">HP Current</span>

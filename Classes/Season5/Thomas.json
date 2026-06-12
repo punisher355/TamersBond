@@ -1,0 +1,58 @@
+{
+  "name": "Thomas",
+  "season": 5,
+  "img": "Thomas.webp",
+  "crest": "Knowledge",
+  "entryRequirement": "Knowledge rank 3",
+  "abilities": [
+    {
+      "name": "Mark Target",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 3+)",
+      "description": "The Tamer with this class designates one visible enemy as the Marked Target. That enemy's current HP total is immediately revealed to all allies and updates visibly whenever it changes. The Mark can be transferred to a different visible enemy as a Free Action on the Tamer's turn. Only one enemy can be Marked at a time. The Mark lasts until the target is defeated or the encounter ends."
+    },
+    {
+      "name": "Calculated Movement",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Entry requirement met (Knowledge rank 3+)",
+      "description": "The Tamer with this class gains bonus movement each turn equal to their Knowledge rank in squares. This is in addition to their normal movement and does not consume any action."
+    },
+    {
+      "name": "Exposed",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Mark Target, Knowledge rank 4",
+      "description": "The Marked Target takes +2 additional damage from every attack made by the Tamer's partner Digimon."
+    },
+    {
+      "name": "Calculated Disruption",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Calculated Movement, Knowledge rank 4",
+      "description": "When the Tamer with this class uses their bonus movement to enter a space adjacent to an enemy, that enemy loses their next Free Action. An enemy can only be disrupted this way once per encounter."
+    },
+    {
+      "name": "Open Season",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Exposed, Knowledge rank 5",
+      "description": "The Marked Target now takes +2 additional damage from every attack made by any allied Digimon, not just the partner. The bonuses from Exposed and Open Season do not stack — the total bonus is +2 regardless of how many allied Digimon are attacking."
+    },
+    {
+      "name": "Presence",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Calculated Disruption, Knowledge rank 5",
+      "description": "Once per encounter when the Tamer with this class ends their movement, all allied Digimon adjacent to them immediately recover HP equal to half the Tamer's current Hope total, rounded down."
+    },
+    {
+      "name": "Calculated Destruction",
+      "row": 4,
+      "expCost": 1000,
+      "requirements": "Both Row 3 abilities, Knowledge rank 7",
+      "description": "The flat +2 damage bonus on the Marked Target is replaced entirely. The Marked Target now takes additional damage equal to the Tamer's Knowledge rank from every attack made by any allied Digimon."
+    }
+  ]
+}
