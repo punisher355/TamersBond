@@ -322,8 +322,9 @@ function _sotColor(type) {
 }
 
 function _findActor(actorId) {
-  return game.actors.get(actorId)
-    ?? canvas.tokens?.placeables.find(t => t.actor?.id === actorId)?.actor
+  // Prefer the canvas token's actor so unlinked tokens update their own data, not the base actor
+  return canvas.tokens?.placeables.find(t => t.actor?.id === actorId)?.actor
+    ?? game.actors.get(actorId)
     ?? null;
 }
 
@@ -569,7 +570,7 @@ export function registerCombatHooks() {
       const targetName = btn.data("target-name");
       const damage     = parseInt(section.find(".dd-final-value").text()) || 0;
 
-      const target = game.actors.get(targetId);
+      const target = _findActor(targetId);
       if (!target) return ui.notifications.warn(`Actor "${targetName}" not found.`);
 
       const prevHp = target.system.hp?.value ?? 0;
@@ -589,8 +590,7 @@ export function registerCombatHooks() {
         const src = game.actors.get(sourceId);
         if (src) {
           const drainAmt = Math.max(1, Math.floor(damage / 2));
-          const srcStats = getActorStatTotals(src);
-          const srcMax   = src.type === "digimon" ? 10 + (srcStats?.sincerity ?? 0) * 2 : (src.system.hp?.max ?? 99);
+          const srcMax   = src.system.hp?.max ?? 99;
           await src.update({ "system.hp.value": Math.min(srcMax, (src.system.hp?.value ?? 0) + drainAmt) });
           appliedNotes.push(`Drain +${drainAmt} to ${src.name}`);
         }

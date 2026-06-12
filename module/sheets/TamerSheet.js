@@ -185,7 +185,8 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">HP Max</span>
-            <input type="number" name="hp.max" value="${sys.hp?.max ?? 0}" class="dd-det-input-wide" />
+            <span class="dd-det-readonly">${sys.hp?.max ?? 0}</span>
+            <span class="dd-det-hint">auto: 12 + Sincerity×4</span>
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">HP Temp</span>
