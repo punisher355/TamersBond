@@ -70,9 +70,9 @@ function _targetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags, 
   }
 
   let elemMult = 1;
-  if (movElem && defElem) {
-    if      (movElem === defElem)                              elemMult = 0.5;
-    else if ((weakTable[defElem] ?? []).includes(movElem))     elemMult = 1.5;
+  if (movElem && defElem && movElem !== "neutral") {
+    if      (movElem === defElem)                          elemMult = 0.5;
+    else if ((weakTable[defElem] ?? []).includes(movElem)) elemMult = 1.5;
   }
 
   const a = (mult, key) => attrMult === mult ? " active" : "";
