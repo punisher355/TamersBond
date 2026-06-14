@@ -1,5 +1,6 @@
 import { computeTagString }                    from "../config.js";
 import { getActorStatTotals, performAttackRoll } from "../combat.js";
+import { ItemLookup }                            from "../ItemLookup.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -11,7 +12,8 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       template: "systems/digital-destiny/templates/actors/tamer-sheet.hbs",
       width: 640,
       height: 720,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "crests" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "crests" }],
+      dragDrop: [{ dragSelector: ".dd-item-row", dropSelector: ".window-content" }]
     });
   }
 
@@ -133,9 +135,12 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       const label    = slotType.charAt(0).toUpperCase() + slotType.slice(1);
       return { slotType, label, equipped, all };
     });
-    context.equipmentItems = gearItems.filter(i => i.system.itemType === "equipment");
-    context.supplyItems    = gearItems.filter(i => i.system.itemType === "supply");
-    context.foodItems      = gearItems.filter(i => i.system.itemType === "food");
+    context.equipmentItems    = gearItems.filter(i => i.system.itemType === "equipment");
+    context.supplyItems       = gearItems.filter(i => i.system.itemType === "supply");
+    context.foodItems         = gearItems.filter(i => i.system.itemType === "food");
+    context.spiritItems       = gearItems.filter(i => i.system.itemType === "legendary-spirit");
+    context.modifyCardItems   = gearItems.filter(i => i.system.itemType === "modify-card");
+    context.digiEggItems      = gearItems.filter(i => i.system.itemType === "digi-egg");
 
     const D2 = CONFIG.DIGIMON;
     context.statusItems = this.actor.items.filter(i => i.type === "status").map(s => {
@@ -360,7 +365,18 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.gear-equip').on('click',          ev => this._onGearEquip(ev));
     html.find('.gear-unequip').on('click',        ev => this._onGearUnequip(ev));
     html.find('.gear-delete').on('click',         ev => this._onGearDelete(ev));
+    html.find('.qty-decrease').on('click',        ev => this._onQtyDecrease(ev));
+    html.find('.qty-increase').on('click',        ev => this._onQtyIncrease(ev));
+    html.find('.qty-input').on('change',          ev => this._onQtyChange(ev));
 
+    html.find('.open-item-lookup').on('click', () => ItemLookup.openForActor(this.actor));
+    html.find('.tamer-action-btn').on('click', ev => {
+      const action = ev.currentTarget.dataset.action;
+      if (action === 'taunt')        this._onTaunt(ev);
+      else if (action === 'analyze') this._onAnalyze(ev);
+      else if (action === 'push-through') this._onPushThrough(ev);
+      else if (action === 'call-out')     this._onCallOut(ev);
+    });
     html.find('.status-add-btn').on('click',      ev => this._onStatusAdd(ev));
     html.find('.status-remove').on('click',       ev => this._onStatusRemove(ev));
     html.find('.status-x-increase').on('click',   ev => this._onStatusAdjust(ev, "x",  1));
@@ -385,6 +401,22 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.skill-increase').on('click', ev => this._onSkillIncrease(ev));
     html.find('.skill-decrease').on('click', ev => this._onSkillDecrease(ev));
     html.find('.skill-roll-btn').on('click', ev => this._onSkillRoll(ev));
+  }
+
+  // --- Drop handler — resolves UUID-based drops from Item Lookup ---
+
+  async _onDrop(event) {
+    let data;
+    try { data = JSON.parse(event.dataTransfer.getData("text/plain")); }
+    catch { return super._onDrop(event); }
+
+    if (data?.type === "Item" && data?.uuid) {
+      let item;
+      try { item = await fromUuid(data.uuid); } catch { /* fall through */ }
+      if (item) return this._onDropItemCreate(item.toObject());
+    }
+
+    return super._onDrop(event);
   }
 
   // --- Drop class skill items with EXP deduction ---
@@ -545,18 +577,42 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     ev.preventDefault();
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (!item) return;
-    const qty = item.system?.quantity ?? 1;
-    if (qty <= 1) {
-      const confirmed = await Dialog.confirm({
-        title:   "Use Item",
-        content: `<p>Use the last <strong>${item.name}</strong>? It will be removed.</p>`
-      });
-      if (!confirmed) return;
-      await item.delete();
-    } else {
-      await item.update({ "system.quantity": qty - 1 });
-      ui.notifications.info(`Used ${item.name} — ${qty - 1} remaining.`);
-    }
+    const qty = item.system?.quantity ?? 0;
+    if (qty <= 0) return;
+    const newQty = qty - 1;
+    await item.update({ "system.quantity": newQty });
+    const s = item.system;
+    const content = `
+      <div class="dd-chat-card">
+        <h3 class="dd-chat-title">${item.name}</h3>
+        <div class="dd-chat-tags">
+          <span class="tag">${s.itemType}</span>
+          ${newQty > 0 ? `<span class="tag">×${newQty} remaining</span>` : `<span class="tag" style="background:#888;">Out of stock</span>`}
+        </div>
+        ${s.effect ? `<p class="dd-chat-desc">${s.effect}</p>` : ""}
+      </div>`;
+    ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), content });
+  }
+
+  async _onQtyDecrease(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (!item) return;
+    const qty = item.system?.quantity ?? 0;
+    await item.update({ "system.quantity": Math.max(0, qty - 1) });
+  }
+
+  async _onQtyIncrease(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (!item) return;
+    await item.update({ "system.quantity": (item.system?.quantity ?? 0) + 1 });
+  }
+
+  async _onQtyChange(ev) {
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (!item) return;
+    await item.update({ "system.quantity": Math.max(0, parseInt(ev.currentTarget.value) || 0) });
   }
 
   async _onGearDelete(ev) {
@@ -772,6 +828,125 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     if (!item) return;
     const cur = item.system[field] ?? 0;
     await item.update({ [`system.${field}`]: Math.max(0, cur + delta) });
+  }
+
+  // --- Tamer combat action rolls ---
+
+  async _onTaunt(ev) {
+    ev.preventDefault();
+    const stats    = getActorStatTotals(this.actor);
+    const courage  = stats?.courage ?? 0;
+    const roarRank = this.actor.system.skills?.courage?.roar?.rank ?? 1;
+    const roll     = await new Roll(`${roarRank}d6 + ${courage}`).evaluate();
+    const pass     = roll.total >= 12;
+    const rollHtml = await roll.render();
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      rolls:   [roll],
+      content: `<div class="dd-chat-card">
+        <h3 class="dd-chat-title">Taunt</h3>
+        <div class="dd-roll-section">
+          <div class="dd-roll-section-label">Roar <span class="dd-roll-aside">+ ${courage} Courage vs DN 12</span></div>
+          ${rollHtml}
+        </div>
+        <p style="margin:6px 0 0; font-size:0.9em;"><strong>${pass
+          ? `SUCCESS — enemy must redirect attacks to ${this.actor.name}.`
+          : "FAILED — no effect."}</strong></p>
+      </div>`
+    });
+  }
+
+  async _onAnalyze(ev) {
+    ev.preventDefault();
+    const stats       = getActorStatTotals(this.actor);
+    const knowledge   = stats?.knowledge ?? 0;
+    const archiveRank = this.actor.system.skills?.knowledge?.archive?.rank ?? 1;
+    const roll        = await new Roll(`${archiveRank}d6 + ${knowledge}`).evaluate();
+    const pass        = roll.total >= 12;
+    const rollHtml    = await roll.render();
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      rolls:   [roll],
+      content: `<div class="dd-chat-card">
+        <h3 class="dd-chat-title">Analyze</h3>
+        <div class="dd-roll-section">
+          <div class="dd-roll-section-label">Archive <span class="dd-roll-aside">+ ${knowledge} Knowledge vs DN 12</span></div>
+          ${rollHtml}
+        </div>
+        <p style="margin:6px 0 0; font-size:0.9em;"><strong>${pass
+          ? "SUCCESS — identify one trait about an enemy."
+          : "FAILED — no information gained."}</strong></p>
+      </div>`
+    });
+  }
+
+  async _onCallOut(ev) {
+    ev.preventDefault();
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `<div class="dd-chat-card">
+        <h3 class="dd-chat-title">Call Out</h3>
+        <p class="dd-chat-desc">Partner gains <strong>+1</strong> to their next attack roll this round.</p>
+      </div>`
+    });
+  }
+
+  async _onPushThrough(ev) {
+    ev.preventDefault();
+    const D      = CONFIG.DIGIMON;
+    const stats  = getActorStatTotals(this.actor);
+    const optionsHtml = CREST_ORDER.flatMap(statKey =>
+      (D.skills[statKey] ?? []).map(sk => {
+        const rank = this.actor.system.skills?.[statKey]?.[sk.key]?.rank ?? 1;
+        return `<option value="${statKey}.${sk.key}">${D.statLabels[statKey]} — ${sk.label} (${rank}d6 + ${stats?.[statKey] ?? 0})</option>`;
+      })
+    ).join("");
+
+    const chosen = await new Promise(resolve => {
+      new Dialog({
+        title:   "Push Through",
+        content: `
+          <form>
+            <p class="hint" style="margin-bottom:8px;">Roll a relevant skill. Restore Hope equal to the result. Once per encounter.</p>
+            <div class="form-group">
+              <label>Skill</label>
+              <select name="skill" style="flex:1;">${optionsHtml}</select>
+            </div>
+          </form>`,
+        buttons: {
+          roll:   { icon: '<i class="fas fa-dice-d6"></i>', label: "Roll!", callback: html => resolve(html.find('[name="skill"]').val()) },
+          cancel: { label: "Cancel", callback: () => resolve(null) }
+        },
+        default: "roll"
+      }).render(true);
+    });
+    if (!chosen) return;
+
+    const [statKey, skillKey] = chosen.split(".");
+    const statTotal   = stats?.[statKey] ?? 0;
+    const skillRank   = this.actor.system.skills?.[statKey]?.[skillKey]?.rank ?? 1;
+    const skillLabel  = D.skills[statKey]?.find(s => s.key === skillKey)?.label ?? skillKey;
+    const roll        = await new Roll(`${skillRank}d6 + ${statTotal}`).evaluate();
+    const rollHtml    = await roll.render();
+
+    const hope       = this.actor.system.crests.hope ?? {};
+    const curHope    = hope.current ?? 0;
+    const maxHope    = hope.pool   ?? (hope.rank ?? 1) * 5;
+    const newHope    = Math.min(maxHope, curHope + roll.total);
+    await this.actor.update({ "system.crests.hope.current": newHope });
+
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      rolls:   [roll],
+      content: `<div class="dd-chat-card">
+        <h3 class="dd-chat-title">Push Through</h3>
+        <div class="dd-roll-section">
+          <div class="dd-roll-section-label">${skillLabel} <span class="dd-roll-aside">+ ${statTotal} ${D.statLabels[statKey]}</span></div>
+          ${rollHtml}
+        </div>
+        <p style="margin:6px 0 0; font-size:0.9em;">Hope restored: <strong>+${roll.total}</strong> (${curHope} → ${newHope} / ${maxHope})</p>
+      </div>`
+    });
   }
 
   async _onSkillRoll(ev) {

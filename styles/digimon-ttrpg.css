@@ -774,6 +774,87 @@
   margin: 0 0 6px;
 }
 
+/* ── Tamer combat action reference tables ── */
+.digital-destiny .tamer-action-table {
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 0.82em;
+}
+.digital-destiny .tamer-action-table-header {
+  background: #e8e0d0;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.88em;
+  color: #5a4a30;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.digital-destiny .tamer-action-limit {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #888;
+}
+.digital-destiny .tamer-action-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 5px 10px;
+  gap: 8px;
+  border-top: 1px solid #e8e0d0;
+  min-height: 30px;
+}
+.digital-destiny .tamer-action-row:nth-child(odd) { background: #faf8f4; }
+.digital-destiny .tamer-action-row:nth-child(even) { background: #f4f0e8; }
+.digital-destiny .tamer-action-name {
+  font-weight: 700;
+  color: #3a2a10;
+  min-width: 130px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 2px;
+}
+.digital-destiny .tamer-action-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.digital-destiny .tamer-action-desc {
+  color: #5a4a30;
+  font-size: 0.95em;
+}
+.digital-destiny .tamer-action-dash {
+  font-size: 0.85em;
+  color: #aaa;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.digital-destiny .tamer-action-btn {
+  font-size: 0.75em;
+  padding: 2px 8px;
+  background: #5a7a3a;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 600;
+  align-self: flex-start;
+}
+.digital-destiny .tamer-action-btn:hover { background: #3a5a1a; }
+.digital-destiny .tamer-once-badge {
+  font-size: 0.72em;
+  background: #c07020;
+  color: #fff;
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .digital-destiny .moves-list {
   display: flex;
   flex-direction: column;
@@ -1940,6 +2021,40 @@
   text-align: right;
 }
 
+/* Inline quantity controls */
+.digital-destiny .qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.digital-destiny .qty-controls .rank-btn {
+  width: 22px;
+  height: 22px;
+  font-size: 0.85em;
+  padding: 0;
+  line-height: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.digital-destiny .qty-input {
+  width: 44px;
+  text-align: center;
+  padding: 1px 3px;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #4a6a8a;
+  border: 1px solid #c0ccd8;
+  border-radius: 3px;
+  background: #f8fafc;
+  height: 22px;
+}
+.digital-destiny .qty-input:focus { outline: none; border-color: #6aaddd; }
+.digital-destiny .gear-use:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 .digital-destiny .gear-action-btn {
   background: transparent;
   border: none;
@@ -2154,6 +2269,22 @@
 .dd-badge-miss     { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
 .dd-badge-neutral  { background: #e2e8f0; color: #4a5568; border: 1px solid #cbd5e0; }
 .dd-crit-tag       { background: #ffd700; color: #333; border: 1px solid #c8a600; font-size: 0.78em; vertical-align: middle; }
+
+/* GM-only controls card */
+.dd-gm-controls-card .dd-gm-label {
+  color: #7a3e00;
+  font-size: 0.9em;
+}
+.dd-miss-override-note {
+  font-size: 0.82em;
+  font-weight: 700;
+  color: #9a3300;
+  background: #fff3e0;
+  border: 1px solid #f0a060;
+  border-radius: 3px;
+  padding: 2px 7px;
+  margin-bottom: 2px;
+}
 
 /* Damage section */
 .dd-dmg-section {
@@ -3701,6 +3832,40 @@
   color: #2a6050;
   padding: 4px;
 }
+.item-lookup .il-add-to-actor {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px 12px;
+  background: #1a6050;
+  color: #c8f0e8;
+  border: 1px solid #1abc9c;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s;
+}
+.item-lookup .il-add-to-actor:hover { background: #1abc9c; color: #0a0f0e; }
+
+/* Items tab toolbar */
+.items-tab-toolbar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.items-tab-toolbar button {
+  padding: 5px 12px;
+  background: #2d6a2d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.items-tab-toolbar button:hover { background: #1e4d1e; }
 
 /* ── Empty states ── */
 .item-lookup .il-empty-list,

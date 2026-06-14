@@ -268,14 +268,3 @@ Hooks.on("renderActorDirectory",     (_a, html) => _injectItemLookupButton(html)
 Hooks.on("renderCompendiumDirectory",(_a, html) => _injectItemLookupButton(html));
 Hooks.on("renderItemDirectory",      (_a, html) => _injectItemLookupButton(html));
 
-// Auto-add default action items to every new actor
-Hooks.on("createActor", async (actor) => {
-  if (!["tamer", "digimon"].includes(actor.type)) return;
-  if (actor.items.some(i => i.type === "attack")) return;
-
-  const toCreate = actor.type === "tamer"
-    ? [BASIC_ATTACK, CALL_OUT, GRAPPLE]
-    : [BASIC_ATTACK, GRAPPLE];
-
-  await actor.createEmbeddedDocuments("Item", toCreate);
-});

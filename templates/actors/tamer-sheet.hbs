@@ -223,39 +223,13 @@
 
     {{!-- Combat tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="combat">
-      {{#if moves.length}}
-      <h3 class="section-header">Moves</h3>
-      <p class="hint">Drag Move items from the sidebar to add.</p>
-      <div class="moves-list" style="margin-top:6px;">
-        {{#each moves}}
-        <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <div class="move-name-block flexcol">
-            <span class="move-name move-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
-            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
-            {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
-          </div>
-          <span class="tag move-element-tag">{{this.system.element}}</span>
-          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
-          <div class="move-row-actions">
-            <button type="button" class="tamer-move-roll move-action-btn" data-item-id="{{this.id}}" title="Roll">
-              <i class="fas fa-dice-d20"></i>
-            </button>
-            <button type="button" class="tamer-move-to-chat move-action-btn" data-item-id="{{this.id}}" title="Post to chat">
-              <i class="fas fa-comment"></i>
-            </button>
-            <button type="button" class="tamer-move-delete move-action-btn" data-item-id="{{this.id}}" title="Remove">
-              <i class="fas fa-trash"></i>
-            </button>
-          </div>
-        </div>
-        {{/each}}
-      </div>
-      {{/if}}
-      <h3 class="section-header">Actions</h3>
-      <p class="hint">Click a name to open and edit. Click <i class="fas fa-dice-d20"></i> to roll. Drag Attack or Move items from the sidebar to add them.</p>
+
+      {{!-- Custom attack items — top of tab --}}
       {{#if attacks.length}}
-      <div class="moves-list" style="margin-top:6px;">
+      <h3 class="section-header">Attacks
+        <span class="stage-cap-note">Drag Attack items here to add</span>
+      </h3>
+      <div class="moves-list" style="margin-top:4px; margin-bottom:10px;">
         {{#each attacks}}
         <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
           <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
@@ -285,13 +259,122 @@
         </div>
         {{/each}}
       </div>
-      {{else}}
-      <p class="no-items">No actions yet. Drag Attack items here to add them.</p>
       {{/if}}
+
+      {{!-- Tamer's own Moves --}}
+      {{#if moves.length}}
+      <h3 class="section-header">Moves</h3>
+      <div class="moves-list" style="margin-top:4px; margin-bottom:10px;">
+        {{#each moves}}
+        <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name move-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+            {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          <div class="move-row-actions">
+            <button type="button" class="tamer-move-roll move-action-btn" data-item-id="{{this.id}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+            <button type="button" class="tamer-move-to-chat move-action-btn" data-item-id="{{this.id}}" title="Post to chat">
+              <i class="fas fa-comment"></i>
+            </button>
+            <button type="button" class="tamer-move-delete move-action-btn" data-item-id="{{this.id}}" title="Remove">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{!-- Basic Actions reference --}}
+      <div class="tamer-action-table">
+        <div class="tamer-action-table-header">Basic Actions <span class="tamer-action-limit">once per round</span></div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Attack</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Use one of your Moves. Follows the full attack sequence.</span>
+          </div>
+        </div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Digivolve</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Attempt to digivolve your partner. Costs your Basic Action.</span>
+          </div>
+        </div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Use Item</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Use a carried item from your inventory.</span>
+          </div>
+        </div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Push Through <span class="tamer-once-badge">once/encounter</span></span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Roll a relevant skill. Restore Hope equal to the result.</span>
+            <button type="button" class="tamer-action-btn" data-action="push-through"><i class="fas fa-dice-d6"></i> Roll</button>
+          </div>
+        </div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Taunt</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Roar DN 12. On success, enemy redirects attacks toward you.</span>
+            <button type="button" class="tamer-action-btn" data-action="taunt"><i class="fas fa-dice-d6"></i> Roll Roar</button>
+          </div>
+        </div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Second Move</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Take a second Move Action this turn.</span>
+          </div>
+        </div>
+      </div>
+
+      {{!-- Free Actions reference --}}
+      <div class="tamer-action-table" style="margin-top:6px;">
+        <div class="tamer-action-table-header">Free Actions <span class="tamer-action-limit">once per round</span></div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Call Out</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Partner gains +1 to their next attack roll this round.</span>
+            <button type="button" class="tamer-action-btn" data-action="call-out"><i class="fas fa-bullhorn"></i> Use</button>
+          </div>
+        </div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Analyze</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Archive DN 12. Identify one trait about an enemy.</span>
+            <button type="button" class="tamer-action-btn" data-action="analyze"><i class="fas fa-dice-d6"></i> Roll Archive</button>
+          </div>
+        </div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Dedigivolve (1 stage)</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Drop Digimon one stage. Hope adjusts before being spent.</span>
+          </div>
+        </div>
+        <div class="tamer-action-row">
+          <span class="tamer-action-name">Dedigivolve (2 stages)</span>
+          <div class="tamer-action-body">
+            <span class="tamer-action-desc">Drop Digimon two stages. Hope adjusts before being spent.</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     {{!-- Items tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="items">
+
+      <div class="items-tab-toolbar">
+        <button type="button" class="open-item-lookup">
+          <i class="fas fa-shopping-bag"></i> Browse &amp; Add Items
+        </button>
+      </div>
 
       <h3 class="section-header">Currency</h3>
       <div class="currency-panel flexrow">
@@ -354,8 +437,12 @@
         <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
           <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
           <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
-          <span class="gear-quantity">×{{this.system.quantity}}</span>
-          <button type="button" class="gear-use gear-action-btn" data-item-id="{{this.id}}" title="Use one"><i class="fas fa-hand-pointer"></i></button>
+          <div class="qty-controls">
+            <button type="button" class="qty-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <input type="number" class="qty-input" data-item-id="{{this.id}}" value="{{this.system.quantity}}" min="0" />
+            <button type="button" class="qty-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </div>
+          <button type="button" class="gear-use gear-action-btn" data-item-id="{{this.id}}" title="Use one" {{#unless this.system.quantity}}disabled{{/unless}}><i class="fas fa-hand-pointer"></i></button>
           <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
           <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
         </div>
@@ -370,8 +457,60 @@
         <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
           <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
           <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
-          <span class="gear-quantity">×{{this.system.quantity}}</span>
-          <button type="button" class="gear-use gear-action-btn" data-item-id="{{this.id}}" title="Eat one"><i class="fas fa-utensils"></i></button>
+          <div class="qty-controls">
+            <button type="button" class="qty-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <input type="number" class="qty-input" data-item-id="{{this.id}}" value="{{this.system.quantity}}" min="0" />
+            <button type="button" class="qty-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </div>
+          <button type="button" class="gear-use gear-action-btn" data-item-id="{{this.id}}" title="Eat one" {{#unless this.system.quantity}}disabled{{/unless}}><i class="fas fa-utensils"></i></button>
+          <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
+          <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#if spiritItems.length}}
+      <h3 class="section-header" style="margin-top:10px;">Spirits</h3>
+      <div class="gear-items-list">
+        {{#each spiritItems}}
+        <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+          <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
+          <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#if digiEggItems.length}}
+      <h3 class="section-header" style="margin-top:10px;">Digi-Eggs</h3>
+      <div class="gear-items-list">
+        {{#each digiEggItems}}
+        <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+          <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
+          <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#if modifyCardItems.length}}
+      <h3 class="section-header" style="margin-top:10px;">Modify Cards</h3>
+      <div class="gear-items-list">
+        {{#each modifyCardItems}}
+        <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+          <div class="qty-controls">
+            <button type="button" class="qty-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <input type="number" class="qty-input" data-item-id="{{this.id}}" value="{{this.system.quantity}}" min="0" />
+            <button type="button" class="qty-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </div>
+          <button type="button" class="gear-use gear-action-btn" data-item-id="{{this.id}}" title="Use one" {{#unless this.system.quantity}}disabled{{/unless}}><i class="fas fa-hand-pointer"></i></button>
           <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
           <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
         </div>
@@ -382,7 +521,11 @@
       {{#unless equipmentItems.length}}
       {{#unless supplyItems.length}}
       {{#unless foodItems.length}}
-      <p class="placeholder-text" style="margin-top:8px;">No carried items yet.</p>
+      {{#unless spiritItems.length}}
+      {{#unless digiEggItems.length}}
+      {{#unless modifyCardItems.length}}
+      <p class="placeholder-text" style="margin-top:8px;">No carried items yet. Click <strong>Browse &amp; Add Items</strong> to add items from the compendium.</p>
+      {{/unless}}{{/unless}}{{/unless}}
       {{/unless}}{{/unless}}{{/unless}}
 
     </div>

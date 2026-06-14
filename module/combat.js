@@ -39,23 +39,38 @@ function _calcFinal(rawDmg, love, elemMult, attrMult, isCrit) {
   return isCrit ? base * 2 : base;
 }
 
-// ── Per-target interactive section ───────────────────────────────────────────
+// ── Per-target helpers ────────────────────────────────────────────────────────
 
-function _targetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags, sourceId, sourceName, attackerAttr, moveElement) {
-  const name    = target?.name ?? "No target";
-  const id      = target?.id   ?? "";
-  const love    = tStats?.love ?? 0;
-  const dn      = tStats ? tStats.reliability + 10 : null;
-  const isHit   = isCrit || (!isNat1 && (dn === null || hitTotal >= dn));
-
+function _hitResult(target, tStats, hitTotal, isCrit, isNat1) {
+  const dn    = tStats ? tStats.reliability + 10 : null;
+  const isHit = isCrit || (!isNat1 && (dn === null || hitTotal >= dn));
   let badge, detail, badgeClass;
   if      (isCrit)      { badge = "★ CRITICAL HIT!"; detail = "";                           badgeClass = "hit"; }
   else if (isNat1)      { badge = "✕ CRITICAL MISS"; detail = "";                           badgeClass = "miss"; }
   else if (dn === null) { badge = `Rolled ${hitTotal}`;detail = " — no target stats";       badgeClass = "neutral"; }
   else if (isHit)       { badge = "HIT";             detail = ` — ${hitTotal} ≥ DN ${dn}`; badgeClass = "hit"; }
-  else                  { badge = "MISS";            detail = ` — ${hitTotal} < DN ${dn}`; badgeClass = "miss"; }
+  else                  { badge = "MISS";             detail = ` — ${hitTotal} < DN ${dn}`; badgeClass = "miss"; }
+  return { isHit, badge, detail, badgeClass };
+}
 
-  // Auto-detect attribute and element multipliers from game tables
+// Public section — shows hit/miss badge only, no buttons
+function _publicTargetSection(target, tStats, hitTotal, isCrit, isNat1) {
+  const name = target?.name ?? "No target";
+  const { badge, detail, badgeClass } = _hitResult(target, tStats, hitTotal, isCrit, isNat1);
+  return `
+    <div class="dd-target-header">
+      <span class="dd-target-name">${name}</span>
+      <span class="dd-hit-badge dd-badge-${badgeClass}">${badge}<span class="dd-hit-detail">${detail}</span></span>
+    </div>`;
+}
+
+// GM section — always shows damage controls even on a miss
+function _gmTargetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags, sourceId, sourceName, attackerAttr, moveElement) {
+  const name  = target?.name ?? "No target";
+  const id    = target?.id   ?? "";
+  const love  = tStats?.love ?? 0;
+  const { isHit, badge, detail, badgeClass } = _hitResult(target, tStats, hitTotal, isCrit, isNat1);
+
   const advTable  = CONFIG.DIGIMON?.attributeAdvantage ?? {};
   const weakTable = CONFIG.DIGIMON?.elementWeaknesses  ?? {};
   const atkAttr   = (attackerAttr ?? "").toLowerCase();
@@ -75,15 +90,19 @@ function _targetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags, 
     else if ((weakTable[defElem] ?? []).includes(movElem)) elemMult = 1.5;
   }
 
-  const a = (mult, key) => attrMult === mult ? " active" : "";
-  const e = (mult, key) => elemMult === mult ? " active" : "";
+  const a = mult => attrMult === mult ? " active" : "";
+  const e = mult => elemMult === mult ? " active" : "";
 
   let dmgHtml = "";
-  if (isHit && rawDmg !== null) {
+  if (rawDmg !== null) {
     const afterLove = Math.max(1, rawDmg - love);
     const initFinal = _calcFinal(rawDmg, love, elemMult, attrMult, isCrit);
+    const missNote  = !isHit
+      ? `<div class="dd-miss-override-note">⚠ ${isNat1 ? "Critical Miss" : "Miss"} — GM override</div>`
+      : "";
     dmgHtml = `
       <div class="dd-dmg-section">
+        ${missNote}
         <div class="dd-dmg-breakdown">
           ${rawDmg} raw &minus; ${love} Love = <strong>${afterLove}</strong> base
           ${isCrit ? `<em class="dd-crit-note">&nbsp;(×2 crit applied last)</em>` : ""}
@@ -234,24 +253,24 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   const dmgModChips = (input.dmgMods ?? []).filter(m => m.value || m.reason).map(chip).join(" ");
 
   // ── Per-target sections ──
-  let sectionsHtml = "";
   const attackerAttr = actor.system?.attribute ?? "";
   const moveElement  = s.element ?? "";
+  const targetList   = targets.length ? targets : [null];
 
-  if (targets.length) {
-    for (const tActor of targets) {
-      sectionsHtml += _targetSection(tActor, getActorStatTotals(tActor), hitRoll.total, rawDmg, isNat20, isNat1, s.tags, actor.id, actor.name, attackerAttr, moveElement);
-    }
-  } else {
-    sectionsHtml = _targetSection(null, null, hitRoll.total, rawDmg, isNat20, isNat1, s.tags, actor.id, actor.name, attackerAttr, moveElement);
+  let publicTargets = "";
+  let gmTargets     = "";
+  for (const tActor of targetList) {
+    const tStats = tActor ? getActorStatTotals(tActor) : null;
+    publicTargets += _publicTargetSection(tActor, tStats, hitRoll.total, isNat20, isNat1);
+    gmTargets     += _gmTargetSection(tActor, tStats, hitRoll.total, rawDmg, isNat20, isNat1, s.tags, actor.id, actor.name, attackerAttr, moveElement);
   }
 
-  // ── Build the card ──
-  const bonusPart  = n => n > 0 ? ` + ${n} mod` : n < 0 ? ` − ${Math.abs(n)} mod` : "";
-  const hitAside   = `+ ${courageTotal} Courage${bonusPart(hitBonus)}${isBlind ? " − 4 Blind" : ""}`;
-  const dmgAside   = dmgRoll ? `${prDie} + ${knowledgeTotal} Knowledge${bonusPart(dmgBonus)} = ${rawDmg} raw` : "";
+  // ── Build public card (dice + hit/miss badges) ──
+  const bonusPart = n => n > 0 ? ` + ${n} mod` : n < 0 ? ` − ${Math.abs(n)} mod` : "";
+  const hitAside  = `+ ${courageTotal} Courage${bonusPart(hitBonus)}${isBlind ? " − 4 Blind" : ""}`;
+  const dmgAside  = dmgRoll ? `${prDie} + ${knowledgeTotal} Knowledge${bonusPart(dmgBonus)} = ${rawDmg} raw` : "";
 
-  const content = `
+  const publicContent = `
     <div class="dd-chat-card dd-attack-card">
 
       <div class="dd-attack-header">
@@ -281,18 +300,27 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
         ${dmgModChips ? `<div class="dd-mod-chips">${dmgModChips}</div>` : ""}
       </div>` : ""}
 
-      <div class="dd-targets">${sectionsHtml}</div>
+      <div class="dd-targets">${publicTargets}</div>
 
     </div>`;
 
-  // Pass rolls array so Dice So Nice and other modules see the dice
+  // ── Build GM-only card (damage controls, always visible) ──
+  const gmContent = `
+    <div class="dd-chat-card dd-attack-card dd-gm-controls-card">
+      <div class="dd-attack-header">
+        <h3 class="dd-chat-title dd-gm-label">GM Controls — ${item.name}</h3>
+      </div>
+      <div class="dd-targets">${gmTargets}</div>
+    </div>`;
+
   const rolls = [hitRoll, ...(dmgRoll ? [dmgRoll] : [])];
-  await ChatMessage.create({
-    speaker: ChatMessage.getSpeaker({ actor }),
-    whisper: game.users.filter(u => u.isGM).map(u => u.id),
-    rolls,
-    content
-  });
+  const speaker = ChatMessage.getSpeaker({ actor });
+  const gmIds   = game.users.filter(u => u.isGM).map(u => u.id);
+
+  // Public message — everyone sees the dice rolls
+  await ChatMessage.create({ speaker, rolls, content: publicContent });
+  // GM-only message — apply damage controls
+  await ChatMessage.create({ speaker, whisper: gmIds, content: gmContent });
 }
 
 // ── Status application ────────────────────────────────────────────────────────

@@ -11,7 +11,56 @@ const ALL_SKILLS = [
   "zeroError","fieldOps","recovery"
 ];
 
+const BLANK_TAGS = {
+  melee: false, range: false, rangeX: 4,
+  pierce: false, trueHit: false,
+  burst: false, burstX: 2, blast: false, blastX: 2,
+  chain: false, chainX: 2, chainY: 3,
+  charge: false, counter: false, rush: false,
+  burn: false, burnX: 2, burnY: 3,
+  freeze: false, paralyze: false, paralyzeX: 1,
+  poison: false, poisonX: 1,
+  sleep: false,
+  blind: false, confuse: false, drain: false, push: false,
+  heal: false, regen: false, regenX: 1
+};
+
+const DEFAULT_ATTACKS = [
+  {
+    name: "Basic Attack",
+    type: "attack",
+    img: "icons/svg/sword.svg",
+    system: {
+      actionType: "attack",
+      element: "neutral",
+      pr: 2,
+      effect: "Standard strike. Always available — uses no move slot.",
+      tags: { ...BLANK_TAGS, melee: true }
+    }
+  },
+  {
+    name: "Grapple",
+    type: "attack",
+    img: "icons/svg/net.svg",
+    system: {
+      actionType: "grapple",
+      element: "neutral",
+      pr: 0,
+      effect: "Basic Action. Must be adjacent. Target immediately makes one free MELEE attack before this resolves. Then roll 1d20 + Courage vs target Reliability + 10. Hit = target is grappled (cannot move, can only attack others in the grapple).",
+      tags: { ...BLANK_TAGS, melee: true }
+    }
+  }
+];
+
 export class DigitalDestinyActor extends Actor {
+
+  async _onCreate(data, options, userId) {
+    await super._onCreate(data, options, userId);
+    if (game.user.id !== userId) return;
+    if (!["tamer", "digimon"].includes(this.type)) return;
+    if ((data.items ?? []).some(i => i.type === "attack")) return;
+    await this.createEmbeddedDocuments("Item", DEFAULT_ATTACKS);
+  }
 
   prepareDerivedData() {
     super.prepareDerivedData();

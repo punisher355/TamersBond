@@ -98,8 +98,14 @@
     </div>
     {{/if}}
 
+    {{#if actorId}}
+    <button class="il-add-to-actor" type="button">
+      <i class="fas fa-plus-circle"></i> Add to {{actorName}}
+    </button>
+    {{else}}
     {{#if detail.uuid}}
     <div class="il-drag-hint"><i class="fas fa-hand-rock"></i> Drag the card above onto a character sheet to add this item</div>
+    {{/if}}
     {{/if}}
 
     {{else}}

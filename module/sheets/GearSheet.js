@@ -14,12 +14,15 @@ export class GearSheet extends foundry.appv1.sheets.ItemSheet {
     context.system = s;
 
     context.itemTypeOptions = {
-      digivice:  "Digivice (slot)",
-      clothing:  "Clothing (slot)",
-      accessory: "Accessory (slot)",
-      equipment: "Equipment",
-      supply:    "Supply (consumable)",
-      food:      "Food (consumable)"
+      digivice:           "Digivice (slot)",
+      clothing:           "Clothing (slot)",
+      accessory:          "Accessory (slot)",
+      equipment:          "Equipment",
+      supply:             "Supply (consumable)",
+      food:               "Food (consumable)",
+      "legendary-spirit": "Legendary Spirit",
+      "digi-egg":         "Digi-Egg",
+      "modify-card":      "Modify Card (consumable)"
     };
 
     context.targetOptions = {
@@ -38,10 +41,10 @@ export class GearSheet extends foundry.appv1.sheets.ItemSheet {
 
     const type = s.itemType;
     context.isSlotted    = ["digivice", "clothing", "accessory"].includes(type);
-    context.isConsumable = ["supply", "food"].includes(type);
+    context.isConsumable = ["supply", "food", "modify-card"].includes(type);
     context.isEquipment  = type === "equipment";
     context.showTarget   = ["supply", "food"].includes(type);
-    context.showTiming   = type !== "food";
+    context.showTiming   = !["food", "digi-egg", "legendary-spirit"].includes(type);
 
     // Build skill bonus grid
     const D = CONFIG.DIGIMON;

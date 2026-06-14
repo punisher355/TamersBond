@@ -7,6 +7,17 @@ export class ItemLookup extends Application {
       ItemLookup._instance = new ItemLookup();
       await ItemLookup._instance._loadPacks();
     }
+    ItemLookup._instance._actor = null;
+    ItemLookup._instance.render(true);
+    return ItemLookup._instance;
+  }
+
+  static async openForActor(actor) {
+    if (!ItemLookup._instance) {
+      ItemLookup._instance = new ItemLookup();
+      await ItemLookup._instance._loadPacks();
+    }
+    ItemLookup._instance._actor = actor;
     ItemLookup._instance.render(true);
     return ItemLookup._instance;
   }
@@ -16,6 +27,7 @@ export class ItemLookup extends Application {
     this._allItems  = null;
     this._selected  = null;
     this._filters   = { search: "", source: "", type: "" };
+    this._actor     = null;
   }
 
   static get defaultOptions() {
@@ -130,11 +142,29 @@ export class ItemLookup extends Application {
     return {
       items,
       detail,
-      selectedId: this._selected ?? null,
+      selectedId:  this._selected     ?? null,
+      actorId:     this._actor?.id    ?? null,
+      actorName:   this._actor?.name  ?? null,
       sources,
       types,
       filters: { ...this._filters }
     };
+  }
+
+  async _addItemToActor(actor, doc) {
+    const itemData  = doc.toObject();
+    const slotTypes = ["digivice", "clothing", "accessory"];
+    if (itemData.type === "gear" && slotTypes.includes(itemData.system?.itemType)) {
+      const current = actor.items.find(i =>
+        i.type === "gear" &&
+        i.system.itemType === itemData.system.itemType &&
+        i.system.isEquipped
+      );
+      if (current) await current.update({ "system.isEquipped": false });
+      itemData.system.isEquipped = true;
+    }
+    await actor.createEmbeddedDocuments("Item", [itemData]);
+    ui.notifications.info(`${doc.name} added to ${actor.name}.`);
   }
 
   activateListeners(html) {
@@ -167,6 +197,13 @@ export class ItemLookup extends Application {
       if (!entry) return;
       this._selected = entry.dataset.id;
       this.render(true);
+    });
+
+    root.querySelector(".il-add-to-actor")?.addEventListener("click", async () => {
+      if (!this._actor || !this._selected) return;
+      const doc = this._allItems.find(i => i.id === this._selected);
+      if (!doc) return;
+      await this._addItemToActor(this._actor, doc);
     });
 
     // Drag item card from detail panel onto actor sheets
