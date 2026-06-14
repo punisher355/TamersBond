@@ -156,6 +156,10 @@ async function _rollDialog(title, hitPreview, dmgPreview, isGrapple) {
           <div class="dd-dialog-section">
             <div class="dd-dialog-section-label">Hit Roll &mdash; ${hitPreview}</div>
             ${isGrapple ? `<p class="hint dd-grapple-note"><em>Target makes one free MELEE attack before this resolves.</em></p>` : ""}
+            <label class="dd-callout-check">
+              <input type="checkbox" name="callOut" />
+              <span>Call Out <strong>+1</strong> to hit</span>
+            </label>
             <div class="mod-list-header flexrow"><span>Hit modifier reason</span><span class="mod-amount-head">Amount</span></div>
             <div class="modifier-list hit-mods"></div>
             <button type="button" class="mod-add-btn" data-list="hit">+ Add Hit Modifier</button>
@@ -179,7 +183,8 @@ async function _rollDialog(title, hitPreview, dmgPreview, isGrapple) {
               });
               return out;
             };
-            resolve({ hitMods: read("hit-mods"), dmgMods: read("dmg-mods") });
+            const callOutUsed = html.find('input[name="callOut"]').prop("checked") ?? false;
+            resolve({ hitMods: read("hit-mods"), dmgMods: read("dmg-mods"), callOutUsed });
           }
         },
         cancel: { label: "Cancel", callback: () => resolve(null) }
@@ -228,7 +233,8 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   if (!input) return;
 
   // ── Roll the dice ──
-  const hitBonus = input.hitMods.reduce((a, m) => a + m.value, 0);
+  const callOutBonus = input.callOutUsed ? 1 : 0;
+  const hitBonus = input.hitMods.reduce((a, m) => a + m.value, 0) + callOutBonus;
   const hitRoll  = await new Roll(`1d20 + ${courageTotal + hitBonus + blindPenalty}`).evaluate();
   const natural  = hitRoll.terms[0]?.results?.[0]?.result ?? hitRoll.total;
   const isNat20  = natural === 20;
@@ -267,7 +273,8 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
 
   // ── Build public card (dice + hit/miss badges) ──
   const bonusPart = n => n > 0 ? ` + ${n} mod` : n < 0 ? ` − ${Math.abs(n)} mod` : "";
-  const hitAside  = `+ ${courageTotal} Courage${bonusPart(hitBonus)}${isBlind ? " − 4 Blind" : ""}`;
+  const callOutPart = callOutBonus ? ` + 1 Call Out` : "";
+  const hitAside  = `+ ${courageTotal} Courage${bonusPart(hitBonus - callOutBonus)}${callOutPart}${isBlind ? " − 4 Blind" : ""}`;
   const dmgAside  = dmgRoll ? `${prDie} + ${knowledgeTotal} Knowledge${bonusPart(dmgBonus)} = ${rawDmg} raw` : "";
 
   const publicContent = `

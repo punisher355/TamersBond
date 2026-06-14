@@ -268,3 +268,11 @@ Hooks.on("renderActorDirectory",     (_a, html) => _injectItemLookupButton(html)
 Hooks.on("renderCompendiumDirectory",(_a, html) => _injectItemLookupButton(html));
 Hooks.on("renderItemDirectory",      (_a, html) => _injectItemLookupButton(html));
 
+// Default prototype token settings for all new actors
+Hooks.on("preCreateActor", (actor) => {
+  actor.updateSource({
+    "prototypeToken.lockRotation": true,
+    "prototypeToken.actorLink":    true
+  });
+});
+

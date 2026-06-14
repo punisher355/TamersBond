@@ -1000,6 +1000,29 @@
   color: #4a90d9;
 }
 
+.skill-roll-dialog .dd-callout-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f4f8f0;
+  border: 1px solid #b0c890;
+  border-radius: 4px;
+  padding: 5px 8px;
+  margin-bottom: 6px;
+  font-size: 0.88em;
+  color: #3a5a1a;
+  cursor: pointer;
+}
+.skill-roll-dialog .dd-callout-check:has(input:checked) {
+  background: #e8f5e0;
+  border-color: #7ab850;
+}
+.skill-roll-dialog .dd-callout-check input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
 /* Chat flavor for skill rolls */
 .roll-mods {
   color: #506070;
