@@ -17,7 +17,7 @@
     "name": "Meteor Wing",
     "element": "Fire",
     "pr": 5,
-    "tags": "[RANGE 5]",
+    "tags": "[RANGE 5] [CHAIN 2,3]",
     "description": "Flaps its wings and hurls its feathers like meteors."
   },
   "digivolves_from": [
@@ -66,6 +66,7 @@
     "Volcamon",
     "Yatagaramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "A Giant Bird Digimon which has an appearance shrouded in blazing flames. Just like Meramon , it is a Digimon that was generated from the Internet 's defensive \" Firewall \". It flaps its gigantic wings, and flies about the sky. Although its personality is in no way combative, it unleashes counterattacks against attacking enemies to a furious degree. Its Special Move is flapping its wings and hurling its feathers like meteors ( Meteor Wing ).",

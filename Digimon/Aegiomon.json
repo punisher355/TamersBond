@@ -17,7 +17,7 @@
     "name": "Attract Echo",
     "element": "Neutral",
     "pr": 7,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BLAST 4]",
     "description": "Plays a song with itsSyrinxthat makes listeners lose their sense of self and see only Aegiomon."
   },
   "digivolves_from": [

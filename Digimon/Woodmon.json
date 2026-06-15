@@ -17,7 +17,7 @@
     "name": "Branch Drain",
     "element": "Plant",
     "pr": 6,
-    "tags": "[MELEE] [DRAIN]",
+    "tags": "[MELEE] [CHAIN 2,3] [DRAIN]",
     "description": "12Extends its branch-shaped arms and stabs the enemy, draining their energy.Drains energy by inhaling."
   },
   "digivolves_from": [
@@ -50,6 +50,7 @@
     "Taomon",
     "Mega Seadramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "A Plant Digimon with the appearance of a large, withered tree. It usually disguises itself as an ordinary tree, and lives by grabbing Digimon that pass by and draining their energy. In addition, it is able to move about using its root-like feet. It has a frenzied personality, and never stops attacking once it is angered. Although its defense is high due to its hard trunk, it is vulnerable to fire and fares very poorly against flame-type Digimon like Meramon and Birdramon , which it regards as enemies. Its Special Move is extending its branch-shaped arms and stabbing the enemy, completely draining them of their energy ( Branch Drain ).",

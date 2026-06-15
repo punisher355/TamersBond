@@ -17,7 +17,7 @@
     "name": "Mega Flame",
     "element": "Fire",
     "pr": 5,
-    "tags": "[RANGE 4]",
+    "tags": "[RANGE 4] [BURST 4] [BURN 4,3]",
     "description": "Spews extremely high-temperature flames from its mouth."
   },
   "digivolves_from": [
@@ -71,7 +71,9 @@
     "Rapidmon Armor",
     "Decker Greymon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "description": "A Dinosaur Digimon whose cranial skin has hardened so that it is covered in a rhinoceros beetle -like shell. It is an extremely aggressive Digimon, with a body like a lethal weapon covered in sharp claws and gigantic horns. However, it is highly intelligent, and if you're able to tame it then there probably isn't any monster as strong. Its Special Move \" Mega Flame \" is spewing extremely high-temperature flames from its mouth and reducing everything to ashes."
+  "description": "A Dinosaur Digimon whose cranial skin has hardened so that it is covered in a rhinoceros beetle -like shell. It is an extremely aggressive Digimon, with a body like a lethal weapon covered in sharp claws and gigantic horns. However, it is highly intelligent, and if you're able to tame it then there probably isn't any monster as strong. Its Special Move \" Mega Flame \" is spewing extremely high-temperature flames from its mouth and reducing everything to ashes.",
+  "web_created": true
 }

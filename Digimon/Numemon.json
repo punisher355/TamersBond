@@ -17,7 +17,7 @@
     "name": "Unchi Nage",
     "element": "Neutral",
     "pr": 7,
-    "tags": "[RANGE 4] [BLAST 2]",
+    "tags": "[RANGE 4] [POISON 3]",
     "description": "Throws its own excrement towards the enemy."
   },
   "digivolves_from": [
@@ -105,6 +105,7 @@
     "Gold Numemon (Ultimate)",
     "Pajramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "A Mollusk Digimon which possesses a slug-like body. It prefers dark, gloomy environments, and has neither offensive power nor intelligence. A Digimon becomes a Numemon if mistakes are made in raising it, but as a matter of fact, there appears to be some hidden secret ...In order to defend itself against intruders, it uses a disgusting attack in which it throws its own poop.",

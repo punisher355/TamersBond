@@ -17,7 +17,7 @@
     "name": "Tsunami",
     "element": "Water",
     "pr": 5,
-    "tags": "[RANGE 8] [BLAST 2]",
+    "tags": "[RANGE 8] [BLAST 2] [PIERCE]",
     "description": "Spurts out an ultra-high pressure blast of water from its blowhole."
   },
   "digivolves_from": [
@@ -46,8 +46,9 @@
     "Waru Seadramon",
     "Whamon Perfect"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "An Aquatic Digimon that inhabits the \" Net Ocean \" (the Network 's ocean where Digimon were born). Since it lives in the deepest parts of the Net Ocean, it is rarely encountered (the organs that correspond to its eyes have degenerated). It has a ferocious personality, and sometimes attacks by generating an enormous Tsunami . Its Special Move is spurted out from the blowhole on the back of its head at ultra-high pressure ( Jet Arrow )."
+  "description": "An Aquatic Digimon that inhabits the \" Net Ocean \" (the Network 's ocean where Digimon were born). Since it lives in the deepest parts of the Net Ocean, it is rarely encountered (the organs that correspond to its eyes have degenerated). It has a ferocious personality, and sometimes attacks by generating an enormous Tsunami . Its Special Move is spurted out from the blowhole on the back of its head at ultra-high pressure ( Jet Arrow ).",
+  "web_created": true
 }

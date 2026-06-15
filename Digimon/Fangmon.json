@@ -17,7 +17,8 @@
     "name": "Blast Coffin",
     "element": "Dark",
     "pr": 7,
-    "tags": "[RANGE 5] [BLAST 1]"
+    "tags": "[RANGE 4] [BLAST 2]",
+    "description": ""
   },
   "digivolves_from": [
     "Bearmon",
@@ -42,8 +43,9 @@
     "Were Garurumon",
     "Cerberumon: Werewolf Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A Demon Beast Digimon that lives deep in the heart of the forest, and preys upon those who lose their way. It is said that it is definitely the data of the Big Bad Wolf that appears within many fairy-tales, become a Digimon, and once it sets its sights on a prey they will never escape, as it sometimes goes so far as to disguise itself as someone dear to its prey in order to get closer. It has a heretical existence among Dog and Wolf-species Digimon, and if Garurumon is a being of the light, then Fangmon is a being of darkness. Its Signature Move is stealing things like weapons and items from the opponent, using its sharpened agility ( Snipe Steal ). Its Special Move is \" Blast Coffin \"."
+  "description": "A Demon Beast Digimon that lives deep in the heart of the forest, and preys upon those who lose their way. It is said that it is definitely the data of the Big Bad Wolf that appears within many fairy-tales, become a Digimon, and once it sets its sights on a prey they will never escape, as it sometimes goes so far as to disguise itself as someone dear to its prey in order to get closer. It has a heretical existence among Dog and Wolf-species Digimon, and if Garurumon is a being of the light, then Fangmon is a being of darkness. Its Signature Move is stealing things like weapons and items from the opponent, using its sharpened agility ( Snipe Steal ). Its Special Move is \" Blast Coffin \".",
+  "web_created": true
 }

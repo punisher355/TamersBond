@@ -14,10 +14,11 @@
     "RLB": 7
   },
   "signature_move": {
-    "name": "",
+    "name": "Sticker Blade",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[MELEE]"
+    "tags": "[RANGE 4] [BLAST 4] [PIERCE]",
+    "description": "flinging thousands of tiny blades and instantaneously skewering the opponent from within"
   },
   "digivolves_from": [
     "DORUmon",
@@ -52,8 +53,9 @@
     "Cerberumon: Werewolf Mode",
     "Pajramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A noble, bloodsucking wolf Digimon. It is a considerably old species of Digimon, and is said to have survived since the Genesis of the Digital World . Digimon who have had their blood sucked by Sangloupmon have all the information drawn out of their Digicores , cease vital functions, and die. Sangloupmon is able to instantly move to different places as it rushes about the Net by breaking down its data into packet s of its own volition. For this reason, it is said to be very difficult to capture Sangloupmon. Its Special Moves are flinging thousands of tiny blades and instantaneously skewering the opponent from within ( Sticker Blade ), and disassembling its own data and melting into the opponent's shadow ( Black Mind )."
+  "description": "A noble, bloodsucking wolf Digimon. It is a considerably old species of Digimon, and is said to have survived since the Genesis of the Digital World . Digimon who have had their blood sucked by Sangloupmon have all the information drawn out of their Digicores , cease vital functions, and die. Sangloupmon is able to instantly move to different places as it rushes about the Net by breaking down its data into packet s of its own volition. For this reason, it is said to be very difficult to capture Sangloupmon. Its Special Moves are flinging thousands of tiny blades and instantaneously skewering the opponent from within ( Sticker Blade ), and disassembling its own data and melting into the opponent's shadow ( Black Mind ).",
+  "web_created": true
 }

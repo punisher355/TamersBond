@@ -3,7 +3,7 @@
   "stage": "Rookie",
   "attribute": "Virus",
   "element": "Neutral",
-  "archetype": "Fortress",
+  "archetype": "Attacker",
   "size": "Medium",
   "stats": {
     "CRG": 2,
@@ -17,7 +17,7 @@
     "name": "Spiral Edge",
     "element": "Neutral",
     "pr": 2,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [RUSH]",
     "description": "Rolls into a ball and slices the opponent with its blade-like dorsal fins."
   },
   "digivolves_from": [
@@ -70,8 +70,9 @@
     "Zubaeagermon",
     "Ogremon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "An Aquatic Mammal Digimon with fins on its hands and feet to paddle through water. It is more suited for life in the water than on land, and although it swims about quickly in the water with its fins and sturdy hind legs, on the ground it moves about with weak, frog-like hops. When on land it has a very timid disposition, but when in the water it displays its natural, ferocious personality. Its Special Move is coming at the opponent with its sharp, blade-like dorsal fins ( Spiral Edge )."
+  "description": "An Aquatic Mammal Digimon with fins on its hands and feet to paddle through water. It is more suited for life in the water than on land, and although it swims about quickly in the water with its fins and sturdy hind legs, on the ground it moves about with weak, frog-like hops. When on land it has a very timid disposition, but when in the water it displays its natural, ferocious personality. Its Special Move is coming at the opponent with its sharp, blade-like dorsal fins ( Spiral Edge ).",
+  "web_created": true
 }

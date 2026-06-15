@@ -14,18 +14,19 @@
     "RLB": 13
   },
   "signature_move": {
-    "name": "Terabyte Disaster",
+    "name": "Distortion Line",
     "element": "Neutral",
     "pr": 10,
-    "tags": "[MELEE]",
-    "description": "Fires countless beams from its mouth."
+    "tags": "[RANGE 8] [CONFUSE]",
+    "description": "Fires beams from the eyes on its limbs that are powerful and destructive enough to distort dimensions."
   },
   "digivolves_from": [
     "Algomon (Perfect)"
   ],
   "digivolves_to": [],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A gigantic Ultimate Digimon that evolved from the Perfect-level Algomon , and also amplified its close-combat abilities. Its Special Moves are countless beams fired from its mouth ( Terabyte Disaster ), and beams destructive enough to completely distort even dimensions, fired from the eyes on its limbs ( Distortion Line ). In addition, its \" Brute Force \", which mows down the enemy with its massive body, is also exceptionally destructive."
+  "description": "A gigantic Ultimate Digimon that evolved from the Perfect-level Algomon , and also amplified its close-combat abilities. Its Special Moves are countless beams fired from its mouth ( Terabyte Disaster ), and beams destructive enough to completely distort even dimensions, fired from the eyes on its limbs ( Distortion Line ). In addition, its \" Brute Force \", which mows down the enemy with its massive body, is also exceptionally destructive.",
+  "web_created": true
 }

@@ -14,10 +14,11 @@
     "RLB": 6
   },
   "signature_move": {
-    "name": "",
-    "element": "Neutral",
+    "name": "Thunder of King",
+    "element": "Electric",
     "pr": 5,
-    "tags": "[MELEE]"
+    "tags": "[MELEE] [BURST 4] [PARALYZE 3]",
+    "description": ""
   },
   "digivolves_from": [
     "Commandramon",
@@ -40,8 +41,9 @@
     "Were Garurumon",
     "Were Garurumon (Black)"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Holy Beast Digimon that exudes the style of a \"King\", even though it is only an Adult. It is said to be a Digimon that evolved from Liollmon , but there are even fewer surviving individuals than those of Liollmon, so its existence is becoming an \"illusion\". It tends to prefer capturing prey that is stronger than itself, and it has often been observed commencing an attack against an Ultimate Digimon without even flinching. Its Special Moves are charging and then releasing electricity generated in its mane ( Thunder of King ), and reliably aiming at the opponent's vitals with its fangs ( Critical Strike )."
+  "description": "A Holy Beast Digimon that exudes the style of a \"King\", even though it is only an Adult. It is said to be a Digimon that evolved from Liollmon , but there are even fewer surviving individuals than those of Liollmon, so its existence is becoming an \"illusion\". It tends to prefer capturing prey that is stronger than itself, and it has often been observed commencing an attack against an Ultimate Digimon without even flinching. Its Special Moves are charging and then releasing electricity generated in its mane ( Thunder of King ), and reliably aiming at the opponent's vitals with its fangs ( Critical Strike ).",
+  "web_created": true
 }

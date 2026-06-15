@@ -17,7 +17,7 @@
     "name": "Unchi",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[RANGE 4]",
+    "tags": "[RANGE 4] [POISON 3]",
     "description": "Throws a poop at the foe."
   },
   "digivolves_from": [
@@ -60,8 +60,9 @@
     "Volcamon",
     "Waru Seadramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A Digimon whose true identity is unknown, it arrived in the Digital World from another dimension in order to invade it. It was known by the title \" OYAJI \" in the other dimension, where it was raised as a digital pet. While it loves alcohol and has an oppressive personality, ever since it invaded this Digital World (though the exact details regarding its invasion are unknown), it evolved to become more active and turned into Nanimon. It trained and strengthened its body through battle, influenced by the Digital World's survival-of-the-fittest environment; however, no one knows the true extent of its abilities. Even so, it is said that a Nanimon that has fought and won countless battles will evolve into its ultimate form."
+  "description": "A Digimon whose true identity is unknown, it arrived in the Digital World from another dimension in order to invade it. It was known by the title \" OYAJI \" in the other dimension, where it was raised as a digital pet. While it loves alcohol and has an oppressive personality, ever since it invaded this Digital World (though the exact details regarding its invasion are unknown), it evolved to become more active and turned into Nanimon. It trained and strengthened its body through battle, influenced by the Digital World's survival-of-the-fittest environment; however, no one knows the true extent of its abilities. Even so, it is said that a Nanimon that has fought and won countless battles will evolve into its ultimate form.",
+  "web_created": true
 }

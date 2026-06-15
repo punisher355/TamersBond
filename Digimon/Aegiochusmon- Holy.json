@@ -17,7 +17,7 @@
     "name": "Lightning Shower",
     "element": "Neutral",
     "pr": 10,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BLAST 2] [PARALYZE 2]",
     "description": "Strikes the enemy by causing countless daggers to rain down upon them from above."
   },
   "digivolves_from": [

@@ -17,7 +17,7 @@
     "name": "Atomic Bomber",
     "element": "Neutral",
     "pr": 11,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [BLAST 2] [RUSH]",
     "description": "Detonates the volcano on its back and performs a super-stronglariatwith the propulsion."
   },
   "digivolves_from": [
@@ -33,6 +33,7 @@
   "digivolves_to": [
     "Apocalymon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "Possessing the attribute of \"Earth\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it has the most power among the Ancient Digimon. There is always high temperature magma welling up inside its body, which becomes the source of its mighty power. Ancient Volcamon's abilities were later passed on to the \"Ore\" and \"Mineral\" types of Rock-species Digimon. Its Special Moves are detonating the volcano on its back, and performing a super-strong lariat with this propulsion ( Atomic Bomber ), and generating antimatter within its body, carrying out a super-detonation comparable to a tiny Big Bang ( Supernova ).",

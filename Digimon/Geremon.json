@@ -17,7 +17,7 @@
     "name": "Hyper Smell",
     "element": "Plant",
     "pr": 5,
-    "tags": "[MELEE] [BLAST 2]",
+    "tags": "[RANGE 4] [BURST 4] [POISON 4]",
     "description": "Spreads a noxious stench coming from within its body."
   },
   "digivolves_from": [
@@ -71,6 +71,7 @@
     "Vademon",
     "Waru Monzaemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "A Mollusk Digimon belonging to the same species as Numemon . Although its offensive power is low, it makes up for that with its ferocity, which is such that it will attack no matter who the opponent is. The opponent would then turn the tables on it, as expected, but its obstinacy leads it to immediately forget such instances and continue to endlessly start fights with tough opponents. Its Special Move is spreading a noxious stench coming from within its body ( Hyper Smell ).",

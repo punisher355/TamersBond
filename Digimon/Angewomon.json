@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Holy Arrow",
-    "element": "Neutral",
+    "element": "Light",
     "pr": 10,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [BLAST 2] [PIERCE]",
     "description": "Forms a bow with the wings on its glove and shoots a holy arrow of lightning."
   },
   "digivolves_from": [
@@ -35,7 +35,8 @@
     "Sunflowmon",
     "Thunderbirmon",
     "Witchmon",
-    "Yukidarumon"
+    "Yukidarumon",
+    "Tailmon"
   ],
   "digivolves_to": [
     "Babamon",
@@ -60,6 +61,7 @@
     "Venusmon",
     "Imperialdramon: Paladin Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "An Archangel Digimon with the appearance of a beautiful woman. Although it was previously classified as an Angel-type, it was confirmed as an Archangel-type because of the greatness of its abilities. As their trait, Adult angels have six wings, and Perfect angels have eight wings. Although its personality is extremely gentle, it cannot forgive those who are crooked or evil, and it won't stay its hand from attacking until the opponent converts. Because of its soul and power, it is said to be a being like a goddess of the Digital World . The powerful lightning-strike of its Special Move \" Holy Arrow \" is also known as \"Heaven's Punishment\", and its deadly ray of light \" Heaven's Charm \", which is packed with beauty and affection, demonstrates its strongest efficacy against the evil powers of Digimon.",

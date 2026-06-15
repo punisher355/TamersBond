@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Curse Crimson",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [BLAST 4] [BURN 4,3]",
     "description": "Fires super-heated gases from the small stacks on its back or from its mouth."
   },
   "digivolves_from": [
@@ -53,8 +53,9 @@
     "Vulturemon",
     "Zudomon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Rock/Mineral Digimon that was discovered from the digital analysis of an ancient curse. Ancient, forbidden incantations spelling \"plague\", \"curse\", and \"misfortune\" are carved onto its back, and it seems those incantations protect it from the gas that it emits. About 90% of its body is composed of rock data, and it survives by fastening its arms and legs. It is an emotionless Digimon that will not take action without being ordered to."
+  "description": "A Rock/Mineral Digimon that was discovered from the digital analysis of an ancient curse. Ancient, forbidden incantations spelling \"plague\", \"curse\", and \"misfortune\" are carved onto its back, and it seems those incantations protect it from the gas that it emits. About 90% of its body is composed of rock data, and it survives by fastening its arms and legs. It is an emotionless Digimon that will not take action without being ordered to.",
+  "web_created": true
 }

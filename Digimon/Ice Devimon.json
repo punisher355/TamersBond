@@ -15,10 +15,10 @@
   },
   "signature_move": {
     "name": "Frost Claw",
-    "element": "Neutral",
+    "element": "Water",
     "pr": 6,
-    "tags": "[MELEE]",
-    "description": "123Slashes the enemy with its icy claws.Stuns the enemy with a chop of its hand.Spreads freezing air with its wings."
+    "tags": "[MELEE] [CHAIN 2,3] [FREEZE]",
+    "description": "Slashes the enemy with its icy claws"
   },
   "digivolves_from": [
     "Agumon",
@@ -61,8 +61,9 @@
     "Zudomon",
     "Cerberumon: Werewolf Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Fallen Angel Digimon with a heart as cold as ice. It is said to be the evolved form of a Devimon with an especially cruel heart among other Devimon. As it specializes in deceiving the enemy with its way of words, it wraps them up in its ice wings and freezes them."
+  "description": "A Fallen Angel Digimon with a heart as cold as ice. It is said to be the evolved form of a Devimon with an especially cruel heart among other Devimon. As it specializes in deceiving the enemy with its way of words, it wraps them up in its ice wings and freezes them.",
+  "web_created": true
 }

@@ -43,8 +43,9 @@
     "Pumpmon",
     "Tekkamon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A Digimon whose body is mostly made of earth data. It is said that it may be a mutant that was born from a mutation of Yukidarumon . As it possesses a gentle personality, it hates battle, but when push comes to shove, it exhibits the power that it usually doesn't show. Its Special Move is a heavyweight punch that is profoundly loaded with all of its weight ( Great Weight )."
+  "description": "A Digimon whose body is mostly made of earth data. It is said that it may be a mutant that was born from a mutation of Yukidarumon . As it possesses a gentle personality, it hates battle, but when push comes to shove, it exhibits the power that it usually doesn't show. Its Special Move is a heavyweight punch that is profoundly loaded with all of its weight ( Great Weight ).",
+  "web_created": true
 }

@@ -17,7 +17,7 @@
     "name": "V-Wing Blade",
     "element": "Neutral",
     "pr": 8,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [CHAIN 2,3]",
     "description": "12While flying, forms a V-shaped energy blade along its wings and soars towards the opponent, cutting them.Fires a V-shaped energy blade."
   },
   "digivolves_from": [

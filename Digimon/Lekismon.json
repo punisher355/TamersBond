@@ -14,11 +14,11 @@
     "RLB": 5
   },
   "signature_move": {
-    "name": "Moon Night Kick",
+    "name": "Moon Night Bomb",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[MELEE]",
-    "description": "Leaps high into the air and performs a diving kick."
+    "tags": "[RANGE 8] [BLAST 4] [SLEEP]",
+    "description": "create hypnotic water bubbles from the \" Moon Gloves \" worn on its hands, and throwing them to lull the enemy to sleep"
   },
   "digivolves_from": [
     "Gaomon",
@@ -40,7 +40,9 @@
     "Waru Seadramon",
     "Were Garurumon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "description": "A Beast Man Digimon that has gained astounding jumping ability, and uses its swift movements to toy with its enemies. Although its personality is as wavering as the phases of the moon, its appearance exudes a somewhat mystical air. Its Special Moves are creating hypnotic water bubbles from the \" Moon Gloves \" worn on its hands, and throwing them to lull the enemy to sleep ( Moon Night Bomb ), as well as pulling beautiful arrows of ice from the protrusions on its back and firing them ( Tear Arrow ). It also displays great strength with its \" Moon Night Kick \", where it leaps high into the air and performs a diving kick."
+  "description": "A Beast Man Digimon that has gained astounding jumping ability, and uses its swift movements to toy with its enemies. Although its personality is as wavering as the phases of the moon, its appearance exudes a somewhat mystical air. Its Special Moves are creating hypnotic water bubbles from the \" Moon Gloves \" worn on its hands, and throwing them to lull the enemy to sleep ( Moon Night Bomb ), as well as pulling beautiful arrows of ice from the protrusions on its back and firing them ( Tear Arrow ). It also displays great strength with its \" Moon Night Kick \", where it leaps high into the air and performs a diving kick.",
+  "web_created": true
 }

@@ -17,7 +17,7 @@
     "name": "Strong Crunch",
     "element": "Neutral",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [PIERCE]",
     "description": "A powerful bite."
   },
   "digivolves_from": [
@@ -64,6 +64,7 @@
     "Wingdramon",
     "Yatagaramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "An Adult-level Mythical Dragon Digimon that attained V-mon 's natural power and evolved. XV-mon is a purebreed of V-dramon , and it is said that the variant species is V-dramon. The attacks it unleashes using its developed arm and leg strength are tremendous, and are powerful enough to destroy a mountain of rock without leaving a trace. It is feared because it possesses such destructive power, but in reality, it has a strong sense of justice, and will not use that power recklessly. Its Signature Move is a powerful biting technique ( Strong Crunch ). Its Special Move is an energy wave emitted from the \" X \" pattern on its chest ( X-Laser ).",

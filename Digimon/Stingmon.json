@@ -17,8 +17,8 @@
     "name": "Spiking Finish",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[MELEE]",
-    "description": "12Skewers the opponent with the spikes on its arms.Hits the enemy with a powerful flying kick."
+    "tags": "[MELEE] [CHAIN 2,3] [PIERCE]",
+    "description": "Skewers the opponent with the spikes on its arms."
   },
   "digivolves_from": [
     "Agumon",
@@ -62,6 +62,7 @@
     "Skull Satamon",
     "Vamdemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "An extremely unusual Insect Digimon with a humanoid form. It possesses nimble movements and a tough exoskeleton, defining traits of Insect Digimon. It excels in its abilities as an assassin, aiming for the opponent's vitals with its nimble movements and keen judgment, and specializes in attacks that silence the opponent with a single blow. It is highly intelligent and has great composure, along with a cool disposition. Its Special Move is a terrifying technique in which it skewers the opponent with the Spikes on both of its arms ( Spiking Finish ).",

@@ -379,18 +379,30 @@ export function registerCombatHooks() {
 
     const effects = [];
 
-    // Hope — only show when there is a per-turn cost
+    // Hope — private GM whisper each tamer turn
     if (actor.type === "tamer") {
-      const perTurn = actor.system?.crests?.hope?.perTurn ?? 0;
-      if (perTurn > 0) {
-        const current = actor.system?.crests?.hope?.current ?? 0;
-        effects.push({
-          type:     "hope",
-          label:    `Hope: −${perTurn} this turn`,
-          detail:   `${current} → ${Math.max(0, current - perTurn)} Hope`,
-          btnAttrs: `data-effect-type="hope" data-actor-id="${actor.id}" data-amount="${perTurn}"`
-        });
-      }
+      const perTurn    = actor.system?.crests?.hope?.perTurn ?? 0;
+      const current    = actor.system?.crests?.hope?.current ?? 0;
+      const afterDeduct = Math.max(0, current - perTurn);
+      const deductBtn  = perTurn > 0
+        ? `<button class="dd-sot-apply" data-effect-type="hope" data-actor-id="${actor.id}" data-amount="${perTurn}"
+             style="padding:3px 10px; font-size:0.82em; white-space:nowrap; flex-shrink:0;">Deduct ${perTurn}</button>`
+        : "";
+      await ChatMessage.create({
+        whisper: ChatMessage.getWhisperRecipients("GM"),
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<div class="dd-chat-card dd-sot-card">
+          <h3 class="dd-chat-title" style="margin-bottom:8px;">Hope — ${actor.name}</h3>
+          <div class="dd-sot-row" style="display:flex; align-items:center; gap:8px; padding:7px 10px; background:#f9f5ee; border-radius:4px; border-left:3px solid #3498db;">
+            <div style="flex:1; min-width:0;">
+              <strong style="font-size:0.9em;">${current} Hope remaining &nbsp;·&nbsp; ${perTurn}/turn</strong>
+              ${perTurn > 0 ? `<br><span style="font-size:0.8em; color:#666;">${current} → ${afterDeduct} after deduction</span>` : ""}
+            </div>
+            ${deductBtn}
+            <div class="dd-sot-note" style="display:none; font-size:0.8em; color:#27ae60; white-space:nowrap;"></div>
+          </div>
+        </div>`
+      });
     }
 
     // Status effects — tamers and digimon

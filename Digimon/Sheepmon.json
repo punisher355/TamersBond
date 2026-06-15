@@ -17,7 +17,7 @@
     "name": "Wool Grenade",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[RANGE 5] [BLAST 2] [BLIND]",
+    "tags": "[RANGE 5] [BLAST 2] [SLEEP]",
     "description": "Forcibly puts enemy Digimon to sleep during any battle with giant balls of wool launched from the \"Wool Ball Booster\"."
   },
   "digivolves_from": [
@@ -33,8 +33,9 @@
     "Metal Tyranomon",
     "Pajramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "An Armor-level Mammal Digimon that evolved through the power of the \" Digimental of Hope \". The surface of its body is covered in wool of the finest quality. Also, Sheepmon's movements are very sluggish, so just watching them move in flocks will lull you to sleep. The equipment on its back is a booster/bazooka unit called the \" Wool Ball Booster \", and with this, it reproduces the low-speed movement characteristic of Sheepmon. Its Special Move is forcibly putting enemy Digimon to sleep during any battle with giant balls of wool launched from the \" Wool Ball Booster \" ( Wool Grenade )."
+  "description": "An Armor-level Mammal Digimon that evolved through the power of the \" Digimental of Hope \". The surface of its body is covered in wool of the finest quality. Also, Sheepmon's movements are very sluggish, so just watching them move in flocks will lull you to sleep. The equipment on its back is a booster/bazooka unit called the \" Wool Ball Booster \", and with this, it reproduces the low-speed movement characteristic of Sheepmon. Its Special Move is forcibly putting enemy Digimon to sleep during any battle with giant balls of wool launched from the \" Wool Ball Booster \" ( Wool Grenade ).",
+  "web_created": true
 }

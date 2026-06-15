@@ -17,7 +17,7 @@
     "name": "Spinning Needle",
     "element": "Wind",
     "pr": 5,
-    "tags": "[RANGE 4]",
+    "tags": "[RANGE 4] [BLAST 2] [PIERCE]",
     "description": "Shoots needle-shaped vacuum blades from its wings."
   },
   "digivolves_from": [
@@ -79,6 +79,7 @@
     "Mega Seadramon",
     "Hippogriffomon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "automation",
   "description": "A Mythical Beast Digimon that grew gigantic wings. It's a highly valued monster due to it being said to have an existence close to that of a god. It specializes in mid-air attacks, its roar calls forth storms, and it causes giant tornadoes by flapping its wings. Its personality is considerably brutal, but it has great intelligence. However, being employed by an ordinary Tamer doesn't seem possible. Its Special Move is flapping its enormous wings to send out a sharp vacuum blade, ( Spinning Needle ).",

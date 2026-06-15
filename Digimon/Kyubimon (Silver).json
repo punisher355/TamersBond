@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Koenryuu",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [BLAST 4] [BURN 4,3]",
     "description": "Creates a burning dragon out of blue flames from its tails and incinerates the enemy."
   },
   "digivolves_from": [
@@ -44,8 +44,9 @@
     "Vamdemon",
     "Waru Monzaemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A subspecies of Kyubimon whose fur is silver. Although it's less intelligent than Kyubimon , it seems to have excellent speed. Digimon World -next 0rder- ⇨ English キュウビモンの亜種で、体毛の色が銀色。キュウビモンよりも知性は劣るものの、速度に優れる様だ。 デジモンワールド -next 0rder-"
+  "description": "A subspecies of Kyubimon whose fur is silver. Although it's less intelligent than Kyubimon , it seems to have excellent speed. Digimon World -next 0rder- ⇨ English キュウビモンの亜種で、体毛の色が銀色。キュウビモンよりも知性は劣るものの、速度に優れる様だ。 デジモンワールド -next 0rder-",
+  "web_created": true
 }

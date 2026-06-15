@@ -17,7 +17,7 @@
     "name": "Power Metal",
     "element": "Neutral",
     "pr": 7,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [PUSH]",
     "description": "Fires a large iron ball from its mouth."
   },
   "digivolves_from": [
@@ -48,6 +48,7 @@
     "Rize Greymon",
     "Tyilinmon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A ferocious Beast Dragon Digimon that possesses the disposition of a beast and a dragon, it is such a heavyweight that most Digimon run away just at the sight of its shadow. Although it exhibits the ferocity of a wild beast in battle, it also has the intelligence of a dragon, and is usually very docile. Because it has an old-style Interface on its brow, it is presumed to be an evolution of a \" Prototype Digimon \". Its Special Move is firing a large iron sphere from its mouth, smashing the opponent ( Power Metal ). With its Signature Move, \" Cannonball \", it is able to fire an iron sphere even while charging forth, although it's more powerful if it remains still and accumulates power before firing.",

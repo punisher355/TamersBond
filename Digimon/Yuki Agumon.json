@@ -3,7 +3,7 @@
   "stage": "Rookie",
   "attribute": "Vaccine",
   "element": "Neutral",
-  "archetype": "Berserker",
+  "archetype": "Attacker",
   "size": "Medium",
   "stats": {
     "CRG": 5,
@@ -14,10 +14,10 @@
     "RLB": 3
   },
   "signature_move": {
-    "name": "Little Blizzard[N 1]",
-    "element": "Neutral",
+    "name": "Little Blizzard",
+    "element": "Water",
     "pr": 3,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BLAST 2] [FREEZE]",
     "description": "Spews a tiny snowstorm out of its mouth."
   },
   "digivolves_from": [
@@ -55,6 +55,7 @@
     "Yukidarumon",
     "Yaksamon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A separate species of Agumon that inhabits snowy fields. Due to the mischievousness it inherited from Agumon, it is always happily excited like a child when it snows. Because the color of its body is identical to that of snow, in battle it is able to approach the enemy to attack without being exposed. Its Special Move is spewing a tiny snowstorm out of its mouth ( Little Blizzard ).",

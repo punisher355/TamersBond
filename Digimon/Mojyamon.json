@@ -17,7 +17,7 @@
     "name": "Icicle Rod",
     "element": "Water",
     "pr": 7,
-    "tags": "[RANGE 4] [FREEZE]",
+    "tags": "[RANGE 4] [CHAIN 2,3] [FREEZE]",
     "description": "Attacks with a giant icicle made by instantly freezing atmospheric moisture."
   },
   "digivolves_from": [
@@ -58,6 +58,7 @@
     "Nanomon (Digimon)",
     "Cerberumon: Werewolf Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "A hairy Rare Beast Digimon completely covered in white fur. It lives in the hinterland of snowy mountains, and it is very unlikely to come across one. There are many reported sightings of Mojyamon, but no evidence to prove its existence, so for a long period it was considered to be a Digimon based on myths. With its carefree personality, it is never belligerent. However, it considers its den and territory to be sacred ground, and it will never permit this sacred ground to be invaded. Its Special Moves are a gigantic icicle made by causing the moisture in the atmosphere to instantly freeze ( Icicle Rod ), and throwing the bone of an Ancient Digimon which had become fixed in the ice ( Hone Hone Boomerang ).",

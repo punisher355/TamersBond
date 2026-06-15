@@ -17,7 +17,7 @@
     "name": "Jungle Punch",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[MELEE] [RUSH]",
+    "tags": "[MELEE] [CHAIN 2,3] [RUSH]",
     "description": "12Utilises the power of the wilderness to dish out a punch with all its might.Punches the opponent while singing."
   },
   "digivolves_from": [
@@ -31,8 +31,9 @@
     "Panjyamon",
     "Vamdemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A Digimon that inhabits the depths of the jungle. It views its territory as a sacred land, and will not forgive anyone who intrudes upon its territory. Its Special Move is utilising the power of the wilderness to dish out a punch with all its might ( Jungle Punch )."
+  "description": "A Digimon that inhabits the depths of the jungle. It views its territory as a sacred land, and will not forgive anyone who intrudes upon its territory. Its Special Move is utilising the power of the wilderness to dish out a punch with all its might ( Jungle Punch ).",
+  "web_created": true
 }

@@ -17,7 +17,7 @@
     "name": "Crimson Nail",
     "element": "Neutral",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [CHAIN 2,3]",
     "description": "Slashes with its gigantic claws, tearing its opponent to shreds and beating them bloody."
   },
   "digivolves_from": [
@@ -69,8 +69,9 @@
     "Vamdemon",
     "Cerberumon: Werewolf Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "An Evil Dragon Digimon that is known and feared as the \" Many-eyed Demon \". As a demon beast that was summoned from the Dark Area by the messenger of darkness, Devimon , there are no other Digimon as evil as it is. Although it is a Dramon -species Digimon, its limbs are unusually developed, so it cuts the opponent to pieces with its elongated arms, and flies about the darkness with its sturdy legs and wings. Its personality is the epitome of wickedness, and it does not hold a shred of compassion in its heart. Any opponent it glares at with its four burning, crimson eyes becomes unable to move, and has their body sliced apart while they are unable to resist. Also, the tip of its tail is able to open up and take on the shape of claws, which it uses to skewer the opponent. This Digimon was likely birthed from the evil emotions of hackers who were abusing the Computer Network for their own selfish desires. Its Special Move is tearing its opponent to shreds with its gigantic claws, beating them bloody ( Crimson Nail )."
+  "description": "An Evil Dragon Digimon that is known and feared as the \" Many-eyed Demon \". As a demon beast that was summoned from the Dark Area by the messenger of darkness, Devimon , there are no other Digimon as evil as it is. Although it is a Dramon -species Digimon, its limbs are unusually developed, so it cuts the opponent to pieces with its elongated arms, and flies about the darkness with its sturdy legs and wings. Its personality is the epitome of wickedness, and it does not hold a shred of compassion in its heart. Any opponent it glares at with its four burning, crimson eyes becomes unable to move, and has their body sliced apart while they are unable to resist. Also, the tip of its tail is able to open up and take on the shape of claws, which it uses to skewer the opponent. This Digimon was likely birthed from the evil emotions of hackers who were abusing the Computer Network for their own selfish desires. Its Special Move is tearing its opponent to shreds with its gigantic claws, beating them bloody ( Crimson Nail ).",
+  "web_created": true
 }

@@ -17,7 +17,7 @@
     "name": "Unchi",
     "element": "Earth",
     "pr": 7,
-    "tags": "[RANGE 4]",
+    "tags": "[RANGE 4] [CHAIN 3,4] [POISON 3]",
     "description": "Spins around, arms stretched out, as it throws several poops."
   },
   "digivolves_from": [
@@ -89,8 +89,9 @@
     "Rapidmon Armor",
     "Black King Numemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A repulsive, po*p-shaped [N 1] Digimon that shines golden. It was born from the accumulation and mutation of scrap data thrown into the recycle bin of a computer desktop. It likes dark places, and being a pile of scrap data, it is similar to Numemon in that it is often hated by other Digimon. Its intelligence and offensive ability are nonexistent. Its partner, Tyumon , is a small rat-like Digimon who does not fight, but is unparalleled when it comes to cunning and is always coaxing Scumon into performing bad deeds."
+  "description": "A repulsive, po*p-shaped [N 1] Digimon that shines golden. It was born from the accumulation and mutation of scrap data thrown into the recycle bin of a computer desktop. It likes dark places, and being a pile of scrap data, it is similar to Numemon in that it is often hated by other Digimon. Its intelligence and offensive ability are nonexistent. Its partner, Tyumon , is a small rat-like Digimon who does not fight, but is unparalleled when it comes to cunning and is always coaxing Scumon into performing bad deeds.",
+  "web_created": true
 }

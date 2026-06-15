@@ -53,8 +53,9 @@
     "Toropiamon",
     "Whamon Perfect"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A Plant Digimon which has an appearance like the sunflower . If it bathes in the sun's light it becomes very energetic, and even its offensive power rises. On days when the weather is good it will also flap the leaves on its back to fly around. Its Special Moves are firing rays of sunlight from all of its petals ( Sunshine Beam ), and slapping the opponent in the face with a smile on its face ( Smiley Slap ). Furthermore, that smile is feared for its eeriness. Also, it can wave its tail-like stalk, firing off its thorns ( Cactus Tail )."
+  "description": "A Plant Digimon which has an appearance like the sunflower . If it bathes in the sun's light it becomes very energetic, and even its offensive power rises. On days when the weather is good it will also flap the leaves on its back to fly around. Its Special Moves are firing rays of sunlight from all of its petals ( Sunshine Beam ), and slapping the opponent in the face with a smile on its face ( Smiley Slap ). Furthermore, that smile is feared for its eeriness. Also, it can wave its tail-like stalk, firing off its thorns ( Cactus Tail ).",
+  "web_created": true
 }

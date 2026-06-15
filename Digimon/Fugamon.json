@@ -17,7 +17,8 @@
     "name": "Evil Hurricane",
     "element": "Wind",
     "pr": 5,
-    "tags": "[RANGE 4] [BLAST 1]"
+    "tags": "[RANGE 4] [BLAST 1] [RUSH]",
+    "description": "spinning its Hone Konbou , using it to mow everything down"
   },
   "digivolves_from": [
     "Agumon (Black)",
@@ -45,8 +46,9 @@
     "Were Garurumon",
     "Were Garurumon (Black)"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A Digimon whose form resembles that of the Oni from Eastern legends. It belongs to the same family as Orgemon , sporting the same violent, battle-loving personality. The attacks dealt using its well-developed muscles pack extraordinary power, and bring about absolute destruction. Its Special Move is spinning its Hone Konbou , using it to mow everything down ( Evil Hurricane )."
+  "description": "A Digimon whose form resembles that of the Oni from Eastern legends. It belongs to the same family as Orgemon , sporting the same violent, battle-loving personality. The attacks dealt using its well-developed muscles pack extraordinary power, and bring about absolute destruction. Its Special Move is spinning its Hone Konbou , using it to mow everything down ( Evil Hurricane ).",
+  "web_created": true
 }

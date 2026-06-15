@@ -17,7 +17,7 @@
     "name": "Fire Breath",
     "element": "Neutral",
     "pr": 7,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BURST 4] [BURN 4,3]",
     "description": "Exhales deep-crimson flames."
   },
   "digivolves_from": [
@@ -73,8 +73,9 @@
     "Waru Monzaemon",
     "Yatagaramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Digimon that resembles an ancient dinosaur that existed in the prehistoric world. It sweeps everything away with its two well-developed arms and its gigantic tail. It is extremely easy to tame due to its intelligence and docile personality. For that reason, it is highly valued by beginner Tamers , and is often raised with care. You could probably say that it is a representative figure of the most basic Digimon. Its Special Move is spewing out deep crimson flames the same color as its body ( Fire Breath )."
+  "description": "A Digimon that resembles an ancient dinosaur that existed in the prehistoric world. It sweeps everything away with its two well-developed arms and its gigantic tail. It is extremely easy to tame due to its intelligence and docile personality. For that reason, it is highly valued by beginner Tamers , and is often raised with care. You could probably say that it is a representative figure of the most basic Digimon. Its Special Move is spewing out deep crimson flames the same color as its body ( Fire Breath ).",
+  "web_created": true
 }

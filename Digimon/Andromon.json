@@ -17,7 +17,7 @@
     "name": "Gatling Missile",
     "element": "Neutral",
     "pr": 10,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [CHAIN 2,3]",
     "description": "Opens its chest plate to reveal two missile launchers, from which it fires two missiles. The missiles have machine guns in their mouths."
   },
   "digivolves_from": [
@@ -69,6 +69,7 @@
     "Imperialdramon: Dragon Mode",
     "Imperialdramon: Fighter Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "Current Original ⇨ Japanese A human-type Cyborg Digimon. It possesses a fighting strength which can fell a Digimon below Perfect in a single blow. Andromon was developed as a prototype for Cyborg Digimon, and the mechanically-based Andromon and organically-based cyborg Boltmon were manufactured at the same time. This technology was appropriated for Metal Greymon and Megadramon . As a prototype Digimon it possesses neither will nor emotion, and it is faithful to its programmed behavior. It was upgraded with a program based on the data acquired from the Andromon of File Island , and the strength of that program varies. Its Special Move is a blade of energy which it fires from its arm module ( Spiral Sword ).",

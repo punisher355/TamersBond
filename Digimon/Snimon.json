@@ -17,7 +17,7 @@
     "name": "Shadow Sickle",
     "element": "Wind",
     "pr": 5,
-    "tags": "[RANGE 4] [TRUE]",
+    "tags": "[RANGE 4] [BLAST 2] [TRUE]",
     "description": "A supersonic slash that sends out a blade-shaped shockwave."
   },
   "digivolves_from": [
@@ -51,8 +51,9 @@
     "Vamdemon",
     "Zudomon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "An experimental Digimon that was created at a research facility as a Virus Hunter. It was created from the data of praying mantises, and it tracks its target down as if it were a precise machine. Due to its unfeeling personality, it is feared by both Vaccine and Data-attribute Digimon. The sickles on both of its arms are honed to their sharpest, allowing it to cleanly slice through anything. Although Snimon is a Digimon that has no eyes, the red antennae growing from its head have become sensors, and are able to accurately pinpoint the target's location. Its Special Move is a supersonic slash that can't be seen with the naked eye ( Shadow Sickle )."
+  "description": "An experimental Digimon that was created at a research facility as a Virus Hunter. It was created from the data of praying mantises, and it tracks its target down as if it were a precise machine. Due to its unfeeling personality, it is feared by both Vaccine and Data-attribute Digimon. The sickles on both of its arms are honed to their sharpest, allowing it to cleanly slice through anything. Although Snimon is a Digimon that has no eyes, the red antennae growing from its head have become sensors, and are able to accurately pinpoint the target's location. Its Special Move is a supersonic slash that can't be seen with the naked eye ( Shadow Sickle ).",
+  "web_created": true
 }

@@ -17,7 +17,7 @@
     "name": "Hedoro",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[RANGE 2]",
+    "tags": "[RANGE 2] [BURST 2] [POISON 3]",
     "description": "Spews a wave of sludge from its mouth."
   },
   "digivolves_from": [
@@ -71,6 +71,7 @@
     "Nanomon (Digimon)",
     "SkullBaluchimon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "An Undead Digimon whose muscles have all rotted away. It tried to extend its life by mechanizing its body, but it destabilized its body, and its configuration data has begun to break down. However, because it was given life by those machines, it will not die, and survives with this grotesque appearance. Because its body has broken down, its offensive power and mental capacity are nonexistent, and it acts on instinct. Its entire body exudes a stench so foul that Baby Digimon will simply run away from it, and will not take it on until they grow to the Adult level.",

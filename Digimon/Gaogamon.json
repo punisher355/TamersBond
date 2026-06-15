@@ -17,7 +17,7 @@
     "name": "Dash Double Claw",
     "element": "Neutral",
     "pr": 7,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [CHAIN 3,4] [RUSH]",
     "description": "Approaches the opponent at a speed faster than the eye can see and slashes with the claws on both forepaws."
   },
   "digivolves_from": [
@@ -62,8 +62,9 @@
     "Were Garurumon (Black)",
     "Whamon Perfect"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Beast Digimon that resulted as Gaomon 's physique grew larger, and its claws that were once protected by gloves have grown fully. Although it is a quadruped , its powerful legs also allow it to stand up to attack like a bear. Its Special Moves are approaching the opponent at a speed faster than the eye can see and unleashing its \" Dash Double Claw \", and biting the opponent with its sturdy teeth, not letting go until they collapse ( Gaoga Hound ). It can also release a powerful vortex of wind from its mouth in one breath ( Spiral Blow )."
+  "description": "A Beast Digimon that resulted as Gaomon 's physique grew larger, and its claws that were once protected by gloves have grown fully. Although it is a quadruped , its powerful legs also allow it to stand up to attack like a bear. Its Special Moves are approaching the opponent at a speed faster than the eye can see and unleashing its \" Dash Double Claw \", and biting the opponent with its sturdy teeth, not letting go until they collapse ( Gaoga Hound ). It can also release a powerful vortex of wind from its mouth in one breath ( Spiral Blow ).",
+  "web_created": true
 }

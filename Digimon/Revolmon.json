@@ -17,7 +17,7 @@
     "name": "Justice Bullet",
     "element": "Neutral",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8]",
     "description": "Fires a giant bullet from the gun barrel in its torso."
   },
   "digivolves_from": [
@@ -63,8 +63,9 @@
     "Volcamon",
     "Wisemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A mutated Digimon whose body has become a gun barrel. Although the details of how it was born are completely unclear, it has a deep sense of justice and is active as a \" Virus Buster \". Among Vaccine Digimon, the \"Virus Busters\" exists as a group of Digimon with the ability to eradicate and delete the consciousness of \"evil\" that resides especially within Virus Digimon. However, it also has a gambling-loving side and really loves Russian roulette in particular; it has quite the hard-to-hate personality and may overlook even a Virus Digimon if they can get through a round of Russian roulette. Its Special Move is turning itself into a gun barrel and firing off a bullet of justice ( Justice Bullet )."
+  "description": "A mutated Digimon whose body has become a gun barrel. Although the details of how it was born are completely unclear, it has a deep sense of justice and is active as a \" Virus Buster \". Among Vaccine Digimon, the \"Virus Busters\" exists as a group of Digimon with the ability to eradicate and delete the consciousness of \"evil\" that resides especially within Virus Digimon. However, it also has a gambling-loving side and really loves Russian roulette in particular; it has quite the hard-to-hate personality and may overlook even a Virus Digimon if they can get through a round of Russian roulette. Its Special Move is turning itself into a gun barrel and firing off a bullet of justice ( Justice Bullet ).",
+  "web_created": true
 }

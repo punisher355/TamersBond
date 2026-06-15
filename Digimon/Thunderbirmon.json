@@ -17,7 +17,8 @@
     "name": "Spark Wing",
     "element": "Electric",
     "pr": 5,
-    "tags": "[RANGE 5] [CHAIN 5,3]"
+    "tags": "[RANGE 5] [CHAIN 5,3] [PARALYZE 2]",
+    "description": "firing out countless electrically-charged feathers like rain"
   },
   "digivolves_from": [
     "Candmon",
@@ -37,8 +38,9 @@
     "Scorpiomon",
     "Volcamon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Giant Bird Digimon that \"Armor Evolved\" with the \" Digimental of Friendship \". It has the ability to summon thunder clouds with an echoing cry like thunder, and control thunder with the horn on its brow. Although it has a rough temperament, it has a caring nature for its comrades. Its Signature Move is firing out countless electrically-charged feathers like rain ( Spark Wing ). Its Special Move is flapping wings clad in electricity, generating a storm of lightning ( Thunder Storm )."
+  "description": "A Giant Bird Digimon that \"Armor Evolved\" with the \" Digimental of Friendship \". It has the ability to summon thunder clouds with an echoing cry like thunder, and control thunder with the horn on its brow. Although it has a rough temperament, it has a caring nature for its comrades. Its Signature Move is firing out countless electrically-charged feathers like rain ( Spark Wing ). Its Special Move is flapping wings clad in electricity, generating a storm of lightning ( Thunder Storm ).",
+  "web_created": true
 }

@@ -15,10 +15,10 @@
   },
   "signature_move": {
     "name": "Neko Punch",
-    "element": "Neutral",
+    "element": "Dark",
     "pr": 7,
-    "tags": "[MELEE]",
-    "description": "Attacks the opponent with its long claws."
+    "tags": "[RANGE 4] [BLAST 4] [CONFUSE]",
+    "description": "manipulating the enemy with a piercing glare, Those who suffer this glare will attack themselves."
   },
   "digivolves_from": [
     "Agumon",
@@ -51,9 +51,11 @@
     "Tyumon",
     "V-mon",
     "Wormmon",
-    "Yuki Agumon"
+    "Yuki Agumon",
+    "Plotmon"
   ],
   "digivolves_to": [
+    "Angewomon",
     "Andiramon",
     "Atlur Kabuterimon (Blue)",
     "Atlur Kabuterimon (Red)",
@@ -74,6 +76,7 @@
     "Taomon (Silver)",
     "Were Garurumon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "It has a very healthy curiosity, so it loves pranks. Although its body is small, it is a precious Holy-species Digimon, and its appearance does not match the true strength it possesses. It wears a Holy Ring on its tail, proof that it is a Holy-species, but if this Holy Ring is lost, its power is decreased and it can no longer exhibit its original power. In order to defend itself, it wears long claws copied from Saber Leomon 's data. Its Special Moves are using its long claws and attacking the opponent ( Neko Punch ), and manipulating the enemy with a piercing glare ( Cat's Eye ). Those who suffer this glare will attack themselves.",

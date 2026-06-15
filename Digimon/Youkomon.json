@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Homuradama",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BURST 2] [BURN 4,3]",
     "description": "Manifests scorching hot fireballs and manipulates them at will."
   },
   "digivolves_from": [
@@ -50,6 +50,7 @@
     "SkullBaluchimon",
     "Cerberumon: Werewolf Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A Bewitching Beast Digimon which has the appearance of a gigantic blue fox that grew nine tails. Unlike Kyubimon , it is feared as a bewitching beast that brings about destruction and decay. Although its offensive ability itself is not strong, it possesses powerful spiritual ability and specializes in \"Arts\" techniques, and it is said that it races through the heavens with its red, blazing limbs. Its Signature Move is manifesting scorching hot fireballs and manipulating them at will ( Homuradama ). Its Special Move is manifesting a dragon of blazing red flames from its tail and incinerating the opponent ( Jaenryū ).",

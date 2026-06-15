@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Great Maelstrom",
-    "element": "Neutral",
+    "element": "Water",
     "pr": 11,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [BLAST 2]",
     "description": "Generates a gigantic maelstrom which swallows everything in the water."
   },
   "digivolves_from": [
@@ -31,8 +31,9 @@
   "digivolves_to": [
     "Apocalymon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "Current Before ⇨ Japanese Possessing the attribute of \"water\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is a guardian goddess of the birthplace of Digimon, the \" Net Ocean \". It rules the whole of the far-reaching \"Net Ocean\", and is able to handle all water, such as the ocean currents and tidal waves, as if they were its own limbs. It is said that countless continents and islands have been erased when Ancient Mermaimon felt angry. Ancient Mermaimon's abilities were later passed on to the \"Aquatic Digimon\". Its Special Moves are generating a gigantic maelstrom which swallows everything in the water ( Great Maelstrom ), and crystallizing water into super-hard substances, then firing them off like a machine gun ( Crystal Billow )."
+  "description": "Current Before ⇨ Japanese Possessing the attribute of \"water\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is a guardian goddess of the birthplace of Digimon, the \" Net Ocean \". It rules the whole of the far-reaching \"Net Ocean\", and is able to handle all water, such as the ocean currents and tidal waves, as if they were its own limbs. It is said that countless continents and islands have been erased when Ancient Mermaimon felt angry. Ancient Mermaimon's abilities were later passed on to the \"Aquatic Digimon\". Its Special Moves are generating a gigantic maelstrom which swallows everything in the water ( Great Maelstrom ), and crystallizing water into super-hard substances, then firing them off like a machine gun ( Crystal Billow ).",
+  "web_created": true
 }

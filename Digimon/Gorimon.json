@@ -17,8 +17,8 @@
     "name": "Power Attack",
     "element": "Neutral",
     "pr": 7,
-    "tags": "[MELEE]",
-    "description": "Fires a large bullet of explosive energy from itsEnergy Cannon.[N 1]"
+    "tags": "[RANGE 4] [BLAST 4] [PUSH]",
+    "description": "Fires a large bullet of explosive energy from its Energy Cannon.]"
   },
   "digivolves_from": [
     "Agumon",
@@ -44,8 +44,9 @@
     "Parrotmon",
     "Valvemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Power Digimon endowed with the arm strength to crush anything and the leg strength to crush things underfoot no matter how hard they are. However, it surprises the opponent with light movements that aren't expected from its physique, and seizes the opportunity to add to the attack with the Energy Cannon on its right hand. It found its aesthetic in \" Hit and Away \". Its Special Move \" Power Attack \" is super-powerful."
+  "description": "A Power Digimon endowed with the arm strength to crush anything and the leg strength to crush things underfoot no matter how hard they are. However, it surprises the opponent with light movements that aren't expected from its physique, and seizes the opportunity to add to the attack with the Energy Cannon on its right hand. It found its aesthetic in \" Hit and Away \". Its Special Move \" Power Attack \" is super-powerful.",
+  "web_created": true
 }

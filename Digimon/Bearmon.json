@@ -3,7 +3,7 @@
   "stage": "Rookie",
   "attribute": "Vaccine",
   "element": "Neutral",
-  "archetype": "Fortress",
+  "archetype": "Attacker",
   "size": "Medium",
   "stats": {
     "CRG": 2,
@@ -17,7 +17,7 @@
     "name": "Koguma Seikendzuki",
     "element": "Neutral",
     "pr": 4,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [PUSH]",
     "description": "Punches at the foe with all its might."
   },
   "digivolves_from": [
@@ -55,8 +55,9 @@
     "XV-mon",
     "Ogremon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Beast Digimon with the appearance of a bear-cub, whose trademark is its baseball cap which is worn backwards. Although it is a little timid at first, it immediately becomes bosom buddies with other Digimon. However, once it begins to battle, with the uncommon physical strength and will-power it possesses—to continue battling no matter what kind of attack it suffers—it becomes a very reliable being. The ability for close combat hidden within its body is very strong, to the point that it bound its fists in leather belts so that its special punches wouldn't hurt itself. Its Special Move is driving a punch into the opponent's chest with all its strength ( Koguma Seikendzuki )."
+  "description": "A Beast Digimon with the appearance of a bear-cub, whose trademark is its baseball cap which is worn backwards. Although it is a little timid at first, it immediately becomes bosom buddies with other Digimon. However, once it begins to battle, with the uncommon physical strength and will-power it possesses—to continue battling no matter what kind of attack it suffers—it becomes a very reliable being. The ability for close combat hidden within its body is very strong, to the point that it bound its fists in leather belts so that its special punches wouldn't hurt itself. Its Special Move is driving a punch into the opponent's chest with all its strength ( Koguma Seikendzuki ).",
+  "web_created": true
 }

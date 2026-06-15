@@ -17,7 +17,7 @@
     "name": "Hazard Breath",
     "element": "Plant",
     "pr": 6,
-    "tags": "[MELEE] [BURST 1]",
+    "tags": "[RANGE 4] [BURST 2] [POISON 3]",
     "description": "Spews out its putrid, poison-laced breath."
   },
   "digivolves_from": [
@@ -46,8 +46,9 @@
     "Vademon",
     "Waru Monzaemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A strengthened version of Vegimon whose entire body has ripened and turned red. It has high intelligence and offensive ability, unlike Vegimon, who is still unripe. This red, ripened form is Vegimon's true form, and it is possible that the harsher environments found on the Folder Continent caused Vegimon to take on this original form. Its personality has turned even more devious and cunning. Its Special Move is a spewing out its putrid, poison-laced breath ( Hazard Breath ). Anyone who carelessly tries to take it on, mistaking it for an ordinary Vegimon, will no doubt meet a terrible fate."
+  "description": "A strengthened version of Vegimon whose entire body has ripened and turned red. It has high intelligence and offensive ability, unlike Vegimon, who is still unripe. This red, ripened form is Vegimon's true form, and it is possible that the harsher environments found on the Folder Continent caused Vegimon to take on this original form. Its personality has turned even more devious and cunning. Its Special Move is a spewing out its putrid, poison-laced breath ( Hazard Breath ). Anyone who carelessly tries to take it on, mistaking it for an ordinary Vegimon, will no doubt meet a terrible fate.",
+  "web_created": true
 }

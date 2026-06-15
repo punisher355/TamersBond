@@ -2,7 +2,7 @@
     "id":  "digital-destiny",
     "title":  "Tamers Bond",
     "description":  "A Foundry VTT system for the Tamers Bond Digimon TTRPG.",
-  "version":  "1.2.1",
+  "version":  "1.2.2",
     "compatibility":  {
                           "minimum":  "11",
                           "verified":  "14"
@@ -128,6 +128,20 @@
                       "system":  "digital-destiny"
                   }
               ],
+    "documentTypes": {
+        "Actor": {
+            "tamer":   {},
+            "digimon": {}
+        },
+        "Item": {
+            "move":        {},
+            "classSkill":  {},
+            "gear":        {},
+            "attack":      {},
+            "status":      {},
+            "digimonForm": {}
+        }
+    },
     "socket":  false,
     "url":  "",
     "manifest":  "https://raw.githubusercontent.com/punisher355/TamersBond/master/system.json",

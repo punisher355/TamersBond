@@ -4,7 +4,7 @@
   "attribute": "Virus",
   "element": "Neutral",
   "archetype": "Attacker",
-  "size": "Large",
+  "size": "Medium",
   "stats": {
     "CRG": 6,
     "FRD": 6,
@@ -56,8 +56,9 @@
     "Meicrackmon",
     "SkullBaluchimon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Virus attribute Tailmon who sports vivid, pitch-black fur. A child completely born of evil, it lives its life treading through the ominous darkness. Black Tailmon is a variety of Tailmon that is born very rarely, and as such is said to have a low population size. It has a mean and prideful personality, and is a problematic Digimon that loves picking on the weak. It is a dark-type Digimon that generally evolves into Fallen Angel Digimon. Its Special Move is \" Neko Punch \", the same as Tailmon's."
+  "description": "A Virus attribute Tailmon who sports vivid, pitch-black fur. A child completely born of evil, it lives its life treading through the ominous darkness. Black Tailmon is a variety of Tailmon that is born very rarely, and as such is said to have a low population size. It has a mean and prideful personality, and is a problematic Digimon that loves picking on the weak. It is a dark-type Digimon that generally evolves into Fallen Angel Digimon. Its Special Move is \" Neko Punch \", the same as Tailmon's.",
+  "web_created": true
 }

@@ -36,8 +36,9 @@
     "Lilamon",
     "Lilimon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A shinobi Digimon who dons a purple mask and lives in the darkness. It travels the Digital World in order to hone its Kouga-style ninjutsu . It is rarely encountered as it often moves from shadow to shadow in order to avoid being seen by others. Its Special Move is forming clones of itself, which attack the enemy simultaneously ( Kouga-ryū Kage Bunshin )."
+  "description": "A shinobi Digimon who dons a purple mask and lives in the darkness. It travels the Digital World in order to hone its Kouga-style ninjutsu . It is rarely encountered as it often moves from shadow to shadow in order to avoid being seen by others. Its Special Move is forming clones of itself, which attack the enemy simultaneously ( Kouga-ryū Kage Bunshin ).",
+  "web_created": true
 }

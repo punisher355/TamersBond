@@ -17,7 +17,7 @@
     "name": "Destruction Grenade",
     "element": "Neutral",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [TRUE]",
     "description": "Shoots flying missiles from its wrists that chase intruders to the ends of the earth and completely destroy them."
   },
   "digivolves_from": [
@@ -62,6 +62,7 @@
     "Vademon",
     "Nanomon (Digimon)"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A Machine Digimon that protects the Computer Network 's defensive barrier . It was originally a Digimon that repelled anyone illegally entering the Network's defensive barrier alongside the \"Net Keeper\" Giromon . However, a malicious hacker who noticed its ironclad defensive ability infected Guardromon with a computer virus , and used it to protect themselves from the Vaccine justice group, the \" Virus Busters \". Basically, Guardromon only has program commands for \"defending\", so even if its position changes, it does not pose a huge problem for it as long as it can defend against intruders. Its Special Move chases intruders to the ends of the earth and completely destroys them ( Destruction Grenade ). Guardromon will never attack anyone unless they are intruding.",

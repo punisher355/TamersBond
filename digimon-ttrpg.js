@@ -1,4 +1,6 @@
 import { DIGIMON }                  from "./module/config.js";
+import { TamerData, DigimonData }   from "./module/data/actor-models.js";
+import { MoveData, ClassSkillData, GearData, AttackData, StatusData, DigimonFormData } from "./module/data/item-models.js";
 import { DigitalDestinyActor }      from "./module/actors/actor.js";
 import { DigitalDestinyItem }       from "./module/items/item.js";
 import { TamerSheet }               from "./module/sheets/TamerSheet.js";
@@ -86,6 +88,12 @@ Hooks.once("init", () => {
   CONFIG.Actor.documentClass   = DigitalDestinyActor;
   CONFIG.Item.documentClass    = DigitalDestinyItem;
   CONFIG.Combat.documentClass  = DigitalDestinyCombat;
+
+  CONFIG.Actor.dataModels = { tamer: TamerData, digimon: DigimonData };
+  CONFIG.Item.dataModels  = {
+    move: MoveData, classSkill: ClassSkillData, gear: GearData,
+    attack: AttackData, status: StatusData, digimonForm: DigimonFormData
+  };
   CONFIG.Combat.initiative     = { formula: "1d20", decimals: 2 };
 
   const _Actors     = foundry.documents.collections.Actors;

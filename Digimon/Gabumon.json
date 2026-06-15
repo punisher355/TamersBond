@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Petit Fire",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 2,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BURN 3,2]",
     "description": "Shoots flames from its mouth."
   },
   "digivolves_from": [
@@ -102,6 +102,7 @@
     "Mulemon",
     "Ogremon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "Although it is covered by a fur pelt, it is clearly a Reptile Digimon. Due to its extremely timid and shy personality, it always gathers up the data that Garurumon leaves behind and shapes it into a fur pelt to wear. That fur pelt of Garurumon, who is feared by other Digimon, thus plays a role in safeguarding and protecting Gabumon. When it is wearing the fur pelt, its personality does a complete 180° shift. Its Special Move is \" Petit Fire \".",

@@ -17,7 +17,7 @@
     "name": "Tornado Gamba",
     "element": "Wind",
     "pr": 5,
-    "tags": "[MELEE] [BURST 1] [PUSH]",
+    "tags": "[MELEE] [CHAIN 2,3] [PUSH]",
     "description": "Performs a handstand and unleashes a whirlwind kick."
   },
   "digivolves_from": [
@@ -35,6 +35,7 @@
     "Petaldramon",
     "Shutumon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "A Digimon that possesses power over Wind which bears the might of one of the legendary Ten Warriors . It freely manipulates the atmosphere to display mirages to its opponents, and specializes in attacks that generate \" Kamaitachi \" made from vacuums. However, it is more proficient in information warfare than in actual combat ability. Although it has an innocent personality brimming with curiosity, and is a gossipy, talkative troublemaker, because it has no ill will for the person, it isn't really hated. It is thoroughly optimistic, and is the possessor of a strong heart that cuts its way through small difficulties with a smile. Its Special Moves are performing a handstand and unleashing a whirlwind kick ( Tornado Gamba ), and rushing toward the opponent, then dispatching a back-flip kick after a barrage of kicks ( Roseo Temporale ).",

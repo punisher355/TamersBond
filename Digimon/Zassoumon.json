@@ -15,10 +15,10 @@
   },
   "signature_move": {
     "name": "Squeeze Vine",
-    "element": "Neutral",
+    "element": "Plant",
     "pr": 7,
-    "tags": "[MELEE]",
-    "description": "12Uses its vine arms to squeeze the enemy.Buries its arms to cause vines to rise up around the opponent and stabs them with extending thorns."
+    "tags": "[MELEE] [BURST 2] [TRUE]",
+    "description": "using its vine arms to squeeze the enemy"
   },
   "digivolves_from": [
     "Alraumon",
@@ -35,6 +35,7 @@
     "Zamielmon",
     "Petaldramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A subspecies of the Vegimon species whose body is completely green. Unlike Vegimon, it does not ripen and turn red; in turn, it has obtained the vitality of a weed, allowing it to survive no matter how many times it is cut or beaten. Its Special Move is using its vine arms to squeeze the enemy ( Squeeze Vine ).",

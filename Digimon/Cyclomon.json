@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Hyper Heat",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BLAST 4] [BURN 5,3]",
     "description": "Fires an ultra-high-temperature beam from its mouth that can melt anything."
   },
   "digivolves_from": [
@@ -53,8 +53,9 @@
     "Waru Seadramon",
     "Nanomon (Digimon)"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A one-eyed Dragon Man Digimon with an abnormally developed right arm. It was originally a stalwart dragon warrior, but its right eye was crushed by the warrior Leomon , and it became an oni of revenge. In order to defeat Leomon, it has strengthened and enlarged its right arm, and it is on the lookout for a chance to take it down. For the sake of revenge, it has lost its pride as a warrior, leaving it as nothing more than a warrior obsessed with bloodshed. Its Special Move is its ultra-high-temperature \" Hyper Heat \", which can melt anything."
+  "description": "A one-eyed Dragon Man Digimon with an abnormally developed right arm. It was originally a stalwart dragon warrior, but its right eye was crushed by the warrior Leomon , and it became an oni of revenge. In order to defeat Leomon, it has strengthened and enlarged its right arm, and it is on the lookout for a chance to take it down. For the sake of revenge, it has lost its pride as a warrior, leaving it as nothing more than a warrior obsessed with bloodshed. Its Special Move is its ultra-high-temperature \" Hyper Heat \", which can melt anything.",
+  "web_created": true
 }

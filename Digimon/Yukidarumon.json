@@ -18,7 +18,7 @@
     "element": "Water",
     "pr": 7,
     "tags": "[MELEE] [FREEZE]",
-    "description": "12A punch that freezes the enemy solid.Fires a burst of freezing air by punching."
+    "description": "A punch that freezes the enemy solid."
   },
   "digivolves_from": [
     "Blucomon",
@@ -59,8 +59,9 @@
     "Waru Monzaemon",
     "Zudomon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "An Ice-snow Digimon whose body is covered in snow and ice crystals. Contrary to its cold appearance, it has a very warm, gentle personality. As a Digimon that melts the hearts of those who see it with its calm movements and sweet behavior, Yukidarumon hates fighting by nature. Among the battle-loving Digimon, it dreads Meramon in particular. Its Special Move is \" Zettai Reido Punch \", which it fires from its large body."
+  "description": "An Ice-snow Digimon whose body is covered in snow and ice crystals. Contrary to its cold appearance, it has a very warm, gentle personality. As a Digimon that melts the hearts of those who see it with its calm movements and sweet behavior, Yukidarumon hates fighting by nature. Among the battle-loving Digimon, it dreads Meramon in particular. Its Special Move is \" Zettai Reido Punch \", which it fires from its large body.",
+  "web_created": true
 }

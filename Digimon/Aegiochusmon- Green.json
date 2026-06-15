@@ -14,11 +14,11 @@
     "RLB": 9
   },
   "signature_move": {
-    "name": "Bramble Bite",
+    "name": "Plant Zone Cradle",
     "element": "Plant",
     "pr": 9,
-    "tags": "[MELEE]",
-    "description": "Changes the thorns at the end of itsBusterinto an evil spirit that bites the enemy."
+    "tags": "[RANGE 4] [BURST 2]",
+    "description": "shooting numerous thorns from its entire body, tearing the surrounding opponents to pieces over a wide range"
   },
   "digivolves_from": [
     "Aegiomon"

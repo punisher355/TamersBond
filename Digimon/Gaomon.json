@@ -70,7 +70,9 @@
     "Black Tailmon Uver.",
     "Ogremon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "description": "A Beast Digimon that is thought to be a subspecies of the sharp-clawed Gazimon-species . With its keen movements, it specializes in \" Hit and Away \" attacks. The gloves on its hands appear to be protecting its claws until they are fully grown. Its Special Moves are utilising its powerful legs and rolling into the opponent's chest ( Rolling Upper ), and its \" Double Backhand \" that it unleashes while spinning. Also, it can move nimbly to unleash a high-speed barrage of punches ( Gao Rush )."
+  "description": "A Beast Digimon that is thought to be a subspecies of the sharp-clawed Gazimon-species . With its keen movements, it specializes in \" Hit and Away \" attacks. The gloves on its hands appear to be protecting its claws until they are fully grown. Its Special Moves are utilising its powerful legs and rolling into the opponent's chest ( Rolling Upper ), and its \" Double Backhand \" that it unleashes while spinning. Also, it can move nimbly to unleash a high-speed barrage of punches ( Gao Rush ).",
+  "web_created": true
 }

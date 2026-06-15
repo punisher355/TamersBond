@@ -17,7 +17,7 @@
     "name": "Chrono Breaker",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [PIERCE]",
     "description": "Destroys the \"time\" flowing through the opponent's body."
   },
   "digivolves_from": [
@@ -48,8 +48,9 @@
     "Nanomon (Digimon)",
     "Sephirothmon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "The protector of time that governs the computer's timer. It manages the \"Time\" and \"Space\" of all computers and networks, and it is able to freely advance and rewind time between the years 1900 and 1999. Because it possesses an extremely dangerous, terrifying ability, it always maintains a neutral standpoint and doesn't participate in the conflict between Vaccines and Viruses. For that reason, it is said that if it ever tilts toward either side of the balance, the Digital World will collapse. Its Special Move is destroying the \"time\" flowing through the opponent's body ( Chrono Breaker ). It is impossible for a Digimon whose \"time\" was frozen with this attack to recover."
+  "description": "The protector of time that governs the computer's timer. It manages the \"Time\" and \"Space\" of all computers and networks, and it is able to freely advance and rewind time between the years 1900 and 1999. Because it possesses an extremely dangerous, terrifying ability, it always maintains a neutral standpoint and doesn't participate in the conflict between Vaccines and Viruses. For that reason, it is said that if it ever tilts toward either side of the balance, the Digital World will collapse. Its Special Move is destroying the \"time\" flowing through the opponent's body ( Chrono Breaker ). It is impossible for a Digimon whose \"time\" was frozen with this attack to recover.",
+  "web_created": true
 }

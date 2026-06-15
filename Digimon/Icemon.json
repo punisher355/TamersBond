@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Iceball Bomb",
-    "element": "Neutral",
+    "element": "Water",
     "pr": 5,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BLAST 4] [FREEZE]",
     "description": "Throws a solid frozen bomb of ice."
   },
   "digivolves_from": [
@@ -47,8 +47,9 @@
     "Zudomon",
     "Nanomon (Digimon)"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Digimon whose body is made of ice. Whether it is an evolution or a mutation of Gottsumon is still a mystery, and research continues to be done on that matter. Its Special Move is throwing a solid frozen bomb of ice ( Iceball Bomb )."
+  "description": "A Digimon whose body is made of ice. Whether it is an evolution or a mutation of Gottsumon is still a mystery, and research continues to be done on that matter. Its Special Move is throwing a solid frozen bomb of ice ( Iceball Bomb ).",
+  "web_created": true
 }

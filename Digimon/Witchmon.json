@@ -17,7 +17,7 @@
     "name": "Aquary Pressure",
     "element": "Water",
     "pr": 7,
-    "tags": "[RANGE 5] [PIERCE]",
+    "tags": "[RANGE 5] [BLAST 2] [PIERCE]",
     "description": "Attacks with water of such extremely high pressure that it is enough to penetrate steel."
   },
   "digivolves_from": [
@@ -41,8 +41,9 @@
     "Neo Devimon",
     "Wisemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "A Digimon which has the appearance of a witch, it came along from \" Witchelny \", the Digital World of another dimension, in pursuit of its rival, Wizarmon . In its native Witchelny it mastered the sorcery ( high-level programming language ) of wind and water, and in order to gain an advantage on Wizarmon, who aims to become a great wizard, it followed and diligently trains in this Digital World. It's a little cruel, it has great pride, and it despises customs and rules. Its Special Moves are a sharp wind carrying magical power ( Baluluna Gale ), and the extremely high water pressure of its \" Aquary Pressure \", enough to penetrate steel."
+  "description": "A Digimon which has the appearance of a witch, it came along from \" Witchelny \", the Digital World of another dimension, in pursuit of its rival, Wizarmon . In its native Witchelny it mastered the sorcery ( high-level programming language ) of wind and water, and in order to gain an advantage on Wizarmon, who aims to become a great wizard, it followed and diligently trains in this Digital World. It's a little cruel, it has great pride, and it despises customs and rules. Its Special Moves are a sharp wind carrying magical power ( Baluluna Gale ), and the extremely high water pressure of its \" Aquary Pressure \", enough to penetrate steel.",
+  "web_created": true
 }

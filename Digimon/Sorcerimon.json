@@ -17,7 +17,7 @@
     "name": "Crystal Cloud",
     "element": "Neutral",
     "pr": 5,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [BLAST 4] [FREEZE]",
     "description": "Summons snow clouds with its staff, causing massive blizzard."
   },
   "digivolves_from": [
@@ -47,8 +47,9 @@
     "Shakkoumon",
     "Wisemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "Wizarmon 's comrade who came from \" Witchelny \", the Digital World of another dimension. It is adept in light and ice sorcery ( high-level programming language s ), and when it offers prayer, it can heal wounds with its holy power. Its Special Move is summoning a snow cloud from its snow crystal-affixed staff, generating an immense blizzard ( Crystal Cloud )."
+  "description": "Wizarmon 's comrade who came from \" Witchelny \", the Digital World of another dimension. It is adept in light and ice sorcery ( high-level programming language s ), and when it offers prayer, it can heal wounds with its holy power. Its Special Move is summoning a snow cloud from its snow crystal-affixed staff, generating an immense blizzard ( Crystal Cloud ).",
+  "web_created": true
 }

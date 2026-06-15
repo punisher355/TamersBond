@@ -17,7 +17,7 @@
     "name": "Ambush Crunch",
     "element": "Neutral",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [CHAIN 2,3] [RUSH]",
     "description": "Leaps upon the opponent and instantly bites and rends their vitals with its sharp teeth."
   },
   "digivolves_from": [
@@ -45,8 +45,9 @@
     "Parrotmon",
     "Tankdramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "Current Original ⇨ Japanese Using a feral Digimon with predatory instincts as a base, modifications were made to allow it to reliably bring down its prey (targets), resulting in this Cyborg Digimon. Because it possesses too powerful an organic body and an uncontrollable ferocity, it was modified with Chrome Digizoid of considerable weight in order to restrain its mobility. However, its spontaneity and flight capabilities are still extraordinarily high, largely due to the organic body the feral Digimon possessed even before modification. Despite its small size, if it gradually releases those abilities, it has the capability to easily bring down even a massive Digimon in a single blow. Its Signature Move is a charging attack that capitalizes on the sharpness of its Chrome Digizoid armor ( Crash Charge ). Its Special Move is leaping at the opponent and instantly biting and rending their vitals with its sharp teeth ( Ambush Crunch )."
+  "description": "Current Original ⇨ Japanese Using a feral Digimon with predatory instincts as a base, modifications were made to allow it to reliably bring down its prey (targets), resulting in this Cyborg Digimon. Because it possesses too powerful an organic body and an uncontrollable ferocity, it was modified with Chrome Digizoid of considerable weight in order to restrain its mobility. However, its spontaneity and flight capabilities are still extraordinarily high, largely due to the organic body the feral Digimon possessed even before modification. Despite its small size, if it gradually releases those abilities, it has the capability to easily bring down even a massive Digimon in a single blow. Its Signature Move is a charging attack that capitalizes on the sharpness of its Chrome Digizoid armor ( Crash Charge ). Its Special Move is leaping at the opponent and instantly biting and rending their vitals with its sharp teeth ( Ambush Crunch ).",
+  "web_created": true
 }

@@ -14,11 +14,11 @@
     "RLB": 5
   },
   "signature_move": {
-    "name": "Backdraft",
-    "element": "Neutral",
+    "name": "Heat Breath",
+    "element": "Fire",
     "pr": 6,
-    "tags": "[MELEE]",
-    "description": ""
+    "tags": "[MELEE] [BURST 3] [BURN 4,3]",
+    "description": "Spewing out scorching-hot flames from its mouth"
   },
   "digivolves_from": [
     "Agumon",
@@ -29,6 +29,7 @@
   "digivolves_to": [
     "Triceramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "An Amphibian Digimon that \"Armor Evolved\" with the \" Digimental of Courage \". It is as carefree as it looks with its flame-clad, salamander-like appearance, but once angered, it will cause the flames covering its body to flare up even more and attack. Its Signature Move is spewing out scorching-hot flames from its mouth ( Heat Breath ). Its Special Move is gathering oxygen in the air and triggering a violent explosion ( Backdraft ).",

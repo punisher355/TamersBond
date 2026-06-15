@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Mega Flame",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 7,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BURST 4] [BURN 4,3]",
     "description": "Spews a  blast of high-temperature flames from its mouth."
   },
   "digivolves_from": [
@@ -57,6 +57,7 @@
     "Wingdramon",
     "SkullBaluchimon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A Virus attribute Greymon with a bluish-black body. While it has been called a 'feral Greymon', befitting its more violent disposition, it is in no way a lone wolf and possesses enough intelligence to work together with its allies as a team. Its Special Move is a blast of high-temperature flames spewed from its mouth ( Mega Flame ).",

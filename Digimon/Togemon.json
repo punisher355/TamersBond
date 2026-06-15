@@ -17,8 +17,8 @@
     "name": "Chikuchiku Bang Bang",
     "element": "Plant",
     "pr": 6,
-    "tags": "[MELEE]",
-    "description": "123Hardens the thorns on its arms andbang-bangstrikes with them.Spins around, shooting thorns in all directions.Fires off one of its enlarged boxing gloves."
+    "tags": "[RANGE 4] [BURST 4] [PIERCE]",
+    "description": "Spins around, shooting thorns in all directions."
   },
   "digivolves_from": [
     "Agumon",
@@ -56,7 +56,9 @@
     "Triceramon",
     "Vulturemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "description": "A Plant Digimon which has the appearance of a gigantic cactus. It can store nutrient data within its body, and can even survive for a long time in the empty desert areas. What it's thinking usually can't be understood at all by trying to discern it from its facial expression, as it spends most of the day staring off into space. However, once Togemon is angered, that expression changes completely, it starts getting violent, and it becomes unable to settle down. Its Special Move is further hardening the thorns on the ends of its arms and bang-bang striking with them ( Chikuchiku Bang-bang )."
+  "description": "A Plant Digimon which has the appearance of a gigantic cactus. It can store nutrient data within its body, and can even survive for a long time in the empty desert areas. What it's thinking usually can't be understood at all by trying to discern it from its facial expression, as it spends most of the day staring off into space. However, once Togemon is angered, that expression changes completely, it starts getting violent, and it becomes unable to settle down. Its Special Move is further hardening the thorns on the ends of its arms and bang-bang striking with them ( Chikuchiku Bang-bang ).",
+  "web_created": true
 }

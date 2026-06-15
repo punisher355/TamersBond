@@ -17,7 +17,7 @@
     "name": "Kyūkyoku Senjin Ouryūken",
     "element": "Light",
     "pr": 15,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [CHAIN 2,3]",
     "description": "Attacks with its sword."
   },
   "digivolves_from": [
@@ -25,6 +25,7 @@
     "Ouryumon"
   ],
   "digivolves_to": [],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "automation",
   "description": "A form in which Ouryumon achieved a miraculous evolution and became a sword through the operation of the magic circle of Digimoji that Alphamon unleashed. Ouryumon is the Ultimate of the experimental \" Prototype Digimon \" that pursued further fighting strength, and by becoming a sword, all of that fighting strength was devoted exclusively to its attacks. To swing the Ouryuken is to wield all of the power contained within an Ultimate Digimon, so to speak, so it isn't a sword that can be swung by an average Digimon, and there aren't any average Digimon that can take the blow.",

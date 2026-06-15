@@ -17,7 +17,7 @@
     "name": "Thunder Cloud",
     "element": "Electric",
     "pr": 5,
-    "tags": "[RANGE 5] [BLAST 1] [PARALYZE 1]",
+    "tags": "[RANGE 4] [BLAST 2] [PARALYZE 3]",
     "description": "12Summons a thunder cloud to unleash an intense lightning strike.Fires lightning from its staff."
   },
   "digivolves_from": [
@@ -73,6 +73,7 @@
     "Wisemon",
     "Nanomon (Digimon)"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "An advanced Demon Man Digimon that came from the Digital World of another dimension. In its native Digital World ( Witchelny ) it mastered the sorcery ( high-level programming language ) of fire and earth, and although it aimed to become a great wizard, it appeared in the Digimon World in order to train. Although it has a personality that likes playing a few practical jokes, because it has another, shyer side, it tries to never show its uncovered face. Its Special Move is summoning a thunder cloud, which unleashes an intense lightning strike ( Thunder Cloud ).",

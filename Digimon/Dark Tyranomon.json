@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Fire Blast",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 7,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BLAST 6] [BURN 4,3]",
     "description": "Breathes super-powerful flames, changing its surroundings into a sea of fire."
   },
   "digivolves_from": [
@@ -50,8 +50,9 @@
     "Vamdemon",
     "Vermillimon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A Dinosaur Digimon whose body was corroded by a vicious computer virus . Although it was originally a Tyranomon-species Digimon, it was infected by a vicious computer virus, causing a bug in its flesh's configuration data and transforming it into a frenzied Digimon. Its body turned black, its arms grew sturdier than Tyranomon 's, and its offensive power grew. It identifies anything reflected in its eyes as an enemy and starts attacking, becoming completely frenzied. With its Special Move \" Fire Blast \", a super-powerful jet of flames, it transforms all of its surroundings into a sea of flames."
+  "description": "A Dinosaur Digimon whose body was corroded by a vicious computer virus . Although it was originally a Tyranomon-species Digimon, it was infected by a vicious computer virus, causing a bug in its flesh's configuration data and transforming it into a frenzied Digimon. Its body turned black, its arms grew sturdier than Tyranomon 's, and its offensive power grew. It identifies anything reflected in its eyes as an enemy and starts attacking, becoming completely frenzied. With its Special Move \" Fire Blast \", a super-powerful jet of flames, it transforms all of its surroundings into a sea of flames.",
+  "web_created": true
 }

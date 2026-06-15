@@ -859,7 +859,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     const computeThreshold = spent =>
       Math.floor((1 - Math.min(Math.max(0, spent + hopePerTurn), data.fullCost) / data.fullCost) * data.maxThreshold);
 
-    const initialSpent = tamer ? Math.min(data.fullCost, Math.max(1, hopeAvailable)) : data.fullCost;
+    const initialSpent = tamer ? Math.min(data.fullCost, Math.max(0, hopeAvailable)) : data.fullCost;
 
     const formSelectHtml = nextForms.length > 1
       ? `<div class="form-group flexrow" style="gap:8px; margin-bottom:12px; align-items:center;">
@@ -890,8 +890,8 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
             </p>
             <div class="form-group flexrow" style="gap:8px; margin-bottom:8px; align-items:center;">
               <label style="min-width:130px; font-weight:bold;">Hope to spend:</label>
-              <input type="number" id="dv-hope-spend" value="${initialSpent}" min="1" max="${data.fullCost}" style="width:64px;" />
-              <span style="font-size:0.85em; color:#888;">1 - ${data.fullCost}</span>
+              <input type="number" id="dv-hope-spend" value="${initialSpent}" min="0" max="${data.fullCost}" style="width:64px;" />
+              <span style="font-size:0.85em; color:#888;">0 - ${data.fullCost}</span>
               ${perTurnNote}
             </div>
             <div class="dv-threshold-box" style="padding:10px 12px; background:#fdf5e6; border-radius:4px; border-left:4px solid #e74c3c;">
@@ -908,7 +908,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
             icon:     '<i class="fas fa-dice"></i>',
             label:    "Roll d100!",
             callback: html => resolve({
-              spent:  parseInt(html.find('#dv-hope-spend').val()) || 1,
+              spent:  parseInt(html.find('#dv-hope-spend').val()) || 0,
               formId: html.find('#dv-form-select').val() || nextForms[0].id
             })
           },
@@ -917,7 +917,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
         default: "roll",
         render: html => {
           html.find('#dv-hope-spend').on('input', ev => {
-            const spent     = Math.min(Math.max(1, parseInt(ev.currentTarget.value) || 1), data.fullCost);
+            const spent     = Math.min(Math.max(0, parseInt(ev.currentTarget.value) || 0), data.fullCost);
             const effective = Math.min(spent + hopePerTurn, data.fullCost);
             const threshold = computeThreshold(spent);
             const over      = tamer && spent > hopeAvailable;
@@ -935,7 +935,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     if (!result) return;
 
-    const spent     = Math.min(Math.max(1, result.spent), data.fullCost);
+    const spent     = Math.min(Math.max(0, result.spent), data.fullCost);
     const threshold = computeThreshold(spent);
     const effective = Math.min(spent + hopePerTurn, data.fullCost);
     const roll      = await new Roll("1d100").evaluate();
@@ -949,9 +949,11 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     // Mark corrupted if the roll failed
     if (!isClean) await this.actor.update({ "system.corruption.isCorrupted": true });
 
-    // Deduct only the manually spent amount — per-turn is the tamer's natural contribution
     if (tamer) {
-      await tamer.update({ "system.crests.hope.current": Math.max(0, hopeAvailable - spent) });
+      await tamer.update({
+        "system.crests.hope.current": Math.max(0, hopeAvailable - spent),
+        "system.crests.hope.perTurn": hopePerTurn + spent
+      });
     }
 
     const chosenName  = chosenForm?.name ?? targetLabel;
@@ -970,7 +972,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
         ${resultText}
       </div>
       ${!isClean ? `<div style="font-size:0.9em;">The Digimon is now corrupted and under GM control.</div>` : ""}
-      ${tamer ? `<div style="font-size:0.85em; color:#666; margin-top:2px;">${tamer.name}: -${spent} Hope (${Math.max(0, hopeAvailable - spent)} remaining)</div>` : ""}`;
+      ${tamer ? `<div style="font-size:0.85em; color:#666; margin-top:2px;">${tamer.name}: ${spent > 0 ? `-${spent} Hope (${Math.max(0, hopeAvailable - spent)} remaining), +${spent}/turn` : "0 Hope spent"}</div>` : ""}`;
 
     await roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),

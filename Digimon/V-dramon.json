@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "V-Breath Arrow",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 7,
-    "tags": "[MELEE] [BURN 1,1]",
+    "tags": "[RANGE 4] [BURST 4] [BURN 4,3]",
     "description": "Spews a high-temperature, V-shaped heat ray from its mouth."
   },
   "digivolves_from": [
@@ -49,6 +49,7 @@
     "Aero V-dramon",
     "Mega Seadramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A mythical Ancient Species Digimon that, even with the vastness of the Digital World, is said to only exist on the Folder Continent . Its existence is extremely rare, and even on the Folder Continent, it is hardly encountered. Also, it is said that only one Digimon Tamer was able to tame V-dramon. With the exception of it becoming known as V-dramon due to the \" V \"-shaped pattern on its chest, its way of life is a mystery, but for some reason, it is always mistaken for a dog. While its attack power is exceptional even among Adults , if put into a predicament, it exhibits power that surpasses even that of Perfects . Its Special Move is a high-temperature heat ray spewed from its mouth ( V Breath Arrow ).",

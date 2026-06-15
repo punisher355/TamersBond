@@ -17,7 +17,7 @@
     "name": "Volcano Strike",
     "element": "Fire",
     "pr": 7,
-    "tags": "[RANGE 4]",
+    "tags": "[RANGE 4] [BURN 4,3]",
     "description": "Spits out a powerful flame shot."
   },
   "digivolves_from": [
@@ -64,6 +64,7 @@
     "SkullBaluchimon",
     "Cerberumon: Werewolf Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "An Ankylosaur Digimon with a rhinoceros-like horn growing on its snout. When its huge horn grows, it reaches a size that makes up half of its body length. The hard substance covering a portion of its horn and half its body is as hard as diamond, and it is said that there is nothing it cannot penetrate with its horn. Monochromon can be said to be a Digimon that excels in both offense and defense. It is herbivorous and has a relatively docile personality, but once it is angered, it will unleash terrifying counterattacks with its heavy tank-like body. Its Special Move is a powerful flame shot ( Volcano Strike ).",

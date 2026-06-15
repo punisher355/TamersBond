@@ -17,8 +17,8 @@
     "name": "Heaven's Knuckle",
     "element": "Light",
     "pr": 7,
-    "tags": "[MELEE]",
-    "description": "12Strikes the opponent with its fist shining gold.Gathers holy power in its fist and shoots a beam of holy light from it."
+    "tags": "[RANGE 4] [BLAST 2]",
+    "description": "Gathers holy power in its fist and shoots a beam of holy light from it."
   },
   "digivolves_from": [
     "Agumon",
@@ -71,6 +71,7 @@
     "Vademon",
     "Vamdemon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "An Angel Digimon with six shining wings, whose body is clad in cloth so pure white as to be divine. It is a being of perfected virtue, and although it is called a Digimon that brings happiness, when confronting evil it does not stop attacking, with extreme composure, until the opponent is completely annihilated. On the countless times when the Digital World is visited by a crisis, it is told that it descends to lead Digimon of the same genus, and Devimon , which was won over to the Dark Side, was originally of the same species. Its Special Move is striking the opponent with its fist shining gold ( Heaven's Knuckle ).",

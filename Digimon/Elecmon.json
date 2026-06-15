@@ -17,7 +17,7 @@
     "name": "Sparkling Thunder",
     "element": "Electric",
     "pr": 3,
-    "tags": "[RANGE 4]",
+    "tags": "[RANGE 4] [PARALYZE 2]",
     "description": "Shoots a powerful bolt of lightning."
   },
   "digivolves_from": [
@@ -89,6 +89,7 @@
     "Zassoumon",
     "Mad Leomon: Armed Mode"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A Mammal Digimon that retained Tunomon 's mammal-like elements as it evolved. It's very curious and lively, and inherited its prank-loving personality from Tunomon. Also, Elecmon possesses nine tails, and during battle, it fans them out like a peacock's feathers to intimidate its opponent. Its Special Move is \" Sparkling Thunder \".",

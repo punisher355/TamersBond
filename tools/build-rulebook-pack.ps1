@@ -35,7 +35,8 @@ $pages = @(
 <p>The Digital World can be reshaped by those with the power to do it. A powerful Digimon might tear up a mountain range and wind it into a single spiraling peak. A Tamer with deep enough knowledge of how the world's code works might open a doorway between two distant places, folding geography like paper.</p>
 <p>This is not magic. It is the nature of a world built from data — and it means that the world the party enters at the start of the campaign may look very different by the end of it. The GM decides what is possible and what has changed. The players decide what they do about it.</p>
 <h2>The Human World</h2>
-<p>The human world is wherever the campaign is set. Unlike the Digital World, the human world follows rules that most people take for granted. Whether Digimon are a known and accepted part of human life — or a secret, a rumour, or a panic-inducing shock — is a decision the GM makes before the campaign begins.</p>
+<p>The human world is wherever the campaign is set — a city, a country, a specific neighbourhood the GM has decided is the centre of this story. Unlike the Digital World, the human world follows rules that most people take for granted. It is stable. Predictable. It does not reshape itself because someone wanted it to.</p>
+<p>Whether Digimon are a known and accepted part of human life — or a secret, a rumour, or a panic-inducing shock — is a decision the GM makes before the campaign begins.</p>
 <table border="1"><thead><tr><th>Setting Question</th><th>What It Changes</th></tr></thead><tbody>
 <tr><td>Do humans know Digimon exist?</td><td>Affects every social interaction. A Digimon walking into a convenience store hits differently depending on the answer.</td></tr>
 <tr><td>Can both worlds be crossed freely?</td><td>Determines how often the story shifts between worlds and how accessible the Digital World feels as a resource.</td></tr>
@@ -45,31 +46,34 @@ $pages = @(
 <h2>Digimon</h2>
 <p>Digimon are digital lifeforms — creatures born from data, shaped by evolution, and driven by an instinct that runs deeper than hunger or territory. At their core, most Digimon want to grow stronger. Victory means growth. Defeat, in most cases, means reverting to a Digi-Egg and starting the climb again.</p>
 <table border="1"><thead><tr><th>What a Digimon Wants</th><th>What That Looks Like in Play</th></tr></thead><tbody>
-<tr><td>To become the strongest</td><td>Seeks out powerful opponents. May challenge the party directly — not out of malice but out of respect for the fight.</td></tr>
+<tr><td>To become the strongest</td><td>Seeks out powerful opponents. May challenge the party's Digimon directly — not out of malice but out of respect for the fight.</td></tr>
 <tr><td>To protect something or someone</td><td>Territorial, cautious around strangers. Will fight without hesitation if that thing is threatened.</td></tr>
 <tr><td>To evolve into a specific form</td><td>Has a long-term goal that shapes their decisions. May make surprising alliances to get there.</td></tr>
-<tr><td>To live peacefully</td><td>Not interested in conflict — until conflict finds them.</td></tr>
+<tr><td>To live peacefully</td><td>Not interested in conflict — until conflict finds them. Then capable of surprising ferocity.</td></tr>
 <tr><td>To understand humans</td><td>Curious, observant, possibly attached to a Tamer before either of them expected it.</td></tr>
+<tr><td>Something entirely their own</td><td>Work with your GM. The Digital World is strange enough that almost any motivation fits.</td></tr>
 </tbody></table>
 '@ },
 
 @{ Title = "Chapter 2: Overview"; Content = @'
-<p>In Tamer's Bond, each player controls two characters — a Tamer and their Digimon partner. Both can fight. Digimon are the primary combatants but Tamers are not helpless.</p>
+<p>In Tamer's Bond, each player controls two characters — a Tamer and their Digimon partner. Both can fight. Digimon are the primary combatants but Tamers are not helpless. Every decision about how to grow your character, spend your Hope, and push your partner shapes every battle.</p>
 <table border="1"><thead><tr><th>Component</th><th>Details</th></tr></thead><tbody>
 <tr><td>Players</td><td>One GM and 1–4 players</td></tr>
 <tr><td>Dice</td><td>d4, d6, d8, d10, d12, d20, d100</td></tr>
+<tr><td>Character Sheets</td><td>One for each Tamer and Digimon</td></tr>
 <tr><td>Grid Map</td><td>For combat — 1 square = 1 space</td></tr>
+<tr><td>Tokens</td><td>Miniatures or tokens for all participants</td></tr>
 </tbody></table>
 <h2>The Core Relationship</h2>
-<p>Every Tamer has six Crest Stats that feed directly into their Digimon partner's combat stats.</p>
-<table border="1"><thead><tr><th>Tamer Crest Stat</th><th>Digimon Stat</th><th>What It Does in Combat</th></tr></thead><tbody>
-<tr><td>Courage</td><td>Hit Rate</td><td>1d20 + Courage vs Reliability+10 to hit.</td></tr>
-<tr><td>Friendship</td><td>Speed</td><td>Digimon move Friendship spaces. Tamers move Friendship × 2 spaces. Also governs turn order.</td></tr>
-<tr><td>Love</td><td>Damage Reduction</td><td>Subtracted from incoming damage on every hit.</td></tr>
-<tr><td>Knowledge</td><td>Damage Bonus</td><td>Primary damage bonus added to every attack.</td></tr>
-<tr><td>Sincerity</td><td>HP</td><td>Determines total health pool.</td></tr>
-<tr><td>Reliability</td><td>Miss Threshold</td><td>Attackers must beat Reliability+10 to land a hit.</td></tr>
-<tr><td>Hope (derived)</td><td>Digivolution</td><td>Fuels digivolution. Determined by your highest crest stat rank.</td></tr>
+<p>Every Tamer has six Crest Stats. These feed directly into their Digimon partner's combat stats. Raise your stats and your partner gets stronger alongside you.</p>
+<table border="1"><thead><tr><th>Tamer Crest Stat</th><th>Feeds Into Digimon</th><th>What It Does in Combat</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Courage</td><td>Courage (Hit Rate)</td><td>Governs hit chance. 1d20 + Courage vs Reliability+10.</td><td></td></tr>
+<tr><td>Friendship</td><td>Friendship (Speed)</td><td>Governs movement distance and turn order.</td><td>Digimon move Friendship spaces. Tamers move Friendship ×2 spaces. Digimon turn order = Friendship. Tamer turn order = Friendship ×2.</td></tr>
+<tr><td>Love</td><td>Love (Damage Reduction)</td><td>Subtracted from incoming damage on every hit.</td><td></td></tr>
+<tr><td>Knowledge</td><td>Knowledge (Damage)</td><td>Primary damage bonus added to every attack.</td><td></td></tr>
+<tr><td>Sincerity</td><td>Sincerity (HP)</td><td>Determines total health pool.</td><td></td></tr>
+<tr><td>Reliability</td><td>Reliability (Miss Threshold)</td><td>Attackers must beat Reliability+10 to land a hit.</td><td></td></tr>
+<tr><td>Hope (derived)</td><td>Digivolution resource</td><td>Fuels digivolution. See Hope Pool table.</td><td>Not a combat stat.</td></tr>
 </tbody></table>
 <h3>Movement and Turn Order (v0.6)</h3>
 <ul>
@@ -83,20 +87,30 @@ $pages = @(
 '@ },
 
 @{ Title = "Chapter 3: Creating Your Tamer"; Content = @'
-<p>Building a Tamer takes five steps. Every new Tamer begins with <strong>1,500 EXP</strong> to spend. All six crest stats and all 24 skills start at rank 1 for free. Your Digimon also starts with 1,500 EXP in their own separate pool.</p>
+<p>Building a Tamer takes five steps. Work through them in order. By the end you will have a complete character with <strong>1,500 EXP</strong> to spend.</p>
+<ul>
+<li>All six crest stats start at rank 1 for free.</li>
+<li>All 24 skills start at rank 1 for free.</li>
+<li>Your Digimon also starts with 1,500 EXP in their own separate pool.</li>
+</ul>
 <h2>Step 1 — Who Are You?</h2>
 <table border="1"><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody>
 <tr><td>Name</td><td>What do people call you?</td></tr>
 <tr><td>Age</td><td>Most Tamers are 10–14. No hard rule.</td></tr>
+<tr><td>Gender &amp; Pronouns</td><td>How do you identify?</td></tr>
+<tr><td>Appearance</td><td>What do people notice first?</td></tr>
+<tr><td>Personality</td><td>Two or three words that sum you up.</td></tr>
+<tr><td>Background</td><td>Where are you from? What was life like before?</td></tr>
 <tr><td>Want</td><td>What does your character most deeply want at their core?</td></tr>
 <tr><td>Fear</td><td>What do they most fear? Be specific.</td></tr>
 <tr><td>Flaw</td><td>One honest weakness that will actually cause problems.</td></tr>
 <tr><td>Crest</td><td>Which of the six crest stats defines you?</td></tr>
 </tbody></table>
 <h2>Step 2 — Crest Stats</h2>
+<p>Every Tamer begins with all six Crest Stats at rank 1 for free. Spend EXP to raise them. Stats cap at rank 10 over the full campaign.</p>
 <table border="1"><thead><tr><th>Stat</th><th>Abbr.</th><th>Meaning</th></tr></thead><tbody>
 <tr><td>Courage</td><td>CRG</td><td>Physical ability, acting under pressure</td></tr>
-<tr><td>Friendship</td><td>FRD</td><td>Social connection — also governs movement and turn order</td></tr>
+<tr><td>Friendship</td><td>FRD</td><td>Social connection, reading others — also governs movement and turn order</td></tr>
 <tr><td>Love</td><td>LVE</td><td>Awareness, empathy, protection</td></tr>
 <tr><td>Knowledge</td><td>KNW</td><td>Tech, tactics, Digital World logic</td></tr>
 <tr><td>Sincerity</td><td>SNC</td><td>Core self, constitution, resistance</td></tr>
@@ -115,7 +129,7 @@ $pages = @(
 <tr><td>Rank 9→10</td><td>1,000</td><td>5,400</td></tr>
 </tbody></table>
 <h3>Hope Pool</h3>
-<p>Hope is derived from your <strong>highest crest stat rank</strong>. It is not one of the six stats. Hope regenerates fully between sessions and after a long rest. It is spent at the start of <strong>your turn</strong> in combat to maintain digivolution.</p>
+<p>Hope is not one of the six crest stats. It is derived automatically from your <strong>highest crest stat rank</strong>. Hope regenerates fully between sessions and after a long rest. It is spent at the start of <strong>your turn</strong> in combat to maintain digivolution.</p>
 <table border="1"><thead><tr><th>Highest Rank</th><th>Hope Pool</th></tr></thead><tbody>
 <tr><td>1</td><td>5</td></tr><tr><td>2</td><td>10</td></tr><tr><td>3</td><td>20</td></tr>
 <tr><td>4</td><td>35</td></tr><tr><td>5</td><td>55</td></tr><tr><td>6</td><td>80</td></tr>
@@ -160,6 +174,7 @@ $pages = @(
 '@ },
 
 @{ Title = "Chapter 4: Building Your Digimon"; Content = @'
+<p>Your Digimon partner is a full character in their own right. They have their own crest stats, their own EXP pool, their own personality, and their own history.</p>
 <h2>The Four Layer System</h2>
 <p>Every Digimon crest stat = <strong>Species Base + Tamer Rank + Digimon Invested + Conditional</strong></p>
 <ul>
@@ -174,7 +189,7 @@ $pages = @(
 <p>Total Sincerity = Species Base + Tamer Sincerity rank + Digimon Invested Sincerity + Conditional</p>
 <p><em>Example: Total Sincerity = 8. Max HP = 20 + (8 × 4) = 52 HP.</em></p>
 <h2>Digimon EXP Pool</h2>
-<p>The Digimon has its own separate EXP pool that always mirrors the Tamer's total EXP earned. Spending EXP on the Digimon does NOT affect the Tamer's pool.</p>
+<p>The Digimon has their own separate EXP pool that always mirrors the Tamer's total EXP earned. Spending EXP on the Digimon does NOT affect the Tamer's pool and vice versa.</p>
 <h3>Raising Digimon Stats</h3>
 <table border="1"><thead><tr><th>Upgrade</th><th>EXP Cost</th></tr></thead><tbody>
 <tr><td>0→1</td><td>100 EXP</td></tr>
@@ -185,24 +200,27 @@ $pages = @(
 </tbody></table>
 <h2>Digivolution Form Unlocks</h2>
 <table border="1"><thead><tr><th>Stage</th><th>Min Digimon EXP</th><th>First Form</th><th>Each Additional Form</th></tr></thead><tbody>
-<tr><td>Rookie</td><td>Free</td><td>Free</td><td>50 EXP</td></tr>
-<tr><td>Champion</td><td>2,000 EXP</td><td>Free</td><td>100 EXP</td></tr>
-<tr><td>Ultimate</td><td>8,000 EXP</td><td>Free</td><td>300 EXP</td></tr>
-<tr><td>Mega</td><td>20,000 EXP</td><td>Free</td><td>500 EXP</td></tr>
+<tr><td>Rookie</td><td>Free</td><td>Free</td><td>50 EXP per form</td></tr>
+<tr><td>Champion</td><td>2,000 EXP</td><td>Free</td><td>100 EXP per form</td></tr>
+<tr><td>Ultimate</td><td>8,000 EXP</td><td>Free</td><td>300 EXP per form</td></tr>
+<tr><td>Mega</td><td>20,000 EXP</td><td>Free</td><td>500 EXP per form</td></tr>
 </tbody></table>
 <h3>Digivolution Path Rule</h3>
-<p>A Digimon can only digivolve into a form their current stage can actually evolve into. Having a form unlocked is not enough — the current form must have a valid evolutionary path to the target.</p>
+<p>A Digimon can only digivolve into a form that their current stage can actually digivolve into. Having a form unlocked in your pool is not enough — the current form must have a valid evolutionary path to the target, even if that form is in their known pool.</p>
+<p><em>Example: If Agumon has Garurumon unlocked via an alternate path, Agumon cannot digivolve into Garurumon because Agumon does not digivolve into Garurumon. The path must be valid for the current form.</em></p>
 <h2>Move Pool</h2>
 <p>Every Digimon has <strong>4 active move slots</strong>:</p>
 <ul>
 <li><strong>1 Signature Move</strong> — locked to current stage, auto-updates on digivolution</li>
 <li><strong>3 Learned Moves</strong> — chosen from the pool at long rest, stay until next long rest</li>
 </ul>
+<p>The pool grows as the Digimon reaches new stages. Each new stage adds that stage's signature move permanently.</p>
 <p><strong>Stage Lock:</strong> A pool move can only be used at the stage it was learned or higher.</p>
 <p><strong>In-Training:</strong> All Digimon have Bubble Blow as their In-Training signature move. PR 1, Neutral element, no tags.</p>
 '@ },
 
 @{ Title = "Chapter 5: Growth & Experience"; Content = @'
+<p>There are no levels in Tamer's Bond. Characters grow by spending EXP. Every purchase is a tradeoff.</p>
 <h2>Earning EXP</h2>
 <table border="1"><thead><tr><th>Event</th><th>EXP Reward</th><th>Notes</th></tr></thead><tbody>
 <tr><td>Short or light session</td><td>75–150</td><td>Mostly roleplay, travel, or downtime</td></tr>
@@ -213,51 +231,67 @@ $pages = @(
 </tbody></table>
 <h2>How EXP Pools Work</h2>
 <p>Tamers and Digimon each have their <strong>own separate EXP pool</strong>. Both pools always contain the same total EXP earned. Spending EXP on the Tamer does NOT reduce the Digimon's pool and vice versa.</p>
+<p><em>Example: The GM awards 350 EXP. The Tamer's pool gains 350. The Digimon's pool also gains 350 independently.</em></p>
 <h2>Campaign Pacing</h2>
 <table border="1"><thead><tr><th>Campaign Stage</th><th>Approx. Total EXP</th><th>Expected State</th></tr></thead><tbody>
 <tr><td>Session 1 (creation)</td><td>1,500</td><td>Stats at 1–2, a few skills at 2–3</td></tr>
 <tr><td>Season 1 midpoint</td><td>8,000–10,000</td><td>Primary stat pushing rank 4–5, core skills at 3–4</td></tr>
-<tr><td>Season 1 end</td><td>15,000–20,000</td><td>Primary stat at 5–6, first classes purchased</td></tr>
-<tr><td>Season 2 end</td><td>35,000–45,000</td><td>Primary stat pushing rank 8</td></tr>
+<tr><td>Season 1 end</td><td>15,000–20,000</td><td>Primary stat at 5–6, secondary stats 3–4, first classes purchased</td></tr>
+<tr><td>Season 2 end</td><td>35,000–45,000</td><td>Primary stat pushing rank 8, skills nearing rank 5</td></tr>
 <tr><td>Full completion</td><td>~70,000+</td><td>All stats and skills maxed, all desired classes purchased</td></tr>
 </tbody></table>
 '@ },
 
 @{ Title = "Chapter 6: Combat"; Content = @'
-<p>Combat takes place on a grid where 1 square = 1 space. Both Tamers and Digimon take their own separate turns in initiative order.</p>
-<p><strong>Adjacent</strong> = any of the 8 squares surrounding a character's space (includes diagonals).</p>
-<h2>Turn Order</h2>
-<ul>
-<li>Digimon initiative = Friendship (no multiplier)</li>
-<li>Tamer initiative = Friendship × 2</li>
-<li>Highest acts first. Ties broken by higher raw Friendship stat.</li>
-<li>Tamers and Digimon always act on separate turns.</li>
-</ul>
+<p>Combat takes place on a grid where 1 square = 1 space. Both Tamers and Digimon take their own separate turns in initiative order. Digimon are the primary fighters but Tamers can fight too.</p>
+<p><strong>Adjacent</strong> = any of the 8 squares surrounding a character's space (includes diagonals). This applies to all [MELEE] moves and any ability that references adjacency.</p>
+<h2>The Round Structure</h2>
+<ol>
+<li><strong>Determine Turn Order</strong> — Digimon use Friendship (no multiplier). Tamers use Friendship ×2. Highest acts first. Ties broken by higher raw Friendship stat.</li>
+<li><strong>Each Character Takes Their Turn</strong> — In initiative order, each Tamer and each Digimon takes their full turn before the next character acts.</li>
+<li><strong>Resolution Stage</strong> — CHARGE moves fire. Status effects tick. Lingering conditions resolve.</li>
+</ol>
 <h2>Actions on Your Turn</h2>
+<p><strong>Action Commitment:</strong> Once a character begins an action, they must finish it. Movement cannot be split around other actions. You may choose the order of your Move Action and Basic Action, but each must be completed before the other begins.</p>
 <table border="1"><thead><tr><th>Action Type</th><th>What It Covers</th><th>Limit</th></tr></thead><tbody>
-<tr><td>Move Action</td><td>Move up to your speed (Digimon = Friendship, Tamer = Friendship × 2).</td><td>Once per round</td></tr>
+<tr><td>Move Action</td><td>Move up to your speed (Digimon = Friendship, Tamer = Friendship ×2).</td><td>Once per round</td></tr>
 <tr><td>Basic Action</td><td>Attack, digivolve, use item, skill check, Push Through, Taunt, or Second Move.</td><td>Once per round</td></tr>
 <tr><td>Free Action</td><td>Minor actions. Some can be used off-turn.</td><td>Once per round</td></tr>
+<tr><td>Second Move</td><td>Spend Basic Action to take a second Move Action this turn — move again up to full speed.</td><td>Once per round</td></tr>
 </tbody></table>
-<p><strong>Action Commitment:</strong> Once a character begins an action, they must finish it. Movement cannot be split around other actions.</p>
-<p><strong>Hope Cost Timing:</strong> At the start of each <em>Tamer's turn</em>, deduct the Hope cost for their Digimon's current stage. If Hope hits 0, the Digimon reverts to Default Stage.</p>
+<p><strong>Hope Cost Timing:</strong> At the start of each <em>Tamer's turn</em> — not the start of the round — deduct the Hope cost for their Digimon's current digivolution stage. If Hope hits 0 the Digimon immediately reverts to Default Stage before any actions.</p>
 <h2>Tamer Basic Actions</h2>
 <table border="1"><thead><tr><th>Action</th><th>How It Works</th></tr></thead><tbody>
 <tr><td>Attack</td><td>Use one of your moves. Follows the full attack sequence.</td></tr>
 <tr><td>Digivolve</td><td>Attempt to digivolve your partner. Costs your Basic Action.</td></tr>
 <tr><td>Use Item</td><td>Use a carried item.</td></tr>
-<tr><td>Push Through</td><td>Make a relevant skill roll. Restore Hope equal to the result. Once per encounter.</td></tr>
-<tr><td>Taunt</td><td>Roar check DN 12. On success, enemy redirects attacks toward this Tamer.</td></tr>
-<tr><td>Second Move</td><td>Take a second Move Action this turn.</td></tr>
+<tr><td>Skill Check</td><td>Make any relevant skill check the situation calls for.</td></tr>
+<tr><td>Push Through</td><td>Make a skill roll using any relevant skill (Recovery, Core Drive, and Reinforce are common choices). Restore Hope equal to the roll result. Once per encounter. Cannot be used if Hope is already at maximum.</td></tr>
+<tr><td>Taunt</td><td>Roar check DN 12. On success, the target enemy redirects attacks toward this Tamer — provided it is physically possible after their movement. If multiple Tamers Taunt the same target in the same round, the last to succeed is the target. Lasts until start of this Tamer's next turn or until incapacitated.</td></tr>
+<tr><td>Second Move</td><td>Take a second Move Action — move again up to full Friendship ×2 spaces.</td></tr>
 </tbody></table>
 <h2>Tamer Free Actions</h2>
 <table border="1"><thead><tr><th>Action</th><th>Effect</th><th>Off-Turn?</th></tr></thead><tbody>
 <tr><td>Call Out</td><td>Partner gains +1 to their next attack roll this round.</td><td>No</td></tr>
-<tr><td>Analyze</td><td>Archive check DN 12. Identify one trait about an enemy.</td><td>No</td></tr>
-<tr><td>Dedigivolve (1 stage)</td><td>Drop your Digimon one stage. Hope adjusts before being spent.</td><td>No</td></tr>
-<tr><td>Dedigivolve (2 stages)</td><td>Drop your Digimon two stages. Hope adjusts before being spent.</td><td>No</td></tr>
+<tr><td>Analyze</td><td>Archive check DN 12. Identify one piece of information about an enemy.</td><td>No</td></tr>
+<tr><td>Dedigivolve (1 stage)</td><td>Drop your Digimon one stage. Hope cost adjusts before being spent this turn.</td><td>No</td></tr>
+<tr><td>Dedigivolve (2 stages)</td><td>Drop your Digimon two stages at once. Hope adjusts before being spent.</td><td>No</td></tr>
 </tbody></table>
+<h2>Digimon's Turn</h2>
+<p>Digimon act on their own turn in initiative order, separate from their Tamer.</p>
+<table border="1"><thead><tr><th>Basic Action</th><th>How It Works</th></tr></thead><tbody>
+<tr><td>Attack</td><td>Use one of your four active moves against a target.</td></tr>
+<tr><td>Second Move</td><td>Spend Basic Action to take a second Move Action this turn.</td></tr>
+</tbody></table>
+<table border="1"><thead><tr><th>Free Action</th><th>Effect</th><th>Off-Turn?</th></tr></thead><tbody>
+<tr><td>Dedigivolve (1 stage)</td><td>The Digimon voluntarily drops one stage. Hope adjusts before being spent on Tamer's next turn.</td><td>No</td></tr>
+<tr><td>Dedigivolve (2 stages)</td><td>The Digimon drops two stages at once. Hope adjusts to new stage before next Tamer turn.</td><td>No</td></tr>
+</tbody></table>
+<h3>Dedigivolution Clarification</h3>
+<p>Both the Tamer AND the Digimon can each trigger a voluntary dedigivolution on their own turn using their Free Action. They cannot both dedigivolve in the same round — each can only use their own Free Action once. Maximum voluntary dedigivolution per turn: 2 stages. Status effects are always cleared on any digivolution or dedigivolution, voluntary or forced.</p>
 <h2>Making an Attack</h2>
+<h3>Step 1 — Select Target and Move</h3>
+<p>Choose the target and which of your four active moves you are using. Check the move's tags for range or area restrictions. Complete your movement before taking your Basic Action.</p>
 <h3>Step 2 — Hit or Miss</h3>
 <p>Roll 1d20 + Attacker's Courage vs Defender's Reliability + 10. Meet or beat = <strong>HIT</strong>.</p>
 <ul>
@@ -267,12 +301,16 @@ $pages = @(
 <h3>Step 3 — Damage</h3>
 <p><strong>Damage = PR dice + Attacker's Knowledge − Defender's Love.</strong> Minimum 1 before multipliers.</p>
 <h3>Step 4 — Attribute &amp; Element Multipliers</h3>
+<p>Apply attribute multiplier first, then element multiplier.</p>
 <table border="1"><thead><tr><th>Attacker</th><th>Defender</th><th>Multiplier</th></tr></thead><tbody>
-<tr><td>Vaccine</td><td>Virus</td><td>×2.0</td></tr>
-<tr><td>Virus</td><td>Data</td><td>×2.0</td></tr>
-<tr><td>Data</td><td>Vaccine</td><td>×2.0</td></tr>
-<tr><td>Free</td><td>Any</td><td>×1.0 (always neutral)</td></tr>
-<tr><td>Unknown</td><td>Any</td><td>×2.0 (beats all)</td></tr>
+<tr><td>Vaccine</td><td>Virus</td><td>×2.0 advantage</td></tr>
+<tr><td>Virus</td><td>Data</td><td>×2.0 advantage</td></tr>
+<tr><td>Data</td><td>Vaccine</td><td>×2.0 advantage</td></tr>
+<tr><td>Vaccine</td><td>Data</td><td>×0.5 disadvantage</td></tr>
+<tr><td>Data</td><td>Virus</td><td>×0.5 disadvantage</td></tr>
+<tr><td>Virus</td><td>Vaccine</td><td>×0.5 disadvantage</td></tr>
+<tr><td>Free</td><td>Any</td><td>×1.0 always neutral</td></tr>
+<tr><td>Unknown</td><td>Any</td><td>×2.0 beats all attributes</td></tr>
 </tbody></table>
 <table border="1"><thead><tr><th>Element</th><th>Resistant To (×0.5)</th><th>Weak To (×1.5)</th></tr></thead><tbody>
 <tr><td>Fire</td><td>Fire</td><td>Water, Earth</td></tr>
@@ -285,12 +323,13 @@ $pages = @(
 <tr><td>Dark</td><td>Dark</td><td>Light</td></tr>
 <tr><td>Neutral</td><td>—</td><td>— (always ×1.0)</td></tr>
 </tbody></table>
+<p>Combined multipliers: Max ×3.0. Min ×0.25. Final damage is always at least 1.</p>
 '@ },
 
 @{ Title = "Chapter 7: Moves"; Content = @'
 <h2>The Basic Attack</h2>
 <p><strong>Element:</strong> Neutral &nbsp; <strong>PR:</strong> 2 (1d6) &nbsp; <strong>Tag:</strong> [MELEE]<br>
-Available to all Tamers and Digimon at all times. Does not use a move slot.</p>
+Available to all Tamers and Digimon at all times. Does not use a move slot. Because it has [MELEE], the attacker must be adjacent to their target.</p>
 <h2>Power Rating (PR) Dice Table</h2>
 <table border="1"><thead><tr><th>PR</th><th>Dice</th><th>Avg</th><th>Typical Stage</th></tr></thead><tbody>
 <tr><td>1</td><td>1d4</td><td>2.5</td><td>In-Training</td></tr>
@@ -309,43 +348,44 @@ Available to all Tamers and Digimon at all times. Does not use a move slot.</p>
 <tr><td>14</td><td>4d12</td><td>26</td><td>Mega II strong</td></tr>
 <tr><td>15</td><td>5d10</td><td>27.5</td><td>Mega II signature (maximum)</td></tr>
 </tbody></table>
-<p><em>Mega II is not a separate mechanical stage — Mega II Digimon are treated as Mega in all rules.</em></p>
+<p><em>Mega II is not a separate mechanical stage — Mega II Digimon are treated as Mega in all rules. The PR 13–15 range represents top-tier Mega forms only.</em></p>
 <h2>Move Tags</h2>
 <h3>Delivery Tags</h3>
 <table border="1"><thead><tr><th>Tag</th><th>Effect</th></tr></thead><tbody>
-<tr><td>[MELEE]</td><td>Must be adjacent to the target.</td></tr>
+<tr><td>[MELEE]</td><td>Must be adjacent (any of the 8 surrounding squares) to the target.</td></tr>
 <tr><td>[RANGE X]</td><td>Can hit targets up to X spaces away.</td></tr>
-<tr><td>[PIERCE]</td><td>Ignores the target's Love damage reduction entirely.</td></tr>
+<tr><td>[PIERCE]</td><td>Ignores the target's Love stat damage reduction entirely.</td></tr>
 <tr><td>[TRUE]</td><td>Cannot miss if the hit roll succeeds. A natural 1 still misses.</td></tr>
 </tbody></table>
 <h3>Area Tags</h3>
 <table border="1"><thead><tr><th>Tag</th><th>Effect</th></tr></thead><tbody>
-<tr><td>[BURST X]</td><td>Hits all enemies within X spaces of the attacker. Roll damage once.</td></tr>
-<tr><td>[BLAST X]</td><td>Hits all enemies within X spaces of the target. Roll damage once.</td></tr>
-<tr><td>[CHAIN X,Y]</td><td>Bounces to X additional targets within Y spaces. Each takes half the previous target's damage.</td></tr>
+<tr><td>[BURST X]</td><td>Hits all enemies within X spaces of the attacker. Roll damage once and apply to all targets.</td></tr>
+<tr><td>[BLAST X]</td><td>Hits all enemies within X spaces of the target. Roll damage once and apply to all targets.</td></tr>
+<tr><td>[CHAIN X,Y]</td><td>Bounces to X additional targets within Y spaces. Each subsequent target takes half the damage of the previous.</td></tr>
 </tbody></table>
 <h3>Timing Tags</h3>
 <table border="1"><thead><tr><th>Tag</th><th>Effect</th></tr></thead><tbody>
-<tr><td>[CHARGE]</td><td>Costs Basic Action now. Fires at the Resolution Stage at end of round.</td></tr>
-<tr><td>[COUNTER]</td><td>Free Action immediately after this character was attacked (if Free Action unused).</td></tr>
-<tr><td>[RUSH]</td><td>Does not consume Move Action. Move up to full speed and attack at any point during movement.</td></tr>
+<tr><td>[CHARGE]</td><td>Costs Basic Action now. Fires at the Resolution Stage at end of round. You may still move normally.</td></tr>
+<tr><td>[COUNTER]</td><td>Can only be used as a Free Action immediately after this character was attacked — only if their Free Action is unused this round.</td></tr>
+<tr><td>[RUSH]</td><td>Does not consume Move Action. Move up to full speed and attack at any point during movement. You may still take your Move Action separately before or after.</td></tr>
 </tbody></table>
 <h3>Status Effect Tags</h3>
 <table border="1"><thead><tr><th>Tag</th><th>Rules</th></tr></thead><tbody>
-<tr><td>[BURN X,Y]</td><td>Target takes X damage at start of their turn for Y ticks. Stacks add Y counters together.</td></tr>
-<tr><td>[FREEZE]</td><td>Cannot act. End of turn: 1d20 + Love vs DN 14 to break, or take any damage.</td></tr>
-<tr><td>[PARALYZE X]</td><td>Speed halved. X stacks. Lose 1 stack at start of turn. 4+ stacks = cannot act. Nat 20 clears all.</td></tr>
-<tr><td>[BLIND]</td><td>−4 to all attack hit rolls.</td></tr>
-<tr><td>[CONFUSE]</td><td>Start of turn: 1d20 + Friendship vs DN 14. Fail = must attack the closest ally.</td></tr>
-<tr><td>[DRAIN]</td><td>Attacker regains HP equal to half damage dealt (min 1).</td></tr>
-<tr><td>[PUSH]</td><td>Push target: Attacker Courage − Defender Courage spaces (min 1).</td></tr>
-<tr><td>[POISON X]</td><td>On natural 15+ attack roll: target gains X Poison stacks. Takes stacks as damage at start of turn. Does not tick down — clear with items or digivolution.</td></tr>
-<tr><td>[SLEEP]</td><td>Cannot act. Start of turn: Firewall DN 13 to wake, or take any damage.</td></tr>
+<tr><td>[BURN X,Y]</td><td>Target takes X damage at start of their turn for Y ticks. If hit with Burn again: take the higher X value and add the Y counters together.</td></tr>
+<tr><td>[FREEZE]</td><td>Cannot act. At end of their turn: 1d20 + total Love vs DN 14 to break. Also breaks immediately if the target takes any damage.</td></tr>
+<tr><td>[PARALYZE X]</td><td>Target's Speed is halved. X = stacks. At start of target's turn lose 1 stack. 1–3 stacks: choose Basic OR Move Action (not both). 4+ stacks: cannot act. Natural 20 on any roll clears all stacks.</td></tr>
+<tr><td>[BLIND]</td><td>−4 to all attack hit rolls for the duration.</td></tr>
+<tr><td>[CONFUSE]</td><td>Start of turn: 1d20 + total Friendship vs DN 14. Fail = must attack the closest ally.</td></tr>
+<tr><td>[DRAIN]</td><td>Attacker regains HP equal to half damage dealt (round down, minimum 1).</td></tr>
+<tr><td>[PUSH]</td><td>Push target away: Attacker's Courage minus Defender's Courage spaces (minimum 1).</td></tr>
+<tr><td>[POISON X]</td><td>On a natural attack roll of 15 or higher, target gains X Poison stacks. If already Poisoned, add X to current total. At start of their turn, target takes damage equal to current Poison stacks. Poison does not tick down — clear with items, abilities, or digivolving/dedigivolving.</td></tr>
+<tr><td>[SLEEP]</td><td>Target cannot act. At start of their turn: Firewall skill check DN 13 — success = awake, may act normally. Also wakes immediately if target takes any damage.</td></tr>
 </tbody></table>
-<p><strong>Status clearing:</strong> ALL status effects (including Poison and Sleep) are immediately cleared on any digivolution or dedigivolution.</p>
+<p><strong>Status clearing:</strong> ALL status effects — including Poison and Sleep — are immediately cleared whenever a Digimon digivolves or dedigivolves, voluntarily or otherwise.</p>
 '@ },
 
 @{ Title = "Chapter 8: Digivolution"; Content = @'
+<p>Digivolution is not a button you press. It is a question your partner asks of you — do you have enough left? Every evolution is paid for in Hope, and Hope is not infinite.</p>
 <h2>Stages</h2>
 <table border="1"><thead><tr><th>Stage</th><th>Notes</th></tr></thead><tbody>
 <tr><td>Fresh</td><td>No stats, no moves. Narrative only.</td></tr>
@@ -353,7 +393,7 @@ Available to all Tamers and Digimon at all times. Does not use a move slot.</p>
 <tr><td>Rookie</td><td>Starting stage for all partners. PR 2–4.</td></tr>
 <tr><td>Champion</td><td>First major milestone. PR 5–7.</td></tr>
 <tr><td>Ultimate</td><td>Mid-campaign goal. PR 8–10.</td></tr>
-<tr><td>Mega</td><td>Campaign endgame. PR 10–15 (some Mega digivolve to a second Mega form).</td></tr>
+<tr><td>Mega</td><td>Campaign endgame. PR 10–12. Some Mega Digimon can digivolve into another Mega form (PR 13–15).</td></tr>
 </tbody></table>
 <h2>Hope Cost Per Turn</h2>
 <table border="1"><thead><tr><th>Stage</th><th>Hope Cost Per Tamer Turn</th></tr></thead><tbody>
@@ -363,82 +403,86 @@ Available to all Tamers and Digimon at all times. Does not use a move slot.</p>
 <tr><td>Ultimate</td><td>10</td></tr>
 <tr><td>Mega</td><td>15</td></tr>
 </tbody></table>
-<p><strong>Stacking costs:</strong> When digivolved above Default Stage, pay the SUM of all stage costs above Default.<br><em>Example: Default = Rookie, Current = Ultimate. Cost = 6 + 10 = 16 Hope per turn.</em></p>
+<p><strong>Stacking costs:</strong> When digivolved multiple stages above Default Stage, pay the SUM of all stage costs above Default.<br><em>Example: Default = Rookie, Current = Ultimate. Cost = Champion (6) + Ultimate (10) = 16 Hope per Tamer turn.</em></p>
 <h2>Digivolving</h2>
 <ul>
 <li>Costs the Tamer's <strong>Basic Action</strong>.</li>
 <li>One stage at a time unless a class ability states otherwise.</li>
 <li>Cannot exceed <strong>2 stages above Default Stage</strong>.</li>
 <li>Must follow a valid species evolutionary path.</li>
+<li>When a Digimon digivolves, ALL active status effects are immediately cleared.</li>
 </ul>
 <h2>Voluntary Dedigivolution</h2>
 <ul>
-<li><strong>Free Action</strong> on Tamer or Digimon's turn.</li>
+<li><strong>Free Action</strong> on Tamer or Digimon's own turn.</li>
 <li>Can drop 1 or 2 stages. Hope adjusts before being spent.</li>
-<li>Only one of the two (Tamer or Digimon) may dedigivolve in a round.</li>
+<li>Only one of the two (Tamer or Digimon) may use their dedigivolve Free Action per round.</li>
 <li>All status effects clear on any dedigivolution.</li>
 </ul>
 <h2>Forcing a Digivolution</h2>
-<p>Spend less than the full Hope cost and roll d100. Roll above the threshold for a clean digivolution.<br>
+<p>You can spend less than the full Hope cost to digivolve. The less you spend, the higher the number you need to roll on d100 to avoid corruption. <strong>Forcing is not allowed outside of combat — you must always pay the full Hope cost out of combat.</strong></p>
+<p>Roll d100. Roll <strong>above</strong> the threshold for a clean digivolution.<br>
 <strong>Threshold = (1 − Hope Spent / Full Cost) × Stage Danger</strong></p>
 <table border="1"><thead><tr><th>Stage</th><th>Stage Danger</th></tr></thead><tbody>
 <tr><td>Rookie</td><td>20</td></tr><tr><td>Champion</td><td>35</td></tr>
 <tr><td>Ultimate</td><td>55</td></tr><tr><td>Mega</td><td>80</td></tr>
 </tbody></table>
-<p>Forcing is <strong>not allowed outside of combat</strong>.</p>
 <h2>HP on Digivolution</h2>
 <table border="1"><thead><tr><th>Action</th><th>HP Rule</th></tr></thead><tbody>
 <tr><td>Digivolving up</td><td>Current HP increases by the difference between old and new max HP.</td></tr>
 <tr><td>Dedigivolving</td><td>Current HP is capped at the new lower max HP.</td></tr>
+<tr><td>Out-of-combat healing</td><td>Valid strategy — digivolve up then dedigivolve to bank HP gain. Must pay full Hope cost. No forcing out of combat.</td></tr>
 </tbody></table>
 <h2>Hitting 0 HP — The Cascade</h2>
 <table border="1"><thead><tr><th>Situation</th><th>What Happens</th></tr></thead><tbody>
-<tr><td>Above Default Stage</td><td>Revert to Default Stage at 1 HP.</td></tr>
+<tr><td>Above Default Stage</td><td>Revert to Default Stage at 1 HP. Still in the fight.</td></tr>
 <tr><td>At Default Stage</td><td>Default Stage drops by 1. Remain at 1 HP.</td></tr>
-<tr><td>Overkill (&gt;50% max HP damage)</td><td>Default Stage drops an additional 1.</td></tr>
-<tr><td>Cannot drop further</td><td>Become an egg. Out until next session.</td></tr>
+<tr><td>Overkill hit (&gt;50% max HP damage)</td><td>Default Stage drops an additional 1. Stacks with the above.</td></tr>
+<tr><td>Default Stage cannot drop further</td><td>Become an egg. Out until next session.</td></tr>
 </tbody></table>
 <h2>Corrupted Digivolution</h2>
 <p>When a forced roll fails, the Digimon evolves into a corrupted form chosen by the GM.</p>
 <ul>
-<li>No Hope cost — corrupted form maintains itself.</li>
-<li>No early reversion — stays until the encounter ends.</li>
-<li>GM controlled — attacks closest target, prefers type advantage.</li>
-<li>The corrupt form's signature move is permanently added to the pool.</li>
+<li><strong>No Hope cost</strong> — corrupted form maintains itself with no per-turn cost.</li>
+<li><strong>No early reversion</strong> — stays corrupted until the encounter ends.</li>
+<li><strong>GM controlled</strong> — attacks the closest Digimon or Tamer, prefers type advantage targets.</li>
+<li><strong>Move stays</strong> — the corrupt form's signature move is permanently added to the pool.</li>
 </ul>
+<p>Encounter ends when: all enemies defeated, corrupted Digimon defeated, or all others submit.</p>
 <h2>Daily Rest Recovery</h2>
-<p>After each full day of rest, if the Digimon's Default Stage is below their Max Default Stage, it increases by one.</p>
+<p>After each full day of rest, if the Digimon's Default Stage is below their Max Default Stage, it increases by one. Default Stage cannot exceed Max Default Stage through any means.</p>
 '@ },
 
 @{ Title = "Chapter 9: Defeat, Victory & Tamer Conditions"; Content = @'
+<p>Loss is part of Digimon. If every encounter is won the characters never grow. If every encounter is lost the story stalls.</p>
 <h2>Winning an Encounter</h2>
-<p>All opposing forces are defeated, driven off, or choose to submit. All conditional modifiers clear. Corruption ends.</p>
+<p>All opposing forces are defeated, driven off, or choose to submit. The GM declares the encounter over. All conditional stat modifiers clear. Corruption ends. The party may rest, loot, or press on.</p>
 <h2>Losing an Encounter</h2>
-<p>All Digimon have reverted to egg state and all Tamers are at 0 HP — or the party chooses to submit. The GM determines what happens next. <strong>EXP is still awarded after a lost encounter.</strong></p>
+<p>An encounter is lost when all Digimon have reverted to egg state and all Tamers are at 0 HP — or when the party chooses to submit. The GM determines what happens next. <strong>EXP is still awarded after a lost encounter.</strong></p>
 <h2>Tamer HP and Defeat</h2>
 <table border="1"><thead><tr><th>Situation</th><th>What Happens</th></tr></thead><tbody>
-<tr><td>Tamer reaches 0 HP</td><td>Cannot take any actions for the rest of the encounter. Still present but cannot attack, use items, or digivolve.</td></tr>
+<tr><td>Tamer reaches 0 HP</td><td>Cannot take any actions for the rest of the encounter. Still present but cannot attack, use items, digivolve their partner, or make skill checks.</td></tr>
 <tr><td>Encounter ends</td><td>HP set to 1. Enters Weakened State until they take a long rest.</td></tr>
 </tbody></table>
 <p><strong>Weakened State:</strong> −2 to all rolls until a long rest.</p>
 <h2>Total Party Defeat</h2>
 <ul>
-<li>GM decides what happens next — capture, intervention, or something else entirely.</li>
-<li>All Digimon remain in egg state until the next session.</li>
-<li>All Tamers recover to 1 HP and enter Weakened State.</li>
+<li>GM decides what happens next — capture, retreat by the enemy, intervention by an NPC, or something else entirely.</li>
+<li>All Digimon remain in egg state until the next session or until a class ability intervenes.</li>
+<li>All Tamers recover to 1 HP and enter the Weakened State after the encounter resolves.</li>
 <li>EXP is still awarded for the session.</li>
 </ul>
-<p>Defeat is not a punishment — it is a turning point.</p>
+<p>Defeat is not a punishment — it is a turning point. The story continues. What the party does next is up to them.</p>
 '@ },
 
 @{ Title = "Chapter 10: Resting, Sessions & Encounters"; Content = @'
 <h2>Sessions and Encounters</h2>
-<p><strong>A session</strong> is the period between two long rests. Food must be eaten once per session to avoid hunger debuffs. Some class abilities reset per session.</p>
-<p><strong>An encounter</strong> is a defined period of dramatic activity — a fight, a dangerous puzzle, a tense negotiation. Corruption and conditional stat modifiers clear at the end of each encounter.</p>
+<p><strong>A session</strong> is the period between two long rests. It begins when the characters wake from a long rest and ends when they take the next one. Food must be eaten once per session to avoid hunger debuffs. Some class abilities reset per session. EXP rewards are calculated and awarded at the end of a session.</p>
+<p><strong>An encounter</strong> is a defined period of dramatic activity — a fight, a dangerous puzzle, a tense negotiation, or any situation where the GM calls for structured turns and meaningful stakes. Corruption and conditional stat modifiers clear at the end of each encounter.</p>
 <h2>Short Rest — 15 to 30 Minutes</h2>
 <p>Make a Recovery skill check. Both Tamer and Digimon restore HP equal to the result. Cannot exceed max HP. Does not restore Hope. Learned move slots stay fixed.</p>
 <h2>Long Rest — 8 to 10 Hours</h2>
-<p>Must include actual sleep. After a long rest:</p>
+<p>Must include actual sleep — cannot be spent traveling or in combat. After a long rest:</p>
 <ul>
 <li>HP fully restored for both Tamer and Digimon</li>
 <li>Hope fully restored</li>
@@ -459,23 +503,23 @@ Available to all Tamers and Digimon at all times. Does not use a move slot.</p>
 <table border="1"><thead><tr><th>Type</th><th>Rules</th></tr></thead><tbody>
 <tr><td>DIGIVICE</td><td>One equipped at a time. Required for digivolution.</td></tr>
 <tr><td>CLOTHING</td><td>One outfit at a time. Worn by the Tamer. Passive — always active.</td></tr>
-<tr><td>ACCESSORY</td><td>One at a time. Necklaces, tags, bags. Passive — always active.</td></tr>
-<tr><td>EQUIPMENT</td><td>Carried gear with active effects. No equip limit. Using costs a Basic Action unless stated.</td></tr>
-<tr><td>SUPPLY</td><td>Consumable, used up on use. Using costs a Basic Action unless stated.</td></tr>
-<tr><td>FOOD</td><td>Consumable meals. Eating costs no action — happens during rest or downtime.</td></tr>
+<tr><td>ACCESSORY</td><td>One at a time. Worn items like necklaces, tags, bags. Passive — always active.</td></tr>
+<tr><td>EQUIPMENT</td><td>Carried gear with active mechanical effects. No equip limit. Using costs a Basic Action unless stated otherwise.</td></tr>
+<tr><td>SUPPLY</td><td>Consumable items, used up on use. No carry limit. Using costs a Basic Action unless stated otherwise.</td></tr>
+<tr><td>FOOD</td><td>Consumable meals. Eating costs no action — happens naturally during rest or downtime.</td></tr>
 </tbody></table>
 <h2>Core Items</h2>
-<p>Available in all campaigns regardless of module.</p>
+<p>The following items are available in all campaigns regardless of module.</p>
 <table border="1"><thead><tr><th>Item</th><th>Type</th><th>Cost</th><th>Effect</th></tr></thead><tbody>
-<tr><td>Bandages</td><td>Supply</td><td>50 DD / 10 RW</td><td>Restore 4 HP to one target (Tamer or Digimon).</td></tr>
-<tr><td>First Aid Kit</td><td>Supply</td><td>80 RW</td><td>Restore 10 HP and remove one status effect. Outside combat only. 3 uses.</td></tr>
-<tr><td>Antidote</td><td>Supply</td><td>150 DD / 30 RW</td><td>Remove all Burn, Paralyze, Poison, and Sleep from one target.</td></tr>
-<tr><td>Goggles</td><td>Clothing</td><td>10 RW</td><td>+1 to all Radar rolls.</td></tr>
-<tr><td>Hiking Gear</td><td>Clothing</td><td>80 RW</td><td>+1 to all Field Ops rolls.</td></tr>
-<tr><td>Compass</td><td>Equipment</td><td>50 RW / 100 DD</td><td>+2 to Field Ops rolls involving navigation.</td></tr>
-<tr><td>Digi-Ration</td><td>Food</td><td>30 DD</td><td>Counts as a meal for both Tamer and Digimon.</td></tr>
-<tr><td>Onigiri</td><td>Food</td><td>20 RW / 60 DD</td><td>Meal for Tamer. Restores 6 HP.</td></tr>
-<tr><td>Noodle Bowl</td><td>Food</td><td>40 RW / 120 DD</td><td>Meal for Tamer. +1 to all skill rolls for the current session.</td></tr>
+<tr><td>Bandages</td><td>Supply</td><td>50 DD / 10 RW</td><td>Restore 4 HP to one target. Can be used on Tamers or Digimon.</td></tr>
+<tr><td>First Aid Kit</td><td>Supply</td><td>80 RW</td><td>Restore 10 HP and remove one status effect from one target. Outside combat only. 3 uses.</td></tr>
+<tr><td>Antidote</td><td>Supply</td><td>150 DD / 30 RW</td><td>Remove all Burn, Paralyze, Poison, and Sleep from one target immediately.</td></tr>
+<tr><td>Goggles</td><td>Clothing</td><td>10 RW</td><td>+1 to all Radar skill rolls while equipped.</td></tr>
+<tr><td>Hiking Gear</td><td>Clothing</td><td>80 RW</td><td>+1 to all Field Ops skill rolls while equipped.</td></tr>
+<tr><td>Compass</td><td>Equipment</td><td>50 RW / 100 DD</td><td>+2 to Field Ops rolls involving navigation. In the Digital World the GM may rule it behaves strangely.</td></tr>
+<tr><td>Digi-Ration</td><td>Food</td><td>30 DD</td><td>Counts as a meal for both Tamer and Digimon. Prevents hunger.</td></tr>
+<tr><td>Onigiri</td><td>Food</td><td>20 RW / 60 DD</td><td>Counts as a meal for the Tamer. Prevents hunger. Restores 6 HP.</td></tr>
+<tr><td>Noodle Bowl</td><td>Food</td><td>40 RW / 120 DD</td><td>Counts as a meal for the Tamer. Prevents hunger. +1 to all skill rolls for the current session.</td></tr>
 </tbody></table>
 <p><em>DD = DigiDollars | RW = Real World Money</em></p>
 '@ },
@@ -483,45 +527,61 @@ Available to all Tamers and Digimon at all times. Does not use a move slot.</p>
 @{ Title = "Appendix: Quick Reference"; Content = @'
 <h2>Combat At a Glance</h2>
 <table border="1"><thead><tr><th>Rule</th><th>Summary</th></tr></thead><tbody>
-<tr><td>Turn order</td><td>Digimon = Friendship. Tamers = Friendship × 2. Ties: higher raw Friendship.</td></tr>
-<tr><td>Movement</td><td>Digimon = Friendship spaces. Tamers = Friendship × 2 spaces.</td></tr>
+<tr><td>Turn order</td><td>Digimon = Friendship. Tamers = Friendship ×2. Ties: higher raw Friendship. Tamers and Digimon have separate turns.</td></tr>
+<tr><td>Movement</td><td>Digimon = Friendship spaces. Tamers = Friendship ×2 spaces.</td></tr>
+<tr><td>Adjacent</td><td>Any of the 8 squares surrounding a character's space (includes diagonals).</td></tr>
+<tr><td>Action commitment</td><td>Begin an action, finish it. Movement cannot be split around other actions.</td></tr>
+<tr><td>Second Move</td><td>Spend Basic Action to take a second Move Action this turn — move again up to full speed.</td></tr>
 <tr><td>Hit roll</td><td>1d20 + Courage vs Reliability + 10</td></tr>
 <tr><td>Natural 1</td><td>Auto miss</td></tr>
 <tr><td>Natural 20</td><td>Auto hit + double final damage</td></tr>
 <tr><td>Damage</td><td>PR dice + Knowledge − Love. Min 1 before multipliers.</td></tr>
+<tr><td>Multipliers</td><td>Attribute first, then element. Max ×3.0. Min ×0.25. Always min 1 final damage.</td></tr>
+<tr><td>Active moves</td><td>4 total — 1 locked signature + 3 learned (set at long rest)</td></tr>
 <tr><td>Call Out</td><td>Free Action — partner gets +1 to next attack roll this round.</td></tr>
-<tr><td>Push Through</td><td>Basic Action, once per encounter. Restore Hope = skill roll result.</td></tr>
-<tr><td>Taunt</td><td>Basic Action. Roar DN 12. Enemy redirects to Tamer if possible.</td></tr>
-<tr><td>Hope cost timing</td><td>Start of TAMER'S TURN. 0 Hope = revert to Default Stage.</td></tr>
-<tr><td>Status on digivolution</td><td>ALL status effects cleared on any digivolution or dedigivolution.</td></tr>
+<tr><td>Analyze</td><td>Free Action. Archive check DN 12. Learn one enemy trait.</td></tr>
+<tr><td>Push Through</td><td>Basic Action, once per encounter. Restore Hope = relevant skill roll result. Self only.</td></tr>
+<tr><td>Taunt</td><td>Basic Action. Roar DN 12. On success, enemy redirects to Tamer if possible after movement.</td></tr>
+<tr><td>Voluntary Dedigivolve</td><td>Free Action on Tamer or Digimon's own turn. 1 or 2 stages. Hope adjusts before being spent. Status effects clear.</td></tr>
+<tr><td>Hope cost timing</td><td>Start of TAMER'S TURN — not start of round. 0 Hope = revert to Default Stage.</td></tr>
+<tr><td>Status on digivolution</td><td>ALL status effects (including Poison and Sleep) cleared on any digivolution or dedigivolution.</td></tr>
 </tbody></table>
-<h2>Status Effects</h2>
-<table border="1"><thead><tr><th>Status</th><th>How to Clear</th></tr></thead><tbody>
-<tr><td>Burn X,Y</td><td>Ticks down Y times at start of turn</td></tr>
-<tr><td>Freeze</td><td>1d20 + Love vs DN 14 at end of turn, or take damage</td></tr>
-<tr><td>Paralyze X</td><td>Lose 1 stack at start of turn. Natural 20 clears all.</td></tr>
-<tr><td>Blind</td><td>Duration per move description</td></tr>
-<tr><td>Confuse</td><td>1d20 + Friendship vs DN 14 at start of turn</td></tr>
-<tr><td>Poison X</td><td>Item, ability, or digivolve/dedigivolve only</td></tr>
-<tr><td>Sleep</td><td>Firewall DN 13 at start of turn, or take damage</td></tr>
+<h2>Status Effects At a Glance</h2>
+<table border="1"><thead><tr><th>Status</th><th>Effect / How to Clear</th><th>Tag</th></tr></thead><tbody>
+<tr><td>Burn X,Y</td><td>Take X damage at start of turn. Ticks down Y times, then clears.</td><td>[BURN X,Y]</td></tr>
+<tr><td>Freeze</td><td>Cannot act. 1d20 + Love vs DN 14 at end of turn, or take damage.</td><td>[FREEZE]</td></tr>
+<tr><td>Paralyze X</td><td>Speed halved. 1–3 stacks: Basic OR Move (not both). 4+ stacks: cannot act. Lose 1 stack at start of turn. Nat 20 clears all.</td><td>[PARALYZE X]</td></tr>
+<tr><td>Blind</td><td>−4 to all attack hit rolls. Duration per move description.</td><td>[BLIND]</td></tr>
+<tr><td>Confuse</td><td>1d20 + Friendship vs DN 14 at start of turn. Fail = attack closest ally.</td><td>[CONFUSE]</td></tr>
+<tr><td>Poison X</td><td>Take X stacks as damage at start of turn. Does not tick down. Clear with items, abilities, or digivolve.</td><td>[POISON X]</td></tr>
+<tr><td>Sleep</td><td>Cannot act. Firewall check DN 13 at start of turn to wake, or take any damage.</td><td>[SLEEP]</td></tr>
 </tbody></table>
 <h2>HP Formulas</h2>
-<table border="1"><thead><tr><th>Character</th><th>Formula</th></tr></thead><tbody>
-<tr><td>Tamer</td><td>12 + (Sincerity rank × 4)</td></tr>
-<tr><td>Digimon</td><td>20 + (total Sincerity × 4)</td></tr>
+<table border="1"><thead><tr><th>Character</th><th>Formula</th><th>Rank 1 Example</th><th>Rank 5 Example</th><th>Rank 10 Example</th></tr></thead><tbody>
+<tr><td>Tamer</td><td>12 + (Sincerity rank × 4)</td><td>Rank 1 = 16 HP</td><td>Rank 5 = 32 HP</td><td>Rank 10 = 52 HP</td></tr>
+<tr><td>Digimon</td><td>20 + (total Sincerity × 4)</td><td>Sincerity 4 = 36 HP</td><td>Sincerity 12 = 68 HP</td><td>Sincerity 20 = 100 HP</td></tr>
+</tbody></table>
+<h2>Hope Pool Quick Reference</h2>
+<table border="1"><thead><tr><th>Highest Crest Stat Rank</th><th>Hope Pool</th></tr></thead><tbody>
+<tr><td>1</td><td>5</td></tr><tr><td>2</td><td>10</td></tr><tr><td>3</td><td>20</td></tr>
+<tr><td>4</td><td>35</td></tr><tr><td>5</td><td>55</td></tr><tr><td>6</td><td>80</td></tr>
+<tr><td>7</td><td>105</td></tr><tr><td>8</td><td>130</td></tr><tr><td>9</td><td>165</td></tr>
+<tr><td>10</td><td>200</td></tr>
 </tbody></table>
 <h2>Digivolution At a Glance</h2>
 <table border="1"><thead><tr><th>Rule</th><th>Summary</th></tr></thead><tbody>
 <tr><td>Stage limit</td><td>Max 2 stages above Default Stage</td></tr>
-<tr><td>0 HP at Default Stage</td><td>Default Stage drops by 1</td></tr>
-<tr><td>Overkill (&gt;50% max HP)</td><td>Default Stage drops an additional 1</td></tr>
-<tr><td>Daily rest</td><td>Default Stage +1 (up to Max Default Stage)</td></tr>
+<tr><td>Digivolution path</td><td>Must follow a valid species path. Unlocked forms on different lines are not accessible from an incompatible current form.</td></tr>
+<tr><td>Forced digivolution</td><td>Roll d100 above threshold = clean. At or below = corrupted form. Out of combat: must pay full cost, no forcing.</td></tr>
+<tr><td>0 HP at Default Stage</td><td>Default Stage drops by 1. Remain at 1 HP.</td></tr>
+<tr><td>Overkill (&gt;50% max HP)</td><td>Default Stage drops an additional 1. Stacks with the above.</td></tr>
+<tr><td>Daily rest</td><td>Default Stage +1 up to Max Default Stage</td></tr>
 </tbody></table>
-<h2>Resting</h2>
-<table border="1"><thead><tr><th>Rest</th><th>Duration</th><th>Effect</th></tr></thead><tbody>
-<tr><td>Short</td><td>15–30 min</td><td>Recovery check restores HP to both. No Hope.</td></tr>
-<tr><td>Long</td><td>8–10 hours</td><td>Full HP and Hope. Default Stage +1. Rearrange learned moves.</td></tr>
-<tr><td>Missed meal</td><td>Per day</td><td>Hope pool halved (stacks to 1/4, then 1/8).</td></tr>
+<h2>Resting At a Glance</h2>
+<table border="1"><thead><tr><th>Rest Type</th><th>Duration</th><th>Effect</th></tr></thead><tbody>
+<tr><td>Short rest</td><td>15–30 min</td><td>Recovery check restores HP to both. No Hope. Learned moves stay fixed.</td></tr>
+<tr><td>Long rest</td><td>8–10 hours</td><td>Full HP and Hope restored. Default Stage +1 if below max. Learned moves can be rearranged.</td></tr>
+<tr><td>Missed meal</td><td>Once per day</td><td>Hope pool halved (stacks to ×0.25, then ×0.125). Affects Tamer and Digimon separately.</td></tr>
 </tbody></table>
 '@ }
 

@@ -18,7 +18,7 @@
     "element": "Neutral",
     "pr": 7,
     "tags": "[MELEE] [CHARGE]",
-    "description": "12Delivers a superdreadnought-class punch.Delivers a punch with a flaming fist."
+    "description": "Delivers a superdreadnought-class punch"
   },
   "digivolves_from": [
     "Agumon",
@@ -49,6 +49,7 @@
     "Nanomon (Digimon)",
     "Mega Seadramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "A super-heavyweight class Dinosaur Digimon that grew gigantic horns from both of its shoulders. It holds the alias \" Panzer Digimon \", from how it will destroy all obstructions in sight as it charges forth due to its reckless personality. It specializes in performing charging tackles, and countless Digimon have been felled by this attack. The star symbols on its two arms represent the number of Digimon it has defeated (100 represented by one star). Also, it is a fool's errand to attempt to break the horns on Tuskmon's shoulders, as the broken horns will fall out and get replaced with new ones, just like sharks' teeth. Its Special Move is a superdreadnought-class punch ( Panzer Knuckle ).",

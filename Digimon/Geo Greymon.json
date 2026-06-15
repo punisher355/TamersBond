@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Mega Flame",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 5,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BURST 4] [BURN 4,3]",
     "description": "Spews ultra-high-temperature flames from its mouth and reducing everything to ashes."
   },
   "digivolves_from": [
@@ -72,6 +72,7 @@
     "Whamon Perfect",
     "Wingdramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A unique Digimon that is conjectured to be a subspecies of Greymon . Its entire body as well as the carapace on its head have also developed to become like lethal weapons, giving it a more aggressive appearance. Its Special Move \" Mega Flame \" is spewing ultra-high-temperature flames from its mouth and reducing everything to ashes. It can also charge its \" Mega Flame \" to the limit within its mouth, then fire it with explosive power as \" Mega Burst \". Furthermore, its \" Horn Impulse \", in which it charges with its gigantic horns and pulverizes the opponent, is also a powerful attack.",

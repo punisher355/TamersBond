@@ -40,8 +40,9 @@
     "Waru Seadramon",
     "Mega Seadramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
-  "web_created": true,
-  "description": "An Armor-level Aquatic Digimon that evolved through the power of the \" Digimental of Sincerity \". The \"Digimental of Sincerity\" has the attribute of \"Water\", and those that don this Digimental demonstrate their true power underwater. It swims freely around the ocean, and the techniques unleashed in underwater battles are no match for it unless they're also from a considerably Aquatic Digimon. Its Special Moves are discharging super-compressed oxygen ( Oxygen Homing ), and after distancing itself underwater, instantly accelerating and performing a ramming attack while spinning the drill on its snout ( Submarine Attack )."
+  "description": "An Armor-level Aquatic Digimon that evolved through the power of the \" Digimental of Sincerity \". The \"Digimental of Sincerity\" has the attribute of \"Water\", and those that don this Digimental demonstrate their true power underwater. It swims freely around the ocean, and the techniques unleashed in underwater battles are no match for it unless they're also from a considerably Aquatic Digimon. Its Special Moves are discharging super-compressed oxygen ( Oxygen Homing ), and after distancing itself underwater, instantly accelerating and performing a ramming attack while spinning the drill on its snout ( Submarine Attack ).",
+  "web_created": true
 }

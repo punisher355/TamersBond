@@ -3,7 +3,7 @@
   "stage": "Rookie",
   "attribute": "Vaccine",
   "element": "Neutral",
-  "archetype": "Mystic",
+  "archetype": "Attacker",
   "size": "Medium",
   "stats": {
     "CRG": 3,
@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Corona Flame",
-    "element": "Neutral",
+    "element": "Fire",
     "pr": 3,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [BURST 2] [BURN 3,2]",
     "description": "A flaming shot which concentrates the power of flame in its brow while exhausting all of its body's stamina, then fires it at the opponent."
   },
   "digivolves_from": [
@@ -40,6 +40,7 @@
     "Meramon",
     "Pidmon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A Beast Digimon born from fusing with solar observation data. It has a strong sense of justice and a pure, innocent personality. Its Special Moves are releasing continuous punches with its fists heated by the power of flame ( Corona-knuckle ), and concentrating the power of flame in its brow while exhausting all of its body's stamina, then firing it at the opponent as a flaming shot ( Corona Flame ). Also, it can either defend itself or ram the opponent while its body is clad in flames ( Petit Prominence ).",

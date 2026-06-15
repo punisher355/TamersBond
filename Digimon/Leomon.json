@@ -17,7 +17,7 @@
     "name": "Jūouken",
     "element": "Neutral",
     "pr": 6,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BURST 4] [PIERCE]",
     "description": "Launches an aura in the shape of a lion's head from its fist."
   },
   "digivolves_from": [
@@ -87,6 +87,7 @@
     "Hippogriffomon",
     "Pajramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "A Beast Man Digimon which is called the \" King of Beasts \", as well as the \" Noble Hero \". While most Digimon are savage, it possesses a strong purpose and a heart of justice, and has defeated a great number of fiendish Digimon. Also, it is a rival to the \" Digimon Hunter \" Orgemon , who runs the whole gamut of destruction. Its tough flesh, tempered well by daily training, can endure any attack, and it chokes the life out of the opponent with its ultimate secret technique, its Special Move \" Jūouken \". It carries a sentient magical sword named \" Shishiou-maru \" on its waist.",

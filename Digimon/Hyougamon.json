@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Snow Punch",
-    "element": "Neutral",
+    "element": "Water",
     "pr": 5,
-    "tags": "[MELEE]",
+    "tags": "[MELEE] [FREEZE]",
     "description": "Dishes out a cold-packed punch."
   },
   "digivolves_from": [
@@ -44,8 +44,9 @@
     "Waru Monzaemon",
     "Zudomon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "A species of Orgemon that inhabits cold places. It is very territorial, and will attack in rage the moment anyone takes even a step into its territory (apparently, there are times when it gets into territorial disputes with Mojyamon ). Its Special Move is dishing out a cold-packed punch ( Snow Punch )."
+  "description": "A species of Orgemon that inhabits cold places. It is very territorial, and will attack in rage the moment anyone takes even a step into its territory (apparently, there are times when it gets into territorial disputes with Mojyamon ). Its Special Move is dishing out a cold-packed punch ( Snow Punch ).",
+  "web_created": true
 }

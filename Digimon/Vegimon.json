@@ -17,7 +17,7 @@
     "name": "Amai Toiki",
     "element": "Plant",
     "pr": 5,
-    "tags": "[RANGE 6] [CONFUSE]",
+    "tags": "[RANGE 6] [POISON 3]",
     "description": "Poops and throws it at the enemy."
   },
   "digivolves_from": [
@@ -62,6 +62,7 @@
     "Toropiamon",
     "Vademon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": false,
   "review_notes": "",
   "description": "An Insectivorous Plant Digimon with long, outstretched vines and a wide, open mouth. It is a fierce, brutal Digimon that uses the sweet scent it breathes from its mouth to attract small Digimon and its long, tentacle-like vines to pull them in; however, it is unable to stand against larger Digimon due to its lack of offensive power. As Vegimon grows, it will start flowering and eventually bear fruit.",

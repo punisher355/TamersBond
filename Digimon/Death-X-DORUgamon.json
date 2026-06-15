@@ -14,10 +14,11 @@
     "RLB": 8
   },
   "signature_move": {
-    "name": "",
+    "name": "Cannonball",
     "element": "Neutral",
     "pr": 6,
-    "tags": "[MELEE]"
+    "tags": "[RANGE 8] [BLAST 4] [PIERCE]",
+    "description": "Fires cannonballs from its mouth."
   },
   "digivolves_from": [
     "Agumon (Black)",
@@ -34,8 +35,9 @@
     "DORUguremon",
     "Metal Tyranomon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "An Undead Digimon of the Prototype Digimon \" DORU Series \" that was experimented on in search of further evolutions, and was said to, at the time of the experiment, resemble its Adult form . By continuously preying on the Digicores of other Digimon, it is active despite its deceased condition, and is attempting to evolve. Its Signature Move is \" Cannonball \". Its Special Move is impaling the opponent with its steel arms and ripping out their Digicore ( Metal Cast )."
+  "description": "An Undead Digimon of the Prototype Digimon \" DORU Series \" that was experimented on in search of further evolutions, and was said to, at the time of the experiment, resemble its Adult form . By continuously preying on the Digicores of other Digimon, it is active despite its deceased condition, and is attempting to evolve. Its Signature Move is \" Cannonball \". Its Special Move is impaling the opponent with its steel arms and ripping out their Digicore ( Metal Cast ).",
+  "web_created": true
 }

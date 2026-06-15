@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Dark Blast",
-    "element": "Neutral",
+    "element": "Dark",
     "pr": 10,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8]",
     "description": "A laser beam fired with a roar."
   },
   "digivolves_from": [
@@ -31,8 +31,9 @@
   "digivolves_to": [
     "Apocalymon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
-  "web_created": true,
-  "description": "Possessing the attribute of \"Darkness\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is set at the opposite extreme to Ancient Garurumon as a being born from darkness. It rules over the destruction and annihilation of all existing or living things, and is feared as the \" Deadly Dark Beast \". Ancient Sphinxmon's abilities were later passed on to the \"Mythical Beast\" and \"Demon Beast Digimon\". Its Special Moves are a laser beam fired with a roar ( Dark Blast ), and the ultimate annihilation technique which completely envelops the opponent in the darkness of death ( Necro Eclipse )."
+  "description": "Possessing the attribute of \"Darkness\", it is one of the legendary Ten Warriors Digimon that saved the ancient Digital World . An Ultimate who existed only in the distant past, it is set at the opposite extreme to Ancient Garurumon as a being born from darkness. It rules over the destruction and annihilation of all existing or living things, and is feared as the \" Deadly Dark Beast \". Ancient Sphinxmon's abilities were later passed on to the \"Mythical Beast\" and \"Demon Beast Digimon\". Its Special Moves are a laser beam fired with a roar ( Dark Blast ), and the ultimate annihilation technique which completely envelops the opponent in the darkness of death ( Necro Eclipse ).",
+  "web_created": true
 }

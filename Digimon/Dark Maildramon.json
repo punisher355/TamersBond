@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Dark Wing",
-    "element": "Water",
+    "element": "Dark",
     "pr": 7,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 8] [CHAIN 3,4] [PIERCE]",
     "description": "Flaps its tattered wings, causing dark bullets to rain down."
   },
   "digivolves_from": [
@@ -34,6 +34,7 @@
     "Metal Tyranomon",
     "Paildramon"
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "A form of Maildramon , who is Knightmon 's servant and acquired the power of \" Miracles \", that found righteousness in evil after abandoning justice. Its Chrome Digizoid armor has been dyed a dark color, and it is looking for a heart of darkness in its master, Knightmon. If it is a Knightmon with a strong evil heart, then it will be obedient to them, but if it senses even a shred of conscience, it will crush even its own master under its bulk. Its Special Move is flapping its tattered wings, causing dark bullets to rain down ( Dark Wing ).",

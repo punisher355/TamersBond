@@ -15,9 +15,9 @@
   },
   "signature_move": {
     "name": "Petit Twister",
-    "element": "Neutral",
+    "element": "Wind",
     "pr": 4,
-    "tags": "[MELEE]",
+    "tags": "[RANGE 4] [BLAST 2] [PUSH]",
     "description": "Generates a tiny tornado by spinning its ears like propellers."
   },
   "digivolves_from": [
@@ -61,6 +61,7 @@
     "Youkomon",
     "Black Tailmon Uver."
   ],
+  "special_digivolve_rule": null,
   "needs_review": true,
   "review_notes": "automation",
   "description": "An extremely precious twin Digimon Child. Terriermon is the one with one horn growing from its head, while Lopmon is the one with three horns growing from its head. The way it grows is shrouded in mystery, and though it can be classified as a Beast-species Digimon from its body structure, aside from that it is still not understood. Terriermon has a calm personality, but is very robust. In contrast, Lopmon has the personality of a lonely crybaby. Neither of them seem like \" Combat Species \" Digimon, but when battling, they show that they are more powerful than they appear. Its Signature Moves are generating a tiny tornado by spinning its ears like a propeller ( Petit Twister ), and its Unison Technique \" Double Typhoon \". Its Special Move is spitting out shots of supercooled air ( Blazing Ice ).",
