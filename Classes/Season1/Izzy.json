@@ -6,51 +6,44 @@
     {
       "name": "Data Scan",
       "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Knowledge rank 3+)",
-      "description": "Once per encounter as a Basic Action, choose one enemy. You learn their Attribute, Element, and one combat stat of your choice."
+      "expCost": 200,
+      "requirements": "Knowledge rank 2+",
+      "description": "As a Basic Action, choose one enemy Digimon. You learn their Attribute (Vaccine, Data, Virus, Free, or Unknown)."
     },
     {
-      "name": "Tactical Override",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Knowledge rank 3+)",
-      "description": "Once per encounter as a Free Action on your turn, you may move one allied Digimon up to 2 spaces in any direction before their turn begins."
+      "name": "Elemental Analysis",
+      "row": 2,
+      "expCost": 400,
+      "requirements": "Knowledge rank 4+",
+      "description": "Data Scan also reveals the target's Element."
     },
     {
-      "name": "Calculated Strike",
+      "name": "Wide Scan",
       "row": 2,
       "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Knowledge rank 4",
-      "description": "Once per encounter when your Digimon misses an attack, you may spend 3 Hope to reroll the attack roll and take the higher result."
+      "requirements": "Knowledge rank 4+",
+      "description": "You may use Data Scan at the start of the encounter without it costing an action."
     },
     {
-      "name": "Exploit Weakness",
+      "name": "Root Access",
       "row": 2,
       "expCost": 500,
-      "requirements": "Data Scan, Knowledge rank 4",
-      "description": "When your Digimon attacks an enemy you have already scanned this encounter, they deal +Knowledge rank bonus damage on that attack."
+      "requirements": "Knowledge rank 4+",
+      "description": "Add your Knowledge rank to the result of all Jack In skill checks."
     },
     {
       "name": "Digimon Encyclopedia",
       "row": 3,
-      "expCost": 700,
-      "requirements": "At least 1 Row 2 ability, Knowledge rank 5",
-      "description": "Once per session you may declare that your character has researched a specific Digimon type before this encounter. You automatically know their Attribute, Element, and two combat stats without spending a scan action."
+      "expCost": 600,
+      "requirements": "Knowledge rank 6+",
+      "description": "Data Scan now targets every enemy Digimon in the encounter at once instead of just one."
     },
     {
-      "name": "Full Analysis",
+      "name": "Source Code",
       "row": 3,
       "expCost": 700,
-      "requirements": "Data Scan and Exploit Weakness, Knowledge rank 5",
-      "description": "Data Scan now reveals ALL of the target's combat stats in addition to their Attribute and Element."
-    },
-    {
-      "name": "Prodigious",
-      "row": 4,
-      "expCost": 1000,
-      "requirements": "Both Row 3 abilities, Knowledge rank 7",
-      "description": "Once per encounter after an enemy takes an action, you may use your Free Action to predict their next move. The GM tells you one of the following: which target they will attack next, which move they plan to use, or whether they intend to move. You can only predict one thing per activation."
+      "requirements": "Knowledge rank 6+",
+      "description": "As your Basic Action, make a Jack In check against DN 20. On a success, you may change one minor thing about the Digital World in your immediate surroundings, such as cracking a boulder apart or causing a door into a nearby building to appear, that scale of edit. This can never be used to change anything about a Digimon, and it can't be used to make a major change to the environment around you, like turning a desert into an ocean."
     }
   ]
 }

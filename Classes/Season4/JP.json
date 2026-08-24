@@ -2,57 +2,48 @@
   "name": "JP",
   "season": 4,
   "img": "JP.webp",
-  "crest": "Friendship",
-  "entryRequirement": "Friendship rank 3",
   "abilities": [
     {
-      "name": "Backup Plan",
+      "name": "All Eyes on Me",
       "row": 1,
       "expCost": 300,
-      "requirements": "Entry requirement met (Friendship rank 3+)",
-      "description": "Once per encounter when an allied Digimon within 3 spaces takes damage, your partner Digimon gains +2 to their next attack roll."
+      "requirements": "Friendship rank 3+",
+      "description": "Once per round, when an allied Digimon within 3 spaces of your partner Digimon would take damage, your partner Digimon may take that damage instead. The damage is taken exactly as the original target would have taken it. It is not reduced or increased by your partner Digimon's own stats, resistances, or other abilities unless a specific ability says otherwise."
     },
     {
-      "name": "Crowd Presence",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Friendship rank 3+)",
-      "description": "Your partner Digimon gains +1 to all attack rolls for each allied Digimon currently on the field, up to a maximum of +3."
-    },
-    {
-      "name": "Shield the Pack",
+      "name": "Shrug It Off",
       "row": 2,
-      "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Friendship rank 4",
-      "description": "Once per encounter when an allied Digimon within 2 spaces would take damage, your partner Digimon may take that damage instead."
+      "expCost": 450,
+      "requirements": "Friendship rank 4+",
+      "description": "When your partner Digimon takes damage redirected by All Eyes on Me, reduce that damage by your Friendship rank."
     },
     {
-      "name": "Group Momentum",
+      "name": "Bigger Spotlight",
       "row": 2,
-      "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Friendship rank 4",
-      "description": "Once per encounter at the start of your turn, if at least two allied Digimon acted last round, your partner Digimon gains temporary HP equal to your Friendship rank."
+      "expCost": 450,
+      "requirements": "Friendship rank 4+",
+      "description": "All Eyes on Me's range increases from 3 spaces to 6 spaces."
     },
     {
-      "name": "Thunder Formation",
+      "name": "Taunt",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Friendship rank 4+",
+      "description": "As a Basic Action, every opposing Digimon within range must attack your partner Digimon. This effect lasts until the start of your next turn."
+    },
+    {
+      "name": "Better Than Fine",
+      "row": 3,
+      "expCost": 750,
+      "requirements": "Friendship rank 6+",
+      "description": "When your partner Digimon uses All Eyes on Me, the allied Digimon who would have taken the damage is healed for half that amount instead."
+    },
+    {
+      "name": "Hype Squad",
       "row": 3,
       "expCost": 700,
-      "requirements": "Shield the Pack, Friendship rank 5",
-      "description": "Once per encounter as a Basic Action, choose one allied Digimon within 3 spaces. Until the start of your next turn that Digimon gains +3 to their damage resistance."
-    },
-    {
-      "name": "Never Alone",
-      "row": 3,
-      "expCost": 700,
-      "requirements": "Group Momentum, Friendship rank 5",
-      "description": "Once per session when your partner Digimon would trigger the defeat cascade, you may spend 6 Hope to prevent it if there is at least one other allied Digimon still on the field."
-    },
-    {
-      "name": "For Everyone",
-      "row": 4,
-      "expCost": 1000,
-      "requirements": "Both Row 3 abilities, Friendship rank 7",
-      "description": "Once per session at the start of an encounter, all allied Digimon and Tamers on the field — including yourself — gain temporary HP equal to your Friendship rank x3."
+      "requirements": "Friendship rank 6+",
+      "description": "Once per encounter, restore Hope equal to your Friendship rank to one other allied Tamer."
     }
   ]
 }

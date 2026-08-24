@@ -4,46 +4,46 @@
   "img": "Kenta.webp",
   "abilities": [
     {
-      "name": "I Read About This",
+      "name": "Double Dip",
       "row": 1,
       "expCost": 300,
-      "requirements": "Entry requirement met (Knowledge rank 3+)",
-      "description": "Once per session at the start of an encounter, you automatically learn one piece of information about one enemy of your choice — their Attribute, their Element, or whether they are stronger or weaker than your Digimon overall. No check required."
+      "requirements": "Reliability rank 3+",
+      "description": "Once per encounter, when you use a Supply item, you may pay 3 Hope to use a second copy of that same Supply item as part of the same action."
     },
     {
-      "name": "Unlikely Protector",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Knowledge rank 3+)",
-      "description": "Once per encounter when an ally Tamer within 2 spaces takes damage that would reduce them to 0 HP, you may spend 4 Hope to take half that damage yourself instead — rounding the halved amount down. The ally takes the other half and may survive at 1 HP or higher."
+      "name": "Well Stocked",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Reliability rank 4+",
+      "description": "Double Dip's Hope cost drops to 0."
     },
     {
-      "name": "Deep Archive",
+      "name": "Always Ready",
       "row": 2,
       "expCost": 500,
-      "requirements": "I Read About This, Knowledge rank 4",
-      "description": "I Read About This now reveals two pieces of information instead of one on the same target."
+      "requirements": "Reliability rank 5+",
+      "description": "Double Dip can be used once per round instead of once per encounter."
     },
     {
-      "name": "Tiny But Fierce",
+      "name": "Rationing",
       "row": 2,
-      "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Knowledge rank 4",
-      "description": "When your Digimon is attacked by a Digimon that is at a higher stage than yours, you may reduce the attacker's hit chance by 1, applied before the roll."
+      "expCost": 450,
+      "requirements": "Reliability rank 4+",
+      "description": "When eating Food, you and your partner Digimon may share one portion between you. Both of you avoid hunger, but neither of you gains that Food's bonus effect."
     },
     {
-      "name": "Kotemon Wouldn't Have Been So Bad Either",
+      "name": "Waste Not",
       "row": 3,
-      "expCost": 700,
-      "requirements": "Deep Archive, Knowledge rank 5",
-      "description": "Once per session before any roll is made, you may declare that you have researched this specific situation. The GM must tell you the exact DN of the roll before you commit to attempting it."
+      "expCost": 800,
+      "requirements": "Reliability rank 6+",
+      "description": "When you use Double Dip, you no longer need to consume a second copy of the item. The second use is free."
     },
     {
-      "name": "Heart Patter",
+      "name": "Spare Parts",
       "row": 3,
-      "expCost": 700,
-      "requirements": "Tiny But Fierce, Knowledge rank 5",
-      "description": "Once per session as a Free Action, MarineAngemon bestows Heart Patter on one allied Digimon within 3 spaces. That Digimon immediately restores HP equal to your Knowledge rank x 3."
+      "expCost": 750,
+      "requirements": "Reliability rank 6+",
+      "description": "Once between rests, you may use one Gadget you're carrying but don't have equipped, exactly as though it were equipped, for that one use."
     }
   ]
 }

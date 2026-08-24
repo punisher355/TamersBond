@@ -1,0 +1,49 @@
+{
+  "name": "Kouichi",
+  "season": 4,
+  "img": "Kouichi.webp",
+  "abilities": [
+    {
+      "name": "Shared Suffering",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Highest Crest Stat rank 3+",
+      "description": "Once per round, when your partner Digimon takes damage, you may choose to have them take double that damage instead. If you do, the attacker takes the original, non-doubled amount of damage themselves."
+    },
+    {
+      "name": "Numb to It",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Highest Crest Stat rank 4+",
+      "description": "Your partner Digimon now only takes the normal amount of damage instead of double, while the attacker still takes that same amount back."
+    },
+    {
+      "name": "Every Strike",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Highest Crest Stat rank 4+",
+      "description": "Shared Suffering is no longer limited to once per round. It can trigger on every attack."
+    },
+    {
+      "name": "Feeds on Darkness",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Highest Crest Stat rank 4+",
+      "description": "When your partner Digimon would take Dark-type damage, they heal for that amount instead of taking damage."
+    },
+    {
+      "name": "Twice the Pain",
+      "row": 3,
+      "expCost": 750,
+      "requirements": "Highest Crest Stat rank 6+",
+      "description": "The attacker now takes double the reflected damage instead of just the original amount."
+    },
+    {
+      "name": "Force the Outcome",
+      "row": 3,
+      "expCost": 750,
+      "requirements": "Highest Crest Stat rank 6+",
+      "description": "You may spend 4 Hope to turn a missed attack roll into a hit. This cannot turn it into a critical hit."
+    }
+  ]
+}

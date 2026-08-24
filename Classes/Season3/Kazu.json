@@ -4,46 +4,46 @@
   "img": "Kazu.webp",
   "abilities": [
     {
-      "name": "Trash Talk",
+      "name": "Two for One",
       "row": 1,
       "expCost": 300,
-      "requirements": "Entry requirement met (Reliability rank 3+)",
-      "description": "Once per encounter as a Free Action on your turn, choose one visible enemy. That enemy must succeed on a Firewall skill check DN 12 or take -2 to their next attack roll."
+      "requirements": "Knowledge rank 3+",
+      "description": "As your Basic Action, you may pay 3 Hope to play 2 cards at once."
     },
     {
-      "name": "Guardromon's Partner",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Reliability rank 3+)",
-      "description": "Once per encounter as a Free Action, when an allied Digimon within your Friendship rank x 2 spaces is about to take damage, you may swap places with that Digimon and take the damage yourself instead. The damage number is whatever was going to be applied to the ally — it is not recalculated through your own resistances, weaknesses, or Love stat. You simply take the number."
-    },
-    {
-      "name": "All In",
+      "name": "Bulk Discount",
       "row": 2,
       "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
-      "description": "Once per encounter before your Digimon makes an attack roll, you may declare All In. Double the damage dice on that attack if it hits. If it misses, your Digimon cannot make any attacks next round — they are completely off balance."
+      "requirements": "Knowledge rank 5+",
+      "description": "Two for One's Hope cost drops to 0."
     },
     {
-      "name": "Comeback Kid",
+      "name": "Full House",
       "row": 2,
       "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
-      "description": "When your Digimon misses an attack roll, their next attack roll this encounter gains +4."
+      "requirements": "Knowledge rank 5+",
+      "description": "Two for One's cards can now be played as a Free Action instead of your Basic Action."
     },
     {
-      "name": "Better Than I Look",
-      "row": 3,
-      "expCost": 700,
-      "requirements": "All In, Reliability rank 5",
-      "description": "All In no longer causes your Digimon to lose their next round's attacks on a miss — they take -2 to their next attack roll instead."
+      "name": "Know Your Enemy",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Knowledge rank 4+",
+      "description": "At the start of each encounter, before turns begin, name one tag from the Move Tags list in Chapter 11. Until the end of the round, your partner Digimon takes -2 damage from attacks using that tag."
     },
     {
-      "name": "Cheerleader",
+      "name": "Piggyback",
       "row": 3,
-      "expCost": 700,
-      "requirements": "Comeback Kid, Reliability rank 5",
-      "description": "Once per encounter as a Free Action on your turn, choose one enemy Digimon. Until the start of your next turn all allied Digimon that attack that target gain +1 to their attack rolls against it."
+      "expCost": 800,
+      "requirements": "Knowledge rank 6+",
+      "description": "Whenever an allied Tamer plays a card as their Basic Action, you may spend your own action on their turn to play a card using Two for One. If you do, both cards' effects apply to both your partner Digimon and their partner Digimon. The allied Tamer plays one card, and you play one card; Two for One does not allow you to play two cards yourself, it combines your card with the allied Tamer's card."
+    },
+    {
+      "name": "Know a Guy",
+      "row": 3,
+      "expCost": 750,
+      "requirements": "Knowledge rank 6+",
+      "description": "Once between rests, make an Archive skill check. Your total determines what you find: 1 to 10 gets you a Common card, 11 to 20 gets you an Uncommon card, 21 to 29 gets you a Rare card, and 30 or higher gets you a Secret Rare card. The GM chooses the specific card within that rarity, not you."
     }
   ]
 }

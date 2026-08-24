@@ -4,53 +4,46 @@
   "img": "Davis.webp",
   "abilities": [
     {
-      "name": "Never Back Down",
+      "name": "Reckless",
       "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Courage rank 3+)",
-      "description": "Once per encounter when your Digimon fails an attack roll, they may immediately make the same attack again for free as part of the same action. The second roll uses the same target but counts as a separate attack. Missing twice means you try harder next time — not that you stop."
+      "expCost": 250,
+      "requirements": "Courage rank 2+",
+      "description": "Once per round, you may spend 6 Hope. If you do, your partner Digimon acts first in the round, before anyone else takes their turn. When your Digimon attacks this round, they gain 1d4 to their hit roll. Any enemy that attacks your Digimon this round gains that same 1d4 bonus to their hit roll as well."
     },
     {
-      "name": "Gogglehead",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Courage rank 3+)",
-      "description": "Once per encounter you may declare a target as your Digimon's focus. Until the end of the encounter your Digimon deals +2 damage to that target on every hit. Switching focus costs your Free Action. You cannot focus on something without going all in."
-    },
-    {
-      "name": "Sheer Stubbornness",
+      "name": "Full Throttle",
       "row": 2,
-      "expCost": 500,
-      "requirements": "Never Back Down, Courage rank 4",
-      "description": "When your Digimon would be Paralyzed, Frozen, or Confused, they may make a Reinforce check DN 12 before the status applies. On a success the status is completely negated. On a failure it applies as normal. Davis Tamers do not stay down."
+      "expCost": 450,
+      "requirements": "Courage rank 4+",
+      "description": "Reckless's bonus die increases from 1d4 to 1d8. Enemies attacking your Digimon this round only gain half of that rolled bonus, rounded down, instead of the full amount."
     },
     {
-      "name": "Tunnel Vision",
+      "name": "Cutting Corners",
       "row": 2,
-      "expCost": 500,
-      "requirements": "Gogglehead, Courage rank 4",
-      "description": "While your Digimon has an active focus target from Gogglehead, they also gain +2 to all attack rolls against that target. The bonus does not apply to any other target. You have one goal. That is enough."
+      "expCost": 400,
+      "requirements": "Courage rank 4+",
+      "description": "Reckless now costs 3 Hope instead of 6."
     },
     {
-      "name": "I Won't Give Up",
+      "name": "Brace for Impact",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Courage rank 4+",
+      "description": "Once per round, declared before your attack roll: if your Digimon is targeted by an attack this round, your Digimon's attack gains 1d8 to its damage, and the damage you take from that attack is reduced by 1d12, down to as low as 0."
+    },
+    {
+      "name": "No Brakes",
       "row": 3,
-      "expCost": 700,
-      "requirements": "Sheer Stubbornness, Courage rank 5",
-      "description": "Once per session when your Digimon is reduced to 0 HP at Default Stage and would trigger the cascade, you may spend 8 Hope to refuse it. Your Digimon stays at 1 HP at their current Default Stage. Their Default Stage does not drop. They are still here. They are always still here."
+      "expCost": 800,
+      "requirements": "Courage rank 6+",
+      "description": "Reckless's bonus die now applies to your damage rolls as well as your hit rolls. If your attack misses, enemies do not gain the bonus from Reckless this round."
     },
     {
-      "name": "One More Round",
+      "name": "Overtime",
       "row": 3,
-      "expCost": 700,
-      "requirements": "Tunnel Vision, Courage rank 5",
-      "description": "Once per encounter at the start of your turn, if your Digimon took damage last round, they gain temporary HP equal to your Courage rank. This happens automatically — you do not need to declare it. Getting hit just makes them more determined."
-    },
-    {
-      "name": "Unstoppable",
-      "row": 4,
-      "expCost": 1000,
-      "requirements": "Both Row 3 abilities, Courage rank 7",
-      "description": "Once per session you may declare Unstoppable at the start of your turn. For the rest of this round your Digimon cannot be reduced below 1 HP by any attack, cannot be affected by any status effect, and their attacks cannot miss — every attack roll is treated as a hit regardless of the result. Natural 1s still deal no damage but the attack connects. One round. Absolute. Nothing stops them."
+      "expCost": 750,
+      "requirements": "Courage rank 6+",
+      "description": "Whenever your Digimon undergoes a timed digivolution, such as a DNA Digivolution or an Item Digivolution, that digivolution lasts 2 additional rounds beyond its normal duration."
     }
   ]
 }

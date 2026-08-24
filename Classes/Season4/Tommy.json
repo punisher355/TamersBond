@@ -2,57 +2,48 @@
   "name": "Tommy",
   "season": 4,
   "img": "Tommy.webp",
-  "crest": "Love",
-  "entryRequirement": "Love rank 3",
   "abilities": [
     {
-      "name": "Looked After",
+      "name": "Brace Up",
       "row": 1,
       "expCost": 300,
-      "requirements": "Entry requirement met (Love rank 3+)",
-      "description": "At the start of each encounter your partner Digimon gains temporary HP equal to your Love rank."
+      "requirements": "Sincerity rank 3+",
+      "description": "Once per round, when you or your partner Digimon takes damage, you may spend 6 Hope to make a Reinforce check against DN 10. If you succeed, reduce that damage by the amount you rolled."
     },
     {
-      "name": "Quiet Determination",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Love rank 3+)",
-      "description": "Once per encounter when your partner Digimon takes damage, they gain +1 to all attack rolls for the rest of this round. It stacks up to +3."
-    },
-    {
-      "name": "I Can Do This",
+      "name": "Efficient Resolve",
       "row": 2,
-      "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Love rank 4",
-      "description": "Once per encounter when your partner Digimon's HP drops below half their maximum for their current stage, they gain +2 to all damage rolls for the rest of the encounter."
+      "expCost": 450,
+      "requirements": "Sincerity rank 4+",
+      "description": "Brace Up's Hope cost decreases from 6 to 2."
     },
     {
-      "name": "Protect Them Back",
+      "name": "Iron Will",
       "row": 2,
-      "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Love rank 4",
-      "description": "Once per encounter when an enemy Digimon adjacent to your partner Digimon initiates a grapple against an allied Digimon, you may force that grapple to target your partner Digimon instead."
+      "expCost": 450,
+      "requirements": "Sincerity rank 4+",
+      "description": "Brace Up now reduces damage by double the amount you rolled."
     },
     {
-      "name": "Growing Up",
+      "name": "Deep Breath",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Sincerity rank 4+",
+      "description": "You may spend 4 Hope to add 1d8 to your next roll."
+    },
+    {
+      "name": "Unshakeable",
       "row": 3,
-      "expCost": 700,
-      "requirements": "I Can Do This, Looked After, Love rank 5",
-      "description": "Once per session at the start of an encounter, your partner Digimon's temporary HP from Looked After is doubled."
+      "expCost": 750,
+      "requirements": "Sincerity rank 6+",
+      "description": "Brace Up is no longer limited to once per round. You may use it as often as you like."
     },
     {
-      "name": "Steady Resolve",
+      "name": "I've Got You",
       "row": 3,
-      "expCost": 700,
-      "requirements": "Protect Them Back, Love rank 5",
-      "description": "Once per encounter when your partner Digimon is targeted by a grapple, your partner Digimon gains +3 to their grapple resistance check."
-    },
-    {
-      "name": "Not a Kid Anymore",
-      "row": 4,
-      "expCost": 1000,
-      "requirements": "Both Row 3 abilities, Love rank 7",
-      "description": "Once per session as a Free Action on your turn, you may spend any amount of your own HP — leaving yourself at a minimum of 1 HP — to grant that same amount as temporary HP to yourself, your partner Digimon, and all allied Digimon currently on the field."
+      "expCost": 800,
+      "requirements": "Sincerity rank 6+",
+      "description": "When an allied Tamer fails a Sincerity skill check, you may spend 6 Hope to let them pass that check instead."
     }
   ]
 }

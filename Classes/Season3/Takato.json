@@ -4,39 +4,46 @@
   "img": "Takato.webp",
   "abilities": [
     {
-      "name": "Drawing Strength",
+      "name": "Card Slash",
       "row": 1,
       "expCost": 300,
-      "requirements": "Entry requirement met (Courage rank 3+)",
-      "description": "Once per session during a short rest, you may describe your Digimon performing a new technique you imagined for them. Until the next long rest your Digimon gains access to one additional move from their pool as a fifth active slot — it does not replace their signature move or any of their three learned moves. The move must be one your Digimon has access to at their current stage."
+      "requirements": "Courage rank 3+",
+      "description": "Once per round, when you play a card: pay 2 Hope. Your partner Digimon gains +2 to the hit roll of their next attack. This bonus expires at the start of your next turn if it hasn't been used yet."
     },
     {
-      "name": "Never Give Up",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Courage rank 3+)",
-      "description": "Once per encounter when your Digimon would fail an attack roll by 3 or less — falling just short of the hit threshold — the attack grazes. A graze deals half normal damage, bypasses no defences, and triggers no additional effects."
-    },
-    {
-      "name": "Gogglehead's Resolve",
+      "name": "Higher Draw",
       "row": 2,
-      "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Courage rank 4",
-      "description": "When your Digimon is at half HP or below they deal +3 bonus damage on all attacks."
+      "expCost": 450,
+      "requirements": "Courage rank 4+",
+      "description": "Card Slash's bonus changes from a flat +2 to 1d8 instead. Roll it fresh every time you play a card."
     },
     {
-      "name": "Partner's Glow",
+      "name": "Free Draw",
       "row": 2,
-      "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Courage rank 4",
-      "description": "At the start of each of your turns, if your Digimon is digivolved above their Default Stage, you may spend 2 Hope to grant them +2 to their next attack roll AND +2 damage on that attack."
+      "expCost": 400,
+      "requirements": "Courage rank 4+",
+      "description": "Card Slash now costs 0 Hope to play."
     },
     {
-      "name": "Biomerge Ready",
+      "name": "Close Enough",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Courage rank 4+",
+      "description": "Once per encounter, when your partner Digimon's hit roll misses the target number by 3 or less, the attack grazes instead of missing outright. A graze deals half normal damage, bypasses no defenses, and triggers no additional effects from the move's tags."
+    },
+    {
+      "name": "Full Deck",
       "row": 3,
-      "expCost": 800,
-      "requirements": "Both Row 2 abilities, Courage rank 6",
-      "description": "Your Tamer may now participate in Biomerge Digivolution. See Part 2: Rules for full details. Additionally, when you initiate Biomerge, the corruption check gains +2 to the roll."
+      "expCost": 750,
+      "requirements": "Courage rank 6+",
+      "description": "Whenever you play Card Slash yourself, its bonus applies to both the hit roll and the damage roll, and it now benefits every allied Digimon, not just your own partner. This only triggers off your own use of Card Slash; an allied Tamer playing a card of their own does not trigger this bonus."
+    },
+    {
+      "name": "I Made You",
+      "row": 3,
+      "expCost": 900,
+      "requirements": "Courage rank 7+",
+      "description": "Choose one Champion or Ultimate stage Digimon that doesn't require any special condition to digivolve into. Your partner Digimon can now digivolve into that chosen Digimon from any Digimon of the previous stage, even if there's normally no evolutionary link between them at all."
     }
   ]
 }

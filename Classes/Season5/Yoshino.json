@@ -2,57 +2,48 @@
   "name": "Yoshino",
   "season": 5,
   "img": "Yoshino.webp",
-  "crest": "Love",
-  "entryRequirement": "Love rank 3",
   "abilities": [
     {
-      "name": "Cover",
+      "name": "Guardian's Answer",
       "row": 1,
       "expCost": 300,
-      "requirements": "Entry requirement met (Love rank 3+)",
-      "description": "Once per encounter when an allied Tamer or Digimon is hit by an attack, the Tamer with this class may use their Free Action off-turn to reduce the damage dealt by their Love rank."
+      "requirements": "Reliability rank 3+",
+      "description": "Once per round, when an allied Tamer or Digimon within 5 spaces of your partner Digimon is hit by an attack, you may spend 2 Hope to have your partner Digimon use a Free Action to hit back with a Basic Attack against whoever just attacked them."
     },
     {
-      "name": "Open the Door",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Love rank 3+)",
-      "description": "Once per round on the Tamer's turn, one allied Tamer of their choice may immediately take a Free Action as if it were their own turn. This does not consume that ally's Free Action for the round."
+      "name": "Full Answer",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Reliability rank 4+",
+      "description": "When your partner Digimon retaliates with Guardian's Answer, they may use their signature move or any move from their move pool instead of their Basic Attack."
     },
     {
-      "name": "Cover II",
+      "name": "All In",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Reliability rank 4+",
+      "description": "When your partner Digimon retaliates with Guardian's Answer, you may spend Hope to boost that attack's hit roll. Every 1 Hope spent grants +2 to the hit roll, up to a maximum of 5 Hope spent for +10."
+    },
+    {
+      "name": "Back in It",
       "row": 2,
       "expCost": 500,
-      "requirements": "Cover, Love rank 4",
-      "description": "Cover may now be used twice per encounter instead of once."
+      "requirements": "Reliability rank 5+",
+      "description": "Once per encounter, when an allied Tamer or Digimon has been removed from the encounter, whether they dropped to 0 HP or chose to submit, you may spend your Basic Action to make a Recovery check. That ally immediately returns to the fight with HP equal to the result of your check."
     },
     {
-      "name": "Not Yet",
-      "row": 2,
-      "expCost": 500,
-      "requirements": "Open the Door, Love rank 4",
-      "description": "Once per encounter when an enemy declares an attack against an allied Tamer, the Tamer with this class may use Open the Door off-turn to give that allied Tamer a Free Action before the attack resolves."
-    },
-    {
-      "name": "Shut Down",
+      "name": "Never Stops",
       "row": 3,
-      "expCost": 700,
-      "requirements": "Cover II, Love rank 5",
-      "description": "When the Tamer with this class uses Cover, the attacker loses their Move Action on their next turn."
+      "expCost": 900,
+      "requirements": "Reliability rank 6+",
+      "description": "Guardian's Answer no longer costs a Free Action, and it's no longer limited to once per round. Your partner Digimon can retaliate every single time an ally within range is hit, as many times as it happens."
     },
     {
-      "name": "Any Time",
+      "name": "Share the Load",
       "row": 3,
-      "expCost": 700,
-      "requirements": "Not Yet, Love rank 5",
-      "description": "Open the Door can now be used off-turn as a Free Action — not just on the Tamer's own turn. Once per round regardless of whose turn it is."
-    },
-    {
-      "name": "All of It",
-      "row": 4,
-      "expCost": 1000,
-      "requirements": "Both Row 3 abilities, Love rank 7",
-      "description": "Once per session the Tamer with this class may give up their entire turn. Two allied Tamers of their choice each immediately take a full bonus turn with all of their normal actions available. These bonus turns resolve one at a time in the order the Tamer with this class chooses. The Tamer with this class takes no actions this round."
+      "expCost": 900,
+      "requirements": "Reliability rank 6+",
+      "description": "As a Free Action, you may decrease up to 3 of your own Crest Stats by 1 each. For every stat you decrease this way, choose one allied Tamer and increase that same Crest Stat by 1 for them. These changes last until you undo them. As a Free Action at any time, you may undo Share the Load entirely, immediately restoring your own Crest Stats and removing the bonus from every ally who received one."
     }
   ]
 }

@@ -6,37 +6,44 @@
     {
       "name": "Lead From the Front",
       "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Courage rank 3+)",
-      "description": "Once per encounter you may use Call Out as a Free Action on another character's turn, not just your own. Your voice carries even when it is not your moment."
-    },
-    {
-      "name": "Reckless Push",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Courage rank 3+)",
-      "description": "When you force a digivolution and the roll succeeds, your Digimon gains +3 to their next attack roll this round. Living dangerously pays off."
+      "expCost": 200,
+      "requirements": "Courage rank 2+",
+      "description": "You may use Call Out on an allied Digimon instead of your own partner. When you do, that Digimon gains the normal bonus from Call Out to their next attack this round. Lead From the Front still uses your Free Action, just like a normal use of Call Out. This does not replace or prevent you from using Call Out on your own Digimon; you may still use Call Out normally on your partner, and all bonuses that apply when using Lead From the Front also apply when using Call Out."
     },
     {
       "name": "Burning Courage",
       "row": 2,
       "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Courage rank 4",
-      "description": "When your Digimon is digivolved above their Default Stage, they deal +2 bonus damage on every attack. The higher the risk, the harder they hit."
+      "requirements": "Courage rank 3+",
+      "description": "Once per round, you may use Lead From the Front as its own action. This use does not use your Free Action, allowing you to use Lead From the Front twice on the same Digimon in a single round: once normally by spending your Free Action, and once using Lead From the Front as its own action."
+    },
+    {
+      "name": "Constant Call",
+      "row": 2,
+      "expCost": 400,
+      "requirements": "Courage rank 3+",
+      "description": "Whenever you use Call Out, the Digimon benefiting from it adds your Courage rank to the attack roll instead of the normal +1 bonus."
     },
     {
       "name": "No Retreat",
       "row": 2,
       "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Courage rank 4",
-      "description": "When your Digimon hits 0 HP above Default Stage, before the cascade triggers you may spend 5 Hope to keep them at 1 HP and maintain their current stage until the end of this round. They are still in the fight."
+      "requirements": "Courage rank 4+",
+      "description": "When your Digimon hits 0 HP while above Default Stage, before the cascade triggers you may spend 5 Hope to keep them at 1 HP and hold their current stage until the end of the round."
     },
     {
       "name": "Push the Limit",
       "row": 3,
       "expCost": 800,
-      "requirements": "Both Row 2 abilities, Courage rank 6",
-      "description": "Your Digimon may now digivolve up to 3 stages above Default Stage instead of the normal 2 stage maximum. The Hope costs and corruption rules still apply. Some limits were made to be broken."
+      "requirements": "Courage rank 6+",
+      "description": "Your Digimon may digivolve up to 3 stages above Default Stage instead of the normal 2 stage maximum. The Hope costs and corruption rules still apply."
+    },
+    {
+      "name": "Rally the Team",
+      "row": 3,
+      "expCost": 700,
+      "requirements": "Courage rank 6+",
+      "description": "When you use Lead From the Front, you may choose up to 3 allied Digimon instead of one."
     }
   ]
 }

@@ -1,0 +1,49 @@
+{
+  "name": "Keenan",
+  "season": 5,
+  "img": "Keenan.webp",
+  "abilities": [
+    {
+      "name": "Pack Instinct",
+      "row": 1,
+      "expCost": 300,
+      "requirements": "Friendship rank 3+",
+      "description": "While you're within 2 spaces of your partner Digimon, their attacks deal an additional 1d4 damage."
+    },
+    {
+      "name": "Harder Bite",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Friendship rank 4+",
+      "description": "Pack Instinct's bonus damage die increases from 1d4 to 1d8."
+    },
+    {
+      "name": "Wider Range",
+      "row": 2,
+      "expCost": 450,
+      "requirements": "Friendship rank 4+",
+      "description": "Pack Instinct's range increases from 2 spaces to 6 spaces."
+    },
+    {
+      "name": "Pounce First",
+      "row": 2,
+      "expCost": 500,
+      "requirements": "Friendship rank 4+",
+      "description": "Once per encounter, when an enemy within range of your partner Digimon declares an attack against a target other than your partner Digimon, you may spend 4 Hope to have your partner Digimon make an attack as a Free Action against that enemy before their attack resolves."
+    },
+    {
+      "name": "One Pack",
+      "row": 3,
+      "expCost": 900,
+      "requirements": "Friendship rank 6+",
+      "description": "Pack Instinct's bonus damage now applies to every allied Digimon within range, not just your partner. This entire class runs on being near your partner Digimon; if you're playing with the Spirit Tamer rule, Keenan has no separate partner Digimon to stand next to since he is the Digimon, so he's not able to take this class."
+    },
+    {
+      "name": "One of Us",
+      "row": 3,
+      "expCost": 900,
+      "requirements": "Friendship rank 6+",
+      "description": "Once between rests, you may make a Rally check against a wild Digimon, DN 12. On a success, that Digimon fights alongside you for one round, and you gain control of them for that round. You cannot make them take any action that would harm themselves, and you cannot make them act against their core nature, such as forcing them to attack a Digimon they care about."
+    }
+  ]
+}

@@ -4,53 +4,46 @@
   "img": "Joe.webp",
   "abilities": [
     {
-      "name": "Always Prepared",
+      "name": "Steady Hands",
       "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Reliability rank 3+)",
-      "description": "At the start of each session you may declare one Supply your character happened to pack. The GM must approve it — no rare Digital World items or major combat advantages. Simple supplies only: bandages, rope, a map, a Digi-Ration. Must be used this session; cannot be carried forward."
+      "expCost": 250,
+      "requirements": "Reliability rank 2+",
+      "description": "Once between rests, you may make a Recovery check. Choose one Digimon or Tamer; they heal HP equal to the result of that check."
     },
     {
-      "name": "Field Dressing",
-      "row": 1,
-      "expCost": 300,
-      "requirements": "Entry requirement met (Reliability rank 3+)",
-      "description": "Once per encounter as your Basic Action, make a Recovery check DN 10. On a success restore HP to any one target equal to your Recovery roll result. This can be used on Digimon."
+      "name": "Extra Dose",
+      "row": 2,
+      "expCost": 400,
+      "requirements": "Reliability rank 4+",
+      "description": "Steady Hands' healing also gets +1d8 added to the roll."
     },
     {
-      "name": "Calculated Risk",
+      "name": "Double Charge",
+      "row": 2,
+      "expCost": 400,
+      "requirements": "Reliability rank 4+",
+      "description": "Your equipped Gadget's uses are doubled before it needs to refresh at a rest."
+    },
+    {
+      "name": "Making the Rounds",
       "row": 2,
       "expCost": 500,
-      "requirements": "At least 1 Row 1 ability, Reliability rank 4",
-      "description": "Once per encounter before any roll is made, you may declare Calculated Risk. Spend 2 Hope and take -2 to the roll — if you succeed the effect is doubled (double healing, double status duration, double damage)."
+      "requirements": "Reliability rank 4+",
+      "description": "Steady Hands is no longer limited to one use between rests total. Instead, you may use it once on each Digimon or Tamer between rests, rather than just once overall."
     },
     {
-      "name": "Triage",
-      "row": 2,
-      "expCost": 500,
-      "requirements": "Field Dressing, Reliability rank 4",
-      "description": "Field Dressing can now target two characters in the same action. Split the healing however you choose between the two targets."
+      "name": "Just In Case",
+      "row": 3,
+      "expCost": 600,
+      "requirements": "Reliability rank 6+",
+      "description": "Once between rests, as your Basic Action, declare that you happen to have one Supply item on hand that you hadn't listed before. You must use it immediately, as though you'd been carrying it the whole time."
     },
     {
-      "name": "Emergency Protocol",
+      "name": "Better Safe Than Sorry",
       "row": 3,
       "expCost": 700,
-      "requirements": "Triage, Reliability rank 5",
-      "description": "Once per session when any allied Digimon triggers the cascade, you may immediately make a Recovery check DN 14 as a Free Action off-turn. On a success that Digimon stabilizes one stage higher than the cascade result."
-    },
-    {
-      "name": "Steady the Line",
-      "row": 3,
-      "expCost": 700,
-      "requirements": "At least 1 Row 2 ability, Reliability rank 5",
-      "description": "At the start of each encounter before turns begin, you may spend your Free Action to grant all allied Digimon temporary HP equal to your Reliability rank."
-    },
-    {
-      "name": "The Backup Plan",
-      "row": 4,
-      "expCost": 1000,
-      "requirements": "Both Row 3 abilities, Reliability rank 7",
-      "description": "Once per session when the encounter looks lost — all allied Digimon at Default Stage or below, or two or more in egg state — you may activate The Backup Plan as a Free Action. All egg-state Digimon return at In-Training with 1 HP. All Digimon at In-Training or Rookie gain 10 temporary HP."
+      "requirements": "Reliability rank 6+",
+      "description": "When Steady Hands restores more HP than the target can recover, the excess becomes Temporary HP instead of being wasted. If the target is already at maximum HP, the entire amount restored by Steady Hands becomes Temporary HP."
     }
   ]
 }
