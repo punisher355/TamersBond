@@ -78,7 +78,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
           example:     example     ?? "",
           rank,
           maxRank,
-          rollFormula:  `${rank}d6+${statRank}`,
+          rollFormula:  `${rank}d6`,
           upgradeCost,
           canUpgrade:   rank < maxRank && upgradeCost !== null && available >= upgradeCost,
           canDowngrade: rank > 1,
@@ -953,17 +953,14 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     const { stat, skill, label } = ev.currentTarget.dataset;
     const D             = CONFIG.DIGIMON;
     const crest         = this.actor.system.crests[stat] ?? {};
-    const statRank      = crest.rank         ?? 1;
-    const statMod       = (crest.modifier    ?? 0) + (crest.autoModifier ?? 0);
     const gearStatBonus = crest.gearBonus    ?? 0;
     const skillRank     = this.actor.system.skills?.[stat]?.[skill]?.rank ?? 1;
     const gearSkillBonus = this.actor.system.gearSkillBonuses?.[skill] ?? 0;
-    const baseFlat      = statRank + statMod + gearStatBonus + gearSkillBonus;
+    const baseFlat      = gearStatBonus + gearSkillBonus;
 
     // Build preview formula string for the dialog
-    let previewParts = [`${skillRank}d6`, `${statRank} ${D.statLabels[stat]}`];
-    if (statMod       !== 0) previewParts.push(`${statMod > 0 ? "+" : ""}${statMod} crest buff`);
-    if (gearStatBonus !== 0) previewParts.push(`${gearStatBonus > 0 ? "+" : ""}${gearStatBonus} from equipped item`);
+    let previewParts = [`${skillRank}d6`];
+    if (gearStatBonus  !== 0) previewParts.push(`${gearStatBonus > 0 ? "+" : ""}${gearStatBonus} from equipped item`);
     if (gearSkillBonus !== 0) previewParts.push(`${gearSkillBonus > 0 ? "+" : ""}${gearSkillBonus} from equipped item`);
     const preview = previewParts.join(" + ");
 
@@ -1022,11 +1019,10 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     // Sum all named modifiers
     const extraFlat  = input.mods.reduce((sum, m) => sum + m.value, 0);
     const totalFlat  = baseFlat + extraFlat;
-    const formula    = `${skillRank}d6 + ${totalFlat}`;
+    const formula    = totalFlat !== 0 ? `${skillRank}d6 + ${totalFlat}` : `${skillRank}d6`;
 
     // Build the chat flavor — one line per named modifier
     const modLines = [];
-    if (statMod        !== 0) modLines.push(`${statMod > 0 ? "+" : ""}${statMod} crest buff`);
     if (gearStatBonus  !== 0) modLines.push(`${gearStatBonus > 0 ? "+" : ""}${gearStatBonus} stat (item)`);
     if (gearSkillBonus !== 0) modLines.push(`${gearSkillBonus > 0 ? "+" : ""}${gearSkillBonus} skill (item)`);
     for (const m of input.mods) {
@@ -1035,7 +1031,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       modLines.push(`${sign}${m.value}${m.reason ? ` — ${m.reason}` : ""}`);
     }
 
-    let flavor = `<strong>${label}</strong> &nbsp;${skillRank}d6 + ${statRank} ${D.statLabels[stat]}`;
+    let flavor = `<strong>${label}</strong> &nbsp;${skillRank}d6`;
     if (modLines.length) {
       flavor += `<br><span class="roll-mods">${modLines.join(" &nbsp;|&nbsp; ")}</span>`;
     }

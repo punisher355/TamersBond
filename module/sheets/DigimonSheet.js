@@ -122,7 +122,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
       const skillDefs = D.skills[statKey] ?? [];
       const skills = skillDefs.map(({ key, label, description, example }) => {
-        const rank = system.skills?.[statKey]?.[key]?.rank ?? 1;
+        const rank = tamer?.system?.skills?.[statKey]?.[key]?.rank ?? 1;
         return {
           key,
           label,
@@ -130,7 +130,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
           example:     example     ?? "",
           rank,
           rollBonus,
-          rollFormula: `${rank}d6+${rollBonus}`
+          rollFormula: `${rank}d6`
         };
       });
 
@@ -565,14 +565,9 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     const D         = CONFIG.DIGIMON;
     const system    = this.actor.system;
     const tamer     = system.tamerLink ? game.actors?.get(system.tamerLink) : null;
-    const skillRank = system.skills?.[stat]?.[skill]?.rank ?? 1;
-    const tamerCrests = tamer?.system?.crests ?? {};
-    const s  = system.stats[stat] ?? {};
-    const tc = tamerCrests[stat] ?? {};
-    const tb = (tc.rank ?? 0) + (tc.modifier ?? 0) + (tc.autoModifier ?? 0) + (tc.gearBonus ?? 0);
-    const rollBonus = (s.base ?? 0) + tb + (s.invested ?? 0) + (s.conditional ?? 0);
+    const skillRank = tamer?.system?.skills?.[stat]?.[skill]?.rank ?? 1;
 
-    const preview = `${skillRank}d6 + ${rollBonus} (${D.statLabels[stat]} total)`;
+    const preview = `${skillRank}d6`;
 
     const modRowHtml = () => `
       <div class="modifier-row flexrow">
@@ -623,7 +618,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     if (!input) return;
 
     const extraFlat = input.mods.reduce((sum, m) => sum + m.value, 0);
-    const formula   = `${skillRank}d6 + ${rollBonus + extraFlat}`;
+    const formula   = extraFlat !== 0 ? `${skillRank}d6 + ${extraFlat}` : `${skillRank}d6`;
 
     const modLines = [];
     for (const m of input.mods) {
@@ -631,9 +626,8 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       modLines.push(`${m.value >= 0 ? "+" : ""}${m.value}${m.reason ? ` — ${m.reason}` : ""}`);
     }
 
-    let flavor = `<strong>${label}</strong> &nbsp;${skillRank}d6 + ${rollBonus} ${D.statLabels[stat]}`;
+    let flavor = `<strong>${label}</strong> &nbsp;${skillRank}d6`;
     if (modLines.length) flavor += `<br><span class="roll-mods">${modLines.join(" &nbsp;|&nbsp; ")}</span>`;
-    if (!tamer) flavor += `<br><em class="roll-mods">No Tamer linked — tamer bonus is 0</em>`;
 
     const roll = await new Roll(formula).evaluate();
     await roll.toMessage({

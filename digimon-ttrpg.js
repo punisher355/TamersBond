@@ -205,6 +205,14 @@ Hooks.on("updateActor", async (actor, changes) => {
   }
 });
 
+// Re-render open Digimon sheets when their linked Tamer changes
+Hooks.on("updateActor", (actor) => {
+  if (actor.type !== "tamer") return;
+  for (const digimon of game.actors.filter(a => a.type === "digimon" && a.system.tamerLink === actor.id)) {
+    if (digimon.sheet?.rendered) digimon.sheet.render();
+  }
+});
+
 // Expose lookups on game object so they're callable from macros
 Hooks.once("ready", () => {
   game.digitalDestiny = { lookup: DigimonLookup, classLookup: ClassLookup, itemLookup: ItemLookup };
