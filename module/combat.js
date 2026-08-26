@@ -27,6 +27,23 @@ export function getActorStatTotals(actor) {
     }
     return out;
   }
+  if (actor.type === "spiritTamer") {
+    const out = {};
+    if (sys.isTamerForm) {
+      // Tamer form — fight with crest stats (same as regular Tamer)
+      for (const key of CREST_ORDER) {
+        const c  = sys.crests[key] ?? {};
+        out[key] = (c.rank ?? 1) + (c.modifier ?? 0) + (c.autoModifier ?? 0) + (c.gearBonus ?? 0);
+      }
+    } else {
+      // Digimon form — fight with digiStats
+      for (const key of CREST_ORDER) {
+        const ds = sys.digiStats?.[key] ?? {};
+        out[key] = ds.total ?? 0;
+      }
+    }
+    return out;
+  }
   return null;
 }
 
@@ -118,6 +135,11 @@ function _gmTargetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags
           <button class="dd-mult-btn${a(1)}"   data-mult="1"   data-mult-type="attr">×1 None</button>
           <button class="dd-mult-btn${a(2)}"   data-mult="2"   data-mult-type="attr">×2 Advantage</button>
           <button class="dd-mult-btn${a(0.5)}" data-mult="0.5" data-mult-type="attr">×0.5 Disadv.</button>
+        </div>
+        <div class="dd-mult-row">
+          <span class="dd-mult-label">Overall</span>
+          <button class="dd-mult-btn active" data-mult="1" data-mult-type="overall">×1</button>
+          <button class="dd-mult-btn" data-mult="2" data-mult-type="overall">×2</button>
         </div>
         <div class="dd-final-row">
           <span>Final: <strong class="dd-final-value">${initFinal}</strong> damage</span>
@@ -347,7 +369,8 @@ async function _applyStatus(target, type, x, y, sourceName) {
   }
   const xVal = parseInt(x)||0, yVal = parseInt(y)||0;
   const nameMap = { burn:`Burn ${xVal},${yVal}`, freeze:"Freeze", paralyze:`Paralyze ${xVal}`, blind:"Blind", confuse:"Confuse", drain:"Drain", push:"Push", regen:`Regen ${xVal}` };
-  await target.createEmbeddedDocuments("Item", [{ name: nameMap[type] ?? "Status", type:"status", img:"icons/svg/aura.svg", system:{ statusType:type, x:xVal, y:yVal, source:sourceName??""} }]);
+  const created = await target.createEmbeddedDocuments("Item", [{ name: nameMap[type] ?? "Status", type:"status", img:"icons/svg/aura.svg", system:{ statusType:type, x:xVal, y:yVal, source:sourceName??""} }]);
+  return created[0]?.id ?? null;
 }
 
 // ── Start-of-turn helpers ─────────────────────────────────────────────────────
@@ -367,6 +390,56 @@ function _findActor(actorId) {
 
 export function registerCombatHooks() {
 
+  // --- Acted-this-round tracking ---
+  Hooks.on("updateCombat", async (combat, change) => {
+    if (!game.user.isGM) return;
+    if ((combat.round ?? 0) < 1) return;
+
+    if (change.round !== undefined) {
+      // New round — clear every combatant's hasActed flag
+      const updates = combat.combatants.contents.map(c => ({
+        _id: c.id, "flags.digital-destiny.hasActed": false
+      }));
+      if (updates.length) await combat.updateEmbeddedDocuments("Combatant", updates);
+      return;
+    }
+
+    if (change.turn !== undefined) {
+      const prevId = combat.previous?.combatantId;
+      if (prevId) {
+        const prev = combat.combatants.get(prevId);
+        if (prev) await prev.setFlag("digital-destiny", "hasActed", true);
+      }
+    }
+  });
+
+  // --- Inject acted-this-round toggle into each combatant row's controls ---
+  Hooks.on("renderCombatTracker", (_app, html) => {
+    const $html = $(html);
+    const combat = game.combat;
+    if (!combat) return;
+
+    $html.find("li.combatant").each(function() {
+      const $row      = $(this);
+      const cid       = $row.attr("data-combatant-id");
+      if (!cid) return;
+      const combatant = combat.combatants.get(cid);
+      if (!combatant) return;
+
+      const acted  = !!combatant.getFlag("digital-destiny", "hasActed");
+      const $ctrl  = $row.find(".combatant-controls");
+      if (!$ctrl.length || $ctrl.find(".dd-acted-btn").length) return;
+
+      const $btn = $(`<a class="combatant-control dd-acted-btn${acted ? " dd-acted-on" : ""}" title="${acted ? "Acted this round — click to clear" : "Mark as acted this round"}"><i class="fas fa-check"></i></a>`);
+      $btn.on("click", async ev => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        await combatant.setFlag("digital-destiny", "hasActed", !acted);
+      });
+      $ctrl.prepend($btn);
+    });
+  });
+
   // --- Start-of-turn chat card ---
   Hooks.on("updateCombat", async (combat, change) => {
     if (!game.user.isGM) return;
@@ -379,8 +452,8 @@ export function registerCombatHooks() {
 
     const effects = [];
 
-    // Hope — private GM whisper each tamer turn
-    if (actor.type === "tamer") {
+    // Hope — private GM whisper each tamer / spirit-tamer turn
+    if (actor.type === "tamer" || actor.type === "spiritTamer") {
       const perTurn    = actor.system?.crests?.hope?.perTurn ?? 0;
       const current    = actor.system?.crests?.hope?.current ?? 0;
       const afterDeduct = Math.max(0, current - perTurn);
@@ -592,6 +665,39 @@ export function registerCombatHooks() {
 
   Hooks.on("renderChatMessageHTML", (_msg, html) => {
     const $html = $(html);
+    if (!$html.find(".dd-undo-card").length) return;
+
+    $html.find(".dd-undo-btn").on("click", async ev => {
+      if (!game.user.isGM) return;
+      const btn = $(ev.currentTarget);
+      if (btn.prop("disabled")) return;
+
+      const targetId    = btn.data("target-id");
+      const targetName  = btn.data("target-name");
+      const prevHp      = parseInt(btn.attr("data-prev-hp"));
+      const statusIds   = JSON.parse(btn.attr("data-status-ids") || "[]");
+      const drainSrcId  = btn.attr("data-drain-source-id");
+      const drainPrevHp = parseInt(btn.attr("data-drain-prev-hp")) || 0;
+
+      const target = _findActor(targetId);
+      if (!target) { ui.notifications.warn(`Actor "${targetName}" not found.`); return; }
+
+      await target.update({ "system.hp.value": prevHp });
+      for (const sid of statusIds) {
+        const item = target.items.get(sid);
+        if (item) await item.delete();
+      }
+      if (drainSrcId) {
+        const src = _findActor(drainSrcId);
+        if (src && drainPrevHp > 0) await src.update({ "system.hp.value": drainPrevHp });
+      }
+
+      btn.text("✓ Undone").prop("disabled", true).addClass("dd-applied");
+    });
+  });
+
+  Hooks.on("renderChatMessageHTML", (_msg, html) => {
+    const $html = $(html);
     if (!$html.find(".dd-attack-card").length) return;
 
     $html.find(".dd-mult-btn").on("click", ev => {
@@ -601,12 +707,13 @@ export function registerCombatHooks() {
       section.find(`.dd-mult-btn[data-mult-type="${type}"]`).removeClass("active");
       btn.addClass("active");
 
-      const rawDmg = parseInt(section.data("raw-dmg")) || 0;
-      const love   = parseInt(section.data("love"))    || 0;
-      const isCrit = String(section.data("is-crit")) === "true";
-      const elem   = parseFloat(section.find('.dd-mult-btn[data-mult-type="elem"].active').data("mult")) || 1;
-      const attr   = parseFloat(section.find('.dd-mult-btn[data-mult-type="attr"].active').data("mult")) || 1;
-      section.find(".dd-final-value").text(_calcFinal(rawDmg, love, elem, attr, isCrit));
+      const rawDmg  = parseInt(section.data("raw-dmg")) || 0;
+      const love    = parseInt(section.data("love"))    || 0;
+      const isCrit  = String(section.data("is-crit")) === "true";
+      const elem    = parseFloat(section.find('.dd-mult-btn[data-mult-type="elem"].active').data("mult"))    || 1;
+      const attr    = parseFloat(section.find('.dd-mult-btn[data-mult-type="attr"].active').data("mult"))    || 1;
+      const overall = parseFloat(section.find('.dd-mult-btn[data-mult-type="overall"].active').data("mult")) || 1;
+      section.find(".dd-final-value").text(Math.round(_calcFinal(rawDmg, love, elem, attr, isCrit) * overall));
     });
 
     $html.find(".dd-apply-btn").on("click", async ev => {
@@ -624,21 +731,29 @@ export function registerCombatHooks() {
       const newHp  = Math.max(0, prevHp - damage);
       await target.update({ "system.hp.value": newHp });
 
-      const sourceId   = btn.data("source-id");
-      const sourceName = btn.data("source-name");
+      const sourceId     = btn.data("source-id");
+      const sourceName   = btn.data("source-name");
       const appliedNotes = [];
-      if (btn.data("has-burn"))     { await _applyStatus(target, "burn",     btn.data("burn-x"),     btn.data("burn-y"), sourceName); appliedNotes.push("Burn"); }
-      if (btn.data("has-freeze"))   { await _applyStatus(target, "freeze",   0, 0, sourceName); appliedNotes.push("Freeze"); }
-      if (btn.data("has-paralyze")) { await _applyStatus(target, "paralyze", btn.data("paralyze-x"), 0, sourceName); appliedNotes.push("Paralyze"); }
-      if (btn.data("has-blind"))    { await _applyStatus(target, "blind",    0, 0, sourceName); appliedNotes.push("Blind"); }
-      if (btn.data("has-confuse"))  { await _applyStatus(target, "confuse",  0, 0, sourceName); appliedNotes.push("Confuse"); }
-      if (btn.data("has-regen"))    { await _applyStatus(target, "regen",    btn.data("regen-x"), 0, sourceName); appliedNotes.push("Regen"); }
+      const newStatusIds = [];
+      const _track = async (id) => { if (id) newStatusIds.push(id); };
+
+      if (btn.data("has-burn"))     { await _track(await _applyStatus(target, "burn",     btn.data("burn-x"),     btn.data("burn-y"), sourceName)); appliedNotes.push("Burn"); }
+      if (btn.data("has-freeze"))   { await _track(await _applyStatus(target, "freeze",   0, 0, sourceName)); appliedNotes.push("Freeze"); }
+      if (btn.data("has-paralyze")) { await _track(await _applyStatus(target, "paralyze", btn.data("paralyze-x"), 0, sourceName)); appliedNotes.push("Paralyze"); }
+      if (btn.data("has-blind"))    { await _track(await _applyStatus(target, "blind",    0, 0, sourceName)); appliedNotes.push("Blind"); }
+      if (btn.data("has-confuse"))  { await _track(await _applyStatus(target, "confuse",  0, 0, sourceName)); appliedNotes.push("Confuse"); }
+      if (btn.data("has-regen"))    { await _track(await _applyStatus(target, "regen",    btn.data("regen-x"), 0, sourceName)); appliedNotes.push("Regen"); }
+
+      let drainSourceId = "";
+      let drainPrevHp   = 0;
       if (btn.data("has-drain") && sourceId && damage > 0) {
         const src = game.actors.get(sourceId);
         if (src) {
+          drainSourceId = sourceId;
+          drainPrevHp   = src.system.hp?.value ?? 0;
           const drainAmt = Math.max(1, Math.floor(damage / 2));
           const srcMax   = src.system.hp?.max ?? 99;
-          await src.update({ "system.hp.value": Math.min(srcMax, (src.system.hp?.value ?? 0) + drainAmt) });
+          await src.update({ "system.hp.value": Math.min(srcMax, drainPrevHp + drainAmt) });
           appliedNotes.push(`Drain +${drainAmt} to ${src.name}`);
         }
       }
@@ -648,6 +763,22 @@ export function registerCombatHooks() {
       section.find(".dd-applied-note")
         .html(`<em>${targetName}: ${prevHp} → ${newHp} HP (−${damage})</em>${statusStr}`)
         .show();
+
+      const gmIds = game.users.filter(u => u.isGM).map(u => u.id);
+      await ChatMessage.create({
+        whisper: gmIds,
+        content: `<div class="dd-chat-card dd-undo-card">
+          <h3 class="dd-chat-title dd-gm-label">Damage Applied — ${sourceName || "Unknown"} → ${targetName}</h3>
+          <p style="margin:4px 0; font-size:0.9em;"><em>${targetName}: ${prevHp} → ${newHp} HP (−${damage})</em>${statusStr}</p>
+          <button class="dd-undo-btn"
+            data-target-id="${targetId}"
+            data-target-name="${targetName}"
+            data-prev-hp="${prevHp}"
+            data-status-ids='${JSON.stringify(newStatusIds)}'
+            data-drain-source-id="${drainSourceId}"
+            data-drain-prev-hp="${drainPrevHp}">↩ Undo</button>
+        </div>`
+      });
     });
   });
 }

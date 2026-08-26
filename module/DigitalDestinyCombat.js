@@ -21,12 +21,14 @@ export class DigitalDestinyCombat extends Combat {
       const combatant = this.combatants.get(id);
       if (!combatant?.isOwner) continue;
 
-      const actor      = combatant.actor;
-      const stats      = actor ? getActorStatTotals(actor) : null;
-      const friendship = stats?.friendship ?? 0;
-      const isTamer    = actor?.type === "tamer";
-      const speed      = isTamer ? friendship * 2 : friendship;
-      const speedLabel = isTamer
+      const actor         = combatant.actor;
+      const stats         = actor ? getActorStatTotals(actor) : null;
+      const friendship    = stats?.friendship ?? 0;
+      const isTamer       = actor?.type === "tamer";
+      const isTamerForm   = actor?.type === "spiritTamer" && (actor.system?.isTamerForm ?? true);
+      const useDoubled    = isTamer || isTamerForm;
+      const speed         = useDoubled ? friendship * 2 : friendship;
+      const speedLabel    = useDoubled
         ? `Friendship × 2 (${friendship} × 2)`
         : `Friendship`;
 
@@ -73,5 +75,17 @@ export class DigitalDestinyCombat extends Combat {
     for (const msg of messages) await ChatMessage.create(msg);
     if (updateTurn) await this.update({ turn: 0 });
     return this;
+  }
+
+  async nextTurn() {
+    const startRound = this.round;
+    await super.nextTurn();
+    // Skip over combatants who have already acted this round
+    for (let guard = 0; guard < this.combatants.size; guard++) {
+      if (this.round !== startRound) break;
+      const current = this.combatant;
+      if (!current?.getFlag("digital-destiny", "hasActed")) break;
+      await super.nextTurn();
+    }
   }
 }

@@ -1,10 +1,12 @@
 import { DIGIMON }                  from "./module/config.js";
-import { TamerData, DigimonData }   from "./module/data/actor-models.js";
+import { TamerData, DigimonData, SpiritTamerData } from "./module/data/actor-models.js";
 import { MoveData, ClassSkillData, GearData, AttackData, StatusData, DigimonFormData } from "./module/data/item-models.js";
 import { DigitalDestinyActor }      from "./module/actors/actor.js";
 import { DigitalDestinyItem }       from "./module/items/item.js";
 import { TamerSheet }               from "./module/sheets/TamerSheet.js";
 import { DigimonSheet }             from "./module/sheets/DigimonSheet.js";
+import { NpcDigimonSheet }          from "./module/sheets/NpcDigimonSheet.js";
+import { SpiritTamerSheet }         from "./module/sheets/SpiritTamerSheet.js";
 import { ClassSkillSheet }          from "./module/sheets/ClassSkillSheet.js";
 import { MoveSheet }                from "./module/sheets/MoveSheet.js";
 import { GearSheet }                from "./module/sheets/GearSheet.js";
@@ -16,6 +18,8 @@ import { DigitalDestinyCombat }     from "./module/DigitalDestinyCombat.js";
 import { DigimonLookup }            from "./module/DigimonLookup.js";
 import { ClassLookup }              from "./module/ClassLookup.js";
 import { ItemLookup }               from "./module/ItemLookup.js";
+import { EncounterGenerator }       from "./module/EncounterGenerator.js";
+import { TokenActionHUD }           from "./module/TokenActionHUD.js";
 
 const BLANK_TAGS = {
   melee: false, range: false, rangeX: 4,
@@ -40,19 +44,6 @@ const BASIC_ATTACK = {
     element: "neutral",
     pr: 2,
     effect: "Standard strike. Always available — uses no move slot.",
-    tags: { ...BLANK_TAGS, melee: true }
-  }
-};
-
-const GRAPPLE = {
-  name: "Grapple",
-  type: "attack",
-  img:  "icons/svg/net.svg",
-  system: {
-    actionType: "grapple",
-    element: "neutral",
-    pr: 0,
-    effect: "Basic Action. Must be adjacent. Target immediately makes one free MELEE attack before this resolves. Then roll 1d20 + Courage vs target Reliability + 10. Hit = target is grappled (cannot move, can only attack others in the grapple).",
     tags: { ...BLANK_TAGS, melee: true }
   }
 };
@@ -82,14 +73,15 @@ Hooks.once("init", () => {
     { id: "sleep",    name: "Sleep",    icon: "icons/svg/sleep.svg"  }
   ];
 
-  Handlebars.registerHelper("eq", (a, b) => a === b);
-  Handlebars.registerHelper("gt", (a, b) => a > b);
+  Handlebars.registerHelper("eq",       (a, b)   => a === b);
+  Handlebars.registerHelper("gt",       (a, b)   => a > b);
+  Handlebars.registerHelper("includes", (arr, v) => Array.isArray(arr) && arr.includes(v));
 
   CONFIG.Actor.documentClass   = DigitalDestinyActor;
   CONFIG.Item.documentClass    = DigitalDestinyItem;
   CONFIG.Combat.documentClass  = DigitalDestinyCombat;
 
-  CONFIG.Actor.dataModels = { tamer: TamerData, digimon: DigimonData };
+  CONFIG.Actor.dataModels = { tamer: TamerData, digimon: DigimonData, spiritTamer: SpiritTamerData };
   CONFIG.Item.dataModels  = {
     move: MoveData, classSkill: ClassSkillData, gear: GearData,
     attack: AttackData, status: StatusData, digimonForm: DigimonFormData
@@ -114,6 +106,18 @@ Hooks.once("init", () => {
     types: ["digimon"],
     makeDefault: true,
     label: "DIGIMON.SheetDigimon"
+  });
+
+  _Actors.registerSheet("digital-destiny", NpcDigimonSheet, {
+    types: ["digimon"],
+    makeDefault: false,
+    label: "DIGIMON.SheetNpcDigimon"
+  });
+
+  _Actors.registerSheet("digital-destiny", SpiritTamerSheet, {
+    types: ["spiritTamer"],
+    makeDefault: true,
+    label: "DIGIMON.SheetSpiritTamer"
   });
 
   _Items.registerSheet("digital-destiny", ClassSkillSheet, {
@@ -155,6 +159,8 @@ Hooks.once("init", () => {
   foundry.applications.handlebars.loadTemplates([
     "systems/digital-destiny/templates/actors/tamer-sheet.hbs",
     "systems/digital-destiny/templates/actors/digimon-sheet.hbs",
+    "systems/digital-destiny/templates/actors/npc-digimon-sheet.hbs",
+    "systems/digital-destiny/templates/actors/spirit-tamer-sheet.hbs",
     "systems/digital-destiny/templates/items/class-skill-sheet.hbs",
     "systems/digital-destiny/templates/items/move-sheet.hbs",
     "systems/digital-destiny/templates/items/gear-sheet.hbs",
@@ -178,13 +184,15 @@ Hooks.on("updateActor", async (actor, changes) => {
   if (!game.user.isGM) return;
   if (_defeatedLock.has(actor.id)) return;
 
-  const newHp = foundry.utils.getProperty(changes, "system.hp.value");
+  const hpPath = actor.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+  const newHp  = foundry.utils.getProperty(changes, hpPath);
   if (newHp === undefined || newHp > 0) return;
 
   // Lock before any awaits so the HP correction update doesn't re-trigger this
   _defeatedLock.add(actor.id);
   try {
-    await actor.update({ "system.hp.value": 1 });
+    const resetKey = actor.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+    await actor.update({ [resetKey]: 1 });
   } finally {
     _defeatedLock.delete(actor.id);
   }
@@ -215,7 +223,9 @@ Hooks.on("updateActor", (actor) => {
 
 // Expose lookups on game object so they're callable from macros
 Hooks.once("ready", () => {
-  game.digitalDestiny = { lookup: DigimonLookup, classLookup: ClassLookup, itemLookup: ItemLookup };
+  game.digitalDestiny = { lookup: DigimonLookup, classLookup: ClassLookup, itemLookup: ItemLookup, encounterGenerator: EncounterGenerator };
+  game.ddhud = new TokenActionHUD();
+  game.ddhud.activate();
 });
 
 // Add a "Digimon Lookup" button to both the Actors and Compendium sidebar tabs.
@@ -283,6 +293,25 @@ function _injectItemLookupButton(html) {
 Hooks.on("renderActorDirectory",     (_a, html) => _injectItemLookupButton(html));
 Hooks.on("renderCompendiumDirectory",(_a, html) => _injectItemLookupButton(html));
 Hooks.on("renderItemDirectory",      (_a, html) => _injectItemLookupButton(html));
+
+function _injectEncounterButton(html) {
+  const root = (html instanceof jQuery) ? html[0] : html;
+  if (!root || root.querySelector(".encounter-gen-header-btn")) return;
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "encounter-gen-header-btn";
+  btn.title = "Generate Encounter";
+  btn.innerHTML = '<i class="fas fa-skull-crossbones"></i> Generate Encounter';
+  btn.addEventListener("click", () => EncounterGenerator.open());
+  const slot =
+    root.querySelector(".header-actions") ??
+    root.querySelector(".action-buttons") ??
+    root.querySelector(".directory-header") ??
+    root.querySelector("header");
+  if (slot) slot.prepend(btn);
+}
+
+Hooks.on("renderActorDirectory", (_a, html) => _injectEncounterButton(html));
 
 // Default prototype token settings for all new actors
 Hooks.on("preCreateActor", (actor) => {

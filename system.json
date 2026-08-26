@@ -2,7 +2,7 @@
     "id":  "digital-destiny",
     "title":  "Tamers Bond",
     "description":  "A Foundry VTT system for the Tamers Bond Digimon TTRPG.",
-  "version":  "1.2.4",
+  "version":  "1.2.5",
     "compatibility":  {
                           "minimum":  "11",
                           "verified":  "14"
@@ -130,8 +130,9 @@
               ],
     "documentTypes": {
         "Actor": {
-            "tamer":   {},
-            "digimon": {}
+            "tamer":        {},
+            "digimon":      {},
+            "spiritTamer":  {}
         },
         "Item": {
             "move":        {},

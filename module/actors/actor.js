@@ -1,6 +1,27 @@
 const CREST_STATS = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
-const HOPE_TABLE = [0, 5, 10, 20, 35, 55, 80, 105, 130, 165, 200];
+// Hope pool thresholds — keyed by minimum total EXP earned
+const HOPE_EXP_TIERS = [
+  { min: 70000, pool: 200 },
+  { min: 60000, pool: 185 },
+  { min: 50000, pool: 165 },
+  { min: 40000, pool: 145 },
+  { min: 30000, pool: 125 },
+  { min: 20000, pool: 100 },
+  { min: 15000, pool:  80 },
+  { min: 10000, pool:  65 },
+  { min:  7500, pool:  55 },
+  { min:  5000, pool:  45 },
+  { min:  4000, pool:  40 },
+  { min:  3000, pool:  35 },
+  { min:  2000, pool:  25 },
+  { min:     0, pool:  20 }
+];
+
+function _hopePoolFromExp(totalExp) {
+  const tier = HOPE_EXP_TIERS.find(t => totalExp >= t.min);
+  return tier?.pool ?? 20;
+}
 
 const ALL_SKILLS = [
   "blitz","ironclad","crusher","ghost","roar",
@@ -37,18 +58,6 @@ const DEFAULT_ATTACKS = [
       effect: "Standard strike. Always available — uses no move slot.",
       tags: { ...BLANK_TAGS, melee: true }
     }
-  },
-  {
-    name: "Grapple",
-    type: "attack",
-    img: "icons/svg/net.svg",
-    system: {
-      actionType: "grapple",
-      element: "neutral",
-      pr: 0,
-      effect: "Basic Action. Must be adjacent. Target immediately makes one free MELEE attack before this resolves. Then roll 1d20 + Courage vs target Reliability + 10. Hit = target is grappled (cannot move, can only attack others in the grapple).",
-      tags: { ...BLANK_TAGS, melee: true }
-    }
   }
 ];
 
@@ -57,7 +66,7 @@ export class DigitalDestinyActor extends Actor {
   async _onCreate(data, options, userId) {
     await super._onCreate(data, options, userId);
     if (game.user.id !== userId) return;
-    if (!["tamer", "digimon"].includes(this.type)) return;
+    if (!["tamer", "digimon", "spiritTamer"].includes(this.type)) return;
     if ((data.items ?? []).some(i => i.type === "attack")) return;
     await this.createEmbeddedDocuments("Item", DEFAULT_ATTACKS);
   }
@@ -66,8 +75,9 @@ export class DigitalDestinyActor extends Actor {
     super.prepareDerivedData();
     const system = this.system;
 
-    if (this.type === "tamer")   this._prepareTamerData(system);
-    if (this.type === "digimon") this._prepareDigimonData(system);
+    if (this.type === "tamer")        this._prepareTamerData(system);
+    if (this.type === "spiritTamer")  this._prepareSpiritTamerData(system);
+    if (this.type === "digimon")      this._prepareDigimonData(system);
   }
 
   _prepareTamerData(system) {
@@ -86,18 +96,13 @@ export class DigitalDestinyActor extends Actor {
       );
     }
 
-    // Hope rank = highest effective crest (rank + gearBonus)
-    const hopeRank = Math.max(...CREST_STATS.map(k =>
-      (system.crests[k]?.rank ?? 1) + (system.crests[k]?.gearBonus ?? 0)
-    ));
-    system.crests.hope.rank = hopeRank;
-
-    // Hope pool = lookup table + flat gear bonus (e.g. Crest of Hope accessory)
+    // Hope pool = EXP-based tier + flat gear bonus
     const hopeGearBonus = equippedGear.reduce(
       (sum, i) => sum + (i.system.bonuses?.hope ?? 0), 0
     );
-    const basePool = HOPE_TABLE[Math.min(hopeRank, 10)] ?? 0;
+    const basePool = _hopePoolFromExp(system.exp?.total ?? 0);
     system.crests.hope.pool = basePool + hopeGearBonus;
+    system.crests.hope.rank = 0; // no longer used — kept for schema compatibility
 
     // Derived hope thresholds
     const pool = system.crests.hope.pool;
@@ -136,6 +141,41 @@ export class DigitalDestinyActor extends Actor {
     system.gearDamageBonus = equippedGear.reduce(
       (sum, i) => sum + (i.system.bonuses?.damageBonus ?? 0), 0
     );
+  }
+
+  _prepareSpiritTamerData(system) {
+    // Run full Tamer preparation (crests, gear bonuses, tamer HP, skill bonuses, etc.)
+    this._prepareTamerData(system);
+
+    // Digimon EXP available
+    if (!system.digiExp) system.digiExp = { total: 0, spent: 0 };
+    system.digiExp.available = (system.digiExp.total ?? 0) - (system.digiExp.spent ?? 0);
+
+    // Digimon stats: tamer bonus comes from own crests (the spirit tamer IS their own tamer)
+    if (!system.digiStats) system.digiStats = {};
+    for (const stat of CREST_STATS) {
+      if (!system.digiStats[stat]) system.digiStats[stat] = { base: 0, invested: 0, conditional: 0 };
+      const crest = system.crests[stat] ?? {};
+      system.digiStats[stat].tamerBonus = (crest.rank ?? 0) + (crest.gearBonus ?? 0);
+      system.digiStats[stat].total = (system.digiStats[stat].base        ?? 0)
+                                   + (system.digiStats[stat].tamerBonus  ?? 0)
+                                   + (system.digiStats[stat].invested    ?? 0)
+                                   + (system.digiStats[stat].conditional ?? 0);
+    }
+
+    // HP max depends on form:
+    // Tamer Form → 12 + (crest Sincerity rank × 4), same formula as regular Tamers
+    // Digimon Form → 20 + (digiStats Sincerity total × 4)
+    if (!system.digiHp) system.digiHp = { value: 10, max: 10, temp: 0 };
+    if (system.isTamerForm ?? true) {
+      const sincerity     = system.crests.sincerity ?? {};
+      const sincEffective = (sincerity.rank ?? 1) + (sincerity.gearBonus ?? 0);
+      system.digiHp.max = 12 + sincEffective * 4;
+    } else {
+      const sinTotal = system.digiStats.sincerity?.total ?? 0;
+      system.digiHp.max = 20 + sinTotal * 4;
+    }
+    system.digiHp.value = Math.min(system.digiHp.value ?? system.digiHp.max, system.digiHp.max);
   }
 
   _prepareDigimonData(system) {

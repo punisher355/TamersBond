@@ -100,15 +100,54 @@ export class TamerData extends TypeDataModel {
   }
 }
 
-// ── Digimon ────────────────────────────────────────────────────────────────
-
-function statField() {
+export function statField() {
   return new f.SchemaField({
     base:        new f.NumberField({ initial: 0, integer: true }),
     invested:    new f.NumberField({ initial: 0, integer: true, min: 0 }),
     conditional: new f.NumberField({ initial: 0, integer: true })
   });
 }
+
+// ── Spirit Tamer ───────────────────────────────────────────────────────────
+// A Tamer who IS their own Digimon — combines Tamer fields with Digimon stats,
+// a separate Digimon EXP pool, and digivolution form tracking.
+
+export class SpiritTamerData extends TamerData {
+  static defineSchema() {
+    return {
+      ...super.defineSchema(),
+      digiExp: new f.SchemaField({
+        total: new f.NumberField({ initial: 1500, integer: true, min: 0 }),
+        spent: new f.NumberField({ initial: 0,    integer: true, min: 0 })
+      }),
+      digiHp: new f.SchemaField({
+        value: new f.NumberField({ initial: 10, integer: true }),
+        max:   new f.NumberField({ initial: 10, integer: true }),
+        temp:  new f.NumberField({ initial: 0,  integer: true })
+      }),
+      digiStats: new f.SchemaField({
+        courage:     statField(), friendship: statField(), love:        statField(),
+        knowledge:   statField(), sincerity:  statField(), reliability: statField()
+      }),
+      currentFormId:   new f.StringField({ initial: "" }),
+      currentStage:    new f.StringField({ initial: "rookie" }),
+      defaultStage:    new f.StringField({ initial: "rookie" }),
+      maxDefaultStage: new f.StringField({ initial: "rookie" }),
+      attribute:       new f.StringField({ initial: "free" }),
+      element:         new f.StringField({ initial: "neutral" }),
+      digimonSpecies:  new f.StringField({ initial: "" }),
+      isTamerForm:     new f.BooleanField({ initial: true }),
+      tamerPortrait:   new f.StringField({ initial: "" }),
+      tamerTokenImg:   new f.StringField({ initial: "" }),
+      corruption: new f.SchemaField({
+        isCorrupted: new f.BooleanField({ initial: false }),
+        corruptForm: new f.StringField({ initial: "" })
+      })
+    };
+  }
+}
+
+// ── Digimon ────────────────────────────────────────────────────────────────
 
 export class DigimonData extends TypeDataModel {
   static defineSchema() {

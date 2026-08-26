@@ -1,0 +1,230 @@
+<form class="{{cssClass}} flexcol" autocomplete="off"
+      style="--digimon-accent: {{system.sheetColor}}; --digimon-bg: {{system.sheetBgColor}}">
+
+  {{!-- Header --}}
+  <header class="sheet-header flexcol">
+    <input class="charname" name="name" type="text" value="{{actor.name}}" placeholder="Digimon Name" />
+    <div class="digi-quickref-bar">
+      <select name="system.attribute" class="digi-quickref-pill digi-quickref-attr">
+        {{selectOptions attributeOptions selected=system.attribute}}
+      </select>
+      <select name="system.element" class="digi-quickref-pill digi-quickref-elem">
+        {{selectOptions elementOptions selected=system.element}}
+      </select>
+    </div>
+    <div class="header-panels flexrow">
+
+      {{!-- Portrait --}}
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+
+      {{!-- HP --}}
+      <div class="header-panel flexcol">
+        <span class="header-panel-label">HP</span>
+        <div class="hp-main-row flexrow">
+          <input type="number" class="hp-value-input" name="system.hp.value" value="{{system.hp.value}}" />
+          <span class="hp-sep">/</span>
+          <span class="hp-max-display">{{hpMax}}</span>
+        </div>
+        <div class="hp-temp-row flexrow">
+          <span class="hp-temp-label">Temp</span>
+          <input type="number" class="hp-temp-input" name="system.hp.temp" value="{{system.hp.temp}}" />
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  {{!-- Tabs --}}
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="stats">Stats</a>
+    <a class="item" data-tab="skills">Skills</a>
+    <a class="item" data-tab="attacks">Attacks</a>
+    <a class="item" data-tab="status">Status</a>
+    <a class="item" data-tab="bio">Notes</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    {{!-- Stats tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="stats">
+
+      <h3 class="section-header">Combat Stats</h3>
+      <p class="hint">Type any number in — no EXP cost, no cap. This is the Digimon's full stat, used directly in combat rolls.</p>
+
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Stat</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each statList}}
+          <tr>
+            <td class="stat-label" style="border-left: 3px solid {{this.color}}">
+              <img class="stat-crest-icon" src="{{this.crestImg}}" title="{{this.label}}" />
+              <div class="stat-label-text">{{this.label}}</div>
+            </td>
+            <td>
+              <input type="number" name="system.stats.{{this.key}}.base" value="{{this.base}}" style="width:70px;" />
+              {{#if this.hasExtra}}
+              <span class="hint" style="margin-left:6px;">effective total: <strong>{{this.total}}</strong> (linked Tamer or leftover invested/conditional adds to this)</span>
+              {{/if}}
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+      <p class="hint hp-formula-note">
+        <strong>HP Max</strong> — {{hpFormula}}. Raise Sincerity to raise max HP.
+      </p>
+
+    </div>
+
+    {{!-- Skills tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="skills">
+      <p class="hint">Set skill ranks directly on this Digimon — no Tamer required. Rank is the number of d6 rolled.</p>
+
+      {{#each skillGroups}}
+      <div class="skill-group">
+        <div class="skill-group-header flexrow" style="border-left-color: {{this.statColor}}">
+          <span class="skill-stat-name" style="color: {{this.statColor}}">{{this.statLabel}}</span>
+        </div>
+        {{#each this.skills}}
+        <div class="skill-row flexrow digi-skill-row">
+          <span class="skill-name digi-skill-name"
+                data-tip-title="{{this.label}}"
+                data-tip-desc="{{this.description}}"
+                data-tip-example="{{this.example}}">{{this.label}}</span>
+          <input type="number" min="0" class="npc-skill-rank-input" style="width:48px;"
+                 name="system.skills.{{../statKey}}.{{this.key}}.rank" value="{{this.rank}}" />
+          <span class="skill-formula">{{this.rollFormula}}</span>
+          <button type="button" class="skill-roll-btn npc-skill-roll-btn"
+                  data-stat="{{../statKey}}"
+                  data-skill="{{this.key}}"
+                  data-label="{{this.label}}"
+                  title="Roll {{this.rollFormula}}">
+            <i class="fas fa-dice-d6"></i>
+          </button>
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+    </div>
+
+    {{!-- Attacks tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="attacks">
+
+      <h3 class="section-header">Attacks
+        <button type="button" class="attack-create" style="margin-left:auto;">
+          <i class="fas fa-plus"></i> New Attack
+        </button>
+      </h3>
+      <p class="hint">Moves this Digimon can use to fight. Click an attack's name to edit its element, PR, and tags.</p>
+
+      {{#if attacks.length}}
+      <div class="moves-list" style="margin-top:6px;">
+        {{#each attacks}}
+        <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name attack-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+            {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
+          </div>
+          {{#if (eq this.system.actionType "attack")}}
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          {{/if}}
+          {{#if (eq this.system.actionType "utility")}}
+          <span class="tag" style="background:#888;">FREE</span>
+          {{/if}}
+          {{#if (eq this.system.actionType "grapple")}}
+          <span class="tag" style="background:#a06030;">GRAPPLE</span>
+          {{/if}}
+          <div class="move-row-actions">
+            <button type="button" class="attack-roll move-action-btn" data-item-id="{{this.id}}" title="Use / Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+            <button type="button" class="attack-delete move-action-btn" data-item-id="{{this.id}}" title="Remove">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No attacks yet — click "New Attack" above.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top: 12px">Combat Reference</h3>
+      <div class="combat-reference">
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Hit Roll</span>
+          <span class="combat-ref-value">1d20 + <strong>Courage</strong> vs target <strong>Reliability</strong> + 10</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Damage</span>
+          <span class="combat-ref-value">PR dice + <strong>Knowledge</strong> − target <strong>Love</strong> · min 1</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Movement</span>
+          <span class="combat-ref-value"><strong>Friendship</strong> total in spaces per turn</span>
+        </div>
+      </div>
+
+    </div>
+
+    {{!-- Status tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="status">
+
+      <h3 class="section-header">Active Conditions</h3>
+      <div class="status-add-row flexrow">
+        <select class="status-type-picker">{{selectOptions statusTypeOptions}}</select>
+        <button type="button" class="status-add-btn">+ Add Condition</button>
+      </div>
+
+      {{#if statusItems.length}}
+      <div class="status-active-list">
+        {{#each statusItems}}
+        <div class="status-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="status-type-badge" style="background:{{this.color}}"><i class="{{this.icon}}"></i></span>
+          <span class="status-item-name">{{this.name}}</span>
+          {{#if this.hasX}}
+          <span class="status-adjust-group">
+            <span class="status-adjust-label">{{this.xLabel}}</span>
+            <button type="button" class="status-x-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <span class="status-adjust-val">{{this.system.x}}</span>
+            <button type="button" class="status-x-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </span>
+          {{/if}}
+          {{#if this.hasY}}
+          <span class="status-adjust-group">
+            <span class="status-adjust-label">{{this.yLabel}}</span>
+            <button type="button" class="status-y-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <span class="status-adjust-val">{{this.system.y}}</span>
+            <button type="button" class="status-y-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </span>
+          {{/if}}
+          <button type="button" class="status-remove move-action-btn" data-item-id="{{this.id}}" title="Remove condition"><i class="fas fa-times"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No active conditions.</p>
+      {{/if}}
+
+    </div>
+
+    {{!-- Notes tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="bio">
+      <h3 class="section-header">Notes</h3>
+      <div class="bio-field">
+        <textarea name="system.notes" rows="10" placeholder="GM prep notes, tactics, whatever's useful for this fight…">{{system.notes}}</textarea>
+      </div>
+    </div>
+
+  </section>
+</form>

@@ -8,7 +8,7 @@
       "row": 1,
       "expCost": 300,
       "requirements": "Highest Crest Stat rank 3+",
-      "description": "Once per round, when your partner Digimon takes damage, you may choose to have them take double that damage instead. If you do, the attacker takes the original, non-doubled amount of damage themselves."
+      "description": "Once per round, when your partner Digimon takes damage, you may choose to spend 4 Hope and have them take double that damage instead. If you do, the attacker takes the original, non-doubled amount of damage themselves."
     },
     {
       "name": "Numb to It",

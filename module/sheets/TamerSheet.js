@@ -103,6 +103,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
         if (a.system.class !== b.system.class) return a.system.class.localeCompare(b.system.class);
         return (a.system.row ?? 1) - (b.system.row ?? 1);
       });
+    context.pinnedSkillIds = this.actor.getFlag("digital-destiny", "hudPinnedSkills") ?? [];
 
     // Attack items for the Combat tab
     context.attacks = this.actor.items
@@ -158,8 +159,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     const actor = this.actor;
     const sys   = actor.system;
     const D     = CONFIG.DIGIMON;
-    const hope  = sys.crests.hope ?? {};
-    const hopeRank = hope.rank ?? 1;
+    const hope     = sys.crests.hope ?? {};
     const expAvail = (sys.exp?.total ?? 0) - (sys.exp?.spent ?? 0);
 
     const crestRows = CREST_ORDER.map(key => {
@@ -218,17 +218,13 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
         <div class="dd-det-section">
           <div class="dd-det-section-title">Hope</div>
           <div class="dd-det-row">
-            <span class="dd-det-label">Hope Rank</span>
-            <input type="number" name="crests.hope.rank" value="${hopeRank}" class="dd-det-input-wide" />
-            <span class="dd-det-hint">Pool = rank × 5</span>
-          </div>
-          <div class="dd-det-row">
             <span class="dd-det-label">Hope Pool (Max)</span>
-            <input type="number" name="crests.hope.pool" value="${hope.pool ?? hopeRank * 5}" class="dd-det-input-wide" />
+            <span class="dd-det-readonly">${hope.pool ?? 20}</span>
+            <span class="dd-det-hint">Auto — set by Total EXP earned</span>
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">Hope Current</span>
-            <input type="number" name="crests.hope.current" value="${hope.current ?? hope.pool ?? hopeRank * 5}" class="dd-det-input-wide" />
+            <input type="number" name="crests.hope.current" value="${hope.current ?? hope.pool ?? 20}" class="dd-det-input-wide" />
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">Hope Per Turn</span>
@@ -356,9 +352,10 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.attack-open').on('click',    ev => this._onAttackOpen(ev));
     html.find('.attack-roll').on('click',    ev => this._onAttackRoll(ev));
     html.find('.attack-delete').on('click',  ev => this._onAttackDelete(ev));
-    html.find('.class-item-open').on('click', ev => this._onClassItemOpen(ev));
+    html.find('.class-item-open').on('click',     ev => this._onClassItemOpen(ev));
     html.find('.class-item-delete').on('click',   ev => this._onClassItemDelete(ev));
     html.find('.class-item-to-chat').on('click',  ev => this._onClassItemToChat(ev));
+    html.find('.class-item-hud-pin').on('click',  ev => this._onToggleHudPin(ev));
     html.find('.gear-open').on('click',           ev => this._onGearOpen(ev));
     html.find('.gear-to-chat').on('click',        ev => this._onGearToChat(ev));
     html.find('.gear-use').on('click',            ev => this._onGearUse(ev));
@@ -545,6 +542,14 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content
     });
+  }
+
+  async _onToggleHudPin(ev) {
+    ev.preventDefault();
+    const itemId = ev.currentTarget.dataset.itemId;
+    const pinned = this.actor.getFlag("digital-destiny", "hudPinnedSkills") ?? [];
+    const next   = pinned.includes(itemId) ? pinned.filter(id => id !== itemId) : [...pinned, itemId];
+    await this.actor.setFlag("digital-destiny", "hudPinnedSkills", next);
   }
 
   // --- Gear: open / equip / unequip / use / delete / chat ---

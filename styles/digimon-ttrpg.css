@@ -1714,6 +1714,22 @@
   font-weight: 600;
 }
 
+.digital-destiny .class-item-hud-pin {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.85em;
+  opacity: 0.5;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+  display: inline-flex;
+}
+.digital-destiny .class-item-hud-pin:hover { opacity: 1; color: #c0902a; }
+.digital-destiny .class-item-hud-pin.cs-pinned { color: #c0902a; opacity: 1; transform: rotate(0deg); }
+
 .digital-destiny .class-item-delete {
   background: transparent;
   border: none;
@@ -3924,4 +3940,122 @@
   background: rgba(26,188,156,0.3);
   color: #a0f0d8;
 }
+
+/* ── Token Action HUD ── */
+.dd-token-hud {
+  position: fixed;
+  bottom: 65px;
+  left: 10px;
+  width: 220px;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  background: rgba(22, 18, 12, 0.94);
+  border: 1px solid #5a4a30;
+  border-radius: 6px;
+  color: #e8dcc8;
+  font-family: inherit;
+  font-size: 0.85em;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+.dd-hud-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #5a4a30;
+  background: rgba(90, 60, 20, 0.35);
+  border-radius: 6px 6px 0 0;
+}
+.dd-hud-portrait {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #8a6840;
+  flex-shrink: 0;
+}
+.dd-hud-name {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #f0e0b0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dd-hud-section {
+  padding: 6px 10px;
+  border-bottom: 1px solid rgba(90, 70, 30, 0.35);
+}
+.dd-hud-section:last-child { border-bottom: none; }
+.dd-hud-label {
+  font-size: 0.72em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #a08050;
+  margin-bottom: 4px;
+}
+.dd-hud-movement { font-size: 0.9em; }
+.dd-hud-stat-rows { display: flex; flex-direction: column; gap: 4px; }
+.dd-hud-stat-row { display: flex; align-items: center; gap: 6px; font-size: 0.85em; }
+.dd-hud-stat-label { color: #a08060; min-width: 72px; flex-shrink: 0; }
+.dd-hud-stat-val { color: #f0e0b0; }
+.dd-hud-stat-field { display: flex; align-items: center; gap: 4px; }
+.dd-hud-stat-max { color: #887060; font-size: 0.85em; }
+.dd-hud-val-input {
+  width: 46px;
+  background: #2a1a08;
+  color: #f0e0b0;
+  border: 1px solid #6a4a20;
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 0.9em;
+  text-align: center;
+  font-family: inherit;
+}
+.dd-hud-val-input:focus { border-color: #c0902a; outline: none; box-shadow: 0 0 0 1px #c0902a44; }
+.dd-hud-attacks { display: flex; flex-direction: column; gap: 3px; }
+.dd-hud-atk {
+  background: #3a2a18;
+  color: #f0e0b0;
+  border: 1px solid #6a4a20;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.85em;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  width: 100%;
+  transition: background 0.12s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+.dd-hud-atk:hover { background: #5a3a18; border-color: #c0902a; color: #fff; }
+.dd-hud-atk-name { flex: 1; }
+.dd-hud-atk-meta { font-size: 0.82em; color: #a08060; white-space: nowrap; flex-shrink: 0; }
+.dd-hud-atk:hover .dd-hud-atk-meta { color: #d0b080; }
+.dd-hud-empty { font-size: 0.8em; color: #887060; font-style: italic; }
+.dd-hud-pin-hint { font-weight: 400; font-size: 0.8em; color: #7a6040; text-transform: none; letter-spacing: 0; }
+.dd-hud-callout {
+  width: 100%;
+  background: #1a2a40;
+  color: #8ab0d8;
+  border: 1px solid #3060a0;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 0.85em;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s;
+}
+.dd-hud-callout:hover { background: #263c60; color: #c0d8f8; }
+
+/* ── Combat tracker — acted this round ── */
+.dd-acted-btn { color: #bbb !important; }
+.dd-acted-btn.dd-acted-on { color: #27ae60 !important; }
 
