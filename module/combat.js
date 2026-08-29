@@ -82,7 +82,7 @@ function _publicTargetSection(target, tStats, hitTotal, isCrit, isNat1) {
 }
 
 // GM section — always shows damage controls even on a miss
-function _gmTargetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags, sourceId, sourceName, attackerAttr, moveElement) {
+function _gmTargetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags, sourceId, sourceName, attackerAttr, moveElement, natural) {
   const name  = target?.name ?? "No target";
   const id    = target?.id   ?? "";
   const love  = tStats?.love ?? 0;
@@ -143,7 +143,7 @@ function _gmTargetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags
         </div>
         <div class="dd-final-row">
           <span>Final: <strong class="dd-final-value">${initFinal}</strong> damage</span>
-          ${id ? `<button class="dd-apply-btn" data-target-id="${id}" data-target-name="${name}" data-source-id="${sourceId ?? ""}" data-source-name="${sourceName ?? ""}" data-has-burn="${!!(tags?.burn)}" data-burn-x="${tags?.burnX ?? 2}" data-burn-y="${tags?.burnY ?? 3}" data-has-freeze="${!!(tags?.freeze)}" data-has-paralyze="${!!(tags?.paralyze)}" data-paralyze-x="${tags?.paralyzeX ?? 1}" data-has-blind="${!!(tags?.blind)}" data-has-confuse="${!!(tags?.confuse)}" data-has-drain="${!!(tags?.drain)}" data-has-regen="${!!(tags?.regen)}" data-regen-x="${tags?.regenX ?? 1}">Apply to ${name}</button>` : ""}
+          ${id ? `<button class="dd-apply-btn" data-target-id="${id}" data-target-name="${name}" data-source-id="${sourceId ?? ""}" data-source-name="${sourceName ?? ""}" data-has-burn="${!!(tags?.burn)}" data-burn-x="${tags?.burnX ?? 2}" data-burn-y="${tags?.burnY ?? 3}" data-has-freeze="${!!(tags?.freeze)}" data-has-paralyze="${!!(tags?.paralyze)}" data-paralyze-x="${tags?.paralyzeX ?? 1}" data-has-blind="${!!(tags?.blind)}" data-has-confuse="${!!(tags?.confuse)}" data-has-drain="${!!(tags?.drain)}" data-has-regen="${!!(tags?.regen)}" data-regen-x="${tags?.regenX ?? 1}" data-has-poison="${!!(tags?.poison && (natural ?? 0) >= 15)}" data-poison-x="${tags?.poisonX ?? 1}" data-has-sleep="${!!(tags?.sleep)}" data-has-fragment="${!!(tags?.fragment)}" data-fragment-x="${tags?.fragmentX ?? 1}">Apply to ${name}</button>` : ""}
         </div>
         <div class="dd-applied-note" style="display:none;"></div>
       </div>`;
@@ -242,10 +242,49 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
     return ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), content });
   }
 
-  const isGrapple   = s.actionType === "grapple";
-  const isBlind     = actor.items.some(i => i.type === "status" && i.system?.statusType === "blind");
-  const blindPenalty = isBlind ? -4 : 0;
-  const hitPreview  = `1d20 + ${courageTotal} Courage${isBlind ? " − 4 Blind" : ""}`;
+  // Recovery — no hit roll, automatically restores HP equal to the PR dice roll
+  if (s.tags?.recovery) {
+    const healTargets = targets.length ? targets : [actor];
+    const healRoll     = prDie ? await new Roll(prDie).evaluate() : null;
+    const healDiceHtml = healRoll ? await healRoll.render() : null;
+    const healAmt      = healRoll?.total ?? 0;
+
+    const healLines = [];
+    for (const hActor of healTargets) {
+      const hp     = hActor.system.hp ?? {};
+      const prevHp = hp.value ?? 0;
+      const blocked = !!hActor.system.statusMods?.healingBlocked;
+      const maxHp  = hp.max ?? prevHp;
+      const newHp  = blocked ? prevHp : Math.min(maxHp, prevHp + healAmt);
+      if (!blocked) await hActor.update({ "system.hp.value": newHp });
+      healLines.push(`
+        <div class="dd-target-header">
+          <span class="dd-target-name">${hActor.name}</span>
+          <span class="dd-hit-badge dd-badge-${blocked ? "miss" : "hit"}">${blocked ? "Blocked (Fragmented)" : `+${newHp - prevHp} HP`}<span class="dd-hit-detail">${blocked ? "" : ` — ${prevHp} → ${newHp}`}</span></span>
+        </div>`);
+    }
+
+    const content = `
+      <div class="dd-chat-card dd-attack-card">
+        <div class="dd-attack-header">
+          <h3 class="dd-chat-title">${item.name} <span class="tag">RECOVERY</span></h3>
+          ${s.effect ? `<p class="dd-chat-desc">${s.effect}</p>` : ""}
+        </div>
+        ${healDiceHtml ? `
+        <div class="dd-roll-section">
+          <div class="dd-roll-section-label">Healing Roll <span class="dd-roll-aside">${prDie}</span></div>
+          ${healDiceHtml}
+        </div>` : ""}
+        <div class="dd-targets">${healLines.join("")}</div>
+      </div>`;
+    return ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), rolls: healRoll ? [healRoll] : [], content });
+  }
+
+  const isGrapple    = s.actionType === "grapple";
+  const statusHitMod = actor.system.statusMods?.hitBonus ?? 0;
+  const statusDmgMod = actor.system.statusMods?.damageBonus ?? 0;
+  const statusLabel  = statusHitMod ? ` ${statusHitMod > 0 ? "+" : "−"} ${Math.abs(statusHitMod)} Status` : "";
+  const hitPreview  = `1d20 + ${courageTotal} Courage${statusLabel}`;
   const dmgPreview  = prDie ? `${prDie} + ${knowledgeTotal} Knowledge` : null;
 
   const input = await _rollDialog(
@@ -257,7 +296,7 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   // ── Roll the dice ──
   const callOutBonus = input.callOutUsed ? 1 : 0;
   const hitBonus = input.hitMods.reduce((a, m) => a + m.value, 0) + callOutBonus;
-  const hitRoll  = await new Roll(`1d20 + ${courageTotal + hitBonus + blindPenalty}`).evaluate();
+  const hitRoll  = await new Roll(`1d20 + ${courageTotal + hitBonus + statusHitMod}`).evaluate();
   const natural  = hitRoll.terms[0]?.results?.[0]?.result ?? hitRoll.total;
   const isNat20  = natural === 20;
   const isNat1   = natural === 1;
@@ -266,7 +305,7 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   let rawDmg  = null;
   let dmgBonus = 0;
   if (!isGrapple && prDie) {
-    dmgBonus = (input.dmgMods ?? []).reduce((a, m) => a + m.value, 0);
+    dmgBonus = (input.dmgMods ?? []).reduce((a, m) => a + m.value, 0) + statusDmgMod;
     dmgRoll  = await new Roll(prDie).evaluate();
     rawDmg   = dmgRoll.total + knowledgeTotal + dmgBonus;
   }
@@ -290,13 +329,13 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   for (const tActor of targetList) {
     const tStats = tActor ? getActorStatTotals(tActor) : null;
     publicTargets += _publicTargetSection(tActor, tStats, hitRoll.total, isNat20, isNat1);
-    gmTargets     += _gmTargetSection(tActor, tStats, hitRoll.total, rawDmg, isNat20, isNat1, s.tags, actor.id, actor.name, attackerAttr, moveElement);
+    gmTargets     += _gmTargetSection(tActor, tStats, hitRoll.total, rawDmg, isNat20, isNat1, s.tags, actor.id, actor.name, attackerAttr, moveElement, natural);
   }
 
   // ── Build public card (dice + hit/miss badges) ──
   const bonusPart = n => n > 0 ? ` + ${n} mod` : n < 0 ? ` − ${Math.abs(n)} mod` : "";
   const callOutPart = callOutBonus ? ` + 1 Call Out` : "";
-  const hitAside  = `+ ${courageTotal} Courage${bonusPart(hitBonus - callOutBonus)}${callOutPart}${isBlind ? " − 4 Blind" : ""}`;
+  const hitAside  = `+ ${courageTotal} Courage${bonusPart(hitBonus - callOutBonus)}${callOutPart}${statusLabel}`;
   const dmgAside  = dmgRoll ? `${prDie} + ${knowledgeTotal} Knowledge${bonusPart(dmgBonus)} = ${rawDmg} raw` : "";
 
   const publicContent = `
@@ -352,24 +391,40 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   await ChatMessage.create({ speaker, whisper: gmIds, content: gmContent });
 }
 
-// ── Status application ────────────────────────────────────────────────────────
+// ── Effect application ────────────────────────────────────────────────────────
+
+const _EFFECT_TEMPLATES = {
+  burn:     { name:"Burn",     stacks:2, ticks:3, startOfTurnText:"BURN: Taking fire damage at the start of this turn! (X = damage taken)",         removeStackOnTurn:true, applyCode:"actor.update({'system.hp.value': Math.max(0, (actor.system.hp.value ?? 0) - stacks)});",                                                        passiveText:"X = damage/turn (Stacks), Y = duration (Ticks). Loses 1 Stack per turn like every effect; the separate Ticks counter is a secondary cap. Reapplied Burn: take the higher X value and add the Y counters together.", rules:[] },
+  freeze:   { name:"Freeze",   stacks:1, startOfTurnText:"FREEZE: Cannot act! End of turn: roll 1d20 + Love (DN 14) to break. Also breaks on damage.", removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"Cannot act. End of turn: 1d20+Love DN 14. Breaks on damage.", rules:[{ path:"cannotAct", mode:"override", value:1 }] },
+  paralyze: { name:"Paralyze", stacks:1, startOfTurnText:"PARALYZE: Speed halved. 1-3 stacks: Basic or Move only. 4+: no actions. Lose 1 stack/turn. Nat 20 clears all.", removeStackOnTurn:true,  applyCode:"",                                                                                                                              passiveText:"Speed halved. 1-3 stacks: limited actions. 4+: none.",       rules:[{ path:"restricted", mode:"override", value:1 }] },
+  blind:    { name:"Blind",    stacks:2, startOfTurnText:"BLIND: -4 to all attack hit rolls this turn!",                                               removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"-4 to all attack hit rolls while Blind.",                     rules:[{ path:"hitBonus", mode:"subtract", value:4 }] },
+  confuse:  { name:"Confuse",  stacks:1, startOfTurnText:"CONFUSE: Roll 1d20 + Friendship (DN 14) to snap out. Fail: must attack nearest ally!",        removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"Start of turn: Friendship DN 14. Fail: attack nearest ally.", rules:[{ path:"forcedAttack", mode:"override", value:1 }] },
+  poison:   { name:"Poison",   stacks:1, startOfTurnText:"POISON: Taking poison damage at the start of this turn! (Stacks = damage dealt)",           removeStackOnTurn:true,  applyCode:"actor.update({'system.hp.value': Math.max(0, (actor.system.hp.value ?? 0) - stacks)});",                                                        passiveText:"Applies on a natural attack roll of 15+. Reapplied Poison: add X to current stacks.", rules:[] },
+  sleep:    { name:"Sleep",    stacks:1, startOfTurnText:"SLEEP: Cannot act! Start of turn: Firewall check DN 13 to wake. Also breaks on any damage.",  removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"Cannot act. Start of turn: Firewall DN 13 to wake. Breaks on any damage taken.", rules:[{ path:"cannotAct", mode:"override", value:1 }] },
+  fragment: { name:"Fragment", stacks:1, startOfTurnText:"FRAGMENT: Lose 1 stack. While Fragmented, cannot regain HP from any source.",                removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"Cannot regain HP from any source (RECOVERY, items, skill checks). Reapplied Fragment: add X to current stacks.", rules:[{ path:"healingBlocked", mode:"override", value:1 }] },
+  regen:    { name:"Regen",    stacks:1, startOfTurnText:"REGEN: Restoring HP at the start of this turn! (Stacks = HP restored)",                       removeStackOnTurn:true,  applyCode:"if (!actor.system.statusMods?.healingBlocked) { const hp = actor.system.hp ?? {}; actor.update({'system.hp.value': Math.min(hp.max ?? 9999, (hp.value ?? 0) + stacks)}); }",   passiveText:"Blocked while the target is Fragmented.",                     rules:[] }
+};
 
 async function _applyStatus(target, type, x, y, sourceName) {
-  const existing = target.items.find(i => i.type === "status" && i.system?.statusType === type);
+  const xVal = parseInt(x)||0;
+  const yVal = parseInt(y)||0;
+  const tmpl = _EFFECT_TEMPLATES[type];
+  if (!tmpl) return null;
+
+  const existing = target.items.find(i => i.type === "effect" && i.name === tmpl.name);
   if (existing) {
-    if (type === "burn") {
-      await existing.update({ "system.x": Math.max(parseInt(x)||0, existing.system.x??0), "system.y": (existing.system.y??0)+(parseInt(y)||0) });
-      return;
-    }
-    if (type === "paralyze") {
-      await existing.update({ "system.x": (existing.system.x??0)+(parseInt(x)||1) });
-      return;
-    }
+    if (type === "burn")     { await existing.update({ "system.stacks": Math.max(xVal, existing.system.stacks??0), "system.ticks": (existing.system.ticks??0) + (yVal || tmpl.ticks || 0) }); return; }
+    if (type === "paralyze") { await existing.update({ "system.stacks": (existing.system.stacks??0) + (xVal||1) }); return; }
+    if (type === "poison")   { await existing.update({ "system.stacks": (existing.system.stacks??0) + (xVal||1) }); return; }
+    if (type === "fragment") { await existing.update({ "system.stacks": (existing.system.stacks??0) + (xVal||1) }); return; }
     return;
   }
-  const xVal = parseInt(x)||0, yVal = parseInt(y)||0;
-  const nameMap = { burn:`Burn ${xVal},${yVal}`, freeze:"Freeze", paralyze:`Paralyze ${xVal}`, blind:"Blind", confuse:"Confuse", drain:"Drain", push:"Push", regen:`Regen ${xVal}` };
-  const created = await target.createEmbeddedDocuments("Item", [{ name: nameMap[type] ?? "Status", type:"status", img:"icons/svg/aura.svg", system:{ statusType:type, x:xVal, y:yVal, source:sourceName??""} }]);
+
+  const data = { ...tmpl, stacks: xVal || tmpl.stacks, ticks: yVal || tmpl.ticks || 0 };
+  const created = await target.createEmbeddedDocuments("Item", [{
+    name: data.name, type: "effect", img: "icons/svg/aura.svg",
+    system: { stacks: data.stacks, ticks: data.ticks, startOfTurnText: data.startOfTurnText, removeStackOnTurn: data.removeStackOnTurn, applyCode: data.applyCode, passiveText: data.passiveText, rules: data.rules, duration: { unit: "encounter" } }
+  }]);
   return created[0]?.id ?? null;
 }
 
@@ -389,6 +444,22 @@ function _findActor(actorId) {
 // ── renderChatMessage hook — interactive buttons ──────────────────────────────
 
 export function registerCombatHooks() {
+
+  // --- Encounter-end effect cleanup ---
+  // Effects flagged duration.unit === "encounter" (the default for anything
+  // applied via _applyStatus) are removed when combat ends. The statusMods/
+  // conditional/autoModifier fields they wrote are pure derived output
+  // (module/rules/rule-engine.js), so deleting the source item is all that's
+  // needed to clear them — the next prepareDerivedData() recomputes from zero.
+  Hooks.on("deleteCombat", async combat => {
+    if (!game.user.isGM) return;
+    for (const combatant of combat.combatants?.contents ?? []) {
+      const actor = combatant.actor;
+      if (!actor) continue;
+      const expired = actor.items.filter(i => i.type === "effect" && (i.system.duration?.unit ?? "encounter") === "encounter");
+      if (expired.length) await actor.deleteEmbeddedDocuments("Item", expired.map(i => i.id));
+    }
+  });
 
   // --- Acted-this-round tracking ---
   Hooks.on("updateCombat", async (combat, change) => {
@@ -478,49 +549,24 @@ export function registerCombatHooks() {
       });
     }
 
-    // Status effects — tamers and digimon
-    for (const status of actor.items.filter(i => i.type === "status")) {
-      const sType = status.system.statusType;
-      const x     = status.system.x ?? 0;
-      const y     = status.system.y ?? 0;
-      const hp    = actor.system.hp?.value ?? 0;
-
-      if (sType === "burn") {
-        effects.push({
-          type:     "burn",
-          label:    `Burn ${x},${y} — Take ${x} damage`,
-          detail:   `HP ${hp} to ${Math.max(0, hp - x)}. ${y > 1 ? `${y - 1} tick(s) left after this` : "Last tick — Burn removed"}`,
-          btnAttrs: `data-effect-type="burn" data-actor-id="${actor.id}" data-status-id="${status.id}" data-damage="${x}" data-ticks="${y}"`
-        });
-      } else if (sType === "regen") {
-        effects.push({
-          type:     "regen",
-          label:    `Regen ${x} — Heal ${x} HP`,
-          detail:   `HP ${hp} to ${hp + x}`,
-          btnAttrs: `data-effect-type="regen" data-actor-id="${actor.id}" data-status-id="${status.id}" data-heal="${x}"`
-        });
-      } else if (sType === "paralyze") {
-        effects.push({
-          type:     "paralyze",
-          label:    `Paralyzed — Roll to act`,
-          detail:   `1d20 + Reliability vs DN 15. Pass = free to act, removes Paralyze. Fail = skip actions.`,
-          btnAttrs: `data-effect-type="paralyze" data-actor-id="${actor.id}" data-status-id="${status.id}" data-ticks="${x}"`
-        });
-      } else if (sType === "freeze") {
-        effects.push({
-          type:     "freeze",
-          label:    "Frozen — Roll to break free",
-          detail:   "1d20 + Love vs DN 14. Pass = Freeze removed. Fail = cannot move this turn.",
-          btnAttrs: `data-effect-type="freeze" data-actor-id="${actor.id}" data-status-id="${status.id}"`
-        });
-      } else if (sType === "confuse") {
-        effects.push({
-          type:     "confuse",
-          label:    "Confused — Roll to snap out",
-          detail:   "1d20 + Friendship vs DN 14. Pass = free. Fail = must attack nearest ally.",
-          btnAttrs: `data-effect-type="confuse" data-actor-id="${actor.id}" data-status-id="${status.id}"`
-        });
-      }
+    // Active effects — tamers and digimon
+    for (const effect of actor.items.filter(i => i.type === "effect")) {
+      const s = effect.system;
+      if (!s.startOfTurnText?.trim() && !s.applyCode?.trim()) continue;
+      const stackLabel = s.stacks > 1 ? ` ×${s.stacks}` : "";
+      // Only show a functional Apply button if there's actually something to
+      // apply (an HP tick, a stack decrement, or a tick-duration decrement).
+      // All ten canonical statuses have removeStackOnTurn:true (see
+      // EFFECT_SYSTEM.md's house rule), so this is normally always true for
+      // them — this guard exists for a custom/manually-authored effect that
+      // has neither, so it doesn't get a dead button.
+      const hasAction = !!(s.applyCode?.trim() || s.removeStackOnTurn || (s.ticks ?? 0) > 0);
+      effects.push({
+        type:     "effect",
+        label:    effect.name + stackLabel,
+        detail:   s.startOfTurnText || "",
+        btnAttrs: hasAction ? `data-effect-type="effect" data-actor-id="${actor.id}" data-effect-id="${effect.id}"` : null
+      });
     }
 
     // Nothing to show — skip
@@ -534,7 +580,7 @@ export function registerCombatHooks() {
         </div>
         ${e.btnAttrs
           ? `<button class="dd-sot-apply" ${e.btnAttrs} style="padding:3px 10px; font-size:0.82em; white-space:nowrap; flex-shrink:0;">${e.btnLabel ?? "Apply"}</button>`
-          : `<span style="font-size:0.8em; color:#888; white-space:nowrap;">Roll manually</span>`}
+          : `<span style="font-size:0.75em; color:#888; white-space:nowrap; text-align:right;">GM: resolve, then remove<br>from sheet if it ends</span>`}
         <div class="dd-sot-note" style="display:none; font-size:0.8em; color:#27ae60; white-space:nowrap;"></div>
       </div>`).join("");
 
@@ -571,91 +617,47 @@ export function registerCombatHooks() {
         await actor.update({ "system.crests.hope.current": newHope });
         note = `Hope: ${current} → ${newHope}`;
 
-      } else if (type === "burn") {
-        const damage   = parseInt(btn.attr("data-damage")) || 0;
-        const ticks    = parseInt(btn.attr("data-ticks"))  || 1;
-        const statusId = btn.attr("data-status-id");
-        const hp       = actor.system.hp?.value ?? 0;
-        const newHp    = Math.max(0, hp - damage);
-        await actor.update({ "system.hp.value": newHp });
-        const si = actor.items.get(statusId);
-        if (si) {
-          if (ticks <= 1) { await si.delete();                          note = `HP ${hp} → ${newHp}. Burn removed.`; }
-          else            { await si.update({ "system.y": ticks - 1 }); note = `HP ${hp} → ${newHp}. ${ticks - 1} tick(s) left.`; }
+      } else if (type === "effect") {
+        const effectId   = btn.attr("data-effect-id");
+        const effectItem = actor.items.get(effectId);
+        if (!effectItem) { ui.notifications.warn("Effect not found."); return; }
+        const s      = effectItem.system;
+        const stacks = s.stacks ?? 1;
+
+        if (s.applyCode?.trim()) {
+          try {
+            const fn = new Function("actor", "item", "stacks", s.applyCode);
+            await fn(actor, effectItem, stacks);
+          } catch (e) {
+            ui.notifications.error(`Effect "${effectItem.name}" error: ${e.message}`);
+          }
         }
 
-      } else if (type === "regen") {
-        const heal     = parseInt(btn.attr("data-heal")) || 0;
-        const statusId = btn.attr("data-status-id");
-        const hp       = actor.system.hp?.value ?? 0;
-        await actor.update({ "system.hp.value": hp + heal });
-        note = `HP ${hp} → ${hp + heal}`;
-
-      } else if (type === "freeze") {
-        const statusId = btn.attr("data-status-id");
-        const stats    = getActorStatTotals(actor);
-        const love     = stats?.love ?? 0;
-        const roll     = await new Roll(`1d20 + ${love}`).evaluate();
-        const pass     = roll.total >= 14;
-        const si       = actor.items.get(statusId);
-        if (pass && si) await si.delete();
-        const rollHtml = await roll.render();
-        await ChatMessage.create({
-          speaker: ChatMessage.getSpeaker({ actor }),
-          rolls:   [roll],
-          content: `<div class="dd-chat-card">
-            <h3 class="dd-chat-title">Freeze Check: ${actor.name}</h3>
-            ${rollHtml}
-            <p style="margin:6px 0 0; font-size:0.9em;">+ ${love} Love vs DN 14 — <strong>${pass ? "PASSED! Freeze removed." : "FAILED — cannot move this turn."}</strong></p>
-          </div>`
-        });
-        note = pass ? "Freeze removed!" : "Still frozen.";
-
-      } else if (type === "confuse") {
-        const statusId = btn.attr("data-status-id");
-        const stats    = getActorStatTotals(actor);
-        const fri      = stats?.friendship ?? 0;
-        const roll     = await new Roll(`1d20 + ${fri}`).evaluate();
-        const pass     = roll.total >= 14;
-        const si       = actor.items.get(statusId);
-        if (pass && si) await si.delete();
-        const rollHtml = await roll.render();
-        await ChatMessage.create({
-          speaker: ChatMessage.getSpeaker({ actor }),
-          rolls:   [roll],
-          content: `<div class="dd-chat-card">
-            <h3 class="dd-chat-title">Confuse Check: ${actor.name}</h3>
-            ${rollHtml}
-            <p style="margin:6px 0 0; font-size:0.9em;">+ ${fri} Friendship vs DN 14 — <strong>${pass ? "PASSED! Confusion cleared." : "FAILED — must attack nearest ally!"}</strong></p>
-          </div>`
-        });
-        note = pass ? "Confusion cleared!" : "Still confused!";
-
-      } else if (type === "paralyze") {
-        const statusId = btn.attr("data-status-id");
-        const ticks    = parseInt(btn.attr("data-ticks")) || 1;
-        const stats    = getActorStatTotals(actor);
-        const rel      = stats?.reliability ?? 0;
-        const roll     = await new Roll(`1d20 + ${rel}`).evaluate();
-        const pass     = roll.total >= 15;
-        const si       = actor.items.get(statusId);
-        if (pass) {
-          if (si) await si.delete();
-        } else {
-          if (si && ticks > 1) await si.update({ "system.x": ticks - 1 });
-          else if (si)         await si.delete();
+        let effectDeleted = false;
+        if (s.removeStackOnTurn) {
+          const next = stacks - 1;
+          if (next <= 0) { await effectItem.delete(); effectDeleted = true; }
+          else await effectItem.update({ "system.stacks": next });
         }
-        const rollHtml = await roll.render();
-        await ChatMessage.create({
-          speaker: ChatMessage.getSpeaker({ actor }),
-          rolls:   [roll],
-          content: `<div class="dd-chat-card">
-            <h3 class="dd-chat-title">Paralyze Check: ${actor.name}</h3>
-            ${rollHtml}
-            <p style="margin:6px 0 0; font-size:0.9em;">+ ${rel} Reliability vs DN 15 — <strong>${pass ? "PASSED! Paralysis removed." : `FAILED — skip actions this turn. ${ticks > 1 ? `${ticks - 1} tick(s) left.` : "Paralysis expired."}`}</strong></p>
-          </div>`
-        });
-        note = pass ? "Freed from paralysis!" : "Paralyzed this turn.";
+
+        if (!effectDeleted && (s.ticks ?? 0) > 0) {
+          const nextTicks = s.ticks - 1;
+          if (nextTicks <= 0) await effectItem.delete();
+          else await effectItem.update({ "system.ticks": nextTicks });
+        }
+
+        note = `${effectItem.name} applied.`;
+
+      } else if (type === "paralyze_legacy") {
+        // Legacy handler — no longer auto-created but kept for any old cards still in chat
+        note = "Paralyze: roll 1d20 + Reliability (DN 15) manually.";
+
+      } else if (type === "freeze_legacy") {
+        note = "Freeze: roll 1d20 + Love (DN 14) manually.";
+
+      } else if (type === "confuse_legacy") {
+        note = "Confuse: roll 1d20 + Friendship (DN 14) manually.";
+
       }
 
       btn.text("Applied").prop("disabled", true).addClass("dd-applied");
@@ -743,12 +745,17 @@ export function registerCombatHooks() {
       if (btn.data("has-blind"))    { await _track(await _applyStatus(target, "blind",    0, 0, sourceName)); appliedNotes.push("Blind"); }
       if (btn.data("has-confuse"))  { await _track(await _applyStatus(target, "confuse",  0, 0, sourceName)); appliedNotes.push("Confuse"); }
       if (btn.data("has-regen"))    { await _track(await _applyStatus(target, "regen",    btn.data("regen-x"), 0, sourceName)); appliedNotes.push("Regen"); }
+      if (btn.data("has-poison"))   { await _track(await _applyStatus(target, "poison",   btn.data("poison-x"), 0, sourceName)); appliedNotes.push("Poison"); }
+      if (btn.data("has-sleep"))    { await _track(await _applyStatus(target, "sleep",    0, 0, sourceName)); appliedNotes.push("Sleep"); }
+      if (btn.data("has-fragment")) { await _track(await _applyStatus(target, "fragment", btn.data("fragment-x"), 0, sourceName)); appliedNotes.push("Fragment"); }
 
       let drainSourceId = "";
       let drainPrevHp   = 0;
       if (btn.data("has-drain") && sourceId && damage > 0) {
         const src = game.actors.get(sourceId);
-        if (src) {
+        if (src && src.system.statusMods?.healingBlocked) {
+          appliedNotes.push("Drain blocked (attacker Fragmented)");
+        } else if (src) {
           drainSourceId = sourceId;
           drainPrevHp   = src.system.hp?.value ?? 0;
           const drainAmt = Math.max(1, Math.floor(damage / 2));

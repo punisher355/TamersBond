@@ -1,3 +1,5 @@
+import { applyItemRules } from "../rules/rule-engine.js";
+
 const CREST_STATS = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
 // Hope pool thresholds — keyed by minimum total EXP earned
@@ -75,6 +77,8 @@ export class DigitalDestinyActor extends Actor {
     super.prepareDerivedData();
     const system = this.system;
 
+    if (["tamer", "spiritTamer", "digimon"].includes(this.type)) applyItemRules(this);
+
     if (this.type === "tamer")        this._prepareTamerData(system);
     if (this.type === "spiritTamer")  this._prepareSpiritTamerData(system);
     if (this.type === "digimon")      this._prepareDigimonData(system);
@@ -118,11 +122,11 @@ export class DigitalDestinyActor extends Actor {
       crestRestore: Math.floor(pool * 0.50)
     };
 
-    // Tamer HP: 12 + (sincerity rank × 4)
+    // Tamer HP: 12 + (sincerity rank × 4) + status hpMax bonuses
     const HP_BASE = 12, HP_PER_SINCERITY = 4;
     const sincerity     = system.crests.sincerity ?? {};
     const sincEffective = (sincerity.rank ?? 1) + (sincerity.gearBonus ?? 0);
-    system.hp.max   = HP_BASE + sincEffective * HP_PER_SINCERITY;
+    system.hp.max   = HP_BASE + sincEffective * HP_PER_SINCERITY + (system.statusMods?.hpMaxBonus ?? 0);
     system.hp.value = Math.min(system.hp.value ?? system.hp.max, system.hp.max);
 
     // --- Skill bonuses ---
@@ -167,13 +171,14 @@ export class DigitalDestinyActor extends Actor {
     // Tamer Form → 12 + (crest Sincerity rank × 4), same formula as regular Tamers
     // Digimon Form → 20 + (digiStats Sincerity total × 4)
     if (!system.digiHp) system.digiHp = { value: 10, max: 10, temp: 0 };
+    const hpMaxBonus = system.statusMods?.hpMaxBonus ?? 0;
     if (system.isTamerForm ?? true) {
       const sincerity     = system.crests.sincerity ?? {};
       const sincEffective = (sincerity.rank ?? 1) + (sincerity.gearBonus ?? 0);
-      system.digiHp.max = 12 + sincEffective * 4;
+      system.digiHp.max = 12 + sincEffective * 4 + hpMaxBonus;
     } else {
       const sinTotal = system.digiStats.sincerity?.total ?? 0;
-      system.digiHp.max = 20 + sinTotal * 4;
+      system.digiHp.max = 20 + sinTotal * 4 + hpMaxBonus;
     }
     system.digiHp.value = Math.min(system.digiHp.value ?? system.digiHp.max, system.digiHp.max);
   }
@@ -194,9 +199,9 @@ export class DigitalDestinyActor extends Actor {
                                + (system.stats[stat].conditional ?? 0);
     }
 
-    // Digimon HP: 20 + (total Sincerity × 4)
+    // Digimon HP: 20 + (total Sincerity × 4) + status hpMax bonuses
     const sinTotal  = system.stats.sincerity?.total ?? 0;
-    system.hp.max   = 20 + sinTotal * 4;
+    system.hp.max   = 20 + sinTotal * 4 + (system.statusMods?.hpMaxBonus ?? 0);
     system.hp.value = Math.min(system.hp.value ?? system.hp.max, system.hp.max);
 
     system.hope = crests.hope?.rank ?? 0;

@@ -12,6 +12,18 @@ function crestFields(extra = {}) {
   };
 }
 
+function statusModsField() {
+  return new f.SchemaField({
+    hitBonus:       new f.NumberField({ initial: 0, integer: true }),
+    damageBonus:    new f.NumberField({ initial: 0, integer: true }),
+    hpMaxBonus:     new f.NumberField({ initial: 0, integer: true }),
+    cannotAct:      new f.BooleanField({ initial: false }),
+    forcedAttack:   new f.BooleanField({ initial: false }),
+    healingBlocked: new f.BooleanField({ initial: false }),
+    restricted:     new f.BooleanField({ initial: false })
+  });
+}
+
 function skillField() {
   return new f.SchemaField({
     rank: new f.NumberField({ initial: 1, integer: true, min: 0 })
@@ -72,6 +84,7 @@ export class TamerData extends TypeDataModel {
         max:   new f.NumberField({ initial: 10, integer: true }),
         temp:  new f.NumberField({ initial: 0,  integer: true })
       }),
+      statusMods:   statusModsField(),
       class:        new f.StringField({ initial: "" }),
       sheetColor:   new f.StringField({ initial: "#4a90d9" }),
       sheetBgColor: new f.StringField({ initial: "#f0ece4" }),
@@ -178,6 +191,7 @@ export class DigimonData extends TypeDataModel {
         max:   new f.NumberField({ initial: 10, integer: true }),
         temp:  new f.NumberField({ initial: 0,  integer: true })
       }),
+      statusMods: statusModsField(),
       downTrack: new f.SchemaField({
         pips: new f.NumberField({ initial: 0, integer: true, min: 0 })
       }),

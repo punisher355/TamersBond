@@ -45,6 +45,58 @@
       {{/if}}
     </div>
 
+    {{!-- Digivice: which Crest it's tied to --}}
+    {{#if isDigivice}}
+    <div class="gear-section">
+      <div class="gear-section-title">Crest</div>
+      <input type="text" name="system.crest" value="{{system.crest}}" style="width:100%;"
+             placeholder="e.g. Courage, Hope, Unity, Any, —" />
+    </div>
+    {{/if}}
+
+    {{!-- Gadget: charges --}}
+    {{#if isGadget}}
+    <div class="gear-section">
+      <div class="gear-section-title">Charges <span class="gear-section-hint">— refresh at Long Rest</span></div>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label">Current</label>
+        <input type="number" name="system.charges.current" value="{{system.charges.current}}" min="0" class="gear-cost-input" />
+        <label class="gear-cost-label">Max</label>
+        <input type="number" name="system.charges.max" value="{{system.charges.max}}" min="0" class="gear-cost-input" />
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- Card: rarity --}}
+    {{#if isCard}}
+    <div class="gear-section">
+      <div class="gear-section-title">Rarity</div>
+      <select name="system.rarity">
+        {{selectOptions rarityOptions selected=system.rarity}}
+      </select>
+    </div>
+    {{/if}}
+
+    {{!-- Digi-Egg / Spirit: the form it digivolves into --}}
+    {{#if isDigivolving}}
+    <div class="gear-section">
+      <div class="gear-section-title">Digivolving Item</div>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label">Form</label>
+        <input type="text" name="system.digivolving.formName" value="{{system.digivolving.formName}}" class="gear-cost-input" style="flex:1;" />
+        <label class="gear-cost-label">Element</label>
+        <input type="text" name="system.digivolving.element" value="{{system.digivolving.element}}" class="gear-cost-input" />
+      </div>
+      <div class="gear-cost-row" style="margin-top:4px;">
+        <label class="gear-cost-label">Requires Addon</label>
+        <input type="text" name="system.digivolving.requiresAddon" value="{{system.digivolving.requiresAddon}}" class="gear-cost-input" placeholder="e.g. D-3, Spirit Port" />
+        <label class="gear-cost-label">Duration (turns)</label>
+        <input type="number" name="system.digivolving.durationTurns" value="{{system.digivolving.durationTurns}}" min="0" class="gear-cost-input" style="width:60px;" />
+      </div>
+      <p class="gear-bonus-hint">Not consumed on use. Usable once per encounter.</p>
+    </div>
+    {{/if}}
+
     {{!-- Cost --}}
     <div class="gear-section">
       <div class="gear-section-title">Cost</div>

@@ -27,8 +27,8 @@
     {
       "name": "Back in It",
       "row": 2,
-      "expCost": 500,
-      "requirements": "Reliability rank 5+",
+      "expCost": 450,
+      "requirements": "Reliability rank 4+",
       "description": "Once per encounter, when an allied Tamer or Digimon has been removed from the encounter, whether they dropped to 0 HP or chose to submit, you may spend your Basic Action to make a Recovery check. That ally immediately returns to the fight with HP equal to the result of your check."
     },
     {

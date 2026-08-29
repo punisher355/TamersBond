@@ -1,6 +1,6 @@
 import { DIGIMON }                  from "./module/config.js";
 import { TamerData, DigimonData, SpiritTamerData } from "./module/data/actor-models.js";
-import { MoveData, ClassSkillData, GearData, AttackData, StatusData, DigimonFormData } from "./module/data/item-models.js";
+import { MoveData, ClassSkillData, GearData, AttackData, DigimonFormData, EffectData } from "./module/data/item-models.js";
 import { DigitalDestinyActor }      from "./module/actors/actor.js";
 import { DigitalDestinyItem }       from "./module/items/item.js";
 import { TamerSheet }               from "./module/sheets/TamerSheet.js";
@@ -11,8 +11,8 @@ import { ClassSkillSheet }          from "./module/sheets/ClassSkillSheet.js";
 import { MoveSheet }                from "./module/sheets/MoveSheet.js";
 import { GearSheet }                from "./module/sheets/GearSheet.js";
 import { AttackSheet }              from "./module/sheets/AttackSheet.js";
-import { StatusSheet }              from "./module/sheets/StatusSheet.js";
 import { DigimonFormSheet }        from "./module/sheets/DigimonFormSheet.js";
+import { EffectSheet }             from "./module/sheets/EffectSheet.js";
 import { registerCombatHooks }      from "./module/combat.js";
 import { DigitalDestinyCombat }     from "./module/DigitalDestinyCombat.js";
 import { DigimonLookup }            from "./module/DigimonLookup.js";
@@ -76,6 +76,7 @@ Hooks.once("init", () => {
   Handlebars.registerHelper("eq",       (a, b)   => a === b);
   Handlebars.registerHelper("gt",       (a, b)   => a > b);
   Handlebars.registerHelper("includes", (arr, v) => Array.isArray(arr) && arr.includes(v));
+  Handlebars.registerHelper("or",       (...args) => args.slice(0, -1).some(Boolean));
 
   CONFIG.Actor.documentClass   = DigitalDestinyActor;
   CONFIG.Item.documentClass    = DigitalDestinyItem;
@@ -84,7 +85,8 @@ Hooks.once("init", () => {
   CONFIG.Actor.dataModels = { tamer: TamerData, digimon: DigimonData, spiritTamer: SpiritTamerData };
   CONFIG.Item.dataModels  = {
     move: MoveData, classSkill: ClassSkillData, gear: GearData,
-    attack: AttackData, status: StatusData, digimonForm: DigimonFormData
+    attack: AttackData, digimonForm: DigimonFormData,
+    effect: EffectData
   };
   CONFIG.Combat.initiative     = { formula: "1d20", decimals: 2 };
 
@@ -144,16 +146,16 @@ Hooks.once("init", () => {
     label: "DIGIMON.SheetAttack"
   });
 
-  _Items.registerSheet("digital-destiny", StatusSheet, {
-    types: ["status"],
-    makeDefault: true,
-    label: "DIGIMON.SheetStatus"
-  });
-
   _Items.registerSheet("digital-destiny", DigimonFormSheet, {
     types: ["digimonForm"],
     makeDefault: true,
     label: "DIGIMON.SheetDigimonForm"
+  });
+
+  _Items.registerSheet("digital-destiny", EffectSheet, {
+    types: ["effect"],
+    makeDefault: true,
+    label: "DIGIMON.SheetEffect"
   });
 
   foundry.applications.handlebars.loadTemplates([
@@ -165,8 +167,8 @@ Hooks.once("init", () => {
     "systems/digital-destiny/templates/items/move-sheet.hbs",
     "systems/digital-destiny/templates/items/gear-sheet.hbs",
     "systems/digital-destiny/templates/items/attack-sheet.hbs",
-    "systems/digital-destiny/templates/items/status-sheet.hbs",
     "systems/digital-destiny/templates/items/digimon-form-sheet.hbs",
+    "systems/digital-destiny/templates/items/effect-sheet.hbs",
     "systems/digital-destiny/templates/digimon-lookup.hbs",
     "systems/digital-destiny/templates/class-lookup.hbs",
     "systems/digital-destiny/templates/item-lookup.hbs"

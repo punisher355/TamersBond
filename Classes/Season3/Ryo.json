@@ -36,7 +36,7 @@
       "row": 3,
       "expCost": 800,
       "requirements": "Highest Crest Stat rank 6+",
-      "description": "Whenever you use All or Nothing, your partner Digimon's next attack automatically resolves the same way this one did: hit follows hit, miss follows miss, Critical Hit follows Critical Hit, no roll needed. Any modifiers and bonuses that applied to the first attack apply again to this second attack as well."
+      "description": "Whenever you use All or Nothing, your partner Digimon's next attack automatically resolves the same way this one did: hit follows hit, miss follows miss, Critical Hit follows Critical Hit, no roll needed. Any modifiers and bonuses that applied to the first attack apply again to this second attack as well. If All or Nothing missed and locked your partner Digimon out of attacking next round, this effect instead applies to the first attack they make once that lockout ends."
     },
     {
       "name": "Not Today",

@@ -290,17 +290,30 @@ DIGIMON.maxMultiplier = 3.0;
 DIGIMON.minMultiplier = 0.25;
 DIGIMON.minDamage     = 1;
 
+// Equip-slot limits per Gear itemType. Types not listed here aren't
+// equippable at all (Supply, Food, Digi-Egg, Spirit, Card). Enforced in
+// TamerSheet.js (_onGearEquip, _onDropItemCreate, and the gearSlots
+// context builder) — see ITEM_SYSTEM.md.
+DIGIMON.slotRules = {
+  digivice:      { max: 1 },
+  digiviceAddon: { max: 20 },
+  equipment:     { max: 1 },
+  accessory:     { max: 1 },
+  gadget:        { max: 1, swapOnlyAtRest: true }
+};
+
 DIGIMON.statusTypes = {
   burn:     { label: "Burn",     color: "#c0392b", icon: "fas fa-fire",              hasX: true,  hasY: true,  xLabel: "Dmg/Turn", yLabel: "Turns Left" },
-  freeze:   { label: "Freeze",   color: "#5dade2", icon: "fas fa-snowflake",         hasX: false, hasY: false },
-  paralyze: { label: "Paralyze", color: "#f39c12", icon: "fas fa-bolt",              hasX: true,  hasY: false, xLabel: "Stacks" },
-  blind:    { label: "Blind",    color: "#717d7e", icon: "fas fa-eye-slash",         hasX: false, hasY: false },
-  confuse:  { label: "Confuse",  color: "#9b59b6", icon: "fas fa-dizzy",             hasX: false, hasY: false },
+  freeze:   { label: "Freeze",   color: "#5dade2", icon: "fas fa-snowflake",         hasX: false, hasY: false, defaultRules: [{ path: "cannotAct", mode: "override", value: 1 }] },
+  paralyze: { label: "Paralyze", color: "#f39c12", icon: "fas fa-bolt",              hasX: true,  hasY: false, xLabel: "Stacks", defaultRules: [{ path: "restricted", mode: "override", value: 1 }] },
+  blind:    { label: "Blind",    color: "#717d7e", icon: "fas fa-eye-slash",         hasX: false, hasY: false, defaultRules: [{ path: "hitBonus", mode: "subtract", value: 4 }] },
+  confuse:  { label: "Confuse",  color: "#9b59b6", icon: "fas fa-dizzy",             hasX: false, hasY: false, defaultRules: [{ path: "forcedAttack", mode: "override", value: 1 }] },
   drain:    { label: "Drain",    color: "#27ae60", icon: "fas fa-tint",              hasX: false, hasY: false },
   push:     { label: "Push",     color: "#a04030", icon: "fas fa-expand-arrows-alt", hasX: false, hasY: false },
   regen:    { label: "Regen",    color: "#2ecc71", icon: "fas fa-heartbeat",         hasX: true,  hasY: false, xLabel: "HP/Turn" },
   poison:   { label: "Poison",   color: "#52be80", icon: "fas fa-skull-crossbones",  hasX: true,  hasY: false, xLabel: "Stacks" },
-  sleep:    { label: "Sleep",    color: "#8e44ad", icon: "fas fa-moon",              hasX: false, hasY: false },
+  sleep:    { label: "Sleep",    color: "#8e44ad", icon: "fas fa-moon",              hasX: false, hasY: false, defaultRules: [{ path: "cannotAct", mode: "override", value: 1 }] },
+  fragment: { label: "Fragment", color: "#3d6b6b", icon: "fas fa-puzzle-piece",      hasX: true,  hasY: false, xLabel: "Stacks", defaultRules: [{ path: "healingBlocked", mode: "override", value: 1 }] },
   custom:   { label: "Custom",   color: "#666666", icon: "fas fa-star",              hasX: true,  hasY: true,  xLabel: "X Value", yLabel: "Y Value" }
 };
 
@@ -326,8 +339,10 @@ export function computeTagString(tags) {
   if (tags.drain)    p.push("[DRAIN]");
   if (tags.push)     p.push("[PUSH]");
   if (tags.heal)     p.push("[HEAL]");
-  if (tags.regen)    p.push(`[REGEN ${tags.regenX ?? 1}]`);
-  if (tags.poison)   p.push(`[POISON ${tags.poisonX ?? 1}]`);
-  if (tags.sleep)    p.push("[SLEEP]");
+  if (tags.regen)     p.push(`[REGEN ${tags.regenX ?? 1}]`);
+  if (tags.recovery)  p.push("[RECOVERY]");
+  if (tags.poison)    p.push(`[POISON ${tags.poisonX ?? 1}]`);
+  if (tags.sleep)     p.push("[SLEEP]");
+  if (tags.fragment)  p.push(`[FRAGMENT ${tags.fragmentX ?? 1}]`);
   return p.join(" ");
 }

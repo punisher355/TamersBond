@@ -34,7 +34,7 @@
     {
       "name": "Gatomon's Legacy",
       "row": 3,
-      "expCost": 500,
+      "expCost": 700,
       "requirements": "Highest Crest Stat rank 6+",
       "description": "Your Digimon's Max Default Stage increases by 1 permanently. Their Default Stage can now reach one stage higher than the campaign maximum allowed for other Digimon. This cannot increase their Default Stage beyond Mega."
     },

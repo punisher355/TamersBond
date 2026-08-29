@@ -229,12 +229,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     // Corruption state
     context.isCorrupted = system.corruption?.isCorrupted ?? false;
 
-    const D2 = CONFIG.DIGIMON;
-    context.statusItems = this.actor.items.filter(i => i.type === "status").map(s => {
-      const info = D2.statusTypes?.[s.system.statusType] ?? {};
-      return { id: s.id, name: s.name, img: s.img, system: s.system, color: info.color ?? "#666", icon: info.icon ?? "fas fa-star", hasX: info.hasX ?? false, hasY: info.hasY ?? false, xLabel: info.xLabel ?? "X", yLabel: info.yLabel ?? "Y" };
-    });
-    context.statusTypeOptions = Object.fromEntries(Object.entries(D2.statusTypes ?? {}).map(([k,v]) => [k, v.label]));
+    context.effectItems = this.actor.items.filter(i => i.type === "effect");
 
     return context;
   }
@@ -433,12 +428,12 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       el.addEventListener("dragstart", ev => this._onDragStart(ev), false);
     });
 
-    html.find('.status-add-btn').on('click',      ev => this._onStatusAdd(ev));
-    html.find('.status-remove').on('click',       ev => this._onStatusRemove(ev));
-    html.find('.status-x-increase').on('click',   ev => this._onStatusAdjust(ev, "x",  1));
-    html.find('.status-x-decrease').on('click',   ev => this._onStatusAdjust(ev, "x", -1));
-    html.find('.status-y-increase').on('click',   ev => this._onStatusAdjust(ev, "y",  1));
-    html.find('.status-y-decrease').on('click',   ev => this._onStatusAdjust(ev, "y", -1));
+    html.find('.effect-add-btn').on('click',        ev => this._onEffectAdd(ev));
+    html.find('.effect-remove').on('click',         ev => this._onEffectRemove(ev));
+    html.find('.effect-open').on('click',           ev => this._onEffectOpen(ev));
+    html.find('.effect-stack-increase').on('click', ev => this._onEffectStackAdjust(ev,  1));
+    html.find('.effect-stack-decrease').on('click', ev => this._onEffectStackAdjust(ev, -1));
+    html.find('.effect-apply-btn').on('click',      ev => this._onEffectApply(ev));
 
     if (!this.isEditable) return;
 
@@ -981,28 +976,62 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     await this.actor.update({ "system.corruption.isCorrupted": !current });
   }
 
-  // --- Status condition handlers ---
+  // --- Active effect handlers ---
 
-  async _onStatusAdd(ev) {
-    const type = $(this.element).find('.status-type-picker').val();
-    if (!type) return;
-    const D3 = CONFIG.DIGIMON;
-    const info = D3.statusTypes?.[type] ?? {};
-    const defaults = { burn:{x:2,y:3}, paralyze:{x:1,y:0}, regen:{x:1,y:0} };
-    const def = defaults[type] ?? {x:0,y:0};
-    const nameMap = { burn:`Burn ${def.x},${def.y}`, freeze:"Freeze", paralyze:`Paralyze ${def.x}`, blind:"Blind", confuse:"Confuse", drain:"Drain", push:"Push", regen:`Regen ${def.x}`, custom:"Custom Status" };
-    await this.actor.createEmbeddedDocuments("Item", [{ name: nameMap[type] ?? info.label ?? "Status", type:"status", img:"icons/svg/aura.svg", system:{ statusType:type, x:def.x, y:def.y, source:"" } }]);
+  async _onEffectAdd(ev) {
+    await this.actor.createEmbeddedDocuments("Item", [{
+      name: "New Effect", type: "effect", img: "icons/svg/aura.svg",
+      system: { stacks: 1 }
+    }]);
   }
 
-  async _onStatusRemove(ev) {
+  async _onEffectRemove(ev) {
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (item) await item.delete();
   }
 
-  async _onStatusAdjust(ev, field, delta) {
+  _onEffectOpen(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (item) item.sheet.render(true);
+  }
+
+  async _onEffectStackAdjust(ev, delta) {
+    ev.preventDefault();
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (!item) return;
-    const cur = item.system[field] ?? 0;
-    await item.update({ [`system.${field}`]: Math.max(0, cur + delta) });
+    await item.update({ "system.stacks": Math.max(0, (item.system.stacks ?? 1) + delta) });
   }
+
+  async _onEffectApply(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (!item) return;
+    const s      = item.system;
+    const actor  = this.actor;
+    const stacks = s.stacks ?? 1;
+
+    if (s.startOfTurnText?.trim()) {
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<div class="dd-chat-card"><h3 class="dd-chat-title">${item.name}</h3><p class="dd-chat-desc">${s.startOfTurnText}</p></div>`
+      });
+    }
+
+    if (s.applyCode?.trim()) {
+      try {
+        const fn = new Function("actor", "item", "stacks", s.applyCode);
+        await fn(actor, item, stacks);
+      } catch (e) {
+        ui.notifications.error(`Effect "${item.name}" error: ${e.message}`);
+      }
+    }
+
+    if (s.removeStackOnTurn) {
+      const next = stacks - 1;
+      if (next <= 0) await item.delete();
+      else await item.update({ "system.stacks": next });
+    }
+  }
+
 }

@@ -14,15 +14,16 @@ export class GearSheet extends foundry.appv1.sheets.ItemSheet {
     context.system = s;
 
     context.itemTypeOptions = {
-      digivice:           "Digivice (slot)",
-      clothing:           "Clothing (slot)",
-      accessory:          "Accessory (slot)",
-      equipment:          "Equipment",
-      supply:             "Supply (consumable)",
-      food:               "Food (consumable)",
-      "legendary-spirit": "Legendary Spirit",
-      "digi-egg":         "Digi-Egg",
-      "modify-card":      "Modify Card (consumable)"
+      digivice:      "Digivice (slot)",
+      digiviceAddon: "Digivice Addon (slot, up to 20)",
+      equipment:     "Equipment (slot)",
+      accessory:     "Accessory (slot)",
+      gadget:        "Gadget (slot, charges)",
+      supply:        "Supply (consumable)",
+      food:          "Food (consumable)",
+      digiEgg:       "Digi-Egg (digivolving item)",
+      spirit:        "Spirit (digivolving item)",
+      card:          "Card (Card Slash)"
     };
 
     context.targetOptions = {
@@ -40,11 +41,22 @@ export class GearSheet extends foundry.appv1.sheets.ItemSheet {
     };
 
     const type = s.itemType;
-    context.isSlotted    = ["digivice", "clothing", "accessory"].includes(type);
-    context.isConsumable = ["supply", "food", "modify-card"].includes(type);
-    context.isEquipment  = type === "equipment";
-    context.showTarget   = ["supply", "food"].includes(type);
-    context.showTiming   = !["food", "digi-egg", "legendary-spirit"].includes(type);
+    context.isSlotted     = ["digivice", "digiviceAddon", "equipment", "accessory", "gadget"].includes(type);
+    context.isConsumable  = ["supply", "food", "card"].includes(type);
+    context.isEquipment   = type === "equipment";
+    context.showTarget    = ["supply", "food"].includes(type);
+    context.showTiming    = !["food", "digiEgg", "spirit", "card"].includes(type);
+    context.isDigivice    = type === "digivice";
+    context.isGadget      = type === "gadget";
+    context.isCard        = type === "card";
+    context.isDigivolving = ["digiEgg", "spirit"].includes(type);
+
+    context.rarityOptions = {
+      common:     "Common",
+      uncommon:   "Uncommon",
+      rare:       "Rare",
+      secretRare: "Secret Rare"
+    };
 
     // Build skill bonus grid
     const D = CONFIG.DIGIMON;
@@ -86,7 +98,7 @@ export class GearSheet extends foundry.appv1.sheets.ItemSheet {
     const item = this.item;
     const s    = item.system;
     const cost = _buildCostString(s.cost);
-    const isConsumable = ["supply", "food"].includes(s.itemType);
+    const isConsumable = ["supply", "food", "card"].includes(s.itemType);
     const content = `
       <div class="dd-chat-card">
         <h3 class="dd-chat-title">${item.name}</h3>

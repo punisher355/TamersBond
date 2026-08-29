@@ -42,8 +42,8 @@
       "name": "The Right Move",
       "row": 3,
       "expCost": 700,
-      "requirements": "Reliability rank 5+",
-      "description": "Once per session, after your partner Digimon's attack roll connects, you may deal maximum damage instead of rolling. This is used after the hit roll, once you already know the result. If the attack roll was a critical hit, the maximum damage includes crit damage; if it wasn't, it doesn't."
+      "requirements": "Reliability rank 6+",
+      "description": "Once per session, after your partner Digimon's attack roll connects, you may deal maximum damage instead of rolling. This is used after the hit roll, once you already know the result. If the attack roll was a critical hit, the maximum damage includes crit damage. If it wasn't a critical hit, it doesn't."
     }
   ]
 }

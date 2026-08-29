@@ -128,8 +128,12 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       }));
 
     // Gear items for the Items tab
-    const gearItems  = this.actor.items.filter(i => i.type === "gear");
-    const SLOT_TYPES = ["digivice", "clothing", "accessory"];
+    const gearItems = this.actor.items.filter(i => i.type === "gear");
+    // Single-slot categories (max:1 in CONFIG.DIGIMON.slotRules) get the dedicated
+    // "slot" widget below; Equipment is max:1 too but keeps its plain-list rendering
+    // (matches existing behavior) via context.equipmentItems instead.
+    const SLOT_TYPES = Object.keys(CONFIG.DIGIMON.slotRules)
+      .filter(t => CONFIG.DIGIMON.slotRules[t].max === 1 && t !== "equipment");
     context.gearSlots = SLOT_TYPES.map(slotType => {
       const all      = gearItems.filter(i => i.system.itemType === slotType);
       const equipped = all.find(i => i.system.isEquipped) ?? null;
@@ -137,18 +141,14 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       return { slotType, label, equipped, all };
     });
     context.equipmentItems    = gearItems.filter(i => i.system.itemType === "equipment");
+    context.digiviceAddonItems = gearItems.filter(i => i.system.itemType === "digiviceAddon");
     context.supplyItems       = gearItems.filter(i => i.system.itemType === "supply");
     context.foodItems         = gearItems.filter(i => i.system.itemType === "food");
-    context.spiritItems       = gearItems.filter(i => i.system.itemType === "legendary-spirit");
-    context.modifyCardItems   = gearItems.filter(i => i.system.itemType === "modify-card");
-    context.digiEggItems      = gearItems.filter(i => i.system.itemType === "digi-egg");
+    context.spiritItems       = gearItems.filter(i => i.system.itemType === "spirit");
+    context.cardItems         = gearItems.filter(i => i.system.itemType === "card");
+    context.digiEggItems      = gearItems.filter(i => i.system.itemType === "digiEgg");
 
-    const D2 = CONFIG.DIGIMON;
-    context.statusItems = this.actor.items.filter(i => i.type === "status").map(s => {
-      const info = D2.statusTypes?.[s.system.statusType] ?? {};
-      return { id: s.id, name: s.name, img: s.img, system: s.system, color: info.color ?? "#666", icon: info.icon ?? "fas fa-star", hasX: info.hasX ?? false, hasY: info.hasY ?? false, xLabel: info.xLabel ?? "X", yLabel: info.yLabel ?? "Y" };
-    });
-    context.statusTypeOptions = Object.fromEntries(Object.entries(D2.statusTypes ?? {}).map(([k,v]) => [k, v.label]));
+    context.effectItems = this.actor.items.filter(i => i.type === "effect");
 
     return context;
   }
@@ -374,12 +374,12 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       else if (action === 'push-through') this._onPushThrough(ev);
       else if (action === 'call-out')     this._onCallOut(ev);
     });
-    html.find('.status-add-btn').on('click',      ev => this._onStatusAdd(ev));
-    html.find('.status-remove').on('click',       ev => this._onStatusRemove(ev));
-    html.find('.status-x-increase').on('click',   ev => this._onStatusAdjust(ev, "x",  1));
-    html.find('.status-x-decrease').on('click',   ev => this._onStatusAdjust(ev, "x", -1));
-    html.find('.status-y-increase').on('click',   ev => this._onStatusAdjust(ev, "y",  1));
-    html.find('.status-y-decrease').on('click',   ev => this._onStatusAdjust(ev, "y", -1));
+    html.find('.effect-add-btn').on('click',        ev => this._onEffectAdd(ev));
+    html.find('.effect-remove').on('click',         ev => this._onEffectRemove(ev));
+    html.find('.effect-open').on('click',           ev => this._onEffectOpen(ev));
+    html.find('.effect-stack-increase').on('click', ev => this._onEffectStackAdjust(ev,  1));
+    html.find('.effect-stack-decrease').on('click', ev => this._onEffectStackAdjust(ev, -1));
+    html.find('.effect-apply-btn').on('click',      ev => this._onEffectApply(ev));
 
     html.find('.move-open').on('click',        ev => this._onMoveOpen(ev));
     html.find('.tamer-move-to-chat').on('click', ev => this._onMoveToChat(ev));
@@ -423,17 +423,21 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       return Promise.all(itemData.map(d => this._onDropItemCreate(d)));
     }
 
-    // Gear drop — auto-equip slot items
+    // Gear drop — auto-equip slot items, respecting each itemType's slot rule
     if (itemData.type === "gear") {
-      const slotTypes = ["digivice", "clothing", "accessory"];
-      if (slotTypes.includes(itemData.system?.itemType)) {
-        const current = this.actor.items.find(i =>
-          i.type === "gear" &&
-          i.system.itemType === itemData.system.itemType &&
-          i.system.isEquipped
+      const itemType = itemData.system?.itemType;
+      const rule = CONFIG.DIGIMON.slotRules[itemType];
+      if (rule) {
+        const equippedPeers = this.actor.items.filter(i =>
+          i.type === "gear" && i.system.itemType === itemType && i.system.isEquipped
         );
-        if (current) await current.update({ "system.isEquipped": false });
-        itemData = foundry.utils.mergeObject(foundry.utils.deepClone(itemData), { system: { isEquipped: true } });
+        if (rule.max === 1) {
+          for (const other of equippedPeers) await other.update({ "system.isEquipped": false });
+          itemData = foundry.utils.mergeObject(foundry.utils.deepClone(itemData), { system: { isEquipped: true } });
+        } else if (equippedPeers.length < rule.max) {
+          itemData = foundry.utils.mergeObject(foundry.utils.deepClone(itemData), { system: { isEquipped: true } });
+        }
+        // else: already at the slot cap — item is added unequipped (schema default)
       }
       return super._onDropItemCreate(itemData);
     }
@@ -564,10 +568,33 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     ev.preventDefault();
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (!item) return;
+    const itemType = item.system.itemType;
+    const rule      = CONFIG.DIGIMON.slotRules[itemType];
     const others = this.actor.items.filter(i =>
       i.id !== item.id && i.type === "gear" &&
-      i.system.itemType === item.system.itemType && i.system.isEquipped
+      i.system.itemType === itemType && i.system.isEquipped
     );
+
+    // Multi-equip categories (e.g. Digivice Addon, up to 20) — stack instead of swap.
+    if (rule?.max > 1) {
+      if (others.length >= rule.max) {
+        const label = itemType.charAt(0).toUpperCase() + itemType.slice(1);
+        ui.notifications.warn(`Already have ${rule.max} ${label} items equipped — unequip one first.`);
+        return;
+      }
+      await item.update({ "system.isEquipped": true });
+      return;
+    }
+
+    // Categories that can only be swapped at rest (e.g. Gadget) — confirm first.
+    if (rule?.swapOnlyAtRest && others.length) {
+      const confirmed = await Dialog.confirm({
+        title: "Swap Gadget?",
+        content: `<p>Gadgets can only be swapped when you take a rest. Swap anyway?</p>`
+      });
+      if (!confirmed) return;
+    }
+
     for (const other of others) await other.update({ "system.isEquipped": false });
     await item.update({ "system.isEquipped": true });
   }
@@ -810,29 +837,62 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
   // --- Skill roll ---
 
-  // --- Status condition handlers ---
+  // --- Active effect handlers ---
 
-  async _onStatusAdd(ev) {
-    const type = $(this.element).find('.status-type-picker').val();
-    if (!type) return;
-    const D3 = CONFIG.DIGIMON;
-    const info = D3.statusTypes?.[type] ?? {};
-    const defaults = { burn:{x:2,y:3}, paralyze:{x:1,y:0}, regen:{x:1,y:0} };
-    const def = defaults[type] ?? {x:0,y:0};
-    const nameMap = { burn:`Burn ${def.x},${def.y}`, freeze:"Freeze", paralyze:`Paralyze ${def.x}`, blind:"Blind", confuse:"Confuse", drain:"Drain", push:"Push", regen:`Regen ${def.x}`, custom:"Custom Status" };
-    await this.actor.createEmbeddedDocuments("Item", [{ name: nameMap[type] ?? info.label ?? "Status", type:"status", img:"icons/svg/aura.svg", system:{ statusType:type, x:def.x, y:def.y, source:"" } }]);
+  async _onEffectAdd(ev) {
+    await this.actor.createEmbeddedDocuments("Item", [{
+      name: "New Effect", type: "effect", img: "icons/svg/aura.svg",
+      system: { stacks: 1 }
+    }]);
   }
 
-  async _onStatusRemove(ev) {
+  async _onEffectRemove(ev) {
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (item) await item.delete();
   }
 
-  async _onStatusAdjust(ev, field, delta) {
+  _onEffectOpen(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (item) item.sheet.render(true);
+  }
+
+  async _onEffectStackAdjust(ev, delta) {
+    ev.preventDefault();
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (!item) return;
-    const cur = item.system[field] ?? 0;
-    await item.update({ [`system.${field}`]: Math.max(0, cur + delta) });
+    await item.update({ "system.stacks": Math.max(0, (item.system.stacks ?? 1) + delta) });
+  }
+
+  async _onEffectApply(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (!item) return;
+    const s      = item.system;
+    const actor  = this.actor;
+    const stacks = s.stacks ?? 1;
+
+    if (s.startOfTurnText?.trim()) {
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<div class="dd-chat-card"><h3 class="dd-chat-title">${item.name}</h3><p class="dd-chat-desc">${s.startOfTurnText}</p></div>`
+      });
+    }
+
+    if (s.applyCode?.trim()) {
+      try {
+        const fn = new Function("actor", "item", "stacks", s.applyCode);
+        await fn(actor, item, stacks);
+      } catch (e) {
+        ui.notifications.error(`Effect "${item.name}" error: ${e.message}`);
+      }
+    }
+
+    if (s.removeStackOnTurn) {
+      const next = stacks - 1;
+      if (next <= 0) await item.delete();
+      else await item.update({ "system.stacks": next });
+    }
   }
 
   // --- Tamer combat action rolls ---

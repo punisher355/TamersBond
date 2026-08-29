@@ -25,7 +25,9 @@ function tagsSchema() {
     drain:     new f.BooleanField({ initial: false }),
     push:      new f.BooleanField({ initial: false }),
     heal:      new f.BooleanField({ initial: false }),
-    regen:     new f.BooleanField({ initial: false }), regenX:    new f.NumberField({ initial: 1, integer: true })
+    regen:     new f.BooleanField({ initial: false }), regenX:    new f.NumberField({ initial: 1, integer: true }),
+    recovery:  new f.BooleanField({ initial: false }),
+    fragment:  new f.BooleanField({ initial: false }), fragmentX: new f.NumberField({ initial: 1, integer: true })
   });
 }
 
@@ -80,6 +82,18 @@ export class GearData extends TypeDataModel {
       quantity:   new f.NumberField({ initial: 1, integer: true, min: 0 }),
       effect:     new f.StringField({ initial: "" }),
       isEquipped: new f.BooleanField({ initial: false }),
+      crest:      new f.StringField({ initial: "" }),
+      charges: new f.SchemaField({
+        current: new f.NumberField({ initial: 0, integer: true, min: 0 }),
+        max:     new f.NumberField({ initial: 0, integer: true, min: 0 })
+      }),
+      rarity: new f.StringField({ initial: "" }),
+      digivolving: new f.SchemaField({
+        formName:      new f.StringField({ initial: "" }),
+        element:       new f.StringField({ initial: "" }),
+        requiresAddon: new f.StringField({ initial: "" }),
+        durationTurns: new f.NumberField({ initial: 6, integer: true })
+      }),
       bonuses: new f.SchemaField({
         courage:    new f.NumberField({ initial: 0 }),
         friendship: new f.NumberField({ initial: 0 }),
@@ -128,16 +142,25 @@ export class AttackData extends TypeDataModel {
   }
 }
 
-// ── Status ─────────────────────────────────────────────────────────────────
+// ── Effect ─────────────────────────────────────────────────────────────────
 
-export class StatusData extends TypeDataModel {
+export class EffectData extends TypeDataModel {
   static defineSchema() {
     return {
-      statusType:  new f.StringField({ initial: "custom" }),
-      x:           new f.NumberField({ initial: 0 }),
-      y:           new f.NumberField({ initial: 0 }),
-      description: new f.StringField({ initial: "" }),
-      source:      new f.StringField({ initial: "" })
+      stacks:            new f.NumberField({ initial: 1, integer: true, min: 0 }),
+      ticks:             new f.NumberField({ initial: 0, integer: true, min: 0 }),
+      startOfTurnText:   new f.StringField({ initial: "" }),
+      removeStackOnTurn: new f.BooleanField({ initial: false }),
+      applyCode:         new f.StringField({ initial: "" }),
+      passiveText:       new f.StringField({ initial: "" }),
+      rules: new f.ArrayField(new f.SchemaField({
+        path:  new f.StringField({ initial: "" }),
+        mode:  new f.StringField({ initial: "add" }),
+        value: new f.NumberField({ initial: 0 })
+      })),
+      duration: new f.SchemaField({
+        unit: new f.StringField({ initial: "encounter" })
+      })
     };
   }
 }

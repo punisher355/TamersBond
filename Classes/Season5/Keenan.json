@@ -27,7 +27,7 @@
     {
       "name": "Pounce First",
       "row": 2,
-      "expCost": 500,
+      "expCost": 450,
       "requirements": "Friendship rank 4+",
       "description": "Once per encounter, when an enemy within range of your partner Digimon declares an attack against a target other than your partner Digimon, you may spend 4 Hope to have your partner Digimon make an attack as a Free Action against that enemy before their attack resolves."
     },
@@ -36,7 +36,7 @@
       "row": 3,
       "expCost": 900,
       "requirements": "Friendship rank 6+",
-      "description": "Pack Instinct's bonus damage now applies to every allied Digimon within range, not just your partner. This entire class runs on being near your partner Digimon; if you're playing with the Spirit Tamer rule, Keenan has no separate partner Digimon to stand next to since he is the Digimon, so he's not able to take this class."
+      "description": "Pack Instinct's bonus damage now applies to every allied Digimon within range, not just your partner. This entire class runs on being near your partner Digimon. If you're playing with the Spirit Tamer rule, Keenan has no separate partner Digimon to stand next to, he is the Digimon, so he's not able to take this class."
     },
     {
       "name": "One of Us",

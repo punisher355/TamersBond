@@ -27,7 +27,7 @@
     {
       "name": "Never Too Late",
       "row": 2,
-      "expCost": 700,
+      "expCost": 500,
       "requirements": "Love rank 5+",
       "description": "Once per encounter, when an allied Digimon would enter Egg State, you may immediately spend 10 Hope to prevent it. That Digimon instead stabilizes at In-Training Stage with 1 HP."
     },

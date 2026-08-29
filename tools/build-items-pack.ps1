@@ -3,15 +3,20 @@
 #
 # HOW TO RUN: double-click  tools\rebuild-items-pack.bat
 #
-# ITEM JSON FIELD REFERENCE:
+# ITEM JSON FIELD REFERENCE (see ITEM_SYSTEM.md for the full category writeup):
 #   name             Display name
 #   source           "core" -> base-items | "season1".."seasonN" -> seasonN-items
 #   img              Filename in assets/Items/ (e.g. "Goggles.webp")
-#   type             "clothing" "equipment" "accessory" "digivice" "supply" "food"
+#   type             "digivice" "digiviceAddon" "equipment" "accessory" "gadget"
+#                     "supply" "food" "digiEgg" "spirit" "card"
 #   target           "tamer" "digimon" "both"
 #   timing           "passive" "free-action" "basic-action" "outside-combat"
 #   cost             { digidollars, real_money, special }
 #   effect           Description shown on sheet
+#   crest            Digivice only — which Crest it's tied to (or "Any"/"Unity"/etc)
+#   charges          Gadget only — { current, max }, refresh at Long Rest
+#   rarity           Card only — "common" "uncommon" "rare" "secretRare"
+#   digivolving      Digi-Egg / Spirit only — { formName, element, requiresAddon, durationTurns }
 #   stat_bonuses     { courage, friendship, love, knowledge, sincerity, reliability, hope }
 #   combat_bonuses   { hp_damage_reduction, attack_bonus, damage_bonus }
 #   skill_bonuses    { blitz, ironclad, crusher, ghost, roar, scan, rally, ... }
@@ -116,6 +121,18 @@ foreach ($f in $files) {
             quantity   = 1
             effect     = if ($raw.effect) { [string]$raw.effect } else { "" }
             isEquipped = $false
+            crest      = if ($raw.crest) { [string]$raw.crest } else { "" }
+            charges    = [ordered]@{
+                current = if ($raw.charges -and $null -ne $raw.charges.current) { [int]$raw.charges.current } else { 0 }
+                max     = if ($raw.charges -and $null -ne $raw.charges.max)     { [int]$raw.charges.max }     else { 0 }
+            }
+            rarity     = if ($raw.rarity) { [string]$raw.rarity } else { "" }
+            digivolving = [ordered]@{
+                formName      = if ($raw.digivolving -and $raw.digivolving.formName)      { [string]$raw.digivolving.formName }      else { "" }
+                element       = if ($raw.digivolving -and $raw.digivolving.element)       { [string]$raw.digivolving.element }       else { "" }
+                requiresAddon = if ($raw.digivolving -and $raw.digivolving.requiresAddon) { [string]$raw.digivolving.requiresAddon } else { "" }
+                durationTurns = if ($raw.digivolving -and $null -ne $raw.digivolving.durationTurns) { [int]$raw.digivolving.durationTurns } else { 6 }
+            }
             bonuses    = [ordered]@{
                 courage           = if ($raw.stat_bonuses -and $null -ne $raw.stat_bonuses.courage)     { [int]$raw.stat_bonuses.courage }     else { 0 }
                 friendship        = if ($raw.stat_bonuses -and $null -ne $raw.stat_bonuses.friendship)  { [int]$raw.stat_bonuses.friendship }  else { 0 }

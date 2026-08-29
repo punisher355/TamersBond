@@ -32,6 +32,15 @@
       </div>
 
     </div>
+
+    {{#if (or system.statusMods.cannotAct system.statusMods.forcedAttack system.statusMods.healingBlocked system.statusMods.restricted)}}
+    <div class="dd-status-banner flexrow" style="gap:6px; margin-top:6px; flex-wrap:wrap;">
+      {{#if system.statusMods.cannotAct}}<span class="dd-status-chip" style="background:#5dade2; color:#0a1a2e; padding:2px 8px; border-radius:10px; font-size:0.78em; font-weight:700;">⚠ Cannot Act</span>{{/if}}
+      {{#if system.statusMods.restricted}}<span class="dd-status-chip" style="background:#f39c12; color:#2a1a00; padding:2px 8px; border-radius:10px; font-size:0.78em; font-weight:700;">⚠ Restricted</span>{{/if}}
+      {{#if system.statusMods.forcedAttack}}<span class="dd-status-chip" style="background:#9b59b6; color:#fff; padding:2px 8px; border-radius:10px; font-size:0.78em; font-weight:700;">⚠ Forced Attack</span>{{/if}}
+      {{#if system.statusMods.healingBlocked}}<span class="dd-status-chip" style="background:#3d6b6b; color:#fff; padding:2px 8px; border-radius:10px; font-size:0.78em; font-weight:700;">⚠ Healing Blocked</span>{{/if}}
+    </div>
+    {{/if}}
   </header>
 
   {{!-- Tabs --}}
@@ -179,41 +188,28 @@
     {{!-- Status tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="status">
 
-      <h3 class="section-header">Active Conditions</h3>
-      <div class="status-add-row flexrow">
-        <select class="status-type-picker">{{selectOptions statusTypeOptions}}</select>
-        <button type="button" class="status-add-btn">+ Add Condition</button>
+      <h3 class="section-header">Active Effects</h3>
+      <div class="flexrow" style="margin-bottom:6px;">
+        <button type="button" class="effect-add-btn" style="width:auto; padding:2px 10px;">+ Add Effect</button>
       </div>
-
-      {{#if statusItems.length}}
-      <div class="status-active-list">
-        {{#each statusItems}}
-        <div class="status-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="status-type-badge" style="background:{{this.color}}"><i class="{{this.icon}}"></i></span>
-          <span class="status-item-name">{{this.name}}</span>
-          {{#if this.hasX}}
-          <span class="status-adjust-group">
-            <span class="status-adjust-label">{{this.xLabel}}</span>
-            <button type="button" class="status-x-decrease rank-btn" data-item-id="{{this.id}}">−</button>
-            <span class="status-adjust-val">{{this.system.x}}</span>
-            <button type="button" class="status-x-increase rank-btn" data-item-id="{{this.id}}">+</button>
+      {{#if effectItems.length}}
+      <div class="effect-active-list">
+        {{#each effectItems}}
+        <div class="effect-item-row flexrow" data-item-id="{{this.id}}" style="align-items:center; gap:6px; padding:4px 2px; border-bottom:1px solid #d0c8bc;">
+          <img src="{{this.img}}" alt="" style="width:24px; height:24px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="effect-open" data-item-id="{{this.id}}" style="flex:1; cursor:pointer; font-weight:600; color:#1a1a2e; text-decoration:underline dotted;" title="Click to edit settings">{{this.name}}</span>
+          <span class="flexrow" style="align-items:center; gap:2px; flex-shrink:0;">
+            <button type="button" class="effect-stack-decrease rank-btn" data-item-id="{{this.id}}">−</button>
+            <span style="min-width:22px; text-align:center; font-weight:700; font-size:0.95em;">{{this.system.stacks}}</span>
+            <button type="button" class="effect-stack-increase rank-btn" data-item-id="{{this.id}}">+</button>
           </span>
-          {{/if}}
-          {{#if this.hasY}}
-          <span class="status-adjust-group">
-            <span class="status-adjust-label">{{this.yLabel}}</span>
-            <button type="button" class="status-y-decrease rank-btn" data-item-id="{{this.id}}">−</button>
-            <span class="status-adjust-val">{{this.system.y}}</span>
-            <button type="button" class="status-y-increase rank-btn" data-item-id="{{this.id}}">+</button>
-          </span>
-          {{/if}}
-          <button type="button" class="status-remove move-action-btn" data-item-id="{{this.id}}" title="Remove condition"><i class="fas fa-times"></i></button>
+          <button type="button" class="effect-apply-btn move-action-btn" data-item-id="{{this.id}}" title="Trigger this effect" style="padding:2px 8px; flex-shrink:0;">Apply</button>
+          <button type="button" class="effect-remove move-action-btn" data-item-id="{{this.id}}" title="Remove effect" style="flex-shrink:0;"><i class="fas fa-times"></i></button>
         </div>
         {{/each}}
       </div>
       {{else}}
-      <p class="no-items">No active conditions.</p>
+      <p class="no-items" style="margin:2px 0 6px;">No active effects.</p>
       {{/if}}
 
     </div>

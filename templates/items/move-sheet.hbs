@@ -175,6 +175,14 @@
                    {{#if system.tags.sleep}}checked{{/if}} />
             SLEEP <span class="tag-hint">— target skips next turn; breaks on taking damage</span>
           </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.fragment" data-param-for="fragment"
+                   {{#if system.tags.fragment}}checked{{/if}} />
+            FRAGMENT
+            <input class="tag-param" type="number" name="system.tags.fragmentX" data-tag="fragment"
+                   value="{{system.tags.fragmentX}}" min="1" max="10" />
+            <span class="tag-hint">stacks — target cannot regain HP from any source</span>
+          </label>
         </div>
 
         <div class="tag-category">
@@ -191,6 +199,11 @@
             <input class="tag-param" type="number" name="system.tags.regenX" data-tag="regen"
                    value="{{system.tags.regenX}}" min="1" max="20" />
             <span class="tag-hint">HP per turn</span>
+          </label>
+          <label class="tag-row">
+            <input class="tag-checkbox" type="checkbox" name="system.tags.recovery" data-param-for=""
+                   {{#if system.tags.recovery}}checked{{/if}} />
+            RECOVERY <span class="tag-hint">— restores HP equal to PR dice roll; no hit roll required</span>
           </label>
         </div>
 

@@ -35,14 +35,14 @@
       "name": "Stand Together",
       "row": 3,
       "expCost": 700,
-      "requirements": "Friendship rank 5+",
+      "requirements": "Friendship rank 6+",
       "description": "Cold Front can now target any allied Digimon anywhere on the battlefield, not just within 3 spaces. You can use Cold Front once per round instead of once per encounter."
     },
     {
       "name": "Warp Digivolution",
       "row": 3,
       "expCost": 700,
-      "requirements": "Friendship rank 5+",
+      "requirements": "Friendship rank 6+",
       "description": "Your Digimon can now digivolve two stages at once in a single Digivolving Action, skipping the stage in between. Pay the combined Hope cost of both stages minus 2 to initiate the Warp Digivolution. While Warp Digivolved, your Digimon's Hope cost per Tamer turn is equal to the combined Hope cost of the two stages minus 2. For example, if your Digimon digivolves from Rookie to Ultimate, the normal Hope cost is Champion (6) plus Ultimate (10) for 16 Hope per Tamer turn; with Warp Digivolution the cost is 14 Hope per Tamer turn. Warp Digivolution cannot be forced, the full initiation cost must always be paid, and all other digivolution rules apply normally."
     }
   ]

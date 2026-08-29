@@ -332,6 +332,155 @@ export class SpiritTamerSheet extends TamerSheet {
     await this.actor.update({ "system.corruption.isCorrupted": !current });
   }
 
+  _onOpenDetails() {
+    const actor  = this.actor;
+    const sys    = actor.system;
+    const D      = CONFIG.DIGIMON;
+    const hope      = sys.crests.hope ?? {};
+    const expAvail  = (sys.exp?.total ?? 0) - (sys.exp?.spent ?? 0);
+    const digiAvail = (sys.digiExp?.total ?? 0) - (sys.digiExp?.spent ?? 0);
+    const isTF      = sys.isTamerForm ?? true;
+    const hpFormula = isTF
+      ? `12 + (${(sys.crests.sincerity?.rank ?? 1) + (sys.crests.sincerity?.gearBonus ?? 0)} Sincerity × 4) = ${sys.digiHp?.max ?? 0}`
+      : `20 + (${sys.digiStats?.sincerity?.total ?? 0} Sincerity × 4) = ${sys.digiHp?.max ?? 0}`;
+
+    const crestRows = CREST_ORDER.map(key => {
+      const c     = sys.crests[key] ?? {};
+      const rank  = c.rank ?? 1;
+      const mod   = c.modifier    ?? 0;
+      const auto  = c.autoModifier ?? 0;
+      const gear  = c.gearBonus   ?? 0;
+      const total = rank + mod + auto + gear;
+      return `
+        <tr>
+          <td class="dd-det-stat-name" style="color:${D.statColors[key]}">${D.statLabels[key]}</td>
+          <td class="dd-det-readonly">${rank}</td>
+          <td><input type="number" name="crests.${key}.modifier"     value="${mod}"  class="dd-det-input" /></td>
+          <td><input type="number" name="crests.${key}.autoModifier" value="${auto}" class="dd-det-input" /></td>
+          <td class="dd-det-readonly">${gear}</td>
+          <td class="dd-det-total">${total}</td>
+        </tr>`;
+    }).join("");
+
+    const digiStatRows = CREST_ORDER.map(key => {
+      const ds = sys.digiStats?.[key] ?? {};
+      return `
+        <tr>
+          <td class="dd-det-stat-name" style="color:${D.statColors[key]}">${D.statLabels[key]}</td>
+          <td><input type="number" name="digiStats.${key}.base"        value="${ds.base        ?? 0}" class="dd-det-input" /></td>
+          <td class="dd-det-readonly" style="color:${D.statColors[key]}">${ds.tamerBonus ?? 0}</td>
+          <td class="dd-det-readonly">${ds.invested ?? 0}</td>
+          <td><input type="number" name="digiStats.${key}.conditional" value="${ds.conditional ?? 0}" class="dd-det-input" /></td>
+          <td class="dd-det-total">${ds.total ?? 0}</td>
+        </tr>`;
+    }).join("");
+
+    const content = `
+      <form class="dd-details-form">
+        <div class="dd-det-section">
+          <div class="dd-det-section-title">HP (${isTF ? "Tamer Form" : "Digimon Form"})</div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">Max HP formula</span>
+            <span>${hpFormula}</span>
+          </div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">HP Current</span>
+            <input type="number" name="digiHp.value" value="${sys.digiHp?.value ?? 0}" class="dd-det-input-wide" />
+            <span class="dd-det-hint">/ ${sys.digiHp?.max ?? 0} max</span>
+          </div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">HP Temp</span>
+            <input type="number" name="digiHp.temp" value="${sys.digiHp?.temp ?? 0}" class="dd-det-input-wide" />
+          </div>
+        </div>
+
+        <div class="dd-det-section">
+          <div class="dd-det-section-title">Tamer EXP</div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">Total EXP</span>
+            <input type="number" name="exp.total" value="${sys.exp?.total ?? 0}" class="dd-det-input-wide" />
+          </div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">EXP Spent</span>
+            <input type="number" name="exp.spent" value="${sys.exp?.spent ?? 0}" class="dd-det-input-wide" />
+            <span class="dd-det-hint">Available: ${expAvail}</span>
+          </div>
+        </div>
+
+        <div class="dd-det-section">
+          <div class="dd-det-section-title">Digimon EXP</div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">Total EXP</span>
+            <input type="number" name="digiExp.total" value="${sys.digiExp?.total ?? 0}" class="dd-det-input-wide" />
+          </div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">EXP Spent</span>
+            <input type="number" name="digiExp.spent" value="${sys.digiExp?.spent ?? 0}" class="dd-det-input-wide" />
+            <span class="dd-det-hint">Available: ${digiAvail}</span>
+          </div>
+        </div>
+
+        <div class="dd-det-section">
+          <div class="dd-det-section-title">Hope</div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">Hope Pool (Max)</span>
+            <span class="dd-det-readonly">${hope.pool ?? 20}</span>
+            <span class="dd-det-hint">Auto — set by Total EXP earned</span>
+          </div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">Hope Current</span>
+            <input type="number" name="crests.hope.current" value="${hope.current ?? hope.pool ?? 20}" class="dd-det-input-wide" />
+          </div>
+          <div class="dd-det-row">
+            <span class="dd-det-label">Hope Per Turn</span>
+            <input type="number" name="crests.hope.perTurn" value="${hope.perTurn ?? 0}" class="dd-det-input-wide" />
+          </div>
+        </div>
+
+        <div class="dd-det-section">
+          <div class="dd-det-section-title">Crest Stats (Tamer Form)</div>
+          <p class="dd-det-hint-block">Rank is set by +/− on the Crests tab. Manual and Auto Buff can be adjusted freely. Gear is read-only.</p>
+          <table class="dd-det-table">
+            <thead><tr>
+              <th>Crest</th><th>Rank</th><th>Manual</th><th>Auto Buff</th><th>Gear</th><th>Total</th>
+            </tr></thead>
+            <tbody>${crestRows}</tbody>
+          </table>
+        </div>
+
+        <div class="dd-det-section">
+          <div class="dd-det-section-title">Digimon Stats (Digimon Form)</div>
+          <p class="dd-det-hint-block">Base and Conditional are freely editable. Tamer and Invested columns are read-only — use the Digimon Stats tab to invest.</p>
+          <table class="dd-det-table">
+            <thead><tr>
+              <th>Stat</th><th>Base</th><th>Tamer</th><th>Invested</th><th>Cond.</th><th>Total</th>
+            </tr></thead>
+            <tbody>${digiStatRows}</tbody>
+          </table>
+        </div>
+      </form>`;
+
+    new Dialog({
+      title:   `${actor.name} — Sheet Details`,
+      content,
+      buttons: {
+        save: {
+          icon:  '<i class="fas fa-save"></i>',
+          label: "Save",
+          callback: html => {
+            const update = {};
+            html.find("input[name]").each((_, el) => {
+              update[`system.${el.name}`] = el.type === "number" ? (parseInt(el.value) || 0) : el.value;
+            });
+            actor.update(update);
+          }
+        },
+        cancel: { icon: '<i class="fas fa-times"></i>', label: "Cancel" }
+      },
+      default: "save"
+    }, { width: 580 }).render(true);
+  }
+
   _onMoveOpen(ev) {
     ev.preventDefault();
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);

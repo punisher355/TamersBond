@@ -10,6 +10,17 @@ A fully custom Foundry VTT **game system** (not a module) for a homebrew Digimon
 
 This is not a skin on top of an existing system. Everything is custom.
 
+**Effect / status system:** see `EFFECT_SYSTEM.md` for the declarative rule-element
+system that drives Burn/Freeze/Paralyze/Blind/Confuse/Poison/Sleep/Fragment and any
+other Effect item's mechanical behavior. Read it before touching `module/rules/`,
+`packs/effects.db`, or `EffectData` in `module/data/item-models.js`.
+
+**Item system:** see `ITEM_SYSTEM.md` for the nine item categories (Digivice,
+Digivice Addon, Equipment, Accessory, Gadget, Supply, Food, Digi-Egg, Spirit, Card),
+their equip-slot rules, and the `Items/` -> `tools/build-items-pack.ps1` -> compendium
+pipeline. Read it before touching `GearData` in `module/data/item-models.js`,
+`DIGIMON.slotRules` in `module/config.js`, or the gear-equip logic in `TamerSheet.js`.
+
 ---
 
 ## Tech Stack
@@ -399,3 +410,11 @@ Cover was removed from Reliability. See Chapter2-TamerSheet.md for full skill ke
 - digivolution.js — Hope math and corruption thresholds are intentional
 - combat.js — multiplier stacking order matters (attribute first, then element)
 - hope.js — Hope pool calculation formula ties to tamer stats
+- module/rules/ and packs/effects.db — read EFFECT_SYSTEM.md first; the rule
+  engine's reset-then-apply ordering and per-actor-type path resolution are
+  load-bearing, and the compendium must stay in sync with combat.js's
+  `_EFFECT_TEMPLATES`
+- Items/, packs/*-items.db, and DIGIMON.slotRules — read ITEM_SYSTEM.md first;
+  the nine item categories' equip-slot caps are enforced in three separate
+  places in TamerSheet.js, and Items/*.json must stay in sync with what
+  build-items-pack.ps1 actually reads

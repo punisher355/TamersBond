@@ -13,7 +13,7 @@
     {
       "name": "Closer Alone",
       "row": 2,
-      "expCost": 400,
+      "expCost": 450,
       "requirements": "Courage rank 4+",
       "description": "Fighting Alone's range tightens up. Instead of needing no ally within 5 spaces, it now only needs no ally within 3 spaces to trigger."
     },

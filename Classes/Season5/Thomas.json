@@ -41,7 +41,7 @@
     {
       "name": "Set the Board",
       "row": 3,
-      "expCost": 800,
+      "expCost": 900,
       "requirements": "Knowledge rank 6+",
       "description": "At the start of an encounter, you may make a Command check against DN 10. On a success, you may move one enemy and one ally 2 spaces each before the encounter's first round begins."
     }
