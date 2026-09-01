@@ -233,7 +233,7 @@ foreach ($f in $files) {
 
     # --- Build Move entry (if signature_move is a full object) ---
 
-    if ($raw.signature_move -and $raw.signature_move -isnot [string]) {
+    if ($raw.signature_move -and $raw.signature_move -isnot [string] -and [string]$raw.signature_move.name -ne "") {
         $sig    = $raw.signature_move
         $moveId = Get-MoveId $sig.name
 
