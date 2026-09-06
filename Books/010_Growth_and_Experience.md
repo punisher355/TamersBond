@@ -1,4 +1,4 @@
-# **Chapter 9: Growth & Experience**
+# **Chapter 10: Growth & Experience**
 
 There are no levels in Tamer's Bond. Characters grow by spending EXP. Every purchase is a tradeoff.
 

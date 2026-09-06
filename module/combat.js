@@ -14,7 +14,7 @@ export function getActorStatTotals(actor) {
     for (const key of CREST_ORDER) {
       const st  = sys.stats[key] ?? {};
       const tck = tc[key] ?? {};
-      const tb  = (tck.rank ?? 0) + (tck.modifier ?? 0) + (tck.autoModifier ?? 0) + (tck.gearBonus ?? 0);
+      const tb  = (tck.rank ?? 0) + (tck.primaryCrestBonus ?? 0) + (tck.modifier ?? 0) + (tck.autoModifier ?? 0) + (tck.gearBonus ?? 0);
       out[key] = (st.base ?? 0) + tb + (st.invested ?? 0) + (st.conditional ?? 0);
     }
     return out;
@@ -23,7 +23,7 @@ export function getActorStatTotals(actor) {
     const out = {};
     for (const key of CREST_ORDER) {
       const c  = sys.crests[key] ?? {};
-      out[key] = (c.rank ?? 1) + (c.modifier ?? 0) + (c.autoModifier ?? 0) + (c.gearBonus ?? 0);
+      out[key] = (c.rank ?? 0) + (c.primaryCrestBonus ?? 0) + (c.modifier ?? 0) + (c.autoModifier ?? 0) + (c.gearBonus ?? 0);
     }
     return out;
   }
@@ -33,7 +33,7 @@ export function getActorStatTotals(actor) {
       // Tamer form — fight with crest stats (same as regular Tamer)
       for (const key of CREST_ORDER) {
         const c  = sys.crests[key] ?? {};
-        out[key] = (c.rank ?? 1) + (c.modifier ?? 0) + (c.autoModifier ?? 0) + (c.gearBonus ?? 0);
+        out[key] = (c.rank ?? 0) + (c.primaryCrestBonus ?? 0) + (c.modifier ?? 0) + (c.autoModifier ?? 0) + (c.gearBonus ?? 0);
       }
     } else {
       // Digimon form — fight with digiStats
@@ -143,7 +143,7 @@ function _gmTargetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags
         </div>
         <div class="dd-final-row">
           <span>Final: <strong class="dd-final-value">${initFinal}</strong> damage</span>
-          ${id ? `<button class="dd-apply-btn" data-target-id="${id}" data-target-name="${name}" data-source-id="${sourceId ?? ""}" data-source-name="${sourceName ?? ""}" data-has-burn="${!!(tags?.burn)}" data-burn-x="${tags?.burnX ?? 2}" data-burn-y="${tags?.burnY ?? 3}" data-has-freeze="${!!(tags?.freeze)}" data-has-paralyze="${!!(tags?.paralyze)}" data-paralyze-x="${tags?.paralyzeX ?? 1}" data-has-blind="${!!(tags?.blind)}" data-has-confuse="${!!(tags?.confuse)}" data-has-drain="${!!(tags?.drain)}" data-has-regen="${!!(tags?.regen)}" data-regen-x="${tags?.regenX ?? 1}" data-has-poison="${!!(tags?.poison && (natural ?? 0) >= 15)}" data-poison-x="${tags?.poisonX ?? 1}" data-has-sleep="${!!(tags?.sleep)}" data-has-fragment="${!!(tags?.fragment)}" data-fragment-x="${tags?.fragmentX ?? 1}">Apply to ${name}</button>` : ""}
+          ${id ? `<button class="dd-apply-btn" data-target-id="${id}" data-target-name="${name}" data-source-id="${sourceId ?? ""}" data-source-name="${sourceName ?? ""}" data-has-burn="${!!(tags?.burn)}" data-burn-x="${tags?.burnX ?? 2}" data-burn-y="${tags?.burnY ?? 3}" data-has-freeze="${!!(tags?.freeze)}" data-freeze-x="${tags?.freezeX ?? 1}" data-has-paralyze="${!!(tags?.paralyze)}" data-paralyze-x="${tags?.paralyzeX ?? 1}" data-has-blind="${!!(tags?.blind)}" data-has-confuse="${!!(tags?.confuse)}" data-confuse-x="${tags?.confuseX ?? 1}" data-has-drain="${!!(tags?.drain)}" data-has-regen="${!!(tags?.regen)}" data-regen-x="${tags?.regenX ?? 1}" data-has-poison="${!!(tags?.poison && (natural ?? 0) >= 15)}" data-poison-x="${tags?.poisonX ?? 1}" data-has-sleep="${!!(tags?.sleep)}" data-has-fragment="${!!(tags?.fragment)}" data-fragment-x="${tags?.fragmentX ?? 1}">Apply to ${name}</button>` : ""}
         </div>
         <div class="dd-applied-note" style="display:none;"></div>
       </div>`;
@@ -392,17 +392,105 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
 }
 
 // ── Effect application ────────────────────────────────────────────────────────
+//
+// Books/012_Attacks_and_Tags.md "Status Effect Decay": every stacking status
+// loses 1 stack automatically at the start of its owner's turn, then makes a
+// Core Drive check (coreDriveRank d6 vs DN = remaining + 1) for a chance to
+// shed a second stack. Freeze/Paralyze/Confuse are additionally tiered by
+// current stack count (1-3 / 4-6 / 7+), so their `rules` array is recomputed
+// every time their stacks change rather than staying fixed on the template.
+
+const HP_DMG_CODE  = "const _k=actor.type==='spiritTamer'?'system.digiHp.value':'system.hp.value';const _v=actor.type==='spiritTamer'?(actor.system.digiHp?.value??0):(actor.system.hp?.value??0);actor.update({[_k]:Math.max(0,_v-stacks)});";
+
+// Resolve the Core Drive rank used for a target's Core Drive check, mirroring
+// how each sheet type already resolves its own skill rolls (DigimonSheet.js /
+// NpcDigimonSheet.js _onSkillRoll): a linked Digimon rolls its Tamer's rank,
+// an NPC Digimon or a Tamer/SpiritTamer rolls its own.
+function _coreDriveRank(actor) {
+  if (actor.type === "digimon") {
+    const tamer = actor.system.tamerLink ? game.actors?.get(actor.system.tamerLink) : null;
+    return tamer?.system?.skills?.sincerity?.coreDrive?.rank ?? actor.system?.skills?.sincerity?.coreDrive?.rank ?? 1;
+  }
+  return actor.system?.skills?.sincerity?.coreDrive?.rank ?? 1;
+}
+
+// Tier-dependent `rules` array for the three severity-tiered statuses.
+// Returns null for anything that isn't tiered (caller should leave rules alone).
+function _tierRules(type, stacks) {
+  if (type === "freeze" || type === "paralyze") {
+    if (stacks >= 4) return [{ path: "cannotAct", mode: "override", value: 1 }];
+    return [{ path: "restricted", mode: "override", value: 1 }]; // 1-3
+  }
+  if (type === "confuse") {
+    if (stacks >= 7) return []; // GM manually redirects a move — nothing numeric to write
+    if (stacks >= 4) return [{ path: "forcedAttack", mode: "override", value: 1 }];
+    return [{ path: "hitBonus", mode: "subtract", value: 2 }]; // 1-3
+  }
+  return null;
+}
+
+// Tier-dependent flavor line for the SOT card and passive text.
+function _tierDetail(type, stacks) {
+  if (type === "freeze") {
+    if (stacks >= 7) return `${stacks} stacks — cannot act. Immune to on-hit stack loss at 7+.`;
+    if (stacks >= 4) return `${stacks} stacks — cannot act. Also loses a stack whenever targeted.`;
+    return `${stacks} stacks — choose Basic OR Move Action, not both. Also loses a stack whenever targeted.`;
+  }
+  if (type === "paralyze") {
+    if (stacks >= 7) return `${stacks} stacks — Speed halved, cannot act, and takes ${stacks} damage this turn.`;
+    if (stacks >= 4) return `${stacks} stacks — Speed halved, cannot act.`;
+    return `${stacks} stacks — Speed halved. Choose Basic OR Move Action, not both.`;
+  }
+  if (type === "confuse") {
+    if (stacks >= 7) return `${stacks} stacks — GM picks one of this Digimon's own moves and turns it against them.`;
+    if (stacks >= 4) return `${stacks} stacks — must attack the closest character instead of acting normally.`;
+    return `${stacks} stacks — −2 to this turn's attack hit roll.`;
+  }
+  return "";
+}
 
 const _EFFECT_TEMPLATES = {
-  burn:     { name:"Burn",     stacks:2, ticks:3, startOfTurnText:"BURN: Taking fire damage at the start of this turn! (X = damage taken)",         removeStackOnTurn:true, applyCode:"actor.update({'system.hp.value': Math.max(0, (actor.system.hp.value ?? 0) - stacks)});",                                                        passiveText:"X = damage/turn (Stacks), Y = duration (Ticks). Loses 1 Stack per turn like every effect; the separate Ticks counter is a secondary cap. Reapplied Burn: take the higher X value and add the Y counters together.", rules:[] },
-  freeze:   { name:"Freeze",   stacks:1, startOfTurnText:"FREEZE: Cannot act! End of turn: roll 1d20 + Love (DN 14) to break. Also breaks on damage.", removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"Cannot act. End of turn: 1d20+Love DN 14. Breaks on damage.", rules:[{ path:"cannotAct", mode:"override", value:1 }] },
-  paralyze: { name:"Paralyze", stacks:1, startOfTurnText:"PARALYZE: Speed halved. 1-3 stacks: Basic or Move only. 4+: no actions. Lose 1 stack/turn. Nat 20 clears all.", removeStackOnTurn:true,  applyCode:"",                                                                                                                              passiveText:"Speed halved. 1-3 stacks: limited actions. 4+: none.",       rules:[{ path:"restricted", mode:"override", value:1 }] },
-  blind:    { name:"Blind",    stacks:2, startOfTurnText:"BLIND: -4 to all attack hit rolls this turn!",                                               removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"-4 to all attack hit rolls while Blind.",                     rules:[{ path:"hitBonus", mode:"subtract", value:4 }] },
-  confuse:  { name:"Confuse",  stacks:1, startOfTurnText:"CONFUSE: Roll 1d20 + Friendship (DN 14) to snap out. Fail: must attack nearest ally!",        removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"Start of turn: Friendship DN 14. Fail: attack nearest ally.", rules:[{ path:"forcedAttack", mode:"override", value:1 }] },
-  poison:   { name:"Poison",   stacks:1, startOfTurnText:"POISON: Taking poison damage at the start of this turn! (Stacks = damage dealt)",           removeStackOnTurn:true,  applyCode:"actor.update({'system.hp.value': Math.max(0, (actor.system.hp.value ?? 0) - stacks)});",                                                        passiveText:"Applies on a natural attack roll of 15+. Reapplied Poison: add X to current stacks.", rules:[] },
-  sleep:    { name:"Sleep",    stacks:1, startOfTurnText:"SLEEP: Cannot act! Start of turn: Firewall check DN 13 to wake. Also breaks on any damage.",  removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"Cannot act. Start of turn: Firewall DN 13 to wake. Breaks on any damage taken.", rules:[{ path:"cannotAct", mode:"override", value:1 }] },
-  fragment: { name:"Fragment", stacks:1, startOfTurnText:"FRAGMENT: Lose 1 stack. While Fragmented, cannot regain HP from any source.",                removeStackOnTurn:true,  applyCode:"",                                                                                                                                              passiveText:"Cannot regain HP from any source (RECOVERY, items, skill checks). Reapplied Fragment: add X to current stacks.", rules:[{ path:"healingBlocked", mode:"override", value:1 }] },
-  regen:    { name:"Regen",    stacks:1, startOfTurnText:"REGEN: Restoring HP at the start of this turn! (Stacks = HP restored)",                       removeStackOnTurn:true,  applyCode:"if (!actor.system.statusMods?.healingBlocked) { const hp = actor.system.hp ?? {}; actor.update({'system.hp.value': Math.min(hp.max ?? 9999, (hp.value ?? 0) + stacks)}); }",   passiveText:"Blocked while the target is Fragmented.",                     rules:[] }
+  burn:     { name:"Burn",     stacks:2, ticks:3, statusType:"burn",     decayField:"ticks",  coreDriveCheck:true,
+              startOfTurnText:"BURN: Take X damage, then lose 1 Tick, then a Core Drive check for a chance to lose 1 more Tick.",
+              removeStackOnTurn:true, applyCode:HP_DMG_CODE,
+              passiveText:"On hit, target gains a Burn stack. X = damage/turn (Stacks) — fixed, does not decay. Y = duration (Ticks): loses 1 Tick automatically at start of turn, then a Core Drive check (DN = remaining Ticks + 1) for a chance to lose 1 more. Reapplied Burn: take the higher X value and add the Y counters together.",
+              rules:[] },
+  freeze:   { name:"Freeze",   stacks:1, statusType:"freeze",   decayField:"stacks", coreDriveCheck:true,
+              startOfTurnText:"FREEZE: Lose 1 stack, then a Core Drive check for a chance to lose 1 more.",
+              removeStackOnTurn:true, applyCode:"",
+              passiveText:"On hit, gains X Freeze stacks (add to current total if already Frozen). Loses 1 stack automatically at start of turn, then a Core Drive check (DN = remaining stacks + 1) for a chance to lose 1 more. Also loses 1 stack whenever targeted by an attack, hit or miss — except at 7+ stacks. 1–3: Basic OR Move only. 4–6: cannot act. 7+: cannot act, immune to on-hit stack loss.",
+              rules:[{ path:"restricted", mode:"override", value:1 }] },
+  paralyze: { name:"Paralyze", stacks:1, statusType:"paralyze", decayField:"stacks", coreDriveCheck:true,
+              startOfTurnText:"PARALYZE: Speed halved. Lose 1 stack, then a Core Drive check for a chance to lose 1 more.",
+              removeStackOnTurn:true, applyCode:"",
+              passiveText:"Speed halved while any stacks remain. On hit, gains X stacks. Loses 1 stack automatically at start of turn, then a Core Drive check (DN = remaining stacks + 1) for a chance to lose 1 more. 1–3: choose Basic OR Move Action. 4–6: cannot act. 7+: cannot act and takes damage equal to current stacks.",
+              rules:[{ path:"restricted", mode:"override", value:1 }] },
+  blind:    { name:"Blind",    stacks:2, statusType:"blind",    decayField:"stacks", coreDriveCheck:true,
+              startOfTurnText:"BLIND: Lose 1 stack, then a Core Drive check for a chance to lose 1 more. -4 to all hit rolls while any stacks remain.",
+              removeStackOnTurn:true,  applyCode:"",
+              passiveText:"On hit, target gains 2 Blind stacks (fixed). -4 to all attack hit rolls while any Blind stacks remain.", rules:[{ path:"hitBonus", mode:"subtract", value:4 }] },
+  confuse:  { name:"Confuse",  stacks:1, statusType:"confuse",  decayField:"stacks", coreDriveCheck:true,
+              startOfTurnText:"CONFUSE: Lose 1 stack, then a Core Drive check for a chance to lose 1 more.",
+              removeStackOnTurn:true,  applyCode:"",
+              passiveText:"On hit, gains X Confuse stacks (add to current total if already Confused). Loses 1 stack automatically at start of turn, then a Core Drive check (DN = remaining stacks + 1) for a chance to lose 1 more. 1–3: -2 to this turn's hit roll. 4–6: must attack the closest character. 7+: GM redirects one of the target's own moves at itself.",
+              rules:[{ path:"hitBonus", mode:"subtract", value:2 }] },
+  poison:   { name:"Poison",   stacks:1, statusType:"poison",   decayField:"stacks", coreDriveCheck:true,
+              startOfTurnText:"POISON: Take damage equal to current stacks, then lose 1 stack, then a Core Drive check for a chance to lose 1 more.",
+              removeStackOnTurn:true,  applyCode:HP_DMG_CODE,
+              passiveText:"Applies on a natural attack roll of 15+. Reapplied Poison: add X to current stacks. Loses 1 stack automatically at start of turn, then a Core Drive check (DN = remaining stacks + 1) for a chance to lose 1 more.", rules:[] },
+  sleep:    { name:"Sleep",    stacks:1, statusType:"sleep",    decayField:"stacks", coreDriveCheck:false,
+              startOfTurnText:"SLEEP: Cannot act! Start of turn: Firewall check DN 13 to wake. Also breaks on any damage.",
+              removeStackOnTurn:true,  applyCode:"",
+              passiveText:"Cannot act. Start of turn: Firewall check DN 13 to wake, otherwise stays asleep. Breaks immediately on any damage taken.", rules:[{ path:"cannotAct", mode:"override", value:1 }] },
+  fragment: { name:"Fragment", stacks:1, statusType:"fragment", decayField:"stacks", coreDriveCheck:true,
+              startOfTurnText:"FRAGMENT: Lose 1 stack, then a Core Drive check for a chance to lose 1 more. While Fragmented, cannot regain HP from any source.",
+              removeStackOnTurn:true,  applyCode:"",
+              passiveText:"On hit, target gains X Fragment stacks. If already Fragmented, add X to current total. Loses 1 stack automatically at start of turn, then a Core Drive check (DN = remaining stacks + 1) for a chance to lose 1 more. Cannot regain HP from any source (RECOVERY, items, skill checks) while any stacks remain.", rules:[{ path:"healingBlocked", mode:"override", value:1 }] },
+  regen:    { name:"Regen",    stacks:1, statusType:"regen",    decayField:"stacks", coreDriveCheck:false,
+              startOfTurnText:"REGEN: Restoring HP at the start of this turn! (Stacks = HP restored)",
+              removeStackOnTurn:true,
+              applyCode:"if (!actor.system.statusMods?.healingBlocked) { const _st=actor.type==='spiritTamer';const _k=_st?'system.digiHp.value':'system.hp.value';const _hp=_st?(actor.system.digiHp??{}):(actor.system.hp??{});actor.update({[_k]:Math.min(_hp.max??9999,(_hp.value??0)+stacks)}); }",
+              passiveText:"Blocked while the target is Fragmented.", rules:[] }
 };
 
 async function _applyStatus(target, type, x, y, sourceName) {
@@ -413,19 +501,55 @@ async function _applyStatus(target, type, x, y, sourceName) {
 
   const existing = target.items.find(i => i.type === "effect" && i.name === tmpl.name);
   if (existing) {
-    if (type === "burn")     { await existing.update({ "system.stacks": Math.max(xVal, existing.system.stacks??0), "system.ticks": (existing.system.ticks??0) + (yVal || tmpl.ticks || 0) }); return; }
-    if (type === "paralyze") { await existing.update({ "system.stacks": (existing.system.stacks??0) + (xVal||1) }); return; }
-    if (type === "poison")   { await existing.update({ "system.stacks": (existing.system.stacks??0) + (xVal||1) }); return; }
-    if (type === "fragment") { await existing.update({ "system.stacks": (existing.system.stacks??0) + (xVal||1) }); return; }
+    // Statuses whose tag carries a variable X stack additively onto the current total.
+    const addsStacks = ["freeze", "paralyze", "poison", "fragment", "confuse"].includes(type);
+    if (type === "burn") {
+      await existing.update({ "system.stacks": Math.max(xVal, existing.system.stacks??0), "system.ticks": (existing.system.ticks??0) + (yVal || tmpl.ticks || 0) });
+      return;
+    }
+    if (addsStacks) {
+      const newStacks = (existing.system.stacks??0) + (xVal||1);
+      const update = { "system.stacks": newStacks };
+      const tier = _tierRules(type, newStacks);
+      if (tier) update["system.rules"] = tier;
+      await existing.update(update);
+      return;
+    }
     return;
   }
 
   const data = { ...tmpl, stacks: xVal || tmpl.stacks, ticks: yVal || tmpl.ticks || 0 };
+  const initialRules = _tierRules(type, data.stacks) ?? data.rules;
   const created = await target.createEmbeddedDocuments("Item", [{
     name: data.name, type: "effect", img: "icons/svg/aura.svg",
-    system: { stacks: data.stacks, ticks: data.ticks, startOfTurnText: data.startOfTurnText, removeStackOnTurn: data.removeStackOnTurn, applyCode: data.applyCode, passiveText: data.passiveText, rules: data.rules, duration: { unit: "encounter" } }
+    system: {
+      stacks: data.stacks, ticks: data.ticks, startOfTurnText: data.startOfTurnText,
+      removeStackOnTurn: data.removeStackOnTurn, applyCode: data.applyCode, passiveText: data.passiveText,
+      statusType: data.statusType, decayField: data.decayField, coreDriveCheck: data.coreDriveCheck,
+      rules: initialRules, duration: { unit: "encounter" }
+    }
   }]);
   return created[0]?.id ?? null;
+}
+
+// Freeze loses 1 stack whenever its owner is targeted by an attack, hit or
+// miss, except at 7+ stacks (Books/012_Attacks_and_Tags.md [FREEZE X]).
+// Called on every "Apply to {target}" click, independent of that attack's own tags.
+async function _freezeOnHit(target) {
+  const existing = target.items.find(i => i.type === "effect" && i.name === "Freeze");
+  if (!existing) return null;
+  const cur = existing.system.stacks ?? 0;
+  if (cur <= 0 || cur >= 7) return null;
+  const next = cur - 1;
+  if (next <= 0) {
+    await existing.delete();
+    return "Freeze: on-hit stack loss cleared it";
+  }
+  const updates = { "system.stacks": next };
+  const tier = _tierRules("freeze", next);
+  if (tier) updates["system.rules"] = tier;
+  await existing.update(updates);
+  return `Freeze: ${cur} → ${next} (targeted by attack)`;
 }
 
 // ── Start-of-turn helpers ─────────────────────────────────────────────────────
@@ -485,6 +609,7 @@ export function registerCombatHooks() {
   });
 
   // --- Inject acted-this-round toggle into each combatant row's controls ---
+  // --- Also strip the 10000 group-offset from Tamer initiative display    ---
   Hooks.on("renderCombatTracker", (_app, html) => {
     const $html = $(html);
     const combat = game.combat;
@@ -496,6 +621,20 @@ export function registerCombatHooks() {
       if (!cid) return;
       const combatant = combat.combatants.get(cid);
       if (!combatant) return;
+
+      // Strip the 10000 Tamer group offset from the displayed initiative.
+      // In Foundry v14 the value lives in a plain <span> inside .token-initiative.
+      // Any value ≥ 10000 is a Tamer; subtract the offset so players see
+      // a normal speed-based number (e.g. 12.03 instead of 10012.03).
+      $row.find(".token-initiative span, .token-initiative .initiative-input").each(function() {
+        const $el  = $(this);
+        const raw  = $el.is("input") ? $el.val() : $el.text();
+        const val  = parseFloat(raw);
+        if (!isNaN(val) && val >= 10000) {
+          const display = (val - 10000).toFixed(2);
+          if ($el.is("input")) $el.val(display); else $el.text(display);
+        }
+      });
 
       const acted  = !!combatant.getFlag("digital-destiny", "hasActed");
       const $ctrl  = $row.find(".combatant-controls");
@@ -560,11 +699,15 @@ export function registerCombatHooks() {
       // EFFECT_SYSTEM.md's house rule), so this is normally always true for
       // them — this guard exists for a custom/manually-authored effect that
       // has neither, so it doesn't get a dead button.
-      const hasAction = !!(s.applyCode?.trim() || s.removeStackOnTurn || (s.ticks ?? 0) > 0);
+      const hasAction  = !!(s.applyCode?.trim() || s.removeStackOnTurn || (s.ticks ?? 0) > 0);
+      // Freeze/Paralyze/Confuse show the current tier's actual effect (computed from
+      // live stacks) instead of the generic template text — see _tierDetail above.
+      const tierDetail = _tierDetail(s.statusType, s.stacks ?? 0);
+      const detail     = tierDetail ? `${s.startOfTurnText || ""} ${tierDetail}`.trim() : (s.startOfTurnText || "");
       effects.push({
         type:     "effect",
         label:    effect.name + stackLabel,
-        detail:   s.startOfTurnText || "",
+        detail,
         btnAttrs: hasAction ? `data-effect-type="effect" data-actor-id="${actor.id}" data-effect-id="${effect.id}"` : null
       });
     }
@@ -621,8 +764,11 @@ export function registerCombatHooks() {
         const effectId   = btn.attr("data-effect-id");
         const effectItem = actor.items.get(effectId);
         if (!effectItem) { ui.notifications.warn("Effect not found."); return; }
-        const s      = effectItem.system;
-        const stacks = s.stacks ?? 1;
+        const s          = effectItem.system;
+        const stacks     = s.stacks ?? 1; // X value for applyCode (Burn/Poison damage) — independent of decay
+        const decayField = s.decayField || "stacks";
+        const statusType = s.statusType || "";
+        const noteParts  = [];
 
         if (s.applyCode?.trim()) {
           try {
@@ -634,19 +780,68 @@ export function registerCombatHooks() {
         }
 
         let effectDeleted = false;
-        if (s.removeStackOnTurn) {
-          const next = stacks - 1;
-          if (next <= 0) { await effectItem.delete(); effectDeleted = true; }
-          else await effectItem.update({ "system.stacks": next });
+        let finalValue    = null; // decayField's value after this turn's decay, if the effect survives
+
+        // Automatic -1 on the decay field: stacks for every status but Burn, ticks for Burn.
+        if (s.removeStackOnTurn || decayField === "ticks") {
+          const cur  = s[decayField] ?? 0;
+          const next = cur - 1;
+          if (next <= 0) {
+            await effectItem.delete();
+            effectDeleted = true;
+          } else {
+            finalValue = next;
+          }
         }
 
-        if (!effectDeleted && (s.ticks ?? 0) > 0) {
-          const nextTicks = s.ticks - 1;
-          if (nextTicks <= 0) await effectItem.delete();
-          else await effectItem.update({ "system.ticks": nextTicks });
+        // Core Drive check (Books/012_Attacks_and_Tags.md "Status Effect Decay"):
+        // coreDriveRank d6 vs DN = remaining + 1, for a chance to shed one more.
+        if (!effectDeleted && s.coreDriveCheck && finalValue !== null) {
+          const dn   = finalValue + 1;
+          const rank = _coreDriveRank(actor);
+          const roll = await new Roll(`${rank}d6`).evaluate();
+          await roll.toMessage({
+            speaker: ChatMessage.getSpeaker({ actor }),
+            flavor: `<strong>${effectItem.name} — Core Drive Check</strong> &nbsp;DN ${dn}`
+          });
+          if (roll.total >= dn) {
+            const next2 = finalValue - 1;
+            if (next2 <= 0) {
+              await effectItem.delete();
+              effectDeleted = true;
+              noteParts.push(`Core Drive ${roll.total} ≥ DN ${dn}: cleared`);
+            } else {
+              finalValue = next2;
+              noteParts.push(`Core Drive ${roll.total} ≥ DN ${dn}: down to ${next2}`);
+            }
+          } else {
+            noteParts.push(`Core Drive ${roll.total} < DN ${dn}: no extra loss`);
+          }
         }
 
-        note = `${effectItem.name} applied.`;
+        // Persist the decay, recompute tiered rules (Freeze/Paralyze/Confuse), and
+        // apply Paralyze's 7+ auto-damage.
+        if (!effectDeleted && finalValue !== null) {
+          const updates = { [`system.${decayField}`]: finalValue };
+          const tier = _tierRules(statusType, finalValue);
+          if (tier) updates["system.rules"] = tier;
+          await effectItem.update(updates);
+          noteParts.unshift(`${decayField === "ticks" ? "Ticks" : "Stacks"} → ${finalValue}`);
+
+          if (statusType === "paralyze" && finalValue >= 7) {
+            const _key = actor.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+            const prev = (actor.type === "spiritTamer" ? actor.system.digiHp?.value : actor.system.hp?.value) ?? 0;
+            const next = Math.max(0, prev - finalValue);
+            await actor.update({ [_key]: next });
+            noteParts.push(`Paralyze dmg: ${prev} → ${next} (−${finalValue})`);
+          }
+        } else if (effectDeleted && noteParts.length === 0) {
+          // Deleted during the automatic -1 (before any Core Drive check ran) —
+          // the Core Drive branch above already leaves its own "cleared" note.
+          noteParts.unshift(`${effectItem.name} cleared`);
+        }
+
+        note = noteParts.length ? noteParts.join(" · ") : `${effectItem.name} applied.`;
 
       } else if (type === "paralyze_legacy") {
         // Legacy handler — no longer auto-created but kept for any old cards still in chat
@@ -684,14 +879,18 @@ export function registerCombatHooks() {
       const target = _findActor(targetId);
       if (!target) { ui.notifications.warn(`Actor "${targetName}" not found.`); return; }
 
-      await target.update({ "system.hp.value": prevHp });
+      const _undoKey = target.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+      await target.update({ [_undoKey]: prevHp });
       for (const sid of statusIds) {
         const item = target.items.get(sid);
         if (item) await item.delete();
       }
       if (drainSrcId) {
         const src = _findActor(drainSrcId);
-        if (src && drainPrevHp > 0) await src.update({ "system.hp.value": drainPrevHp });
+        if (src && drainPrevHp > 0) {
+          const _srcUndoKey = src.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+          await src.update({ [_srcUndoKey]: drainPrevHp });
+        }
       }
 
       btn.text("✓ Undone").prop("disabled", true).addClass("dd-applied");
@@ -729,9 +928,11 @@ export function registerCombatHooks() {
       const target = _findActor(targetId);
       if (!target) return ui.notifications.warn(`Actor "${targetName}" not found.`);
 
-      const prevHp = target.system.hp?.value ?? 0;
-      const newHp  = Math.max(0, prevHp - damage);
-      await target.update({ "system.hp.value": newHp });
+      const _tgtHp  = target.type === "spiritTamer" ? target.system.digiHp : target.system.hp;
+      const _tgtKey = target.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+      const prevHp  = _tgtHp?.value ?? 0;
+      const newHp   = Math.max(0, prevHp - damage);
+      await target.update({ [_tgtKey]: newHp });
 
       const sourceId     = btn.data("source-id");
       const sourceName   = btn.data("source-name");
@@ -739,11 +940,17 @@ export function registerCombatHooks() {
       const newStatusIds = [];
       const _track = async (id) => { if (id) newStatusIds.push(id); };
 
+      // Freeze's new on-hit rule fires on EVERY attack against an already-Frozen
+      // target, hit or miss, regardless of whether this attack itself carries
+      // [FREEZE] — see Books/012_Attacks_and_Tags.md. Not at 7+ stacks.
+      const freezeHitNote = await _freezeOnHit(target);
+      if (freezeHitNote) appliedNotes.push(freezeHitNote);
+
       if (btn.data("has-burn"))     { await _track(await _applyStatus(target, "burn",     btn.data("burn-x"),     btn.data("burn-y"), sourceName)); appliedNotes.push("Burn"); }
-      if (btn.data("has-freeze"))   { await _track(await _applyStatus(target, "freeze",   0, 0, sourceName)); appliedNotes.push("Freeze"); }
+      if (btn.data("has-freeze"))   { await _track(await _applyStatus(target, "freeze",   btn.data("freeze-x"), 0, sourceName)); appliedNotes.push("Freeze"); }
       if (btn.data("has-paralyze")) { await _track(await _applyStatus(target, "paralyze", btn.data("paralyze-x"), 0, sourceName)); appliedNotes.push("Paralyze"); }
       if (btn.data("has-blind"))    { await _track(await _applyStatus(target, "blind",    0, 0, sourceName)); appliedNotes.push("Blind"); }
-      if (btn.data("has-confuse"))  { await _track(await _applyStatus(target, "confuse",  0, 0, sourceName)); appliedNotes.push("Confuse"); }
+      if (btn.data("has-confuse"))  { await _track(await _applyStatus(target, "confuse",  btn.data("confuse-x"), 0, sourceName)); appliedNotes.push("Confuse"); }
       if (btn.data("has-regen"))    { await _track(await _applyStatus(target, "regen",    btn.data("regen-x"), 0, sourceName)); appliedNotes.push("Regen"); }
       if (btn.data("has-poison"))   { await _track(await _applyStatus(target, "poison",   btn.data("poison-x"), 0, sourceName)); appliedNotes.push("Poison"); }
       if (btn.data("has-sleep"))    { await _track(await _applyStatus(target, "sleep",    0, 0, sourceName)); appliedNotes.push("Sleep"); }
@@ -757,10 +964,12 @@ export function registerCombatHooks() {
           appliedNotes.push("Drain blocked (attacker Fragmented)");
         } else if (src) {
           drainSourceId = sourceId;
-          drainPrevHp   = src.system.hp?.value ?? 0;
+          const _srcHp  = src.type === "spiritTamer" ? src.system.digiHp : src.system.hp;
+          const _srcKey = src.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+          drainPrevHp   = _srcHp?.value ?? 0;
           const drainAmt = Math.max(1, Math.floor(damage / 2));
-          const srcMax   = src.system.hp?.max ?? 99;
-          await src.update({ "system.hp.value": Math.min(srcMax, drainPrevHp + drainAmt) });
+          const srcMax   = _srcHp?.max ?? 99;
+          await src.update({ [_srcKey]: Math.min(srcMax, drainPrevHp + drainAmt) });
           appliedNotes.push(`Drain +${drainAmt} to ${src.name}`);
         }
       }

@@ -1,4 +1,4 @@
-# **Chapter 11: Attacks & Tags**
+# **Chapter 12: Attacks & Tags**
 
 A Digimon does not simply attack, it expresses itself. Every move is a piece of their history, a technique carried forward from some stage of their evolution, whether that's the signature move that woke up the moment they first reached a new stage or one of the techniques they picked back up at their last long rest. This chapter covers how those moves actually function at the table: the tags that define what each one can do, the Power Rating that sets how hard it hits, and the rules for figuring out which moves in a Digimon's history are actually usable right now.
 
@@ -61,19 +61,19 @@ A Digimon does not simply attack, it expresses itself. Every move is a piece of 
 
 | **Tag** | **Rules** |
 | --- | --- |
-| [BURN X,Y] | On hit, target gains a Burn stack. X = damage taken at start of target's turn. Y = number of ticks. If hit with BURN again: take the higher X value and add the Y counters together. |
-| [FREEZE] | Target cannot act. At end of their turn roll 1d20 + total Love vs DN 14 to break. Also breaks immediately if the target takes any damage. |
-| [PARALYZE X] | Target's Speed is halved. X = stacks. At start of target's turn lose 1 stack. 1–3 stacks: choose Basic OR Move Action. 4+ stacks: cannot act. Natural 20 on any roll clears all stacks. |
-| [BLIND] | On hit, target gains 2 Blind stacks. Target suffers -4 to all attack hit rolls while Blind. |
-| [CONFUSE] | At start of the target's turn, roll 1d20 + total Friendship vs DN 14. Fail = must attack the closest ally. |
+| [BURN X,Y] | On hit, target gains a Burn stack. X = damage taken at start of target's turn. Y = number of ticks remaining. If hit with BURN again: take the higher X value and add the Y counters together. At the start of the target's turn, take X damage, then automatically lose 1 tick from Y. Then make a Core Drive check, DN = remaining Y + 1. Success: lose 1 additional tick. |
+| [FREEZE X] | On hit, target gains X Freeze stacks (add to their current total if already Frozen). At the start of the target's turn, they automatically lose 1 stack, then make a Core Drive check, DN = remaining stacks + 1. Success: act normally this turn, and lose 1 additional stack. Failure: apply the effect below for their current stack count (after the automatic decay). Each time the target is targeted by an attack, hit or miss, they lose 1 additional stack — except at 7+ stacks. 1–3 stacks: choose Basic Action OR Move Action, not both. 4–6 stacks: cannot act. 7+ stacks: cannot act, and does not lose stacks from being targeted. |
+| [PARALYZE X] | Target's Speed is halved. On hit, gains X stacks. At the start of the target's turn, they automatically lose 1 stack, then make a Core Drive check, DN = remaining stacks + 1. Success: act normally this turn, and lose 1 additional stack. Failure: apply the effect below for their current stack count. 1–3 stacks: choose Basic OR Move Action. 4–6 stacks: cannot act. 7+ stacks: cannot act, and takes damage equal to current stacks. |
+| [BLIND] | On hit, target gains 2 Blind stacks. At the start of the target's turn, they automatically lose 1 stack, then make a Core Drive check, DN = remaining stacks + 1. Success: lose 1 additional stack. Target suffers -4 to all attack hit rolls while any Blind stacks remain. |
+| [CONFUSE X] | On hit, target gains X Confuse stacks. At the start of the target's turn, they automatically lose 1 stack, then make a Core Drive check, DN = remaining stacks + 1. Success: act normally this turn, and lose 1 additional stack. Failure: apply the effect below for their current stack count. 1–3 stacks: -2 to this turn's attack hit roll. 4–6 stacks: must attack the closest character instead of acting normally. 7+ stacks: the GM picks one of the target's own moves and turns it against the target itself; no one else can be hit by it. |
 | [DRAIN] | On hit, the attacker regains HP equal to half the damage dealt (round down, minimum 1). |
 | [PUSH] | On hit, push the target away. Spaces pushed = Attacker's Courage minus Defender's Courage. Minimum 1 space. |
-| [POISON X] | On a natural attack roll of 15 or higher, the target is Poisoned with X stacks. If already Poisoned, add X to their current Poison total. At the start of their turn the target takes damage equal to their current Poison stacks. |
+| [POISON X] | On hit, target gains X Poison stacks. If already Poisoned, add X to their current total. At the start of the target's turn, take damage equal to their current stacks, then automatically lose 1 stack. Then make a Core Drive check, DN = remaining stacks + 1. Success: lose 1 additional stack. |
 | [SLEEP] | Target cannot act. At the start of their turn they make a Firewall skill check DN 13, on a success they wake and may act normally this turn. They also wake immediately if they take any damage. |
 | [RECOVERY] | Instead of dealing damage, this move automatically restores HP to its target equal to the move's PR dice roll. No hit roll is required. |
-| [FRAGMENT X] | On hit, target gains X Fragment stacks. If already Fragmented, add X to their current stack total. At the start of the target's turn, lose 1 stack. While Fragmented, a Digimon cannot regain HP from any source, including [RECOVERY], items, or skill checks. |
+| [FRAGMENT X] | On hit, target gains X Fragment stacks. If already Fragmented, add X to their current stack total. At the start of the target's turn, they automatically lose 1 stack, then make a Core Drive check, DN = remaining stacks + 1. Success: lose 1 additional stack. While any Fragment stacks remain, a Digimon cannot regain HP from any source, including [RECOVERY], items, or skill checks. |
 
-| **Status Effect Decay** At the start of a Digimon's turn, before any other effects apply, it loses 1 stack of every stacking status effect currently affecting it. |
+| **Status Effect Decay** At the start of a Digimon's turn, before any other effects apply, it automatically loses 1 stack of every stacking status effect currently on it (for Burn, this reduces the Y tick counter). It then makes a separate Core Drive check for each status still active, DN = remaining stacks + 1, to shed a second stack. Sleep is the only stacking-adjacent effect that doesn't follow this pattern; see its own entry above. |
 
 | **Status Effects and Digivolution** All active status effects, including Poison and Sleep, are cleared immediately whenever a Digimon digivolves, dedigivolves, or sidedigivolves, whether the change was voluntary or forced. |
 

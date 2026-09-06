@@ -1,14 +1,8 @@
-# Chapter 6: Skills
+# Chapter 7: Skills
 
 A skill is a trained, specific application of a Crest Stat: the difference between being Courageous in general and being specifically good at vaulting a fence without breaking stride. Where a Crest Stat governs the big combat math (hit rate, damage, HP, and so on), skills are what let a Tamer act on everything else: reading a room, hacking a terminal, patching up an ally, standing their ground when everything is going wrong.
 
-Every skill starts at rank 1 for free, same as your stats. There are 24 of them in total, each tied to one of the six Crest Stats, and each one runs from rank 1 up to a cap of rank 6.
-
-> **The Stat Cap Rule**
->
-> Through rank 5, a skill's rank can never exceed its parent Crest Stat's rank. If your Friendship is rank 3, none of your Friendship skills can go above rank 3 either. You have to raise the stat before you can raise the skills underneath it.
->
-> Rank 6, the top of the scale, is a special case. Pushing a skill all the way to rank 6 requires its parent Crest Stat to be at rank 9, not just rank 6. True mastery of a skill asks a lot more of the underlying stat than the normal step-by-step climb does.
+Every skill starts at rank 1 for free. There are 24 of them in total, each tied to one of the six Crest Stats, and each one runs from rank 1 up to a cap of rank 6.
 
 | Skill | Stat | Description |
 | --- | --- | --- |
@@ -94,32 +88,10 @@ Skills cost less EXP to raise than Crest Stats, and the table now stops at rank 
 | Rank 4 → 5 | 250 | 700 |
 | Rank 5 → 6 | 300 | 1,000 |
 
-Remember that the Stat Cap Rule still applies on top of this cost. Paying the EXP for rank 6 doesn't do anything until the parent Crest Stat has also reached rank 9. You can bank the rank if you've got the EXP for it early, but it won't do anything for you until the stat catches up.
-
 ## Looking Ahead
 
 One more piece of a Tamer rounds out their sheet, and it's getting its own full chapter rather than a paragraph here.
 
-**Your Partner** is that last piece: choosing your Digimon's line and building out their own sheet using their own separate 1,500 EXP. That starts in Chapter 7: Who Is Your Digimon?
+**Your Partner** is that last piece: choosing your Digimon's line and building out their own sheet using their own separate 1,500 EXP. That starts in Chapter 8: Who Is Your Digimon?
 
-If you haven't spent any EXP toward a class yet, that's completely normal. Between your Crest Stat and your skills, the starting 1,500 EXP disappears fast. Classes are covered back in Chapter 4, and there's nothing wrong with entering play with EXP still unspent; you can put it toward a class the moment you've earned enough.
-
----
-
-## Example: Building a Tamer
-
-Here's the whole process in one pass, using a Tamer named Kaito and his 1,500 starting EXP.
-
-**Who Are You.** Kaito is 12, sharp-tongued, and more comfortable behind a screen than in a crowd. His Want is to prove he's useful without a keyboard in front of him; his Fear is being right about something and having nobody listen anyway. His Crest is Knowledge.
-
-**Crest Stats.** Kaito puts 900 EXP into Knowledge, taking it from rank 1 to rank 4. That's the bulk of his budget gone, but it's also his Crest, and it raises the ceiling on every Knowledge skill he owns. He leaves his other five stats at rank 1 for now. 600 EXP remain.
-
-Because Kaito has earned 1,500 total EXP so far, his Hope Pool is 20, straight off the table in Chapter 5. It doesn't matter that most of it went into a single stat; total EXP earned is all that counts.
-
-**Skills.** With Knowledge at rank 4, Kaito can raise any Knowledge skill as high as rank 4. He takes Decode to rank 3 (250 EXP) and Modify to rank 2 (100 EXP), spending 350 EXP and leaving 250 remaining.
-
-**Classes.** 250 EXP isn't enough to open a class row from any book Kaito's group is using, and that's fine and expected at creation. He holds onto it. Thanks to the new Hope rule, saving it here costs him nothing.
-
-**Your Partner.** Kaito's GM helps him settle on a Rookie-line partner suited to a Knowledge-leaning Tamer, and they move to Chapter 7 to finish building her.
-
-Kaito walks away from creation with Knowledge 4, Decode 3, Modify 2, everything else at rank 1, a Hope Pool of 20, 16 HP, and 250 EXP still sitting in reserve for whatever Session 1 throws at him.
+If you haven't spent any EXP toward a class yet, that's completely normal. Between your Crest Stat and your skills, the starting 1,500 EXP disappears fast. Classes are covered back in Chapter 5, and there's nothing wrong with entering play with EXP still unspent; you can put it toward a class the moment you've earned enough.

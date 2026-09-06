@@ -2,7 +2,7 @@
     "id":  "digital-destiny",
     "title":  "Tamers Bond",
     "description":  "A Foundry VTT system for the Tamers Bond Digimon TTRPG.",
-  "version":  "1.3.3",
+  "version":  "1.3.4",
     "compatibility":  {
                           "minimum":  "11",
                           "verified":  "14"
@@ -133,6 +133,13 @@
                       "path":  "packs/effects.db",
                       "type":  "Item",
                       "system":  "digital-destiny"
+                  },
+                  {
+                      "name":  "primary-crests",
+                      "label":  "Primary Crests",
+                      "path":  "packs/primary-crests.db",
+                      "type":  "Item",
+                      "system":  "digital-destiny"
                   }
               ],
     "documentTypes": {
@@ -142,12 +149,13 @@
             "spiritTamer":  {}
         },
         "Item": {
-            "move":        {},
-            "classSkill":  {},
-            "gear":        {},
-            "attack":      {},
-            "digimonForm": {},
-            "effect":      {}
+            "move":         {},
+            "classSkill":   {},
+            "gear":         {},
+            "attack":       {},
+            "digimonForm":  {},
+            "effect":       {},
+            "primaryCrest": {}
         }
     },
     "socket":  false,

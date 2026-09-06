@@ -1,0 +1,23 @@
+<form autocomplete="off">
+  <p class="hint" style="margin-bottom: 10px;">
+    Pick a color for each kind of chat message. Changes apply to the whole table.
+  </p>
+
+  <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+    {{#each categories}}
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+      <label for="dd-chatcolor-{{this.key}}">{{this.label}}</label>
+      <input type="color" id="dd-chatcolor-{{this.key}}" name="colors.{{this.key}}" value="{{this.color}}">
+    </div>
+    {{/each}}
+  </div>
+
+  <footer class="form-footer" style="margin-top: 14px; display: flex; gap: 6px;">
+    <button type="button" data-action="resetDefaults">
+      <i class="fas fa-undo"></i> Reset to Defaults
+    </button>
+    <button type="submit">
+      <i class="fas fa-save"></i> Save Changes
+    </button>
+  </footer>
+</form>

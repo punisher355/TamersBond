@@ -1,4 +1,4 @@
-# **Chapter 13: Resting & Encounters**
+# **Chapter 14: Resting & Encounters**
 
 ## **What Is an Encounter?**
 

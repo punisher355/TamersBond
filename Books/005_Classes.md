@@ -1,4 +1,4 @@
-# Chapter 4: Classes
+# Chapter 5: Classes
 
 Classes are the part of a Tamer's character that represents **how they grew**.
 

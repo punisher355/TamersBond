@@ -188,12 +188,17 @@ export class SpiritTamerSheet extends TamerSheet {
     if (data?.type === "Item" && data?.uuid) {
       let item;
       try { item = await fromUuid(data.uuid); } catch { /* fall through */ }
-      if (item?.type === "digimonForm") {
-        const already = this.actor.items.find(i => i.type === "digimonForm" && i.name === item.name);
-        if (already) { ui.notifications.warn(`${item.name} is already on this sheet.`); return; }
-        await this.actor.createEmbeddedDocuments("Item", [item.toObject()]);
-        ui.notifications.info(`${item.name} added — go to the Digivolution tab to set it as current.`);
-        return;
+      if (item) {
+        if (item.type === "digimonForm") {
+          const already = this.actor.items.find(i => i.type === "digimonForm" && i.name === item.name);
+          if (already) { ui.notifications.warn(`${item.name} is already on this sheet.`); return; }
+          await this.actor.createEmbeddedDocuments("Item", [item.toObject()]);
+          ui.notifications.info(`${item.name} added — go to the Digivolution tab to set it as current.`);
+          return;
+        }
+        // After an await the drag event's dataTransfer data is cleared by the browser,
+        // so super._onDrop would fail to re-read it. Route directly to _onDropItemCreate.
+        return this._onDropItemCreate(item.toObject());
       }
     }
     return super._onDrop(event);
@@ -340,21 +345,25 @@ export class SpiritTamerSheet extends TamerSheet {
     const expAvail  = (sys.exp?.total ?? 0) - (sys.exp?.spent ?? 0);
     const digiAvail = (sys.digiExp?.total ?? 0) - (sys.digiExp?.spent ?? 0);
     const isTF      = sys.isTamerForm ?? true;
+    const _sinc = sys.crests.sincerity ?? {};
+    const _sincTotal = (_sinc.rank ?? 0) + (_sinc.primaryCrestBonus ?? 0) + (_sinc.gearBonus ?? 0);
     const hpFormula = isTF
-      ? `12 + (${(sys.crests.sincerity?.rank ?? 1) + (sys.crests.sincerity?.gearBonus ?? 0)} Sincerity × 4) = ${sys.digiHp?.max ?? 0}`
+      ? `12 + (${_sincTotal} Sincerity × 4) = ${sys.digiHp?.max ?? 0}`
       : `20 + (${sys.digiStats?.sincerity?.total ?? 0} Sincerity × 4) = ${sys.digiHp?.max ?? 0}`;
 
     const crestRows = CREST_ORDER.map(key => {
       const c     = sys.crests[key] ?? {};
-      const rank  = c.rank ?? 1;
-      const mod   = c.modifier    ?? 0;
-      const auto  = c.autoModifier ?? 0;
-      const gear  = c.gearBonus   ?? 0;
-      const total = rank + mod + auto + gear;
+      const rank    = c.rank ?? 0;
+      const primary = c.primaryCrestBonus ?? 0;
+      const mod     = c.modifier    ?? 0;
+      const auto    = c.autoModifier ?? 0;
+      const gear    = c.gearBonus   ?? 0;
+      const total   = rank + primary + mod + auto + gear;
       return `
         <tr>
           <td class="dd-det-stat-name" style="color:${D.statColors[key]}">${D.statLabels[key]}</td>
           <td class="dd-det-readonly">${rank}</td>
+          <td class="dd-det-readonly">${primary > 0 ? "+" + primary : "—"}</td>
           <td><input type="number" name="crests.${key}.modifier"     value="${mod}"  class="dd-det-input" /></td>
           <td><input type="number" name="crests.${key}.autoModifier" value="${auto}" class="dd-det-input" /></td>
           <td class="dd-det-readonly">${gear}</td>
@@ -442,7 +451,7 @@ export class SpiritTamerSheet extends TamerSheet {
           <p class="dd-det-hint-block">Rank is set by +/− on the Crests tab. Manual and Auto Buff can be adjusted freely. Gear is read-only.</p>
           <table class="dd-det-table">
             <thead><tr>
-              <th>Crest</th><th>Rank</th><th>Manual</th><th>Auto Buff</th><th>Gear</th><th>Total</th>
+              <th>Crest</th><th>Rank</th><th>Primary</th><th>Manual</th><th>Auto Buff</th><th>Gear</th><th>Total</th>
             </tr></thead>
             <tbody>${crestRows}</tbody>
           </table>

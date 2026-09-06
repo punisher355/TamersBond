@@ -1,0 +1,24 @@
+<form class="sheet item primary-crest-sheet flexcol">
+  <header class="sheet-header flexrow">
+    <img class="profile-img" src="{{item.img}}" alt="{{item.name}}" data-edit="img" />
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Item Name" />
+      </h1>
+      <div class="primary-crest-type-label">Primary Crest</div>
+    </div>
+  </header>
+
+  <section class="sheet-body">
+    <div class="primary-crest-bonus-table">
+      <div class="pc-table-header">Starting Bonus</div>
+      {{#each bonuses}}
+      <div class="pc-bonus-row" style="color:{{this.color}}">
+        <span class="pc-stat-label">{{this.label}}</span>
+        <span class="pc-stat-bonus">+{{this.bonus}}</span>
+      </div>
+      {{/each}}
+    </div>
+    <p class="pc-note">Drop this item onto a Tamer sheet to apply. Only one Primary Crest can be active at a time — dropping a new one replaces the old.</p>
+  </section>
+</form>

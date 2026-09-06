@@ -13,13 +13,13 @@
         "spent": 0
       },
       "crests": {
-        "courage":     { "rank": 1, "modifier": 0, "autoModifier": 0 },
-        "friendship":  { "rank": 1, "modifier": 0, "autoModifier": 0 },
-        "love":        { "rank": 1, "modifier": 0, "autoModifier": 0 },
-        "knowledge":   { "rank": 1, "modifier": 0, "autoModifier": 0 },
-        "sincerity":   { "rank": 1, "modifier": 0, "autoModifier": 0 },
-        "reliability": { "rank": 1, "modifier": 0, "autoModifier": 0 },
-        "hope":        { "rank": 1, "modifier": 0, "autoModifier": 0, "current": 0, "perTurn": 0 }
+        "courage":     { "rank": 0, "modifier": 0, "autoModifier": 0 },
+        "friendship":  { "rank": 0, "modifier": 0, "autoModifier": 0 },
+        "love":        { "rank": 0, "modifier": 0, "autoModifier": 0 },
+        "knowledge":   { "rank": 0, "modifier": 0, "autoModifier": 0 },
+        "sincerity":   { "rank": 0, "modifier": 0, "autoModifier": 0 },
+        "reliability": { "rank": 0, "modifier": 0, "autoModifier": 0 },
+        "hope":        { "rank": 0, "modifier": 0, "autoModifier": 0, "current": 0, "perTurn": 0 }
       },
       "skills": {
         "courage": {
@@ -164,7 +164,7 @@
     }
   },
   "Item": {
-    "types": ["move", "classSkill", "gear", "attack", "status", "digimonForm"],
+    "types": ["move", "classSkill", "gear", "attack", "digimonForm", "primaryCrest"],
     "templates": {},
     "move": {
       "element": "neutral",
@@ -234,13 +234,6 @@
         "regen":     false, "regenX":    1
       }
     },
-    "status": {
-      "statusType": "custom",
-      "x": 0,
-      "y": 0,
-      "description": "",
-      "source": ""
-    },
     "digimonForm": {
       "stage": "rookie",
       "attribute": "free",
@@ -283,6 +276,9 @@
         }
       },
       "notes": ""
+    },
+    "primaryCrest": {
+      "primaryCrest": "courage"
     }
   }
 }

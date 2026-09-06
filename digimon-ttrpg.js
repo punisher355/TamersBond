@@ -1,6 +1,6 @@
 import { DIGIMON }                  from "./module/config.js";
 import { TamerData, DigimonData, SpiritTamerData } from "./module/data/actor-models.js";
-import { MoveData, ClassSkillData, GearData, AttackData, DigimonFormData, EffectData } from "./module/data/item-models.js";
+import { MoveData, ClassSkillData, GearData, AttackData, DigimonFormData, EffectData, PrimaryCrestData } from "./module/data/item-models.js";
 import { DigitalDestinyActor }      from "./module/actors/actor.js";
 import { DigitalDestinyItem }       from "./module/items/item.js";
 import { TamerSheet }               from "./module/sheets/TamerSheet.js";
@@ -13,6 +13,7 @@ import { GearSheet }                from "./module/sheets/GearSheet.js";
 import { AttackSheet }              from "./module/sheets/AttackSheet.js";
 import { DigimonFormSheet }        from "./module/sheets/DigimonFormSheet.js";
 import { EffectSheet }             from "./module/sheets/EffectSheet.js";
+import { PrimaryCrestSheet }       from "./module/sheets/PrimaryCrestSheet.js";
 import { registerCombatHooks }      from "./module/combat.js";
 import { DigitalDestinyCombat }     from "./module/DigitalDestinyCombat.js";
 import { DigimonLookup }            from "./module/DigimonLookup.js";
@@ -20,6 +21,7 @@ import { ClassLookup }              from "./module/ClassLookup.js";
 import { ItemLookup }               from "./module/ItemLookup.js";
 import { EncounterGenerator }       from "./module/EncounterGenerator.js";
 import { TokenActionHUD }           from "./module/TokenActionHUD.js";
+import { registerChatColorHooks, registerChatColorSettings } from "./module/chat-colors.js";
 
 const BLANK_TAGS = {
   melee: false, range: false, rangeX: 4,
@@ -86,9 +88,11 @@ Hooks.once("init", () => {
   CONFIG.Item.dataModels  = {
     move: MoveData, classSkill: ClassSkillData, gear: GearData,
     attack: AttackData, digimonForm: DigimonFormData,
-    effect: EffectData
+    effect: EffectData, primaryCrest: PrimaryCrestData
   };
   CONFIG.Combat.initiative     = { formula: "1d20", decimals: 2 };
+
+  registerChatColorSettings();
 
   const _Actors     = foundry.documents.collections.Actors;
   const _Items      = foundry.documents.collections.Items;
@@ -158,6 +162,12 @@ Hooks.once("init", () => {
     label: "DIGIMON.SheetEffect"
   });
 
+  _Items.registerSheet("digital-destiny", PrimaryCrestSheet, {
+    types: ["primaryCrest"],
+    makeDefault: true,
+    label: "Primary Crest"
+  });
+
   foundry.applications.handlebars.loadTemplates([
     "systems/digital-destiny/templates/actors/tamer-sheet.hbs",
     "systems/digital-destiny/templates/actors/digimon-sheet.hbs",
@@ -171,11 +181,13 @@ Hooks.once("init", () => {
     "systems/digital-destiny/templates/items/effect-sheet.hbs",
     "systems/digital-destiny/templates/digimon-lookup.hbs",
     "systems/digital-destiny/templates/class-lookup.hbs",
-    "systems/digital-destiny/templates/item-lookup.hbs"
+    "systems/digital-destiny/templates/item-lookup.hbs",
+    "systems/digital-destiny/templates/chat-colors-config.hbs"
   ]);
 });
 
 registerCombatHooks();
+registerChatColorHooks();
 
 // Actors currently being HP-corrected to 1 — guards against re-entrant hook firing
 const _defeatedLock = new Set();
@@ -322,4 +334,3 @@ Hooks.on("preCreateActor", (actor) => {
     "prototypeToken.actorLink":    true
   });
 });
-

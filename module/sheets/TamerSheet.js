@@ -25,30 +25,34 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
     // Six spendable crests (Hope is separate — GM resource, no EXP cost)
     context.crestList = CREST_ORDER.map(key => {
-      const crest       = context.system.crests[key] ?? {};
-      const rank        = crest.rank        ?? 1;
-      const modifier    = crest.modifier    ?? 0;
-      const autoMod     = crest.autoModifier ?? 0;
-      const gearBonus   = crest.gearBonus   ?? 0;
-      const effective   = rank + modifier + autoMod + gearBonus;
-      const upgradeCost = rank < 10 ? D.crestUpgradeCost[rank] : null;
+      const crest        = context.system.crests[key] ?? {};
+      const rank         = crest.rank        ?? 0;
+      const primaryBonus = crest.primaryCrestBonus ?? 0;
+      const modifier     = crest.modifier    ?? 0;
+      const autoMod      = crest.autoModifier ?? 0;
+      const gearBonus    = crest.gearBonus   ?? 0;
+      const effective    = rank + primaryBonus + modifier + autoMod + gearBonus;
+      const upgradeCost  = rank < 10 ? D.crestUpgradeCost[rank] : null;
       return {
         key,
         label:        D.statLabels[key],
         color:        D.statColors[key],
         img:          D.crestImages[key],
         rank,
+        primaryBonus,
         modifier,
         autoModifier: autoMod,
         gearBonus,
         effective,
-        showEffective: modifier !== 0 || autoMod !== 0 || gearBonus !== 0,
+        showEffective: primaryBonus !== 0 || modifier !== 0 || autoMod !== 0 || gearBonus !== 0,
         upgradeCost,
         canUpgrade:   rank < 10 && upgradeCost !== null && available >= upgradeCost,
-        canDowngrade: rank > 1,
+        canDowngrade: rank > 0,
         digimonStat:  D.crestToStat[key] ?? "—"
       };
     });
+
+    context.primaryCrestItem = this.actor.items.find(i => i.type === "primaryCrest") ?? null;
 
     // Hope — derived: rank = highest crest, pool = rank × 5
     const hopeData = context.system.crests.hope ?? {};
@@ -63,7 +67,8 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
     // Build skill groups for the Skills tab
     context.skillGroups = CREST_ORDER.map(statKey => {
-      const statRank   = context.system.crests[statKey]?.rank ?? 1;
+      const sc       = context.system.crests[statKey] ?? {};
+      const statRank = (sc.rank ?? 0) + (sc.primaryCrestBonus ?? 0) + (sc.gearBonus ?? 0);
       const skillDefs  = D.skills[statKey] ?? [];
 
       const skills = skillDefs.map(({ key, label, description, example }) => {
@@ -163,16 +168,18 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     const expAvail = (sys.exp?.total ?? 0) - (sys.exp?.spent ?? 0);
 
     const crestRows = CREST_ORDER.map(key => {
-      const c     = sys.crests[key] ?? {};
-      const rank  = c.rank ?? 1;
-      const mod   = c.modifier    ?? 0;
-      const auto  = c.autoModifier ?? 0;
-      const gear  = c.gearBonus   ?? 0;
-      const total = rank + mod + auto + gear;
+      const c       = sys.crests[key] ?? {};
+      const rank    = c.rank ?? 0;
+      const primary = c.primaryCrestBonus ?? 0;
+      const mod     = c.modifier    ?? 0;
+      const auto    = c.autoModifier ?? 0;
+      const gear    = c.gearBonus   ?? 0;
+      const total   = rank + primary + mod + auto + gear;
       return `
         <tr>
           <td class="dd-det-stat-name" style="color:${D.statColors[key]}">${D.statLabels[key]}</td>
           <td class="dd-det-readonly">${rank}</td>
+          <td class="dd-det-readonly">${primary > 0 ? "+" + primary : "—"}</td>
           <td><input type="number" name="crests.${key}.modifier"     value="${mod}"  class="dd-det-input" /></td>
           <td><input type="number" name="crests.${key}.autoModifier" value="${auto}" class="dd-det-input" /></td>
           <td class="dd-det-readonly">${gear}</td>
@@ -234,10 +241,10 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
         <div class="dd-det-section">
           <div class="dd-det-section-title">Crest Totals</div>
-          <p class="dd-det-hint-block">Rank is set by +/− on the Crests tab (tracks EXP). Manual and Auto Buff can be adjusted freely. Gear column is read-only (set by equipped items).</p>
+          <p class="dd-det-hint-block">Rank is set by +/− on the Crests tab (tracks EXP). Primary is from the Primary Crest item. Manual and Auto Buff can be adjusted freely. Gear column is read-only (set by equipped items).</p>
           <table class="dd-det-table">
             <thead><tr>
-              <th>Crest</th><th>Rank</th><th>Manual</th><th>Auto Buff</th><th>Gear</th><th>Total</th>
+              <th>Crest</th><th>Rank</th><th>Primary</th><th>Manual</th><th>Auto Buff</th><th>Gear</th><th>Total</th>
             </tr></thead>
             <tbody>${crestRows}</tbody>
           </table>
@@ -362,6 +369,11 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.gear-equip').on('click',          ev => this._onGearEquip(ev));
     html.find('.gear-unequip').on('click',        ev => this._onGearUnequip(ev));
     html.find('.gear-delete').on('click',         ev => this._onGearDelete(ev));
+    html.find('.primary-crest-remove').on('click', async ev => {
+      ev.preventDefault();
+      const item = this.actor.items.find(i => i.type === "primaryCrest");
+      if (item) await item.delete();
+    });
     html.find('.qty-decrease').on('click',        ev => this._onQtyDecrease(ev));
     html.find('.qty-increase').on('click',        ev => this._onQtyIncrease(ev));
     html.find('.qty-input').on('change',          ev => this._onQtyChange(ev));
@@ -421,6 +433,13 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
   async _onDropItemCreate(itemData) {
     if (Array.isArray(itemData)) {
       return Promise.all(itemData.map(d => this._onDropItemCreate(d)));
+    }
+
+    // Primary Crest drop — replace any existing primary crest (only one allowed)
+    if (itemData.type === "primaryCrest") {
+      const existing = this.actor.items.filter(i => i.type === "primaryCrest");
+      for (const old of existing) await old.delete();
+      return super._onDropItemCreate(itemData);
     }
 
     // Gear drop — auto-equip slot items, respecting each itemType's slot rule
@@ -762,7 +781,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
   async _onStatIncrease(ev) {
     const stat = ev.currentTarget.dataset.stat;
-    const rank = this.actor.system.crests[stat]?.rank ?? 1;
+    const rank = this.actor.system.crests[stat]?.rank ?? 0;
     if (rank >= 10) return;
 
     const D    = CONFIG.DIGIMON;
@@ -779,14 +798,16 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
   async _onStatDecrease(ev) {
     const stat    = ev.currentTarget.dataset.stat;
-    const rank    = this.actor.system.crests[stat]?.rank ?? 1;
-    if (rank <= 1) return;
+    const rank    = this.actor.system.crests[stat]?.rank ?? 0;
+    if (rank <= 0) return;
 
-    const newRank = rank - 1;
+    const newRank    = rank - 1;
+    const crest      = this.actor.system.crests[stat] ?? {};
+    const newEffective = newRank + (crest.primaryCrestBonus ?? 0) + (crest.gearBonus ?? 0);
 
     // Block if any child skill would violate the stat cap rule
     const skills     = this.actor.system.skills?.[stat] ?? {};
-    const violations = Object.entries(skills).filter(([, s]) => (s.rank ?? 1) > newRank);
+    const violations = Object.entries(skills).filter(([, s]) => (s.rank ?? 1) > newEffective);
     if (violations.length) {
       const names = violations.map(([k]) => CONFIG.DIGIMON.skills[stat]?.find(s => s.key === k)?.label ?? k).join(", ");
       return ui.notifications.warn(
@@ -805,8 +826,9 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
   async _onSkillIncrease(ev) {
     const { stat, skill } = ev.currentTarget.dataset;
-    const D        = CONFIG.DIGIMON;
-    const statRank = this.actor.system.crests[stat]?.rank ?? 1;
+    const D     = CONFIG.DIGIMON;
+    const sc    = this.actor.system.crests[stat] ?? {};
+    const statRank = (sc.rank ?? 0) + (sc.primaryCrestBonus ?? 0) + (sc.gearBonus ?? 0);
     const rank     = this.actor.system.skills?.[stat]?.[skill]?.rank ?? 1;
     const maxRank  = statRank >= 9 ? 6 : Math.min(5, statRank);
 

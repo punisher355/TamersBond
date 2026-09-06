@@ -1,4 +1,4 @@
-# **Chapter 10: Combat**
+# **Chapter 11: Combat**
 
 Combat is where everything else in this book gets put to the test. Every stat you've raised, every skill you've trained, every point of Hope you've earned, all of it comes down to the moment a fight actually starts. This chapter walks through how a fight actually runs: how turn order gets decided, what a character can do on their turn, and the exact math behind every attack that lands or misses.
 
@@ -10,7 +10,7 @@ Combat takes place on a grid where 1 square = 1 space. Both Tamers and Digimon t
 
 Each round of combat follows this order:
 
-- Determine Turn Order. Digimon use Friendship (no multiplier). Tamers use Friendship x2. Highest acts first. Ties broken by higher raw Friendship stat.
+- Determine Turn Order. All Tamers take their turns before any Digimon act. Within the Tamer group, order is set by Friendship x2, highest first, ties broken by a d20 roll-off. Once every Tamer has acted, the Digimon take their turns the same way, ordered by Friendship, ties broken by a d20 roll-off.
 
 - Each Character Takes Their Turn. In initiative order, each Tamer and each Digimon takes their full turn before the next character acts.
 
@@ -46,7 +46,7 @@ When moving, you must finish your Move Action before starting another action. Yo
 | --- | --- |
 | Move | Move up to your full movement. Digimon move a number of spaces equal to their Friendship stat; Tamers move double that, Friendship x2. |
 | Dedigivolve | Instead of moving, voluntarily drop your Digimon one or two stages. Hope cost adjusts to the new stage before it's spent. |
-| Digivice | Instead of moving, use your Digivice to perform one of its actions. Every Digivice grants its own action; check Chapter 15: Items for what your specific model can do. |
+| Digivice | Instead of moving, use your Digivice to perform one of its actions. Every Digivice grants its own action; check Chapter 16: Items for what your specific model can do. |
 
 | **Dedigivolution Clarification** Both the Tamer AND the Digimon can each trigger a voluntary dedigivolution on their own turn using their own Move Action. They cannot both dedigivolve in the same round, each can only use their own Move Action once. Maximum voluntary dedigivolution per turn is 2 stages, if either the Tamer or Digimon uses the two-stage option. Status effects are always cleared on any digivolution or dedigivolution, voluntary or forced. |
 | --- |
@@ -90,7 +90,7 @@ Choose the target and which of your four active moves you are using. The move mu
 
 ### **Step 3: Determine Damage**
 
-| **Damage Formula** Damage = PR dice + Attacker's total Knowledge - Defender's total Love. PR dice is determined by the move's Power Rating (see Chapter 11: Attacks & Tags). Minimum damage before multipliers: 1. |
+| **Damage Formula** Damage = PR dice + Attacker's total Knowledge - Defender's total Love. PR dice is determined by the move's Power Rating (see Chapter 12: Attacks & Tags). Minimum damage before multipliers: 1. |
 | --- |
 
 ### **Step 4: Apply Weakness or Strength**
@@ -126,4 +126,4 @@ Subtract the final damage total from the target's current Health. If the target'
 
 ## **Ending the Fight**
 
-A single defeat doesn't end an encounter on its own. Combat is actually over once one side is the only one left with anyone able to act, every character on the other side has been defeated, fled, or otherwise dropped out of the fight, or once one side concedes outright, whether that's a wild Digimon breaking off and running, an enemy Tamer calling it, or your own party deciding the smart move is pulling out rather than pushing a fight you can't win. Chapter 14: Defeat, Victory & Tamer Conditions covers what actually happens to a character once they've been taken out, and what a party walks away with once the dust settles.
+A single defeat doesn't end an encounter on its own. Combat is actually over once one side is the only one left with anyone able to act, every character on the other side has been defeated, fled, or otherwise dropped out of the fight, or once one side concedes outright, whether that's a wild Digimon breaking off and running, an enemy Tamer calling it, or your own party deciding the smart move is pulling out rather than pushing a fight you can't win. Chapter 15: Defeat, Victory & Tamer Conditions covers what actually happens to a character once they've been taken out, and what a party walks away with once the dust settles.

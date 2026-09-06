@@ -494,6 +494,90 @@
   text-align: right;
 }
 
+/* Primary crest slot widget */
+.digital-destiny .primary-crest-slot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f5ef;
+  border: 2px solid #c8b870;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+}
+
+.digital-destiny .primary-crest-slot.primary-crest-empty {
+  border-style: dashed;
+  border-color: #c0b8a8;
+  color: #a09880;
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.digital-destiny .primary-crest-slot-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.digital-destiny .primary-crest-slot-name {
+  flex: 1;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.digital-destiny .primary-crest-remove {
+  cursor: pointer;
+  color: #a04030;
+  font-size: 0.85em;
+  padding: 2px 4px;
+}
+
+.digital-destiny .primary-crest-remove:hover { color: #c0392b; }
+
+/* Primary Crest item sheet */
+.digital-destiny.primary-crest-sheet .primary-crest-type-label {
+  font-size: 0.8em;
+  color: #8090a0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.digital-destiny.primary-crest-sheet .primary-crest-bonus-table {
+  margin: 12px 8px;
+}
+
+.digital-destiny.primary-crest-sheet .pc-table-header {
+  font-size: 0.75em;
+  font-weight: 700;
+  color: #8090a0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #d8d0c8;
+  padding-bottom: 3px;
+}
+
+.digital-destiny.primary-crest-sheet .pc-bonus-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: 0.88em;
+}
+
+.digital-destiny.primary-crest-sheet .pc-stat-bonus {
+  font-weight: 700;
+}
+
+.digital-destiny.primary-crest-sheet .pc-note {
+  font-size: 0.78em;
+  color: #8090a0;
+  font-style: italic;
+  margin: 8px;
+  line-height: 1.4;
+}
+
 .digital-destiny .crest-effective-row {
   border-top: 1px dashed #d0c8bc;
   margin-top: 2px;
@@ -3955,7 +4039,7 @@
   color: #e8dcc8;
   font-family: inherit;
   font-size: 0.85em;
-  z-index: 70;
+  z-index: 300;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 20px rgba(0,0,0,0.6);
@@ -4059,3 +4143,17 @@
 .dd-acted-btn { color: #bbb !important; }
 .dd-acted-btn.dd-acted-on { color: #27ae60 !important; }
 
+
+/* -----------------------------------------------
+   Chat message color-coding (Settings > Color-Code Chat Messages)
+   ----------------------------------------------- */
+.message.dd-chatcolor {
+  border-left: 4px solid var(--dd-chatcolor, transparent);
+  padding-left: 6px;
+  /* box-shadow (not background/background-color) so this paints a
+     translucent tint ON TOP of whatever background Foundry's own CSS gives
+     the message, instead of replacing it — background-color and background
+     both fully overwrite the box's existing fill rather than blending with
+     it, which is what made the box look transparent. */
+  box-shadow: inset 0 0 0 999px rgba(var(--dd-chatcolor-rgb, 128, 128, 128), 0.12);
+}

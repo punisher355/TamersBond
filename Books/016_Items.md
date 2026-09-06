@@ -1,4 +1,4 @@
-# **Chapter 15: Items**
+# **Chapter 16: Items**
 
 Items are objects Tamers and Digimon carry, equip, and use. Some are found as loot. Others are bought, and buying means dealing with one of two currencies.
 
@@ -84,7 +84,7 @@ Supply items are used up the moment they're used, no equip slot, no limit on how
 
 ## **Food**
 
-Food is what a Tamer and their Digimon actually eat, the kind of thing that can satisfy the feeding requirement from Chapter 13. Every price below covers feeding both the Tamer and their Digimon together; buying enough for just one of the pair costs half the listed price.
+Food is what a Tamer and their Digimon actually eat, the kind of thing that can satisfy the feeding requirement from Chapter 14. Every price below covers feeding both the Tamer and their Digimon together; buying enough for just one of the pair costs half the listed price.
 
 | Food | Cost (REM) | Cost (DD) | Effect |
 | --- | --- | --- | --- |

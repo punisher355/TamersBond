@@ -16,12 +16,12 @@ function tagsSchema() {
     counter:   new f.BooleanField({ initial: false }),
     rush:      new f.BooleanField({ initial: false }),
     burn:      new f.BooleanField({ initial: false }), burnX:     new f.NumberField({ initial: 2, integer: true }), burnY:  new f.NumberField({ initial: 3, integer: true }),
-    freeze:    new f.BooleanField({ initial: false }),
+    freeze:    new f.BooleanField({ initial: false }), freezeX:   new f.NumberField({ initial: 1, integer: true }),
     paralyze:  new f.BooleanField({ initial: false }), paralyzeX: new f.NumberField({ initial: 1, integer: true }),
     poison:    new f.BooleanField({ initial: false }), poisonX:   new f.NumberField({ initial: 1, integer: true }),
     sleep:     new f.BooleanField({ initial: false }),
     blind:     new f.BooleanField({ initial: false }),
-    confuse:   new f.BooleanField({ initial: false }),
+    confuse:   new f.BooleanField({ initial: false }), confuseX:  new f.NumberField({ initial: 1, integer: true }),
     drain:     new f.BooleanField({ initial: false }),
     push:      new f.BooleanField({ initial: false }),
     heal:      new f.BooleanField({ initial: false }),
@@ -153,6 +153,18 @@ export class EffectData extends TypeDataModel {
       removeStackOnTurn: new f.BooleanField({ initial: false }),
       applyCode:         new f.StringField({ initial: "" }),
       passiveText:       new f.StringField({ initial: "" }),
+      // ── Core Drive check system (Books/012_Attacks_and_Tags.md "Status Effect Decay") ──
+      // statusType: which canonical status this is ("burn","freeze","paralyze","blind",
+      //   "confuse","poison","fragment","sleep","regen") — drives tier text/rules for the
+      //   three tiered statuses and dispatches the Freeze-on-hit hook. Empty for custom effects.
+      // decayField: which field the automatic start-of-turn -1 (and the Core Drive check's
+      //   second loss) operates on — "stacks" for everything except Burn, which decays "ticks"
+      //   while its "stacks" (X, damage) stays fixed until the effect ends.
+      // coreDriveCheck: true if, after the automatic -1, the actor rolls a Core Drive check
+      //   (coreDriveRank d6 vs DN = remaining + 1) for a chance to shed one more.
+      statusType:     new f.StringField({ initial: "" }),
+      decayField:     new f.StringField({ initial: "stacks" }),
+      coreDriveCheck: new f.BooleanField({ initial: false }),
       rules: new f.ArrayField(new f.SchemaField({
         path:  new f.StringField({ initial: "" }),
         mode:  new f.StringField({ initial: "add" }),
@@ -161,6 +173,18 @@ export class EffectData extends TypeDataModel {
       duration: new f.SchemaField({
         unit: new f.StringField({ initial: "encounter" })
       })
+    };
+  }
+}
+
+// ── PrimaryCrest ───────────────────────────────────────────────────────────
+// A race-like item: when present on a tamer it gives +2 to its chosen crest
+// and +1 to every other crest stat. Only one should exist on an actor at a time.
+
+export class PrimaryCrestData extends TypeDataModel {
+  static defineSchema() {
+    return {
+      primaryCrest: new f.StringField({ initial: "courage" })
     };
   }
 }

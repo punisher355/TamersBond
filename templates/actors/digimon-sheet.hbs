@@ -398,23 +398,23 @@
       <div class="status-conditions">
         <div class="status-row">
           <span class="status-name">BURN X,Y</span>
-          <span class="status-desc">Take X damage at start of turn. Lasts Y ticks. Stacks: take higher X, add Y counters.</span>
+          <span class="status-desc">X = damage/turn (fixed, never decays). Y = Ticks: lose 1 automatically at start of turn, then a Core Drive check (DN = remaining Ticks + 1) for a chance to lose 1 more. Ends at 0 Ticks. Reapplied: take higher X, add Y.</span>
         </div>
         <div class="status-row">
-          <span class="status-name">FREEZE</span>
-          <span class="status-desc">Cannot act. End of turn: roll 1d20 + Love, DN 14 to break. Also breaks on any damage.</span>
+          <span class="status-name">FREEZE X</span>
+          <span class="status-desc">Gain X stacks (add if already Frozen). Lose 1 stack at start of turn, then a Core Drive check (DN = remaining + 1) for a chance to lose 1 more. Also lose 1 stack whenever targeted by an attack, hit or miss — not at 7+. 1–3: Basic OR Move only. 4–6: cannot act. 7+: cannot act, immune to on-hit loss.</span>
         </div>
         <div class="status-row">
           <span class="status-name">PARALYZE X</span>
-          <span class="status-desc">Speed halved. 1–3 stacks: choose Basic OR Move, not both. 4+ stacks: no actions. Lose 1 stack per turn. Nat 20 clears all.</span>
+          <span class="status-desc">Speed halved. Gain X stacks. Lose 1 stack at start of turn, then a Core Drive check (DN = remaining + 1) for a chance to lose 1 more. 1–3: choose Basic OR Move, not both. 4–6: cannot act. 7+: cannot act and take damage equal to current stacks.</span>
         </div>
         <div class="status-row">
           <span class="status-name">BLIND</span>
-          <span class="status-desc">−4 to all attack hit rolls.</span>
+          <span class="status-desc">Gain 2 stacks (fixed). Lose 1 stack at start of turn, then a Core Drive check (DN = remaining + 1) for a chance to lose 1 more. −4 to all attack hit rolls while any stacks remain.</span>
         </div>
         <div class="status-row">
-          <span class="status-name">CONFUSE</span>
-          <span class="status-desc">Start of turn: roll 1d20 + Friendship, DN 14 to snap out. Fail: must attack nearest ally.</span>
+          <span class="status-name">CONFUSE X</span>
+          <span class="status-desc">Gain X stacks (add if already Confused). Lose 1 stack at start of turn, then a Core Drive check (DN = remaining + 1) for a chance to lose 1 more. 1–3: −2 to this turn's hit roll. 4–6: must attack the closest character. 7+: GM redirects one of your own moves at you.</span>
         </div>
         <div class="status-row">
           <span class="status-name">DRAIN</span>
@@ -426,7 +426,7 @@
         </div>
         <div class="status-row">
           <span class="status-name">POISON X</span>
-          <span class="status-desc">On a natural attack roll of 15+, target is Poisoned with X stacks (add to current total if already Poisoned). Takes damage = current stacks at start of their turn.</span>
+          <span class="status-desc">On a natural attack roll of 15+, gain X Poison stacks (add to current total if already Poisoned). Take damage = current stacks at start of turn, then lose 1 stack, then a Core Drive check (DN = remaining + 1) for a chance to lose 1 more.</span>
         </div>
         <div class="status-row">
           <span class="status-name">SLEEP</span>
@@ -438,7 +438,7 @@
         </div>
         <div class="status-row">
           <span class="status-name">FRAGMENT X</span>
-          <span class="status-desc">Cannot regain HP from any source (RECOVERY, items, or skill checks). On hit, add X stacks. If already Fragmented, add X to current total.</span>
+          <span class="status-desc">Gain X stacks (add if already Fragmented). Lose 1 stack at start of turn, then a Core Drive check (DN = remaining + 1) for a chance to lose 1 more. Cannot regain HP from any source (RECOVERY, items, or skill checks) while any stacks remain.</span>
         </div>
       </div>
 

@@ -135,7 +135,7 @@ DIGIMON.crestToStat = {
 
 // EXP cost to raise a tamer crest stat FROM this rank to the next
 DIGIMON.crestUpgradeCost = {
-  1: 200, 2: 300, 3: 400, 4: 500,
+  0: 100, 1: 200, 2: 300, 3: 400, 4: 500,
   5: 600, 6: 700, 7: 800, 8: 900, 9: 1000
 };
 
@@ -302,21 +302,6 @@ DIGIMON.slotRules = {
   gadget:        { max: 1, swapOnlyAtRest: true }
 };
 
-DIGIMON.statusTypes = {
-  burn:     { label: "Burn",     color: "#c0392b", icon: "fas fa-fire",              hasX: true,  hasY: true,  xLabel: "Dmg/Turn", yLabel: "Turns Left" },
-  freeze:   { label: "Freeze",   color: "#5dade2", icon: "fas fa-snowflake",         hasX: false, hasY: false, defaultRules: [{ path: "cannotAct", mode: "override", value: 1 }] },
-  paralyze: { label: "Paralyze", color: "#f39c12", icon: "fas fa-bolt",              hasX: true,  hasY: false, xLabel: "Stacks", defaultRules: [{ path: "restricted", mode: "override", value: 1 }] },
-  blind:    { label: "Blind",    color: "#717d7e", icon: "fas fa-eye-slash",         hasX: false, hasY: false, defaultRules: [{ path: "hitBonus", mode: "subtract", value: 4 }] },
-  confuse:  { label: "Confuse",  color: "#9b59b6", icon: "fas fa-dizzy",             hasX: false, hasY: false, defaultRules: [{ path: "forcedAttack", mode: "override", value: 1 }] },
-  drain:    { label: "Drain",    color: "#27ae60", icon: "fas fa-tint",              hasX: false, hasY: false },
-  push:     { label: "Push",     color: "#a04030", icon: "fas fa-expand-arrows-alt", hasX: false, hasY: false },
-  regen:    { label: "Regen",    color: "#2ecc71", icon: "fas fa-heartbeat",         hasX: true,  hasY: false, xLabel: "HP/Turn" },
-  poison:   { label: "Poison",   color: "#52be80", icon: "fas fa-skull-crossbones",  hasX: true,  hasY: false, xLabel: "Stacks" },
-  sleep:    { label: "Sleep",    color: "#8e44ad", icon: "fas fa-moon",              hasX: false, hasY: false, defaultRules: [{ path: "cannotAct", mode: "override", value: 1 }] },
-  fragment: { label: "Fragment", color: "#3d6b6b", icon: "fas fa-puzzle-piece",      hasX: true,  hasY: false, xLabel: "Stacks", defaultRules: [{ path: "healingBlocked", mode: "override", value: 1 }] },
-  custom:   { label: "Custom",   color: "#666666", icon: "fas fa-star",              hasX: true,  hasY: true,  xLabel: "X Value", yLabel: "Y Value" }
-};
-
 // Convert a move's tags object into a readable bracket-notation string, e.g. "[MELEE] [BURN 2,3]"
 export function computeTagString(tags) {
   if (!tags || typeof tags === "string") return tags ?? "";
@@ -332,10 +317,10 @@ export function computeTagString(tags) {
   if (tags.counter)  p.push("[COUNTER]");
   if (tags.rush)     p.push("[RUSH]");
   if (tags.burn)     p.push(`[BURN ${tags.burnX ?? 2},${tags.burnY ?? 3}]`);
-  if (tags.freeze)   p.push("[FREEZE]");
+  if (tags.freeze)   p.push(`[FREEZE ${tags.freezeX ?? 1}]`);
   if (tags.paralyze) p.push(`[PARALYZE ${tags.paralyzeX ?? 1}]`);
   if (tags.blind)    p.push("[BLIND]");
-  if (tags.confuse)  p.push("[CONFUSE]");
+  if (tags.confuse)  p.push(`[CONFUSE ${tags.confuseX ?? 1}]`);
   if (tags.drain)    p.push("[DRAIN]");
   if (tags.push)     p.push("[PUSH]");
   if (tags.heal)     p.push("[HEAL]");

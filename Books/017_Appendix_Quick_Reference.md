@@ -1,10 +1,10 @@
-# **Chapter 16: Appendix & Quick Reference**
+# **Chapter 17: Appendix & Quick Reference**
 
 ## **Combat At a Glance**
 
 | **Rule** | **Summary** |
 | --- | --- |
-| Turn order | Digimon = Friendship. Tamers = Friendship x2. Ties broken by higher raw Friendship. Separate turns for Tamers and Digimon. |
+| Turn order | All Tamers act first, then all Digimon act. Within each group: Tamers order by Friendship x2, Digimon order by Friendship. Ties broken by a d20 roll-off. |
 | Movement | Digimon move Friendship spaces. Tamers move Friendship x2 spaces. |
 | Adjacent | Any of the 8 squares surrounding a character's space (includes diagonals). |
 | Action commitment | Begin an action, finish it. Movement cannot be split around other actions. Move, Basic, and Digivolving Actions can be taken in any order. |
@@ -16,7 +16,7 @@
 | Hope cost timing | Start of TAMER'S TURN, not start of round. 0 Hope = revert to Default Stage. |
 | Push Through | Basic Action, Tamer only, once per encounter. Skill check DN 5 using a skill linked to your Crest. Success restores Hope equal to the roll. |
 | Hit roll | 1d20 + attacker's Courage vs defender's Reliability + 10 |
-| Natural 1 | Auto miss, no exceptions |
+| Natural 1 | Auto miss; a [TRUE] move deals half damage instead of none |
 | Natural 20 | Auto hit + double final damage |
 | Damage | PR dice + attacker's Knowledge - defender's Love. Min 1 before multipliers. |
 | Multipliers | Attribute first, then element. Max x3.0. Min x0.25. Always min 1 final damage. |
@@ -30,21 +30,21 @@
 
 | **Status** | **How to Wake / Clear** | 
 | --- | --- | 
-| Burn X,Y | Lose 1 stack at start of turn. |
-| Freeze | 1d20 + Love vs DN 14 at end of turn, or take damage | 
-| Paralyze X | Lose 1 stack at start of turn. Natural 20 clears all. | 
-| Blind | Lose 1 stack at start of turn (applies as 2 stacks). |
-| Confuse | 1d20 + Friendship vs DN 14 at start of turn | 
-| Poison X | Lose 1 stack at start of turn. |
+| Burn X,Y | Lose 1 tick at start of turn, then Core Drive check (DN = remaining Y + 1); success sheds a 2nd tick. |
+| Freeze X | Lose 1 stack at start of turn, then Core Drive check (DN = remaining stacks + 1); success = act normal + lose 2nd stack. Also loses 1 stack when targeted by an attack (not at 7+ stacks). |
+| Paralyze X | Lose 1 stack at start of turn, then Core Drive check (DN = remaining stacks + 1); success = act normal + lose 2nd stack. |
+| Blind | Lose 1 stack at start of turn, then Core Drive check (DN = remaining stacks + 1); success sheds a 2nd stack. |
+| Confuse X | Lose 1 stack at start of turn, then Core Drive check (DN = remaining stacks + 1); success = act normal + lose 2nd stack. |
+| Poison X | Applied on hit. Lose 1 stack at start of turn, then Core Drive check (DN = remaining stacks + 1); success sheds a 2nd stack. |
 | Sleep | Firewall check DN 13 at start of turn, or take damage | 
-| Fragment X | Lose 1 stack at start of turn. |
+| Fragment X | Lose 1 stack at start of turn, then Core Drive check (DN = remaining stacks + 1); success sheds a 2nd stack. |
 
 ## **HP Formulas**
 
-| **Character** | **Formula** | **Rank 1 Example** | **Rank 5 Example** | **Rank 10 Example** |
-| --- | --- | --- | --- | --- |
-| Digimon | 20 + (total Sincerity x 4) | Sincerity 4 = 36 HP | Sincerity 12 = 68 HP | Sincerity 20 = 100 HP |
-| Tamer | 12 + (Sincerity rank x 4) | Rank 1 = 16 HP | Rank 5 = 32 HP | Rank 10 = 52 HP |
+| **Character** | **Formula** | **Example** |
+| --- | --- | --- |
+| Digimon | 20 + (total Sincerity x 4) | Sincerity 8 = 52 HP |
+| Tamer | 12 + (Sincerity Total x 4) | Sincerity 8 = 44 HP |
 
 ## **Hope Pool Quick Reference**
 
@@ -86,7 +86,7 @@
 | What resting restores | Full HP and full Hope for both Tamer and Digimon |
 | Interrupted rest | Still restores HP and Hope; the party must finish the rest itself at the next opportunity |
 | Feeding | 2 food portions per rest, one for the Tamer and one for their Digimon |
-| Missed rests or meals | Hope Pool halved at 1, quartered at 2, reduced to one eighth at 3 (see Chapter 13) |
+| Missed rests or meals | Hope Pool halved at 1, quartered at 2, reduced to one eighth at 3 (see Chapter 14) |
 
 | **CREDITS** |
 | --- |
@@ -109,4 +109,4 @@ Tamer's Bond is a fan-made TTRPG. Digimon is the property of Bandai Namco Entert
 
 This is an unofficial fan work and is not affiliated with or endorsed by Bandai Namco.
 
-Playtest Draft v1.0
+v1.1

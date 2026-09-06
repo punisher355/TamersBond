@@ -5,7 +5,7 @@ const { fields: f }    = foundry.data;
 
 function crestFields(extra = {}) {
   return {
-    rank:         new f.NumberField({ initial: 1, integer: true, min: 0 }),
+    rank:         new f.NumberField({ initial: 0, integer: true, min: 0 }),
     modifier:     new f.NumberField({ initial: 0, integer: true }),
     autoModifier: new f.NumberField({ initial: 0, integer: true }),
     ...extra

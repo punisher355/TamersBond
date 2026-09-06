@@ -4,7 +4,7 @@ const FLAG_NS  = "digital-destiny";
 const FLAG_KEY = "hudActions";
 
 function _controlledActor() {
-  const token = canvas.tokens?.controlled?.[0];
+  const token = canvas?.tokens?.controlled?.[0];
   if (!token?.isOwner) return null;
   return token.actor ?? null;
 }
@@ -33,6 +33,14 @@ export class TokenActionHUD {
   }
 
   async render() {
+    try {
+      await this._doRender();
+    } catch (err) {
+      console.error("TokenActionHUD render error:", err);
+    }
+  }
+
+  async _doRender() {
     const actor = _controlledActor();
     this._actor = actor;
 

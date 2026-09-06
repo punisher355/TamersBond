@@ -49,6 +49,21 @@ Two kinds of rule targets exist:
 
 The flags (`cannotAct` etc.) are **not enforced anywhere in code** — they're surfaced as a banner (⚠ chips) on the actor sheet header, and the GM is expected to respect them manually, same as everything else in this game's combat (which is deliberately GM-gated, not automated — see `README`/`CLAUDE_v2.md`). This was a deliberate choice, not an oversight: there's no action-economy engine in this codebase, and building one just to hard-block a button was judged not worth fighting the existing GM-driven combat flow. `healingBlocked` is the one flag that *is* enforced in code (see below), because "does this heal go through" is a simple check at the point of healing, not an action-economy problem.
 
+### Tiered rules: Freeze, Paralyze, Confuse
+
+These three are severity-tiered by their own current stack count (1-3 / 4-6 / 7+,
+per `Books/012_Attacks_and_Tags.md`), so their `rules` array is **not** fixed on
+the template — it's recomputed by `_tierRules(type, stacks)` in `module/combat.js`
+every time their stacks change (creation, reapplication, start-of-turn decay, the
+Core Drive check's second loss, and Freeze's on-hit loss). This keeps the
+declarative-rules model intact: the rule engine still just reads whatever is
+currently in `item.system.rules`, it has no idea the array is stack-dependent.
+`_tierDetail(type, stacks)` is the matching human-readable line shown on the
+Start-of-Turn card and is computed fresh from the live effect, not baked into
+`startOfTurnText`. Confuse's 7+ tier ("GM redirects one of the target's own
+moves at itself") has no numeric rule to write — `_tierRules` returns `[]` for
+it, same GM-manual-adjudication spirit as everything else this section describes.
+
 ## The compendium (`packs/effects.db`) and the tag system
 
 `packs/effects.db` is a flat NDJSON file (Foundry's legacy NeDB compendium
@@ -57,7 +72,7 @@ works, but **Foundry only reads it at world/compendium load, so changes
 need a restart to show up in a running world**).
 
 It intentionally contains **exactly the ten statuses that a move's tags can
-apply** — the same list documented in the rulebook (`Books/011_Attacks_and_Tags.md`):
+apply** — the same list documented in the rulebook (`Books/012_Attacks_and_Tags.md`):
 Burn, Freeze, Paralyze, Blind, Confuse, Drain, Push, Poison, Sleep, Fragment.
 `RECOVERY` is an eleventh tag but is *not* an Effect item — it changes how a
 move resolves (no hit roll, straight heal), so it's handled as its own
@@ -104,30 +119,46 @@ undo support), Push is pure narration (no token-movement automation exists).
 Their compendium entries exist only as reference cards a GM can drag onto a
 sheet as a reminder; they don't do anything mechanically when dragged.
 
-## Duration: Stacks (house rule), Ticks, and encounter-end
+## Duration: the decay field, the Core Drive check, Ticks, and encounter-end
 
-**House rule: every effect loses 1 Stack at the start of the owner's turn,
-and is deleted when Stacks hits 0.** This is universal — `system.removeStackOnTurn`
-is `true` on all ten compendium statuses, not a per-effect judgment call. A
-status's "roll to break early" flavor text (Freeze's Love DN 14 check, Sleep's
-Firewall DN 13 check, Confuse's Friendship DN 14 check) is something the GM
-can act on at any time by just deleting the effect from the sheet — it isn't
-separately coded, since natural Stack decay already guarantees everything
-ends within a few turns regardless.
+**House rule (updated): every effect automatically loses 1 from its "decay
+field" at the start of the owner's turn, then — if `coreDriveCheck` is true
+and something survived that first loss — the actor rolls a Core Drive check
+(`coreDriveRank`d6 vs DN = remaining + 1, the same dice-pool-vs-DN mechanic
+`Books/007_Skills.md` defines for every skill check) for a chance to shed one
+more.** This replaced the old per-status manual rolls (Freeze = Love DN14,
+Paralyze = Reliability DN15, Confuse = Friendship DN14, all now retired) with
+one uniform, fully-automated check shared by every stacking status. Sleep is
+the one exception that still isn't a stack/roll mechanic — it stays a flat
+"cannot act until a Firewall check succeeds," unchanged from before.
+
+`system.decayField` says which field the automatic -1 (and the Core Drive
+check) operates on: `"stacks"` for every status except Burn, `"ticks"` for
+Burn — Burn's `stacks` (X, its damage) no longer decays at all; only its
+`ticks` (Y, duration) does. `system.coreDriveCheck` gates whether the second
+roll happens (`true` for Burn/Freeze/Paralyze/Blind/Confuse/Poison/Fragment,
+`false` for Sleep/Regen). Both fields live on `EffectData` and are set by
+`_EFFECT_TEMPLATES` in `module/combat.js` — see `_coreDriveRank(actor)` there
+for how the roll's die count is resolved (a linked Digimon rolls its Tamer's
+Core Drive rank, same as every other Digimon skill check in this codebase).
+
+All of this happens inside the Start-of-Turn card's "Apply" button click
+handler (`renderChatMessageHTML` → `.dd-sot-apply`, `module/combat.js`): it
+runs `applyCode` (HP tick) first, then the automatic -1, then the Core Drive
+check and its own chat roll, then persists whatever's left and recomputes
+tiered `rules` (see above) and Paralyze's 7+ auto-damage, all in one click.
+
+**Freeze has one more automatic hook**: it also loses 1 stack whenever its
+owner is *targeted* by any attack, hit or miss — not just attacks carrying
+`[FREEZE]` — except at 7+ stacks. This lives in `_freezeOnHit(target)` and
+fires on every `.dd-apply-btn` ("Apply to {target}") click, independent of
+that specific attack's own tags.
 
 The Start-of-Turn chat card only shows a functional "Apply" button when there's
-real mechanical work to do that turn (an HP tick via `applyCode`, or a Stack/Tick
+real mechanical work to do that turn (an HP tick via `applyCode`, or a decay-field
 decrement) — see the `hasAction` check in the `updateCombat` hook in `module/combat.js`.
 A pure-flavor effect with nothing to apply shows a plain reminder instead of a
 dead button.
-
-**`ticks`** is a separate, optional secondary counter — only Burn uses it
-(`ticks: 3` by default, matching its `[BURN X,Y]` tag's Y). If `ticks > 0`,
-it *also* decrements by 1 every Start-of-Turn Apply click and deletes the
-effect at 0, independently of `stacks`. In practice, since Burn's `stacks`
-(2 by default) is usually lower than its `ticks` (3), the universal
-Stack-decay rule above will end it first — the Ticks counter mainly matters
-if a GM manually raises Burn's Stacks higher than its Ticks.
 
 **Encounter-end is a backstop, not the primary removal path.** `Hooks.on("deleteCombat", ...)`
 in `registerCombatHooks()` (`module/combat.js`) deletes every Effect on every
@@ -168,4 +199,14 @@ reading this doc first" list — add these to that mental list:
   silently write to the wrong actor type's schema.
 - `packs/effects.db` — keep it in sync with `_EFFECT_TEMPLATES` in
   `module/combat.js`, and keep it scoped to exactly the tag-driven statuses
-  documented in `Books/011_Attacks_and_Tags.md`.
+  documented in `Books/012_Attacks_and_Tags.md`.
+- `_tierRules()` / `_tierDetail()` in `module/combat.js` — the single source
+  of truth for Freeze/Paralyze/Confuse's 1-3/4-6/7+ severity tiers. Every
+  place that changes a tiered effect's stacks (`_applyStatus`, the SOT Apply
+  handler, `_freezeOnHit`) must recompute `system.rules` through `_tierRules`
+  after the change — nothing else keeps a tiered effect's `rules` in sync
+  with its live stack count.
+- `_coreDriveRank()` in `module/combat.js` — mirrors the Core Drive rank
+  resolution `DigimonSheet.js`/`NpcDigimonSheet.js` already use for their own
+  skill rolls (linked Digimon → Tamer's rank, everyone else → own rank). If
+  that resolution logic ever changes on the sheets, update this too.

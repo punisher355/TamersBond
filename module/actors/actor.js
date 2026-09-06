@@ -69,8 +69,17 @@ export class DigitalDestinyActor extends Actor {
     await super._onCreate(data, options, userId);
     if (game.user.id !== userId) return;
     if (!["tamer", "digimon", "spiritTamer"].includes(this.type)) return;
-    if ((data.items ?? []).some(i => i.type === "attack")) return;
-    await this.createEmbeddedDocuments("Item", DEFAULT_ATTACKS);
+
+    if (!(data.items ?? []).some(i => i.type === "attack")) {
+      await this.createEmbeddedDocuments("Item", DEFAULT_ATTACKS);
+    }
+
+    // Start every new actor at full HP so encounter enemies don't need manual healing
+    const hpUpdate = { "system.hp.value": this.system.hp.max };
+    if (this.type === "spiritTamer") {
+      hpUpdate["system.digiHp.value"] = this.system.digiHp.max;
+    }
+    await this.update(hpUpdate);
   }
 
   prepareDerivedData() {
@@ -92,9 +101,14 @@ export class DigitalDestinyActor extends Actor {
       i.type === "gear" && i.system.isEquipped
     ) ?? [];
 
+    // Primary crest item (+2 to chosen crest, +1 to all others)
+    const pcItem  = this.items?.find(i => i.type === "primaryCrest") ?? null;
+    const pcCrest = pcItem?.system?.primaryCrest ?? null;
+
     // --- Stat bonuses (crest rank additions) ---
     for (const stat of CREST_STATS) {
-      if (!system.crests[stat]) system.crests[stat] = { rank: 1, modifier: 0, autoModifier: 0 };
+      if (!system.crests[stat]) system.crests[stat] = { rank: 0, modifier: 0, autoModifier: 0 };
+      system.crests[stat].primaryCrestBonus = pcCrest ? (stat === pcCrest ? 2 : 1) : 0;
       system.crests[stat].gearBonus = equippedGear.reduce(
         (sum, i) => sum + (i.system.bonuses?.[stat] ?? 0), 0
       );
@@ -125,7 +139,7 @@ export class DigitalDestinyActor extends Actor {
     // Tamer HP: 12 + (sincerity rank × 4) + status hpMax bonuses
     const HP_BASE = 12, HP_PER_SINCERITY = 4;
     const sincerity     = system.crests.sincerity ?? {};
-    const sincEffective = (sincerity.rank ?? 1) + (sincerity.gearBonus ?? 0);
+    const sincEffective = (sincerity.rank ?? 0) + (sincerity.primaryCrestBonus ?? 0) + (sincerity.gearBonus ?? 0);
     system.hp.max   = HP_BASE + sincEffective * HP_PER_SINCERITY + (system.statusMods?.hpMaxBonus ?? 0);
     system.hp.value = Math.min(system.hp.value ?? system.hp.max, system.hp.max);
 
@@ -174,7 +188,7 @@ export class DigitalDestinyActor extends Actor {
     const hpMaxBonus = system.statusMods?.hpMaxBonus ?? 0;
     if (system.isTamerForm ?? true) {
       const sincerity     = system.crests.sincerity ?? {};
-      const sincEffective = (sincerity.rank ?? 1) + (sincerity.gearBonus ?? 0);
+      const sincEffective = (sincerity.rank ?? 0) + (sincerity.primaryCrestBonus ?? 0) + (sincerity.gearBonus ?? 0);
       system.digiHp.max = 12 + sincEffective * 4 + hpMaxBonus;
     } else {
       const sinTotal = system.digiStats.sincerity?.total ?? 0;
@@ -191,8 +205,8 @@ export class DigitalDestinyActor extends Actor {
 
     for (const stat of CREST_STATS) {
       if (!system.stats[stat]) system.stats[stat] = { base: 0, invested: 0, conditional: 0 };
-      // tamerBonus includes gear stat bonuses already baked in by prepareTamerData
-      system.stats[stat].tamerBonus = (crests[stat]?.rank ?? 0) + (crests[stat]?.gearBonus ?? 0);
+      // tamerBonus includes primary crest and gear bonuses already baked in by prepareTamerData
+      system.stats[stat].tamerBonus = (crests[stat]?.rank ?? 0) + (crests[stat]?.primaryCrestBonus ?? 0) + (crests[stat]?.gearBonus ?? 0);
       system.stats[stat].total = (system.stats[stat].base        ?? 0)
                                + (system.stats[stat].tamerBonus  ?? 0)
                                + (system.stats[stat].invested    ?? 0)

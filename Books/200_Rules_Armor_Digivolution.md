@@ -1,4 +1,4 @@
-# **About This Section**
+# A New Destiny: Armor Digivolution
 
 This section contains expanded rules introduced by the A New Destiny module. These mechanics are not part of the core rulebook; they only apply when the GM has enabled this module for their campaign.
 

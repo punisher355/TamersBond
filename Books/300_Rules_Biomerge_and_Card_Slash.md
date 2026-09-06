@@ -1,3 +1,5 @@
+# A New Destiny: Biomerge & Card Slash
+
 ## **Biomerge Digivolution**
 
 Biomerge Digivolution is the merging of a Tamer's body and consciousness with their Digimon partner. The result isn't a Tamer riding inside a giant monster. It is one being made of both of them, with a single will and a power that neither could reach alone.

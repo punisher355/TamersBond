@@ -1,4 +1,4 @@
-# **Chapter 12: Digivolution**
+# **Chapter 13: Digivolution**
 
 Digivolution is not a button you press. It is a question your partner asks of you: do you have enough left? Every evolution is paid for in Hope, and Hope is not infinite.
 
@@ -17,7 +17,7 @@ A Digimon moves through several distinct stages over the course of its life, and
 
 ## **Hope, Digivolution Fuel**
 
-Hope is what fuels every digivolution and keeps a Digimon holding a stage above Default. Chapter 5 covers exactly how your Hope Pool is sized, off your total EXP earned over your whole career, not your current stats or any single Crest Stat's rank. What matters here is what that Hope actually gets spent on once you have it.
+Hope is what fuels every digivolution and keeps a Digimon holding a stage above Default. Chapter 6 covers exactly how your Hope Pool is sized, off your total EXP earned over your whole career, not your current stats or any single Crest Stat's rank. What matters here is what that Hope actually gets spent on once you have it.
 
 Hope fully restores whenever you rest.
 

@@ -1,4 +1,4 @@
-# **About This Section**
+# Data Squad: Burst Digivolution
 
 This section contains expanded rules introduced by the Data Squad module. These mechanics are not part of the core rulebook, they only apply when the GM has enabled this module for their campaign.
 
