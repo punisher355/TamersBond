@@ -1,5 +1,5 @@
 import { TamerSheet }        from "./TamerSheet.js";
-import { computeTagString }  from "../config.js";
+import { computeTagString, hexToRgbTriplet, getActorHopePerTurn } from "../config.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -57,7 +57,8 @@ export class SpiritTamerSheet extends TamerSheet {
         label:       D.statLabels[key],
         combatName:  STAT_COMBAT_ROLES[key],
         color:       D.statColors[key],
-        crestImg:    D.crestImages[key],
+        rgb:         hexToRgbTriplet(D.statColors[key]),
+        crestImg:    D.crestImagesTamer[key],
         base:        ds.base        ?? 0,
         tamerBonus:  ds.tamerBonus  ?? 0,
         invested,
@@ -73,14 +74,73 @@ export class SpiritTamerSheet extends TamerSheet {
     const allFormItems  = this.actor.items.filter(i => i.type === "digimonForm");
     const currentFormId = system.currentFormId ?? "";
 
+    // Digivolution Path tracker — Tamer Form always shows the character's own
+    // portrait (there's no stored "form" for it), the rest fill in from the
+    // path snapshot taken each time a form is applied at that stage.
+    context.digivolutionPath = [
+      {
+        stage:     "tamerform",
+        label:     "Tamer Form",
+        img:       system.tamerPortrait || this.actor.img || "",
+        reached:   true,
+        hopeSpent: system.digivolutionPath?.tamerform?.hopeSpent ?? 0
+      },
+      ...[["champion", D.stageLabels.champion], ["ultimate", D.stageLabels.ultimate],
+          ["mega", D.stageLabels.mega], ["megaII", "Mega II"]].map(([stage, label]) => {
+        const p = system.digivolutionPath?.[stage] ?? {};
+        return {
+          stage,
+          label,
+          img:       p.formImg || "",
+          reached:   !!p.formImg,
+          hopeSpent: p.hopeSpent ?? 0
+        };
+      })
+    ];
+
     context.knownForms = allFormItems.map(f => ({
       id:         f.id,
       name:       f.name,
       img:        f.img,
       system:     f.system,
       isCurrent:  f.id === currentFormId,
+      isFreeForm: f.system.isFreeForm ?? false,
       stageLabel: D.stageLabels[f.system.stage] ?? f.system.stage
     }));
+
+    // Alternate-form EXP tracker — first form at a stage is free, each
+    // additional known form at that stage costs D.altFormCosts[stage] EXP
+    // (see 009_Digimon_Crest_Stats.md). Computed here so the sheet always
+    // matches the rulebook instead of relying on manual bookkeeping.
+    context.altFormSummary = (() => {
+      const rows = [];
+      let totalForms = 0;
+      let totalExp   = 0;
+      for (const stage of Object.keys(D.altFormCosts)) {
+        const stageForms = allFormItems.filter(f => f.system.stage === stage);
+        const count = stageForms.length;
+        if (!count) continue;
+        // Forms marked Free (GM ruling exception) never count toward cost.
+        // Among the rest, the normal rule still applies: the first one is
+        // free, every additional one costs.
+        const payingForms = stageForms.filter(f => !(f.system.isFreeForm ?? false));
+        const freeCount   = count - payingForms.length;
+        const extraForms  = Math.max(0, payingForms.length - 1);
+        const expCost     = extraForms * D.altFormCosts[stage];
+        totalForms += count;
+        totalExp   += expCost;
+        rows.push({
+          stage,
+          label:        D.stageLabels[stage] ?? stage,
+          count,
+          freeCount,
+          extraForms,
+          costPerForm:  D.altFormCosts[stage],
+          expCost
+        });
+      }
+      return { rows, totalForms, totalExp };
+    })();
 
     context.currentFormData = null;
     const currentFormItem = allFormItems.find(f => f.id === currentFormId);
@@ -102,14 +162,20 @@ export class SpiritTamerSheet extends TamerSheet {
     const stageOrder      = ["fresh", "intraining", "rookie", "champion", "ultimate", "mega"];
     // In Tamer Form the effective stage is always Rookie (they digivolve to Champion from there)
     const currentStageKey = (system.isTamerForm ?? true) ? "rookie" : (system.currentStage ?? "rookie");
+    // Mega can still digivolve into a second Mega-tier form ("Mega II") —
+    // mechanically still Mega, just a different known form.
+    const atMega          = currentStageKey === "mega";
     const stageIdx        = stageOrder.indexOf(currentStageKey);
-    const targetStage     = (stageIdx >= 0 && stageIdx < stageOrder.length - 1) ? stageOrder[stageIdx + 1] : null;
+    const targetStage     = atMega ? "mega" : ((stageIdx >= 0 && stageIdx < stageOrder.length - 1) ? stageOrder[stageIdx + 1] : null);
     const digiData        = targetStage ? DIGIVOLVE_DATA[targetStage] : null;
-    const nextStageForms  = targetStage ? allFormItems.filter(f => f.system.stage === targetStage) : [];
+    const nextStageForms  = targetStage
+      ? allFormItems.filter(f => f.system.stage === targetStage && (!atMega || f.id !== currentFormId))
+      : [];
 
     context.canDigivolve     = !!(targetStage && digiData && nextStageForms.length > 0);
     context.noNextStageForms = !!(targetStage && digiData && nextStageForms.length === 0);
-    context.digivolveTarget  = targetStage ? (D.stageLabels[targetStage] ?? targetStage) : null;
+    context.digivolveTarget  = atMega ? "Mega II" : (targetStage ? (D.stageLabels[targetStage] ?? targetStage) : null);
+    context.digivolveAtMega  = atMega;
     context.digivolveCost    = digiData?.fullCost ?? 0;
     context.hopeAvailable    = system.crests?.hope?.current ?? 0;
 
@@ -165,6 +231,7 @@ export class SpiritTamerSheet extends TamerSheet {
     html.find('.form-set-current').on('click', ev => this._onSetCurrentForm(ev));
     html.find('.form-remove').on('click',      ev => this._onRemoveKnownForm(ev));
     html.find('.form-open').on('click',        ev => this._onOpenForm(ev));
+    html.find('.form-free-toggle').on('click', ev => this._onToggleFreeForm(ev));
     html.find('.corruption-toggle').on('click',    () => this._onCorruptionToggle());
     html.find('.digivolve-roll-btn').on('click',   () => this._onDigivolveRoll());
     html.find('.revert-to-tamer-btn').on('click',  () => this._onRevertToTamer());
@@ -218,7 +285,19 @@ export class SpiritTamerSheet extends TamerSheet {
     ui.notifications.info(`Current form set to ${item.name}.`);
   }
 
-  async _applyForm(item) {
+  // GM-ruled exception: mark a known form as not costing Alternate Form EXP
+  // (some campaigns grant an extra free form at a stage beyond the normal
+  // "first form is free" rule).
+  async _onToggleFreeForm(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (!item || item.type !== "digimonForm") return;
+    const next = !(item.system.isFreeForm ?? false);
+    await item.update({ "system.isFreeForm": next });
+    ui.notifications.info(`${item.name} marked ${next ? "Free (no EXP cost)" : "no longer free"}.`);
+  }
+
+  async _applyForm(item, { pathKeyOverride } = {}) {
     const s       = item.system;
     const img     = item.img;
     const SIZE_SQUARES = { "tiny": 0.5, "small": 1, "medium": 1, "large": 2, "huge": 3, "gargantuan": 4 };
@@ -250,6 +329,19 @@ export class SpiritTamerSheet extends TamerSheet {
       actorUpdate.img = img;
       actorUpdate["prototypeToken.texture.src"] = img;
     }
+
+    // Snapshot this form's picture/name into the Digivolution Path tracker
+    // (Spirit Tamers only ever land a form on champion/ultimate/mega — Tamer
+    // Form occupies the rookie-equivalent slot instead of a stored form).
+    // pathKeyOverride lets the Digivolve action redirect a second Mega-stage
+    // form into the separate "Mega II" step instead of overwriting Mega.
+    const pathKey = pathKeyOverride ?? s.stage;
+    if (["champion", "ultimate", "mega", "megaII"].includes(pathKey)) {
+      actorUpdate[`system.digivolutionPath.${pathKey}.formId`]   = item.id;
+      actorUpdate[`system.digivolutionPath.${pathKey}.formName`] = item.name;
+      actorUpdate[`system.digivolutionPath.${pathKey}.formImg`]  = img || "";
+    }
+
     await this.actor.update(actorUpdate);
 
     const activeCombat = game.combat;
@@ -315,7 +407,16 @@ export class SpiritTamerSheet extends TamerSheet {
       if (combatant) await activeCombat.rollInitiative([combatant.id], { updateTurn: false });
     }
 
-    ui.notifications.info(`${this.actor.name} reverted to Tamer Form.`);
+    // Reverting to Tamer Form means none of the higher stages are being held
+    // anymore, so clear every stage's Hope Spent — Hope Per Turn (derived
+    // from these) naturally becomes 0 as a result.
+    const clearHope = {};
+    for (const stage of ["tamerform", "champion", "ultimate", "mega", "megaII"]) {
+      clearHope[`system.digivolutionPath.${stage}.hopeSpent`] = 0;
+    }
+    await this.actor.update(clearHope);
+
+    ui.notifications.info(`${this.actor.name} reverted to Tamer Form. Hope Per Turn reset to 0.`);
   }
 
   async _onRemoveKnownForm(ev) {
@@ -442,7 +543,8 @@ export class SpiritTamerSheet extends TamerSheet {
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">Hope Per Turn</span>
-            <input type="number" name="crests.hope.perTurn" value="${hope.perTurn ?? 0}" class="dd-det-input-wide" />
+            <span class="dd-det-readonly">${getActorHopePerTurn(actor)}</span>
+            <span class="dd-det-hint">Auto — sum of Hope spent per stage above Default on the Digivolution Path tracker</span>
           </div>
         </div>
 
@@ -577,31 +679,55 @@ export class SpiritTamerSheet extends TamerSheet {
   async _onDigivolveRoll() {
     const system = this.actor.system;
     const D      = CONFIG.DIGIMON;
-    const stageOrder   = ["fresh", "intraining", "rookie", "champion", "ultimate", "mega", "ultra"];
+    const stageOrder   = ["fresh", "intraining", "rookie", "champion", "ultimate", "mega"];
     // In Tamer Form, effective current stage is always Rookie
     const currentStage = (system.isTamerForm ?? true) ? "rookie" : (system.currentStage ?? "rookie");
-    const stageIdx     = stageOrder.indexOf(currentStage);
+    const atMega       = currentStage === "mega";
 
-    if (stageIdx < 0 || stageIdx >= stageOrder.length - 1) {
-      ui.notifications.warn("No further stage to digivolve to."); return;
+    let targetStage, data, nextForms;
+
+    if (atMega) {
+      // Mega can still digivolve into a second Mega-tier form ("Mega II") —
+      // mechanically still Mega (same Hope cost/danger), tracked as its own
+      // step on the path instead of the stage list moving any higher.
+      targetStage = "mega";
+      data        = DIGIVOLVE_DATA.mega;
+      nextForms   = this.actor.items.filter(
+        i => i.type === "digimonForm" && i.system.stage === "mega" && i.id !== system.currentFormId
+      );
+      if (nextForms.length === 0) {
+        ui.notifications.warn("No other known Mega forms to digivolve into."); return;
+      }
+    } else {
+      const stageIdx = stageOrder.indexOf(currentStage);
+      if (stageIdx < 0 || stageIdx >= stageOrder.length - 1) {
+        ui.notifications.warn("No further stage to digivolve to."); return;
+      }
+      targetStage = stageOrder[stageIdx + 1];
+      data        = DIGIVOLVE_DATA[targetStage];
+      if (!data) { ui.notifications.warn(`No digivolution data for "${targetStage}".`); return; }
+
+      nextForms = this.actor.items.filter(i => i.type === "digimonForm" && i.system.stage === targetStage);
+      if (nextForms.length === 0) {
+        ui.notifications.warn(`No known forms at ${D.stageLabels[targetStage] ?? targetStage} — add one first.`); return;
+      }
     }
 
-    const targetStage = stageOrder[stageIdx + 1];
-    const data        = DIGIVOLVE_DATA[targetStage];
-    if (!data) { ui.notifications.warn(`No digivolution data for "${targetStage}".`); return; }
-
-    const nextForms = this.actor.items.filter(i => i.type === "digimonForm" && i.system.stage === targetStage);
-    if (nextForms.length === 0) {
-      ui.notifications.warn(`No known forms at ${D.stageLabels[targetStage] ?? targetStage} — add one first.`); return;
-    }
+    // Where this transition's picture/name/Hope get recorded on the path.
+    const pathKey = atMega ? "megaII" : targetStage;
 
     const hopeAvailable = system.crests?.hope?.current ?? 0;
-    const hopePerTurn   = system.crests?.hope?.perTurn  ?? 0;
-    const targetLabel   = D.stageLabels[targetStage]  ?? targetStage;
-    const currentLabel  = (system.isTamerForm ?? true) ? "Tamer Form" : (D.stageLabels[currentStage] ?? currentStage);
+    const targetLabel   = atMega ? "Mega II" : (D.stageLabels[targetStage] ?? targetStage);
+    const currentLabel  = atMega ? "Mega" : ((system.isTamerForm ?? true) ? "Tamer Form" : (D.stageLabels[currentStage] ?? currentStage));
 
+    // Threshold = (1 - Hope Spent / Full Cost) x Stage Danger, straight off
+    // 013_Digivolution.md — just this one stage's spend vs. its own full cost.
+    // The amount chosen here becomes this stage's ongoing Hope Per Turn (see
+    // computeHopePerTurn() in config.js); it is not deducted from the Hope
+    // pool immediately — the pool is only spent turn-by-turn in combat via
+    // the Start-of-Turn "Deduct" button, so it isn't double-charged here too.
     const computeThreshold = spent =>
-      Math.floor((1 - Math.min(Math.max(0, spent + hopePerTurn), data.fullCost) / data.fullCost) * data.maxThreshold);
+      Math.floor((1 - Math.min(Math.max(0, spent), data.fullCost) / data.fullCost) * data.maxThreshold);
 
     const initialSpent = Math.min(data.fullCost, Math.max(0, hopeAvailable));
 
@@ -613,10 +739,6 @@ export class SpiritTamerSheet extends TamerSheet {
           </select>
         </div>`
       : `<p style="margin:0 0 10px;">Form: <strong>${nextForms[0].name}</strong></p>`;
-
-    const perTurnNote = hopePerTurn > 0
-      ? `<span style="font-size:0.85em; color:#27ae60;">+ ${hopePerTurn}/turn = <strong class="dv-effective-total">${Math.min(initialSpent + hopePerTurn, data.fullCost)}</strong> effective</span>`
-      : "";
 
     const result = await new Promise(resolve => {
       const thresh0 = computeThreshold(initialSpent);
@@ -633,14 +755,13 @@ export class SpiritTamerSheet extends TamerSheet {
             <div class="form-group flexrow" style="gap:8px; margin-bottom:8px; align-items:center;">
               <label style="min-width:130px; font-weight:bold;">Hope to spend:</label>
               <input type="number" id="dv-hope-spend" value="${initialSpent}" min="0" max="${data.fullCost}" style="width:64px;" />
-              <span style="font-size:0.85em; color:#888;">0 - ${data.fullCost}</span>
-              ${perTurnNote}
+              <span style="font-size:0.85em; color:#888;">0 - ${data.fullCost} — deducted now, and becomes the ongoing Hope/turn for this stage</span>
             </div>
             <div class="dv-threshold-box" style="padding:10px 12px; background:#fdf5e6; border-radius:4px; border-left:4px solid #e74c3c;">
-              <div style="font-size:0.85em; color:#666; margin-bottom:2px;">Corruption Threshold</div>
+              <div style="font-size:0.85em; color:#666; margin-bottom:2px;">Dark Digivolution Threshold</div>
               <div class="dv-threshold-num" style="font-size:2em; font-weight:bold; color:#e74c3c; line-height:1.2;">${thresh0}</div>
               <div class="dv-threshold-hint" style="font-size:0.85em; margin-top:4px;">
-                Roll d100 above <strong>${thresh0}</strong> — clean digivolution. At or below — corrupted.
+                Roll d100 above <strong>${thresh0}</strong> — clean digivolution. At or below — dark digivolution.
                 ${thresh0 === 0 ? '<em style="color:#27ae60; font-weight:bold;"> Full cost paid — always clean!</em>' : ""}
               </div>
             </div>
@@ -659,12 +780,10 @@ export class SpiritTamerSheet extends TamerSheet {
         render: html => {
           html.find('#dv-hope-spend').on('input', ev => {
             const spent     = Math.min(Math.max(0, parseInt(ev.currentTarget.value) || 0), data.fullCost);
-            const effective = Math.min(spent + hopePerTurn, data.fullCost);
             const threshold = computeThreshold(spent);
             html.find('.dv-threshold-num').text(threshold);
-            html.find('.dv-effective-total').text(effective);
             html.find('.dv-threshold-hint').html(
-              `Roll d100 above <strong>${threshold}</strong> — clean digivolution. At or below — corrupted.` +
+              `Roll d100 above <strong>${threshold}</strong> — clean digivolution. At or below — dark digivolution.` +
               (threshold === 0 ? '<em style="color:#27ae60; font-weight:bold;"> Full cost paid — always clean!</em>' : "") +
               (spent > hopeAvailable ? '<em style="color:#e74c3c;"> Warning: Not enough Hope!</em>' : "")
             );
@@ -677,25 +796,32 @@ export class SpiritTamerSheet extends TamerSheet {
 
     const spent     = Math.min(Math.max(0, result.spent), data.fullCost);
     const threshold = computeThreshold(spent);
-    const effective = Math.min(spent + hopePerTurn, data.fullCost);
     const roll      = await new Roll("1d100").evaluate();
     const isClean   = roll.total > threshold;
 
     const chosenForm = this.actor.items.get(result.formId);
-    if (chosenForm) await this._applyForm(chosenForm);
+    if (chosenForm) await this._applyForm(chosenForm, { pathKeyOverride: pathKey });
+
+    // Record the actual Hope paid for this stage on the Digivolution Path
+    // tracker — this is now the ONLY place Hope-per-stage is recorded; Hope
+    // Per Turn on the sheet header is derived from these boxes automatically
+    // (see computeHopePerTurn() in config.js), not stored/incremented here.
+    await this.actor.update({ [`system.digivolutionPath.${pathKey}.hopeSpent`]: spent });
+
     if (!isClean) await this.actor.update({ "system.corruption.isCorrupted": true });
 
-    await this.actor.update({
-      "system.crests.hope.current": Math.max(0, hopeAvailable - spent),
-      "system.crests.hope.perTurn": hopePerTurn + spent
-    });
+    // Pay the chosen Hope immediately, once, from your current pool. (Hope
+    // Per Turn itself is still derived from the Digivolution Path tracker's
+    // hopeSpent boxes — see computeHopePerTurn() in config.js — this only
+    // ever deducts the pool, it never touches perTurn.)
+    if (spent > 0) {
+      await this.actor.update({ "system.crests.hope.current": Math.max(0, hopeAvailable - spent) });
+    }
 
     const chosenName  = chosenForm?.name ?? targetLabel;
     const resultColor = isClean ? "#27ae60" : "#e74c3c";
-    const resultText  = isClean ? "Clean Digivolution!" : "Corrupted Digivolution!";
-    const hopeLine    = hopePerTurn > 0
-      ? `${spent} spent + ${hopePerTurn}/turn = ${effective} effective`
-      : `${spent}/${data.fullCost} Hope`;
+    const resultText  = isClean ? "Clean Digivolution!" : "Dark Digivolution!";
+    const hopeLine    = `${spent}/${data.fullCost} Hope`;
 
     await roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -706,9 +832,9 @@ export class SpiritTamerSheet extends TamerSheet {
           &nbsp;<span class="tag">Threshold: ${threshold}</span>
         </div>
         <div style="font-size:1.15em; font-weight:bold; color:${resultColor}; margin:4px 0;">${resultText}</div>
-        ${!isClean ? `<div style="font-size:0.9em;">You are now corrupted — under GM control.</div>` : ""}
+        ${!isClean ? `<div style="font-size:0.9em;">You have dark digivolved — you are now under GM control.</div>` : ""}
         <div style="font-size:0.85em; color:#666; margin-top:2px;">
-          ${spent > 0 ? `-${spent} Hope (${Math.max(0, hopeAvailable - spent)} remaining), +${spent}/turn` : "0 Hope spent"}
+          -${spent} Hope (${Math.max(0, hopeAvailable - spent)} remaining), ${spent} Hope/turn to maintain this stage
         </div>`
     });
   }

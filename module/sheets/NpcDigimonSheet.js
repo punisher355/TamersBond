@@ -1,4 +1,4 @@
-import { computeTagString }                    from "../config.js";
+import { computeTagString, hexToRgbTriplet }    from "../config.js";
 import { getActorStatTotals, performAttackRoll } from "../combat.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
@@ -84,7 +84,8 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
         key,
         label:    D.statLabels[key],
         color:    D.statColors[key],
-        crestImg: D.crestImages[key],
+        rgb:      hexToRgbTriplet(D.statColors[key]),
+        crestImg: D.crestImagesTamer[key],
         base,
         total,
         // Only show the "effective total" hint when something besides the
@@ -186,6 +187,16 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
   activateListeners(html) {
     super.activateListeners(html);
+
+    // Recolor fix: --digimon-accent/--digimon-bg are set inline on the <form>,
+    // but .window-content (an ANCESTOR of the form) is what actually paints the
+    // sheet's background — CSS custom properties never inherit upward, so they
+    // have to be set on the real outer window element instead.
+    const windowEl = this.element?.[0];
+    if (windowEl) {
+      windowEl.style.setProperty("--digimon-accent", this.actor.system.sheetColor   ?? "#2ecc71");
+      windowEl.style.setProperty("--digimon-bg",      this.actor.system.sheetBgColor ?? "#f0ece4");
+    }
 
     // JS-positioned skill tooltips (same behavior as the full Digimon sheet)
     const $tip = $('<div class="skill-hover-tip"></div>').appendTo(html);

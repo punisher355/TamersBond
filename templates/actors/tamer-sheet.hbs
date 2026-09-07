@@ -34,8 +34,7 @@
         </div>
         <div class="hope-perturn-row flexrow">
           <span class="hope-pt-label">Per Turn</span>
-          <input type="number" class="hope-pt-input" name="system.crests.hope.perTurn"
-                 value="{{hope.perTurn}}" />
+          <span class="hope-pt-display" title="Auto — sum of Hope spent per stage above Default on the Digivolution Path tracker">{{hope.perTurn}}</span>
         </div>
       </div>
 
@@ -83,7 +82,7 @@
 
     {{!-- Crests tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="crests">
-      <h3 class="section-header">Crest Stats</h3>
+      <h3 class="section-header">Crest Stats <span class="stage-cap-note">Spent on Crests: {{crestExpSpent}} EXP</span></h3>
 
       {{!-- Primary Crest item slot --}}
       {{#if primaryCrestItem}}
@@ -99,6 +98,69 @@
       </div>
       {{/if}}
 
+      {{#if (eq system.crestLayout "table")}}
+      <table class="crest-table">
+        <thead>
+          <tr>
+            <th class="ct-icon-col"></th>
+            <th class="ct-name-col">Crest</th>
+            <th>Rank</th>
+            <th>&rarr; Stat</th>
+            <th>Primary</th>
+            <th>Manual</th>
+            <th>Buffs</th>
+            <th>Gear</th>
+            <th>Total</th>
+            <th class="ct-cost-col">Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each crestList}}
+          <tr class="crest-row" style="border-left: 4px solid {{this.color}}; background: linear-gradient(to right, rgba({{this.rgb}}, 0.22), rgba({{this.rgb}}, 0.03) 60%, rgba({{this.rgb}}, 0) 100%);">
+            <td class="ct-icon-col"><img class="ct-icon" src="{{this.img}}" alt="{{this.label}}" /></td>
+            <td class="ct-name-col"><span class="ct-name" style="color: {{this.color}}">{{this.label}}</span></td>
+            <td>
+              <div class="ct-rank-controls flexrow">
+                <button type="button" class="stat-decrease rank-btn"
+                        data-stat="{{this.key}}"
+                        {{#unless this.canDowngrade}}disabled{{/unless}}>−</button>
+                <span class="ct-rank-value">{{this.rank}}</span>
+                <button type="button" class="stat-increase rank-btn"
+                        data-stat="{{this.key}}"
+                        {{#unless this.canUpgrade}}disabled{{/unless}}>+</button>
+              </div>
+            </td>
+            <td class="ct-stat-col">{{this.digimonStat}}</td>
+            <td class="ct-num-col">{{this.primaryBonus}}</td>
+            <td class="ct-num-col">
+              <input type="number" class="ct-mod-input"
+                     name="system.crests.{{this.key}}.modifier"
+                     value="{{this.modifier}}" />
+            </td>
+            <td class="ct-num-col">{{this.autoModifier}}</td>
+            <td class="ct-num-col">{{this.gearBonus}}</td>
+            <td class="ct-num-col ct-total-col">{{this.effective}}</td>
+            <td class="ct-cost-col">
+              {{#if this.upgradeCost}}
+              {{this.upgradeCost}} EXP
+              {{else}}
+              <span class="crest-maxed">MAX</span>
+              {{/if}}
+            </td>
+          </tr>
+          {{/each}}
+
+          {{!-- Hope — derived: highest crest rank × 5, read-only pool --}}
+          <tr class="crest-row hope-row" style="border-left: 4px solid {{hope.color}}; background: linear-gradient(to right, rgba({{hope.rgb}}, 0.22), rgba({{hope.rgb}}, 0.03) 60%, rgba({{hope.rgb}}, 0) 100%);">
+            <td class="ct-icon-col"><img class="ct-icon" src="{{hope.img}}" alt="Hope" /></td>
+            <td class="ct-name-col"><span class="ct-name" style="color: {{hope.color}}">Hope</span></td>
+            <td><span class="ct-rank-value hope-pool" style="color: {{hope.color}}">{{hope.max}}</span></td>
+            <td class="ct-stat-col" colspan="6">Digivolution pool — based on total EXP</td>
+            <td class="ct-cost-col"></td>
+          </tr>
+        </tbody>
+      </table>
+      {{else}}
       <div class="crests-grid">
 
         {{#each crestList}}
@@ -170,10 +232,13 @@
         </div>
 
       </div>
+      {{/if}}
     </div>
 
     {{!-- Skills tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="skills">
+      <h3 class="section-header">Skills <span class="stage-cap-note">Spent on Skills: {{skillExpSpent}} EXP</span></h3>
+      <div class="skill-groups-grid">
       {{#each skillGroups}}
       <div class="skill-group">
         <div class="skill-group-header flexrow"
@@ -213,12 +278,13 @@
         {{/each}}
       </div>
       {{/each}}
+      </div>
     </div>
 
     {{!-- Classes tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="classes">
       <h3 class="section-header">Class Abilities
-        <span class="stage-cap-note">EXP comes from the same pool as stats and skills</span>
+        <span class="stage-cap-note">EXP comes from the same pool as stats and skills &middot; Spent on Classes: {{classExpSpent}} EXP</span>
       </h3>
 
       {{#if classItems.length}}
@@ -659,19 +725,6 @@
           <div class="bio-field bio-field-sm">
             <label>Pronouns</label>
             <input type="text" name="system.identity.pronouns" value="{{system.identity.pronouns}}" placeholder="they/them" />
-          </div>
-          <div class="bio-field bio-field-sm">
-            <label>Primary Crest</label>
-            <select name="system.identity.primaryCrest">
-              <option value="" {{#unless system.identity.primaryCrest}}selected{{/unless}}>— Choose —</option>
-              <option value="courage"     {{#if (eq system.identity.primaryCrest "courage")}}selected{{/if}}>Courage</option>
-              <option value="friendship"  {{#if (eq system.identity.primaryCrest "friendship")}}selected{{/if}}>Friendship</option>
-              <option value="love"        {{#if (eq system.identity.primaryCrest "love")}}selected{{/if}}>Love</option>
-              <option value="knowledge"   {{#if (eq system.identity.primaryCrest "knowledge")}}selected{{/if}}>Knowledge</option>
-              <option value="sincerity"   {{#if (eq system.identity.primaryCrest "sincerity")}}selected{{/if}}>Sincerity</option>
-              <option value="reliability" {{#if (eq system.identity.primaryCrest "reliability")}}selected{{/if}}>Reliability</option>
-              <option value="hope"        {{#if (eq system.identity.primaryCrest "hope")}}selected{{/if}}>Hope</option>
-            </select>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { computeTagString } from "./config.js";
+import { computeTagString, getActorHopePerTurn, computeDnaStatBreakdown } from "./config.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -42,6 +42,12 @@ export function getActorStatTotals(actor) {
         out[key] = ds.total ?? 0;
       }
     }
+    return out;
+  }
+  if (actor.type === "dnaDigimon") {
+    const { stats } = computeDnaStatBreakdown(actor);
+    const out = {};
+    for (const key of CREST_ORDER) out[key] = stats[key]?.total ?? 0;
     return out;
   }
   return null;
@@ -664,7 +670,7 @@ export function registerCombatHooks() {
 
     // Hope — private GM whisper each tamer / spirit-tamer turn
     if (actor.type === "tamer" || actor.type === "spiritTamer") {
-      const perTurn    = actor.system?.crests?.hope?.perTurn ?? 0;
+      const perTurn    = getActorHopePerTurn(actor);
       const current    = actor.system?.crests?.hope?.current ?? 0;
       const afterDeduct = Math.max(0, current - perTurn);
       const deductBtn  = perTurn > 0

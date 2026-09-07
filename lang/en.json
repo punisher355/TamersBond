@@ -3,10 +3,12 @@
   "DIGIMON.SheetDigimon": "Digimon Sheet",
   "DIGIMON.SheetNpcDigimon": "NPC Digimon",
   "DIGIMON.SheetSpiritTamer": "Spirit Tamer Sheet",
+  "DIGIMON.SheetDna": "DNA Digimon Sheet",
 
   "TYPES.Actor.tamer": "Tamer",
   "TYPES.Actor.digimon": "Digimon",
   "TYPES.Actor.spiritTamer": "Spirit Tamer",
+  "TYPES.Actor.dnaDigimon": "DNA Digimon",
   "TYPES.Item.move": "Move",
   "TYPES.Item.classSkill": "Class Skill",
 

@@ -1,4 +1,4 @@
-import { computeTagString }                    from "../config.js";
+import { computeTagString, hexToRgbTriplet }    from "../config.js";
 import { getActorStatTotals, performAttackRoll } from "../combat.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
@@ -103,7 +103,8 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
         label:       D.statLabels[key],
         combatName:  STAT_COMBAT_ROLES[key],
         color:       D.statColors[key],
-        crestImg:    D.crestImages[key],
+        rgb:         hexToRgbTriplet(D.statColors[key]),
+        crestImg:    D.crestImagesTamer[key],
         base:        system.stats[key]?.base        ?? 0,
         tamerBonus:  _tamerBonuses[key],
         invested,
@@ -182,6 +183,30 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
         tagsString: computeTagString(a.system.tags)
       }));
 
+    // Digivolution Path tracker — one step per real stage, in order, plus a
+    // trailing "Mega II" step for a Digimon that digivolved past its first
+    // Mega form into a second one (mechanically still Mega — see
+    // _onDigivolveRoll). A step with no formImg means it hasn't been reached.
+    const PATH_STEPS = [
+      ["fresh",      D.stageLabels.fresh],
+      ["intraining", D.stageLabels.intraining],
+      ["rookie",     D.stageLabels.rookie],
+      ["champion",   D.stageLabels.champion],
+      ["ultimate",   D.stageLabels.ultimate],
+      ["mega",       D.stageLabels.mega],
+      ["megaII",     "Mega II"]
+    ];
+    context.digivolutionPath = PATH_STEPS.map(([stage, label]) => {
+      const p = system.digivolutionPath?.[stage] ?? {};
+      return {
+        stage,
+        label,
+        img:       p.formImg || "",
+        reached:   !!p.formImg,
+        hopeSpent: p.hopeSpent ?? 0
+      };
+    });
+
     // Known digimon forms (embedded digimonForm items)
     const allFormItems  = this.actor.items.filter(i => i.type === "digimonForm");
     const currentFormId = system.currentFormId ?? "";
@@ -191,8 +216,43 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       img:        f.img,
       system:     f.system,
       isCurrent:  f.id === currentFormId,
+      isFreeForm: f.system.isFreeForm ?? false,
       stageLabel: D.stageLabels[f.system.stage] ?? f.system.stage
     }));
+    // Alternate-form EXP tracker — first form at a stage is free, each
+    // additional known form at that stage costs D.altFormCosts[stage] EXP
+    // (see 009_Digimon_Crest_Stats.md). Computed here so the sheet always
+    // matches the rulebook instead of relying on manual bookkeeping.
+    context.altFormSummary = (() => {
+      const rows = [];
+      let totalForms = 0;
+      let totalExp   = 0;
+      for (const stage of Object.keys(D.altFormCosts)) {
+        const stageForms = allFormItems.filter(f => f.system.stage === stage);
+        const count = stageForms.length;
+        if (!count) continue;
+        // Forms marked Free (GM ruling exception) never count toward cost.
+        // Among the rest, the normal rule still applies: the first one is
+        // free, every additional one costs.
+        const payingForms = stageForms.filter(f => !(f.system.isFreeForm ?? false));
+        const freeCount   = count - payingForms.length;
+        const extraForms  = Math.max(0, payingForms.length - 1);
+        const expCost     = extraForms * D.altFormCosts[stage];
+        totalForms += count;
+        totalExp   += expCost;
+        rows.push({
+          stage,
+          label:        D.stageLabels[stage] ?? stage,
+          count,
+          freeCount,
+          extraForms,
+          costPerForm:  D.altFormCosts[stage],
+          expCost
+        });
+      }
+      return { rows, totalForms, totalExp };
+    })();
+
     context.currentFormData = null;
     const currentFormItem = allFormItems.find(f => f.id === currentFormId);
     if (currentFormItem) {
@@ -213,20 +273,33 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       };
     }
 
-    // Digivolve button context
-    const stageOrder = ["fresh", "intraining", "rookie", "champion", "ultimate", "mega"];
+    // Digivolve button context. Mega is the top of the stage list, but per
+    // the rulebook a Mega Digimon can still digivolve into a second Mega-tier
+    // form ("Mega II") — mechanically it's still Mega (same Hope cost/danger),
+    // just a different known form, so that case is handled separately below.
+    const stageOrder      = ["fresh", "intraining", "rookie", "champion", "ultimate", "mega"];
     const currentStageKey = system.currentStage ?? "fresh";
-    const stageIdx = stageOrder.indexOf(currentStageKey);
-    const targetStage = (stageIdx >= 0 && stageIdx < stageOrder.length - 1) ? stageOrder[stageIdx + 1] : null;
-    const digiData = targetStage ? DIGIVOLVE_DATA[targetStage] : null;
-    const nextStageForms = targetStage ? allFormItems.filter(f => f.system.stage === targetStage) : [];
+    const atMega           = currentStageKey === "mega";
+    const stageIdx         = stageOrder.indexOf(currentStageKey);
+    const targetStage      = atMega ? "mega" : ((stageIdx >= 0 && stageIdx < stageOrder.length - 1) ? stageOrder[stageIdx + 1] : null);
+    const digiData         = targetStage ? DIGIVOLVE_DATA[targetStage] : null;
+    const nextStageForms   = targetStage
+      ? allFormItems.filter(f => f.system.stage === targetStage && (!atMega || f.id !== currentFormId))
+      : [];
     context.canDigivolve     = !!(targetStage && digiData && nextStageForms.length > 0);
     context.noNextStageForms = !!(targetStage && digiData && nextStageForms.length === 0);
-    context.digivolveTarget  = targetStage ? (D.stageLabels[targetStage] ?? targetStage) : null;
+    context.digivolveTarget  = atMega ? "Mega II" : (targetStage ? (D.stageLabels[targetStage] ?? targetStage) : null);
+    context.digivolveAtMega  = atMega;
     context.digivolveCost    = digiData?.fullCost ?? 0;
     context.hopeAvailable    = tamer?.system?.crests?.hope?.current ?? 0;
 
-    // Corruption state
+    // Return to Default Stage — a one-click shortcut for dropping straight
+    // back down to whatever the Digimon's Default Stage is (the stage that's
+    // always free to hold), same idea as the Spirit Tamer's Revert to Tamer
+    // Form button. Disabled once already there.
+    context.canReturnToDefault = currentStageKey !== (system.defaultStage ?? "rookie");
+
+    // Dark digivolution state
     context.isCorrupted = system.corruption?.isCorrupted ?? false;
 
     context.effectItems = this.actor.items.filter(i => i.type === "effect");
@@ -392,6 +465,16 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
+    // Recolor fix: --digimon-accent/--digimon-bg are set inline on the <form>,
+    // but .window-content (an ANCESTOR of the form) is what actually paints the
+    // sheet's background — CSS custom properties never inherit upward, so they
+    // have to be set on the real outer window element instead.
+    const windowEl = this.element?.[0];
+    if (windowEl) {
+      windowEl.style.setProperty("--digimon-accent", this.actor.system.sheetColor   ?? "#2ecc71");
+      windowEl.style.setProperty("--digimon-bg",      this.actor.system.sheetBgColor ?? "#f0ece4");
+    }
+
     // JS-positioned skill tooltips
     const $tip = $('<div class="skill-hover-tip"></div>').appendTo(html);
     html.find('.digi-skill-name[data-tip-desc]').on('mouseenter', ev => {
@@ -421,6 +504,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     html.find('.form-set-current').on('click', ev => this._onSetCurrentForm(ev));
     html.find('.form-remove').on('click',      ev => this._onRemoveKnownForm(ev));
+    html.find('.form-free-toggle').on('click', ev => this._onToggleFreeForm(ev));
     html.find('.form-open').on('click',        ev => this._onOpenForm(ev));
 
     // Enable drag-to-sidebar for every item row on this sheet
@@ -446,6 +530,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.digi-skill-roll-btn').on('click', ev => this._onSkillRoll(ev));
     html.find('.corruption-toggle').on('click',   ev => this._onCorruptionToggle(ev));
     html.find('.digivolve-roll-btn').on('click',  () => this._onDigivolveRoll());
+    html.find('.return-default-btn').on('click', () => this._onReturnToDefault());
   }
 
   // --- Combat stat investing (no stage cap per rulebook) ---
@@ -702,7 +787,57 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     ui.notifications.info(`Current form set to ${item.name}.`);
   }
 
-  async _applyForm(item) {
+  // GM-ruled exception: mark a known form as not costing Alternate Form EXP
+  // (some campaigns grant a Digimon an extra free form at a stage beyond the
+  // normal "first form is free" rule).
+  async _onToggleFreeForm(ev) {
+    ev.preventDefault();
+    const itemId = ev.currentTarget.dataset.itemId;
+    const item   = this.actor.items.get(itemId);
+    if (!item || item.type !== "digimonForm") return;
+    const next = !(item.system.isFreeForm ?? false);
+    await item.update({ "system.isFreeForm": next });
+    ui.notifications.info(`${item.name} marked ${next ? "Free (no EXP cost)" : "no longer free"}.`);
+  }
+
+  // One-click "drop back to Default Stage" — matches whatever form/picture
+  // was snapshotted on the Digivolution Path tracker for that stage (usually
+  // the Digimon's very first/starting form there). Free: reverting to your
+  // own Default Stage costs no Hope. If no form was ever snapshotted for
+  // that stage (e.g. it's never actually been reached as a form), this just
+  // drops the stage number itself and leaves the current form/stats as-is.
+  async _onReturnToDefault() {
+    const system      = this.actor.system;
+    const D           = CONFIG.DIGIMON;
+    const defaultStage = system.defaultStage ?? "rookie";
+
+    if ((system.currentStage ?? "fresh") === defaultStage) {
+      ui.notifications.info(`${this.actor.name} is already at its Default Stage.`);
+      return;
+    }
+
+    const pathEntry = system.digivolutionPath?.[defaultStage];
+    const formItem  = pathEntry?.formId ? this.actor.items.get(pathEntry.formId) : null;
+
+    if (formItem) {
+      await this._applyForm(formItem, { pathKeyOverride: defaultStage });
+    } else {
+      await this.actor.update({ "system.currentStage": defaultStage });
+    }
+
+    // Dropping all the way back to Default Stage means none of the higher
+    // stages are being held anymore, so clear every stage's Hope Spent —
+    // Hope Per Turn (derived from these) naturally becomes 0 as a result.
+    const clearHope = {};
+    for (const stage of ["fresh", "intraining", "rookie", "champion", "ultimate", "mega", "megaII"]) {
+      clearHope[`system.digivolutionPath.${stage}.hopeSpent`] = 0;
+    }
+    await this.actor.update(clearHope);
+
+    ui.notifications.info(`${this.actor.name} returned to ${D.stageLabels[defaultStage] ?? defaultStage} (Default Stage). Hope Per Turn reset to 0.`);
+  }
+
+  async _applyForm(item, { pathKeyOverride } = {}) {
     const s   = item.system;
     const img = item.img;
 
@@ -726,6 +861,20 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       "prototypeToken.width":  squares,
       "prototypeToken.height": squares
     };
+
+    // Snapshot this form's picture/name into the Digivolution Path tracker for
+    // its stage (Hope spent is tracked separately — only the paid Digivolve
+    // action fills that in). Snapshotting rather than referencing the item
+    // means the path still shows the picture even if the form item is later
+    // deleted from Known Forms. pathKeyOverride lets the Digivolve action
+    // redirect a second Mega-stage form into the separate "Mega II" step
+    // instead of overwriting the first Mega step.
+    const pathKey = pathKeyOverride ?? s.stage;
+    if (pathKey) {
+      actorUpdate[`system.digivolutionPath.${pathKey}.formId`]   = item.id;
+      actorUpdate[`system.digivolutionPath.${pathKey}.formName`] = item.name;
+      actorUpdate[`system.digivolutionPath.${pathKey}.formImg`]  = img || "";
+    }
 
     if (img) {
       actorUpdate.img = img;
@@ -814,41 +963,68 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     const system = this.actor.system;
     const D      = CONFIG.DIGIMON;
 
-    const stageOrder   = ["fresh", "intraining", "rookie", "champion", "ultimate", "mega", "ultra"];
+    // Mega is the top of the stage list, but per the rulebook a Mega Digimon
+    // can still digivolve into a second Mega-tier form ("Mega II") — that's
+    // mechanically still Mega (same Hope cost/danger), just a different
+    // known form, tracked as its own step on the path instead of the stage
+    // list moving any higher.
+    const stageOrder   = ["fresh", "intraining", "rookie", "champion", "ultimate", "mega"];
     const currentStage = system.currentStage ?? "fresh";
-    const stageIdx     = stageOrder.indexOf(currentStage);
+    const atMega       = currentStage === "mega";
 
-    if (stageIdx < 0 || stageIdx >= stageOrder.length - 1) {
-      ui.notifications.warn("No further stage to digivolve to.");
-      return;
+    let targetStage, data, nextForms;
+
+    if (atMega) {
+      targetStage = "mega";
+      data        = DIGIVOLVE_DATA.mega;
+      nextForms   = this.actor.items.filter(
+        i => i.type === "digimonForm" && i.system.stage === "mega" && i.id !== system.currentFormId
+      );
+      if (nextForms.length === 0) {
+        ui.notifications.warn("No other known Mega forms to digivolve into.");
+        return;
+      }
+    } else {
+      const stageIdx = stageOrder.indexOf(currentStage);
+      if (stageIdx < 0 || stageIdx >= stageOrder.length - 1) {
+        ui.notifications.warn("No further stage to digivolve to.");
+        return;
+      }
+      targetStage = stageOrder[stageIdx + 1];
+      data        = DIGIVOLVE_DATA[targetStage];
+      if (!data) {
+        ui.notifications.warn(`No digivolution data for stage "${targetStage}".`);
+        return;
+      }
+      nextForms = this.actor.items.filter(
+        i => i.type === "digimonForm" && i.system.stage === targetStage
+      );
+      if (nextForms.length === 0) {
+        ui.notifications.warn(`No known forms at ${D.stageLabels[targetStage] ?? targetStage} stage — add one to Known Forms first.`);
+        return;
+      }
     }
 
-    const targetStage = stageOrder[stageIdx + 1];
-    const data        = DIGIVOLVE_DATA[targetStage];
-    if (!data) {
-      ui.notifications.warn(`No digivolution data for stage "${targetStage}".`);
-      return;
-    }
+    // Where this transition's picture/name/Hope get recorded on the path —
+    // a second Mega form gets its own "Mega II" step rather than overwriting
+    // the first Mega step.
+    const pathKey = atMega ? "megaII" : targetStage;
 
-    const nextForms = this.actor.items.filter(
-      i => i.type === "digimonForm" && i.system.stage === targetStage
-    );
-    if (nextForms.length === 0) {
-      ui.notifications.warn(`No known forms at ${D.stageLabels[targetStage] ?? targetStage} stage — add one to Known Forms first.`);
-      return;
-    }
+    const tamer         = system.tamerLink ? game.actors?.get(system.tamerLink) : null;
+    const hopeAvailable = tamer?.system?.crests?.hope?.current ?? 0;
+    const targetLabel   = atMega ? "Mega II" : (D.stageLabels[targetStage] ?? targetStage);
+    const currentLabel  = atMega ? "Mega" : (D.stageLabels[currentStage] ?? currentStage);
 
-    const tamer        = system.tamerLink ? game.actors?.get(system.tamerLink) : null;
-    const hopeAvailable = tamer?.system?.crests?.hope?.current  ?? 0;
-    const hopePerTurn   = tamer?.system?.crests?.hope?.perTurn  ?? 0;
-    const targetLabel   = D.stageLabels[targetStage] ?? targetStage;
-    const currentLabel  = D.stageLabels[currentStage] ?? currentStage;
-
-    // Threshold uses manually spent + tamer's per-turn contribution (capped at fullCost)
+    // Threshold = (1 - Hope Spent / Full Cost) x Stage Danger, straight off
+    // 013_Digivolution.md — just this one stage's spend vs. its own full cost.
+    // The amount chosen here becomes this stage's ongoing Hope Per Turn (see
+    // computeHopePerTurn() in config.js); it is not deducted from the Hope
+    // pool immediately — the pool is only spent turn-by-turn in combat via
+    // the Start-of-Turn "Deduct" button, so it isn't double-charged here too.
     const computeThreshold = spent =>
-      Math.floor((1 - Math.min(Math.max(0, spent + hopePerTurn), data.fullCost) / data.fullCost) * data.maxThreshold);
+      Math.floor((1 - Math.min(Math.max(0, spent), data.fullCost) / data.fullCost) * data.maxThreshold);
 
-    const initialSpent = tamer ? Math.min(data.fullCost, Math.max(0, hopeAvailable)) : data.fullCost;
+    const initialSpent = Math.min(data.fullCost, Math.max(0, hopeAvailable));
 
     const formSelectHtml = nextForms.length > 1
       ? `<div class="form-group flexrow" style="gap:8px; margin-bottom:12px; align-items:center;">
@@ -858,10 +1034,6 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
           </select>
         </div>`
       : `<p style="margin:0 0 10px;">Form: <strong>${nextForms[0].name}</strong></p>`;
-
-    const perTurnNote = tamer && hopePerTurn > 0
-      ? `<span style="font-size:0.85em; color:#27ae60;">+ ${hopePerTurn}/turn = <strong class="dv-effective-total">${Math.min(initialSpent + hopePerTurn, data.fullCost)}</strong> effective</span>`
-      : "";
 
     const result = await new Promise(resolve => {
       const thresh0 = computeThreshold(initialSpent);
@@ -875,20 +1047,19 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
               Full cost: <strong>${data.fullCost} Hope</strong>
               ${tamer
                 ? ` &nbsp;·&nbsp; <strong>${tamer.name}</strong> has <strong>${hopeAvailable}</strong> Hope`
-                : ` <em style="color:#888;">(no Tamer linked - Hope will not be deducted)</em>`}
+                : ` <em style="color:#888;">(no Tamer linked — Hope will not be deducted)</em>`}
             </p>
             <div class="form-group flexrow" style="gap:8px; margin-bottom:8px; align-items:center;">
               <label style="min-width:130px; font-weight:bold;">Hope to spend:</label>
               <input type="number" id="dv-hope-spend" value="${initialSpent}" min="0" max="${data.fullCost}" style="width:64px;" />
-              <span style="font-size:0.85em; color:#888;">0 - ${data.fullCost}</span>
-              ${perTurnNote}
+              <span style="font-size:0.85em; color:#888;">0 - ${data.fullCost} — deducted now, and becomes the ongoing Hope/turn for this stage</span>
             </div>
             <div class="dv-threshold-box" style="padding:10px 12px; background:#fdf5e6; border-radius:4px; border-left:4px solid #e74c3c;">
-              <div style="font-size:0.85em; color:#666; margin-bottom:2px;">Corruption Threshold</div>
+              <div style="font-size:0.85em; color:#666; margin-bottom:2px;">Dark Digivolution Threshold</div>
               <div class="dv-threshold-num" style="font-size:2em; font-weight:bold; color:#e74c3c; line-height:1.2;">${thresh0}</div>
               <div class="dv-threshold-hint" style="font-size:0.85em; margin-top:4px;">
                 Roll d100 above <strong>${thresh0}</strong> - clean digivolution.
-                At or below - corrupted.${thresh0 === 0 ? ' <em style="color:#27ae60; font-weight:bold;"> Full cost paid - always clean!</em>' : ""}
+                At or below - dark digivolution.${thresh0 === 0 ? ' <em style="color:#27ae60; font-weight:bold;"> Full cost paid - always clean!</em>' : ""}
               </div>
             </div>
           </form>`,
@@ -907,13 +1078,11 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
         render: html => {
           html.find('#dv-hope-spend').on('input', ev => {
             const spent     = Math.min(Math.max(0, parseInt(ev.currentTarget.value) || 0), data.fullCost);
-            const effective = Math.min(spent + hopePerTurn, data.fullCost);
             const threshold = computeThreshold(spent);
             const over      = tamer && spent > hopeAvailable;
             html.find('.dv-threshold-num').text(threshold);
-            html.find('.dv-effective-total').text(effective);
             html.find('.dv-threshold-hint').html(
-              `Roll d100 above <strong>${threshold}</strong> - clean digivolution. At or below - corrupted.` +
+              `Roll d100 above <strong>${threshold}</strong> - clean digivolution. At or below - dark digivolution.` +
               (threshold === 0 ? ' <em style="color:#27ae60; font-weight:bold;"> Full cost paid - always clean!</em>' : "") +
               (over ? ` <em style="color:#e74c3c;"> Warning: Not enough Hope!</em>` : "")
             );
@@ -926,31 +1095,35 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     const spent     = Math.min(Math.max(0, result.spent), data.fullCost);
     const threshold = computeThreshold(spent);
-    const effective = Math.min(spent + hopePerTurn, data.fullCost);
     const roll      = await new Roll("1d100").evaluate();
     const total     = roll.total;
     const isClean   = total > threshold;
 
-    // Apply the chosen form (even on corruption — digivolution still occurs)
+    // Apply the chosen form (even if it goes dark — digivolution still occurs)
     const chosenForm = this.actor.items.get(result.formId);
-    if (chosenForm) await this._applyForm(chosenForm);
+    if (chosenForm) await this._applyForm(chosenForm, { pathKeyOverride: pathKey });
 
-    // Mark corrupted if the roll failed
+    // Record the actual Hope paid for this stage on the Digivolution Path
+    // tracker — this is now the ONLY place Hope-per-stage is recorded; Hope
+    // Per Turn on the Tamer sheet is derived from these boxes automatically
+    // (see computeHopePerTurn() in config.js), not stored/incremented here.
+    await this.actor.update({ [`system.digivolutionPath.${pathKey}.hopeSpent`]: spent });
+
+    // Mark as dark digivolved if the roll failed
     if (!isClean) await this.actor.update({ "system.corruption.isCorrupted": true });
 
-    if (tamer) {
-      await tamer.update({
-        "system.crests.hope.current": Math.max(0, hopeAvailable - spent),
-        "system.crests.hope.perTurn": hopePerTurn + spent
-      });
+    // Pay the chosen Hope immediately, once, from the Tamer's current pool.
+    // (Hope Per Turn itself is still derived from the Digivolution Path
+    // tracker's hopeSpent boxes — see computeHopePerTurn() in config.js —
+    // this only ever deducts the pool, it never touches perTurn.)
+    if (tamer && spent > 0) {
+      await tamer.update({ "system.crests.hope.current": Math.max(0, hopeAvailable - spent) });
     }
 
     const chosenName  = chosenForm?.name ?? targetLabel;
     const resultColor = isClean ? "#27ae60" : "#e74c3c";
-    const resultText  = isClean ? "Clean Digivolution!" : "Corrupted Digivolution!";
-    const hopeLine    = hopePerTurn > 0
-      ? `${spent} spent + ${hopePerTurn}/turn = ${effective} effective`
-      : `${spent}/${data.fullCost} Hope`;
+    const resultText  = isClean ? "Clean Digivolution!" : "Dark Digivolution!";
+    const hopeLine    = `${spent}/${data.fullCost} Hope`;
     const flavor = `
       <div style="margin-bottom:4px;">
         <strong>${this.actor.name}</strong>: <strong>${currentLabel}</strong> to <strong>${chosenName}</strong>
@@ -960,8 +1133,8 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       <div style="font-size:1.15em; font-weight:bold; color:${resultColor}; margin:4px 0;">
         ${resultText}
       </div>
-      ${!isClean ? `<div style="font-size:0.9em;">The Digimon is now corrupted and under GM control.</div>` : ""}
-      ${tamer ? `<div style="font-size:0.85em; color:#666; margin-top:2px;">${tamer.name}: ${spent > 0 ? `-${spent} Hope (${Math.max(0, hopeAvailable - spent)} remaining), +${spent}/turn` : "0 Hope spent"}</div>` : ""}`;
+      ${!isClean ? `<div style="font-size:0.9em;">The Digimon has dark digivolved and is now under GM control.</div>` : ""}
+      ${tamer ? `<div style="font-size:0.85em; color:#666; margin-top:2px;">${tamer.name}: -${spent} Hope (${Math.max(0, hopeAvailable - spent)} remaining), ${spent} Hope/turn to maintain this stage</div>` : ""}`;
 
     await roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -969,7 +1142,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     });
   }
 
-  // --- Corruption toggle ---
+  // --- Dark Digivolution toggle ---
 
   async _onCorruptionToggle() {
     const current = this.actor.system.corruption?.isCorrupted ?? false;

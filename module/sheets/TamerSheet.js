@@ -1,8 +1,27 @@
-import { computeTagString }                    from "../config.js";
+import { computeTagString, getActorHopePerTurn } from "../config.js";
 import { getActorStatTotals, performAttackRoll } from "../combat.js";
 import { ItemLookup }                            from "../ItemLookup.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
+
+// "#rrggbb" -> "r, g, b", for building an rgba() gradient tint per crest row.
+// Falls back to a neutral grey if a color is ever missing/malformed.
+function _hexToRgbTriplet(hex) {
+  const m = /^#?([0-9a-f]{6})$/i.exec(hex ?? "");
+  if (!m) return "128, 128, 128";
+  const n = parseInt(m[1], 16);
+  return `${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}`;
+}
+
+// Sums a per-rank upgrade cost table from baseRank (inclusive) up to currentRank
+// (exclusive) — e.g. a crest at rank 3 costs costTable[0] + costTable[1] + costTable[2]
+// to have reached from rank 0. Used to derive "EXP spent" totals on the fly, since
+// only the current rank is stored, not a running per-category spend.
+function _cumulativeUpgradeCost(costTable, baseRank, currentRank) {
+  let total = 0;
+  for (let r = baseRank; r < currentRank; r++) total += costTable[r] ?? 0;
+  return total;
+}
 
 export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
@@ -10,7 +29,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["digital-destiny", "sheet", "actor", "tamer"],
       template: "systems/digital-destiny/templates/actors/tamer-sheet.hbs",
-      width: 640,
+      width: 760,
       height: 720,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "crests" }],
       dragDrop: [{ dragSelector: ".dd-item-row", dropSelector: ".window-content" }]
@@ -37,7 +56,8 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
         key,
         label:        D.statLabels[key],
         color:        D.statColors[key],
-        img:          D.crestImages[key],
+        rgb:          _hexToRgbTriplet(D.statColors[key]),
+        img:          D.crestImagesTamer[key],
         rank,
         primaryBonus,
         modifier,
@@ -60,9 +80,13 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       rank:    hopeData.rank    ?? 1,
       max:     hopeData.pool    ?? 5,
       current: hopeData.current ?? hopeData.pool ?? 5,
-      perTurn: hopeData.perTurn ?? 0,
+      // Derived — see computeHopePerTurn()/getActorHopePerTurn() in config.js.
+      // No longer a separately-stored, hand-incremented field (that was the
+      // source of the doubled/stale Hope-per-turn numbers).
+      perTurn: getActorHopePerTurn(this.actor),
       color:   D.statColors.hope,
-      img:     D.crestImages.hope
+      rgb:     _hexToRgbTriplet(D.statColors.hope),
+      img:     D.crestImagesTamer.hope
     };
 
     // Build skill groups for the Skills tab
@@ -109,6 +133,20 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
         return (a.system.row ?? 1) - (b.system.row ?? 1);
       });
     context.pinnedSkillIds = this.actor.getFlag("digital-destiny", "hudPinnedSkills") ?? [];
+
+    // Per-tab EXP breakdown — derived from current state, not separately tracked,
+    // since crests/skills/classes all draw from the same system.exp.spent pool.
+    context.crestExpSpent = context.crestList.reduce(
+      (sum, c) => sum + _cumulativeUpgradeCost(D.crestUpgradeCost, 0, c.rank), 0
+    );
+    context.skillExpSpent = context.skillGroups.reduce(
+      (sum, g) => sum + g.skills.reduce(
+        (s2, sk) => s2 + _cumulativeUpgradeCost(D.skillUpgradeCost, 1, sk.rank), 0
+      ), 0
+    );
+    context.classExpSpent = context.classItems.reduce(
+      (sum, i) => sum + (i.system.expCost ?? 0), 0
+    );
 
     // Attack items for the Combat tab
     context.attacks = this.actor.items
@@ -235,7 +273,8 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">Hope Per Turn</span>
-            <input type="number" name="crests.hope.perTurn" value="${hope.perTurn ?? 0}" class="dd-det-input-wide" />
+            <span class="dd-det-readonly">${getActorHopePerTurn(actor)}</span>
+            <span class="dd-det-hint">Auto — sum of Hope spent per stage above Default on the Digivolution Path tracker</span>
           </div>
         </div>
 
@@ -292,9 +331,10 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
   }
 
   _onOpenOptions() {
-    const system     = this.actor.system;
+    const system      = this.actor.system;
     const accentColor = system.sheetColor  ?? "#4a90d9";
     const bgColor     = system.sheetBgColor ?? "#f0ece4";
+    const crestLayout = system.crestLayout ?? "cards";
 
     new Dialog({
       title: `${this.actor.name} — Sheet Options`,
@@ -308,6 +348,13 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
             <label>Sheet Background Color</label>
             <input type="color" name="bgColor" value="${bgColor}" />
           </div>
+          <div class="form-group">
+            <label>Crests Tab Layout</label>
+            <select name="crestLayout">
+              <option value="cards" ${crestLayout === "cards" ? "selected" : ""}>Cards (classic)</option>
+              <option value="table" ${crestLayout === "table" ? "selected" : ""}>Table (compact)</option>
+            </select>
+          </div>
         </form>`,
       buttons: {
         save: {
@@ -315,7 +362,8 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
           label: "Save",
           callback: html => this.actor.update({
             "system.sheetColor":   html.find('[name="accentColor"]').val(),
-            "system.sheetBgColor": html.find('[name="bgColor"]').val()
+            "system.sheetBgColor": html.find('[name="bgColor"]').val(),
+            "system.crestLayout":  html.find('[name="crestLayout"]').val()
           })
         },
         cancel: { icon: '<i class="fas fa-times"></i>', label: "Cancel" }
@@ -328,6 +376,18 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
   activateListeners(html) {
     super.activateListeners(html);
+
+    // Sheet accent/background colors (set from the Options dialog) have to be
+    // applied on the outer window element, not the inner form — the form is
+    // INSIDE .window-content, so a CSS variable set on the form can never
+    // reach .window-content's own background (variables only inherit
+    // downward). Setting them here, on this.element (the actual outer
+    // window), makes them visible to everything, including .window-content.
+    const windowEl = this.element?.[0];
+    if (windowEl) {
+      windowEl.style.setProperty("--tamer-accent", this.actor.system.sheetColor   ?? "#4a90d9");
+      windowEl.style.setProperty("--tamer-bg",      this.actor.system.sheetBgColor ?? "#f0ece4");
+    }
 
     // Skill name tooltip — appended to the form so it sits outside the scroll container
     const $tip = $('<div class="skill-hover-tip"></div>').appendTo(html);
@@ -468,12 +528,8 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     const name      = itemData.name ?? "Unknown ability";
 
     if (cost > available) {
-      const proceed = await Dialog.confirm({
-        title:   "Not Enough EXP",
-        content: `<p><strong>${name}</strong> costs <strong>${cost} EXP</strong> but you only have <strong>${available}</strong> available.</p><p>Add it anyway without deducting EXP?</p>`
-      });
-      if (!proceed) return;
-      return super._onDropItemCreate(itemData);
+      ui.notifications.warn(`Not enough EXP for ${name} — need ${cost}, have ${available}.`);
+      return;
     }
 
     const proceed = await Dialog.confirm({
@@ -503,42 +559,16 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     const cost = item.system?.expCost ?? 0;
     const name = item.name ?? "this ability";
 
+    const confirmed = await Dialog.confirm({
+      title:   "Remove Class Ability",
+      content: cost > 0
+        ? `<p>Remove <strong>${name}</strong> and refund <strong>${cost} EXP</strong>?</p>`
+        : `<p>Remove <strong>${name}</strong>?</p>`
+    });
+    if (!confirmed) return;
+
     if (cost > 0) {
-      const choice = await new Promise(resolve => {
-        new Dialog({
-          title:   "Remove Class Ability",
-          content: `<p>Remove <strong>${name}</strong>?</p><p>Cost was <strong>${cost} EXP</strong>.</p>`,
-          buttons: {
-            refund: {
-              icon:     '<i class="fas fa-undo"></i>',
-              label:    "Remove & Refund EXP",
-              callback: () => resolve("refund")
-            },
-            keep: {
-              icon:     '<i class="fas fa-trash"></i>',
-              label:    "Remove, Keep EXP",
-              callback: () => resolve("keep")
-            },
-            cancel: {
-              icon:     '<i class="fas fa-times"></i>',
-              label:    "Cancel",
-              callback: () => resolve("cancel")
-            }
-          },
-          default: "cancel",
-          close:   () => resolve("cancel")
-        }).render(true);
-      });
-      if (choice === "cancel") return;
-      if (choice === "refund") {
-        await this.actor.update({ "system.exp.spent": Math.max(0, (this.actor.system.exp.spent ?? 0) - cost) });
-      }
-    } else {
-      const confirmed = await Dialog.confirm({
-        title:   "Remove Class Ability",
-        content: `<p>Remove <strong>${name}</strong>?</p>`
-      });
-      if (!confirmed) return;
+      await this.actor.update({ "system.exp.spent": Math.max(0, (this.actor.system.exp.spent ?? 0) - cost) });
     }
 
     await item.delete();

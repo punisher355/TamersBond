@@ -1,5 +1,5 @@
 import { DIGIMON }                  from "./module/config.js";
-import { TamerData, DigimonData, SpiritTamerData } from "./module/data/actor-models.js";
+import { TamerData, DigimonData, SpiritTamerData, DnaDigimonData } from "./module/data/actor-models.js";
 import { MoveData, ClassSkillData, GearData, AttackData, DigimonFormData, EffectData, PrimaryCrestData } from "./module/data/item-models.js";
 import { DigitalDestinyActor }      from "./module/actors/actor.js";
 import { DigitalDestinyItem }       from "./module/items/item.js";
@@ -7,6 +7,7 @@ import { TamerSheet }               from "./module/sheets/TamerSheet.js";
 import { DigimonSheet }             from "./module/sheets/DigimonSheet.js";
 import { NpcDigimonSheet }          from "./module/sheets/NpcDigimonSheet.js";
 import { SpiritTamerSheet }         from "./module/sheets/SpiritTamerSheet.js";
+import { DnaSheet }                 from "./module/sheets/DnaSheet.js";
 import { ClassSkillSheet }          from "./module/sheets/ClassSkillSheet.js";
 import { MoveSheet }                from "./module/sheets/MoveSheet.js";
 import { GearSheet }                from "./module/sheets/GearSheet.js";
@@ -84,7 +85,7 @@ Hooks.once("init", () => {
   CONFIG.Item.documentClass    = DigitalDestinyItem;
   CONFIG.Combat.documentClass  = DigitalDestinyCombat;
 
-  CONFIG.Actor.dataModels = { tamer: TamerData, digimon: DigimonData, spiritTamer: SpiritTamerData };
+  CONFIG.Actor.dataModels = { tamer: TamerData, digimon: DigimonData, spiritTamer: SpiritTamerData, dnaDigimon: DnaDigimonData };
   CONFIG.Item.dataModels  = {
     move: MoveData, classSkill: ClassSkillData, gear: GearData,
     attack: AttackData, digimonForm: DigimonFormData,
@@ -124,6 +125,12 @@ Hooks.once("init", () => {
     types: ["spiritTamer"],
     makeDefault: true,
     label: "DIGIMON.SheetSpiritTamer"
+  });
+
+  _Actors.registerSheet("digital-destiny", DnaSheet, {
+    types: ["dnaDigimon"],
+    makeDefault: true,
+    label: "DIGIMON.SheetDna"
   });
 
   _Items.registerSheet("digital-destiny", ClassSkillSheet, {
@@ -232,6 +239,26 @@ Hooks.on("updateActor", (actor) => {
   if (actor.type !== "tamer") return;
   for (const digimon of game.actors.filter(a => a.type === "digimon" && a.system.tamerLink === actor.id)) {
     if (digimon.sheet?.rendered) digimon.sheet.render();
+  }
+});
+
+// Re-render an open Tamer sheet when a linked Digimon changes — Hope Per Turn
+// on the Tamer sheet is derived from that Digimon's Digivolution Path tracker
+// (stage/hopeSpent), so it needs to refresh whenever that data does, whether
+// from a Digivolve action or a hand-edited Hope box on the path tracker.
+Hooks.on("updateActor", (actor) => {
+  if (actor.type !== "digimon") return;
+  const tamer = actor.system.tamerLink ? game.actors?.get(actor.system.tamerLink) : null;
+  if (tamer?.sheet?.rendered) tamer.sheet.render();
+});
+
+// Re-render an open DNA Digimon sheet when either linked partner actor
+// changes — its crest stats, HP, and attack/move pools are all derived from
+// both linked partners' data, so it needs the same cross-actor refresh
+// treatment as the Tamer<->Digimon Hope Per Turn link above.
+Hooks.on("updateActor", (actor) => {
+  for (const dna of game.actors.filter(a => a.type === "dnaDigimon" && (a.system.linkedA === actor.id || a.system.linkedB === actor.id))) {
+    if (dna.sheet?.rendered) dna.sheet.render();
   }
 });
 

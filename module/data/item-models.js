@@ -209,7 +209,12 @@ export class DigimonFormData extends TypeDataModel {
       }),
       signatureMove:   new f.StringField({ initial: "" }),
       digivolves_from: new f.ArrayField(new f.StringField()),
-      digivolves_to:   new f.ArrayField(new f.StringField())
+      digivolves_to:   new f.ArrayField(new f.StringField()),
+      // GM-ruled exception: some campaigns grant a Digimon an extra known
+      // form at a stage for free (beyond the normal "first form is free"
+      // rule). Marking a form Free here excludes it from the Alternate
+      // Form EXP cost count on both the Digimon and Spirit Tamer sheets.
+      isFreeForm:      new f.BooleanField({ initial: false })
     };
   }
 }

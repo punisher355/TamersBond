@@ -6,7 +6,7 @@
 .digital-destiny.sheet .window-content {
   padding: 0;
   overflow: hidden;
-  background: #f0ece4;
+  background: var(--tamer-bg, #f0ece4);
 }
 
 .digital-destiny.sheet form {
@@ -201,6 +201,18 @@
   padding: 1px 3px;
 }
 
+.digital-destiny .hope-pt-display {
+  min-width: 38px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid #4a3a70;
+  color: #a090c8;
+  font-size: 0.85em;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1px 6px;
+  cursor: help;
+}
+
 /* --- EXP panel --- */
 .digital-destiny .exp-line {
   gap: 5px;
@@ -337,14 +349,15 @@
 
 /* --- Rank +/- buttons (shared by crests and skills) --- */
 .digital-destiny .rank-btn {
-  width: 22px;
-  height: 22px;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
   background: #1a1a2e;
   color: #c8d8e8;
   border: 1px solid var(--tamer-accent, #4a90d9);
   border-radius: 3px;
   cursor: pointer;
-  font-size: 1.05em;
+  font-size: 1.25em;
   font-weight: bold;
   line-height: 1;
   padding: 0;
@@ -370,6 +383,121 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   padding: 6px 0;
+}
+
+/* --- Crest table (compact, one row per crest — keeps color accents + a
+   small icon from the old card layout, but lays every column out flat so
+   all six crests can be compared at a glance, spreadsheet-style) --- */
+.digital-destiny .crest-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  font-size: 0.85em;
+}
+
+.digital-destiny .crest-table thead th {
+  font-size: 0.68em;
+  font-weight: 700;
+  color: #8090a0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 0 4px 3px;
+}
+
+.digital-destiny .crest-table thead th.ct-name-col { text-align: left; }
+.digital-destiny .crest-table thead th.ct-icon-col,
+.digital-destiny .crest-table thead th.ct-cost-col { text-align: right; }
+
+.digital-destiny .crest-row {
+  background: #fff;
+  border: 1px solid #d8d0c4;
+  border-radius: 3px;
+}
+
+.digital-destiny .crest-row td {
+  padding: 4px 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.digital-destiny .ct-icon-col {
+  width: 38px;
+  padding: 2px 4px !important;
+}
+
+.digital-destiny .ct-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+.digital-destiny .ct-name-col {
+  text-align: left !important;
+  white-space: nowrap;
+}
+
+.digital-destiny .ct-name {
+  font-weight: 700;
+}
+
+.digital-destiny .ct-rank-controls {
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: nowrap !important;
+}
+
+.digital-destiny .ct-rank-value {
+  font-size: 1.1em;
+  font-weight: bold;
+  min-width: 16px;
+  text-align: center;
+  color: #1a1a2e;
+}
+
+.digital-destiny .ct-stat-col {
+  font-size: 0.9em;
+  color: #506070;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.digital-destiny .ct-num-col {
+  font-weight: 600;
+  color: #1a1a2e;
+  min-width: 34px;
+}
+
+.digital-destiny .ct-total-col {
+  font-weight: 800;
+  border-left: 1px dashed #d0c8bc;
+}
+
+.digital-destiny .ct-mod-input {
+  width: 38px;
+  text-align: center;
+  font-size: 0.95em;
+  font-weight: 600;
+  border: 1px solid #c8c0b4;
+  border-radius: 3px;
+  padding: 1px 2px;
+  color: #1a1a2e;
+}
+
+.digital-destiny .ct-cost-col {
+  font-size: 0.85em;
+  color: #506070;
+  white-space: nowrap;
+  text-align: right;
+  padding-right: 8px !important;
+}
+
+.digital-destiny .hope-row .ct-stat-col {
+  text-align: left;
+  font-style: normal;
+  color: #7090a8;
 }
 
 .digital-destiny .crest-block {
@@ -608,8 +736,14 @@
 }
 
 /* --- Skills tab --- */
+.digital-destiny .skill-groups-grid {
+  column-count: 2;
+  column-gap: 16px;
+}
+
 .digital-destiny .skill-group {
   margin-bottom: 6px;
+  break-inside: avoid; /* keep a crest's skill list from splitting across columns */
 }
 
 .digital-destiny .skill-group-header {
@@ -642,8 +776,10 @@
   padding: 2px 6px;
   gap: 6px;
   align-items: center;
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
   margin-bottom: 2px;
-  min-height: 26px;
+  min-height: 31px;
 }
 
 .digital-destiny .skill-row.skill-prestige {
@@ -668,6 +804,8 @@
 .digital-destiny .skill-rank-controls {
   gap: 4px;
   align-items: center;
+  flex-wrap: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
 .digital-destiny .skill-rank {
@@ -787,9 +925,8 @@
   border-bottom: none;
 }
 
-.digital-destiny .stats-table tr:nth-child(even) td {
-  background: #f8f4ee;
-}
+/* Rows now get their own crest-color gradient tint (set inline per-row),
+   so no separate zebra-stripe background here. */
 
 .digital-destiny .stats-table td.stat-label {
   text-align: left;
@@ -1319,12 +1456,11 @@
 
 /* --- Stats tab: small crest icon inline with stat name --- */
 .digital-destiny .stat-crest-icon {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   vertical-align: middle;
   margin-right: 4px;
-  opacity: 0.85;
   flex-shrink: 0;
 }
 
@@ -1415,6 +1551,253 @@
   font-weight: 700;
   color: var(--digimon-accent, #2ecc71);
   border-color: var(--digimon-accent, #2ecc71);
+}
+
+/* --- Digivolution tab: Current Form card + Digivolve action panel ---
+   Both the Digimon sheet and the Spirit Tamer sheet share this markup, so
+   these rules theme off whichever accent var that sheet actually sets
+   (--digimon-accent on Digimon/NPC sheets, --tamer-accent on Tamer/Spirit
+   Tamer sheets) via a fallback chain. */
+.digital-destiny .digi-current-form-card {
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-left: 4px solid var(--digimon-accent, var(--tamer-accent, #4a90d9));
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 4px;
+}
+
+.digital-destiny .digi-current-form-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.digital-destiny .digi-current-form-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  background: #f5f0e8;
+  flex-shrink: 0;
+}
+
+.digital-destiny .digi-current-form-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.digital-destiny .digi-form-card-header {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.digital-destiny .digi-form-card-name {
+  font-size: 1.05em;
+  color: #1a1a2e;
+}
+
+.digital-destiny .digi-form-thumb {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 3px;
+  background: #f5f0e8;
+  flex-shrink: 0;
+}
+
+.digital-destiny .digivolve-btn-panel {
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-top: 12px;
+}
+
+.digital-destiny .digivolve-info-row {
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.digital-destiny .digivolve-hope-tag {
+  background: var(--digimon-accent, var(--tamer-accent, #3498db));
+  color: #fff;
+}
+
+.digital-destiny .digivolve-roll-btn {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.05em;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background: var(--digimon-accent, var(--tamer-accent, #4a90d9));
+  color: #fff;
+  transition: filter 0.1s ease;
+  font-family: inherit;
+}
+
+.digital-destiny .digivolve-roll-btn:hover {
+  filter: brightness(1.1);
+}
+
+.digital-destiny .revert-to-tamer-btn,
+.digital-destiny .return-default-btn {
+  width: 100%;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  border: 1px solid #c0602a;
+  border-radius: 4px;
+  background: #e67e22;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.digital-destiny .revert-to-tamer-btn:hover,
+.digital-destiny .return-default-btn:hover {
+  filter: brightness(1.08);
+}
+
+.digital-destiny .revert-to-tamer-btn:disabled,
+.digital-destiny .return-default-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #8a8a8a;
+  border-color: #6a6a6a;
+  filter: none;
+}
+
+/* Lightweight reference tables (static GM rules text, e.g. force-digivolve
+   thresholds) — visually lighter than .stats-table, which is meant for
+   colored, editable stat/crest rows. */
+.digital-destiny .reference-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82em;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.digital-destiny .reference-table th {
+  background: #ede7db;
+  color: #5a5468;
+  padding: 4px 6px;
+  text-align: left;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.digital-destiny .reference-table td {
+  padding: 4px 6px;
+  border-top: 1px solid #ece6da;
+  color: #3a3a4e;
+}
+
+/* --- Digivolution Path tracker --- */
+.digital-destiny .digivolve-path-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  overflow-x: auto;
+  padding: 6px 4px 12px;
+  margin-bottom: 4px;
+}
+
+.digital-destiny .digivolve-path-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  width: 76px;
+}
+
+.digital-destiny .digivolve-path-img-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  border: 2px solid var(--digimon-accent, var(--tamer-accent, #4a90d9));
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.digital-destiny .digivolve-path-step.digivolve-path-empty .digivolve-path-img-wrap {
+  border-color: #d0c8b8;
+  border-style: dashed;
+  background: #f4f0e8;
+}
+
+.digital-destiny .digivolve-path-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.digital-destiny .digivolve-path-blank {
+  color: #c0b8a8;
+  font-size: 1.3em;
+}
+
+.digital-destiny .digivolve-path-label {
+  font-size: 0.68em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #5a5468;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.digital-destiny .digivolve-path-step.digivolve-path-empty .digivolve-path-label {
+  color: #b0a898;
+}
+
+.digital-destiny .digivolve-path-hope-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.digital-destiny .digivolve-path-hope {
+  width: 44px;
+  text-align: center;
+  font-size: 0.85em;
+  font-weight: 700;
+  border: 1px solid #d0c8b8;
+  border-radius: 3px;
+  padding: 1px 2px;
+  color: #1a1a2e;
+}
+
+.digital-destiny .digivolve-path-hope-caption {
+  font-size: 0.6em;
+  color: #a09888;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.digital-destiny .digivolve-path-arrow {
+  color: #c0b8a8;
+  flex-shrink: 0;
+  font-size: 0.8em;
+  margin-top: 24px;
 }
 
 /* --- Down track pips --- */
@@ -2002,6 +2385,16 @@
   opacity: 1;
   background: #f0f4f8;
   color: #2a4a6a;
+}
+
+.digital-destiny .move-action-btn-on {
+  opacity: 1;
+  color: #f39c12;
+}
+
+.digital-destiny .move-action-btn-on:hover {
+  background: #fff6e8;
+  color: #d18a00;
 }
 
 .digital-destiny .move-delete.move-action-btn:hover {
@@ -4156,4 +4549,55 @@
      both fully overwrite the box's existing fill rather than blending with
      it, which is what made the box look transparent. */
   box-shadow: inset 0 0 0 999px rgba(var(--dd-chatcolor-rgb, 128, 128, 128), 0.12);
+}
+
+
+/* -----------------------------------------------
+   DNA Digimon sheet — linked partners
+   ----------------------------------------------- */
+.digital-destiny .dna-link-panel {
+  min-width: 150px;
+}
+
+.digital-destiny .dna-link-select {
+  width: 100%;
+  font-size: 0.82em;
+  margin-top: 3px;
+  padding: 2px 4px;
+  border: 1px solid #4a3a70;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+}
+
+.digital-destiny .dna-partner-cards {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.digital-destiny .dna-partner-card {
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-left: 4px solid var(--digimon-accent, var(--tamer-accent, #4a90d9));
+  border-radius: 6px;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 4px;
+  min-width: 110px;
+  text-align: center;
+}
+
+.digital-destiny .dna-partner-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border: 1px solid #d0c8b8;
+  border-radius: 4px;
+  background: #f5f0e8;
+}
+
+.digital-destiny .dna-partner-card.dna-partner-empty {
+  border-left-color: #b0a898;
+  justify-content: center;
+  min-height: 64px;
 }

@@ -1,0 +1,395 @@
+<form class="{{cssClass}} flexcol" autocomplete="off"
+      style="--digimon-accent: {{system.sheetColor}}; --digimon-bg: {{system.sheetBgColor}}">
+
+  {{!-- Header --}}
+  <header class="sheet-header flexcol">
+    <input class="charname" name="name" type="text" value="{{actor.name}}" placeholder="DNA Digimon Name" />
+    {{#if system.attribute}}
+    <div class="digi-quickref-bar">
+      <span class="digi-quickref-pill digi-quickref-attr">{{system.attribute}}</span>
+      {{#if system.element}}<span class="digi-quickref-pill digi-quickref-elem">{{system.element}}</span>{{/if}}
+    </div>
+    {{/if}}
+    <div class="header-panels flexrow">
+
+      {{!-- Portrait --}}
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+
+      {{!-- HP --}}
+      <div class="header-panel flexcol">
+        <span class="header-panel-label">HP</span>
+        <div class="hp-main-row flexrow">
+          <input type="number" class="hp-value-input" name="system.hp.value" value="{{system.hp.value}}" />
+          <span class="hp-sep">/</span>
+          <span class="hp-max-display">{{hpMax}}</span>
+        </div>
+        <div class="hp-temp-row flexrow">
+          <span class="hp-temp-label">Temp</span>
+          <input type="number" class="hp-temp-input" name="system.hp.temp" value="{{system.hp.temp}}" />
+        </div>
+      </div>
+
+      {{!-- Linked partners --}}
+      <div class="header-panel flexcol dna-link-panel">
+        <span class="header-panel-label">Linked Partners</span>
+        <select name="system.linkedA" class="dna-link-select">
+          {{selectOptions linkChoicesA selected=system.linkedA}}
+        </select>
+        <select name="system.linkedB" class="dna-link-select">
+          {{selectOptions linkChoicesB selected=system.linkedB}}
+        </select>
+      </div>
+
+    </div>
+
+    {{#if (or system.statusMods.cannotAct system.statusMods.forcedAttack system.statusMods.healingBlocked system.statusMods.restricted)}}
+    <div class="dd-status-banner flexrow" style="gap:6px; margin-top:6px; flex-wrap:wrap;">
+      {{#if system.statusMods.cannotAct}}<span class="dd-status-chip" style="background:#5dade2; color:#0a1a2e; padding:2px 8px; border-radius:10px; font-size:0.78em; font-weight:700;">Cannot Act</span>{{/if}}
+      {{#if system.statusMods.restricted}}<span class="dd-status-chip" style="background:#f39c12; color:#2a1a00; padding:2px 8px; border-radius:10px; font-size:0.78em; font-weight:700;">Restricted</span>{{/if}}
+      {{#if system.statusMods.forcedAttack}}<span class="dd-status-chip" style="background:#9b59b6; color:#fff; padding:2px 8px; border-radius:10px; font-size:0.78em; font-weight:700;">Forced Attack</span>{{/if}}
+      {{#if system.statusMods.healingBlocked}}<span class="dd-status-chip" style="background:#3d6b6b; color:#fff; padding:2px 8px; border-radius:10px; font-size:0.78em; font-weight:700;">Healing Blocked</span>{{/if}}
+    </div>
+    {{/if}}
+  </header>
+
+  {{!-- Tabs --}}
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="stats">Stats</a>
+    <a class="item" data-tab="moves">Moves & Attacks</a>
+    <a class="item" data-tab="status">Status</a>
+    <a class="item" data-tab="digivolution">Digivolution</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    {{!-- Stats tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="stats">
+
+      <h3 class="section-header">DNA Crest Stats</h3>
+      <p class="hint">Species Base comes from the Current Form (Digivolution tab). Tamer Rank and Digimon Invested each use whichever linked partner is higher. Manual is your own adjustment.</p>
+
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Stat</th>
+            <th title="From the DNA form's Current Form item">Species</th>
+            <th title="Higher of the two linked partners' Tamer Rank">Tamer</th>
+            <th title="Higher of the two linked partners' Digimon Invested">Invested</th>
+            <th title="Your own manual adjustment">Manual</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each statList}}
+          <tr style="background: linear-gradient(to right, rgba({{this.rgb}}, 0.16), rgba({{this.rgb}}, 0.02) 60%, rgba({{this.rgb}}, 0) 100%);">
+            <td class="stat-label" style="border-left: 3px solid {{this.color}}">
+              <img class="stat-crest-icon" src="{{this.crestImg}}" title="{{this.label}}" />
+              <div class="stat-label-text">{{this.label}}</div>
+            </td>
+            <td>{{this.speciesBase}}</td>
+            <td class="tamer-bonus" style="color: {{this.color}}" title="A: {{this.tamerRankA}} · B: {{this.tamerRankB}}">{{this.tamerRank}}</td>
+            <td title="A: {{this.investedA}} · B: {{this.investedB}}">{{this.invested}}</td>
+            <td><input type="number" name="system.stats.{{this.key}}.conditional" value="{{this.conditional}}" /></td>
+            <td class="stat-total">{{this.total}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+      <p class="hint hp-formula-note">
+        <strong>HP Max</strong> = 20 + (Sincerity x 4) — {{hpFormula}}
+      </p>
+
+    </div>
+
+    {{!-- Moves & Attacks tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="moves">
+
+      {{#if currentFormData.signatureMove}}
+      <h3 class="section-header">DNA Signature Move</h3>
+      <p class="hint" style="font-weight:600;">{{currentFormData.signatureMove}}</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top:12px;">Own Attacks
+        <span class="stage-cap-note">Drag Attack/Move items here to add</span>
+      </h3>
+      {{#if ownAttacks.length}}
+      <div class="moves-list">
+        {{#each ownAttacks}}
+        <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name attack-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          {{#if this.system.pr}}<span class="tag move-pr-tag">PR {{this.system.pr}}</span>{{/if}}
+          <div class="move-row-actions">
+            <button type="button" class="attack-roll move-action-btn" data-item-id="{{this.id}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No own attacks yet.</p>
+      {{/if}}
+
+      {{#if ownMoves.length}}
+      <div class="moves-list" style="margin-top:6px;">
+        {{#each ownMoves}}
+        <div class="move-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name move-open" data-item-id="{{this.id}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          <div class="move-row-actions">
+            <button type="button" class="attack-roll move-action-btn" data-item-id="{{this.id}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+
+      {{#if partnerAPool}}
+      <h3 class="section-header" style="margin-top:14px;">{{partnerAPool.name}}'s Attacks & Selected Moves
+        <span class="stage-cap-note">Only this Digimon's 3 Selected (Active) Moves carry over</span>
+      </h3>
+      <div class="moves-list">
+        {{#each partnerAPool.attacks}}
+        <div class="move-row flexrow" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name partner-item-open" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          {{#if this.system.pr}}<span class="tag move-pr-tag">PR {{this.system.pr}}</span>{{/if}}
+          <div class="move-row-actions">
+            <button type="button" class="partner-attack-roll move-action-btn" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+        {{#each partnerAPool.moves}}
+        <div class="move-row flexrow{{#if this.system.isSignature}} move-row-sig{{/if}}" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name partner-item-open" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          <span class="tag move-stage-tag">{{this.system.minStage}}+</span>
+          {{#if this.system.isSignature}}<span class="tag move-sig">Sig</span>{{/if}}
+          <div class="move-row-actions">
+            <button type="button" class="partner-attack-roll move-action-btn" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+        {{#unless partnerAPool.attacks.length}}{{#unless partnerAPool.moves.length}}
+        <p class="no-items">{{partnerAPool.name}} has no attacks or Selected (Active) moves yet — mark up to 3 moves Active on their own sheet to bring them into this DNA form.</p>
+        {{/unless}}{{/unless}}
+      </div>
+      {{/if}}
+
+      {{#if partnerBPool}}
+      <h3 class="section-header" style="margin-top:14px;">{{partnerBPool.name}}'s Attacks & Selected Moves
+        <span class="stage-cap-note">Only this Digimon's 3 Selected (Active) Moves carry over</span>
+      </h3>
+      <div class="moves-list">
+        {{#each partnerBPool.attacks}}
+        <div class="move-row flexrow" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name partner-item-open" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          {{#if this.system.pr}}<span class="tag move-pr-tag">PR {{this.system.pr}}</span>{{/if}}
+          <div class="move-row-actions">
+            <button type="button" class="partner-attack-roll move-action-btn" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+        {{#each partnerBPool.moves}}
+        <div class="move-row flexrow{{#if this.system.isSignature}} move-row-sig{{/if}}" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}">
+          <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <div class="move-name-block flexcol">
+            <span class="move-name partner-item-open" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}" style="cursor:pointer;" title="Open item sheet">{{this.name}}</span>
+            {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
+          </div>
+          <span class="tag move-element-tag">{{this.system.element}}</span>
+          <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
+          <span class="tag move-stage-tag">{{this.system.minStage}}+</span>
+          {{#if this.system.isSignature}}<span class="tag move-sig">Sig</span>{{/if}}
+          <div class="move-row-actions">
+            <button type="button" class="partner-attack-roll move-action-btn" data-item-id="{{this.id}}" data-actor-id="{{this.actorId}}" title="Roll">
+              <i class="fas fa-dice-d20"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+        {{#unless partnerBPool.attacks.length}}{{#unless partnerBPool.moves.length}}
+        <p class="no-items">{{partnerBPool.name}} has no attacks or Selected (Active) moves yet — mark up to 3 moves Active on their own sheet to bring them into this DNA form.</p>
+        {{/unless}}{{/unless}}
+      </div>
+      {{/if}}
+
+      {{#unless partnerA}}{{#unless partnerB}}
+      <p class="hint" style="margin-top:12px;">Link two partners in the header to pull in their attacks and moves.</p>
+      {{/unless}}{{/unless}}
+
+      <h3 class="section-header" style="margin-top: 12px">Combat Reference</h3>
+      <div class="combat-reference">
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Hit Roll</span>
+          <span class="combat-ref-value">1d20 + <strong>Courage</strong> vs target <strong>Reliability</strong> + 10</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Damage</span>
+          <span class="combat-ref-value">PR dice + <strong>Knowledge</strong> - target <strong>Love</strong> - min 1</span>
+        </div>
+        <div class="combat-ref-row">
+          <span class="combat-ref-label">Movement</span>
+          <span class="combat-ref-value"><strong>Friendship</strong> total in spaces per turn</span>
+        </div>
+      </div>
+
+    </div>
+
+    {{!-- Status tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="status">
+
+      <h3 class="section-header" style="margin-top:14px">Active Effects</h3>
+      <div class="flexrow" style="margin-bottom:6px;">
+        <button type="button" class="effect-add-btn" style="width:auto; padding:2px 10px;">+ Add Effect</button>
+      </div>
+      {{#if effectItems.length}}
+      <div class="effect-active-list">
+        {{#each effectItems}}
+        <div class="effect-item-row flexrow" data-item-id="{{this.id}}" style="align-items:center; gap:6px; padding:4px 2px; border-bottom:1px solid #d0c8bc;">
+          <img src="{{this.img}}" alt="" style="width:24px; height:24px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+          <span class="effect-open" data-item-id="{{this.id}}" style="flex:1; cursor:pointer; font-weight:600; color:#1a1a2e; text-decoration:underline dotted;" title="Click to edit settings">{{this.name}}</span>
+          <span class="flexrow" style="align-items:center; gap:2px; flex-shrink:0;">
+            <button type="button" class="effect-stack-decrease rank-btn" data-item-id="{{this.id}}">-</button>
+            <span style="min-width:22px; text-align:center; font-weight:700; font-size:0.95em;">{{this.system.stacks}}</span>
+            <button type="button" class="effect-stack-increase rank-btn" data-item-id="{{this.id}}">+</button>
+          </span>
+          <button type="button" class="effect-apply-btn move-action-btn" data-item-id="{{this.id}}" title="Trigger this effect" style="padding:2px 8px; flex-shrink:0;">Apply</button>
+          <button type="button" class="effect-remove move-action-btn" data-item-id="{{this.id}}" title="Remove effect" style="flex-shrink:0;"><i class="fas fa-times"></i></button>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items" style="margin:2px 0 6px;">No active effects.</p>
+      {{/if}}
+
+    </div>
+
+    {{!-- Digivolution tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="digivolution">
+
+      <h3 class="section-header">Current Form</h3>
+      {{#if currentFormData}}
+      <div class="digi-current-form-card digi-form-row dd-item-row" data-item-id="{{currentFormData.id}}" draggable="true"
+           title="Drag to the Items sidebar to save a copy of this form"
+           style="cursor:grab;">
+        <div class="digi-current-form-inner">
+          <img class="digi-current-form-img" src="{{currentFormData.img}}" alt="{{currentFormData.name}}" />
+          <div class="digi-current-form-body">
+            <div class="digi-form-card-header flexrow">
+              <strong class="digi-form-card-name">{{currentFormData.name}}</strong>
+              <span class="tag">{{currentFormData.stageLabel}}</span>
+              <span class="tag">{{currentFormData.attribute}}</span>
+              <span class="tag">{{currentFormData.element}}</span>
+              <button type="button" class="form-open move-action-btn" data-item-id="{{currentFormData.id}}" title="Open form sheet">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            {{#if currentFormData.signatureMove}}
+            <p class="hint" style="margin:4px 0 0;">Sig. Move: {{currentFormData.signatureMove}}</p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      {{else}}
+      <p class="no-items">No current DNA form set. Drag a form from the <strong>Digimon Forms</strong> compendium below, then click Set Current.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top:12px;">Known DNA Forms
+        <span class="stage-cap-note">Drag from compendium to add - Drag row to Items sidebar to save</span>
+      </h3>
+      {{#if knownForms.length}}
+      <div class="moves-list">
+        {{#each knownForms}}
+        <div class="move-row flexrow digi-form-row dd-item-row{{#if this.isCurrent}} move-row-active{{/if}}"
+             data-item-id="{{this.id}}" draggable="true"
+             title="Drag to the Items sidebar to save a copy" style="cursor:grab;">
+          <img class="digi-form-thumb" src="{{this.img}}" alt="{{this.name}}" />
+          <div class="move-name-block flexcol">
+            <span class="move-name">{{this.name}}</span>
+            <span class="hint" style="font-size:0.8em;">{{this.stageLabel}} - {{this.system.attribute}} - {{this.system.element}}</span>
+          </div>
+          {{#if this.isCurrent}}<span class="tag" style="background:#27ae60;">Current</span>{{/if}}
+          <div class="move-row-actions">
+            {{#unless this.isCurrent}}
+            <button type="button" class="form-set-current move-action-btn" data-item-id="{{this.id}}" title="Set as current form">
+              <i class="fas fa-star"></i>
+            </button>
+            {{/unless}}
+            <button type="button" class="form-open move-action-btn" data-item-id="{{this.id}}" title="View form">
+              <i class="fas fa-eye"></i>
+            </button>
+            <button type="button" class="form-remove move-action-btn" data-item-id="{{this.id}}" title="Remove form">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No known DNA forms yet.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top:14px;">Linked Partners</h3>
+      <div class="dna-partner-cards flexrow">
+        {{#if partnerA}}
+        <div class="dna-partner-card flexcol">
+          <img class="dna-partner-img" src="{{partnerA.img}}" alt="{{partnerA.name}}" />
+          <strong>{{partnerA.name}}</strong>
+          <span class="tag">{{partnerA.typeLabel}}</span>
+        </div>
+        {{else}}
+        <div class="dna-partner-card dna-partner-empty flexcol">
+          <span class="hint">No partner A linked</span>
+        </div>
+        {{/if}}
+        {{#if partnerB}}
+        <div class="dna-partner-card flexcol">
+          <img class="dna-partner-img" src="{{partnerB.img}}" alt="{{partnerB.name}}" />
+          <strong>{{partnerB.name}}</strong>
+          <span class="tag">{{partnerB.typeLabel}}</span>
+        </div>
+        {{else}}
+        <div class="dna-partner-card dna-partner-empty flexcol">
+          <span class="hint">No partner B linked</span>
+        </div>
+        {{/if}}
+      </div>
+
+    </div>
+
+  </section>
+</form>

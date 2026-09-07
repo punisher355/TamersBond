@@ -12,7 +12,7 @@ function crestFields(extra = {}) {
   };
 }
 
-function statusModsField() {
+export function statusModsField() {
   return new f.SchemaField({
     hitBonus:       new f.NumberField({ initial: 0, integer: true }),
     damageBonus:    new f.NumberField({ initial: 0, integer: true }),
@@ -88,10 +88,13 @@ export class TamerData extends TypeDataModel {
       class:        new f.StringField({ initial: "" }),
       sheetColor:   new f.StringField({ initial: "#4a90d9" }),
       sheetBgColor: new f.StringField({ initial: "#f0ece4" }),
+      // Per-character choice of how the Crests tab is laid out — the classic
+      // themed cards, or the compact spreadsheet-style table. Set from the
+      // sheet's Options button.
+      crestLayout:  new f.StringField({ initial: "cards", choices: ["cards", "table"] }),
       identity: new f.SchemaField({
         age:          new f.StringField({ initial: "" }),
         pronouns:     new f.StringField({ initial: "" }),
-        primaryCrest: new f.StringField({ initial: "" }),
         appearance:   new f.StringField({ initial: "" }),
         personality:  new f.StringField({ initial: "" }),
         background:   new f.StringField({ initial: "" }),
@@ -118,6 +121,20 @@ export function statField() {
     base:        new f.NumberField({ initial: 0, integer: true }),
     invested:    new f.NumberField({ initial: 0, integer: true, min: 0 }),
     conditional: new f.NumberField({ initial: 0, integer: true })
+  });
+}
+
+// One stop on a Digivolution Path tracker — the form used to reach that
+// stage (snapshotted so the picture survives the form item being deleted
+// later) and the Hope spent to get there. Blank formImg = stage not reached
+// yet. hopeSpent is always manually editable from the sheet, in case a
+// number needs correcting after the fact.
+export function digivolutionPathStageField() {
+  return new f.SchemaField({
+    formId:    new f.StringField({ initial: "" }),
+    formName:  new f.StringField({ initial: "" }),
+    formImg:   new f.StringField({ initial: "" }),
+    hopeSpent: new f.NumberField({ initial: 0, integer: true, min: 0 })
   });
 }
 
@@ -152,6 +169,18 @@ export class SpiritTamerData extends TamerData {
       isTamerForm:     new f.BooleanField({ initial: true }),
       tamerPortrait:   new f.StringField({ initial: "" }),
       tamerTokenImg:   new f.StringField({ initial: "" }),
+      // Spirit Tamers skip Fresh/In-Training/Rookie as separate Digimon
+      // forms — Tamer Form occupies that slot (see isTamerForm above), then
+      // Spirit Digivolution goes straight to Champion.
+      digivolutionPath: new f.SchemaField({
+        tamerform: digivolutionPathStageField(),
+        champion:  digivolutionPathStageField(),
+        ultimate:  digivolutionPathStageField(),
+        mega:      digivolutionPathStageField(),
+        // A second Mega-stage form ("Mega II" in the rulebook) — mechanically
+        // still Mega, just tracked as its own path step.
+        megaII:    digivolutionPathStageField()
+      }),
       corruption: new f.SchemaField({
         isCorrupted: new f.BooleanField({ initial: false }),
         corruptForm: new f.StringField({ initial: "" })
@@ -204,7 +233,60 @@ export class DigimonData extends TypeDataModel {
         total: new f.NumberField({ initial: 1500, integer: true, min: 0 }),
         spent: new f.NumberField({ initial: 0,    integer: true, min: 0 })
       }),
-      skills: skillsSchema()
+      skills: skillsSchema(),
+      digivolutionPath: new f.SchemaField({
+        fresh:      digivolutionPathStageField(),
+        intraining: digivolutionPathStageField(),
+        rookie:     digivolutionPathStageField(),
+        champion:   digivolutionPathStageField(),
+        ultimate:   digivolutionPathStageField(),
+        mega:       digivolutionPathStageField(),
+        // A second Mega-stage form ("Mega II" in the rulebook) — mechanically
+        // still Mega, just tracked as its own path step.
+        megaII:     digivolutionPathStageField()
+      })
     };
   }
 }
+
+// ── DNA Digimon ──────────────────────────────────────────────────────────────
+// A DNA Digivolution sheet: two partner actors (each a Digimon, Spirit
+// Tamer, or NPC Digimon) linked in, combined into one form. Per
+// 100_DNA_Digivolution.md, the DNA form supplies its own Species Base for
+// each Crest Stat (from whichever digimonForm item is set as its Current
+// Form) while the Tamer Rank and Digimon Invested layers are read live off
+// the two linked partners (the higher of the two, each) — so this data
+// model stores only what can't be derived: which two actors are linked,
+// which known DNA form is current, its own HP, and a manual Conditional
+// per stat. See computeDnaStatBreakdown() in config.js for the actual math.
+function dnaStatField() {
+  return new f.SchemaField({
+    conditional: new f.NumberField({ initial: 0, integer: true })
+  });
+}
+
+export class DnaDigimonData extends TypeDataModel {
+  static defineSchema() {
+    return {
+      biography:     new f.HTMLField({ initial: "" }),
+      linkedA:       new f.StringField({ initial: "" }),
+      linkedB:       new f.StringField({ initial: "" }),
+      currentFormId: new f.StringField({ initial: "" }),
+      attribute:     new f.StringField({ initial: "free" }),
+      element:       new f.StringField({ initial: "neutral" }),
+      sheetColor:    new f.StringField({ initial: "#8e44ad" }),
+      sheetBgColor:  new f.StringField({ initial: "#f0ece4" }),
+      stats: new f.SchemaField({
+        courage:     dnaStatField(), friendship: dnaStatField(), love:        dnaStatField(),
+        knowledge:   dnaStatField(), sincerity:  dnaStatField(), reliability: dnaStatField()
+      }),
+      hp: new f.SchemaField({
+        value: new f.NumberField({ initial: 10, integer: true }),
+        max:   new f.NumberField({ initial: 10, integer: true }),
+        temp:  new f.NumberField({ initial: 0,  integer: true })
+      }),
+      statusMods: statusModsField()
+    };
+  }
+}
+

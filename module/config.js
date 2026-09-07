@@ -31,6 +31,16 @@ DIGIMON.stageCosts = {
   mega:       15
 };
 
+// EXP cost to unlock each additional Digivolution form known at a stage
+// (first form at a stage is always free — see 009_Digimon_Crest_Stats.md).
+// Fresh/In-Training have no alternate-form purchase rule.
+DIGIMON.altFormCosts = {
+  rookie:     50,
+  champion:   100,
+  ultimate:   300,
+  mega:       500
+};
+
 // Legacy i18n key map (kept for any old selectOptions calls)
 DIGIMON.stages = {
   fresh:      "Fresh",
@@ -82,6 +92,18 @@ DIGIMON.crestImages = {
   sincerity:   "systems/digital-destiny/assets/crests/Crest_of_Sincerity_b.webp",
   reliability: "systems/digital-destiny/assets/crests/Crest_of_Reliability_b.webp",
   hope:        "systems/digital-destiny/assets/crests/Crest_of_Hope_b.webp"
+};
+
+// Alternate crest icon set used only on the Tamer sheet (Digimon/Spirit-Tamer
+// sheets keep using DIGIMON.crestImages above).
+DIGIMON.crestImagesTamer = {
+  courage:     "systems/digital-destiny/assets/crests/tamer/Crest_of_Courage.webp",
+  friendship:  "systems/digital-destiny/assets/crests/tamer/Crest_of_Friendship.webp",
+  love:        "systems/digital-destiny/assets/crests/tamer/Crest_of_Love.webp",
+  knowledge:   "systems/digital-destiny/assets/crests/tamer/Crest_of_Knowledge.webp",
+  sincerity:   "systems/digital-destiny/assets/crests/tamer/Crest_of_Sincerity.webp",
+  reliability: "systems/digital-destiny/assets/crests/tamer/Crest_of_Reliability.webp",
+  hope:        "systems/digital-destiny/assets/crests/tamer/Crest_of_Hope.webp"
 };
 
 // Stat theme colors (from rulebook)
@@ -156,7 +178,7 @@ DIGIMON.skills = {
     {
       key: "ironclad", label: "Ironclad",
       description: "Pushing through punishment, exhaustion, and harsh conditions without slowing down.",
-      example: "You march through the corrupted zone for hours, data-storm and all, without breaking stride."
+      example: "You march through the dark zone for hours, data-storm and all, without breaking stride."
     },
     {
       key: "crusher", label: "Crusher",
@@ -249,7 +271,7 @@ DIGIMON.skills = {
     {
       key: "firewall", label: "Firewall",
       description: "Blocking mental attacks, dark auras, and psychological pressure — your mind has a defense layer too.",
-      example: "The corrupted Digimon's crushing presence washes over you. You don't flinch. You don't move."
+      example: "The dark Digimon's crushing presence washes over you. You don't flinch. You don't move."
     },
     {
       key: "reinforce", label: "Reinforce",
@@ -301,6 +323,108 @@ DIGIMON.slotRules = {
   accessory:     { max: 1 },
   gadget:        { max: 1, swapOnlyAtRest: true }
 };
+
+// "#rrggbb" -> "r, g, b", for building an rgba() gradient tint from a stat/crest
+// color. Falls back to a neutral grey if the color is missing/malformed.
+export function hexToRgbTriplet(hex) {
+  const m = /^#?([0-9a-f]{6})$/i.exec(hex ?? "");
+  if (!m) return "128, 128, 128";
+  const n = parseInt(m[1], 16);
+  return `${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}`;
+}
+
+// Hope Cost Per Turn — per 013_Digivolution.md's "Stacking Costs" rule: a
+// Digimon above its Default Stage pays the SUM of the Hope actually spent
+// (at digivolve time) on every stage-step strictly above Default, up through
+// its Current Stage. Stages at or below Default cost nothing to maintain.
+// This reads straight off the Digivolution Path tracker's hopeSpent boxes —
+// that tracker is the one source of truth, so this is always derived, never
+// separately stored/incremented.
+export function computeHopePerTurn(system) {
+  const order      = DIGIMON.stageOrder;
+  const defaultIdx = order.indexOf(system?.defaultStage ?? "rookie");
+  const currentIdx = order.indexOf(system?.currentStage ?? "rookie");
+  if (defaultIdx < 0 || currentIdx < 0 || currentIdx <= defaultIdx) return 0;
+  let total = 0;
+  for (let i = defaultIdx + 1; i <= currentIdx; i++) {
+    total += system?.digivolutionPath?.[order[i]]?.hopeSpent ?? 0;
+  }
+  return total;
+}
+
+// A Tamer's Hope Per Turn is the sum of computeHopePerTurn() across whatever
+// it's actually paying for: a Spirit Tamer pays for its own digivolution
+// path; a regular Tamer pays for every Digimon partner linked to it (usually
+// just one, but nothing stops a GM from linking more than one).
+export function getActorHopePerTurn(actor) {
+  if (!actor) return 0;
+  if (actor.type === "spiritTamer") return computeHopePerTurn(actor.system);
+  if (actor.type === "tamer") {
+    const linked = game.actors?.filter(a => a.type === "digimon" && a.system?.tamerLink === actor.id) ?? [];
+    return linked.reduce((sum, d) => sum + computeHopePerTurn(d.system), 0);
+  }
+  return 0;
+}
+
+// DNA Digivolution crest math (100_DNA_Digivolution.md): the DNA form's own
+// Species Base (from whichever digimonForm item is its Current Form) plus
+// the HIGHER Tamer Rank of the two linked partners and the HIGHER Digimon
+// Invested of the two linked partners, plus a manual Conditional you set on
+// the DNA sheet itself. The two partners' own full totals are never added
+// together, and the DNA form never uses either partner's own Species Base.
+export function computeDnaStatBreakdown(actor) {
+  const system   = actor?.system ?? {};
+  const formItem = system.currentFormId ? actor.items?.get(system.currentFormId) : null;
+  const partnerA = system.linkedA ? game.actors?.get(system.linkedA) : null;
+  const partnerB = system.linkedB ? game.actors?.get(system.linkedB) : null;
+
+  // Mirrors the exact "Tamer" bonus each partner type already shows on its
+  // own sheet — NOT the fuller rank+primaryCrestBonus+modifier+autoModifier+
+  // gearBonus total used elsewhere (e.g. a Tamer's own combat rolls). A
+  // Digimon's own sheet displays its Tamer column as rank+modifier+
+  // autoModifier+gearBonus (DigimonSheet.js's own getData()); a Spirit
+  // Tamer's Digimon-Form sheet displays its Tamer column as rank+gearBonus
+  // (actor.js _prepareSpiritTamerData's digiStats[key].tamerBonus). The DNA
+  // form's Tamer Rank layer should read exactly the same number the partner
+  // itself is already using, not a bigger recomputed total.
+  const tamerRankFor = (partner, key) => {
+    if (!partner) return 0;
+    if (partner.type === "spiritTamer") {
+      const c = partner.system?.crests?.[key] ?? {};
+      return (c.rank ?? 0) + (c.gearBonus ?? 0);
+    }
+    if (partner.type === "digimon") {
+      const t = partner.system.tamerLink ? game.actors?.get(partner.system.tamerLink) : null;
+      const c = t?.system?.crests?.[key] ?? {};
+      return (c.rank ?? 0) + (c.modifier ?? 0) + (c.autoModifier ?? 0) + (c.gearBonus ?? 0);
+    }
+    return 0;
+  };
+  const investedFor = (partner, key) => {
+    if (!partner) return 0;
+    if (partner.type === "spiritTamer") return partner.system.digiStats?.[key]?.invested ?? 0;
+    if (partner.type === "digimon")     return partner.system.stats?.[key]?.invested ?? 0;
+    return 0;
+  };
+
+  const stats = {};
+  for (const key of ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"]) {
+    const speciesBase = formItem?.system?.stats?.[key] ?? 0;
+    const tamerRankA   = tamerRankFor(partnerA, key);
+    const tamerRankB   = tamerRankFor(partnerB, key);
+    const investedA    = investedFor(partnerA, key);
+    const investedB    = investedFor(partnerB, key);
+    const tamerRank    = Math.max(tamerRankA, tamerRankB);
+    const invested     = Math.max(investedA, investedB);
+    const conditional  = system.stats?.[key]?.conditional ?? 0;
+    stats[key] = {
+      speciesBase, tamerRankA, tamerRankB, tamerRank,
+      investedA, investedB, invested, conditional,
+      total: speciesBase + tamerRank + invested + conditional
+    };
+  }
+  return { partnerA, partnerB, formItem, stats };
+}
 
 // Convert a move's tags object into a readable bracket-notation string, e.g. "[MELEE] [BURN 2,3]"
 export function computeTagString(tags) {

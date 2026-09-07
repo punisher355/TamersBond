@@ -1,10 +1,10 @@
 <form class="{{cssClass}} flexcol" autocomplete="off"
       style="--tamer-accent: {{system.sheetColor}}; --tamer-bg: {{system.sheetBgColor}}">
 
-  {{!-- Corruption banner --}}
+  {{!-- Dark Digivolution banner --}}
   {{#if isCorrupted}}
   <div class="corruption-banner">
-    ⚠ CORRUPTED — GM Controlled — {{system.corruption.corruptForm}}
+    ⚠ DARK DIGIVOLVED — GM Controlled — {{system.corruption.corruptForm}}
   </div>
   {{/if}}
 
@@ -51,8 +51,7 @@
         </div>
         <div class="hope-perturn-row flexrow">
           <span class="hope-pt-label">Per Turn</span>
-          <input type="number" class="hope-pt-input" name="system.crests.hope.perTurn"
-                 value="{{hope.perTurn}}" />
+          <span class="hope-pt-display" title="Auto — sum of Hope spent per stage above Default on the Digivolution Path tracker">{{hope.perTurn}}</span>
         </div>
       </div>
 
@@ -118,7 +117,7 @@
 
     {{!-- Crests tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="crests">
-      <h3 class="section-header">Crest Stats</h3>
+      <h3 class="section-header">Crest Stats <span class="stage-cap-note">Spent on Crests: {{crestExpSpent}} EXP</span></h3>
 
       {{#if primaryCrestItem}}
       <div class="primary-crest-slot">
@@ -133,20 +132,90 @@
       </div>
       {{/if}}
 
+      {{#if (eq system.crestLayout "table")}}
+      <table class="crest-table">
+        <thead>
+          <tr>
+            <th class="ct-icon-col"></th>
+            <th class="ct-name-col">Crest</th>
+            <th>Rank</th>
+            <th>&rarr; Stat</th>
+            <th>Primary</th>
+            <th>Manual</th>
+            <th>Buffs</th>
+            <th>Gear</th>
+            <th>Total</th>
+            <th class="ct-cost-col">Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each crestList}}
+          <tr class="crest-row" style="border-left: 4px solid {{this.color}}; background: linear-gradient(to right, rgba({{this.rgb}}, 0.22), rgba({{this.rgb}}, 0.03) 60%, rgba({{this.rgb}}, 0) 100%);">
+            <td class="ct-icon-col"><img class="ct-icon" src="{{this.img}}" alt="{{this.label}}" /></td>
+            <td class="ct-name-col"><span class="ct-name" style="color: {{this.color}}">{{this.label}}</span></td>
+            <td>
+              <div class="ct-rank-controls flexrow">
+                <button type="button" class="stat-decrease rank-btn"
+                        data-stat="{{this.key}}"
+                        {{#unless this.canDowngrade}}disabled{{/unless}}>−</button>
+                <span class="ct-rank-value">{{this.rank}}</span>
+                <button type="button" class="stat-increase rank-btn"
+                        data-stat="{{this.key}}"
+                        {{#unless this.canUpgrade}}disabled{{/unless}}>+</button>
+              </div>
+            </td>
+            <td class="ct-stat-col">{{this.digimonStat}}</td>
+            <td class="ct-num-col">{{this.primaryBonus}}</td>
+            <td class="ct-num-col">
+              <input type="number" class="ct-mod-input"
+                     name="system.crests.{{this.key}}.modifier"
+                     value="{{this.modifier}}" />
+            </td>
+            <td class="ct-num-col">{{this.autoModifier}}</td>
+            <td class="ct-num-col">{{this.gearBonus}}</td>
+            <td class="ct-num-col ct-total-col">{{this.effective}}</td>
+            <td class="ct-cost-col">
+              {{#if this.upgradeCost}}
+              {{this.upgradeCost}} EXP
+              {{else}}
+              <span class="crest-maxed">MAX</span>
+              {{/if}}
+            </td>
+          </tr>
+          {{/each}}
+
+          {{!-- Hope — derived: highest crest rank × 5, read-only pool --}}
+          <tr class="crest-row hope-row" style="border-left: 4px solid {{hope.color}}; background: linear-gradient(to right, rgba({{hope.rgb}}, 0.22), rgba({{hope.rgb}}, 0.03) 60%, rgba({{hope.rgb}}, 0) 100%);">
+            <td class="ct-icon-col"><img class="ct-icon" src="{{hope.img}}" alt="Hope" /></td>
+            <td class="ct-name-col"><span class="ct-name" style="color: {{hope.color}}">Hope</span></td>
+            <td><span class="ct-rank-value hope-pool" style="color: {{hope.color}}">{{hope.max}}</span></td>
+            <td class="ct-stat-col" colspan="6">Digivolution pool — based on total EXP</td>
+            <td class="ct-cost-col"></td>
+          </tr>
+        </tbody>
+      </table>
+      {{else}}
       <div class="crests-grid">
+
         {{#each crestList}}
         <div class="crest-block" style="border-top: 3px solid {{this.color}}">
           <img class="crest-img" src="{{this.img}}" alt="{{this.label}}" />
+
           <div class="crest-content">
             <label class="crest-name" style="color: {{this.color}}">{{this.label}}</label>
+
             <div class="crest-rank-row flexrow">
-              <button type="button" class="stat-decrease rank-btn" data-stat="{{this.key}}"
+              <button type="button" class="stat-decrease rank-btn"
+                      data-stat="{{this.key}}"
                       {{#unless this.canDowngrade}}disabled{{/unless}}>−</button>
               <span class="crest-rank-value">{{this.rank}}</span>
-              <button type="button" class="stat-increase rank-btn" data-stat="{{this.key}}"
+              <button type="button" class="stat-increase rank-btn"
+                      data-stat="{{this.key}}"
                       {{#unless this.canUpgrade}}disabled{{/unless}}>+</button>
             </div>
+
             <span class="crest-arrow">→ {{this.digimonStat}}</span>
+
             <div class="crest-modifiers">
               {{#if this.primaryBonus}}
               <div class="crest-mod-row flexrow">
@@ -157,7 +226,8 @@
               <div class="crest-mod-row flexrow">
                 <span class="crest-mod-label">Manual</span>
                 <input type="number" class="crest-mod-input"
-                       name="system.crests.{{this.key}}.modifier" value="{{this.modifier}}" />
+                       name="system.crests.{{this.key}}.modifier"
+                       value="{{this.modifier}}" />
               </div>
               <div class="crest-mod-row flexrow">
                 <span class="crest-mod-label">Buffs</span>
@@ -170,6 +240,7 @@
               </div>
               {{/if}}
             </div>
+
             {{#if this.upgradeCost}}
             <span class="crest-cost">Next: {{this.upgradeCost}} EXP</span>
             {{else}}
@@ -190,11 +261,15 @@
             <span class="crest-cost">Based on total EXP</span>
           </div>
         </div>
+
       </div>
+      {{/if}}
     </div>
 
     {{!-- Skills tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="skills">
+      <h3 class="section-header">Skills <span class="stage-cap-note">Spent on Skills: {{skillExpSpent}} EXP</span></h3>
+      <div class="skill-groups-grid">
       {{#each skillGroups}}
       <div class="skill-group">
         <div class="skill-group-header flexrow" style="border-left-color: {{this.statColor}}">
@@ -226,6 +301,7 @@
         {{/each}}
       </div>
       {{/each}}
+      </div>
     </div>
 
     {{!-- Classes tab --}}
@@ -689,19 +765,6 @@
             <input type="text" name="system.identity.pronouns" value="{{system.identity.pronouns}}" placeholder="they/them" />
           </div>
           <div class="bio-field bio-field-sm">
-            <label>Primary Crest</label>
-            <select name="system.identity.primaryCrest">
-              <option value="" {{#unless system.identity.primaryCrest}}selected{{/unless}}>— Choose —</option>
-              <option value="courage"     {{#if (eq system.identity.primaryCrest "courage")}}selected{{/if}}>Courage</option>
-              <option value="friendship"  {{#if (eq system.identity.primaryCrest "friendship")}}selected{{/if}}>Friendship</option>
-              <option value="love"        {{#if (eq system.identity.primaryCrest "love")}}selected{{/if}}>Love</option>
-              <option value="knowledge"   {{#if (eq system.identity.primaryCrest "knowledge")}}selected{{/if}}>Knowledge</option>
-              <option value="sincerity"   {{#if (eq system.identity.primaryCrest "sincerity")}}selected{{/if}}>Sincerity</option>
-              <option value="reliability" {{#if (eq system.identity.primaryCrest "reliability")}}selected{{/if}}>Reliability</option>
-              <option value="hope"        {{#if (eq system.identity.primaryCrest "hope")}}selected{{/if}}>Hope</option>
-            </select>
-          </div>
-          <div class="bio-field bio-field-sm">
             <label>Digimon Species</label>
             <input type="text" name="system.digimonSpecies" value="{{system.digimonSpecies}}" placeholder="e.g. Agumon" />
           </div>
@@ -780,7 +843,7 @@
         </thead>
         <tbody>
           {{#each digiStatList}}
-          <tr>
+          <tr style="background: linear-gradient(to right, rgba({{this.rgb}}, 0.16), rgba({{this.rgb}}, 0.02) 60%, rgba({{this.rgb}}, 0) 100%);">
             <td class="stat-label" style="border-left: 3px solid {{this.color}}">
               <img class="stat-crest-icon" src="{{this.crestImg}}" title="{{this.label}}" />
               <div class="stat-label-text">
@@ -820,16 +883,73 @@
     {{!-- Digivolution tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="digivolution">
 
+      {{!-- Digivolution Path — the full chain of forms used to get here --}}
+      <h3 class="section-header">Digivolution Path</h3>
+      <div class="digivolve-path-track">
+        {{#each digivolutionPath}}
+        <div class="digivolve-path-step{{#unless this.reached}} digivolve-path-empty{{/unless}}">
+          <div class="digivolve-path-img-wrap">
+            {{#if this.img}}
+            <img class="digivolve-path-img" src="{{this.img}}" alt="{{this.label}}" />
+            {{else}}
+            <div class="digivolve-path-blank"><i class="fas fa-question"></i></div>
+            {{/if}}
+          </div>
+          <span class="digivolve-path-label">{{this.label}}</span>
+          <div class="digivolve-path-hope-row">
+            <input type="number" class="digivolve-path-hope" min="0"
+                   name="system.digivolutionPath.{{this.stage}}.hopeSpent"
+                   value="{{this.hopeSpent}}" />
+            <span class="digivolve-path-hope-caption">Hope</span>
+          </div>
+        </div>
+        {{#unless @last}}<span class="digivolve-path-arrow"><i class="fas fa-chevron-right"></i></span>{{/unless}}
+        {{/each}}
+      </div>
+
+      <div class="digivolve-btn-panel">
+        {{#if system.isTamerForm}}
+        <button type="button" class="revert-to-tamer-btn" disabled>
+          <i class="fas fa-user"></i> Already in Tamer Form
+        </button>
+        {{else}}
+        <button type="button" class="revert-to-tamer-btn">
+          <i class="fas fa-user"></i> Revert to Tamer Form
+        </button>
+        {{/if}}
+
+        {{#if canDigivolve}}
+        <div class="flexcol" style="gap:6px;">
+          <div class="digivolve-info-row flexrow">
+            <span>Next stage: <strong>{{digivolveTarget}}</strong></span>
+            <span class="tag">Full cost: {{digivolveCost}} Hope</span>
+            <span class="tag digivolve-hope-tag">Hope available: {{hopeAvailable}}</span>
+          </div>
+          <button type="button" class="digivolve-roll-btn">
+            <i class="fas fa-dna"></i> Digivolve to {{digivolveTarget}}!
+          </button>
+        </div>
+        {{else}}
+        {{#if noNextStageForms}}
+        {{#if digivolveAtMega}}
+        <p class="hint">No other known Mega forms to digivolve into — drag another Mega-stage form from the Digimon Forms compendium to Known Forms first.</p>
+        {{else}}
+        <p class="hint">No known forms at {{digivolveTarget}} stage yet — drag one from the Digimon Forms compendium to Known Forms first.</p>
+        {{/if}}
+        {{else}}
+        <p class="hint">No further digivolution available from current stage.</p>
+        {{/if}}
+        {{/if}}
+      </div>
+
       <h3 class="section-header">Current Form</h3>
       {{#if currentFormData}}
       <div class="digi-current-form-card digi-form-row dd-item-row" data-item-id="{{currentFormData.id}}" draggable="true"
            title="Drag to Items sidebar to save" style="cursor:grab;">
-        <div style="display:flex; align-items:flex-start; gap:10px;">
-          <img src="{{currentFormData.img}}" alt="{{currentFormData.name}}"
-               style="width:96px; height:96px; object-fit:contain; border:1px solid #ccc;
-                      border-radius:4px; background:#f5f0e8; flex-shrink:0;" />
-          <div style="flex:1; min-width:0;">
-            <div class="digi-form-card-header flexrow" style="align-items:center; flex-wrap:wrap; gap:4px; margin-bottom:4px;">
+        <div class="digi-current-form-inner">
+          <img class="digi-current-form-img" src="{{currentFormData.img}}" alt="{{currentFormData.name}}" />
+          <div class="digi-current-form-body">
+            <div class="digi-form-card-header flexrow">
               <strong class="digi-form-card-name">{{currentFormData.name}}</strong>
               <span class="tag">{{currentFormData.stageLabel}}</span>
               <span class="tag">{{currentFormData.attribute}}</span>
@@ -875,19 +995,23 @@
         {{#each knownForms}}
         <div class="move-row flexrow digi-form-row dd-item-row{{#if this.isCurrent}} move-row-active{{/if}}"
              data-item-id="{{this.id}}" draggable="true" title="Drag to Items sidebar to save" style="cursor:grab;">
-          <img src="{{this.img}}" alt="{{this.name}}"
-               style="width:36px; height:36px; object-fit:contain; border-radius:3px; background:#f5f0e8; flex-shrink:0;" />
+          <img class="digi-form-thumb" src="{{this.img}}" alt="{{this.name}}" />
           <div class="move-name-block flexcol">
             <span class="move-name">{{this.name}}</span>
             <span class="hint" style="font-size:0.8em;">{{this.stageLabel}} · {{this.system.attribute}} · {{this.system.element}}</span>
           </div>
           {{#if this.isCurrent}}<span class="tag" style="background:#27ae60;">★ Current</span>{{/if}}
+          {{#if this.isFreeForm}}<span class="tag" style="background:#f39c12; color:#2a1a00;">Free</span>{{/if}}
           <div class="move-row-actions">
             {{#unless this.isCurrent}}
             <button type="button" class="form-set-current move-action-btn" data-item-id="{{this.id}}" title="Set as current form">
               <i class="fas fa-star"></i>
             </button>
             {{/unless}}
+            <button type="button" class="form-free-toggle move-action-btn{{#if this.isFreeForm}} move-action-btn-on{{/if}}" data-item-id="{{this.id}}"
+                    title="{{#if this.isFreeForm}}Marked free — click to remove Free status{{else}}Mark this form as not costing Alternate Form EXP{{/if}}">
+              <i class="fas fa-gift"></i>
+            </button>
             <button type="button" class="form-open move-action-btn" data-item-id="{{this.id}}" title="View form">
               <i class="fas fa-eye"></i>
             </button>
@@ -900,6 +1024,38 @@
       </div>
       {{else}}
       <p class="no-items">No known forms yet. Drag Digimon Form items here to add them.</p>
+      {{/if}}
+
+      {{!-- Alternate Form EXP --}}
+      <h3 class="section-header" style="margin-top:12px;">Alternate Form EXP
+        <span class="stage-cap-note">First form per stage is free — each extra form costs EXP — forms marked Free above don't count</span>
+      </h3>
+      {{#if altFormSummary.rows.length}}
+      <div class="digivolution-force-table">
+        <table class="reference-table">
+          <thead><tr><th>Stage</th><th>Known Forms</th><th>Free</th><th>Extra Forms</th><th>EXP Cost</th></tr></thead>
+          <tbody>
+            {{#each altFormSummary.rows}}
+            <tr>
+              <td>{{this.label}}</td>
+              <td>{{this.count}}</td>
+              <td>{{this.freeCount}}</td>
+              <td>{{this.extraForms}} &times; {{this.costPerForm}}</td>
+              <td>{{this.expCost}} EXP</td>
+            </tr>
+            {{/each}}
+            <tr>
+              <td><strong>Total</strong></td>
+              <td><strong>{{altFormSummary.totalForms}}</strong></td>
+              <td></td>
+              <td></td>
+              <td><strong>{{altFormSummary.totalExp}} EXP</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {{else}}
+      <p class="hint">No alternate forms known yet.</p>
       {{/if}}
 
       <h3 class="section-header" style="margin-top:12px;">Stage</h3>
@@ -924,44 +1080,10 @@
         </div>
       </div>
 
-      <div class="digivolve-btn-panel" style="margin-top:12px;">
-        {{#if system.isTamerForm}}
-        <button type="button" class="revert-to-tamer-btn" disabled
-                style="width:100%; padding:8px 0; margin-bottom:8px; opacity:0.5; cursor:not-allowed;">
-          <i class="fas fa-user"></i> Already in Tamer Form
-        </button>
-        {{else}}
-        <button type="button" class="revert-to-tamer-btn"
-                style="width:100%; padding:8px 0; margin-bottom:8px; background:#e67e22; border-color:#c0602a; cursor:pointer; border-radius:4px;">
-          <i class="fas fa-user"></i> Revert to Tamer Form
-        </button>
-        {{/if}}
-
-        {{#if canDigivolve}}
-        <div style="display:flex; flex-direction:column; gap:6px;">
-          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:0.9em;">
-            <span>Next stage: <strong>{{digivolveTarget}}</strong></span>
-            <span class="tag">Full cost: {{digivolveCost}} Hope</span>
-            <span class="tag" style="background:#3498db; color:#fff;">Hope available: {{hopeAvailable}}</span>
-          </div>
-          <button type="button" class="digivolve-roll-btn"
-                  style="padding:8px 0; font-size:1.05em; cursor:pointer; border-radius:4px;">
-            <i class="fas fa-dna"></i> Digivolve to {{digivolveTarget}}!
-          </button>
-        </div>
-        {{else}}
-        {{#if noNextStageForms}}
-        <p class="hint">No known forms at {{digivolveTarget}} stage yet — drag one from the Digimon Forms compendium to Known Forms first.</p>
-        {{else}}
-        <p class="hint">No further digivolution available from current stage.</p>
-        {{/if}}
-        {{/if}}
-      </div>
-
       <h3 class="section-header" style="margin-top: 12px">Forcing a Digivolution</h3>
       <p class="hint">Spend less than the full Hope cost. Roll d100 and beat the threshold. Only in combat.</p>
       <div class="digivolution-force-table">
-        <table class="stats-table">
+        <table class="reference-table">
           <thead><tr><th>Stage</th><th>Full Cost</th><th>Threshold Formula</th></tr></thead>
           <tbody>
             <tr><td>Rookie</td><td>3 Hope</td><td>(1 − spent/3) × 20 — roll above to succeed</td></tr>
@@ -970,23 +1092,23 @@
             <tr><td>Mega</td><td>15 Hope</td><td>(1 − spent/15) × 80 — roll above to succeed</td></tr>
           </tbody>
         </table>
-        <p class="hint">Full Hope cost = threshold 0 (always clean). At or below threshold = corruption.</p>
+        <p class="hint">Full Hope cost = threshold 0 (always clean). At or below threshold = dark digivolution.</p>
       </div>
 
-      <h3 class="section-header" style="margin-top: 12px">Corruption</h3>
+      <h3 class="section-header" style="margin-top: 12px">Dark Digivolution</h3>
       <div class="corruption-panel{{#if isCorrupted}} corruption-active{{/if}}">
         <div class="corruption-header-row flexrow">
-          <span class="corruption-status-label">{{#if isCorrupted}}⚠ CORRUPTED{{else}}Clean{{/if}}</span>
+          <span class="corruption-status-label">{{#if isCorrupted}}⚠ DARK DIGIVOLVED{{else}}Clean{{/if}}</span>
           <button type="button" class="corruption-toggle">
-            {{#if isCorrupted}}End Corruption{{else}}Trigger Corruption{{/if}}
+            {{#if isCorrupted}}End Dark Digivolution{{else}}Trigger Dark Digivolution{{/if}}
           </button>
         </div>
         {{#if isCorrupted}}
         <div class="bio-field">
-          <label>Corrupt Form Name</label>
+          <label>Dark Form Name</label>
           <input type="text" name="system.corruption.corruptForm"
                  value="{{system.corruption.corruptForm}}"
-                 placeholder="GM enters the corrupt form name" />
+                 placeholder="GM enters the dark form name" />
         </div>
         <div class="corruption-reminders">
           <p>Costs no Hope per turn. GM controlled.</p>

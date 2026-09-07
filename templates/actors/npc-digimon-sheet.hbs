@@ -69,7 +69,7 @@
         </thead>
         <tbody>
           {{#each statList}}
-          <tr>
+          <tr style="background: linear-gradient(to right, rgba({{this.rgb}}, 0.16), rgba({{this.rgb}}, 0.02) 60%, rgba({{this.rgb}}, 0) 100%);">
             <td class="stat-label" style="border-left: 3px solid {{this.color}}">
               <img class="stat-crest-icon" src="{{this.crestImg}}" title="{{this.label}}" />
               <div class="stat-label-text">{{this.label}}</div>
@@ -95,6 +95,7 @@
     <div class="tab flexcol" data-group="primary" data-tab="skills">
       <p class="hint">Set skill ranks directly on this Digimon — no Tamer required. Rank is the number of d6 rolled.</p>
 
+      <div class="skill-groups-grid">
       {{#each skillGroups}}
       <div class="skill-group">
         <div class="skill-group-header flexrow" style="border-left-color: {{this.statColor}}">
@@ -120,6 +121,7 @@
         {{/each}}
       </div>
       {{/each}}
+      </div>
     </div>
 
     {{!-- Attacks tab --}}

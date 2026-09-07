@@ -1,4 +1,5 @@
 import { applyItemRules } from "../rules/rule-engine.js";
+import { computeDnaStatBreakdown } from "../config.js";
 
 const CREST_STATS = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -68,7 +69,7 @@ export class DigitalDestinyActor extends Actor {
   async _onCreate(data, options, userId) {
     await super._onCreate(data, options, userId);
     if (game.user.id !== userId) return;
-    if (!["tamer", "digimon", "spiritTamer"].includes(this.type)) return;
+    if (!["tamer", "digimon", "spiritTamer", "dnaDigimon"].includes(this.type)) return;
 
     if (!(data.items ?? []).some(i => i.type === "attack")) {
       await this.createEmbeddedDocuments("Item", DEFAULT_ATTACKS);
@@ -91,6 +92,7 @@ export class DigitalDestinyActor extends Actor {
     if (this.type === "tamer")        this._prepareTamerData(system);
     if (this.type === "spiritTamer")  this._prepareSpiritTamerData(system);
     if (this.type === "digimon")      this._prepareDigimonData(system);
+    if (this.type === "dnaDigimon")   this._prepareDnaDigimonData(system);
   }
 
   _prepareTamerData(system) {
@@ -223,5 +225,16 @@ export class DigitalDestinyActor extends Actor {
     // Carry tamer's gear attack/damage bonuses into the Digimon's derived data
     system.gearAttackBonus = tamer?.system?.gearAttackBonus ?? 0;
     system.gearDamageBonus = tamer?.system?.gearDamageBonus ?? 0;
+  }
+
+  _prepareDnaDigimonData(system) {
+    // DNA HP: 20 + (total Sincerity x 4) + status hpMax bonuses, same formula
+    // as a regular Digimon. Sincerity total comes from computeDnaStatBreakdown()
+    // in config.js — Species Base of the Current Form + the higher Tamer Rank
+    // and higher Digimon Invested of the two linked partners.
+    const { stats } = computeDnaStatBreakdown(this);
+    const sinTotal   = stats.sincerity?.total ?? 0;
+    system.hp.max   = 20 + sinTotal * 4 + (system.statusMods?.hpMaxBonus ?? 0);
+    system.hp.value = Math.min(system.hp.value ?? system.hp.max, system.hp.max);
   }
 }
