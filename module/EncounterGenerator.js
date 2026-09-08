@@ -62,6 +62,30 @@ export class EncounterGenerator {
       .map(f => `<option value="${f.name}">${f.name} (${D.stageLabels[f.system.stage] ?? f.system.stage})</option>`)
       .join("");
 
+    // Any existing Actor folder, indented by nesting depth — same idea as
+    // Foundry's own folder pickers. Leaving this on the default "no folder"
+    // option drops generated Digimon at the top level, exactly like a
+    // manually-created actor with nothing selected. Wrapped defensively —
+    // this is a nice-to-have list, and a bug in it (an odd folder tree,
+    // a Foundry-version quirk in how a parent folder is referenced) should
+    // never be able to stop the dialog itself from opening.
+    let folderOptions = `<option value="">— Top Level (no folder) —</option>`;
+    try {
+      const folderDepth = (folder, depth = 0) => {
+        const parentId = folder?.folder?.id ?? folder?.folder ?? null;
+        if (!parentId || depth > 20) return depth;
+        const parent = game.folders.get(parentId);
+        return parent ? folderDepth(parent, depth + 1) : depth;
+      };
+      const actorFolders = game.folders
+        .filter(f => f.type === "Actor")
+        .map(f => ({ id: f.id, name: f.name, depth: folderDepth(f) }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+      folderOptions += actorFolders.map(f => `<option value="${f.id}">${"— ".repeat(f.depth)}${f.name}</option>`).join("");
+    } catch (err) {
+      console.error("Digital Destiny | Encounter Generator: couldn't build the folder list, falling back to Top Level only.", err);
+    }
+
     const content = `
       <form class="encounter-gen-form">
         <div class="form-group">
@@ -104,6 +128,10 @@ export class EncounterGenerator {
           <label>EXP per Digimon</label>
           <input type="number" name="exp" value="0" min="0" step="100" />
         </div>
+        <div class="form-group">
+          <label>Folder</label>
+          <select name="targetFolder">${folderOptions}</select>
+        </div>
         <p class="hint">EXP is randomly spread across the six stats using the same cost curve as a
         player Digimon's invested stats (rank × 100 per step). 0 EXP = species base stats only.
         Filters left on "Any" pull from every Digimon that matches the ones you do set. Each
@@ -127,7 +155,8 @@ export class EncounterGenerator {
               exp:       Math.max(0, parseInt(html.find('[name="exp"]').val()) || 0),
               specificFormName: html.find('[name="specificMode"]').is(':checked')
                 ? (html.find('[name="specificForm"]').val() || "")
-                : ""
+                : "",
+              folderId: html.find('[name="targetFolder"]').val() || ""
             })
           },
           cancel: { label: "Cancel", callback: () => resolve(null) }
@@ -181,6 +210,20 @@ export class EncounterGenerator {
     await this._generate(result);
   }
 
+  // A generated NPC's skill ranks are derived straight from its final stat
+  // totals rather than typed in by hand: 5+ -> rank 2, 9+ -> 3, 13+ -> 4,
+  // 16+ -> 5, 20+ -> 6, otherwise the default rank 1. Every skill under a
+  // given stat (e.g. all of Courage's skills, Blitz included) gets that
+  // stat's rank.
+  static _rankForStat(total) {
+    if (total >= 20) return 6;
+    if (total >= 16) return 5;
+    if (total >= 13) return 4;
+    if (total >= 9)  return 3;
+    if (total >= 5)  return 2;
+    return 1;
+  }
+
   // Randomly buys invested ranks across the 6 stats until the budget runs out,
   // using the exact same (rank+1)*100 cost curve as _onStatIncrease on the
   // full Digimon sheet. Returns { courage: n, friendship: n, ... }.
@@ -229,7 +272,7 @@ export class EncounterGenerator {
     return chain;
   }
 
-  static async _generate({ attribute, element, stage, count, exp, specificFormName }) {
+  static async _generate({ attribute, element, stage, count, exp, specificFormName, folderId }) {
     let pool;
     if (specificFormName) {
       const chosen = this._formsCache.find(f => f.name === specificFormName);
@@ -251,43 +294,52 @@ export class EncounterGenerator {
       }
     }
 
-    // Parent folder + one subfolder per batch, so a whole encounter can be
-    // cleaned up in a single delete once the fight is over.
-    let parentFolder = game.folders.find(f => f.type === "Actor" && !f.folder && f.name === "Generated Encounters");
-    if (!parentFolder) {
-      parentFolder = await Folder.create({ name: "Generated Encounters", type: "Actor", color: "#c0392b" });
-    }
-    const stamp = new Date().toLocaleString([], { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-    const batchFolder = await Folder.create({
-      name:   `${count}x Encounter — ${stamp}`,
-      type:   "Actor",
-      folder: parentFolder.id,
-      color:  "#c0392b"
-    });
+    // Whatever folder the GM picked in the dialog (or none — same as a
+    // manually-created actor with no folder selected, it lands at the top
+    // level of the Actors sidebar).
+    const targetFolder = folderId ? game.folders.get(folderId) : null;
 
-    const created    = [];
-    const nameCounts = {};
+    const created = [];
 
     for (let i = 0; i < count; i++) {
       const form = pool[Math.floor(Math.random() * pool.length)];
       const s    = form.system;
       const boost = this._distributeExp(exp);
 
+      // Keep the species stat and the EXP-purchased boost separate (base vs.
+      // invested) instead of folding them together — the NPC sheet now shows
+      // both distinctly, and keeping them apart means digivolving this NPC
+      // later (which re-syncs base to the new form) doesn't wipe out the EXP
+      // that was spent boosting it.
       const finalStats = {};
       for (const key of STAT_KEYS) {
-        finalStats[key] = { base: (s.stats?.[key] ?? 0) + boost[key], invested: 0, conditional: 0 };
+        finalStats[key] = { base: (s.stats?.[key] ?? 0), invested: boost[key], conditional: 0 };
       }
 
-      nameCounts[form.name] = (nameCounts[form.name] ?? 0) + 1;
-      const dupeSuffix = nameCounts[form.name] > 1 ? ` #${nameCounts[form.name]}` : "";
-      const actorName  = `${form.name}${dupeSuffix}`;
-      const img        = this._resolveImg(form);
+      // Skill ranks, one stat-group at a time, off that stat's final total
+      // (base + invested — no Tamer link or conditional bonuses exist yet on
+      // a freshly generated NPC, so this is the whole total).
+      const skillsData = {};
+      for (const key of STAT_KEYS) {
+        const total = finalStats[key].base + finalStats[key].invested;
+        const rank  = this._rankForStat(total);
+        const skillDefs = CONFIG.DIGIMON.skills?.[key] ?? [];
+        skillsData[key] = {};
+        for (const { key: skillKey } of skillDefs) {
+          skillsData[key][skillKey] = { rank };
+        }
+      }
+
+      // No de-duping suffix — duplicates just keep the Digimon's own name,
+      // same as creating several actors by hand would.
+      const actorName = form.name;
+      const img       = this._resolveImg(form);
 
       const actor = await Actor.create({
         name:   actorName,
         type:   "digimon",
         img,
-        folder: batchFolder.id,
+        folder: targetFolder?.id ?? null,
         // Pre-select the NPC sheet so it opens ready-to-use — GM can still
         // switch back to the full Digimon sheet via Sheet Configuration.
         flags: { core: { sheetClass: "digital-destiny.NpcDigimonSheet" } },
@@ -297,7 +349,8 @@ export class EncounterGenerator {
           currentStage:    s.stage,
           defaultStage:    s.stage,
           maxDefaultStage: s.stage,
-          stats:           finalStats
+          stats:           finalStats,
+          skills:          skillsData
         },
         prototypeToken: {
           name:    actorName,
@@ -345,6 +398,23 @@ export class EncounterGenerator {
       if (Object.keys(pathUpdate).length) await actor.update(pathUpdate);
       if (moveDocs.length) await actor.createEmbeddedDocuments("Item", moveDocs);
 
+      // Attach the actual Digimon Form items for this NPC's traced evolution
+      // line (not just the display-only Digivolution Path snapshot above) so
+      // the NPC sheet's Digivolving tab has real Known Forms to show and
+      // star-select between — previously a generated Digimon had zero items
+      // besides its move pool, so there was nothing to pick from there.
+      const formDocs = chain.map(stepForm => {
+        const data = stepForm.toObject();
+        delete data._id;
+        return data;
+      });
+      if (formDocs.length) {
+        const createdFormItems = await actor.createEmbeddedDocuments("Item", formDocs);
+        const topIndex        = chain.indexOf(form);
+        const currentFormItem = createdFormItems[topIndex] ?? createdFormItems[createdFormItems.length - 1];
+        if (currentFormItem) await actor.update({ "system.currentFormId": currentFormItem.id });
+      }
+
       created.push({ actor, form, chain });
     }
 
@@ -363,10 +433,10 @@ export class EncounterGenerator {
         <div class="dd-chat-card">
           <h3 class="dd-chat-title">Generated Encounter (${created.length})</h3>
           <ul style="margin:4px 0 0 18px; padding:0;">${listHtml}</ul>
-          <p class="hint" style="margin-top:6px;">Saved to folder: <strong>${batchFolder.name}</strong></p>
+          <p class="hint" style="margin-top:6px;">Saved to: <strong>${targetFolder?.name ?? "Actors sidebar top level"}</strong></p>
         </div>`
     });
 
-    ui.notifications.info(`Generated ${created.length} Digimon in "${batchFolder.name}".`);
+    ui.notifications.info(`Generated ${created.length} Digimon${targetFolder ? ` in "${targetFolder.name}"` : ""}.`);
   }
 }

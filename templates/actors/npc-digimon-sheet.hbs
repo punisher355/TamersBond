@@ -46,6 +46,7 @@
   {{!-- Tabs --}}
   <nav class="sheet-tabs" data-group="primary">
     <a class="item" data-tab="stats">Stats</a>
+    <a class="item" data-tab="digivolving">Digivolving</a>
     <a class="item" data-tab="skills">Skills</a>
     <a class="item" data-tab="attacks">Attacks</a>
     <a class="item" data-tab="status">Status</a>
@@ -57,14 +58,21 @@
     {{!-- Stats tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="stats">
 
-      <h3 class="section-header">Combat Stats</h3>
-      <p class="hint">Type any number in — no EXP cost, no cap. This is the Digimon's full stat, used directly in combat rolls.</p>
+      <h3 class="section-header">Combat Stats
+        <span class="tag" style="margin-left:auto;">Total EXP to buy Invested: {{statExpTotal}}</span>
+      </h3>
+      <p class="hint">Base comes from the Digimon's form (Digivolving tab) and updates automatically when you change form.
+        Invested is yours to type in — any number, no cap, not touched by digivolving.
+        The EXP column is just a cost reference (same curve the full sheet uses) — nothing here spends from a pool.</p>
 
       <table class="stats-table">
         <thead>
           <tr>
             <th>Stat</th>
-            <th>Value</th>
+            <th>Base</th>
+            <th>Invested</th>
+            <th>Total</th>
+            <th>EXP</th>
           </tr>
         </thead>
         <tbody>
@@ -75,11 +83,18 @@
               <div class="stat-label-text">{{this.label}}</div>
             </td>
             <td>
-              <input type="number" name="system.stats.{{this.key}}.base" value="{{this.base}}" style="width:70px;" />
+              <input type="number" name="system.stats.{{this.key}}.base" value="{{this.base}}" style="width:60px;" title="From the Digimon's current form — set on the Digivolving tab" />
+            </td>
+            <td>
+              <input type="number" name="system.stats.{{this.key}}.invested" value="{{this.invested}}" style="width:60px;" />
+            </td>
+            <td>
+              <strong>{{this.total}}</strong>
               {{#if this.hasExtra}}
-              <span class="hint" style="margin-left:6px;">effective total: <strong>{{this.total}}</strong> (linked Tamer or leftover invested/conditional adds to this)</span>
+              <span class="hint" style="margin-left:4px;">(linked Tamer or conditional adds to this)</span>
               {{/if}}
             </td>
+            <td class="hint">{{this.expCost}}</td>
           </tr>
           {{/each}}
         </tbody>
@@ -88,6 +103,78 @@
       <p class="hint hp-formula-note">
         <strong>HP Max</strong> — {{hpFormula}}. Raise Sincerity to raise max HP.
       </p>
+
+    </div>
+
+    {{!-- Digivolving tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="digivolving">
+
+      <h3 class="section-header">Current Form</h3>
+      {{#if currentFormData}}
+      <div class="digi-current-form-card digi-form-row dd-item-row">
+        <div class="digi-current-form-inner">
+          <img class="digi-current-form-img" src="{{currentFormData.img}}" alt="{{currentFormData.name}}" />
+          <div class="digi-current-form-body">
+            <div class="digi-form-card-header flexrow">
+              <strong class="digi-form-card-name">{{currentFormData.name}}</strong>
+              <span class="tag">{{currentFormData.stageLabel}}</span>
+              <span class="tag">{{currentFormData.attribute}}</span>
+              <span class="tag">{{currentFormData.element}}</span>
+            </div>
+            {{#if currentFormData.signatureMove}}
+            <div class="hint" style="margin-bottom:4px;">Sig. Move: <strong>{{currentFormData.signatureMove}}</strong></div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      {{else}}
+      <p class="no-items">No current form set — star one below, or add a form from the compendium first.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top:12px;">Known Forms</h3>
+      {{#if knownForms.length}}
+      <div class="moves-list">
+        {{#each knownForms}}
+        <div class="move-row flexrow digi-form-row dd-item-row{{#if this.isCurrent}} move-row-active{{/if}}" data-item-id="{{this.id}}">
+          <img class="digi-form-thumb" src="{{this.img}}" alt="{{this.name}}" />
+          <div class="move-name-block flexcol">
+            <span class="move-name">{{this.name}}</span>
+            <span class="hint" style="font-size:0.8em;">{{this.stageLabel}}</span>
+          </div>
+          {{#if this.isCurrent}}<span class="tag" style="background:#27ae60;">★ Current</span>{{/if}}
+          <div class="move-row-actions">
+            {{#unless this.isCurrent}}
+            <button type="button" class="npc-form-set-current move-action-btn" data-item-id="{{this.id}}" title="Set as current form">
+              <i class="fas fa-star"></i>
+            </button>
+            {{/unless}}
+            <button type="button" class="npc-form-open move-action-btn" data-item-id="{{this.id}}" title="View form">
+              <i class="fas fa-eye"></i>
+            </button>
+            <button type="button" class="npc-form-remove move-action-btn" data-item-id="{{this.id}}" title="Remove form">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{else}}
+      <p class="no-items">No known forms yet — add one below.</p>
+      {{/if}}
+
+      <h3 class="section-header" style="margin-top:12px;">Add Form From Compendium</h3>
+      <div class="flexrow" style="gap:6px; align-items:center;">
+        <select class="npc-form-picker-select" style="flex:1;">
+          <option value="">— choose a Digimon —</option>
+          {{#each formPickerOptions}}
+          <option value="{{this.id}}">{{this.name}} ({{this.stage}})</option>
+          {{/each}}
+        </select>
+        <button type="button" class="npc-form-add-btn" style="width:auto; padding:4px 12px;">
+          <i class="fas fa-plus"></i> Add
+        </button>
+      </div>
+      <p class="hint" style="margin-top:4px;">Click the star on a known form to make it current — updates stats, portrait, token size, and signature move to match. The first form added also becomes current automatically.</p>
 
     </div>
 

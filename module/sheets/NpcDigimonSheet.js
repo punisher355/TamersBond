@@ -36,6 +36,25 @@ const BLANK_TAGS = {
  */
 export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
+  // Lightweight cache of every Digimon Form in the compendium (id/name/stage
+  // only, not full documents) for the "Add Form From Compendium" dropdown on
+  // the Digivolving tab. Loaded once per session, same pattern EncounterGenerator
+  // uses for its own (heavier) full-document cache.
+  static _formsIndexCache = null;
+
+  static async _loadFormsIndex() {
+    if (this._formsIndexCache) return this._formsIndexCache;
+    const pack = game.packs.get("digital-destiny.digimon-forms")
+      ?? game.packs.find(p => p.metadata.name === "digimon-forms");
+    if (!pack) { this._formsIndexCache = []; return this._formsIndexCache; }
+    const index = await pack.getIndex({ fields: ["system.stage"] });
+    const stageLabels = CONFIG.DIGIMON?.stageLabels ?? {};
+    this._formsIndexCache = index
+      .map(e => ({ id: e._id, name: e.name, stage: stageLabels[e.system?.stage] ?? e.system?.stage ?? "" }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+    return this._formsIndexCache;
+  }
+
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["digital-destiny", "sheet", "actor", "digimon", "npc-digimon"],
@@ -77,9 +96,56 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
       _statTotals[key]   = (s.base ?? 0) + tb + (s.invested ?? 0) + (s.conditional ?? 0);
     }
 
+    // Known digimon forms (embedded digimonForm items) + current form card —
+    // same concept as the full Digimon sheet's Digivolving tab, trimmed down
+    // to just "pick which form is active", no EXP/Hope/Digivolution-Path
+    // tracking (NPCs don't need any of that).
+    const allFormItems  = this.actor.items.filter(i => i.type === "digimonForm");
+    const currentFormId = system.currentFormId ?? "";
+    const stageOrder    = D.stageOrder ?? [];
+    context.knownForms  = allFormItems
+      .map(f => ({
+        id:         f.id,
+        name:       f.name,
+        img:        f.img,
+        stage:      f.system.stage,
+        stageLabel: D.stageLabels[f.system.stage] ?? f.system.stage,
+        isCurrent:  f.id === currentFormId
+      }))
+      .sort((a, b) => (stageOrder.indexOf(a.stage) - stageOrder.indexOf(b.stage)) || a.name.localeCompare(b.name));
+
+    context.currentFormData = null;
+    const currentFormItem = allFormItems.find(f => f.id === currentFormId);
+    if (currentFormItem) {
+      const fs = currentFormItem.system;
+      context.currentFormData = {
+        id:            currentFormItem.id,
+        name:          currentFormItem.name,
+        img:           currentFormItem.img,
+        stageLabel:    D.stageLabels[fs.stage] ?? fs.stage,
+        attribute:     fs.attribute,
+        element:       fs.element,
+        signatureMove: fs.signatureMove
+      };
+    }
+
+    context.formPickerOptions = await NpcDigimonSheet._loadFormsIndex();
+
+    // Same base/invested/total shape as the full Digimon sheet: "base" is
+    // the Digimon's own species stat (kept in sync automatically whenever a
+    // form is set/changed via the Digivolving tab — never hand-typed), and
+    // "invested" is a free-typed number the GM can set to anything, no EXP
+    // pool or cap enforced. The EXP-cost figure is purely a reference for
+    // the GM (same cost curve the full sheet and Encounter Generator use:
+    // 100 per step, cumulative) — nothing here actually gates on it.
+    let statExpTotal = 0;
     context.statList = CREST_ORDER.map(key => {
-      const base  = system.stats[key]?.base ?? 0;
-      const total = _statTotals[key];
+      const base       = system.stats[key]?.base ?? 0;
+      const invested    = system.stats[key]?.invested ?? 0;
+      const total        = _statTotals[key];
+      const investedWhole = Math.max(0, Math.floor(invested));
+      const expCost        = 100 * investedWhole * (investedWhole + 1) / 2;
+      statExpTotal += expCost;
       return {
         key,
         label:    D.statLabels[key],
@@ -87,13 +153,16 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
         rgb:      hexToRgbTriplet(D.statColors[key]),
         crestImg: D.crestImagesTamer[key],
         base,
+        invested,
         total,
-        // Only show the "effective total" hint when something besides the
-        // typed value is affecting the stat (a linked tamer, or leftover
-        // invested/conditional from a prior sheet).
-        hasExtra: total !== base
+        expCost,
+        // Only show the "effective total" hint when something besides
+        // base+invested is affecting the stat (a linked tamer, or leftover
+        // conditional from a prior sheet).
+        hasExtra: total !== (base + invested)
       };
     });
+    context.statExpTotal = statExpTotal;
 
     const sinTotal    = _statTotals.sincerity ?? 0;
     context.hpMax     = 20 + sinTotal * 4;
@@ -234,6 +303,7 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.attack-open').on('click', ev => this._onAttackOpen(ev));
     html.find('.attack-roll').on('click', ev => this._onAttackRoll(ev));
     html.find('.npc-skill-roll-btn').on('click', ev => this._onSkillRoll(ev));
+    html.find('.npc-form-open').on('click', ev => this._onOpenKnownForm(ev));
 
     html.find('.effect-add-btn').on('click',        ev => this._onEffectAdd(ev));
     html.find('.effect-remove').on('click',         ev => this._onEffectRemove(ev));
@@ -246,6 +316,152 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     html.find('.attack-create').on('click', ev => this._onAttackCreate(ev));
     html.find('.attack-delete').on('click', ev => this._onAttackDelete(ev));
+
+    html.find('.npc-form-set-current').on('click', ev => this._onSetCurrentForm(ev));
+    html.find('.npc-form-remove').on('click',      ev => this._onRemoveKnownForm(ev));
+    html.find('.npc-form-add-btn').on('click',     ev => this._onAddFormFromCompendium(ev));
+  }
+
+  // --- Digivolving tab: known forms / current form ---
+
+  async _onSetCurrentForm(ev) {
+    ev.preventDefault();
+    const itemId = ev.currentTarget.dataset.itemId;
+    const item   = this.actor.items.get(itemId);
+    if (!item || item.type !== "digimonForm") return;
+    await this._applyForm(item);
+    ui.notifications.info(`Current form set to ${item.name}.`);
+  }
+
+  // Trimmed-down version of the full Digimon sheet's _applyForm: syncs
+  // stats/attribute/element/stage, portrait and token size, and the
+  // signature move. Skips everything EXP/Hope/Digivolution-Path related —
+  // this sheet doesn't track any of that, it's just "which form is active".
+  async _applyForm(item) {
+    const s   = item.system;
+    const img = item.img;
+
+    const SIZE_SQUARES = {
+      "tiny": 0.5, "small": 1, "medium": 1,
+      "large": 2,  "huge":  3, "gargantuan": 4
+    };
+    const squares = SIZE_SQUARES[s.size?.toLowerCase()] ?? 1;
+
+    const actorUpdate = {
+      "system.currentFormId":          item.id,
+      "system.attribute":              s.attribute,
+      "system.element":                s.element,
+      "system.currentStage":           s.stage,
+      "system.stats.courage.base":     s.stats?.courage     ?? 0,
+      "system.stats.friendship.base":  s.stats?.friendship  ?? 0,
+      "system.stats.love.base":        s.stats?.love        ?? 0,
+      "system.stats.knowledge.base":   s.stats?.knowledge   ?? 0,
+      "system.stats.sincerity.base":   s.stats?.sincerity   ?? 0,
+      "system.stats.reliability.base": s.stats?.reliability ?? 0,
+      "prototypeToken.width":  squares,
+      "prototypeToken.height": squares
+    };
+    if (img) {
+      actorUpdate.img = img;
+      actorUpdate["prototypeToken.texture.src"] = img;
+    }
+    await this.actor.update(actorUpdate);
+
+    const placed = canvas.tokens?.placeables?.filter(t => t.actor?.id === this.actor.id) ?? [];
+    const tokenUpdate = { width: squares, height: squares };
+    if (img) tokenUpdate["texture.src"] = img;
+    for (const token of placed) {
+      await token.document.update(tokenUpdate);
+    }
+
+    // Swap the signature move slot to match the new form — reuse an
+    // existing pool copy (e.g. one the Encounter Generator already added
+    // while tracing this Digimon's line) if there is one, otherwise pull a
+    // fresh copy from the compendium.
+    const oldSigMoves = this.actor.items.filter(i => i.type === "move" && i.system.isSignature);
+    if (oldSigMoves.length > 0) {
+      await this.actor.deleteEmbeddedDocuments("Item", oldSigMoves.map(i => i.id));
+    }
+
+    const sigMoveName = s.signatureMove?.trim();
+    if (!sigMoveName) return;
+
+    const poolMove = this.actor.items.find(i => i.type === "move" && i.name === sigMoveName);
+    if (poolMove) {
+      await poolMove.update({ "system.isSignature": true });
+      return;
+    }
+
+    const pack = game.packs.get("digital-destiny.digimon-moves");
+    if (!pack) return;
+    const index = await pack.getIndex();
+    const entry = index.find(e => e.name === sigMoveName);
+    if (!entry) return;
+    const moveDoc  = await pack.getDocument(entry._id);
+    const baseData = moveDoc.toObject();
+    await this.actor.createEmbeddedDocuments("Item", [{
+      ...baseData,
+      system: { ...baseData.system, isSignature: true, isActive: true }
+    }]);
+  }
+
+  _onOpenKnownForm(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (item) item.sheet.render(true);
+  }
+
+  async _onRemoveKnownForm(ev) {
+    ev.preventDefault();
+    const itemId = ev.currentTarget.dataset.itemId;
+    const item   = this.actor.items.get(itemId);
+    if (!item) return;
+    const confirmed = await Dialog.confirm({
+      title:   "Remove Known Form",
+      content: `<p>Remove <strong>${item.name}</strong> from this Digimon's known forms?</p>`
+    });
+    if (!confirmed) return;
+    const wasCurrent = (this.actor.system.currentFormId === itemId);
+    await item.delete();
+    if (wasCurrent) await this.actor.update({ "system.currentFormId": "" });
+  }
+
+  // "Add Form From Compendium" — a plain single-pick dropdown over the same
+  // pool the Encounter Generator draws from, so a hand-built NPC (or one
+  // that's already been generated) can pick up more known forms one at a
+  // time without leaving this sheet. The very first form added also becomes
+  // the current form automatically, since a freshly hand-made NPC otherwise
+  // has no current form (and thus no stats-from-a-form to compare against).
+  async _onAddFormFromCompendium(ev) {
+    ev.preventDefault();
+    const root   = this.element?.[0];
+    const formId = root?.querySelector('.npc-form-picker-select')?.value;
+    if (!formId) {
+      ui.notifications.warn("Pick a Digimon form from the dropdown first.");
+      return;
+    }
+    const pack = game.packs.get("digital-destiny.digimon-forms")
+      ?? game.packs.find(p => p.metadata.name === "digimon-forms");
+    if (!pack) {
+      ui.notifications.warn("Digimon Forms compendium not found.");
+      return;
+    }
+    const doc = await pack.getDocument(formId);
+    if (!doc) {
+      ui.notifications.warn("Couldn't load that form from the compendium.");
+      return;
+    }
+    if (this.actor.items.some(i => i.type === "digimonForm" && i.name === doc.name)) {
+      ui.notifications.info(`${doc.name} is already a known form.`);
+      return;
+    }
+    const data = doc.toObject();
+    delete data._id;
+    const [created] = await this.actor.createEmbeddedDocuments("Item", [data]);
+    ui.notifications.info(`Added ${doc.name} to known forms.`);
+    if (!this.actor.system.currentFormId && created) {
+      await this._applyForm(created);
+    }
   }
 
   // --- Attack create / open / roll / delete ---
