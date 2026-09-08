@@ -2511,6 +2511,58 @@
   font-style: italic;
 }
 
+.digital-destiny .gear-charge-row {
+  align-items: center;
+  gap: 6px;
+  padding: 0 0 4px 78px; /* lines up under the slot label above it */
+}
+
+.digital-destiny .gear-charge-label {
+  flex: 0 0 auto;
+  font-size: 0.78em;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.digital-destiny .gear-charge-count {
+  flex: 0 0 auto;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #3a3a5e;
+  min-width: 40px;
+  text-align: center;
+}
+
+.digital-destiny .gear-charge-use,
+.digital-destiny .gear-charge-reset {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  min-width: 0;
+  line-height: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  opacity: 1;
+  border: 1px solid var(--digimon-accent, #2e7d32);
+  background: none;
+  color: var(--digimon-accent, #2e7d32);
+}
+.digital-destiny .gear-charge-use:hover,
+.digital-destiny .gear-charge-reset:hover {
+  background: var(--digimon-accent, #2e7d32);
+  color: #fff;
+}
+.digital-destiny .gear-charge-use:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 .digital-destiny .gear-item-row {
   align-items: center;
   gap: 4px;
@@ -4600,4 +4652,289 @@
   border-left-color: #b0a898;
   justify-content: center;
   min-height: 64px;
+}
+
+
+/* ================================================
+   Party sheet
+   ================================================ */
+
+.digital-destiny.party.sheet .window-content {
+  background: var(--digimon-bg, #f0ece4);
+}
+
+.digital-destiny.party .section-header {
+  color: var(--digimon-accent, #2e7d32);
+  border-bottom: 2px solid var(--digimon-accent, #2e7d32);
+}
+
+.digital-destiny .party-rest-btn {
+  background: var(--digimon-accent, #2e7d32);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+.digital-destiny .party-rest-btn:hover {
+  filter: brightness(1.1);
+}
+
+.digital-destiny .party-member-row:hover,
+.digital-destiny .party-inv-row:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.digital-destiny .party-member-open,
+.digital-destiny .party-item-open {
+  color: var(--digimon-accent, #2e7d32);
+}
+.digital-destiny .party-member-open:hover,
+.digital-destiny .party-item-open:hover {
+  text-decoration: underline;
+}
+
+.digital-destiny .party-member-remove,
+.digital-destiny .party-item-delete {
+  background: none;
+  border: 1px solid #c0392b;
+  color: #c0392b;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px 8px;
+  flex-shrink: 0;
+}
+.digital-destiny .party-member-remove:hover,
+.digital-destiny .party-item-delete:hover {
+  background: #c0392b;
+  color: #fff;
+}
+
+.digital-destiny .party-item-take {
+  background: none;
+  border: 1px solid var(--digimon-accent, #2e7d32);
+  color: var(--digimon-accent, #2e7d32);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px 8px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.digital-destiny .party-item-take:hover {
+  background: var(--digimon-accent, #2e7d32);
+  color: #fff;
+}
+
+.digital-destiny .party-add-member-btn {
+  background: var(--digimon-accent, #2e7d32);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+
+.digital-destiny .party-qty-increase,
+.digital-destiny .party-qty-decrease {
+  width: 22px;
+  height: 22px;
+  line-height: 1;
+  border: 1px solid #b0a898;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+/* ================================================
+   Party folders pinned in the Actors sidebar
+   ================================================ */
+
+#actors .parties {
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #2e7d32;
+}
+
+#actors .parties .folder-header {
+  background: rgba(46, 125, 50, 0.12);
+}
+
+#actors .parties .folder-header .folder-name {
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+#actors .parties .folder-header .inline-control {
+  cursor: pointer;
+  opacity: 0.75;
+}
+#actors .parties .folder-header .inline-control:hover {
+  opacity: 1;
+}
+
+#actors .parties .subdirectory .actor-level {
+  opacity: 0.7;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+
+#actors .parties .subdirectory li.blank {
+  opacity: 0.6;
+  font-style: italic;
+  padding: 2px 8px;
+}
+
+
+/* ================================================
+   Party sheet — Meal Status column
+   ================================================ */
+
+.digital-destiny .party-members-columns {
+  align-items: flex-start;
+}
+
+.digital-destiny .party-roster-col,
+.digital-destiny .party-meal-col {
+  min-width: 0;
+}
+
+.digital-destiny .party-meal-row {
+  flex-wrap: nowrap;
+}
+
+.digital-destiny .party-meal-name {
+  font-weight: 700;
+  flex: 0 0 auto;
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.digital-destiny .party-meal-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.digital-destiny .party-meal-fed {
+  background: rgba(212, 160, 23, 0.18);
+  color: #8a6408;
+}
+
+.digital-destiny .party-meal-hungry {
+  background: rgba(192, 57, 43, 0.15);
+  color: #c0392b;
+}
+
+.digital-destiny .party-meal-none {
+  background: rgba(46, 125, 50, 0.12);
+  color: #2e7d32;
+  flex: 1;
+  justify-content: center;
+}
+
+/* ================================================
+   Party sheet — Meal Status: fed item's effect + actions,
+   all inline on the same row as everything else.
+   ================================================ */
+
+.digital-destiny .party-meal-food-effect {
+  font-size: 0.8em;
+  font-style: italic;
+  color: #6b6152;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.digital-destiny .party-meal-chat-btn,
+.digital-destiny .party-meal-clear-btn {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  min-width: 0;
+  line-height: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85em;
+}
+
+.digital-destiny .party-meal-chat-btn {
+  border: none;
+  background: var(--digimon-accent, #d4a017);
+  color: #fff;
+}
+
+.digital-destiny .party-meal-clear-btn {
+  background: none;
+  border: 1px solid #c0392b;
+  color: #c0392b;
+}
+.digital-destiny .party-meal-clear-btn:hover {
+  background: #c0392b;
+  color: #fff;
+}
+
+
+/* ================================================
+   Party sheet — fixed-size avatars everywhere (Roster + Meal Status),
+   regardless of each actor's own source image dimensions/aspect ratio.
+   ================================================ */
+
+.digital-destiny .party-avatar {
+  /* Foundry's core .flexrow/.flexcol > * rule sets flex: 1 1 0% on every
+     direct child, which makes flex-basis win over width and lets the box
+     stretch to fill whatever space is left in that particular row. Setting
+     the full flex shorthand here (not just width/flex-shrink) pins it to a
+     true fixed 32x32 box no matter how many siblings share the row. */
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.digital-destiny .party-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.digital-destiny .party-member-rest {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  min-width: 0;
+  line-height: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85em;
+  border: none;
+  background: var(--digimon-accent, #2e7d32);
+  color: #fff;
+}
+.digital-destiny .party-member-rest:hover {
+  filter: brightness(1.1);
 }

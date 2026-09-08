@@ -122,16 +122,22 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
       };
     });
 
-    // Attacks — the only combat-item type shown here (no move-pool/signature
-    // slot management; NPCs don't need the player pacing system).
+    // Attacks — both real "attack" items AND "move" items (the player
+    // sheet's Move Pool / Signature Move system) show up here, flattened
+    // into one always-usable list. NPCs don't need move-pool/signature slot
+    // management, but a Digimon that was built or imported on the default
+    // player sheet stores its abilities as "move" items — without this,
+    // switching that actor over to the NPC sheet made them look like they
+    // had no attacks at all, even though the abilities were still there.
     context.attacks = this.actor.items
-      .filter(i => i.type === "attack")
+      .filter(i => i.type === "attack" || i.type === "move")
       .map(a => ({
         id:         a.id,
         name:       a.name,
         img:        a.img,
         system:     a.system,
-        tagsString: computeTagString(a.system.tags)
+        tagsString: computeTagString(a.system.tags),
+        isMove:     a.type === "move"
       }));
 
     context.effectItems = this.actor.items.filter(i => i.type === "effect");

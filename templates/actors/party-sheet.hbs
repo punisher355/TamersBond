@@ -1,0 +1,158 @@
+<form class="{{cssClass}} flexcol" autocomplete="off"
+      style="--digimon-accent: {{system.sheetColor}}; --digimon-bg: {{system.sheetBgColor}}">
+
+  {{!-- Header --}}
+  <header class="sheet-header flexcol">
+    <input class="charname" name="name" type="text" value="{{actor.name}}" placeholder="Party Name" />
+    <div class="header-panels flexrow">
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+      <div class="header-panel flexcol" style="justify-content:center;">
+        <button type="button" class="party-rest-btn" style="font-size:1.1em; padding:10px 18px; font-weight:700;">
+          <i class="fas fa-campground"></i> Rest the Party
+        </button>
+        <span class="hint" style="margin-top:4px;">Restores full HP &amp; Hope, clears Temp HP, advances Default Stage (capped at Max), then prompts to feed everyone.</span>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Tabs --}}
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="members">Members</a>
+    <a class="item" data-tab="inventory">Inventory</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    {{!-- Members tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="members">
+
+      <h3 class="section-header">Add Member</h3>
+      <div class="dd-det-row" style="align-items:center; gap:8px; margin-bottom:12px;">
+        <select class="party-add-select" style="flex:1;">
+          {{#each addChoices}}
+          <option value="{{@key}}">{{this}}</option>
+          {{/each}}
+        </select>
+        <button type="button" class="party-add-member-btn"><i class="fas fa-user-plus"></i> Add</button>
+      </div>
+      <p class="hint" style="margin:-6px 0 12px;">You can also drag a Tamer, Digimon, or Spirit Tamer actor from the sidebar directly onto this sheet.</p>
+
+      <div class="party-members-columns flexrow" style="gap:16px; align-items:flex-start;">
+
+        {{!-- Left half: roster --}}
+        <div class="party-roster-col flexcol" style="flex:1; min-width:0;">
+          <h3 class="section-header">Roster ({{members.length}})</h3>
+          {{#unless members.length}}
+          <p class="hint">No members yet — add one above or drag an actor onto this sheet.</p>
+          {{/unless}}
+
+          {{#each members}}
+          <div class="dd-item-row flexrow party-member-row" data-actor-id="{{this.id}}" style="align-items:center; gap:10px; padding:6px 4px; border-bottom:1px solid rgba(0,0,0,0.08);">
+            <div class="party-avatar"><img src="{{this.img}}" alt="" /></div>
+            <div class="flexcol" style="flex:1; min-width:0;">
+              <span class="party-member-open" data-actor-id="{{this.id}}" style="font-weight:700; cursor:pointer;" title="Open sheet">{{this.name}}</span>
+              <span class="hint">{{this.typeLabel}}</span>
+            </div>
+            <div class="flexcol" style="min-width:70px; text-align:center;">
+              <span class="hint">HP</span>
+              <span>{{this.hp.value}} / {{this.hp.max}}</span>
+            </div>
+            {{#if this.hasHope}}
+            <div class="flexcol" style="min-width:70px; text-align:center;">
+              <span class="hint">Hope</span>
+              <span>{{this.hope.current}} / {{this.hope.max}}</span>
+            </div>
+            {{/if}}
+            {{#if this.hasStage}}
+            <div class="flexcol" style="min-width:90px; text-align:center;">
+              <span class="hint">Stage</span>
+              <span>{{this.stageLabel}}{{#if this.atMaxStage}} (Max){{/if}}</span>
+            </div>
+            {{/if}}
+            <button type="button" class="party-member-rest" data-actor-id="{{this.id}}" title="Rest this character only">
+              <i class="fas fa-campground"></i>
+            </button>
+            <button type="button" class="party-member-remove" data-actor-id="{{this.id}}" title="Remove from party">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          {{/each}}
+        </div>
+
+        {{!-- Right half: what every party member — Tamers, Spirit Tamers, and
+             Digimon alike — got out of the last meal --}}
+        <div class="party-meal-col flexcol" style="flex:1; min-width:0;">
+          <h3 class="section-header">Meal Status</h3>
+          <p class="hint" style="margin:-4px 0 10px;">Fed shows their banked bonus. A skipped meal shows the penalty: Hope Pool halved/quartered/1/8 for Tamers &amp; Spirit Tamers, Hungry/Starving/Famished for Digimon — until they're fed again.</p>
+
+          {{#unless mealStatus.length}}
+          <p class="hint">No party members yet.</p>
+          {{/unless}}
+
+          {{#each mealStatus}}
+          <div class="dd-item-row party-meal-row flexrow" data-actor-id="{{this.id}}" style="align-items:center; gap:8px; padding:6px 4px; border-bottom:1px solid rgba(0,0,0,0.08);">
+            <div class="party-avatar"><img src="{{this.img}}" alt="" /></div>
+            <span class="party-meal-name" title="{{this.name}}">{{this.name}}</span>
+            {{#if this.bankedFood}}
+            <div class="party-meal-status party-meal-fed">
+              <i class="fas fa-drumstick-bite"></i> {{this.bankedFood.itemName}}
+            </div>
+            {{#if this.bankedFood.effect}}
+            <span class="party-meal-food-effect" title="{{this.bankedFood.effect}}">{{this.bankedFood.effect}}</span>
+            {{/if}}
+            <button type="button" class="party-meal-chat-btn" data-actor-id="{{this.id}}" title="Post this bonus to chat">
+              <i class="fas fa-comment"></i>
+            </button>
+            <button type="button" class="party-meal-clear-btn" data-actor-id="{{this.id}}" title="Clear this bonus">
+              <i class="fas fa-times"></i>
+            </button>
+            {{else if this.hopePenalty.tierLabel}}
+            <div class="party-meal-status party-meal-hungry" title="Hope Pool: {{this.hopePenalty.effectivePool}} / {{this.hopePenalty.pool}} — {{this.hopePenalty.missedMeals}} missed in a row">
+              <i class="fas fa-exclamation-triangle"></i> {{this.hopePenalty.tierLabel}}
+            </div>
+            {{else if this.hungerPenalty.tierLabel}}
+            <div class="party-meal-status party-meal-hungry" title="{{this.hungerPenalty.missedMeals}} missed in a row">
+              <i class="fas fa-exclamation-triangle"></i> {{this.hungerPenalty.tierLabel}}
+            </div>
+            {{else}}
+            <div class="party-meal-status party-meal-none">
+              <i class="fas fa-check"></i> Fed &amp; Rested
+            </div>
+            {{/if}}
+          </div>
+          {{/each}}
+        </div>
+
+      </div>
+    </div>
+
+    {{!-- Inventory tab --}}
+    <div class="tab flexcol" data-group="primary" data-tab="inventory">
+      <h3 class="section-header">Shared Inventory ({{inventory.length}})</h3>
+      <p class="hint" style="margin:-4px 0 10px;">Items dropped here belong to the party. Use Take to move one onto a Tamer or Spirit Tamer's own sheet.</p>
+
+      {{#unless inventory.length}}
+      <p class="hint">No shared items yet — drag gear onto this sheet to add it to the party pool.</p>
+      {{/unless}}
+
+      {{#each inventory}}
+      <div class="dd-item-row flexrow party-inv-row" data-item-id="{{this.id}}" draggable="true" style="align-items:center; gap:10px; padding:6px 4px; border-bottom:1px solid rgba(0,0,0,0.08);">
+        <img src="{{this.img}}" alt="" style="width:32px; height:32px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
+        <span class="party-item-open" data-item-id="{{this.id}}" style="flex:1; cursor:pointer; font-weight:600;" title="Open item">{{this.name}}</span>
+        <div class="flexrow" style="align-items:center; gap:4px;">
+          <button type="button" class="party-qty-decrease" data-item-id="{{this.id}}">−</button>
+          <span style="min-width:20px; text-align:center;">{{this.system.quantity}}</span>
+          <button type="button" class="party-qty-increase" data-item-id="{{this.id}}">+</button>
+        </div>
+        <button type="button" class="party-item-take" data-item-id="{{this.id}}" title="Give to a Tamer or Spirit Tamer">
+          <i class="fas fa-hand-holding"></i> Take
+        </button>
+        <button type="button" class="party-item-delete" data-item-id="{{this.id}}" title="Remove from party inventory">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+      {{/each}}
+    </div>
+
+  </section>
+</form>

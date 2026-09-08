@@ -12,6 +12,20 @@ function crestFields(extra = {}) {
   };
 }
 
+// A single banked one-shot food bonus — set when a party Rest feeds this
+// actor, cleared when the player uses/consumes it from their own sheet. Lets
+// "once, as a Free Action" food effects survive from the rest itself to
+// whatever later moment the player actually wants to spend it, instead of
+// being forgotten the instant the rest chat card scrolls away.
+export function bankedFoodField() {
+  return new f.SchemaField({
+    itemName: new f.StringField({ initial: "" }),
+    itemImg:  new f.StringField({ initial: "" }),
+    effect:   new f.StringField({ initial: "" }),
+    fedAt:    new f.NumberField({ initial: 0 })
+  });
+}
+
 export function statusModsField() {
   return new f.SchemaField({
     hitBonus:       new f.NumberField({ initial: 0, integer: true }),
@@ -75,7 +89,11 @@ export class TamerData extends TypeDataModel {
         reliability: new f.SchemaField(crestFields()),
         hope:        new f.SchemaField(crestFields({
           current: new f.NumberField({ initial: 0, integer: true, min: 0 }),
-          perTurn: new f.NumberField({ initial: 0, integer: true, min: 0 })
+          perTurn: new f.NumberField({ initial: 0, integer: true, min: 0 }),
+          // Consecutive rests/meals missed in a row — 014_Resting_and_Encounters.md:
+          // 1 halves the Hope Pool, 2 quarters it, 3 drops it to one eighth.
+          // Reset to 0 the moment this Tamer/Spirit Tamer actually gets fed.
+          missedMeals: new f.NumberField({ initial: 0, integer: true, min: 0 })
         }))
       }),
       skills: skillsSchema(),
@@ -85,6 +103,7 @@ export class TamerData extends TypeDataModel {
         temp:  new f.NumberField({ initial: 0,  integer: true })
       }),
       statusMods:   statusModsField(),
+      bankedFood:   bankedFoodField(),
       class:        new f.StringField({ initial: "" }),
       sheetColor:   new f.StringField({ initial: "#4a90d9" }),
       sheetBgColor: new f.StringField({ initial: "#f0ece4" }),
@@ -221,6 +240,13 @@ export class DigimonData extends TypeDataModel {
         temp:  new f.NumberField({ initial: 0,  integer: true })
       }),
       statusMods: statusModsField(),
+      bankedFood: bankedFoodField(),
+      // Consecutive missed meals for this Digimon specifically — Digimon have
+      // no Hope Pool, so this just drives its own "Hungry/Starving/Famished"
+      // tag on the Party sheet rather than a Hope Pool reduction.
+      hunger: new f.SchemaField({
+        missedMeals: new f.NumberField({ initial: 0, integer: true, min: 0 })
+      }),
       downTrack: new f.SchemaField({
         pips: new f.NumberField({ initial: 0, integer: true, min: 0 })
       }),
@@ -290,3 +316,20 @@ export class DnaDigimonData extends TypeDataModel {
   }
 }
 
+// ── Party ──────────────────────────────────────────────────────────────────
+// A freeform roster of any mix of Tamers, Digimon, Spirit Tamers, or NPC
+// Digimon (members are just actor IDs — no forced pairing), plus a real
+// shared item pool (its own embedded Items, like any other actor) that
+// members can Take from. See PartySheet.js for the Rest/Feed automation.
+
+export class PartyData extends TypeDataModel {
+  static defineSchema() {
+    return {
+      biography:    new f.HTMLField({ initial: "" }),
+      memberIds:    new f.ArrayField(new f.StringField()),
+      sheetColor:   new f.StringField({ initial: "#2e7d32" }),
+      sheetBgColor: new f.StringField({ initial: "#f0ece4" }),
+      lastRestAt:   new f.NumberField({ initial: 0 })
+    };
+  }
+}

@@ -436,6 +436,7 @@
     {{!-- Items tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="items">
 
+
       <div class="items-tab-toolbar">
         <button type="button" class="open-item-lookup">
           <i class="fas fa-shopping-bag"></i> Browse &amp; Add Items
@@ -468,6 +469,14 @@
           <span class="gear-slot-empty">— empty —</span>
           {{/if}}
         </div>
+        {{#if this.equipped.system.charges.max}}
+        <div class="gear-charge-row flexrow">
+          <span class="gear-charge-label">Uses</span>
+          <button type="button" class="gear-charge-use gear-action-btn" data-item-id="{{this.equipped.id}}" title="Use one charge" {{#unless this.equipped.system.charges.current}}disabled{{/unless}}><i class="fas fa-bolt"></i></button>
+          <span class="gear-charge-count">{{this.equipped.system.charges.current}} / {{this.equipped.system.charges.max}}</span>
+          <button type="button" class="gear-charge-reset gear-action-btn" data-item-id="{{this.equipped.id}}" title="Reset to full"><i class="fas fa-rotate-right"></i></button>
+        </div>
+        {{/if}}
         {{#each this.all}}
         {{#unless this.system.isEquipped}}
         <div class="gear-item-row flexrow gear-unequipped dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">

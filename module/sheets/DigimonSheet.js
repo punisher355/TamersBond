@@ -1,4 +1,4 @@
-import { computeTagString, hexToRgbTriplet }    from "../config.js";
+import { computeTagString, hexToRgbTriplet, computeAltFormExpCost } from "../config.js";
 import { getActorStatTotals, performAttackRoll } from "../combat.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
@@ -67,15 +67,37 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     const tamer = system.tamerLink ? game.actors?.get(system.tamerLink) : null;
     context.linkedTamer = tamer ?? null;
 
-    // EXP: compute available directly from stored fields (not from derived system.exp.available)
-    const expTotal = system.exp?.total ?? 0;
-    const expSpent = system.exp?.spent ?? 0;
+    // Known digimon forms (embedded digimonForm items)
+    const allFormItems  = this.actor.items.filter(i => i.type === "digimonForm");
+    const currentFormId = system.currentFormId ?? "";
+    context.knownForms  = allFormItems.map(f => ({
+      id:         f.id,
+      name:       f.name,
+      img:        f.img,
+      system:     f.system,
+      isCurrent:  f.id === currentFormId,
+      isFreeForm: f.system.isFreeForm ?? false,
+      stageLabel: D.stageLabels[f.system.stage] ?? f.system.stage
+    }));
+    // Alternate Form EXP — see computeAltFormExpCost() in config.js. Shared
+    // with _onStatIncrease() below so the displayed cost and the actual
+    // enforcement never drift apart.
+    context.altFormSummary = computeAltFormExpCost(this.actor);
+
+    // EXP: compute available directly from stored fields (not from derived
+    // system.exp.available), minus whatever the Alternate Form EXP tracker
+    // above says is currently owed — that cost actually comes out of the
+    // pool now, it's not just a reference number.
+    const expTotal    = system.exp?.total ?? 0;
+    const expSpent    = system.exp?.spent ?? 0;
+    const altFormCost = context.altFormSummary.totalExp;
     context.digiExp = {
-      total:     expTotal,
-      spent:     expSpent,
-      available: expTotal - expSpent
+      total:      expTotal,
+      spent:      expSpent,
+      altFormCost,
+      available:  expTotal - expSpent - altFormCost
     };
-    const availableExp = expTotal - expSpent;
+    const availableExp = expTotal - expSpent - altFormCost;
 
     // Build stat totals directly from stored fields + tamer crest ranks
     // (derived fields set in prepareDerivedData may not survive the Foundry v11 data pipeline)
@@ -207,51 +229,6 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       };
     });
 
-    // Known digimon forms (embedded digimonForm items)
-    const allFormItems  = this.actor.items.filter(i => i.type === "digimonForm");
-    const currentFormId = system.currentFormId ?? "";
-    context.knownForms  = allFormItems.map(f => ({
-      id:         f.id,
-      name:       f.name,
-      img:        f.img,
-      system:     f.system,
-      isCurrent:  f.id === currentFormId,
-      isFreeForm: f.system.isFreeForm ?? false,
-      stageLabel: D.stageLabels[f.system.stage] ?? f.system.stage
-    }));
-    // Alternate-form EXP tracker — first form at a stage is free, each
-    // additional known form at that stage costs D.altFormCosts[stage] EXP
-    // (see 009_Digimon_Crest_Stats.md). Computed here so the sheet always
-    // matches the rulebook instead of relying on manual bookkeeping.
-    context.altFormSummary = (() => {
-      const rows = [];
-      let totalForms = 0;
-      let totalExp   = 0;
-      for (const stage of Object.keys(D.altFormCosts)) {
-        const stageForms = allFormItems.filter(f => f.system.stage === stage);
-        const count = stageForms.length;
-        if (!count) continue;
-        // Forms marked Free (GM ruling exception) never count toward cost.
-        // Among the rest, the normal rule still applies: the first one is
-        // free, every additional one costs.
-        const payingForms = stageForms.filter(f => !(f.system.isFreeForm ?? false));
-        const freeCount   = count - payingForms.length;
-        const extraForms  = Math.max(0, payingForms.length - 1);
-        const expCost     = extraForms * D.altFormCosts[stage];
-        totalForms += count;
-        totalExp   += expCost;
-        rows.push({
-          stage,
-          label:        D.stageLabels[stage] ?? stage,
-          count,
-          freeCount,
-          extraForms,
-          costPerForm:  D.altFormCosts[stage],
-          expCost
-        });
-      }
-      return { rows, totalForms, totalExp };
-    })();
 
     context.currentFormData = null;
     const currentFormItem = allFormItems.find(f => f.id === currentFormId);
@@ -327,7 +304,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     }
     const sinTotal = statTotals.sincerity ?? 0;
     const hpMax    = 20 + sinTotal * 4;
-    const expAvail = (sys.exp?.total ?? 0) - (sys.exp?.spent ?? 0);
+    const expAvail = (sys.exp?.total ?? 0) - (sys.exp?.spent ?? 0) - computeAltFormExpCost(this.actor).totalExp;
 
     const statRows = CREST_ORDER.map(key => {
       const s = sys.stats[key] ?? {};
@@ -465,6 +442,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
+
     // Recolor fix: --digimon-accent/--digimon-bg are set inline on the <form>,
     // but .window-content (an ANCESTOR of the form) is what actually paints the
     // sheet's background — CSS custom properties never inherit upward, so they
@@ -541,10 +519,11 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     const currentInvested = system.stats[stat]?.invested ?? 0;
     const cost            = (currentInvested + 1) * 100;
-    const available       = (system.exp?.total ?? 0) - (system.exp?.spent ?? 0);
+    const altFormCost     = computeAltFormExpCost(this.actor).totalExp;
+    const available       = (system.exp?.total ?? 0) - (system.exp?.spent ?? 0) - altFormCost;
 
     if (available < cost) {
-      ui.notifications.warn(`Not enough EXP — need ${cost}, have ${available}.`);
+      ui.notifications.warn(`Not enough EXP — need ${cost}, have ${available}${altFormCost ? ` (${altFormCost} reserved for Alternate Form EXP)` : ""}.`);
       return;
     }
 
@@ -753,6 +732,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (item) item.sheet.render(true);
   }
+
 
   async _onDrop(event) {
     let data;
@@ -1099,9 +1079,24 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
     const total     = roll.total;
     const isClean   = total > threshold;
 
+    // HP automation: Max HP isn't auto-derived on this actor (it's a plain
+    // stored field), so the Digivolve action is what keeps it in sync now —
+    // recompute it off the new stage's Sincerity total, then carry the SAME
+    // difference forward onto current HP. Full HP stays full; someone hurt
+    // keeps the same deficit instead of being topped off or left behind at
+    // the old number. De-digivolving and swapping to a different known form
+    // at the same stage don't touch this — only this Digivolve action does.
+    const oldHpMax   = this.actor.system.hp?.max ?? 0;
+    const oldHpValue = this.actor.system.hp?.value ?? 0;
+
     // Apply the chosen form (even if it goes dark — digivolution still occurs)
     const chosenForm = this.actor.items.get(result.formId);
     if (chosenForm) await this._applyForm(chosenForm, { pathKeyOverride: pathKey });
+
+    const newSinTotal = getActorStatTotals(this.actor)?.sincerity ?? 0;
+    const newHpMax     = 20 + newSinTotal * 4;
+    const newHpValue   = Math.max(0, Math.min(newHpMax, oldHpValue + (newHpMax - oldHpMax)));
+    await this.actor.update({ "system.hp.max": newHpMax, "system.hp.value": newHpValue });
 
     // Record the actual Hope paid for this stage on the Digivolution Path
     // tracker — this is now the ONLY place Hope-per-stage is recorded; Hope

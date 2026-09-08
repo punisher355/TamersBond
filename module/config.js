@@ -372,6 +372,41 @@ export function getActorHopePerTurn(actor) {
 // Invested of the two linked partners, plus a manual Conditional you set on
 // the DNA sheet itself. The two partners' own full totals are never added
 // together, and the DNA form never uses either partner's own Species Base.
+// Alternate Form EXP — first known form at a stage is free, each additional
+// known form at that stage costs DIGIMON.altFormCosts[stage] EXP, except a
+// form the player has marked Free (a GM-ruled exception — see the "Free"
+// toggle on the Known Forms list). Shared by DigimonSheet.js and
+// SpiritTamerSheet.js so the number shown on the sheet and the number
+// actually enforced when spending EXP on stats always agree.
+export function computeAltFormExpCost(actor) {
+  const D = CONFIG.DIGIMON;
+  const allFormItems = actor?.items?.filter(i => i.type === "digimonForm") ?? [];
+  const rows = [];
+  let totalForms = 0;
+  let totalExp   = 0;
+  for (const stage of Object.keys(D.altFormCosts)) {
+    const stageForms = allFormItems.filter(f => f.system.stage === stage);
+    const count = stageForms.length;
+    if (!count) continue;
+    const payingForms = stageForms.filter(f => !(f.system.isFreeForm ?? false));
+    const freeCount   = count - payingForms.length;
+    const extraForms  = Math.max(0, payingForms.length - 1);
+    const expCost     = extraForms * D.altFormCosts[stage];
+    totalForms += count;
+    totalExp   += expCost;
+    rows.push({
+      stage,
+      label:        D.stageLabels[stage] ?? stage,
+      count,
+      freeCount,
+      extraForms,
+      costPerForm:  D.altFormCosts[stage],
+      expCost
+    });
+  }
+  return { rows, totalForms, totalExp };
+}
+
 export function computeDnaStatBreakdown(actor) {
   const system   = actor?.system ?? {};
   const formItem = system.currentFormId ? actor.items?.get(system.currentFormId) : null;
@@ -454,4 +489,54 @@ export function computeTagString(tags) {
   if (tags.sleep)     p.push("[SLEEP]");
   if (tags.fragment)  p.push(`[FRAGMENT ${tags.fragmentX ?? 1}]`);
   return p.join(" ");
+}
+
+// --- Party membership -------------------------------------------------------
+// Shared by the Party actor sheet (Members tab) and the pinned Party "folder"
+// in the Actors sidebar, so both add/remove the same way and never drift.
+
+export async function addPartyMember(party, actorId) {
+  if (!party || !actorId) return;
+  const memberIds = party.system?.memberIds ?? [];
+  if (memberIds.includes(actorId)) return;
+  await party.update({ "system.memberIds": [...memberIds, actorId] });
+
+  // The party folder is now this actor's home — pull it out of any real
+  // Foundry folder it was sitting in so it isn't listed in two places.
+  const member = game.actors?.get(actorId);
+  if (member?.folder) await member.update({ folder: null });
+}
+
+export async function removePartyMember(party, actorId) {
+  if (!party || !actorId) return;
+  const memberIds = (party.system?.memberIds ?? []).filter(id => id !== actorId);
+  await party.update({ "system.memberIds": memberIds });
+}
+
+// Missed Rests/Meals penalty on a Tamer's Hope Pool (014_Resting_and_Encounters.md):
+// 1 missed = halved, 2 = quartered, 3 = one eighth, continuing to compound
+// beyond that. Only meaningful for actors with a Hope Pool (Tamer/Spirit Tamer).
+export function computeHopePenalty(actor) {
+  const hope = actor?.system?.crests?.hope;
+  const missedMeals = hope?.missedMeals ?? 0;
+  const pool = hope?.pool ?? 0;
+  const effectivePool = missedMeals > 0 ? Math.floor(pool / Math.pow(2, missedMeals)) : pool;
+  const tierLabels = {
+    1: "Hungry — Hope Pool Halved",
+    2: "Starving — Hope Pool Quartered",
+    3: "Desperate — Hope Pool at 1/8"
+  };
+  const tierLabel = missedMeals > 0
+    ? (tierLabels[missedMeals] ?? `Desperate — Hope Pool at 1/${Math.pow(2, missedMeals)}`)
+    : null;
+  return { missedMeals, pool, effectivePool, tierLabel };
+}
+
+// A Digimon has no Hope Pool, so a missed meal just tags it as increasingly
+// hungry rather than reducing anything numeric — narrative/UI signal only.
+export function computeDigimonHungerLabel(actor) {
+  const missedMeals = actor?.system?.hunger?.missedMeals ?? 0;
+  const tierLabels = { 1: "Hungry", 2: "Starving", 3: "Famished" };
+  const tierLabel = missedMeals > 0 ? (tierLabels[missedMeals] ?? "Famished") : null;
+  return { missedMeals, tierLabel };
 }

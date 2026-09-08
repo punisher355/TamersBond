@@ -1,5 +1,5 @@
 import { TamerSheet }        from "./TamerSheet.js";
-import { computeTagString, hexToRgbTriplet, getActorHopePerTurn } from "../config.js";
+import { computeTagString, hexToRgbTriplet, getActorHopePerTurn, computeAltFormExpCost } from "../config.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -38,10 +38,31 @@ export class SpiritTamerSheet extends TamerSheet {
     const system  = context.system;
     const D       = CONFIG.DIGIMON;
 
-    // --- Digimon EXP ---
+    const allFormItems  = this.actor.items.filter(i => i.type === "digimonForm");
+    const currentFormId = system.currentFormId ?? "";
+
+    context.knownForms = allFormItems.map(f => ({
+      id:         f.id,
+      name:       f.name,
+      img:        f.img,
+      system:     f.system,
+      isCurrent:  f.id === currentFormId,
+      isFreeForm: f.system.isFreeForm ?? false,
+      stageLabel: D.stageLabels[f.system.stage] ?? f.system.stage
+    }));
+
+    // Alternate Form EXP — see computeAltFormExpCost() in config.js. Shared
+    // with _onDigiStatIncrease() below so the displayed cost and the actual
+    // enforcement never drift apart.
+    context.altFormSummary = computeAltFormExpCost(this.actor);
+
+    // --- Digimon EXP --- (Alternate Form EXP above actually comes out of
+    // this pool now, same as the regular Digimon sheet — not just a
+    // reference number.)
     const digiExp      = system.digiExp ?? { total: 0, spent: 0, available: 0 };
-    const digiAvailable = digiExp.available ?? ((digiExp.total ?? 0) - (digiExp.spent ?? 0));
-    context.digiExp = { total: digiExp.total, spent: digiExp.spent, available: digiAvailable };
+    const altFormCost  = context.altFormSummary.totalExp;
+    const digiAvailable = ((digiExp.total ?? 0) - (digiExp.spent ?? 0)) - altFormCost;
+    context.digiExp = { total: digiExp.total, spent: digiExp.spent, altFormCost, available: digiAvailable };
 
     // --- Digimon HP (max derived in prepareDerivedData) ---
     context.digiHpMax     = system.digiHp?.max ?? 10;
@@ -71,8 +92,6 @@ export class SpiritTamerSheet extends TamerSheet {
     });
 
     // --- Digivolution tab ---
-    const allFormItems  = this.actor.items.filter(i => i.type === "digimonForm");
-    const currentFormId = system.currentFormId ?? "";
 
     // Digivolution Path tracker — Tamer Form always shows the character's own
     // portrait (there's no stored "form" for it), the rest fill in from the
@@ -98,49 +117,6 @@ export class SpiritTamerSheet extends TamerSheet {
       })
     ];
 
-    context.knownForms = allFormItems.map(f => ({
-      id:         f.id,
-      name:       f.name,
-      img:        f.img,
-      system:     f.system,
-      isCurrent:  f.id === currentFormId,
-      isFreeForm: f.system.isFreeForm ?? false,
-      stageLabel: D.stageLabels[f.system.stage] ?? f.system.stage
-    }));
-
-    // Alternate-form EXP tracker — first form at a stage is free, each
-    // additional known form at that stage costs D.altFormCosts[stage] EXP
-    // (see 009_Digimon_Crest_Stats.md). Computed here so the sheet always
-    // matches the rulebook instead of relying on manual bookkeeping.
-    context.altFormSummary = (() => {
-      const rows = [];
-      let totalForms = 0;
-      let totalExp   = 0;
-      for (const stage of Object.keys(D.altFormCosts)) {
-        const stageForms = allFormItems.filter(f => f.system.stage === stage);
-        const count = stageForms.length;
-        if (!count) continue;
-        // Forms marked Free (GM ruling exception) never count toward cost.
-        // Among the rest, the normal rule still applies: the first one is
-        // free, every additional one costs.
-        const payingForms = stageForms.filter(f => !(f.system.isFreeForm ?? false));
-        const freeCount   = count - payingForms.length;
-        const extraForms  = Math.max(0, payingForms.length - 1);
-        const expCost     = extraForms * D.altFormCosts[stage];
-        totalForms += count;
-        totalExp   += expCost;
-        rows.push({
-          stage,
-          label:        D.stageLabels[stage] ?? stage,
-          count,
-          freeCount,
-          extraForms,
-          costPerForm:  D.altFormCosts[stage],
-          expCost
-        });
-      }
-      return { rows, totalForms, totalExp };
-    })();
 
     context.currentFormData = null;
     const currentFormItem = allFormItems.find(f => f.id === currentFormId);
@@ -228,6 +204,7 @@ export class SpiritTamerSheet extends TamerSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
+
     html.find('.form-set-current').on('click', ev => this._onSetCurrentForm(ev));
     html.find('.form-remove').on('click',      ev => this._onRemoveKnownForm(ev));
     html.find('.form-open').on('click',        ev => this._onOpenForm(ev));
@@ -246,6 +223,7 @@ export class SpiritTamerSheet extends TamerSheet {
     html.find('.move-deactivate').on('click',     ev => this._onMoveDeactivate(ev));
     html.find('.move-delete').on('click',         ev => this._onMoveDelete(ev));
   }
+
 
   async _onDrop(event) {
     let data;
@@ -444,7 +422,7 @@ export class SpiritTamerSheet extends TamerSheet {
     const D      = CONFIG.DIGIMON;
     const hope      = sys.crests.hope ?? {};
     const expAvail  = (sys.exp?.total ?? 0) - (sys.exp?.spent ?? 0);
-    const digiAvail = (sys.digiExp?.total ?? 0) - (sys.digiExp?.spent ?? 0);
+    const digiAvail = (sys.digiExp?.total ?? 0) - (sys.digiExp?.spent ?? 0) - computeAltFormExpCost(this.actor).totalExp;
     const isTF      = sys.isTamerForm ?? true;
     const _sinc = sys.crests.sincerity ?? {};
     const _sincTotal = (_sinc.rank ?? 0) + (_sinc.primaryCrestBonus ?? 0) + (_sinc.gearBonus ?? 0);
@@ -656,8 +634,9 @@ export class SpiritTamerSheet extends TamerSheet {
     const system  = this.actor.system;
     const invested = system.digiStats?.[stat]?.invested ?? 0;
     const cost     = (invested + 1) * 100;
-    const avail    = system.digiExp?.available ?? 0;
-    if (avail < cost) { ui.notifications.warn(`Not enough Digimon EXP — need ${cost}, have ${avail}.`); return; }
+    const altFormCost = computeAltFormExpCost(this.actor).totalExp;
+    const avail    = ((system.digiExp?.total ?? 0) - (system.digiExp?.spent ?? 0)) - altFormCost;
+    if (avail < cost) { ui.notifications.warn(`Not enough Digimon EXP — need ${cost}, have ${avail}${altFormCost ? ` (${altFormCost} reserved for Alternate Form EXP)` : ""}.`); return; }
     await this.actor.update({
       [`system.digiStats.${stat}.invested`]: invested + 1,
       "system.digiExp.spent": (system.digiExp?.spent ?? 0) + cost
@@ -799,8 +778,27 @@ export class SpiritTamerSheet extends TamerSheet {
     const roll      = await new Roll("1d100").evaluate();
     const isClean   = roll.total > threshold;
 
+    // HP automation: same idea as the regular Digimon sheet's Digivolve
+    // action — recompute Max HP off the new stage's Sincerity total and
+    // carry the same difference forward onto current HP (full stays full,
+    // hurt stays hurt by the same amount). This only applies to a
+    // Digimon-form-to-Digimon-form step (Champion -> Ultimate -> Mega,
+    // etc.) where there's an actual prior digiHp max to diff against. The
+    // very first digivolve, out of Tamer Form, has no digiHp history to
+    // carry forward from, so that one's just a full heal into the new form.
+    const wasTamerForm = system.isTamerForm ?? true;
+    const oldDigiHpMax   = this.actor.system.digiHp?.max ?? 0;
+    const oldDigiHpValue = this.actor.system.digiHp?.value ?? 0;
+
     const chosenForm = this.actor.items.get(result.formId);
     if (chosenForm) await this._applyForm(chosenForm, { pathKeyOverride: pathKey });
+
+    const newSinTotal  = this.actor.system.digiStats?.sincerity?.total ?? 0;
+    const newDigiHpMax = 20 + newSinTotal * 4;
+    const newDigiHpValue = wasTamerForm
+      ? newDigiHpMax
+      : Math.max(0, Math.min(newDigiHpMax, oldDigiHpValue + (newDigiHpMax - oldDigiHpMax)));
+    await this.actor.update({ "system.digiHp.max": newDigiHpMax, "system.digiHp.value": newDigiHpValue });
 
     // Record the actual Hope paid for this stage on the Digivolution Path
     // tracker — this is now the ONLY place Hope-per-stage is recorded; Hope

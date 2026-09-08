@@ -54,6 +54,12 @@
           <span class="exp-line-label">Spent</span>
           <span class="exp-line-value">{{digiExp.spent}}</span>
         </div>
+        {{#if digiExp.altFormCost}}
+        <div class="exp-line flexrow" title="EXP owed for extra known forms — see Alternate Form EXP below">
+          <span class="exp-line-label">Alt Forms</span>
+          <span class="exp-line-value">{{digiExp.altFormCost}}</span>
+        </div>
+        {{/if}}
         <div class="exp-line flexrow">
           <span class="exp-line-label">Avail</span>
           <span class="exp-line-value exp-available">{{digiExp.available}}</span>
@@ -86,6 +92,7 @@
 
     {{!-- Stats tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="stats">
+
 
       <div class="tamer-link-row flexrow">
         <label>Linked Tamer</label>
@@ -635,7 +642,7 @@
 
       {{!-- Alternate Form EXP --}}
       <h3 class="section-header" style="margin-top:12px;">Alternate Form EXP
-        <span class="stage-cap-note">First form per stage is free — each extra form costs EXP — forms marked Free above don't count</span>
+        <span class="stage-cap-note">First form per stage is free — each extra form's EXP is deducted from Available above automatically — forms marked Free above don't count</span>
       </h3>
       {{#if altFormSummary.rows.length}}
       <div class="digivolution-force-table">

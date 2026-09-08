@@ -144,7 +144,7 @@
             {{#if this.tagsString}}<span class="move-tags-string">{{this.tagsString}}</span>{{/if}}
             {{#if this.system.effect}}<span class="move-effect">{{this.system.effect}}</span>{{/if}}
           </div>
-          {{#if (eq this.system.actionType "attack")}}
+          {{#if (or this.isMove (eq this.system.actionType "attack"))}}
           <span class="tag move-element-tag">{{this.system.element}}</span>
           <span class="tag move-pr-tag">PR {{this.system.pr}}</span>
           {{/if}}

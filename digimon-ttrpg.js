@@ -1,5 +1,5 @@
 import { DIGIMON }                  from "./module/config.js";
-import { TamerData, DigimonData, SpiritTamerData, DnaDigimonData } from "./module/data/actor-models.js";
+import { TamerData, DigimonData, SpiritTamerData, DnaDigimonData, PartyData } from "./module/data/actor-models.js";
 import { MoveData, ClassSkillData, GearData, AttackData, DigimonFormData, EffectData, PrimaryCrestData } from "./module/data/item-models.js";
 import { DigitalDestinyActor }      from "./module/actors/actor.js";
 import { DigitalDestinyItem }       from "./module/items/item.js";
@@ -8,6 +8,7 @@ import { DigimonSheet }             from "./module/sheets/DigimonSheet.js";
 import { NpcDigimonSheet }          from "./module/sheets/NpcDigimonSheet.js";
 import { SpiritTamerSheet }         from "./module/sheets/SpiritTamerSheet.js";
 import { DnaSheet }                 from "./module/sheets/DnaSheet.js";
+import { PartySheet }               from "./module/sheets/PartySheet.js";
 import { ClassSkillSheet }          from "./module/sheets/ClassSkillSheet.js";
 import { MoveSheet }                from "./module/sheets/MoveSheet.js";
 import { GearSheet }                from "./module/sheets/GearSheet.js";
@@ -23,6 +24,7 @@ import { ItemLookup }               from "./module/ItemLookup.js";
 import { EncounterGenerator }       from "./module/EncounterGenerator.js";
 import { TokenActionHUD }           from "./module/TokenActionHUD.js";
 import { registerChatColorHooks, registerChatColorSettings } from "./module/chat-colors.js";
+import { ActorDirectory as PartyActorDirectory } from "./module/PartyActorDirectory.js";
 
 const BLANK_TAGS = {
   melee: false, range: false, rangeX: 4,
@@ -85,7 +87,7 @@ Hooks.once("init", () => {
   CONFIG.Item.documentClass    = DigitalDestinyItem;
   CONFIG.Combat.documentClass  = DigitalDestinyCombat;
 
-  CONFIG.Actor.dataModels = { tamer: TamerData, digimon: DigimonData, spiritTamer: SpiritTamerData, dnaDigimon: DnaDigimonData };
+  CONFIG.Actor.dataModels = { tamer: TamerData, digimon: DigimonData, spiritTamer: SpiritTamerData, dnaDigimon: DnaDigimonData, party: PartyData };
   CONFIG.Item.dataModels  = {
     move: MoveData, classSkill: ClassSkillData, gear: GearData,
     attack: AttackData, digimonForm: DigimonFormData,
@@ -94,6 +96,19 @@ Hooks.once("init", () => {
   CONFIG.Combat.initiative     = { formula: "1d20", decimals: 2 };
 
   registerChatColorSettings();
+
+  // Pin Party actors at the top of the Actors sidebar, folder-style. Wrapped
+  // defensively — if this Foundry version's sidebar API doesn't line up,
+  // fall back to the stock Actors tab instead of breaking init entirely.
+  try {
+    if (foundry.applications?.sidebar?.tabs?.ActorDirectory) {
+      CONFIG.ui.actors = PartyActorDirectory;
+    } else {
+      console.warn("Digital Destiny | ActorDirectory sidebar API not found — Party pinning skipped.");
+    }
+  } catch (err) {
+    console.error("Digital Destiny | Failed to install Party sidebar pinning:", err);
+  }
 
   const _Actors     = foundry.documents.collections.Actors;
   const _Items      = foundry.documents.collections.Items;
@@ -131,6 +146,12 @@ Hooks.once("init", () => {
     types: ["dnaDigimon"],
     makeDefault: true,
     label: "DIGIMON.SheetDna"
+  });
+
+  _Actors.registerSheet("digital-destiny", PartySheet, {
+    types: ["party"],
+    makeDefault: true,
+    label: "DIGIMON.SheetParty"
   });
 
   _Items.registerSheet("digital-destiny", ClassSkillSheet, {

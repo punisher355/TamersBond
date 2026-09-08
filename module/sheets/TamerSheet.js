@@ -429,6 +429,8 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.gear-equip').on('click',          ev => this._onGearEquip(ev));
     html.find('.gear-unequip').on('click',        ev => this._onGearUnequip(ev));
     html.find('.gear-delete').on('click',         ev => this._onGearDelete(ev));
+    html.find('.gear-charge-use').on('click',     ev => this._onGadgetChargeUse(ev));
+    html.find('.gear-charge-reset').on('click',   ev => this._onGadgetChargeReset(ev));
     html.find('.primary-crest-remove').on('click', async ev => {
       ev.preventDefault();
       const item = this.actor.items.find(i => i.type === "primaryCrest");
@@ -652,6 +654,41 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     ev.preventDefault();
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (item) await item.update({ "system.isEquipped": false });
+  }
+
+  // Gadget uses — tracked separately from Gear's plain quantity/"Use" system
+  // since a Gadget is a single equipped item with its own current/max
+  // charges (set on the item's own sheet) rather than a stack you consume
+  // one-of. "Use" just burns one charge and posts what's left; "Reset"
+  // tops it back up to max (end of rest, etc.).
+  async _onGadgetChargeUse(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (!item) return;
+    const cur = item.system?.charges?.current ?? 0;
+    if (cur <= 0) return;
+    const newCur = cur - 1;
+    await item.update({ "system.charges.current": newCur });
+
+    const max = item.system?.charges?.max ?? 0;
+    const content = `
+      <div class="dd-chat-card">
+        <h3 class="dd-chat-title">${item.name}</h3>
+        <div class="dd-chat-tags">
+          <span class="tag">Gadget use</span>
+          ${newCur > 0 ? `<span class="tag">${newCur} / ${max} left</span>` : `<span class="tag" style="background:#888;">Out of charges</span>`}
+        </div>
+        ${item.system?.effect ? `<p class="dd-chat-desc">${item.system.effect}</p>` : ""}
+      </div>`;
+    ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), content });
+  }
+
+  async _onGadgetChargeReset(ev) {
+    ev.preventDefault();
+    const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
+    if (!item) return;
+    const max = item.system?.charges?.max ?? 0;
+    await item.update({ "system.charges.current": max });
   }
 
   async _onGearUse(ev) {
@@ -1008,14 +1045,19 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     });
   }
 
+  // Push Through (011_Combat.md / Core Rulebook Basic Actions): a flat skill
+  // check against DN 5, using a skill linked to the Tamer's own chosen
+  // Crest — no stat modifier added, it's just the skill's own Xd6 (same as
+  // any other skill check in this system). Meet or beat DN 5 and Hope is
+  // restored equal to the number rolled; fall short and nothing happens.
   async _onPushThrough(ev) {
     ev.preventDefault();
-    const D      = CONFIG.DIGIMON;
-    const stats  = getActorStatTotals(this.actor);
+    const DN = 5;
+    const D  = CONFIG.DIGIMON;
     const optionsHtml = CREST_ORDER.flatMap(statKey =>
       (D.skills[statKey] ?? []).map(sk => {
         const rank = this.actor.system.skills?.[statKey]?.[sk.key]?.rank ?? 1;
-        return `<option value="${statKey}.${sk.key}">${D.statLabels[statKey]} — ${sk.label} (${rank}d6 + ${stats?.[statKey] ?? 0})</option>`;
+        return `<option value="${statKey}.${sk.key}">${D.statLabels[statKey]} — ${sk.label} (${rank}d6)</option>`;
       })
     ).join("");
 
@@ -1024,7 +1066,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
         title:   "Push Through",
         content: `
           <form>
-            <p class="hint" style="margin-bottom:8px;">Roll a relevant skill. Restore Hope equal to the result. Once per encounter.</p>
+            <p class="hint" style="margin-bottom:8px;">Roll a skill linked to your Crest against DN ${DN}. Meet or beat it and Hope is restored equal to the number rolled. Once per encounter.</p>
             <div class="form-group">
               <label>Skill</label>
               <select name="skill" style="flex:1;">${optionsHtml}</select>
@@ -1040,17 +1082,19 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     if (!chosen) return;
 
     const [statKey, skillKey] = chosen.split(".");
-    const statTotal   = stats?.[statKey] ?? 0;
     const skillRank   = this.actor.system.skills?.[statKey]?.[skillKey]?.rank ?? 1;
     const skillLabel  = D.skills[statKey]?.find(s => s.key === skillKey)?.label ?? skillKey;
-    const roll        = await new Roll(`${skillRank}d6 + ${statTotal}`).evaluate();
+    const roll        = await new Roll(`${skillRank}d6`).evaluate();
     const rollHtml    = await roll.render();
 
-    const hope       = this.actor.system.crests.hope ?? {};
-    const curHope    = hope.current ?? 0;
-    const maxHope    = hope.pool   ?? (hope.rank ?? 1) * 5;
-    const newHope    = Math.min(maxHope, curHope + roll.total);
-    await this.actor.update({ "system.crests.hope.current": newHope });
+    const passed  = roll.total >= DN;
+    const hope    = this.actor.system.crests.hope ?? {};
+    const curHope = hope.current ?? 0;
+    const maxHope = hope.pool   ?? (hope.rank ?? 1) * 5;
+    const newHope = passed ? Math.min(maxHope, curHope + roll.total) : curHope;
+    if (passed && newHope !== curHope) {
+      await this.actor.update({ "system.crests.hope.current": newHope });
+    }
 
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1058,10 +1102,14 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       content: `<div class="dd-chat-card">
         <h3 class="dd-chat-title">Push Through</h3>
         <div class="dd-roll-section">
-          <div class="dd-roll-section-label">${skillLabel} <span class="dd-roll-aside">+ ${statTotal} ${D.statLabels[statKey]}</span></div>
+          <div class="dd-roll-section-label">${skillLabel} <span class="dd-roll-aside">vs DN ${DN}</span></div>
           ${rollHtml}
         </div>
-        <p style="margin:6px 0 0; font-size:0.9em;">Hope restored: <strong>+${roll.total}</strong> (${curHope} → ${newHope} / ${maxHope})</p>
+        <p style="margin:6px 0 0; font-size:0.9em;">
+          ${passed
+            ? `<strong>Success</strong> — Hope restored: <strong>+${roll.total}</strong> (${curHope} → ${newHope} / ${maxHope})`
+            : `<strong>Failed</strong> — rolled ${roll.total}, needed ${DN}+. No Hope restored.`}
+        </p>
       </div>`
     });
   }

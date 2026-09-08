@@ -2,10 +2,14 @@ const STAT_KEYS = ["courage", "friendship", "love", "knowledge", "sincerity", "r
 
 /**
  * "Generate Encounter" — pops up a filter dialog (attribute / element / stage /
- * count / EXP-per-Digimon), then creates that many NPC Digimon actors pulled
- * randomly from the digimon-forms compendium, pre-built to use the NPC Digimon
- * sheet, with stats boosted by the given EXP budget and their signature move
- * attached as a ready-to-roll Attack.
+ * count / EXP-per-Digimon, or a specific Digimon picked directly), then
+ * creates that many NPC Digimon actors pulled from the digimon-forms
+ * compendium, pre-built to use the NPC Digimon sheet, with stats boosted by
+ * the given EXP budget. Each generated Digimon also gets a random
+ * digivolution line traced back toward Fresh (one valid predecessor per
+ * step, per the form's own digivolves_from data), with every step's
+ * signature move added to its move pool — so it shows up with an actual
+ * evolutionary history instead of just a single floating stat block.
  */
 export class EncounterGenerator {
 
@@ -52,20 +56,46 @@ export class EncounterGenerator {
       .map(([k, v]) => `<option value="${k}"${k === sel ? " selected" : ""}>${v}</option>`)
       .join("");
 
+    const formOptions = this._formsCache
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map(f => `<option value="${f.name}">${f.name} (${D.stageLabels[f.system.stage] ?? f.system.stage})</option>`)
+      .join("");
+
     const content = `
       <form class="encounter-gen-form">
         <div class="form-group">
-          <label>Attribute</label>
-          <select name="attribute">${opt(attributeOptions, "")}</select>
+          <label><input type="checkbox" name="specificMode" /> Pick a specific Digimon instead of random filters</label>
         </div>
-        <div class="form-group">
-          <label>Element</label>
-          <select name="element">${opt(elementOptions, "")}</select>
+
+        <div class="encgen-random-block">
+          <div class="form-group">
+            <label>Attribute</label>
+            <select name="attribute">${opt(attributeOptions, "")}</select>
+          </div>
+          <div class="form-group">
+            <label>Element</label>
+            <select name="element">${opt(elementOptions, "")}</select>
+          </div>
+          <div class="form-group">
+            <label>Stage</label>
+            <select name="stage">${opt(stageOptions, "rookie")}</select>
+          </div>
         </div>
-        <div class="form-group">
-          <label>Stage</label>
-          <select name="stage">${opt(stageOptions, "rookie")}</select>
+
+        <div class="encgen-specific-block" style="display:none;">
+          <div class="form-group">
+            <label>Digimon</label>
+            <select name="specificForm">
+              <option value="">— choose below or drag one in —</option>
+              ${formOptions}
+            </select>
+          </div>
+          <div class="encgen-dropzone" style="border:2px dashed #999; padding:10px 6px; text-align:center; border-radius:6px; margin:4px 0 10px; font-size:0.85em;">
+            Or drag a Digimon Form item here from a compendium
+          </div>
         </div>
+
         <div class="form-group">
           <label>Number of Digimon</label>
           <input type="number" name="count" value="1" min="1" max="20" />
@@ -76,7 +106,9 @@ export class EncounterGenerator {
         </div>
         <p class="hint">EXP is randomly spread across the six stats using the same cost curve as a
         player Digimon's invested stats (rank × 100 per step). 0 EXP = species base stats only.
-        Filters left on "Any" pull from every Digimon that matches the ones you do set.</p>
+        Filters left on "Any" pull from every Digimon that matches the ones you do set. Each
+        generated Digimon also gets a random digivolution line traced back toward Fresh, with
+        every step's signature move added to its move pool.</p>
       </form>`;
 
     const result = await new Promise(resolve => {
@@ -92,13 +124,57 @@ export class EncounterGenerator {
               element:   html.find('[name="element"]').val(),
               stage:     html.find('[name="stage"]').val(),
               count:     Math.max(1, Math.min(20, parseInt(html.find('[name="count"]').val()) || 1)),
-              exp:       Math.max(0, parseInt(html.find('[name="exp"]').val()) || 0)
+              exp:       Math.max(0, parseInt(html.find('[name="exp"]').val()) || 0),
+              specificFormName: html.find('[name="specificMode"]').is(':checked')
+                ? (html.find('[name="specificForm"]').val() || "")
+                : ""
             })
           },
           cancel: { label: "Cancel", callback: () => resolve(null) }
         },
-        default: "generate"
-      }, { width: 380 }).render(true);
+        default: "generate",
+        render: html => {
+          const specificCheckbox = html.find('[name="specificMode"]');
+          const specificBlock    = html.find('.encgen-specific-block');
+          const randomBlock      = html.find('.encgen-random-block');
+
+          const syncMode = () => {
+            const on = specificCheckbox.is(':checked');
+            specificBlock.toggle(on);
+            randomBlock.toggle(!on);
+          };
+          specificCheckbox.on('change', syncMode);
+          syncMode();
+
+          // Let a Digimon Form item be dragged in directly from a compendium
+          // or the sidebar, instead of hunting for it in the dropdown.
+          const dropzone = html.find('.encgen-dropzone');
+          dropzone.on('dragover', ev => ev.preventDefault());
+          dropzone.on('drop', async ev => {
+            ev.preventDefault();
+            let data;
+            try { data = JSON.parse(ev.originalEvent.dataTransfer.getData("text/plain")); }
+            catch { return; }
+            if (data?.type !== "Item" || !data?.uuid) return;
+
+            let item;
+            try { item = await fromUuid(data.uuid); } catch { item = null; }
+            if (!item || item.type !== "digimonForm") {
+              ui.notifications.warn("Drop a Digimon Form item here — that's not one.");
+              return;
+            }
+
+            const match = this._formsCache.find(f => f.name === item.name);
+            if (!match) {
+              ui.notifications.warn(`"${item.name}" isn't in the Digimon Forms compendium pool.`);
+              return;
+            }
+
+            html.find('[name="specificForm"]').val(match.name);
+            dropzone.text(`Selected: ${match.name}`);
+          });
+        }
+      }, { width: 420 }).render(true);
     });
 
     if (!result) return;
@@ -124,17 +200,55 @@ export class EncounterGenerator {
     return invested;
   }
 
-  static async _generate({ attribute, element, stage, count, exp }) {
-    const pool = this._formsCache.filter(f => {
-      const s = f.system;
-      return (!stage     || s.stage     === stage)
-          && (!attribute || s.attribute === attribute)
-          && (!element   || s.element   === element);
-    });
+  // Walks backward from the generated form's stage down toward Fresh,
+  // picking one random valid predecessor (per the form's own
+  // digivolves_from list, matched against forms actually present at the
+  // next-lowest stage in the compendium) at each step. Returns the chain in
+  // low-to-high order, e.g. [fresh, intraining, rookie, champion] — always
+  // ends with topForm itself. Stops early wherever the data doesn't give a
+  // valid next-lowest match (a base form with no digivolves_from, or no
+  // matching precursor in the pack).
+  static _buildChain(topForm) {
+    const order = CONFIG.DIGIMON.stageOrder;
+    const chain = [topForm];
+    let current = topForm;
+    let guard   = 0;
+    while (guard++ < order.length) {
+      const stageIdx = order.indexOf(current.system.stage);
+      if (stageIdx <= 0) break;
+      const fromNames = current.system.digivolves_from ?? [];
+      if (!fromNames.length) break;
+      const targetStage = order[stageIdx - 1];
+      const candidates = this._formsCache.filter(f =>
+        f.system.stage === targetStage && fromNames.includes(f.name)
+      );
+      if (!candidates.length) break;
+      current = candidates[Math.floor(Math.random() * candidates.length)];
+      chain.unshift(current);
+    }
+    return chain;
+  }
 
-    if (!pool.length) {
-      ui.notifications.warn("No Digimon forms match those filters — nothing generated.");
-      return;
+  static async _generate({ attribute, element, stage, count, exp, specificFormName }) {
+    let pool;
+    if (specificFormName) {
+      const chosen = this._formsCache.find(f => f.name === specificFormName);
+      if (!chosen) {
+        ui.notifications.warn(`Couldn't find "${specificFormName}" in the Digimon Forms compendium.`);
+        return;
+      }
+      pool = [chosen];
+    } else {
+      pool = this._formsCache.filter(f => {
+        const s = f.system;
+        return (!stage     || s.stage     === stage)
+            && (!attribute || s.attribute === attribute)
+            && (!element   || s.element   === element);
+      });
+      if (!pool.length) {
+        ui.notifications.warn("No Digimon forms match those filters — nothing generated.");
+        return;
+      }
     }
 
     // Parent folder + one subfolder per batch, so a whole encounter can be
@@ -191,37 +305,60 @@ export class EncounterGenerator {
         }
       });
 
-      // Signature move -> Attack item. The NPC sheet's Attacks tab only shows
-      // "attack" type items (no move-pool/signature-slot management), so the
-      // move's element/PR/effect/tags are copied over as a plain Attack.
-      if (s.signatureMove) {
-        const move = this._movesCache.find(m => m.name === s.signatureMove);
-        if (move) {
-          await actor.createEmbeddedDocuments("Item", [{
-            name: move.name,
-            type: "attack",
-            img:  "icons/svg/sword.svg",
-            system: {
-              actionType: "attack",
-              element:    move.system.element ?? "neutral",
-              pr:         move.system.pr ?? 1,
-              effect:     move.system.effect ?? "",
-              tags:       move.system.tags ?? {}
-            }
-          }]);
-        }
+      // Digivolution line: trace backward toward Fresh, snapshot every
+      // reached stage's form into the Digivolution Path tracker (same shape
+      // the full sheet's own Digivolve action fills in), and add every
+      // step's signature move to the actor's move pool — the top stage's
+      // move is flagged as its Signature Move, everything below it is just
+      // a regular pool move it already knows from digivolving through it.
+      const chain = this._buildChain(form);
+
+      const pathUpdate = {};
+      const moveDocs    = [];
+      for (const stepForm of chain) {
+        const stg = stepForm.system.stage;
+        pathUpdate[`system.digivolutionPath.${stg}.formId`]   = stepForm.id;
+        pathUpdate[`system.digivolutionPath.${stg}.formName`] = stepForm.name;
+        pathUpdate[`system.digivolutionPath.${stg}.formImg`]  = this._resolveImg(stepForm);
+
+        const moveName = stepForm.system.signatureMove;
+        if (!moveName) continue;
+        const move = this._movesCache.find(m => m.name === moveName);
+        if (!move) continue;
+
+        moveDocs.push({
+          name: move.name,
+          type: "move",
+          img:  "icons/svg/sword.svg",
+          system: {
+            element:     move.system.element ?? "neutral",
+            pr:          move.system.pr ?? 1,
+            effect:      move.system.effect ?? "",
+            tags:        move.system.tags ?? {},
+            minStage:    stg,
+            isSignature: stepForm === form,
+            isActive:    true
+          }
+        });
       }
 
-      created.push({ actor, form });
+      if (Object.keys(pathUpdate).length) await actor.update(pathUpdate);
+      if (moveDocs.length) await actor.createEmbeddedDocuments("Item", moveDocs);
+
+      created.push({ actor, form, chain });
     }
 
     const D = CONFIG.DIGIMON;
-    const listHtml = created.map(({ actor, form }) =>
-      `<li><strong>${actor.name}</strong> — ${D.stageLabels[form.system.stage] ?? form.system.stage}, ${form.system.attribute}, ${form.system.element}</li>`
-    ).join("");
+    const listHtml = created.map(({ actor, form, chain }) => {
+      const lineNames = chain.map(f => f.name).join(" → ");
+      return `<li><strong>${actor.name}</strong> — ${D.stageLabels[form.system.stage] ?? form.system.stage}, ${form.system.attribute}, ${form.system.element}${chain.length > 1 ? `<br><span class="hint">Line: ${lineNames}</span>` : ""}</li>`;
+    }).join("");
 
+    // GM-eyes-only — players never see the encounter get built, so it's
+    // still a surprise when it actually drops on them.
     await ChatMessage.create({
       speaker: { alias: "Encounter Generator" },
+      whisper: ChatMessage.getWhisperRecipients("GM"),
       content: `
         <div class="dd-chat-card">
           <h3 class="dd-chat-title">Generated Encounter (${created.length})</h3>
