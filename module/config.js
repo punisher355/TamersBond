@@ -510,16 +510,81 @@ export async function addPartyMember(party, actorId) {
 export async function removePartyMember(party, actorId) {
   if (!party || !actorId) return;
   const memberIds = (party.system?.memberIds ?? []).filter(id => id !== actorId);
-  await party.update({ "system.memberIds": memberIds });
+  const update = { "system.memberIds": memberIds };
+  // Drop their group filing too, in case they're ever re-added later —
+  // no point keeping a pointer to a group they're no longer even in.
+  if (party.system?.memberGroups?.[actorId] !== undefined) {
+    update[`system.memberGroups.-=${actorId}`] = null;
+  }
+  await party.update(update);
+}
+
+// --- Sidebar sub-groups (PartyActorDirectory.js) ----------------------------
+//
+// Purely cosmetic filing inside a party's pinned Actors-sidebar folder — a
+// group is just a name a member can be tagged with so the sidebar can
+// cluster them (e.g. one group per player, holding their Tamer + Digimon
+// together). `groups` holds the definitions; `memberGroups` maps actor ID
+// -> group ID for whoever's been filed.
+
+export async function addPartyGroup(party, name) {
+  if (!party) return null;
+  const groups = party.system?.groups ?? [];
+  const id     = foundry.utils.randomID();
+  const label  = (name ?? "").trim() || "New Group";
+  await party.update({ "system.groups": [...groups, { id, name: label }] });
+  return id;
+}
+
+export async function renamePartyGroup(party, groupId, name) {
+  if (!party || !groupId) return;
+  const groups = (party.system?.groups ?? []).map(g =>
+    g.id === groupId ? { ...g, name: (name ?? "").trim() || g.name } : g
+  );
+  await party.update({ "system.groups": groups });
+}
+
+export async function removePartyGroup(party, groupId) {
+  if (!party || !groupId) return;
+  const groups       = (party.system?.groups ?? []).filter(g => g.id !== groupId);
+  const memberGroups = party.system?.memberGroups ?? {};
+  const update = { "system.groups": groups };
+  for (const [actorId, gid] of Object.entries(memberGroups)) {
+    if (gid === groupId) update[`system.memberGroups.-=${actorId}`] = null;
+  }
+  await party.update(update);
+}
+
+export async function setMemberGroup(party, actorId, groupId) {
+  if (!party || !actorId) return;
+  if (groupId) {
+    await party.update({ [`system.memberGroups.${actorId}`]: groupId });
+  } else {
+    await party.update({ [`system.memberGroups.-=${actorId}`]: null });
+  }
 }
 
 // Missed Rests/Meals penalty on a Tamer's Hope Pool (014_Resting_and_Encounters.md):
 // 1 missed = halved, 2 = quartered, 3 = one eighth, continuing to compound
 // beyond that. Only meaningful for actors with a Hope Pool (Tamer/Spirit Tamer).
+//
+// Only a Tamer has a Hope Pool, but food is bought and tracked per PAIR (one
+// portion for the Tamer, one for their Digimon) — so if the Digimon is the
+// one who went hungry and not the Tamer, the penalty still has to land
+// somewhere, and the rulebook puts it on the Tamer's Hope Pool. Whichever
+// half of the pair has missed more meals sets the tier for both.
 export function computeHopePenalty(actor) {
   const hope = actor?.system?.crests?.hope;
-  const missedMeals = hope?.missedMeals ?? 0;
   const pool = hope?.pool ?? 0;
+  let missedMeals = hope?.missedMeals ?? 0;
+
+  if (actor?.type === "tamer") {
+    const partners = game.actors?.filter(a => a.type === "digimon" && a.system?.tamerLink === actor.id) ?? [];
+    for (const partner of partners) {
+      missedMeals = Math.max(missedMeals, partner.system?.hunger?.missedMeals ?? 0);
+    }
+  }
+
   const effectivePool = missedMeals > 0 ? Math.floor(pool / Math.pow(2, missedMeals)) : pool;
   const tierLabels = {
     1: "Hungry — Hope Pool Halved",

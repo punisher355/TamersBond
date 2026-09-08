@@ -183,6 +183,14 @@
   margin-top: 1px;
 }
 
+.digital-destiny .hope-penalty-row {
+  margin-top: 3px;
+  font-size: 0.72em;
+  font-weight: 700;
+  color: #c0392b;
+  white-space: nowrap;
+}
+
 .digital-destiny .hope-pt-label {
   font-size: 0.7em;
   color: #7060a0;

@@ -406,7 +406,7 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
 // current stack count (1-3 / 4-6 / 7+), so their `rules` array is recomputed
 // every time their stacks change rather than staying fixed on the template.
 
-const HP_DMG_CODE  = "const _k=actor.type==='spiritTamer'?'system.digiHp.value':'system.hp.value';const _v=actor.type==='spiritTamer'?(actor.system.digiHp?.value??0):(actor.system.hp?.value??0);actor.update({[_k]:Math.max(0,_v-stacks)});";
+const HP_DMG_CODE  = "const _k='system.hp.value';const _v=(actor.system.hp?.value??0);actor.update({[_k]:Math.max(0,_v-stacks)});";
 
 // Resolve the Core Drive rank used for a target's Core Drive check, mirroring
 // how each sheet type already resolves its own skill rolls (DigimonSheet.js /
@@ -495,7 +495,7 @@ const _EFFECT_TEMPLATES = {
   regen:    { name:"Regen",    stacks:1, statusType:"regen",    decayField:"stacks", coreDriveCheck:false,
               startOfTurnText:"REGEN: Restoring HP at the start of this turn! (Stacks = HP restored)",
               removeStackOnTurn:true,
-              applyCode:"if (!actor.system.statusMods?.healingBlocked) { const _st=actor.type==='spiritTamer';const _k=_st?'system.digiHp.value':'system.hp.value';const _hp=_st?(actor.system.digiHp??{}):(actor.system.hp??{});actor.update({[_k]:Math.min(_hp.max??9999,(_hp.value??0)+stacks)}); }",
+              applyCode:"if (!actor.system.statusMods?.healingBlocked) { const _k='system.hp.value';const _hp=(actor.system.hp??{});actor.update({[_k]:Math.min(_hp.max??9999,(_hp.value??0)+stacks)}); }",
               passiveText:"Blocked while the target is Fragmented.", rules:[] }
 };
 
@@ -835,8 +835,8 @@ export function registerCombatHooks() {
           noteParts.unshift(`${decayField === "ticks" ? "Ticks" : "Stacks"} → ${finalValue}`);
 
           if (statusType === "paralyze" && finalValue >= 7) {
-            const _key = actor.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
-            const prev = (actor.type === "spiritTamer" ? actor.system.digiHp?.value : actor.system.hp?.value) ?? 0;
+            const _key = "system.hp.value";
+            const prev = actor.system.hp?.value ?? 0;
             const next = Math.max(0, prev - finalValue);
             await actor.update({ [_key]: next });
             noteParts.push(`Paralyze dmg: ${prev} → ${next} (−${finalValue})`);
@@ -885,7 +885,7 @@ export function registerCombatHooks() {
       const target = _findActor(targetId);
       if (!target) { ui.notifications.warn(`Actor "${targetName}" not found.`); return; }
 
-      const _undoKey = target.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+      const _undoKey = "system.hp.value";
       await target.update({ [_undoKey]: prevHp });
       for (const sid of statusIds) {
         const item = target.items.get(sid);
@@ -894,7 +894,7 @@ export function registerCombatHooks() {
       if (drainSrcId) {
         const src = _findActor(drainSrcId);
         if (src && drainPrevHp > 0) {
-          const _srcUndoKey = src.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+          const _srcUndoKey = "system.hp.value";
           await src.update({ [_srcUndoKey]: drainPrevHp });
         }
       }
@@ -934,8 +934,8 @@ export function registerCombatHooks() {
       const target = _findActor(targetId);
       if (!target) return ui.notifications.warn(`Actor "${targetName}" not found.`);
 
-      const _tgtHp  = target.type === "spiritTamer" ? target.system.digiHp : target.system.hp;
-      const _tgtKey = target.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+      const _tgtHp  = target.system.hp;
+      const _tgtKey = "system.hp.value";
       const prevHp  = _tgtHp?.value ?? 0;
       const newHp   = Math.max(0, prevHp - damage);
       await target.update({ [_tgtKey]: newHp });
@@ -970,8 +970,8 @@ export function registerCombatHooks() {
           appliedNotes.push("Drain blocked (attacker Fragmented)");
         } else if (src) {
           drainSourceId = sourceId;
-          const _srcHp  = src.type === "spiritTamer" ? src.system.digiHp : src.system.hp;
-          const _srcKey = src.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+          const _srcHp  = src.system.hp;
+          const _srcKey = "system.hp.value";
           drainPrevHp   = _srcHp?.value ?? 0;
           const drainAmt = Math.max(1, Math.floor(damage / 2));
           const srcMax   = _srcHp?.max ?? 99;

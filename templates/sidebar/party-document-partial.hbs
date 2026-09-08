@@ -3,6 +3,8 @@
     <li class="directory-item folder flexcol{{#if party.expanded}} expanded{{/if}}" data-party data-entry-id="{{party.id}}">
         <header class="folder-header" data-action="togglePartyFolder">
             <i class="fa-solid fa-folder-open fa-fw" inert></i>
+            <button type="button" class="inline-control icon fa-solid fa-folder-plus" data-action="addPartyGroup"
+                data-tooltip="New Group"></button>
             <button type="button" class="inline-control icon fa-solid fa-file" data-action="openPartySheet"
                 data-tooltip="Open Party Sheet"></button>
             {{!-- Drag preview only --}}
@@ -10,7 +12,32 @@
             <span class="folder-name ellipsis">{{party.name}}</span>
         </header>
         <ol class="subdirectory plain">
-            {{#each party.members as |member|}}
+            {{#each party.groups as |group|}}
+            <li class="directory-item folder flexcol{{#if group.expanded}} expanded{{/if}}" data-group data-group-id="{{group.id}}">
+                <header class="folder-header" data-action="toggleGroupFolder">
+                    <i class="fa-solid fa-folder-open fa-fw" inert></i>
+                    <button type="button" class="inline-control icon fa-solid fa-pen" data-action="renameGroup"
+                        data-tooltip="Rename Group"></button>
+                    <button type="button" class="inline-control icon fa-solid fa-trash" data-action="deletePartyGroup"
+                        data-tooltip="Delete Group"></button>
+                    <span class="folder-name ellipsis">{{group.name}}</span>
+                </header>
+                <ol class="subdirectory plain">
+                    {{#each group.members as |member|}}
+                    <li class="directory-item entry document actor flexrow" data-entry-id="{{member.id}}">
+                        <img class="thumbnail" src="{{member.img}}" alt="{{member.name}}" loading="lazy" />
+                        <a class="entry-name ellipsis" data-action="activateEntry">
+                            <span>{{member.name}}</span>
+                            <span class="actor-level">{{member.typeLabel}}</span>
+                        </a>
+                    </li>
+                    {{else}}
+                    <li class="blank" data-entry-id="">Drag a member here</li>
+                    {{/each}}
+                </ol>
+            </li>
+            {{/each}}
+            {{#each party.ungrouped as |member|}}
             <li class="directory-item entry document actor flexrow" data-entry-id="{{member.id}}">
                 <img class="thumbnail" src="{{member.img}}" alt="{{member.name}}" loading="lazy" />
                 <a class="entry-name ellipsis" data-action="activateEntry">
@@ -18,9 +45,10 @@
                     <span class="actor-level">{{member.typeLabel}}</span>
                 </a>
             </li>
-            {{else}}
-            <li class="blank" data-entry-id="">No members — drag an actor here</li>
             {{/each}}
+            {{#if party.isEmpty}}
+            <li class="blank" data-entry-id="">No members — drag an actor here</li>
+            {{/if}}
         </ol>
     </li>
     {{/each}}

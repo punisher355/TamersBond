@@ -36,6 +36,11 @@
           <span class="hope-pt-label">Per Turn</span>
           <span class="hope-pt-display" title="Auto — sum of Hope spent per stage above Default on the Digivolution Path tracker">{{hope.perTurn}}</span>
         </div>
+        {{#if hope.penaltyLabel}}
+        <div class="hope-penalty-row" title="Raw pool: {{hope.rawMax}} — clears once the hungry half of the pair eats again">
+          ⚠ {{hope.penaltyLabel}}
+        </div>
+        {{/if}}
       </div>
 
       {{!-- EXP --}}

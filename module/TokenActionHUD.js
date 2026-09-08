@@ -75,10 +75,9 @@ export class TokenActionHUD {
     }
 
     // HP / Hope values for the stats block
-    // Spirit Tamers have one HP pool: digiHp
     const sys     = actor.system;
-    const hpValue = isSpiritTamer ? (sys.digiHp?.value ?? 0) : (sys.hp?.value ?? 0);
-    const hpMax   = isSpiritTamer ? (sys.digiHp?.max   ?? 0) : (sys.hp?.max   ?? 0);
+    const hpValue = sys.hp?.value ?? 0;
+    const hpMax   = sys.hp?.max   ?? 0;
     const hpLabel = "HP";
 
     const hopeRow = isTamer
@@ -183,7 +182,7 @@ export class TokenActionHUD {
         finally { this._saving = false; }
       });
     };
-    const hpKey = actor.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+    const hpKey = "system.hp.value";
     _saveInput(".dd-hud-hp-input",   hpKey);
     _saveInput(".dd-hud-hope-input", "system.crests.hope.current");
 

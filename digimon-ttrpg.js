@@ -24,7 +24,7 @@ import { ItemLookup }               from "./module/ItemLookup.js";
 import { EncounterGenerator }       from "./module/EncounterGenerator.js";
 import { TokenActionHUD }           from "./module/TokenActionHUD.js";
 import { registerChatColorHooks, registerChatColorSettings } from "./module/chat-colors.js";
-import { ActorDirectory as PartyActorDirectory } from "./module/PartyActorDirectory.js";
+import { ActorDirectory as PartyActorDirectory, registerPartySidebarSettings } from "./module/PartyActorDirectory.js";
 
 const BLANK_TAGS = {
   melee: false, range: false, rangeX: 4,
@@ -96,6 +96,7 @@ Hooks.once("init", () => {
   CONFIG.Combat.initiative     = { formula: "1d20", decimals: 2 };
 
   registerChatColorSettings();
+  registerPartySidebarSettings();
 
   // Pin Party actors at the top of the Actors sidebar, folder-style. Wrapped
   // defensively — if this Foundry version's sidebar API doesn't line up,
@@ -226,14 +227,14 @@ Hooks.on("updateActor", async (actor, changes) => {
   if (!game.user.isGM) return;
   if (_defeatedLock.has(actor.id)) return;
 
-  const hpPath = actor.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+  const hpPath = "system.hp.value";
   const newHp  = foundry.utils.getProperty(changes, hpPath);
   if (newHp === undefined || newHp > 0) return;
 
   // Lock before any awaits so the HP correction update doesn't re-trigger this
   _defeatedLock.add(actor.id);
   try {
-    const resetKey = actor.type === "spiritTamer" ? "system.digiHp.value" : "system.hp.value";
+    const resetKey = "system.hp.value";
     await actor.update({ [resetKey]: 1 });
   } finally {
     _defeatedLock.delete(actor.id);

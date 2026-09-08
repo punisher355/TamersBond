@@ -30,13 +30,13 @@
       <div class="header-panel flexcol">
         <span class="header-panel-label">HP</span>
         <div class="hp-main-row flexrow">
-          <input type="number" class="hp-value-input" name="system.digiHp.value" value="{{system.digiHp.value}}" />
+          <input type="number" class="hp-value-input" name="system.hp.value" value="{{system.hp.value}}" />
           <span class="hp-sep">/</span>
-          <span class="hp-max-display">{{digiHpMax}}</span>
+          <span class="hp-max-display">{{hpMax}}</span>
         </div>
         <div class="hp-temp-row flexrow">
           <span class="hp-temp-label">Temp</span>
-          <input type="number" class="hp-temp-input" name="system.digiHp.temp" value="{{system.digiHp.temp}}" />
+          <input type="number" class="hp-temp-input" name="system.hp.temp" value="{{system.hp.temp}}" />
         </div>
       </div>
 
@@ -53,6 +53,11 @@
           <span class="hope-pt-label">Per Turn</span>
           <span class="hope-pt-display" title="Auto — sum of Hope spent per stage above Default on the Digivolution Path tracker">{{hope.perTurn}}</span>
         </div>
+        {{#if hope.penaltyLabel}}
+        <div class="hope-penalty-row" title="Raw pool: {{hope.rawMax}} — clears once the hungry half of the pair eats again">
+          ⚠ {{hope.penaltyLabel}}
+        </div>
+        {{/if}}
       </div>
 
       {{!-- EXP panels --}}
@@ -890,7 +895,7 @@
       </table>
 
       <p class="hint hp-formula-note" style="margin-top:8px;">
-        <strong>Digimon HP Max</strong> = 20 + (Sincerity × 4) — {{digiHpFormula}}
+        <strong>Digimon Form HP Max</strong> = {{digiFormHpFormula}}
       </p>
 
     </div>

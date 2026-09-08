@@ -1,4 +1,4 @@
-import { computeTagString, getActorHopePerTurn } from "../config.js";
+import { computeTagString, getActorHopePerTurn, computeHopePenalty } from "../config.js";
 import { getActorStatTotals, performAttackRoll } from "../combat.js";
 import { ItemLookup }                            from "../ItemLookup.js";
 
@@ -74,12 +74,19 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
 
     context.primaryCrestItem = this.actor.items.find(i => i.type === "primaryCrest") ?? null;
 
-    // Hope — derived: rank = highest crest, pool = rank × 5
-    const hopeData = context.system.crests.hope ?? {};
+    // Hope — derived: rank = highest crest, pool = rank × 5. Max is capped by
+    // the Missed Rests/Meals penalty (014_Resting_and_Encounters.md) — either
+    // the Tamer or their linked Digimon partner going hungry drags this same
+    // number down, since only the Tamer has a Hope Pool to take it out of.
+    // See computeHopePenalty() in config.js.
+    const hopeData    = context.system.crests.hope ?? {};
+    const hopePenalty = computeHopePenalty(this.actor);
     context.hope = {
       rank:    hopeData.rank    ?? 1,
-      max:     hopeData.pool    ?? 5,
+      max:     hopePenalty.effectivePool,
+      rawMax:  hopeData.pool    ?? 5,
       current: hopeData.current ?? hopeData.pool ?? 5,
+      penaltyLabel: hopePenalty.tierLabel,
       // Derived — see computeHopePerTurn()/getActorHopePerTurn() in config.js.
       // No longer a separately-stored, hand-incremented field (that was the
       // source of the doubled/stale Hope-per-turn numbers).
@@ -1090,7 +1097,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     const passed  = roll.total >= DN;
     const hope    = this.actor.system.crests.hope ?? {};
     const curHope = hope.current ?? 0;
-    const maxHope = hope.pool   ?? (hope.rank ?? 1) * 5;
+    const maxHope = computeHopePenalty(this.actor).effectivePool;
     const newHope = passed ? Math.min(maxHope, curHope + roll.total) : curHope;
     if (passed && newHope !== curHope) {
       await this.actor.update({ "system.crests.hope.current": newHope });

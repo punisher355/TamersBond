@@ -64,9 +64,18 @@ export class SpiritTamerSheet extends TamerSheet {
     const digiAvailable = ((digiExp.total ?? 0) - (digiExp.spent ?? 0)) - altFormCost;
     context.digiExp = { total: digiExp.total, spent: digiExp.spent, altFormCost, available: digiAvailable };
 
-    // --- Digimon HP (max derived in prepareDerivedData) ---
-    context.digiHpMax     = system.digiHp?.max ?? 10;
-    context.digiHpFormula = `20 + (${system.digiStats?.sincerity?.total ?? 0} Sincerity × 4) = ${context.digiHpMax}`;
+    // --- HP (single pool, max derived in prepareDerivedData off whichever
+    // form's Sincerity formula currently applies) ---
+    const isTF = system.isTamerForm ?? true;
+    context.hpMax = system.hp?.max ?? 10;
+    context.hpFormula = isTF
+      ? `12 + (${(system.crests?.sincerity?.rank ?? 0) + (system.crests?.sincerity?.primaryCrestBonus ?? 0) + (system.crests?.sincerity?.gearBonus ?? 0)} Sincerity × 4) = ${context.hpMax}`
+      : `20 + (${system.digiStats?.sincerity?.total ?? 0} Sincerity × 4) = ${context.hpMax}`;
+    // Reference note shown next to the Digimon Stats table — always
+    // describes the Digimon Form formula specifically, regardless of which
+    // form is currently active (the header bar above shows whichever form
+    // formula is currently live).
+    context.digiFormHpFormula = `20 + (${system.digiStats?.sincerity?.total ?? 0} Sincerity × 4) = ${20 + (system.digiStats?.sincerity?.total ?? 0) * 4 + (system.statusMods?.hpMaxBonus ?? 0)}`;
 
     // --- Digimon stat rows ---
     context.digiStatList = CREST_ORDER.map(key => {
@@ -427,8 +436,8 @@ export class SpiritTamerSheet extends TamerSheet {
     const _sinc = sys.crests.sincerity ?? {};
     const _sincTotal = (_sinc.rank ?? 0) + (_sinc.primaryCrestBonus ?? 0) + (_sinc.gearBonus ?? 0);
     const hpFormula = isTF
-      ? `12 + (${_sincTotal} Sincerity × 4) = ${sys.digiHp?.max ?? 0}`
-      : `20 + (${sys.digiStats?.sincerity?.total ?? 0} Sincerity × 4) = ${sys.digiHp?.max ?? 0}`;
+      ? `12 + (${_sincTotal} Sincerity × 4) = ${sys.hp?.max ?? 0}`
+      : `20 + (${sys.digiStats?.sincerity?.total ?? 0} Sincerity × 4) = ${sys.hp?.max ?? 0}`;
 
     const crestRows = CREST_ORDER.map(key => {
       const c     = sys.crests[key] ?? {};
@@ -473,12 +482,12 @@ export class SpiritTamerSheet extends TamerSheet {
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">HP Current</span>
-            <input type="number" name="digiHp.value" value="${sys.digiHp?.value ?? 0}" class="dd-det-input-wide" />
-            <span class="dd-det-hint">/ ${sys.digiHp?.max ?? 0} max</span>
+            <input type="number" name="hp.value" value="${sys.hp?.value ?? 0}" class="dd-det-input-wide" />
+            <span class="dd-det-hint">/ ${sys.hp?.max ?? 0} max</span>
           </div>
           <div class="dd-det-row">
             <span class="dd-det-label">HP Temp</span>
-            <input type="number" name="digiHp.temp" value="${sys.digiHp?.temp ?? 0}" class="dd-det-input-wide" />
+            <input type="number" name="hp.temp" value="${sys.hp?.temp ?? 0}" class="dd-det-input-wide" />
           </div>
         </div>
 
@@ -778,27 +787,23 @@ export class SpiritTamerSheet extends TamerSheet {
     const roll      = await new Roll("1d100").evaluate();
     const isClean   = roll.total > threshold;
 
-    // HP automation: same idea as the regular Digimon sheet's Digivolve
+    // HP automation: identical to the regular Digimon sheet's Digivolve
     // action — recompute Max HP off the new stage's Sincerity total and
     // carry the same difference forward onto current HP (full stays full,
-    // hurt stays hurt by the same amount). This only applies to a
-    // Digimon-form-to-Digimon-form step (Champion -> Ultimate -> Mega,
-    // etc.) where there's an actual prior digiHp max to diff against. The
-    // very first digivolve, out of Tamer Form, has no digiHp history to
-    // carry forward from, so that one's just a full heal into the new form.
-    const wasTamerForm = system.isTamerForm ?? true;
-    const oldDigiHpMax   = this.actor.system.digiHp?.max ?? 0;
-    const oldDigiHpValue = this.actor.system.digiHp?.value ?? 0;
+    // hurt stays hurt by the same amount), every time, including the very
+    // first digivolve out of Tamer Form. Single HP pool now (system.hp) —
+    // same field Tamer Form uses, prepareDerivedData just swaps the max
+    // formula, so there's always a real prior max to diff against.
+    const oldHpMax   = this.actor.system.hp?.max ?? 0;
+    const oldHpValue = this.actor.system.hp?.value ?? 0;
 
     const chosenForm = this.actor.items.get(result.formId);
     if (chosenForm) await this._applyForm(chosenForm, { pathKeyOverride: pathKey });
 
-    const newSinTotal  = this.actor.system.digiStats?.sincerity?.total ?? 0;
-    const newDigiHpMax = 20 + newSinTotal * 4;
-    const newDigiHpValue = wasTamerForm
-      ? newDigiHpMax
-      : Math.max(0, Math.min(newDigiHpMax, oldDigiHpValue + (newDigiHpMax - oldDigiHpMax)));
-    await this.actor.update({ "system.digiHp.max": newDigiHpMax, "system.digiHp.value": newDigiHpValue });
+    const newSinTotal = this.actor.system.digiStats?.sincerity?.total ?? 0;
+    const newHpMax    = 20 + newSinTotal * 4;
+    const newHpValue  = Math.max(0, Math.min(newHpMax, oldHpValue + (newHpMax - oldHpMax)));
+    await this.actor.update({ "system.hp.max": newHpMax, "system.hp.value": newHpValue });
 
     // Record the actual Hope paid for this stage on the Digivolution Path
     // tracker — this is now the ONLY place Hope-per-stage is recorded; Hope

@@ -28,9 +28,7 @@ export class PartySheet extends foundry.appv1.sheets.ActorSheet {
     const isTamerLike = actor.type === "tamer" || actor.type === "spiritTamer";
     const isDigiLike  = actor.type === "digimon" || actor.type === "spiritTamer";
     const D = CONFIG.DIGIMON;
-    const hp = actor.type === "spiritTamer"
-      ? (s.isTamerForm ?? true ? s.hp : s.digiHp)
-      : (actor.type === "dnaDigimon" ? s.hp : s.hp);
+    const hp = s.hp;
     return {
       id:         actor.id,
       name:       actor.name,
@@ -39,7 +37,7 @@ export class PartySheet extends foundry.appv1.sheets.ActorSheet {
       typeLabel:  ({ tamer: "Tamer", digimon: "Digimon", spiritTamer: "Spirit Tamer", dnaDigimon: "DNA Digimon" })[actor.type] ?? actor.type,
       hp:         { value: hp?.value ?? 0, max: hp?.max ?? 0 },
       hasHope:    isTamerLike,
-      hope:       isTamerLike ? { current: s.crests?.hope?.current ?? 0, max: s.crests?.hope?.pool ?? 0 } : null,
+      hope:       isTamerLike ? { current: s.crests?.hope?.current ?? 0, max: computeHopePenalty(actor).effectivePool } : null,
       hasStage:   isDigiLike,
       stageLabel: isDigiLike ? (D.stageLabels[s.defaultStage] ?? s.defaultStage) : null,
       maxStageLabel: isDigiLike ? (D.stageLabels[s.maxDefaultStage] ?? s.maxDefaultStage) : null,
@@ -268,20 +266,16 @@ export class PartySheet extends foundry.appv1.sheets.ActorSheet {
     const s = actor.system;
     const update = {};
 
-    if (actor.type === "spiritTamer") {
-      const isTF = s.isTamerForm ?? true;
-      if (isTF) {
-        update["system.hp.value"] = s.hp?.max ?? 0;
-        update["system.hp.temp"]  = 0;
-      } else {
-        update["system.digiHp.value"] = s.digiHp?.max ?? 0;
-        update["system.digiHp.temp"]  = 0;
-      }
-      update["system.crests.hope.current"] = s.crests?.hope?.pool ?? 0;
-    } else if (actor.type === "tamer") {
+    if (actor.type === "spiritTamer" || actor.type === "tamer") {
+      // Spirit Tamers have a single HP pool now (system.hp) whose max just
+      // switches formula depending on Tamer Form vs Digimon Form — same
+      // field a plain Tamer uses, no branching needed here anymore.
       update["system.hp.value"] = s.hp?.max ?? 0;
       update["system.hp.temp"]  = 0;
-      update["system.crests.hope.current"] = s.crests?.hope?.pool ?? 0;
+      // Rest restores Hope up to whatever it's currently ALLOWED to reach —
+      // a Missed Rests/Meals penalty still in effect (nobody's eaten to
+      // clear it) caps that below the raw pool. See computeHopePenalty().
+      update["system.crests.hope.current"] = computeHopePenalty(actor).effectivePool;
     } else if (actor.type === "digimon") {
       update["system.hp.value"] = s.hp?.max ?? 0;
       update["system.hp.temp"]  = 0;
@@ -377,6 +371,8 @@ export class PartySheet extends foundry.appv1.sheets.ActorSheet {
     const ids = targetIds ?? (this.actor.system.memberIds ?? []);
     const members = ids.map(id => game.actors?.get(id)).filter(Boolean);
 
+    // Pass 1: update everyone's own missed-meal streak and clear whatever
+    // banked food bonus they're no longer holding onto.
     for (const actor of members) {
       const fed = fedActorIds.has(actor.id);
       if (actor.type === "tamer" || actor.type === "spiritTamer") {
@@ -391,6 +387,21 @@ export class PartySheet extends foundry.appv1.sheets.ActorSheet {
 
       if (!fed && actor.system?.bankedFood?.itemName) {
         await actor.update({ "system.bankedFood": { itemName: "", itemImg: "", effect: "", fedAt: 0 } });
+      }
+    }
+
+    // Pass 2: only a Tamer has a Hope Pool, but the penalty is worse of
+    // (their own streak, their linked Digimon partner's streak) — see
+    // computeHopePenalty() in config.js — so this has to run AFTER every
+    // member's streak above is fully settled, not interleaved with it.
+    // Clamp current Hope down to the (possibly now-lower) effective max so
+    // it never reads as more Hope than is actually usable.
+    for (const actor of members) {
+      if (actor.type !== "tamer" && actor.type !== "spiritTamer") continue;
+      const effectiveMax = computeHopePenalty(actor).effectivePool;
+      const curHope = actor.system?.crests?.hope?.current ?? 0;
+      if (curHope > effectiveMax) {
+        await actor.update({ "system.crests.hope.current": effectiveMax });
       }
     }
   }

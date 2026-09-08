@@ -77,9 +77,6 @@ export class DigitalDestinyActor extends Actor {
 
     // Start every new actor at full HP so encounter enemies don't need manual healing
     const hpUpdate = { "system.hp.value": this.system.hp.max };
-    if (this.type === "spiritTamer") {
-      hpUpdate["system.digiHp.value"] = this.system.digiHp.max;
-    }
     await this.update(hpUpdate);
   }
 
@@ -164,6 +161,12 @@ export class DigitalDestinyActor extends Actor {
   }
 
   _prepareSpiritTamerData(system) {
+    // Snapshot the actual stored HP value BEFORE _prepareTamerData clamps
+    // it against the (usually much lower) Tamer Form max below — Digimon
+    // Form needs to clamp against its own max using this original number,
+    // not whatever Tamer Form's clamp already truncated it down to.
+    const rawHpValue = system.hp?.value;
+
     // Run full Tamer preparation (crests, gear bonuses, tamer HP, skill bonuses, etc.)
     this._prepareTamerData(system);
 
@@ -183,20 +186,18 @@ export class DigitalDestinyActor extends Actor {
                                    + (system.digiStats[stat].conditional ?? 0);
     }
 
-    // HP max depends on form:
-    // Tamer Form → 12 + (crest Sincerity rank × 4), same formula as regular Tamers
-    // Digimon Form → 20 + (digiStats Sincerity total × 4)
-    if (!system.digiHp) system.digiHp = { value: 10, max: 10, temp: 0 };
-    const hpMaxBonus = system.statusMods?.hpMaxBonus ?? 0;
-    if (system.isTamerForm ?? true) {
-      const sincerity     = system.crests.sincerity ?? {};
-      const sincEffective = (sincerity.rank ?? 0) + (sincerity.primaryCrestBonus ?? 0) + (sincerity.gearBonus ?? 0);
-      system.digiHp.max = 12 + sincEffective * 4 + hpMaxBonus;
-    } else {
-      const sinTotal = system.digiStats.sincerity?.total ?? 0;
-      system.digiHp.max = 20 + sinTotal * 4 + hpMaxBonus;
+    // Single HP pool (system.hp) — _prepareTamerData() above already set
+    // system.hp.max using the Tamer Form formula (12 + crest Sincerity rank
+    // × 4). Override it here with the Digimon Form formula (20 + digiStats
+    // Sincerity total × 4) whenever the Spirit Tamer is currently in
+    // Digimon Form — same stored value carries across the form switch,
+    // only the max (and the value's clamp against it) changes.
+    if (!(system.isTamerForm ?? true)) {
+      const hpMaxBonus = system.statusMods?.hpMaxBonus ?? 0;
+      const sinTotal    = system.digiStats.sincerity?.total ?? 0;
+      system.hp.max   = 20 + sinTotal * 4 + hpMaxBonus;
+      system.hp.value = Math.min(rawHpValue ?? system.hp.max, system.hp.max);
     }
-    system.digiHp.value = Math.min(system.digiHp.value ?? system.digiHp.max, system.digiHp.max);
   }
 
   _prepareDigimonData(system) {

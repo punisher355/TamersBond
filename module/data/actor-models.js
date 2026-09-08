@@ -169,11 +169,6 @@ export class SpiritTamerData extends TamerData {
         total: new f.NumberField({ initial: 1500, integer: true, min: 0 }),
         spent: new f.NumberField({ initial: 0,    integer: true, min: 0 })
       }),
-      digiHp: new f.SchemaField({
-        value: new f.NumberField({ initial: 10, integer: true }),
-        max:   new f.NumberField({ initial: 10, integer: true }),
-        temp:  new f.NumberField({ initial: 0,  integer: true })
-      }),
       digiStats: new f.SchemaField({
         courage:     statField(), friendship: statField(), love:        statField(),
         knowledge:   statField(), sincerity:  statField(), reliability: statField()
@@ -329,7 +324,17 @@ export class PartyData extends TypeDataModel {
       memberIds:    new f.ArrayField(new f.StringField()),
       sheetColor:   new f.StringField({ initial: "#2e7d32" }),
       sheetBgColor: new f.StringField({ initial: "#f0ece4" }),
-      lastRestAt:   new f.NumberField({ initial: 0 })
+      lastRestAt:   new f.NumberField({ initial: 0 }),
+      // Sub-folders inside this party's pinned group in the Actors sidebar
+      // (see PartyActorDirectory.js) — purely cosmetic filing, e.g. one
+      // group per player to cluster their Tamer + Digimon together. groups
+      // is the list of group definitions; memberGroups maps an actor ID to
+      // the ID of the group it's filed under (absent/blank = ungrouped).
+      groups:       new f.ArrayField(new f.SchemaField({
+        id:   new f.StringField({ initial: "" }),
+        name: new f.StringField({ initial: "" })
+      })),
+      memberGroups: new f.ObjectField({ initial: {} })
     };
   }
 }
