@@ -213,6 +213,14 @@ export class SpiritTamerSheet extends TamerSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
+    // Enable drag-to-sidebar (and drag-to-another-actor-sheet) for every
+    // item row on this sheet — the rows already carry dd-item-row/data-item-id
+    // in the template, but without this wiring the browser's native drag
+    // never gets Foundry's own item-uuid payload attached to it, so a drop
+    // on the Items sidebar silently did nothing.
+    html.find('.dd-item-row[data-item-id]').each((_, el) => {
+      el.addEventListener("dragstart", ev => this._onDragStart(ev), false);
+    });
 
     html.find('.form-set-current').on('click', ev => this._onSetCurrentForm(ev));
     html.find('.form-remove').on('click',      ev => this._onRemoveKnownForm(ev));

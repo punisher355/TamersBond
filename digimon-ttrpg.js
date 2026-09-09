@@ -22,7 +22,9 @@ import { DigimonLookup }            from "./module/DigimonLookup.js";
 import { ClassLookup }              from "./module/ClassLookup.js";
 import { ItemLookup }               from "./module/ItemLookup.js";
 import { EncounterGenerator }       from "./module/EncounterGenerator.js";
-import { TokenActionHUD }           from "./module/TokenActionHUD.js";
+import { TokenActionHUD, registerHudPositionSetting } from "./module/TokenActionHUD.js";
+import { registerTokenStatusOverlay } from "./module/TokenStatusOverlay.js";
+import { registerTokenSpaceBorder }   from "./module/TokenSpaceBorder.js";
 import { registerChatColorHooks, registerChatColorSettings } from "./module/chat-colors.js";
 import { ActorDirectory as PartyActorDirectory, registerPartySidebarSettings } from "./module/PartyActorDirectory.js";
 
@@ -97,6 +99,9 @@ Hooks.once("init", () => {
 
   registerChatColorSettings();
   registerPartySidebarSettings();
+  registerHudPositionSetting();
+  registerTokenStatusOverlay();
+  registerTokenSpaceBorder();
 
   // Pin Party actors at the top of the Actors sidebar, folder-style. Wrapped
   // defensively — if this Foundry version's sidebar API doesn't line up,

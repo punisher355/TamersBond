@@ -164,9 +164,21 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
     });
     context.statExpTotal = statExpTotal;
 
+    // Read the real derived HP max off the actor (set once, centrally, by
+    // Actor#_prepareDigimonData) instead of recomputing it here — this sheet
+    // was reimplementing the same "20 + Sincerity x 4" formula on its own
+    // and silently dropping the statusMods.hpMaxBonus term the real
+    // derivation includes, so a Digimon with any active Max HP bonus (from
+    // an effect, etc.) showed a lower number here than everywhere else that
+    // reads system.hp.max directly (the Token Action HUD included) — hence
+    // the sheet/HUD mismatch. Recomputing sinTotal/hpMaxBonus here is only
+    // for the formula text, not for the actual number shown.
     const sinTotal    = _statTotals.sincerity ?? 0;
-    context.hpMax     = 20 + sinTotal * 4;
-    context.hpFormula = `20 + (${sinTotal} Sincerity × 4) = ${context.hpMax}`;
+    const hpMaxBonus  = system.statusMods?.hpMaxBonus ?? 0;
+    context.hpMax     = system.hp?.max ?? (20 + sinTotal * 4 + hpMaxBonus);
+    context.hpFormula = hpMaxBonus
+      ? `20 + (${sinTotal} Sincerity × 4) + ${hpMaxBonus} status bonus = ${context.hpMax}`
+      : `20 + (${sinTotal} Sincerity × 4) = ${context.hpMax}`;
 
     // Skills — read/write directly on this actor, no Tamer required.
     context.skillGroups = CREST_ORDER.map(statKey => {
@@ -320,6 +332,32 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.npc-form-set-current').on('click', ev => this._onSetCurrentForm(ev));
     html.find('.npc-form-remove').on('click',      ev => this._onRemoveKnownForm(ev));
     html.find('.npc-form-add-btn').on('click',     ev => this._onAddFormFromCompendium(ev));
+    html.find('.npc-rename-to-form').on('click',   ev => this._onRenameToForm(ev));
+  }
+
+  // Renames the actor (character sheet title) and its prototype token —
+  // plus any already-placed tokens on the current scene — to match whatever
+  // form is currently active. Handy since digivolving via the star doesn't
+  // touch the name (an NPC's own name is often hand-picked, or a duplicate
+  // of another copy), so this is a one-click way to sync it up when you do
+  // want the sheet/token to read as the new form.
+  async _onRenameToForm(ev) {
+    ev.preventDefault();
+    const currentFormId = this.actor.system.currentFormId;
+    const item = currentFormId ? this.actor.items.get(currentFormId) : null;
+    if (!item) {
+      ui.notifications.warn("No current form set — nothing to rename to.");
+      return;
+    }
+    await this.actor.update({
+      name: item.name,
+      "prototypeToken.name": item.name
+    });
+    const placed = canvas.tokens?.placeables?.filter(t => t.actor?.id === this.actor.id) ?? [];
+    for (const token of placed) {
+      await token.document.update({ name: item.name });
+    }
+    ui.notifications.info(`Renamed to ${item.name}.`);
   }
 
   // --- Digivolving tab: known forms / current form ---

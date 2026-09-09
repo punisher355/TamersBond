@@ -65,5 +65,40 @@ export class DigimonFormSheet extends foundry.appv1.sheets.ItemSheet {
         ui.notifications.info("UUID copied to clipboard.");
       });
     });
+
+    // Open the signature move's own item sheet — same UUID-lookup approach
+    // used by DigimonLookup: look the move name up in the Digimon Moves
+    // compendium's index, build its Compendium UUID from the pack's own
+    // collection id + the entry's _id, then resolve it with fromUuid so the
+    // returned document has a proper pack back-reference before rendering.
+    root.querySelector(".dfc-open-sigmove-btn")?.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const moveName = (this.item.system.signatureMove ?? "").trim();
+      if (!moveName) {
+        ui.notifications.warn("No signature move set for this form yet.");
+        return;
+      }
+      const pack = game.packs.get("digital-destiny.digimon-moves");
+      if (!pack) {
+        ui.notifications.warn("Digimon Moves compendium not found.");
+        return;
+      }
+      try {
+        const index = await pack.getIndex();
+        const entry = index.find(e => e.name === moveName);
+        if (!entry) {
+          ui.notifications.warn(`Signature move "${moveName}" not found in the Digimon Moves compendium.`);
+          return;
+        }
+        const uuid = `Compendium.${pack.collection}.Item.${entry._id}`;
+        const move = await fromUuid(uuid);
+        if (move) move.sheet.render(true);
+        else ui.notifications.warn(`Couldn't open "${moveName}" — the move document failed to resolve.`);
+      } catch (err) {
+        console.error("DigimonFormSheet | Error opening signature move:", err);
+        ui.notifications.error("Error opening the signature move sheet — see console.");
+      }
+    });
   }
 }

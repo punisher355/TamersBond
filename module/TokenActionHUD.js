@@ -2,11 +2,26 @@ import { performAttackRoll, getActorStatTotals } from "./combat.js";
 
 const FLAG_NS  = "digital-destiny";
 const FLAG_KEY = "hudActions";
+const HUD_POS_KEY = "hudCustomPos";
 
 function _controlledActor() {
   const token = canvas?.tokens?.controlled?.[0];
   if (!token?.isOwner) return null;
   return token.actor ?? null;
+}
+
+// No more picking from a fixed list of spots that may or may not clear
+// everything on a given screen — instead the HUD starts in a sensible
+// bottom-right default and can just be dragged by its header to wherever
+// actually has room on THIS player's screen. Remembered per-client (not
+// shared with anyone else at the table) so it sticks across reloads.
+export function registerHudPositionSetting() {
+  game.settings.register(FLAG_NS, HUD_POS_KEY, {
+    scope:   "client",
+    config:  false,
+    type:    Object,
+    default: null
+  });
 }
 
 export class TokenActionHUD {
@@ -131,7 +146,7 @@ export class TokenActionHUD {
       : "";
 
     const panel = `<div id="dd-token-hud" class="dd-token-hud">
-      <div class="dd-hud-header">
+      <div class="dd-hud-header" title="Drag to move this panel">
         <img class="dd-hud-portrait" src="${img}" alt="">
         <span class="dd-hud-name">${name}</span>
       </div>
@@ -161,7 +176,56 @@ export class TokenActionHUD {
 
     document.getElementById("dd-token-hud")?.remove();
     document.body.insertAdjacentHTML("beforeend", panel);
+    this._applySavedPosition();
     this._bindEvents(actor);
+    this._bindDrag();
+  }
+
+  // A dragged-and-dropped position overrides the default bottom-right CSS
+  // spot entirely (switches to explicit top/left so it stays exactly where
+  // it was left, regardless of window size).
+  _applySavedPosition() {
+    const pos = game.settings.get(FLAG_NS, HUD_POS_KEY);
+    if (!pos) return;
+    const panelEl = document.getElementById("dd-token-hud");
+    if (!panelEl) return;
+    panelEl.style.right  = "auto";
+    panelEl.style.bottom = "auto";
+    panelEl.style.left   = `${pos.left}px`;
+    panelEl.style.top    = `${pos.top}px`;
+  }
+
+  // Drag-to-reposition by the header — release anywhere and that becomes
+  // this player's spot from now on (saved to the client-scoped setting).
+  _bindDrag() {
+    const panelEl = document.getElementById("dd-token-hud");
+    const header  = panelEl?.querySelector(".dd-hud-header");
+    if (!panelEl || !header) return;
+
+    header.addEventListener("mousedown", ev => {
+      if (ev.button !== 0) return;
+      ev.preventDefault();
+      const startRect = panelEl.getBoundingClientRect();
+      const startX = ev.clientX;
+      const startY = ev.clientY;
+      panelEl.style.right  = "auto";
+      panelEl.style.bottom = "auto";
+
+      const onMove = mv => {
+        const left = Math.min(Math.max(0, startRect.left + (mv.clientX - startX)), window.innerWidth  - 40);
+        const top  = Math.min(Math.max(0, startRect.top  + (mv.clientY - startY)), window.innerHeight - 40);
+        panelEl.style.left = `${left}px`;
+        panelEl.style.top  = `${top}px`;
+      };
+      const onUp = () => {
+        document.removeEventListener("mousemove", onMove);
+        document.removeEventListener("mouseup", onUp);
+        const rect = panelEl.getBoundingClientRect();
+        game.settings.set(FLAG_NS, HUD_POS_KEY, { left: Math.round(rect.left), top: Math.round(rect.top) });
+      };
+      document.addEventListener("mousemove", onMove);
+      document.addEventListener("mouseup", onUp);
+    });
   }
 
   _remove() {

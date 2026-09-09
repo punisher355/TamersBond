@@ -170,9 +170,35 @@ function _gmTargetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags
 function _modRow() {
   return `<div class="modifier-row flexrow">
     <input type="text" class="mod-reason" placeholder="Reason" />
-    <input type="number" class="mod-value" value="0" style="width:55px;" />
+    <input type="text" class="mod-value" value="0" placeholder="e.g. 3, -2, 1d6" />
     <button type="button" class="mod-remove" title="Remove">×</button>
   </div>`;
+}
+
+// A modifier's typed value can be a plain number ("3", "-2") or a dice
+// formula ("1d6", "2d12", "-1d4"). Plain numbers are parsed directly;
+// anything else is evaluated as its own Roll and the total is used. An
+// unparseable formula is reported to the user and treated as 0 rather than
+// silently breaking the whole attack roll.
+async function _resolveModifiers(mods) {
+  const out = [];
+  for (const m of mods) {
+    const raw = (m.raw ?? "").trim();
+    if (!raw) { out.push({ reason: m.reason, raw: "0", value: 0 }); continue; }
+    if (/^[+-]?\d+(\.\d+)?$/.test(raw)) {
+      out.push({ reason: m.reason, raw, value: parseFloat(raw) });
+      continue;
+    }
+    try {
+      const roll = await new Roll(raw).evaluate();
+      out.push({ reason: m.reason, raw, value: roll.total, roll });
+    } catch (err) {
+      console.warn("DigitalDestiny | Invalid modifier formula:", raw, err);
+      ui.notifications.warn(`Modifier "${raw}"${m.reason ? ` (${m.reason})` : ""} isn't a valid number or dice formula — treated as 0.`);
+      out.push({ reason: m.reason, raw, value: 0, invalid: true });
+    }
+  }
+  return out;
 }
 
 async function _rollDialog(title, hitPreview, dmgPreview, isGrapple) {
@@ -207,7 +233,7 @@ async function _rollDialog(title, hitPreview, dmgPreview, isGrapple) {
             const read = cls => {
               const out = [];
               html.find(`.${cls} .modifier-row`).each((_, r) => {
-                out.push({ reason: $(r).find('.mod-reason').val().trim(), value: parseInt($(r).find('.mod-value').val()) || 0 });
+                out.push({ reason: $(r).find('.mod-reason').val().trim(), raw: $(r).find('.mod-value').val().trim() });
               });
               return out;
             };
@@ -299,6 +325,11 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   );
   if (!input) return;
 
+  // Modifier rows may hold plain numbers or dice formulas (e.g. "1d6") —
+  // resolve them to numeric totals before they're summed into the rolls.
+  input.hitMods = await _resolveModifiers(input.hitMods);
+  input.dmgMods = await _resolveModifiers(input.dmgMods ?? []);
+
   // ── Roll the dice ──
   const callOutBonus = input.callOutUsed ? 1 : 0;
   const hitBonus = input.hitMods.reduce((a, m) => a + m.value, 0) + callOutBonus;
@@ -321,9 +352,15 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   const dmgDiceHtml = dmgRoll ? await dmgRoll.render() : null;
 
   // ── Modifier chips ──
-  const chip = m => `<span class="dd-mod-chip">${m.value >= 0 ? "+" : ""}${m.value}${m.reason ? ` (${m.reason})` : ""}</span>`;
-  const hitModChips = input.hitMods.filter(m => m.value || m.reason).map(chip).join(" ");
-  const dmgModChips = (input.dmgMods ?? []).filter(m => m.value || m.reason).map(chip).join(" ");
+  const chip = m => {
+    const sign        = m.value >= 0 ? "+" : "";
+    const isFormula    = m.raw && m.raw !== `${m.value}` && !m.invalid;
+    const formulaPart  = isFormula ? ` [${m.raw}]` : "";
+    const invalidPart  = m.invalid ? ` (invalid: "${m.raw}")` : "";
+    return `<span class="dd-mod-chip">${sign}${m.value}${formulaPart}${invalidPart}${m.reason ? ` (${m.reason})` : ""}</span>`;
+  };
+  const hitModChips = input.hitMods.filter(m => m.value || m.reason || m.invalid).map(chip).join(" ");
+  const dmgModChips = (input.dmgMods ?? []).filter(m => m.value || m.reason || m.invalid).map(chip).join(" ");
 
   // ── Per-target sections ──
   const attackerAttr = actor.system?.attribute ?? "";

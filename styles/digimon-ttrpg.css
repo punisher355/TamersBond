@@ -1184,7 +1184,7 @@
 }
 
 .skill-roll-dialog .mod-value {
-  width: 64px;
+  width: 92px;
   border: 1px solid #c0c8d0;
   border-radius: 4px;
   padding: 3px 6px;
@@ -3306,6 +3306,28 @@
   border-color: #4a6fa5;
 }
 
+.dfc-sigmove-row { display: flex; align-items: center; gap: 5px; }
+.dfc-sigmove-row input[type="text"] { flex: 1; }
+.dfc-open-sigmove-btn {
+  background: #1a2040;
+  border: 1px solid #2a3560;
+  color: #7ab8f5;
+  border-radius: 4px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  font-size: 0.75em;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.dfc-open-sigmove-btn:hover {
+  border-color: #4a90d9;
+  color: #4a90d9;
+}
+
 /* Body */
 .dfc-body {
   flex: 1;
@@ -3727,7 +3749,30 @@
 
 .digimon-lookup .sig-move-card:active { cursor: grabbing; }
 
-.digimon-lookup .move-name  { font-weight: 700; color: #e0d8c8; font-size: 0.95em; }
+.digimon-lookup .move-name  {
+  font-weight: 700; color: #e0d8c8; font-size: 0.95em;
+  display: flex; align-items: center; gap: 6px;
+}
+.digimon-lookup .open-move-sheet-btn {
+  background: none;
+  border: 1px solid #2a4060;
+  color: #4a7090;
+  border-radius: 2px;
+  padding: 0;
+  width: 13px;
+  height: 13px;
+  font-size: 0.5em;
+  cursor: pointer;
+  line-height: 1;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.digimon-lookup .open-move-sheet-btn:hover {
+  border-color: #4a90d9;
+  color: #4a90d9;
+}
 .digimon-lookup .move-meta  { font-size: 0.8em; color: #8090b0; }
 .digimon-lookup .move-tags  { font-size: 0.78em; color: #7ab8f5; font-style: italic; }
 .digimon-lookup .drag-hint-sm { font-size: 0.68em; color: #3a5070; margin-left: auto; }
@@ -4480,9 +4525,14 @@
 
 /* ── Token Action HUD ── */
 .dd-token-hud {
+  /* Bottom-right by default — clear of the sidebar (which is usually ~330px
+     wide) and off to the hotbar's right. This is only a starting point,
+     though: drag the header to put it wherever actually has room on your
+     own screen (position is remembered per-player after that, overriding
+     these bottom/right values with an explicit left/top). */
   position: fixed;
-  bottom: 65px;
-  left: 10px;
+  bottom: 10px;
+  right: 340px;
   width: 220px;
   max-height: calc(100vh - 130px);
   overflow-y: auto;
@@ -4505,6 +4555,7 @@
   border-bottom: 1px solid #5a4a30;
   background: rgba(90, 60, 20, 0.35);
   border-radius: 6px 6px 0 0;
+  cursor: move;
 }
 .dd-hud-portrait {
   width: 36px;

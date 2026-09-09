@@ -90,7 +90,10 @@
     <div class="lookup-section">
       <div class="section-title">Signature Move</div>
       <div class="sig-move-card" draggable="true" data-uuid="{{sigMove.uuid}}">
-        <span class="move-name">{{sigMove.name}}</span>
+        <span class="move-name">
+          {{sigMove.name}}
+          <button class="open-move-sheet-btn" type="button" title="Open move item sheet"><i class="fas fa-external-link-alt"></i></button>
+        </span>
         <span class="move-meta">{{sigMove.element}} · PR {{sigMove.pr}} ({{sigMove.prDice}})</span>
         {{#if sigMove.tags}}
         <span class="move-tags">{{sigMove.tags}}</span>

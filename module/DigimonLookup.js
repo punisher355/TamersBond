@@ -253,6 +253,25 @@ export class DigimonLookup extends Application {
       });
     }
 
+    // Open the Foundry item sheet for the signature move — same
+    // fromUuid-via-manually-built-Compendium-uuid approach as the form's own
+    // open-sheet-btn above, using the move's own pack instead of the form's.
+    root.querySelector(".open-move-sheet-btn")?.addEventListener("click", async e => {
+      e.stopPropagation();
+      if (!this._sigMoveItem) return;
+      const rawId = this._sigMoveItem?._source?._id ?? this._sigMoveItem?._id ?? this._sigMoveItem?.id ?? "";
+      const uuid  = rawId && this._movePackCollection
+        ? `Compendium.${this._movePackCollection}.Item.${rawId}`
+        : "";
+      if (uuid) {
+        try {
+          const item = await fromUuid(uuid);
+          if (item) { item.sheet.render(true); return; }
+        } catch { /* fall through to direct render */ }
+      }
+      this._sigMoveItem.sheet?.render(true);
+    });
+
     // Drag the signature move card
     const moveCard = root.querySelector(".sig-move-card");
     if (moveCard) {

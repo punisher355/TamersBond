@@ -109,7 +109,14 @@
     {{!-- Digivolving tab --}}
     <div class="tab flexcol" data-group="primary" data-tab="digivolving">
 
-      <h3 class="section-header">Current Form</h3>
+      <h3 class="section-header">Current Form
+        {{#if currentFormData}}
+        <button type="button" class="npc-rename-to-form" style="margin-left:auto; width:auto; padding:2px 10px;"
+                title="Rename this character sheet and its token to match the current form">
+          <i class="fas fa-signature"></i> Rename Sheet &amp; Token to This Form
+        </button>
+        {{/if}}
+      </h3>
       {{#if currentFormData}}
       <div class="digi-current-form-card digi-form-row dd-item-row">
         <div class="digi-current-form-inner">
@@ -284,7 +291,7 @@
       {{#if effectItems.length}}
       <div class="effect-active-list">
         {{#each effectItems}}
-        <div class="effect-item-row flexrow" data-item-id="{{this.id}}" style="align-items:center; gap:6px; padding:4px 2px; border-bottom:1px solid #d0c8bc;">
+        <div class="effect-item-row dd-item-row flexrow" data-item-id="{{this.id}}" draggable="true" style="align-items:center; gap:6px; padding:4px 2px; border-bottom:1px solid #d0c8bc;">
           <img src="{{this.img}}" alt="" style="width:24px; height:24px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
           <span class="effect-open" data-item-id="{{this.id}}" style="flex:1; cursor:pointer; font-weight:600; color:#1a1a2e; text-decoration:underline dotted;" title="Click to edit settings">{{this.name}}</span>
           <span class="flexrow" style="align-items:center; gap:2px; flex-shrink:0;">
