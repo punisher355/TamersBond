@@ -303,6 +303,17 @@ DIGIMON.skills = {
   ]
 };
 
+// Which crest a skill key belongs to (e.g. "coreDrive" -> "sincerity") — for
+// reading an actor's own rank at that skill (system.skills[stat][skill].rank)
+// when only the skill key is known, such as a thrown item's target check
+// (see performItemInflictRoll in combat.js).
+export function skillToStat(skillKey) {
+  for (const [stat, group] of Object.entries(DIGIMON.skills ?? {})) {
+    if (group.some(sk => sk.key === skillKey)) return stat;
+  }
+  return null;
+}
+
 // Digivolution roll defaults (d100, before Hope modifier)
 DIGIMON.digivolutionThreshold     = 50;
 DIGIMON.darkDigivolutionThreshold = 25;
@@ -340,6 +351,18 @@ export function hexToRgbTriplet(hex) {
 // This reads straight off the Digivolution Path tracker's hopeSpent boxes —
 // that tracker is the one source of truth, so this is always derived, never
 // separately stored/incremented.
+//
+// BUG FIX: DIGIMON.stageOrder only lists the six true stages (fresh through
+// mega) — it deliberately has no "megaII" entry, since Mega II isn't a
+// stage to climb past, it's a second known Mega form living in its own path
+// slot (digivolutionPath.megaII) so it can carry its own Hope Spent without
+// overwriting the first Mega form's. But that meant this loop, which only
+// ever walks stageOrder's keys, could never reach digivolutionPath.megaII
+// at all — any Hope typed into the Mega II box was silently invisible to
+// this total, no matter what. Fixed by special-casing the "mega" step: use
+// whichever of the two Mega slots (mega vs megaII) actually matches the
+// Digimon's current form, so swapping between two known Mega forms always
+// charges the right one's Hope Per Turn.
 export function computeHopePerTurn(system) {
   const order      = DIGIMON.stageOrder;
   const defaultIdx = order.indexOf(system?.defaultStage ?? "rookie");
@@ -347,7 +370,15 @@ export function computeHopePerTurn(system) {
   if (defaultIdx < 0 || currentIdx < 0 || currentIdx <= defaultIdx) return 0;
   let total = 0;
   for (let i = defaultIdx + 1; i <= currentIdx; i++) {
-    total += system?.digivolutionPath?.[order[i]]?.hopeSpent ?? 0;
+    const stageKey = order[i];
+    if (stageKey === "mega") {
+      const megaEntry   = system?.digivolutionPath?.mega;
+      const megaIIEntry = system?.digivolutionPath?.megaII;
+      const megaIIActive = !!megaIIEntry?.formId && megaIIEntry.formId === (system?.currentFormId ?? "");
+      total += (megaIIActive ? megaIIEntry : megaEntry)?.hopeSpent ?? 0;
+      continue;
+    }
+    total += system?.digivolutionPath?.[stageKey]?.hopeSpent ?? 0;
   }
   return total;
 }
@@ -459,6 +490,41 @@ export function computeDnaStatBreakdown(actor) {
     };
   }
   return { partnerA, partnerB, formItem, stats };
+}
+
+// ── Signature move resolution ────────────────────────────────────────────────
+//
+// A Digimon Form's signature move can be linked two ways: a direct UUID
+// (system.signatureMoveUuid, set by dragging a move item onto the Form
+// sheet — works for a compendium move OR a homebrew move sitting anywhere
+// in the world) or, for backward compatibility with every form built
+// before this existed, a plain name matched against the Digimon Moves
+// compendium (system.signatureMove). The UUID wins when both are present;
+// the name lookup is the fallback, exactly as it always worked. Every
+// place that attaches a form's signature move to an actor (DigimonSheet,
+// NpcDigimonSheet, SpiritTamerSheet, EncounterGenerator) should go through
+// this one function so the two paths never drift apart.
+export async function resolveSignatureMoveDocument(formSystem) {
+  const uuid = (formSystem?.signatureMoveUuid ?? "").trim();
+  if (uuid) {
+    try {
+      const doc = await fromUuid(uuid);
+      if (doc) return doc;
+      console.warn("DigitalDestiny | Linked signature move UUID didn't resolve to a document, falling back to name lookup:", uuid);
+    } catch (err) {
+      console.warn("DigitalDestiny | Error resolving signature move UUID, falling back to name lookup:", uuid, err);
+    }
+  }
+
+  const name = (formSystem?.signatureMove ?? "").trim();
+  if (!name) return null;
+
+  const pack = game.packs.get("digital-destiny.digimon-moves");
+  if (!pack) return null;
+  const index = await pack.getIndex();
+  const entry = index.find(e => e.name === name);
+  if (!entry) return null;
+  return pack.getDocument(entry._id);
 }
 
 // Convert a move's tags object into a readable bracket-notation string, e.g. "[MELEE] [BURN 2,3]"

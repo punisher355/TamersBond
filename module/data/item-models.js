@@ -123,6 +123,77 @@ export class GearData extends TypeDataModel {
           recovery: new f.NumberField({ initial: 0 })
         })
       }),
+      // On Use, Grant Next-Attack Bonus — e.g. "add 1d4 to your next attack".
+      // When enabled, using this item (the Use button on Gear, or burning a
+      // Gadget charge) auto-creates a one-shot "effect" Item on the actor
+      // carrying this same target/formula in its own nextAttack field (see
+      // EffectData above), which performAttackRoll() in combat.js then
+      // offers pre-filled on the actor's next Hit/Damage roll and consumes
+      // once it's actually used.
+      onUseBonus: new f.SchemaField({
+        enabled: new f.BooleanField({ initial: false }),
+        target:  new f.StringField({ initial: "damage" }),
+        formula: new f.StringField({ initial: "" })
+      }),
+      // On Use, Grant Next-Skill-Check Bonus — e.g. "add 1d4 to your next
+      // Mend check". Same one-shot pattern as onUseBonus above, but for a
+      // named skill check instead of an attack roll: using this item creates
+      // a one-shot "effect" Item carrying nextSkillCheck (see EffectData),
+      // which each sheet's _onSkillRoll() offers pre-filled on the matching
+      // skill's next roll and consumes once actually used. Empty skill
+      // means "GM's call" — offered on every skill roll until used.
+      onUseSkillBonus: new f.SchemaField({
+        enabled: new f.BooleanField({ initial: false }),
+        skill:   new f.StringField({ initial: "" }),
+        formula: new f.StringField({ initial: "" })
+      }),
+      // On Use, Restore HP — immediate, not a deferred bonus. formula is a
+      // flat number or dice string ("1d6"), resolved and applied to the
+      // chosen target's HP the moment the item is used.
+      onUseHeal: new f.SchemaField({
+        enabled: new f.BooleanField({ initial: false }),
+        formula: new f.StringField({ initial: "" })
+      }),
+      // On Use, Restore Hope — immediate. Only meaningful on a Tamer/Spirit
+      // Tamer (the only actor types with a Hope Pool); resolved the same way
+      // as onUseHeal.
+      onUseRestoreHope: new f.SchemaField({
+        enabled: new f.BooleanField({ initial: false }),
+        formula: new f.StringField({ initial: "" })
+      }),
+      // On Use, Cure Status — immediate. status is one of the canonical
+      // status-effect keys used by combat.js's _EFFECT_TEMPLATES (e.g.
+      // "poison", "sleep", "burn"...) or "" to remove every status effect
+      // on the target at once (e.g. First Aid Kit's "remove one status
+      // effect" is close enough to model as "clears everything" — flagged
+      // per-item if that's ever too strong for a specific item).
+      onUseCureStatus: new f.SchemaField({
+        enabled: new f.BooleanField({ initial: false }),
+        status:  new f.StringField({ initial: "" })
+      }),
+      // On Use, Override Next Attack's Element/Attribute — grants
+      // nextAttackOverride (see EffectData above) on the resolved recipient
+      // (same target-resolution as onUseHeal/onUseCureStatus).
+      onUseAttackOverride: new f.SchemaField({
+        enabled:   new f.BooleanField({ initial: false }),
+        element:   new f.StringField({ initial: "" }),
+        attribute: new f.StringField({ initial: "" })
+      }),
+      // On Use, Inflict Status On A Target — "throw at an enemy within 6
+      // spaces, on a failed <checkSkill> check (DN <dn>) inflict <status>."
+      // Reads game.user.targets (same as an attack roll) and posts its own
+      // chat card with a reference roll for the target's check plus an
+      // always-available Apply button (see performItemInflictRoll() in
+      // combat.js) — mirrors the attack card's own GM-trust apply flow
+      // rather than auto-resolving success/failure itself.
+      onUseInflictStatus: new f.SchemaField({
+        enabled:    new f.BooleanField({ initial: false }),
+        checkSkill: new f.StringField({ initial: "coreDrive" }),
+        dn:         new f.NumberField({ initial: 10, integer: true }),
+        status:     new f.StringField({ initial: "" }),
+        x:          new f.NumberField({ initial: 1, integer: true }),
+        y:          new f.NumberField({ initial: 0, integer: true })
+      }),
       notes: new f.StringField({ initial: "" })
     };
   }
@@ -172,6 +243,42 @@ export class EffectData extends TypeDataModel {
       })),
       duration: new f.SchemaField({
         unit: new f.StringField({ initial: "encounter" })
+      }),
+      // "Add 1d4 to your next attack" — a one-shot bonus, not an ongoing
+      // passive like the rules[] array above. target picks which roll(s)
+      // it offers itself on ("hit", "damage", or "both"); formula is free
+      // text, same as an attack-roll modifier box (a plain number or a
+      // dice formula like "1d4"). performAttackRoll() in combat.js pre-fills
+      // it into the roll dialog and deletes this effect once it's actually
+      // used — removing the pre-filled row before rolling leaves it alone
+      // for a later attack instead.
+      nextAttack: new f.SchemaField({
+        enabled: new f.BooleanField({ initial: false }),
+        target:  new f.StringField({ initial: "damage" }),
+        formula: new f.StringField({ initial: "" })
+      }),
+      // "Add 1d4 to your next Mend check" — the skill-check equivalent of
+      // nextAttack above. skill is a skill key ("mend", "coreDrive", ...)
+      // or "" to offer itself on any skill roll. Each sheet's _onSkillRoll()
+      // pre-fills it via collectNextSkillBonuses() (module/roll-helpers.js)
+      // and deletes this effect once it's actually rolled with.
+      nextSkillCheck: new f.SchemaField({
+        enabled: new f.BooleanField({ initial: false }),
+        skill:   new f.StringField({ initial: "" }),
+        formula: new f.StringField({ initial: "" })
+      }),
+      // "Your Digimon's next attack deals Fire damage instead of its natural
+      // element" / "...is treated as Vaccine type instead of its natural
+      // Attribute" — a one-shot OVERRIDE (not a bonus) of which element
+      // and/or Attribute performAttackRoll() in combat.js uses for its
+      // weakness/advantage multiplier lookup on the very next attack.
+      // Either field can be set alone; empty means "don't override that
+      // one." Consumed (deleted) the moment that next attack is rolled,
+      // same as nextAttack/nextSkillCheck above.
+      nextAttackOverride: new f.SchemaField({
+        enabled:   new f.BooleanField({ initial: false }),
+        element:   new f.StringField({ initial: "" }),
+        attribute: new f.StringField({ initial: "" })
       })
     };
   }
@@ -208,6 +315,14 @@ export class DigimonFormData extends TypeDataModel {
         reliability: new f.NumberField({ initial: 0 })
       }),
       signatureMove:   new f.StringField({ initial: "" }),
+      // UUID of a move Item anywhere (compendium OR a world item) — set by
+      // dragging a move onto the Digimon Form sheet. Preferred over the
+      // name-matched compendium lookup above when present, so a GM can
+      // homebrew a custom attack for a homebrew Digimon without it needing
+      // to exist (by that exact name) in the Digimon Moves compendium.
+      // signatureMove (the name field) is kept in sync for display and as
+      // a fallback if the linked item is ever deleted.
+      signatureMoveUuid: new f.StringField({ initial: "" }),
       digivolves_from: new f.ArrayField(new f.StringField()),
       digivolves_to:   new f.ArrayField(new f.StringField()),
       // GM-ruled exception: some campaigns grant a Digimon an extra known

@@ -22,12 +22,12 @@
       {{/if}}
     </div>
     {{/if}}
-    <div class="header-panels flexrow">
+    <div class="header-panels dd-header-nowrap flexrow">
 
       <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
 
       {{!-- HP (single pool) --}}
-      <div class="header-panel flexcol">
+      <div class="header-panel header-panel-compact flexcol">
         <span class="header-panel-label">HP</span>
         <div class="hp-main-row flexrow">
           <input type="number" class="hp-value-input" name="system.hp.value" value="{{system.hp.value}}" />
@@ -41,7 +41,7 @@
       </div>
 
       {{!-- Hope --}}
-      <div class="header-panel flexcol">
+      <div class="header-panel header-panel-compact flexcol">
         <span class="header-panel-label" style="color: {{hope.color}}">Hope</span>
         <div class="hope-current-row flexrow">
           <input type="number" class="hope-current-input" name="system.crests.hope.current"
@@ -53,15 +53,10 @@
           <span class="hope-pt-label">Per Turn</span>
           <span class="hope-pt-display" title="Auto — sum of Hope spent per stage above Default on the Digivolution Path tracker">{{hope.perTurn}}</span>
         </div>
-        {{#if hope.penaltyLabel}}
-        <div class="hope-penalty-row" title="Raw pool: {{hope.rawMax}} — clears once the hungry half of the pair eats again">
-          ⚠ {{hope.penaltyLabel}}
-        </div>
-        {{/if}}
       </div>
 
       {{!-- EXP panels --}}
-      <div class="header-panel flexcol">
+      <div class="header-panel header-panel-compact flexcol">
         <span class="header-panel-label">Tamer EXP</span>
         <div class="exp-line flexrow">
           <span class="exp-line-label">Total</span>
@@ -77,7 +72,7 @@
         </div>
       </div>
 
-      <div class="header-panel flexcol">
+      <div class="header-panel header-panel-compact flexcol">
         <span class="header-panel-label">Digi EXP</span>
         <div class="exp-line flexrow">
           <span class="exp-line-label">Total</span>
@@ -97,6 +92,36 @@
           <span class="exp-line-label">Avail</span>
           <span class="exp-line-value exp-available">{{digiExp.available}}</span>
         </div>
+      </div>
+
+      {{!-- Food & Rest --}}
+      <div class="header-panel dd-food-rest-panel flexcol">
+        <span class="header-panel-label">Food &amp; Rest</span>
+        <div class="dd-food-rest-actions flexrow">
+          <button type="button" class="dd-self-rest-btn" title="Rest: restore full HP and Hope">
+            <i class="fas fa-bed"></i>
+          </button>
+          <button type="button" class="dd-self-feed-btn" title="Eat a meal now without resting">
+            <i class="fas fa-drumstick-bite"></i>
+          </button>
+        </div>
+        {{#if bankedFood}}
+        <div class="party-meal-status party-meal-fed" data-tip-title="{{bankedFood.itemName}}" data-tip-desc="{{#if bankedFood.effect}}{{bankedFood.effect}}{{else}}No effect text on this item.{{/if}}">
+          <i class="fas fa-drumstick-bite"></i> <span class="dd-meal-name">{{bankedFood.itemName}}</span>
+          <button type="button" class="dd-self-meal-chat-btn party-meal-chat-btn" title="Post this bonus to chat">
+            <i class="fas fa-comment"></i>
+          </button>
+          <button type="button" class="dd-self-meal-clear-btn party-meal-clear-btn" title="Clear this bonus">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        {{else if hope.penaltyLabel}}
+        <div class="party-meal-status party-meal-hungry" title="Hope Pool: {{hope.max}} / {{hope.rawMax}} — clears once the hungry half of the pair eats again">
+          <i class="fas fa-exclamation-triangle"></i> {{hope.penaltyLabel}}
+        </div>
+        {{else}}
+        <div class="party-meal-status party-meal-none">No meal banked</div>
+        {{/if}}
       </div>
 
     </div>
@@ -554,14 +579,30 @@
         </div>
       </div>
 
-      <h3 class="section-header" style="margin-top:10px;">Equipment Slots</h3>
+      <h3 class="section-header" style="margin-top:10px;">Total Wealth <span style="font-weight:400; font-size:0.75em; color:#888;">(currency + carried items)</span></h3>
+      <div class="wealth-panel flexrow">
+        <div class="wealth-field flexcol">
+          <label>DigiDollars (DD)</label>
+          <span class="wealth-value">{{totalWealth.digidollars}}</span>
+        </div>
+        <div class="wealth-field flexcol">
+          <label>Real World Money</label>
+          <span class="wealth-value">{{totalWealth.realMoney}}</span>
+        </div>
+      </div>
+
+      <div class="dd-item-category">
+      <h3 class="section-header dd-item-category-header">Equipment Slots</h3>
       {{#each gearSlots}}
       <div class="gear-slot-block">
         <div class="gear-slot-header flexrow">
           <span class="gear-slot-label">{{this.label}}</span>
           {{#if this.equipped}}
-          <img src="{{this.equipped.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-equipped-name gear-open dd-item-row" data-item-id="{{this.equipped.id}}" draggable="true" style="cursor:grab;">{{this.equipped.name}}</span>
+          <div class="dd-item-icon gear-open" data-item-id="{{this.equipped.id}}" title="Open item sheet">
+            <img src="{{this.equipped.img}}" alt="" />
+            <i class="fas fa-eye dd-item-icon-action"></i>
+          </div>
+          <span class="gear-equipped-name gear-open dd-item-row" data-item-id="{{this.equipped.id}}" draggable="true" style="cursor:grab;">{{this.equipped.name}}{{#if (hasOnUseAutomation this.equipped.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.equipped.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
           <button type="button" class="gear-unequip gear-action-btn" data-item-id="{{this.equipped.id}}" title="Unequip"><i class="fas fa-minus-circle"></i></button>
           {{else}}
@@ -579,8 +620,11 @@
         {{#each this.all}}
         {{#unless this.system.isEquipped}}
         <div class="gear-item-row flexrow gear-unequipped dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}</span>
+          <div class="dd-item-icon gear-equip" data-item-id="{{this.id}}" title="Equip">
+            <img src="{{this.img}}" alt="" />
+            <i class="fas fa-shield-alt dd-item-icon-action"></i>
+          </div>
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if (hasOnUseAutomation this.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           <button type="button" class="gear-equip gear-action-btn" data-item-id="{{this.id}}" title="Equip"><i class="fas fa-shield-alt"></i></button>
           <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
           <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
@@ -589,14 +633,19 @@
         {{/each}}
       </div>
       {{/each}}
+      </div>
 
       {{#if supplyItems.length}}
-      <h3 class="section-header" style="margin-top:10px;">Supplies</h3>
+      <div class="dd-item-category">
+      <h3 class="section-header dd-item-category-header">Supplies</h3>
       <div class="gear-items-list">
         {{#each supplyItems}}
         <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}</span>
+          <div class="dd-item-icon gear-use" data-item-id="{{this.id}}" title="Use one">
+            <img src="{{this.img}}" alt="" />
+            <i class="fas fa-hand-pointer dd-item-icon-action"></i>
+          </div>
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if (hasOnUseAutomation this.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           <div class="qty-controls">
             <button type="button" class="qty-decrease rank-btn" data-item-id="{{this.id}}">−</button>
             <input type="number" class="qty-input" data-item-id="{{this.id}}" value="{{this.system.quantity}}" min="0" />
@@ -608,15 +657,20 @@
         </div>
         {{/each}}
       </div>
+      </div>
       {{/if}}
 
       {{#if equipmentItems.length}}
-      <h3 class="section-header" style="margin-top:10px;">Equipment <span style="font-weight:400; font-size:0.75em; color:#888;">(one equipped at a time)</span></h3>
+      <div class="dd-item-category">
+      <h3 class="section-header dd-item-category-header">Equipment <span class="dd-category-hint">(one equipped at a time)</span></h3>
       <div class="gear-items-list">
         {{#each equipmentItems}}
         <div class="gear-item-row flexrow dd-item-row {{#if this.system.isEquipped}}gear-equipped-row{{/if}}" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if this.system.isEquipped}} <em style="font-size:0.8em; color:#3a9d5f;">(Equipped)</em>{{/if}}</span>
+          <div class="dd-item-icon {{#if this.system.isEquipped}}gear-open{{else}}gear-equip{{/if}}" data-item-id="{{this.id}}" title="{{#if this.system.isEquipped}}Open item sheet{{else}}Equip{{/if}}">
+            <img src="{{this.img}}" alt="" />
+            <i class="fas {{#if this.system.isEquipped}}fa-eye{{else}}fa-shield-alt{{/if}} dd-item-icon-action"></i>
+          </div>
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if this.system.isEquipped}} <em style="font-size:0.8em; color:#3a9d5f;">(Equipped)</em>{{/if}}{{#if (hasOnUseAutomation this.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           {{#if this.system.isEquipped}}
           <button type="button" class="gear-unequip gear-action-btn" data-item-id="{{this.id}}" title="Unequip"><i class="fas fa-minus-circle"></i></button>
           {{else}}
@@ -626,16 +680,21 @@
           <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
         </div>
         {{/each}}
+      </div>
       </div>
       {{/if}}
 
       {{#if digiviceAddonItems.length}}
-      <h3 class="section-header" style="margin-top:10px;">Digivice Addons <span style="font-weight:400; font-size:0.75em; color:#888;">(up to 20 equipped)</span></h3>
+      <div class="dd-item-category">
+      <h3 class="section-header dd-item-category-header">Digivice Addons <span class="dd-category-hint">(up to 20 equipped)</span></h3>
       <div class="gear-items-list">
         {{#each digiviceAddonItems}}
         <div class="gear-item-row flexrow dd-item-row {{#if this.system.isEquipped}}gear-equipped-row{{/if}}" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if this.system.isEquipped}} <em style="font-size:0.8em; color:#3a9d5f;">(Equipped)</em>{{/if}}</span>
+          <div class="dd-item-icon {{#if this.system.isEquipped}}gear-open{{else}}gear-equip{{/if}}" data-item-id="{{this.id}}" title="{{#if this.system.isEquipped}}Open item sheet{{else}}Equip{{/if}}">
+            <img src="{{this.img}}" alt="" />
+            <i class="fas {{#if this.system.isEquipped}}fa-eye{{else}}fa-shield-alt{{/if}} dd-item-icon-action"></i>
+          </div>
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if this.system.isEquipped}} <em style="font-size:0.8em; color:#3a9d5f;">(Equipped)</em>{{/if}}{{#if (hasOnUseAutomation this.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           {{#if this.system.isEquipped}}
           <button type="button" class="gear-unequip gear-action-btn" data-item-id="{{this.id}}" title="Unequip"><i class="fas fa-minus-circle"></i></button>
           {{else}}
@@ -646,15 +705,20 @@
         </div>
         {{/each}}
       </div>
+      </div>
       {{/if}}
 
       {{#if foodItems.length}}
-      <h3 class="section-header" style="margin-top:10px;">Food</h3>
+      <div class="dd-item-category">
+      <h3 class="section-header dd-item-category-header">Food</h3>
       <div class="gear-items-list">
         {{#each foodItems}}
         <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}</span>
+          <div class="dd-item-icon gear-use" data-item-id="{{this.id}}" title="Eat one">
+            <img src="{{this.img}}" alt="" />
+            <i class="fas fa-utensils dd-item-icon-action"></i>
+          </div>
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if (hasOnUseAutomation this.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           <div class="qty-controls">
             <button type="button" class="qty-decrease rank-btn" data-item-id="{{this.id}}">−</button>
             <input type="number" class="qty-input" data-item-id="{{this.id}}" value="{{this.system.quantity}}" min="0" />
@@ -666,43 +730,58 @@
         </div>
         {{/each}}
       </div>
+      </div>
       {{/if}}
 
       {{#if spiritItems.length}}
-      <h3 class="section-header" style="margin-top:10px;">Spirits</h3>
+      <div class="dd-item-category">
+      <h3 class="section-header dd-item-category-header">Spirits</h3>
       <div class="gear-items-list">
         {{#each spiritItems}}
         <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}</span>
+          <div class="dd-item-icon gear-open" data-item-id="{{this.id}}" title="Open item sheet">
+            <img src="{{this.img}}" alt="" />
+            <i class="fas fa-eye dd-item-icon-action"></i>
+          </div>
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if (hasOnUseAutomation this.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
           <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
         </div>
         {{/each}}
+      </div>
       </div>
       {{/if}}
 
       {{#if digiEggItems.length}}
-      <h3 class="section-header" style="margin-top:10px;">Digi-Eggs</h3>
+      <div class="dd-item-category">
+      <h3 class="section-header dd-item-category-header">Digi-Eggs</h3>
       <div class="gear-items-list">
         {{#each digiEggItems}}
         <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}</span>
+          <div class="dd-item-icon gear-open" data-item-id="{{this.id}}" title="Open item sheet">
+            <img src="{{this.img}}" alt="" />
+            <i class="fas fa-eye dd-item-icon-action"></i>
+          </div>
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if (hasOnUseAutomation this.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           <button type="button" class="gear-to-chat gear-action-btn" data-item-id="{{this.id}}" title="Post to chat"><i class="fas fa-comment"></i></button>
           <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
         </div>
         {{/each}}
       </div>
+      </div>
       {{/if}}
 
       {{#if cardItems.length}}
-      <h3 class="section-header" style="margin-top:10px;">Cards <span style="font-weight:400; font-size:0.75em; color:#888;">(played via Card Slash)</span></h3>
+      <div class="dd-item-category">
+      <h3 class="section-header dd-item-category-header">Cards <span class="dd-category-hint">(played via Card Slash)</span></h3>
       <div class="gear-items-list">
         {{#each cardItems}}
         <div class="gear-item-row flexrow dd-item-row" data-item-id="{{this.id}}" draggable="true" style="cursor:grab;">
-          <img src="{{this.img}}" alt="" style="width:28px; height:28px; object-fit:contain; border-radius:3px; flex-shrink:0;" />
-          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if this.system.rarity}} <em style="font-size:0.78em; color:#888; text-transform:capitalize;">({{this.system.rarity}})</em>{{/if}}</span>
+          <div class="dd-item-icon gear-use" data-item-id="{{this.id}}" title="Slash one">
+            <img src="{{this.img}}" alt="" />
+            <i class="fas fa-hand-pointer dd-item-icon-action"></i>
+          </div>
+          <span class="gear-item-name gear-open" data-item-id="{{this.id}}" style="cursor:pointer;">{{this.name}}{{#if this.system.rarity}} <em style="font-size:0.78em; color:#888; text-transform:capitalize;">({{this.system.rarity}})</em>{{/if}}{{#if (hasOnUseAutomation this.system)}} <i class="fas fa-bolt dd-automation-badge" title="Has an automated on-use effect"></i>{{/if}}</span>
           <div class="qty-controls">
             <button type="button" class="qty-decrease rank-btn" data-item-id="{{this.id}}">−</button>
             <input type="number" class="qty-input" data-item-id="{{this.id}}" value="{{this.system.quantity}}" min="0" />
@@ -713,6 +792,7 @@
           <button type="button" class="gear-delete gear-action-btn gear-action-delete" data-item-id="{{this.id}}" title="Remove"><i class="fas fa-trash"></i></button>
         </div>
         {{/each}}
+      </div>
       </div>
       {{/if}}
 

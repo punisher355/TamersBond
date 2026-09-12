@@ -109,10 +109,70 @@ the same stale-LevelDB-cache issue documented in `EFFECT_SYSTEM.md`** — run
 reference for authoring new items by hand.
 
 `tools/build-items-pack.mjs` is a second, LevelDB-writing implementation of
-the same script — it's non-functional on this machine (no Node.js
-installed, confirmed while building this system) and wasn't updated to
-match the new fields. Treat the `.ps1` as the only maintained version unless
-you're on a machine with Node and `classic-level` available.
+the same script. Both `.ps1` and `.mjs` are now kept in sync — as of the
+on-use automation pass below, both read the same `on_use_*` JSON fields.
+If you add a new item field in the future, update BOTH files (the
+`ITEM_SYSTEM.md` schema reference above only documents the JSON shape once,
+but the two build scripts are separate implementations that don't share
+code) or a rebuild via one will silently drop data the other supports.
+
+## On-use automation (item-models.js `GearData`, `TamerSheet.js`)
+
+Gadget charges ARE now spent on use (`TamerSheet.js`'s `_onGearUse` for
+Supply/Food/Card's "Use"/"Eat"/"Slash" button, `_onGadgetChargeUse` for a
+Gadget's charge) — the "nothing spends a charge" gap noted below used to be
+real but isn't anymore. Both handlers call `_grantOnUseEffects(item)`, which
+reads five additive `GearData` fields (all default disabled/empty, all only
+rendered on the item sheet for `supply`/`food`/`card`/`gadget` — the only
+categories with an actual Use button):
+
+- `onUseBonus` — grants a one-shot "next attack" bonus (mirrors `EffectData.nextAttack`,
+  consumed by `performAttackRoll` in `combat.js`).
+- `onUseSkillBonus` — grants a one-shot "next skill check" bonus (mirrors
+  `EffectData.nextSkillCheck`, consumed by each sheet's `_onSkillRoll` via
+  `collectNextSkillBonuses()`/`resolveModifiers()` in the new shared
+  `module/roll-helpers.js`).
+- `onUseHeal` / `onUseCureStatus` — immediate HP restore / status removal.
+- `onUseRestoreHope` — immediate Hope restore, always on whoever used the item
+  (a Digimon has no Hope Pool, so the item's `target` field doesn't apply here).
+
+`onUseBonus`/`onUseSkillBonus`/`onUseHeal`/`onUseCureStatus` all resolve a
+single shared recipient via `_resolveUseTarget(item.system.target)`:
+`"tamer"` → the actor that used it; `"digimon"` → its linked partner
+(`game.actors.filter(a => a.type === "digimon" && a.system.tamerLink === actor.id)`);
+`"both"` → a quick "Myself / [Partner name]" picker. This is why a Card
+(always `target: "digimon"`, e.g. Agumon Attack's "+1d6 to your Digimon's
+next attack") correctly lands the granted effect on the partner Digimon's
+own item list, not the Tamer's — cards are slashed from the Tamer sheet but
+the bonus is the Digimon's to use.
+
+Skill-check roll dialogs in `TamerSheet.js`/`DigimonSheet.js`/`NpcDigimonSheet.js`
+were widened from a plain-number modifier box to the same text-input +
+dice-formula-resolution pattern the attack-roll dialog already used
+(`module/roll-helpers.js`'s `resolveModifiers`/`modRow`) — this was a
+pre-existing gap (same bug the attack dialog had before it got the dice-formula
+fix) that had to be closed for `onUseSkillBonus`/`nextSkillCheck` bonuses to
+actually pre-fill correctly, since most of them are dice formulas ("1d4").
+
+Two more one-shot primitives followed the same pattern as the two above:
+
+- `onUseAttackOverride` / `EffectData.nextAttackOverride` — overrides (not a
+  bonus) the element and/or Attribute `performAttackRoll()` uses for its
+  weakness/advantage multiplier lookup on the actor's next attack, then is
+  consumed. Covers the ~11 element/attribute cards (Fire Card, Vaccine Chip,
+  etc.) — "your Digimon's next attack deals X damage/is treated as Y type
+  instead of its natural element/Attribute."
+- `onUseInflictStatus` — "throw at an enemy within 6 spaces, on a failed
+  [Skill] check (DN [N]) inflict [Status]." Reads `game.user.targets` like
+  an attack roll does and calls the new exported `performItemInflictRoll()`,
+  which posts its own chat card (a reference roll of the target's own rank
+  at that skill, plus an always-clickable Apply button reusing the existing
+  `_applyStatus()`) rather than auto-deciding hit/miss — same GM-trust model
+  as the attack card's own Apply button. Covers the 8 thrown darts/shards/
+  capsules (Flare Dart, Toxin Dart, Corruption Shard, etc.) — Spire Trap
+  wasn't included since it's a placed trap triggered by whoever enters its
+  space, not an immediate target-and-use item, so it's still hand-run by
+  the GM.
 
 ## What's not built yet
 
@@ -120,8 +180,6 @@ This pass covers data modeling, the compendium, and equip-slot rules only —
 deliberately. The following are real interactive combat-system features,
 not data entry, and are an explicit follow-up:
 
-- **Gadget charges** — `system.charges.current`/`.max` exist on the schema
-  and sheet, but nothing spends a charge on use or refreshes it at rest.
 - **Card Slash gating** — Cards aren't restricted to once-per-turn, and
   nothing checks that a D-Power addon is equipped before a card can be
   played.
@@ -130,6 +188,14 @@ not data entry, and are an explicit follow-up:
   natural place would be the same `deleteCombat` hook in `module/combat.js`
   that already resets Effect items each encounter — see `EFFECT_SYSTEM.md`),
   or actually triggers Armor/Spirit Digivolution.
+- **Spire Trap** — a placed trap (occupies a space, triggers on whoever
+  enters it next) rather than an immediate target-and-use item like the
+  other 8 thrown items above. Would need its own "armed trap" tracking, not
+  just a one-shot use.
+- **Digivice "use" action** — Digivice items (Courage/Friendship/.../Balanced/
+  Kindness/Dark/Golden/iC Digivice) have no Use button or on-use fields at
+  all; several describe an active ability ("using this Digivice's action...")
+  that's currently pure narration.
 
 Until these exist, all of the above work exactly like any other passive
 item — a GM narrates and enforces them by hand, same as Freeze/Sleep/Confuse

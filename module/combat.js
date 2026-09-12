@@ -1,4 +1,4 @@
-import { computeTagString, getActorHopePerTurn, computeDnaStatBreakdown } from "./config.js";
+import { computeTagString, getActorHopePerTurn, computeDnaStatBreakdown, skillToStat } from "./config.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -167,12 +167,62 @@ function _gmTargetSection(target, tStats, hitTotal, rawDmg, isCrit, isNat1, tags
 
 // ── Pre-roll dialog ───────────────────────────────────────────────────────────
 
-function _modRow() {
-  return `<div class="modifier-row flexrow">
-    <input type="text" class="mod-reason" placeholder="Reason" />
-    <input type="text" class="mod-value" value="0" placeholder="e.g. 3, -2, 1d6" />
+function _escAttr(str) {
+  return String(str ?? "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+// effectId, when given, tags the row as auto-filled from an active "next
+// attack" bonus effect (see _collectNextAttackBonuses below) — removing
+// that row before clicking Roll! leaves the effect untouched (saved for a
+// later attack) instead of consuming it.
+function _modRow(reason = "", value = "0", effectId = "") {
+  const attr = effectId ? ` data-effect-id="${_escAttr(effectId)}"` : "";
+  return `<div class="modifier-row flexrow"${attr}>
+    <input type="text" class="mod-reason" placeholder="Reason" value="${_escAttr(reason)}" />
+    <input type="text" class="mod-value" value="${_escAttr(value)}" placeholder="e.g. 3, -2, 1d6" />
     <button type="button" class="mod-remove" title="Remove">×</button>
   </div>`;
+}
+
+// Any active "effect" Item on the actor with system.nextAttack.enabled set
+// (either hand-built by a GM or auto-granted by using a Gear/Gadget item —
+// see TamerSheet.js's _onGearUse/_onGadgetChargeUse) offers its dice/number
+// formula as a pre-filled modifier row on the actor's next Hit and/or
+// Damage roll, so a "+1d4 to your next attack" item just works without the
+// player having to remember to type it in by hand.
+function _collectNextAttackBonuses(actor) {
+  const hit = [];
+  const dmg = [];
+  for (const item of actor?.items ?? []) {
+    if (item.type !== "effect") continue;
+    const na = item.system?.nextAttack;
+    if (!na?.enabled) continue;
+    const formula = (na.formula ?? "").trim();
+    if (!formula) continue;
+    const entry = { reason: item.name, raw: formula, effectId: item.id };
+    if (na.target === "hit"  || na.target === "both") hit.push(entry);
+    if (na.target === "damage" || na.target === "both") dmg.push(entry);
+  }
+  return { hit, dmg };
+}
+
+// Any active "effect" Item on the actor with system.nextAttackOverride.enabled
+// set (hand-built by a GM, or auto-granted by using an item with
+// onUseAttackOverride — see TamerSheet.js's _grantOnUseEffects) overrides
+// which element and/or Attribute the very next attack uses for its
+// weakness/advantage multiplier lookup. Only the first one found applies
+// (these don't stack); it's consumed (deleted) once that attack is rolled.
+function _collectNextAttackOverride(actor) {
+  for (const item of actor?.items ?? []) {
+    if (item.type !== "effect") continue;
+    const ov = item.system?.nextAttackOverride;
+    if (!ov?.enabled) continue;
+    const element   = (ov.element ?? "").trim();
+    const attribute = (ov.attribute ?? "").trim();
+    if (!element && !attribute) continue;
+    return { effectId: item.id, element, attribute, name: item.name };
+  }
+  return null;
 }
 
 // A modifier's typed value can be a plain number ("3", "-2") or a dice
@@ -184,24 +234,25 @@ async function _resolveModifiers(mods) {
   const out = [];
   for (const m of mods) {
     const raw = (m.raw ?? "").trim();
-    if (!raw) { out.push({ reason: m.reason, raw: "0", value: 0 }); continue; }
+    const effectId = m.effectId || "";
+    if (!raw) { out.push({ reason: m.reason, raw: "0", value: 0, effectId }); continue; }
     if (/^[+-]?\d+(\.\d+)?$/.test(raw)) {
-      out.push({ reason: m.reason, raw, value: parseFloat(raw) });
+      out.push({ reason: m.reason, raw, value: parseFloat(raw), effectId });
       continue;
     }
     try {
       const roll = await new Roll(raw).evaluate();
-      out.push({ reason: m.reason, raw, value: roll.total, roll });
+      out.push({ reason: m.reason, raw, value: roll.total, roll, effectId });
     } catch (err) {
       console.warn("DigitalDestiny | Invalid modifier formula:", raw, err);
       ui.notifications.warn(`Modifier "${raw}"${m.reason ? ` (${m.reason})` : ""} isn't a valid number or dice formula — treated as 0.`);
-      out.push({ reason: m.reason, raw, value: 0, invalid: true });
+      out.push({ reason: m.reason, raw, value: 0, invalid: true, effectId });
     }
   }
   return out;
 }
 
-async function _rollDialog(title, hitPreview, dmgPreview, isGrapple) {
+async function _rollDialog(title, hitPreview, dmgPreview, isGrapple, autoMods = { hit: [], dmg: [] }) {
   return new Promise(resolve => {
     new Dialog({
       title,
@@ -215,14 +266,14 @@ async function _rollDialog(title, hitPreview, dmgPreview, isGrapple) {
               <span>Call Out <strong>+1</strong> to hit</span>
             </label>
             <div class="mod-list-header flexrow"><span>Hit modifier reason</span><span class="mod-amount-head">Amount</span></div>
-            <div class="modifier-list hit-mods"></div>
+            <div class="modifier-list hit-mods">${(autoMods.hit ?? []).map(m => _modRow(m.reason, m.raw, m.effectId)).join("")}</div>
             <button type="button" class="mod-add-btn" data-list="hit">+ Add Hit Modifier</button>
           </div>
           ${!isGrapple && dmgPreview ? `
           <div class="dd-dialog-section dd-dialog-dmg">
             <div class="dd-dialog-section-label">Damage Roll &mdash; ${dmgPreview}</div>
             <div class="mod-list-header flexrow"><span>Damage modifier reason</span><span class="mod-amount-head">Amount</span></div>
-            <div class="modifier-list dmg-mods"></div>
+            <div class="modifier-list dmg-mods">${(autoMods.dmg ?? []).map(m => _modRow(m.reason, m.raw, m.effectId)).join("")}</div>
             <button type="button" class="mod-add-btn" data-list="dmg">+ Add Damage Modifier</button>
           </div>` : ""}
         </form>`,
@@ -233,7 +284,11 @@ async function _rollDialog(title, hitPreview, dmgPreview, isGrapple) {
             const read = cls => {
               const out = [];
               html.find(`.${cls} .modifier-row`).each((_, r) => {
-                out.push({ reason: $(r).find('.mod-reason').val().trim(), raw: $(r).find('.mod-value').val().trim() });
+                out.push({
+                  reason: $(r).find('.mod-reason').val().trim(),
+                  raw: $(r).find('.mod-value').val().trim(),
+                  effectId: $(r).data('effect-id') || ""
+                });
               });
               return out;
             };
@@ -319,9 +374,14 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   const hitPreview  = `1d20 + ${courageTotal} Courage${statusLabel}`;
   const dmgPreview  = prDie ? `${prDie} + ${knowledgeTotal} Knowledge` : null;
 
+  // Any "next attack" bonus effects on this actor (hand-built by the GM, or
+  // auto-granted when a Gear/Gadget item with an on-use bonus gets used —
+  // see TamerSheet.js) show up pre-filled in the dialog below.
+  const autoMods = _collectNextAttackBonuses(actor);
+
   const input = await _rollDialog(
     `${item.name} — ${isGrapple ? "Grapple Check" : "Attack Roll"}`,
-    hitPreview, dmgPreview, isGrapple
+    hitPreview, dmgPreview, isGrapple, autoMods
   );
   if (!input) return;
 
@@ -329,6 +389,17 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   // resolve them to numeric totals before they're summed into the rolls.
   input.hitMods = await _resolveModifiers(input.hitMods);
   input.dmgMods = await _resolveModifiers(input.dmgMods ?? []);
+
+  // Consume every "next attack" bonus effect whose row is still present —
+  // removing a pre-filled row before clicking Roll! leaves that effect
+  // alone instead (saves it for a later attack).
+  const usedEffectIds = [...new Set(
+    [...input.hitMods, ...input.dmgMods].map(m => m.effectId).filter(Boolean)
+  )];
+  if (usedEffectIds.length) {
+    try { await actor.deleteEmbeddedDocuments("Item", usedEffectIds); }
+    catch (err) { console.error("DigitalDestiny | Failed to consume next-attack bonus effect(s):", err); }
+  }
 
   // ── Roll the dice ──
   const callOutBonus = input.callOutUsed ? 1 : 0;
@@ -363,8 +434,16 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
   const dmgModChips = (input.dmgMods ?? []).filter(m => m.value || m.reason || m.invalid).map(chip).join(" ");
 
   // ── Per-target sections ──
-  const attackerAttr = actor.system?.attribute ?? "";
-  const moveElement  = s.element ?? "";
+  // A one-shot element/Attribute override (see _collectNextAttackOverride
+  // above) replaces the move's own element and/or the attacker's own
+  // Attribute for just this roll's multiplier lookup, then is consumed.
+  const overrideEntry = _collectNextAttackOverride(actor);
+  const attackerAttr = overrideEntry?.attribute || (actor.system?.attribute ?? "");
+  const moveElement  = overrideEntry?.element   || (s.element ?? "");
+  if (overrideEntry) {
+    try { await actor.deleteEmbeddedDocuments("Item", [overrideEntry.effectId]); }
+    catch (err) { console.error("DigitalDestiny | Failed to consume next-attack override effect:", err); }
+  }
   const targetList   = targets.length ? targets : [null];
 
   let publicTargets = "";
@@ -387,7 +466,7 @@ export async function performAttackRoll(actor, item, courageTotal, knowledgeTota
       <div class="dd-attack-header">
         <h3 class="dd-chat-title">${item.name}${isNat20 ? ' <span class="tag dd-crit-tag">★ CRIT</span>' : ""}</h3>
         <div class="dd-chat-tags">
-          ${s.actionType !== "utility" && !isGrapple ? `<span class="tag">${s.element}</span>` : ""}
+          ${s.actionType !== "utility" && !isGrapple ? `<span class="tag">${moveElement}${overrideEntry?.element ? " (overridden)" : ""}</span>` : ""}
           ${prDie ? `<span class="tag">${prDie}</span>` : ""}
           ${tags ? `<span class="tag">${tags}</span>` : ""}
         </div>
@@ -606,6 +685,74 @@ function _findActor(actorId) {
   return canvas.tokens?.placeables.find(t => t.actor?.id === actorId)?.actor
     ?? game.actors.get(actorId)
     ?? null;
+}
+
+// ── Item-use targeted status inflict (Flare Dart, Toxin Dart, etc.) ──────────
+
+// "Throw at an enemy within 6 spaces, on a failed <checkSkill> check
+// (DN <dn>) inflict <status>." Reads game.user.targets the same way an
+// attack roll does. Rather than auto-rolling the target's check and
+// deciding hit/miss itself, this posts a reference roll button (rolls the
+// TARGET's own rank at that skill) next to an Apply button that's always
+// clickable — the same GM-trust pattern performAttackRoll()'s "Apply to
+// {target}" button already uses, just without a hit roll of its own since
+// there isn't an attacker roll involved, only a target save.
+// Returns true if a card was posted (caller should consume the item), false
+// if nothing happened (no target selected — caller should NOT consume it).
+export async function performItemInflictRoll(actor, item) {
+  const cfg = item.system?.onUseInflictStatus;
+  if (!cfg?.enabled || !cfg.status) return false;
+
+  const targets = [...(game.user.targets ?? [])].map(t => t.actor).filter(Boolean);
+  if (!targets.length) {
+    ui.notifications.warn(`Target an enemy Digimon first, then use ${item.name}.`);
+    return false;
+  }
+
+  const tmpl        = _EFFECT_TEMPLATES[cfg.status];
+  const statusLabel = tmpl?.name ?? cfg.status;
+  const dn          = cfg.dn ?? 10;
+  const skillKey     = cfg.checkSkill || "coreDrive";
+  const skillStat    = skillToStat(skillKey);
+  const skillEntry   = (CONFIG.DIGIMON?.skills?.[skillStat] ?? []).find(sk => sk.key === skillKey);
+  const skillLabel   = skillEntry?.label ?? skillKey;
+  const x = cfg.x || 0;
+  const y = cfg.y || 0;
+
+  let sections = "";
+  for (const target of targets) {
+    const rank = skillStat ? (target.system?.skills?.[skillStat]?.[skillKey]?.rank ?? 1) : 1;
+    sections += `
+      <div class="dd-target-section" data-target-id="${target.id}" data-target-name="${_escAttr(target.name)}"
+           data-status="${_escAttr(cfg.status)}" data-x="${x}" data-y="${y}" data-source-name="${_escAttr(item.name)}">
+        <div class="dd-target-header">
+          <span class="dd-target-name">${target.name}</span>
+          <span class="dd-hit-badge dd-badge-neutral">${rank}d6 vs DN ${dn}</span>
+        </div>
+        <div class="dd-inflict-roll-result"></div>
+        <div class="dd-final-row">
+          <button type="button" class="dd-inflict-roll-btn" data-rank="${rank}">Roll ${skillLabel} Check</button>
+          <button type="button" class="dd-apply-btn dd-inflict-apply-btn">Apply ${statusLabel}</button>
+        </div>
+        <div class="dd-applied-note" style="display:none;"></div>
+      </div>`;
+  }
+
+  const content = `
+    <div class="dd-chat-card dd-item-inflict-card">
+      <h3 class="dd-chat-title">${item.name}</h3>
+      <div class="dd-chat-tags">
+        <span class="tag">${skillLabel} Check</span>
+        <span class="tag">DN ${dn}</span>
+        <span class="tag">Inflicts ${statusLabel}</span>
+      </div>
+      ${item.system?.effect ? `<p class="dd-chat-desc">${item.system.effect}</p>` : ""}
+      <div class="dd-targets">${sections}</div>
+      <p class="hint" style="margin-top:6px;">The roll is the target's own ${skillLabel} check for reference — Apply is always available, GM discretion on a close call.</p>
+    </div>`;
+
+  await ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor }), content });
+  return true;
 }
 
 // ── renderChatMessage hook — interactive buttons ──────────────────────────────
@@ -937,6 +1084,43 @@ export function registerCombatHooks() {
       }
 
       btn.text("✓ Undone").prop("disabled", true).addClass("dd-applied");
+    });
+  });
+
+  // --- Thrown/item-inflict card (Flare Dart, Toxin Dart, etc.) ---
+  Hooks.on("renderChatMessageHTML", (_msg, html) => {
+    const $html = $(html);
+    if (!$html.find(".dd-item-inflict-card").length) return;
+
+    $html.find(".dd-inflict-roll-btn").on("click", async ev => {
+      const btn = $(ev.currentTarget);
+      if (btn.prop("disabled")) return;
+      const section = btn.closest(".dd-target-section");
+      const rank = parseInt(btn.data("rank")) || 1;
+      const roll = await new Roll(`${rank}d6`).evaluate();
+      const diceHtml = await roll.render();
+      section.find(".dd-inflict-roll-result").html(diceHtml);
+      btn.text("↻ Reroll");
+    });
+
+    $html.find(".dd-inflict-apply-btn").on("click", async ev => {
+      const btn = $(ev.currentTarget);
+      if (btn.prop("disabled")) return;
+      const section    = btn.closest(".dd-target-section");
+      const targetId   = section.data("target-id");
+      const targetName = section.data("target-name");
+      const status      = section.data("status");
+      const x           = section.data("x");
+      const y           = section.data("y");
+      const sourceName  = section.data("source-name");
+
+      const target = _findActor(targetId);
+      if (!target) return ui.notifications.warn(`Actor "${targetName}" not found.`);
+
+      await _applyStatus(target, status, x, y, sourceName);
+
+      section.find(".dd-applied-note").text(`Applied to ${targetName}.`).show();
+      btn.text("✓ Applied").prop("disabled", true).addClass("dd-applied");
     });
   });
 

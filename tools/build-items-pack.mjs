@@ -52,6 +52,23 @@
 //
 //  skill_bonuses    Flat bonuses to individual Tamer skills while equipped
 //
+//  on_use_bonus         Grant a one-shot "next attack" bonus when used:
+//    enabled / target ("hit"|"damage"|"both") / formula ("1d4", "+2", ...)
+//  on_use_skill_bonus   Grant a one-shot "next skill check" bonus when used:
+//    enabled / skill (a skill key, e.g. "coreDrive"; "" = any skill) / formula
+//  on_use_heal          Restore HP immediately when used:
+//    enabled / formula. Recipient follows the item's "target" field.
+//  on_use_restore_hope  Restore Hope immediately when used (always applies
+//    to whoever used it): enabled / formula
+//  on_use_cure_status   Remove a status effect immediately when used:
+//    enabled / status (a status key, e.g. "poison"; "" = clear all statuses).
+//    Recipient follows the item's "target" field.
+//  on_use_attack_override   Override next attack's element/Attribute:
+//    enabled / element (element key, "" = no override) / attribute (attribute key, "" = no override).
+//    Recipient follows the item's "target" field.
+//  on_use_inflict_status     Throw at a targeted enemy, on a failed check inflict a status:
+//    enabled / check_skill (a skill key) / dn (number) / status (a status key) / x (stacks) / y (Burn ticks only)
+//
 //  notes            GM/designer notes — not shown to players
 
 import { readdir, readFile, writeFile, rm, mkdir, access } from "fs/promises";
@@ -171,6 +188,41 @@ for (const file of files) {
         attackBonus:       raw.combat_bonuses?.attack_bonus    ?? 0,
         damageBonus:       raw.combat_bonuses?.damage_bonus    ?? 0,
         skillBonuses:      skillBonuses
+      },
+      onUseBonus: {
+        enabled: raw.on_use_bonus?.enabled ?? false,
+        target:  raw.on_use_bonus?.target  ?? "damage",
+        formula: raw.on_use_bonus?.formula ?? ""
+      },
+      onUseSkillBonus: {
+        enabled: raw.on_use_skill_bonus?.enabled ?? false,
+        skill:   raw.on_use_skill_bonus?.skill   ?? "",
+        formula: raw.on_use_skill_bonus?.formula ?? ""
+      },
+      onUseHeal: {
+        enabled: raw.on_use_heal?.enabled ?? false,
+        formula: raw.on_use_heal?.formula ?? ""
+      },
+      onUseRestoreHope: {
+        enabled: raw.on_use_restore_hope?.enabled ?? false,
+        formula: raw.on_use_restore_hope?.formula ?? ""
+      },
+      onUseCureStatus: {
+        enabled: raw.on_use_cure_status?.enabled ?? false,
+        status:  raw.on_use_cure_status?.status  ?? ""
+      },
+      onUseAttackOverride: {
+        enabled:   raw.on_use_attack_override?.enabled   ?? false,
+        element:   raw.on_use_attack_override?.element   ?? "",
+        attribute: raw.on_use_attack_override?.attribute ?? ""
+      },
+      onUseInflictStatus: {
+        enabled:    raw.on_use_inflict_status?.enabled     ?? false,
+        checkSkill: raw.on_use_inflict_status?.check_skill ?? "coreDrive",
+        dn:         raw.on_use_inflict_status?.dn          ?? 10,
+        status:     raw.on_use_inflict_status?.status      ?? "",
+        x:          raw.on_use_inflict_status?.x           ?? 1,
+        y:          raw.on_use_inflict_status?.y           ?? 0
       },
       notes: raw.notes ?? ""
     }

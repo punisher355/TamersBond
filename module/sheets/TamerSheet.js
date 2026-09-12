@@ -1,6 +1,8 @@
 import { computeTagString, getActorHopePerTurn, computeHopePenalty } from "../config.js";
-import { getActorStatTotals, performAttackRoll } from "../combat.js";
+import { getActorStatTotals, performAttackRoll, performItemInflictRoll } from "../combat.js";
 import { ItemLookup }                            from "../ItemLookup.js";
+import { modRow, resolveModifiers, collectNextSkillBonuses } from "../roll-helpers.js";
+import { restActor, feedSingleActor, postBankedFoodToChat, clearBankedFood } from "../food-rest.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -95,6 +97,10 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       rgb:     _hexToRgbTriplet(D.statColors.hope),
       img:     D.crestImagesTamer.hope
     };
+
+    // Food & Rest header panel — banked meal bonus lives directly on this
+    // actor (see module/food-rest.js), independent of the Party sheet.
+    context.bankedFood = this.actor.system?.bankedFood?.itemName ? this.actor.system.bankedFood : null;
 
     // Build skill groups for the Skills tab
     context.skillGroups = CREST_ORDER.map(statKey => {
@@ -197,6 +203,16 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     context.spiritItems       = gearItems.filter(i => i.system.itemType === "spirit");
     context.cardItems         = gearItems.filter(i => i.system.itemType === "card");
     context.digiEggItems      = gearItems.filter(i => i.system.itemType === "digiEgg");
+
+    // Total Wealth — currency on hand plus the resale/replacement value of
+    // every carried gear item (cost × quantity), shown read-only next to
+    // the Currency panel on the Items tab.
+    context.totalWealth = {
+      digidollars: (this.actor.system.currency?.digidollars ?? 0)
+        + gearItems.reduce((sum, i) => sum + (i.system.cost?.digidollars ?? 0) * (i.system.quantity ?? 1), 0),
+      realMoney: (this.actor.system.currency?.realMoney ?? 0)
+        + gearItems.reduce((sum, i) => sum + (i.system.cost?.realMoney ?? 0) * (i.system.quantity ?? 1), 0)
+    };
 
     context.effectItems = this.actor.items.filter(i => i.type === "effect");
 
@@ -403,7 +419,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       const desc = el.dataset.tipDesc;
       if (!desc) return;
 
-      $tip.html(`
+      $tip.removeClass('dd-food-tip').html(`
         <strong class="skill-tip-title">${el.dataset.tipTitle ?? ""}</strong>
         <span class="skill-tip-desc">${desc}</span>
         ${el.dataset.tipExample ? `<em class="skill-tip-example">"${el.dataset.tipExample}"</em>` : ""}
@@ -415,6 +431,33 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
       const tipW     = $tip.outerWidth();
 
       // Prefer above; fall back to below if clipped
+      let top  = elRect.top  - formRect.top  - tipH - 6;
+      let left = elRect.left - formRect.left;
+      if (top < 0) top = elRect.bottom - formRect.top + 6;
+      if (left + tipW > formRect.width) left = formRect.width - tipW - 8;
+
+      $tip.css({ top, left });
+    }).on('mouseleave', () => $tip.hide());
+
+    // Same hover-tooltip mechanism as skill descriptions above, reused for
+    // the Food & Rest panel's banked-meal pill — the compact panel has no
+    // room to show the food's effect text inline (see dd-food-rest-panel
+    // CSS), so it shows on hover instead.
+    html.find('.dd-food-rest-panel .party-meal-fed[data-tip-desc]').on('mouseenter', ev => {
+      const el   = ev.currentTarget;
+      const desc = el.dataset.tipDesc;
+      if (!desc) return;
+
+      $tip.addClass('dd-food-tip').html(`
+        <strong class="skill-tip-title">${el.dataset.tipTitle ?? ""}</strong>
+        <span class="skill-tip-desc">${desc}</span>
+      `).css('display', 'flex');
+
+      const formRect = html[0].getBoundingClientRect();
+      const elRect   = el.getBoundingClientRect();
+      const tipH     = $tip.outerHeight();
+      const tipW     = $tip.outerWidth();
+
       let top  = elRect.top  - formRect.top  - tipH - 6;
       let left = elRect.left - formRect.left;
       if (top < 0) top = elRect.bottom - formRect.top + 6;
@@ -446,6 +489,11 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     html.find('.qty-decrease').on('click',        ev => this._onQtyDecrease(ev));
     html.find('.qty-increase').on('click',        ev => this._onQtyIncrease(ev));
     html.find('.qty-input').on('change',          ev => this._onQtyChange(ev));
+
+    html.find('.dd-self-rest-btn').on('click',    ev => this._onSelfRest(ev));
+    html.find('.dd-self-feed-btn').on('click',    ev => this._onSelfFeed(ev));
+    html.find('.dd-self-meal-chat-btn').on('click', ev => this._onBankedFoodChat(ev));
+    html.find('.dd-self-meal-clear-btn').on('click', ev => this._onBankedFoodClear(ev));
 
     html.find('.open-item-lookup').on('click', () => ItemLookup.openForActor(this.actor));
     html.find('.tamer-action-btn').on('click', ev => {
@@ -668,14 +716,251 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
   // charges (set on the item's own sheet) rather than a stack you consume
   // one-of. "Use" just burns one charge and posts what's left; "Reset"
   // tops it back up to max (end of rest, etc.).
+  // Creates a one-shot "next attack" effect on this actor if the item being
+  // used has an On Use bonus configured (GearData.onUseBonus in
+  // item-models.js — e.g. "add 1d4 to your next attack"). The effect shows
+  // up pre-filled in the attack-roll dialog (see _collectNextAttackBonuses
+  // in combat.js) and is consumed the moment it's actually rolled with.
+  // Returns a short label for the chat card, or "" if nothing was granted.
+  // A number or dice-formula string ("4", "1d6") resolved to a total —
+  // shared by onUseHeal/onUseRestoreHope below. Plain numbers parse
+  // directly; anything else rolls its own dice. Invalid formulas warn and
+  // resolve to 0 rather than breaking the item use.
+  async _resolveUseFormula(raw) {
+    if (/^[+-]?\d+(\.\d+)?$/.test(raw)) return parseFloat(raw);
+    try {
+      const roll = await new Roll(raw).evaluate();
+      return roll.total;
+    } catch (err) {
+      console.warn("DigitalDestiny | Invalid on-use formula:", raw, err);
+      ui.notifications.warn(`"${raw}" isn't a valid number or dice formula — treated as 0.`);
+      return 0;
+    }
+  }
+
+  // Looks up a skill's display label (e.g. "coreDrive" -> "Core Drive")
+  // across every crest's skill group in CONFIG.DIGIMON.skills.
+  _skillLabel(key) {
+    for (const group of Object.values(CONFIG.DIGIMON.skills ?? {})) {
+      const found = group.find(sk => sk.key === key);
+      if (found) return found.label;
+    }
+    return null;
+  }
+
+  // --- Food & Rest header panel -------------------------------------------
+  // Lighter, per-actor version of PartySheet's Rest/Feed pipeline (see
+  // module/food-rest.js) — rests just this Tamer, then offers a meal drawn
+  // from whichever Party actor this Tamer belongs to.
+
+  async _onSelfRest(ev) {
+    ev.preventDefault();
+    await restActor(this.actor);
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `
+        <div class="dd-chat-card">
+          <h3 class="dd-chat-title">${this.actor.name} Rests</h3>
+          <p class="dd-chat-desc">Full HP and Hope restored. Temp HP cleared.</p>
+        </div>`
+    });
+    ui.notifications.info(`${this.actor.name} rested.`);
+  }
+
+  async _onSelfFeed(ev) {
+    ev.preventDefault();
+    await feedSingleActor(this.actor, this.actor);
+  }
+
+  async _onBankedFoodChat(ev) {
+    ev.preventDefault();
+    await postBankedFoodToChat(this.actor);
+  }
+
+  async _onBankedFoodClear(ev) {
+    ev.preventDefault();
+    await clearBankedFood(this.actor);
+  }
+
+  // Shows a quick "who is this for?" picker when an item's target allows
+  // more than one recipient. Returns the chosen actor, or null if cancelled/
+  // nothing eligible was found.
+  async _pickTargetActor(actors) {
+    if (!actors.length) return null;
+    if (actors.length === 1) return actors[0];
+    return new Promise(resolve => {
+      new Dialog({
+        title: "Use On...",
+        content: `<p>Who is this for?</p>`,
+        buttons: Object.fromEntries(actors.map((a, i) => [
+          `opt${i}`,
+          { label: a.id === this.actor.id ? "Myself" : a.name, callback: () => resolve(a) }
+        ])),
+        close: () => resolve(null)
+      }).render(true);
+    });
+  }
+
+  // Resolves who an item's target field ("tamer"/"digimon"/"both") points
+  // at, for on-use effects that need an actual recipient (heal, cure status)
+  // rather than always applying to whoever used the item.
+  async _resolveUseTarget(itemTargetField) {
+    const partners = game.actors?.filter(a => a.type === "digimon" && a.system?.tamerLink === this.actor.id) ?? [];
+    if (itemTargetField === "tamer") return this.actor;
+    if (itemTargetField === "digimon") {
+      if (!partners.length) { ui.notifications.warn("No linked partner Digimon found to use this on."); return null; }
+      return this._pickTargetActor(partners);
+    }
+    return this._pickTargetActor([this.actor, ...partners]);
+  }
+
+  // Applies every on-use automation an item carries (item-models.js's
+  // GearData: onUseBonus, onUseSkillBonus, onUseRestoreHope, onUseHeal,
+  // onUseCureStatus) and returns a list of short labels for the chat card's
+  // "Granted:" tag. onUseBonus/onUseSkillBonus always land on whoever used
+  // the item ("your next attack/check"); onUseHeal/onUseCureStatus resolve
+  // an actual recipient via the item's target field since they explicitly
+  // name "one target".
+  async _grantOnUseEffects(item) {
+    const s = item.system ?? {};
+    const notes = [];
+
+    const atk = s.onUseBonus;
+    const atkFormula = atk?.enabled ? atk.formula?.trim() : "";
+    const skb = s.onUseSkillBonus;
+    const skbFormula = skb?.enabled ? skb.formula?.trim() : "";
+    const oh = s.onUseHeal;
+    const ohFormula = oh?.enabled ? oh.formula?.trim() : "";
+    const cs = s.onUseCureStatus;
+    const ao = s.onUseAttackOverride;
+    const aoActive = ao?.enabled && (ao.element?.trim() || ao.attribute?.trim());
+
+    // Restore Hope always applies to whoever used the item — a Digimon has
+    // no Hope Pool to restore, so the item's target field (which exists so
+    // e.g. a Card can hand a bonus to the partner Digimon instead) doesn't
+    // apply here.
+    const rh = s.onUseRestoreHope;
+    const rhFormula = rh?.enabled ? rh.formula?.trim() : "";
+    if (rhFormula) {
+      const amt  = await this._resolveUseFormula(rhFormula);
+      const hope = this.actor.system.crests?.hope ?? {};
+      const cur  = hope.current ?? hope.pool ?? 0;
+      const max  = hope.pool ?? cur;
+      const next = Math.min(max, cur + amt);
+      if (next !== cur) await this.actor.update({ "system.crests.hope.current": next });
+      notes.push(`+${next - cur} Hope`);
+    }
+
+    // Everything else shares ONE resolved recipient (self, or the linked
+    // partner Digimon — see _resolveUseTarget) so a single item use only
+    // ever asks "who's this for?" once, not once per automation field.
+    if (!atkFormula && !skbFormula && !ohFormula && !cs?.enabled && !aoActive) return notes;
+
+    const target = await this._resolveUseTarget(s.target);
+    if (!target) return notes;
+    const suffix = target.id === this.actor.id ? "" : ` (${target.name})`;
+
+    if (atkFormula) {
+      const targetLabel = atk.target === "both" ? "hit & damage" : (atk.target === "hit" ? "hit roll" : "damage roll");
+      await target.createEmbeddedDocuments("Item", [{
+        name: `${item.name} — Next Attack`, type: "effect", img: item.img,
+        system: {
+          stacks: 1,
+          passiveText: `Adds ${atkFormula} to this character's next attack (${targetLabel}). Shows up pre-filled on the next Hit/Damage roll dialog, then consumes itself.`,
+          nextAttack: { enabled: true, target: atk.target, formula: atkFormula }
+        }
+      }]);
+      notes.push(`${atkFormula} to next ${targetLabel}${suffix}`);
+    }
+
+    if (skbFormula) {
+      const skillLabel = skb.skill ? (this._skillLabel(skb.skill) ?? skb.skill) : "next skill check";
+      await target.createEmbeddedDocuments("Item", [{
+        name: `${item.name} — Next Check`, type: "effect", img: item.img,
+        system: {
+          stacks: 1,
+          passiveText: `Adds ${skbFormula} to this character's next ${skillLabel}. Shows up pre-filled on that skill's next roll dialog, then consumes itself.`,
+          nextSkillCheck: { enabled: true, skill: skb.skill ?? "", formula: skbFormula }
+        }
+      }]);
+      notes.push(`${skbFormula} to next ${skillLabel}${suffix}`);
+    }
+
+    if (ohFormula) {
+      const blocked = !!target.system.statusMods?.healingBlocked;
+      if (blocked) {
+        notes.push(`Heal blocked (${target.name} is Fragmented)`);
+      } else {
+        const amt    = await this._resolveUseFormula(ohFormula);
+        const hp     = target.system.hp ?? {};
+        const prevHp = hp.value ?? 0;
+        const maxHp  = hp.max ?? prevHp;
+        const newHp  = Math.min(maxHp, prevHp + amt);
+        if (newHp !== prevHp) await target.update({ "system.hp.value": newHp });
+        notes.push(`+${newHp - prevHp} HP to ${target.name}`);
+      }
+    }
+
+    if (cs?.enabled) {
+      const statusKey = (cs.status ?? "").trim();
+      const removedNames = [];
+      const toDelete = [];
+      for (const eff of target.items ?? []) {
+        if (eff.type !== "effect") continue;
+        if (statusKey) {
+          if (eff.system?.statusType !== statusKey) continue;
+        } else if (!eff.system?.statusType) {
+          continue; // "clear all statuses" only touches canonical status effects, not hand-built passive effects
+        }
+        toDelete.push(eff.id);
+        removedNames.push(eff.name);
+      }
+      if (toDelete.length) {
+        await target.deleteEmbeddedDocuments("Item", toDelete);
+        notes.push(`Removed ${removedNames.join(", ")} from ${target.name}`);
+      } else {
+        notes.push(`No matching status effect on ${target.name}`);
+      }
+    }
+
+    if (aoActive) {
+      const element   = ao.element?.trim()   ?? "";
+      const attribute = ao.attribute?.trim() ?? "";
+      await target.createEmbeddedDocuments("Item", [{
+        name: `${item.name} — Next Attack Override`, type: "effect", img: item.img,
+        system: {
+          stacks: 1,
+          passiveText: `Overrides this character's next attack to ${element ? `deal ${element} damage` : ""}${element && attribute ? " and " : ""}${attribute ? `count as ${attribute} type` : ""} instead of its natural element/Attribute. Consumed the moment that attack is rolled.`,
+          nextAttackOverride: { enabled: true, element, attribute }
+        }
+      }]);
+      const parts = [element, attribute].filter(Boolean).join("/");
+      notes.push(`Next attack element/Attribute → ${parts}${suffix}`);
+    }
+
+    return notes;
+  }
+
   async _onGadgetChargeUse(ev) {
     ev.preventDefault();
     const item = this.actor.items.get(ev.currentTarget.dataset.itemId);
     if (!item) return;
     const cur = item.system?.charges?.current ?? 0;
     if (cur <= 0) return;
+
+    // Thrown/targeted status items (see performItemInflictRoll in combat.js)
+    // post their own richer chat card and need an actual token targeted —
+    // if nothing's targeted, nothing happens and the charge isn't spent.
+    if (item.system?.onUseInflictStatus?.enabled) {
+      const posted = await performItemInflictRoll(this.actor, item);
+      if (!posted) return;
+      await item.update({ "system.charges.current": cur - 1 });
+      return;
+    }
+
     const newCur = cur - 1;
     await item.update({ "system.charges.current": newCur });
+    const bonusLabel = (await this._grantOnUseEffects(item)).join(", ");
 
     const max = item.system?.charges?.max ?? 0;
     const content = `
@@ -684,6 +969,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
         <div class="dd-chat-tags">
           <span class="tag">Gadget use</span>
           ${newCur > 0 ? `<span class="tag">${newCur} / ${max} left</span>` : `<span class="tag" style="background:#888;">Out of charges</span>`}
+          ${bonusLabel ? `<span class="tag" style="background:#2980b9;">Granted: ${bonusLabel}</span>` : ""}
         </div>
         ${item.system?.effect ? `<p class="dd-chat-desc">${item.system.effect}</p>` : ""}
       </div>`;
@@ -704,15 +990,25 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     if (!item) return;
     const qty = item.system?.quantity ?? 0;
     if (qty <= 0) return;
+
+    if (item.system?.onUseInflictStatus?.enabled) {
+      const posted = await performItemInflictRoll(this.actor, item);
+      if (!posted) return;
+      await item.update({ "system.quantity": qty - 1 });
+      return;
+    }
+
     const newQty = qty - 1;
     await item.update({ "system.quantity": newQty });
     const s = item.system;
+    const bonusLabel = (await this._grantOnUseEffects(item)).join(", ");
     const content = `
       <div class="dd-chat-card">
         <h3 class="dd-chat-title">${item.name}</h3>
         <div class="dd-chat-tags">
           <span class="tag">${s.itemType}</span>
           ${newQty > 0 ? `<span class="tag">×${newQty} remaining</span>` : `<span class="tag" style="background:#888;">Out of stock</span>`}
+          ${bonusLabel ? `<span class="tag" style="background:#2980b9;">Granted: ${bonusLabel}</span>` : ""}
         </div>
         ${s.effect ? `<p class="dd-chat-desc">${s.effect}</p>` : ""}
       </div>`;
@@ -1136,12 +1432,11 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     if (gearSkillBonus !== 0) previewParts.push(`${gearSkillBonus > 0 ? "+" : ""}${gearSkillBonus} from equipped item`);
     const preview = previewParts.join(" + ");
 
-    const modRowHtml = () => `
-      <div class="modifier-row flexrow">
-        <input type="text"   class="mod-reason" placeholder="Why this modifier?" />
-        <input type="number" class="mod-value"  value="0" />
-        <button type="button" class="mod-remove" title="Remove">×</button>
-      </div>`;
+    // Any active "next skill check" bonus effects on this actor — hand-built
+    // by the GM, or auto-granted by using an item with onUseSkillBonus (see
+    // _grantOnUseEffects below) — show up pre-filled here, same pattern as
+    // the attack-roll dialog's "next attack" bonuses in combat.js.
+    const autoMods = collectNextSkillBonuses(this.actor, skill);
 
     // Show pre-roll dialog
     const input = await new Promise(resolve => {
@@ -1154,7 +1449,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
               <span>Why are you modifying this roll?</span>
               <span class="mod-amount-head">Amount</span>
             </div>
-            <div class="modifier-list"></div>
+            <div class="modifier-list">${autoMods.map(m => modRow(m.reason, m.raw, m.effectId)).join("")}</div>
             <button type="button" class="mod-add-btn">+ Add Modifier</button>
           </form>`,
         buttons: {
@@ -1164,9 +1459,10 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
             callback: html => {
               const mods = [];
               html.find('.modifier-row').each((_, row) => {
-                const reason = $(row).find('.mod-reason').val().trim();
-                const value  = parseInt($(row).find('.mod-value').val()) || 0;
-                mods.push({ reason, value });
+                const reason   = $(row).find('.mod-reason').val().trim();
+                const raw      = $(row).find('.mod-value').val().trim();
+                const effectId = $(row).data('effect-id') || "";
+                mods.push({ reason, raw, effectId });
               });
               resolve({ mods });
             }
@@ -1176,7 +1472,7 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
         default: "roll",
         render: html => {
           html.find('.mod-add-btn').on('click', () => {
-            html.find('.modifier-list').append(modRowHtml());
+            html.find('.modifier-list').append(modRow());
             html.find('.modifier-row:last-child .mod-reason').focus();
           });
           html.on('click', '.mod-remove', ev => {
@@ -1187,6 +1483,19 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     });
 
     if (!input) return;
+
+    // Modifier rows may hold plain numbers or dice formulas (e.g. "1d4") —
+    // resolve them to numeric totals before they're summed into the roll.
+    input.mods = await resolveModifiers(input.mods);
+
+    // Consume every "next skill check" bonus effect whose row is still
+    // present — removing a pre-filled row before clicking Roll! leaves that
+    // effect alone instead (saves it for a later check).
+    const usedEffectIds = [...new Set(input.mods.map(m => m.effectId).filter(Boolean))];
+    if (usedEffectIds.length) {
+      try { await this.actor.deleteEmbeddedDocuments("Item", usedEffectIds); }
+      catch (err) { console.error("DigitalDestiny | Failed to consume next-skill-check bonus effect(s):", err); }
+    }
 
     // Sum all named modifiers
     const extraFlat  = input.mods.reduce((sum, m) => sum + m.value, 0);
@@ -1199,8 +1508,11 @@ export class TamerSheet extends foundry.appv1.sheets.ActorSheet {
     if (gearSkillBonus !== 0) modLines.push(`${gearSkillBonus > 0 ? "+" : ""}${gearSkillBonus} skill (item)`);
     for (const m of input.mods) {
       if (m.value === 0 && !m.reason) continue;
-      const sign = m.value >= 0 ? "+" : "";
-      modLines.push(`${sign}${m.value}${m.reason ? ` — ${m.reason}` : ""}`);
+      const sign        = m.value >= 0 ? "+" : "";
+      const isFormula    = m.raw && m.raw !== `${m.value}` && !m.invalid;
+      const formulaPart  = isFormula ? ` [${m.raw}]` : "";
+      const invalidPart  = m.invalid ? ` (invalid: "${m.raw}")` : "";
+      modLines.push(`${sign}${m.value}${formulaPart}${invalidPart}${m.reason ? ` — ${m.reason}` : ""}`);
     }
 
     let flavor = `<strong>${label}</strong> &nbsp;${skillRank}d6`;

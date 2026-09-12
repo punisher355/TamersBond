@@ -120,6 +120,245 @@
                 placeholder="Describe what this item does. Copy from the book.">{{system.effect}}</textarea>
     </div>
 
+    {{!-- On Use automation (only items with an actual Use button) --}}
+    {{#if (or isConsumable isGadget)}}
+    <div class="gear-section">
+      <div class="gear-section-title">
+        On Use, Grant Next-Attack Bonus
+        <span class="gear-section-hint">— e.g. "add 1d4 to your next attack"</span>
+      </div>
+      <p class="gear-bonus-hint" style="margin-bottom:6px;">When enabled, clicking Use (or burning a charge) auto-creates a one-shot bonus on the character that shows up pre-filled the next time they roll a Hit or Damage roll, then consumes itself.</p>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label" style="display:flex; align-items:center; gap:4px;">
+          <input type="checkbox" name="system.onUseBonus.enabled" {{#if system.onUseBonus.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+          Enabled
+        </label>
+        <select name="system.onUseBonus.target" class="gear-cost-input" style="width:130px;">
+          <option value="hit"    {{#if (eq system.onUseBonus.target "hit")}}selected{{/if}}>Hit Roll</option>
+          <option value="damage" {{#if (eq system.onUseBonus.target "damage")}}selected{{/if}}>Damage Roll</option>
+          <option value="both"   {{#if (eq system.onUseBonus.target "both")}}selected{{/if}}>Both</option>
+        </select>
+        <label class="gear-cost-label">Formula</label>
+        <input type="text" name="system.onUseBonus.formula" value="{{system.onUseBonus.formula}}" class="gear-cost-input" placeholder="e.g. 1d4, +2" />
+      </div>
+    </div>
+
+    <div class="gear-section">
+      <div class="gear-section-title">
+        On Use, Grant Next-Skill-Check Bonus
+        <span class="gear-section-hint">— e.g. "add 1d4 to your next Mend check"</span>
+      </div>
+      <p class="gear-bonus-hint" style="margin-bottom:6px;">Same idea, but for a named skill check instead of an attack. Leave Skill blank to offer it on any skill roll.</p>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label" style="display:flex; align-items:center; gap:4px;">
+          <input type="checkbox" name="system.onUseSkillBonus.enabled" {{#if system.onUseSkillBonus.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+          Enabled
+        </label>
+        <select name="system.onUseSkillBonus.skill" class="gear-cost-input" style="width:150px;">
+          <option value="">(Any Skill)</option>
+          <optgroup label="Courage">
+            <option value="blitz"    {{#if (eq system.onUseSkillBonus.skill "blitz")}}selected{{/if}}>Blitz</option>
+            <option value="ironclad" {{#if (eq system.onUseSkillBonus.skill "ironclad")}}selected{{/if}}>Ironclad</option>
+            <option value="crusher"  {{#if (eq system.onUseSkillBonus.skill "crusher")}}selected{{/if}}>Crusher</option>
+            <option value="ghost"    {{#if (eq system.onUseSkillBonus.skill "ghost")}}selected{{/if}}>Ghost</option>
+            <option value="roar"     {{#if (eq system.onUseSkillBonus.skill "roar")}}selected{{/if}}>Roar</option>
+          </optgroup>
+          <optgroup label="Friendship">
+            <option value="scan"      {{#if (eq system.onUseSkillBonus.skill "scan")}}selected{{/if}}>Scan</option>
+            <option value="rally"     {{#if (eq system.onUseSkillBonus.skill "rally")}}selected{{/if}}>Rally</option>
+            <option value="broadcast" {{#if (eq system.onUseSkillBonus.skill "broadcast")}}selected{{/if}}>Broadcast</option>
+          </optgroup>
+          <optgroup label="Love">
+            <option value="mend"  {{#if (eq system.onUseSkillBonus.skill "mend")}}selected{{/if}}>Mend</option>
+            <option value="radar" {{#if (eq system.onUseSkillBonus.skill "radar")}}selected{{/if}}>Radar</option>
+            <option value="tame"  {{#if (eq system.onUseSkillBonus.skill "tame")}}selected{{/if}}>Tame</option>
+          </optgroup>
+          <optgroup label="Knowledge">
+            <option value="decode"   {{#if (eq system.onUseSkillBonus.skill "decode")}}selected{{/if}}>Decode</option>
+            <option value="jackIn"   {{#if (eq system.onUseSkillBonus.skill "jackIn")}}selected{{/if}}>Jack In</option>
+            <option value="modify"   {{#if (eq system.onUseSkillBonus.skill "modify")}}selected{{/if}}>Modify</option>
+            <option value="trace"    {{#if (eq system.onUseSkillBonus.skill "trace")}}selected{{/if}}>Trace</option>
+            <option value="archive"  {{#if (eq system.onUseSkillBonus.skill "archive")}}selected{{/if}}>Archive</option>
+            <option value="command"  {{#if (eq system.onUseSkillBonus.skill "command")}}selected{{/if}}>Command</option>
+            <option value="playback" {{#if (eq system.onUseSkillBonus.skill "playback")}}selected{{/if}}>Playback</option>
+          </optgroup>
+          <optgroup label="Sincerity">
+            <option value="firewall"  {{#if (eq system.onUseSkillBonus.skill "firewall")}}selected{{/if}}>Firewall</option>
+            <option value="reinforce" {{#if (eq system.onUseSkillBonus.skill "reinforce")}}selected{{/if}}>Reinforce</option>
+            <option value="coreDrive" {{#if (eq system.onUseSkillBonus.skill "coreDrive")}}selected{{/if}}>Core Drive</option>
+          </optgroup>
+          <optgroup label="Reliability">
+            <option value="zeroError" {{#if (eq system.onUseSkillBonus.skill "zeroError")}}selected{{/if}}>Zero Error</option>
+            <option value="fieldOps"  {{#if (eq system.onUseSkillBonus.skill "fieldOps")}}selected{{/if}}>Field Ops</option>
+            <option value="recovery"  {{#if (eq system.onUseSkillBonus.skill "recovery")}}selected{{/if}}>Recovery</option>
+          </optgroup>
+        </select>
+        <label class="gear-cost-label">Formula</label>
+        <input type="text" name="system.onUseSkillBonus.formula" value="{{system.onUseSkillBonus.formula}}" class="gear-cost-input" placeholder="e.g. 1d4, +2" />
+      </div>
+    </div>
+
+    <div class="gear-section">
+      <div class="gear-section-title">
+        On Use, Restore HP
+        <span class="gear-section-hint">— immediate, applied the moment it's used</span>
+      </div>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label" style="display:flex; align-items:center; gap:4px;">
+          <input type="checkbox" name="system.onUseHeal.enabled" {{#if system.onUseHeal.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+          Enabled
+        </label>
+        <label class="gear-cost-label">Formula</label>
+        <input type="text" name="system.onUseHeal.formula" value="{{system.onUseHeal.formula}}" class="gear-cost-input" placeholder="e.g. 4, 1d6" />
+        <span class="gear-section-hint">Recipient follows the Target field above (Tamer/Digimon/Both asks who).</span>
+      </div>
+    </div>
+
+    <div class="gear-section">
+      <div class="gear-section-title">
+        On Use, Restore Hope
+        <span class="gear-section-hint">— immediate, always applies to whoever used it</span>
+      </div>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label" style="display:flex; align-items:center; gap:4px;">
+          <input type="checkbox" name="system.onUseRestoreHope.enabled" {{#if system.onUseRestoreHope.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+          Enabled
+        </label>
+        <label class="gear-cost-label">Formula</label>
+        <input type="text" name="system.onUseRestoreHope.formula" value="{{system.onUseRestoreHope.formula}}" class="gear-cost-input" placeholder="e.g. 2, 1d8" />
+      </div>
+    </div>
+
+    <div class="gear-section">
+      <div class="gear-section-title">
+        On Use, Cure Status
+        <span class="gear-section-hint">— immediate, applied the moment it's used</span>
+      </div>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label" style="display:flex; align-items:center; gap:4px;">
+          <input type="checkbox" name="system.onUseCureStatus.enabled" {{#if system.onUseCureStatus.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+          Enabled
+        </label>
+        <select name="system.onUseCureStatus.status" class="gear-cost-input" style="width:150px;">
+          <option value="">(Remove All Statuses)</option>
+          <option value="burn"     {{#if (eq system.onUseCureStatus.status "burn")}}selected{{/if}}>Burn</option>
+          <option value="freeze"   {{#if (eq system.onUseCureStatus.status "freeze")}}selected{{/if}}>Freeze</option>
+          <option value="paralyze" {{#if (eq system.onUseCureStatus.status "paralyze")}}selected{{/if}}>Paralyze</option>
+          <option value="blind"    {{#if (eq system.onUseCureStatus.status "blind")}}selected{{/if}}>Blind</option>
+          <option value="confuse"  {{#if (eq system.onUseCureStatus.status "confuse")}}selected{{/if}}>Confuse</option>
+          <option value="poison"   {{#if (eq system.onUseCureStatus.status "poison")}}selected{{/if}}>Poison</option>
+          <option value="sleep"    {{#if (eq system.onUseCureStatus.status "sleep")}}selected{{/if}}>Sleep</option>
+          <option value="fragment" {{#if (eq system.onUseCureStatus.status "fragment")}}selected{{/if}}>Fragment</option>
+        </select>
+        <span class="gear-section-hint">Recipient follows the Target field above.</span>
+      </div>
+    </div>
+
+    <div class="gear-section">
+      <div class="gear-section-title">
+        On Use, Override Next Attack's Element/Attribute
+        <span class="gear-section-hint">— e.g. "your Digimon's next attack deals Fire damage instead"</span>
+      </div>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label" style="display:flex; align-items:center; gap:4px;">
+          <input type="checkbox" name="system.onUseAttackOverride.enabled" {{#if system.onUseAttackOverride.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+          Enabled
+        </label>
+        <select name="system.onUseAttackOverride.element" class="gear-cost-input" style="width:130px;">
+          <option value="">(No Element Override)</option>
+          <option value="fire"     {{#if (eq system.onUseAttackOverride.element "fire")}}selected{{/if}}>Fire</option>
+          <option value="water"    {{#if (eq system.onUseAttackOverride.element "water")}}selected{{/if}}>Water</option>
+          <option value="plant"    {{#if (eq system.onUseAttackOverride.element "plant")}}selected{{/if}}>Plant</option>
+          <option value="electric" {{#if (eq system.onUseAttackOverride.element "electric")}}selected{{/if}}>Electric</option>
+          <option value="wind"     {{#if (eq system.onUseAttackOverride.element "wind")}}selected{{/if}}>Wind</option>
+          <option value="earth"    {{#if (eq system.onUseAttackOverride.element "earth")}}selected{{/if}}>Earth</option>
+          <option value="light"    {{#if (eq system.onUseAttackOverride.element "light")}}selected{{/if}}>Light</option>
+          <option value="dark"     {{#if (eq system.onUseAttackOverride.element "dark")}}selected{{/if}}>Dark</option>
+          <option value="neutral"  {{#if (eq system.onUseAttackOverride.element "neutral")}}selected{{/if}}>Neutral</option>
+        </select>
+        <select name="system.onUseAttackOverride.attribute" class="gear-cost-input" style="width:150px;">
+          <option value="">(No Attribute Override)</option>
+          <option value="vaccine"  {{#if (eq system.onUseAttackOverride.attribute "vaccine")}}selected{{/if}}>Vaccine</option>
+          <option value="virus"    {{#if (eq system.onUseAttackOverride.attribute "virus")}}selected{{/if}}>Virus</option>
+          <option value="data"     {{#if (eq system.onUseAttackOverride.attribute "data")}}selected{{/if}}>Data</option>
+          <option value="free"     {{#if (eq system.onUseAttackOverride.attribute "free")}}selected{{/if}}>Free</option>
+        </select>
+        <span class="gear-section-hint">Recipient follows the Target field above (Cards are usually "digimon").</span>
+      </div>
+    </div>
+
+    <div class="gear-section">
+      <div class="gear-section-title">
+        On Use, Inflict Status On A Target
+        <span class="gear-section-hint">— "throw at an enemy, on a failed check inflict..."</span>
+      </div>
+      <p class="gear-bonus-hint" style="margin-bottom:6px;">Reads your current target(s). Posts a chat card with a reference roll for the target's check and an always-available Apply button (GM discretion) — same trust model as an attack roll's own Apply button.</p>
+      <div class="gear-cost-row">
+        <label class="gear-cost-label" style="display:flex; align-items:center; gap:4px;">
+          <input type="checkbox" name="system.onUseInflictStatus.enabled" {{#if system.onUseInflictStatus.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+          Enabled
+        </label>
+        <select name="system.onUseInflictStatus.checkSkill" class="gear-cost-input" style="width:150px;">
+          <optgroup label="Courage">
+            <option value="blitz"    {{#if (eq system.onUseInflictStatus.checkSkill "blitz")}}selected{{/if}}>Blitz</option>
+            <option value="ironclad" {{#if (eq system.onUseInflictStatus.checkSkill "ironclad")}}selected{{/if}}>Ironclad</option>
+            <option value="crusher"  {{#if (eq system.onUseInflictStatus.checkSkill "crusher")}}selected{{/if}}>Crusher</option>
+            <option value="ghost"    {{#if (eq system.onUseInflictStatus.checkSkill "ghost")}}selected{{/if}}>Ghost</option>
+            <option value="roar"     {{#if (eq system.onUseInflictStatus.checkSkill "roar")}}selected{{/if}}>Roar</option>
+          </optgroup>
+          <optgroup label="Friendship">
+            <option value="scan"      {{#if (eq system.onUseInflictStatus.checkSkill "scan")}}selected{{/if}}>Scan</option>
+            <option value="rally"     {{#if (eq system.onUseInflictStatus.checkSkill "rally")}}selected{{/if}}>Rally</option>
+            <option value="broadcast" {{#if (eq system.onUseInflictStatus.checkSkill "broadcast")}}selected{{/if}}>Broadcast</option>
+          </optgroup>
+          <optgroup label="Love">
+            <option value="mend"  {{#if (eq system.onUseInflictStatus.checkSkill "mend")}}selected{{/if}}>Mend</option>
+            <option value="radar" {{#if (eq system.onUseInflictStatus.checkSkill "radar")}}selected{{/if}}>Radar</option>
+            <option value="tame"  {{#if (eq system.onUseInflictStatus.checkSkill "tame")}}selected{{/if}}>Tame</option>
+          </optgroup>
+          <optgroup label="Knowledge">
+            <option value="decode"   {{#if (eq system.onUseInflictStatus.checkSkill "decode")}}selected{{/if}}>Decode</option>
+            <option value="jackIn"   {{#if (eq system.onUseInflictStatus.checkSkill "jackIn")}}selected{{/if}}>Jack In</option>
+            <option value="modify"   {{#if (eq system.onUseInflictStatus.checkSkill "modify")}}selected{{/if}}>Modify</option>
+            <option value="trace"    {{#if (eq system.onUseInflictStatus.checkSkill "trace")}}selected{{/if}}>Trace</option>
+            <option value="archive"  {{#if (eq system.onUseInflictStatus.checkSkill "archive")}}selected{{/if}}>Archive</option>
+            <option value="command"  {{#if (eq system.onUseInflictStatus.checkSkill "command")}}selected{{/if}}>Command</option>
+            <option value="playback" {{#if (eq system.onUseInflictStatus.checkSkill "playback")}}selected{{/if}}>Playback</option>
+          </optgroup>
+          <optgroup label="Sincerity">
+            <option value="firewall"  {{#if (eq system.onUseInflictStatus.checkSkill "firewall")}}selected{{/if}}>Firewall</option>
+            <option value="reinforce" {{#if (eq system.onUseInflictStatus.checkSkill "reinforce")}}selected{{/if}}>Reinforce</option>
+            <option value="coreDrive" {{#if (eq system.onUseInflictStatus.checkSkill "coreDrive")}}selected{{/if}}>Core Drive</option>
+          </optgroup>
+          <optgroup label="Reliability">
+            <option value="zeroError" {{#if (eq system.onUseInflictStatus.checkSkill "zeroError")}}selected{{/if}}>Zero Error</option>
+            <option value="fieldOps"  {{#if (eq system.onUseInflictStatus.checkSkill "fieldOps")}}selected{{/if}}>Field Ops</option>
+            <option value="recovery"  {{#if (eq system.onUseInflictStatus.checkSkill "recovery")}}selected{{/if}}>Recovery</option>
+          </optgroup>
+        </select>
+        <label class="gear-cost-label">DN</label>
+        <input type="number" name="system.onUseInflictStatus.dn" value="{{system.onUseInflictStatus.dn}}" class="gear-cost-input" style="width:55px;" />
+      </div>
+      <div class="gear-cost-row" style="margin-top:4px;">
+        <select name="system.onUseInflictStatus.status" class="gear-cost-input" style="width:130px;">
+          <option value="">(Choose Status)</option>
+          <option value="burn"     {{#if (eq system.onUseInflictStatus.status "burn")}}selected{{/if}}>Burn</option>
+          <option value="freeze"   {{#if (eq system.onUseInflictStatus.status "freeze")}}selected{{/if}}>Freeze</option>
+          <option value="paralyze" {{#if (eq system.onUseInflictStatus.status "paralyze")}}selected{{/if}}>Paralyze</option>
+          <option value="blind"    {{#if (eq system.onUseInflictStatus.status "blind")}}selected{{/if}}>Blind</option>
+          <option value="confuse"  {{#if (eq system.onUseInflictStatus.status "confuse")}}selected{{/if}}>Confuse</option>
+          <option value="poison"   {{#if (eq system.onUseInflictStatus.status "poison")}}selected{{/if}}>Poison</option>
+          <option value="sleep"    {{#if (eq system.onUseInflictStatus.status "sleep")}}selected{{/if}}>Sleep</option>
+          <option value="fragment" {{#if (eq system.onUseInflictStatus.status "fragment")}}selected{{/if}}>Fragment</option>
+        </select>
+        <label class="gear-cost-label">Stacks (X)</label>
+        <input type="number" name="system.onUseInflictStatus.x" value="{{system.onUseInflictStatus.x}}" class="gear-cost-input" style="width:55px;" />
+        <label class="gear-cost-label">Ticks (Y, Burn only)</label>
+        <input type="number" name="system.onUseInflictStatus.y" value="{{system.onUseInflictStatus.y}}" class="gear-cost-input" style="width:55px;" />
+      </div>
+    </div>
+    {{/if}}
+
     {{!-- Bonuses (slotted + equipment only) --}}
     {{#unless isConsumable}}
     <div class="gear-section">

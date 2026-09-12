@@ -374,9 +374,18 @@ export class EncounterGenerator {
         pathUpdate[`system.digivolutionPath.${stg}.formName`] = stepForm.name;
         pathUpdate[`system.digivolutionPath.${stg}.formImg`]  = this._resolveImg(stepForm);
 
-        const moveName = stepForm.system.signatureMove;
-        if (!moveName) continue;
-        const move = this._movesCache.find(m => m.name === moveName);
+        // UUID-linked (homebrew-friendly) first, falling back to the
+        // pre-warmed name-matched compendium cache built in _prepareCaches().
+        let move = null;
+        const linkedUuid = stepForm.system.signatureMoveUuid?.trim();
+        if (linkedUuid) {
+          try { move = await fromUuid(linkedUuid); } catch { move = null; }
+        }
+        if (!move) {
+          const moveName = stepForm.system.signatureMove;
+          if (!moveName) continue;
+          move = this._movesCache.find(m => m.name === moveName);
+        }
         if (!move) continue;
 
         moveDocs.push({

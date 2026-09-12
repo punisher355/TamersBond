@@ -1,5 +1,6 @@
-import { computeTagString, hexToRgbTriplet }    from "../config.js";
+import { computeTagString, hexToRgbTriplet, resolveSignatureMoveDocument } from "../config.js";
 import { getActorStatTotals, performAttackRoll } from "../combat.js";
+import { modRow, resolveModifiers, collectNextSkillBonuses } from "../roll-helpers.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -421,8 +422,9 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
       await this.actor.deleteEmbeddedDocuments("Item", oldSigMoves.map(i => i.id));
     }
 
-    const sigMoveName = s.signatureMove?.trim();
-    if (!sigMoveName) return;
+    const moveDoc = await resolveSignatureMoveDocument(s);
+    if (!moveDoc) return;
+    const sigMoveName = moveDoc.name;
 
     const poolMove = this.actor.items.find(i => i.type === "move" && i.name === sigMoveName);
     if (poolMove) {
@@ -430,12 +432,6 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
       return;
     }
 
-    const pack = game.packs.get("digital-destiny.digimon-moves");
-    if (!pack) return;
-    const index = await pack.getIndex();
-    const entry = index.find(e => e.name === sigMoveName);
-    if (!entry) return;
-    const moveDoc  = await pack.getDocument(entry._id);
     const baseData = moveDoc.toObject();
     await this.actor.createEmbeddedDocuments("Item", [{
       ...baseData,
@@ -558,12 +554,12 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     const preview = `${skillRank}d6`;
 
-    const modRowHtml = () => `
-      <div class="modifier-row flexrow">
-        <input type="text"   class="mod-reason" placeholder="Why this modifier?" />
-        <input type="number" class="mod-value"  value="0" />
-        <button type="button" class="mod-remove" title="Remove">×</button>
-      </div>`;
+    // Any active "next skill check" bonus effects on this actor — hand-built
+    // by the GM, or auto-granted by using an item with onUseSkillBonus from
+    // the linked Tamer's sheet (see _grantOnUseEffects in TamerSheet.js) —
+    // show up pre-filled here, same pattern as the attack-roll dialog's
+    // "next attack" bonuses in combat.js.
+    const autoMods = collectNextSkillBonuses(this.actor, skill);
 
     const input = await new Promise(resolve => {
       new Dialog({
@@ -575,7 +571,7 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
               <span>Why are you modifying this roll?</span>
               <span class="mod-amount-head">Amount</span>
             </div>
-            <div class="modifier-list"></div>
+            <div class="modifier-list">${autoMods.map(m => modRow(m.reason, m.raw, m.effectId)).join("")}</div>
             <button type="button" class="mod-add-btn">+ Add Modifier</button>
           </form>`,
         buttons: {
@@ -584,9 +580,10 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
             callback: html => {
               const mods = [];
               html.find('.modifier-row').each((_, row) => {
-                const reason = $(row).find('.mod-reason').val().trim();
-                const value  = parseInt($(row).find('.mod-value').val()) || 0;
-                mods.push({ reason, value });
+                const reason   = $(row).find('.mod-reason').val().trim();
+                const raw      = $(row).find('.mod-value').val().trim();
+                const effectId = $(row).data('effect-id') || "";
+                mods.push({ reason, raw, effectId });
               });
               resolve({ mods });
             }
@@ -596,7 +593,7 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
         default: "roll",
         render: html => {
           html.find('.mod-add-btn').on('click', () => {
-            html.find('.modifier-list').append(modRowHtml());
+            html.find('.modifier-list').append(modRow());
             html.find('.modifier-row:last-child .mod-reason').focus();
           });
           html.on('click', '.mod-remove', ev => $(ev.currentTarget).closest('.modifier-row').remove());
@@ -606,13 +603,28 @@ export class NpcDigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     if (!input) return;
 
+    input.mods = await resolveModifiers(input.mods);
+
+    // Consume every "next skill check" bonus effect whose row is still
+    // present — removing a pre-filled row before clicking Roll! leaves that
+    // effect alone instead (saves it for a later check).
+    const usedEffectIds = [...new Set(input.mods.map(m => m.effectId).filter(Boolean))];
+    if (usedEffectIds.length) {
+      try { await this.actor.deleteEmbeddedDocuments("Item", usedEffectIds); }
+      catch (err) { console.error("DigitalDestiny | Failed to consume next-skill-check bonus effect(s):", err); }
+    }
+
     const extraFlat = input.mods.reduce((sum, m) => sum + m.value, 0);
     const formula   = extraFlat !== 0 ? `${skillRank}d6 + ${extraFlat}` : `${skillRank}d6`;
 
     const modLines = [];
     for (const m of input.mods) {
       if (m.value === 0 && !m.reason) continue;
-      modLines.push(`${m.value >= 0 ? "+" : ""}${m.value}${m.reason ? ` — ${m.reason}` : ""}`);
+      const sign        = m.value >= 0 ? "+" : "";
+      const isFormula    = m.raw && m.raw !== `${m.value}` && !m.invalid;
+      const formulaPart  = isFormula ? ` [${m.raw}]` : "";
+      const invalidPart  = m.invalid ? ` (invalid: "${m.raw}")` : "";
+      modLines.push(`${sign}${m.value}${formulaPart}${invalidPart}${m.reason ? ` — ${m.reason}` : ""}`);
     }
 
     let flavor = `<strong>${label}</strong> &nbsp;${skillRank}d6`;

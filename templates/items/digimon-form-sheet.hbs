@@ -38,10 +38,21 @@
         </div>
         <div class="dfc-field dfc-field-wide">
           <label>Signature Move</label>
+          {{#if sigMoveLinked}}
+          <div class="dfc-sigmove-row dfc-sigmove-linked">
+            <img class="dfc-sigmove-thumb" src="{{sigMoveLinked.img}}" alt="" />
+            <span class="dfc-sigmove-linked-name">{{sigMoveLinked.name}}</span>
+            <button type="button" class="dfc-open-sigmove-btn" title="Open this move's item sheet"><i class="fas fa-external-link-alt"></i></button>
+            <button type="button" class="dfc-unlink-sigmove-btn" title="Unlink (revert to the plain name field)"><i class="fas fa-unlink"></i></button>
+          </div>
+          <p class="dfc-sigmove-hint">Linked directly — works even if this is a homebrew move that isn't in the Digimon Moves compendium.</p>
+          {{else}}
           <div class="dfc-sigmove-row">
-            <input type="text" name="system.signatureMove" value="{{system.signatureMove}}" placeholder="Move name" />
+            <input type="text" name="system.signatureMove" value="{{system.signatureMove}}" placeholder="Move name (matched in the Digimon Moves compendium)" />
             <button type="button" class="dfc-open-sigmove-btn" title="Open this move's item sheet"><i class="fas fa-external-link-alt"></i></button>
           </div>
+          <p class="dfc-sigmove-hint">Drag a Move item here to link it directly — needed for a homebrew/custom attack that isn't in the compendium.</p>
+          {{/if}}
         </div>
       </div>
     </div>

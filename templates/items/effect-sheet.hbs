@@ -53,6 +53,98 @@
       <button type="button" class="rule-add-btn" style="width:auto; padding:2px 10px; margin-top:6px;">+ Add Rule</button>
     </div>
 
+    <div class="form-group" style="border-top:1px solid #d0c8bc; padding-top:8px;">
+      <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">Next Attack Bonus</label>
+      <p style="margin:0 0 4px; font-size:0.78em; color:#555; font-style:italic;">One-shot — e.g. "add 1d4 to your next attack." Shows up pre-filled the next time this actor rolls a Hit or Damage roll, then this effect deletes itself. Not an ongoing passive — use Rules above for that.</p>
+      <div class="form-group flexrow" style="align-items:center; gap:8px; flex-wrap:wrap;">
+        <input type="checkbox" name="system.nextAttack.enabled" {{#if system.nextAttack.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+        <label style="font-weight:600; font-size:0.85em; color:#3a3a4e; margin:0;">Enabled</label>
+        <select name="system.nextAttack.target" style="width:150px;">
+          <option value="hit"    {{#if (eq system.nextAttack.target "hit")}}selected{{/if}}>Hit Roll</option>
+          <option value="damage" {{#if (eq system.nextAttack.target "damage")}}selected{{/if}}>Damage Roll</option>
+          <option value="both"   {{#if (eq system.nextAttack.target "both")}}selected{{/if}}>Both</option>
+        </select>
+        <input type="text" name="system.nextAttack.formula" value="{{system.nextAttack.formula}}" placeholder="e.g. 1d4, +2" style="width:110px;" />
+      </div>
+    </div>
+
+    <div class="form-group" style="border-top:1px solid #d0c8bc; padding-top:8px;">
+      <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">Next Skill Check Bonus</label>
+      <p style="margin:0 0 4px; font-size:0.78em; color:#555; font-style:italic;">One-shot — e.g. "add 1d4 to your next Mend check." Leave Skill on "(Any)" to offer it on any skill roll. Shows up pre-filled the next time this actor rolls that check, then this effect deletes itself.</p>
+      <div class="form-group flexrow" style="align-items:center; gap:8px; flex-wrap:wrap;">
+        <input type="checkbox" name="system.nextSkillCheck.enabled" {{#if system.nextSkillCheck.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+        <label style="font-weight:600; font-size:0.85em; color:#3a3a4e; margin:0;">Enabled</label>
+        <select name="system.nextSkillCheck.skill" style="width:150px;">
+          <option value="">(Any Skill)</option>
+          <optgroup label="Courage">
+            <option value="blitz"    {{#if (eq system.nextSkillCheck.skill "blitz")}}selected{{/if}}>Blitz</option>
+            <option value="ironclad" {{#if (eq system.nextSkillCheck.skill "ironclad")}}selected{{/if}}>Ironclad</option>
+            <option value="crusher"  {{#if (eq system.nextSkillCheck.skill "crusher")}}selected{{/if}}>Crusher</option>
+            <option value="ghost"    {{#if (eq system.nextSkillCheck.skill "ghost")}}selected{{/if}}>Ghost</option>
+            <option value="roar"     {{#if (eq system.nextSkillCheck.skill "roar")}}selected{{/if}}>Roar</option>
+          </optgroup>
+          <optgroup label="Friendship">
+            <option value="scan"      {{#if (eq system.nextSkillCheck.skill "scan")}}selected{{/if}}>Scan</option>
+            <option value="rally"     {{#if (eq system.nextSkillCheck.skill "rally")}}selected{{/if}}>Rally</option>
+            <option value="broadcast" {{#if (eq system.nextSkillCheck.skill "broadcast")}}selected{{/if}}>Broadcast</option>
+          </optgroup>
+          <optgroup label="Love">
+            <option value="mend"  {{#if (eq system.nextSkillCheck.skill "mend")}}selected{{/if}}>Mend</option>
+            <option value="radar" {{#if (eq system.nextSkillCheck.skill "radar")}}selected{{/if}}>Radar</option>
+            <option value="tame"  {{#if (eq system.nextSkillCheck.skill "tame")}}selected{{/if}}>Tame</option>
+          </optgroup>
+          <optgroup label="Knowledge">
+            <option value="decode"   {{#if (eq system.nextSkillCheck.skill "decode")}}selected{{/if}}>Decode</option>
+            <option value="jackIn"   {{#if (eq system.nextSkillCheck.skill "jackIn")}}selected{{/if}}>Jack In</option>
+            <option value="modify"   {{#if (eq system.nextSkillCheck.skill "modify")}}selected{{/if}}>Modify</option>
+            <option value="trace"    {{#if (eq system.nextSkillCheck.skill "trace")}}selected{{/if}}>Trace</option>
+            <option value="archive"  {{#if (eq system.nextSkillCheck.skill "archive")}}selected{{/if}}>Archive</option>
+            <option value="command"  {{#if (eq system.nextSkillCheck.skill "command")}}selected{{/if}}>Command</option>
+            <option value="playback" {{#if (eq system.nextSkillCheck.skill "playback")}}selected{{/if}}>Playback</option>
+          </optgroup>
+          <optgroup label="Sincerity">
+            <option value="firewall"  {{#if (eq system.nextSkillCheck.skill "firewall")}}selected{{/if}}>Firewall</option>
+            <option value="reinforce" {{#if (eq system.nextSkillCheck.skill "reinforce")}}selected{{/if}}>Reinforce</option>
+            <option value="coreDrive" {{#if (eq system.nextSkillCheck.skill "coreDrive")}}selected{{/if}}>Core Drive</option>
+          </optgroup>
+          <optgroup label="Reliability">
+            <option value="zeroError" {{#if (eq system.nextSkillCheck.skill "zeroError")}}selected{{/if}}>Zero Error</option>
+            <option value="fieldOps"  {{#if (eq system.nextSkillCheck.skill "fieldOps")}}selected{{/if}}>Field Ops</option>
+            <option value="recovery"  {{#if (eq system.nextSkillCheck.skill "recovery")}}selected{{/if}}>Recovery</option>
+          </optgroup>
+        </select>
+        <input type="text" name="system.nextSkillCheck.formula" value="{{system.nextSkillCheck.formula}}" placeholder="e.g. 1d4, +2" style="width:110px;" />
+      </div>
+    </div>
+
+    <div class="form-group" style="border-top:1px solid #d0c8bc; padding-top:8px;">
+      <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">Next Attack Element/Attribute Override</label>
+      <p style="margin:0 0 4px; font-size:0.78em; color:#555; font-style:italic;">One-shot — e.g. "next attack deals Fire damage instead of its natural element." Overrides (not a bonus) whichever field(s) are set below on this actor's very next attack, then this effect deletes itself.</p>
+      <div class="form-group flexrow" style="align-items:center; gap:8px; flex-wrap:wrap;">
+        <input type="checkbox" name="system.nextAttackOverride.enabled" {{#if system.nextAttackOverride.enabled}}checked{{/if}} style="width:16px; height:16px;" />
+        <label style="font-weight:600; font-size:0.85em; color:#3a3a4e; margin:0;">Enabled</label>
+        <select name="system.nextAttackOverride.element" style="width:130px;">
+          <option value="">(No Element Override)</option>
+          <option value="fire"     {{#if (eq system.nextAttackOverride.element "fire")}}selected{{/if}}>Fire</option>
+          <option value="water"    {{#if (eq system.nextAttackOverride.element "water")}}selected{{/if}}>Water</option>
+          <option value="plant"    {{#if (eq system.nextAttackOverride.element "plant")}}selected{{/if}}>Plant</option>
+          <option value="electric" {{#if (eq system.nextAttackOverride.element "electric")}}selected{{/if}}>Electric</option>
+          <option value="wind"     {{#if (eq system.nextAttackOverride.element "wind")}}selected{{/if}}>Wind</option>
+          <option value="earth"    {{#if (eq system.nextAttackOverride.element "earth")}}selected{{/if}}>Earth</option>
+          <option value="light"    {{#if (eq system.nextAttackOverride.element "light")}}selected{{/if}}>Light</option>
+          <option value="dark"     {{#if (eq system.nextAttackOverride.element "dark")}}selected{{/if}}>Dark</option>
+          <option value="neutral"  {{#if (eq system.nextAttackOverride.element "neutral")}}selected{{/if}}>Neutral</option>
+        </select>
+        <select name="system.nextAttackOverride.attribute" style="width:130px;">
+          <option value="">(No Attribute Override)</option>
+          <option value="vaccine"  {{#if (eq system.nextAttackOverride.attribute "vaccine")}}selected{{/if}}>Vaccine</option>
+          <option value="virus"    {{#if (eq system.nextAttackOverride.attribute "virus")}}selected{{/if}}>Virus</option>
+          <option value="data"     {{#if (eq system.nextAttackOverride.attribute "data")}}selected{{/if}}>Data</option>
+          <option value="free"     {{#if (eq system.nextAttackOverride.attribute "free")}}selected{{/if}}>Free</option>
+        </select>
+      </div>
+    </div>
+
     <div class="form-group">
       <label style="font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.04em; color:#3a3a4e;">Start of Turn Message</label>
       <textarea name="system.startOfTurnText" rows="3" placeholder="Message posted to chat when this effect triggers at the start of a turn…">{{system.startOfTurnText}}</textarea>

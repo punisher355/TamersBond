@@ -20,6 +20,16 @@
 #   stat_bonuses     { courage, friendship, love, knowledge, sincerity, reliability, hope }
 #   combat_bonuses   { hp_damage_reduction, attack_bonus, damage_bonus }
 #   skill_bonuses    { blitz, ironclad, crusher, ghost, roar, scan, rally, ... }
+#   on_use_bonus         Grant a one-shot "next attack" bonus when used:
+#                         { enabled, target ("hit"|"damage"|"both"), formula }
+#   on_use_skill_bonus   Grant a one-shot "next skill check" bonus when used:
+#                         { enabled, skill (a skill key, "" = any), formula }
+#   on_use_heal          Restore HP immediately when used: { enabled, formula }
+#   on_use_restore_hope  Restore Hope immediately when used (always the user): { enabled, formula }
+#   on_use_cure_status   Remove a status immediately when used: { enabled, status ("" = all) }
+#   on_use_attack_override   Override next attack's element/Attribute: { enabled, element, attribute }
+#   on_use_inflict_status    Throw at a target, on a failed check inflict a status:
+#                             { enabled, check_skill, dn, status, x, y (Burn ticks only) }
 #   notes            GM notes, not shown to players
 #
 # AFTER RUNNING:
@@ -145,6 +155,41 @@ foreach ($f in $files) {
                 attackBonus       = if ($raw.combat_bonuses -and $null -ne $raw.combat_bonuses.attack_bonus)        { [int]$raw.combat_bonuses.attack_bonus }        else { 0 }
                 damageBonus       = if ($raw.combat_bonuses -and $null -ne $raw.combat_bonuses.damage_bonus)        { [int]$raw.combat_bonuses.damage_bonus }         else { 0 }
                 skillBonuses      = $skillBonuses
+            }
+            onUseBonus = [ordered]@{
+                enabled = if ($raw.on_use_bonus -and $raw.on_use_bonus.enabled) { [bool]$raw.on_use_bonus.enabled } else { $false }
+                target  = if ($raw.on_use_bonus -and $raw.on_use_bonus.target)  { [string]$raw.on_use_bonus.target } else { "damage" }
+                formula = if ($raw.on_use_bonus -and $raw.on_use_bonus.formula) { [string]$raw.on_use_bonus.formula } else { "" }
+            }
+            onUseSkillBonus = [ordered]@{
+                enabled = if ($raw.on_use_skill_bonus -and $raw.on_use_skill_bonus.enabled) { [bool]$raw.on_use_skill_bonus.enabled } else { $false }
+                skill   = if ($raw.on_use_skill_bonus -and $raw.on_use_skill_bonus.skill)    { [string]$raw.on_use_skill_bonus.skill } else { "" }
+                formula = if ($raw.on_use_skill_bonus -and $raw.on_use_skill_bonus.formula)  { [string]$raw.on_use_skill_bonus.formula } else { "" }
+            }
+            onUseHeal = [ordered]@{
+                enabled = if ($raw.on_use_heal -and $raw.on_use_heal.enabled) { [bool]$raw.on_use_heal.enabled } else { $false }
+                formula = if ($raw.on_use_heal -and $raw.on_use_heal.formula) { [string]$raw.on_use_heal.formula } else { "" }
+            }
+            onUseRestoreHope = [ordered]@{
+                enabled = if ($raw.on_use_restore_hope -and $raw.on_use_restore_hope.enabled) { [bool]$raw.on_use_restore_hope.enabled } else { $false }
+                formula = if ($raw.on_use_restore_hope -and $raw.on_use_restore_hope.formula) { [string]$raw.on_use_restore_hope.formula } else { "" }
+            }
+            onUseCureStatus = [ordered]@{
+                enabled = if ($raw.on_use_cure_status -and $raw.on_use_cure_status.enabled) { [bool]$raw.on_use_cure_status.enabled } else { $false }
+                status  = if ($raw.on_use_cure_status -and $raw.on_use_cure_status.status)  { [string]$raw.on_use_cure_status.status } else { "" }
+            }
+            onUseAttackOverride = [ordered]@{
+                enabled   = if ($raw.on_use_attack_override -and $raw.on_use_attack_override.enabled)   { [bool]$raw.on_use_attack_override.enabled }   else { $false }
+                element   = if ($raw.on_use_attack_override -and $raw.on_use_attack_override.element)   { [string]$raw.on_use_attack_override.element } else { "" }
+                attribute = if ($raw.on_use_attack_override -and $raw.on_use_attack_override.attribute) { [string]$raw.on_use_attack_override.attribute } else { "" }
+            }
+            onUseInflictStatus = [ordered]@{
+                enabled    = if ($raw.on_use_inflict_status -and $raw.on_use_inflict_status.enabled)     { [bool]$raw.on_use_inflict_status.enabled }     else { $false }
+                checkSkill = if ($raw.on_use_inflict_status -and $raw.on_use_inflict_status.check_skill) { [string]$raw.on_use_inflict_status.check_skill } else { "coreDrive" }
+                dn         = if ($raw.on_use_inflict_status -and $null -ne $raw.on_use_inflict_status.dn) { [int]$raw.on_use_inflict_status.dn }           else { 10 }
+                status     = if ($raw.on_use_inflict_status -and $raw.on_use_inflict_status.status)      { [string]$raw.on_use_inflict_status.status }     else { "" }
+                x          = if ($raw.on_use_inflict_status -and $null -ne $raw.on_use_inflict_status.x) { [int]$raw.on_use_inflict_status.x }            else { 1 }
+                y          = if ($raw.on_use_inflict_status -and $null -ne $raw.on_use_inflict_status.y) { [int]$raw.on_use_inflict_status.y }            else { 0 }
             }
             notes      = if ($raw.notes) { [string]$raw.notes } else { "" }
         }

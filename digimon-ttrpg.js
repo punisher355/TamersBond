@@ -84,6 +84,18 @@ Hooks.once("init", () => {
   Handlebars.registerHelper("gt",       (a, b)   => a > b);
   Handlebars.registerHelper("includes", (arr, v) => Array.isArray(arr) && arr.includes(v));
   Handlebars.registerHelper("or",       (...args) => args.slice(0, -1).some(Boolean));
+  Handlebars.registerHelper("hasOnUseAutomation", (sys) => {
+    if (!sys) return false;
+    return !!(
+      sys.onUseBonus?.enabled ||
+      sys.onUseSkillBonus?.enabled ||
+      sys.onUseHeal?.enabled ||
+      sys.onUseRestoreHope?.enabled ||
+      sys.onUseCureStatus?.enabled ||
+      sys.onUseAttackOverride?.enabled ||
+      sys.onUseInflictStatus?.enabled
+    );
+  });
 
   CONFIG.Actor.documentClass   = DigitalDestinyActor;
   CONFIG.Item.documentClass    = DigitalDestinyItem;

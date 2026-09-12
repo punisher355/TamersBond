@@ -1,3 +1,5 @@
+import { resolveSignatureMoveDocument } from "../config.js";
+
 const STAT_KEYS = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
 export class DigimonFormSheet extends foundry.appv1.sheets.ItemSheet {
@@ -8,7 +10,8 @@ export class DigimonFormSheet extends foundry.appv1.sheets.ItemSheet {
       template: "systems/digital-destiny/templates/items/digimon-form-sheet.hbs",
       width:  520,
       height: 540,
-      resizable: true
+      resizable: true,
+      dragDrop: [{ dropSelector: ".dfc-sigmove-row" }]
     });
   }
 
@@ -51,6 +54,21 @@ export class DigimonFormSheet extends foundry.appv1.sheets.ItemSheet {
     context.attrName  = attrRaw ? attrRaw.charAt(0).toUpperCase() + attrRaw.slice(1) : "";
     context.elemName  = elemRaw ? elemRaw.charAt(0).toUpperCase() + elemRaw.slice(1) : "";
 
+    // If a move is linked by UUID, show it directly (name + image) instead
+    // of the plain text field — this is the homebrew-friendly path, since
+    // it works for any move item anywhere, not just ones name-matched in
+    // the Digimon Moves compendium.
+    context.sigMoveLinked = null;
+    const linkedUuid = (context.system.signatureMoveUuid ?? "").trim();
+    if (linkedUuid) {
+      try {
+        const doc = await fromUuid(linkedUuid);
+        if (doc) context.sigMoveLinked = { name: doc.name, img: doc.img, uuid: linkedUuid };
+      } catch (err) {
+        console.warn("DigimonFormSheet | Linked signature move UUID didn't resolve:", linkedUuid, err);
+      }
+    }
+
     return context;
   }
 
@@ -66,39 +84,66 @@ export class DigimonFormSheet extends foundry.appv1.sheets.ItemSheet {
       });
     });
 
-    // Open the signature move's own item sheet — same UUID-lookup approach
-    // used by DigimonLookup: look the move name up in the Digimon Moves
-    // compendium's index, build its Compendium UUID from the pack's own
-    // collection id + the entry's _id, then resolve it with fromUuid so the
-    // returned document has a proper pack back-reference before rendering.
+    // Open the signature move's own item sheet. Goes through the same
+    // resolver used everywhere else a form's signature move gets attached
+    // to an actor — UUID link first (works for homebrew moves anywhere in
+    // the world), falling back to the legacy name-matched compendium
+    // lookup for forms that were never re-linked.
     root.querySelector(".dfc-open-sigmove-btn")?.addEventListener("click", async (event) => {
       event.preventDefault();
       event.stopPropagation();
-      const moveName = (this.item.system.signatureMove ?? "").trim();
-      if (!moveName) {
+      const s = this.item.system;
+      if (!s.signatureMoveUuid && !s.signatureMove) {
         ui.notifications.warn("No signature move set for this form yet.");
         return;
       }
-      const pack = game.packs.get("digital-destiny.digimon-moves");
-      if (!pack) {
-        ui.notifications.warn("Digimon Moves compendium not found.");
-        return;
-      }
       try {
-        const index = await pack.getIndex();
-        const entry = index.find(e => e.name === moveName);
-        if (!entry) {
-          ui.notifications.warn(`Signature move "${moveName}" not found in the Digimon Moves compendium.`);
-          return;
-        }
-        const uuid = `Compendium.${pack.collection}.Item.${entry._id}`;
-        const move = await fromUuid(uuid);
+        const move = await resolveSignatureMoveDocument(s);
         if (move) move.sheet.render(true);
-        else ui.notifications.warn(`Couldn't open "${moveName}" — the move document failed to resolve.`);
+        else ui.notifications.warn(`Couldn't open "${s.signatureMove || "signature move"}" — it wasn't found (linked item may have been deleted, or the name doesn't match anything in the Digimon Moves compendium).`);
       } catch (err) {
         console.error("DigimonFormSheet | Error opening signature move:", err);
         ui.notifications.error("Error opening the signature move sheet — see console.");
       }
     });
+
+    // Unlink a UUID-linked move (drops back to the plain name field/text input).
+    root.querySelector(".dfc-unlink-sigmove-btn")?.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      await this.item.update({ "system.signatureMoveUuid": "" });
+    });
+  }
+
+  // Drag a Move item (from the Items sidebar, a compendium, or another
+  // actor's sheet — anywhere) onto the Signature Move field to link it
+  // directly by UUID. This is what makes a homebrew Digimon's homebrew
+  // attack work: it no longer has to exist, under that exact name, in the
+  // Digimon Moves compendium.
+  async _onDrop(event) {
+    event.preventDefault();
+    let data;
+    try { data = JSON.parse(event.dataTransfer.getData("text/plain")); }
+    catch { return; }
+    if (data?.type !== "Item" || !data?.uuid) return;
+
+    let dropped;
+    try { dropped = await fromUuid(data.uuid); }
+    catch (err) { console.error("DigimonFormSheet | Error resolving dropped item:", err); dropped = null; }
+
+    if (!dropped) {
+      ui.notifications.warn("Couldn't resolve the dropped item.");
+      return;
+    }
+    if (dropped.type !== "move") {
+      ui.notifications.warn(`${dropped.name} isn't a Move item — drop a move here to set it as the signature move.`);
+      return;
+    }
+
+    await this.item.update({
+      "system.signatureMoveUuid": dropped.uuid,
+      "system.signatureMove":     dropped.name  // kept in sync as the fallback/display name
+    });
+    ui.notifications.info(`Signature move linked: ${dropped.name}`);
   }
 }

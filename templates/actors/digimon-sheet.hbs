@@ -17,13 +17,13 @@
       {{#if system.element}}<span class="digi-quickref-pill digi-quickref-elem">{{system.element}}</span>{{/if}}
     </div>
     {{/if}}
-    <div class="header-panels flexrow">
+    <div class="header-panels dd-header-nowrap flexrow">
 
       {{!-- Portrait --}}
       <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
 
       {{!-- HP --}}
-      <div class="header-panel flexcol">
+      <div class="header-panel header-panel-compact flexcol">
         <span class="header-panel-label">HP</span>
         <div class="hp-main-row flexrow">
           <input type="number" class="hp-value-input" name="system.hp.value" value="{{system.hp.value}}" />
@@ -37,14 +37,14 @@
       </div>
 
       {{!-- Stage --}}
-      <div class="header-panel flexcol">
+      <div class="header-panel header-panel-compact flexcol">
         <span class="header-panel-label">Stage</span>
         <span class="digi-stage-current">{{currentStageLabel}}</span>
         <span class="digi-stage-sub">Default: {{defaultStageLabel}}</span>
       </div>
 
       {{!-- EXP (Digimon has its own separate pool) --}}
-      <div class="header-panel flexcol">
+      <div class="header-panel header-panel-compact flexcol">
         <span class="header-panel-label">EXP</span>
         <div class="exp-line flexrow">
           <span class="exp-line-label">Total</span>
@@ -64,6 +64,36 @@
           <span class="exp-line-label">Avail</span>
           <span class="exp-line-value exp-available">{{digiExp.available}}</span>
         </div>
+      </div>
+
+      {{!-- Food & Rest --}}
+      <div class="header-panel dd-food-rest-panel flexcol">
+        <span class="header-panel-label">Food &amp; Rest</span>
+        <div class="dd-food-rest-actions flexrow">
+          <button type="button" class="dd-self-rest-btn" title="Rest: restore full HP, advance Default Stage if below max">
+            <i class="fas fa-bed"></i>
+          </button>
+          <button type="button" class="dd-self-feed-btn" title="Eat a meal now without resting">
+            <i class="fas fa-drumstick-bite"></i>
+          </button>
+        </div>
+        {{#if bankedFood}}
+        <div class="party-meal-status party-meal-fed" data-tip-title="{{bankedFood.itemName}}" data-tip-desc="{{#if bankedFood.effect}}{{bankedFood.effect}}{{else}}No effect text on this item.{{/if}}">
+          <i class="fas fa-drumstick-bite"></i> <span class="dd-meal-name">{{bankedFood.itemName}}</span>
+          <button type="button" class="dd-self-meal-chat-btn party-meal-chat-btn" title="Post this bonus to chat">
+            <i class="fas fa-comment"></i>
+          </button>
+          <button type="button" class="dd-self-meal-clear-btn party-meal-clear-btn" title="Clear this bonus">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        {{else if hungerPenalty.tierLabel}}
+        <div class="party-meal-status party-meal-hungry" title="{{hungerPenalty.missedMeals}} missed in a row">
+          <i class="fas fa-exclamation-triangle"></i> {{hungerPenalty.tierLabel}}
+        </div>
+        {{else}}
+        <div class="party-meal-status party-meal-none">No meal banked</div>
+        {{/if}}
       </div>
 
     </div>

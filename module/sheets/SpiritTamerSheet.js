@@ -1,5 +1,5 @@
 import { TamerSheet }        from "./TamerSheet.js";
-import { computeTagString, hexToRgbTriplet, getActorHopePerTurn, computeAltFormExpCost } from "../config.js";
+import { computeTagString, hexToRgbTriplet, getActorHopePerTurn, computeAltFormExpCost, resolveSignatureMoveDocument } from "../config.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -354,18 +354,14 @@ export class SpiritTamerSheet extends TamerSheet {
     const oldSigs = this.actor.items.filter(i => i.type === "move" && i.system.isSignature);
     if (oldSigs.length > 0) await this.actor.deleteEmbeddedDocuments("Item", oldSigs.map(i => i.id));
 
-    const sigMoveName = s.signatureMove?.trim();
-    if (!sigMoveName) return;
-
-    const pack = game.packs.get("digital-destiny.digimon-moves");
-    if (!pack) { ui.notifications.warn(`Sig. move "${sigMoveName}" — Digimon Moves compendium not found.`); return; }
-
-    const index = await pack.getIndex();
-    const entry = index.find(e => e.name === sigMoveName);
-    if (!entry) { ui.notifications.warn(`Sig. move "${sigMoveName}" not found in compendium.`); return; }
-
-    const moveDoc  = await pack.getDocument(entry._id);
-    const baseData = moveDoc.toObject();
+    const moveDoc = await resolveSignatureMoveDocument(s);
+    if (!moveDoc) {
+      const label = (s.signatureMoveUuid || s.signatureMove || "").trim();
+      if (label) ui.notifications.warn(`Sig. move "${label}" couldn't be added — it wasn't found.`);
+      return;
+    }
+    const baseData    = moveDoc.toObject();
+    const sigMoveName = moveDoc.name;
     await this.actor.createEmbeddedDocuments("Item", [{ ...baseData, system: { ...baseData.system, isSignature: true, isActive: false } }]);
 
     const hasPoolCopy = this.actor.items.some(i => i.type === "move" && i.name === sigMoveName && !i.system.isSignature);

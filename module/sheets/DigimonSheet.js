@@ -1,5 +1,7 @@
-import { computeTagString, hexToRgbTriplet, computeAltFormExpCost } from "../config.js";
+import { computeTagString, hexToRgbTriplet, computeAltFormExpCost, resolveSignatureMoveDocument, computeDigimonHungerLabel } from "../config.js";
 import { getActorStatTotals, performAttackRoll } from "../combat.js";
+import { modRow, resolveModifiers, collectNextSkillBonuses } from "../roll-helpers.js";
+import { restActor, feedSingleActor, postBankedFoodToChat, clearBankedFood } from "../food-rest.js";
 
 const CREST_ORDER = ["courage", "friendship", "love", "knowledge", "sincerity", "reliability"];
 
@@ -281,7 +283,51 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     context.effectItems = this.actor.items.filter(i => i.type === "effect");
 
+    // Food & Rest header panel — banked meal bonus lives directly on this
+    // actor (see module/food-rest.js), independent of the Party sheet.
+    context.bankedFood = this.actor.system?.bankedFood?.itemName ? this.actor.system.bankedFood : null;
+    context.hungerPenalty = computeDigimonHungerLabel(this.actor);
+
     return context;
+  }
+
+  // --- Food & Rest header panel -------------------------------------------
+  // Lighter, per-actor version of PartySheet's Rest/Feed pipeline (see
+  // module/food-rest.js) — rests just this Digimon (HP + Default Stage
+  // advance), then offers a meal drawn from whichever Party actor it
+  // belongs to (its own food supply, or feed it from its Tamer's — either
+  // way, the same shared larder the Party sheet already uses).
+
+  async _onSelfRest(ev) {
+    ev.preventDefault();
+    const stageLabel = await restActor(this.actor);
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `
+        <div class="dd-chat-card">
+          <h3 class="dd-chat-title">${this.actor.name} Rests</h3>
+          <p class="dd-chat-desc">Full HP restored. Temp HP cleared.</p>
+          ${stageLabel ? `<p class="dd-chat-desc"><strong>Default Stage advanced:</strong> ${this.actor.name} → ${stageLabel}</p>` : ""}
+        </div>`
+    });
+    ui.notifications.info(`${this.actor.name} rested.`);
+  }
+
+  async _onSelfFeed(ev) {
+    ev.preventDefault();
+    const tamer = this.actor.system?.tamerLink ? game.actors?.get(this.actor.system.tamerLink) : null;
+    if (!tamer) { ui.notifications.warn(`${this.actor.name} has no linked Tamer to feed from — link it to a Tamer first.`); return; }
+    await feedSingleActor(this.actor, tamer);
+  }
+
+  async _onBankedFoodChat(ev) {
+    ev.preventDefault();
+    await postBankedFoodToChat(this.actor);
+  }
+
+  async _onBankedFoodClear(ev) {
+    ev.preventDefault();
+    await clearBankedFood(this.actor);
   }
 
   // --- Details dialog (manual field editing + equation view) ---
@@ -453,13 +499,18 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       windowEl.style.setProperty("--digimon-bg",      this.actor.system.sheetBgColor ?? "#f0ece4");
     }
 
+    html.find('.dd-self-rest-btn').on('click',       ev => this._onSelfRest(ev));
+    html.find('.dd-self-feed-btn').on('click',       ev => this._onSelfFeed(ev));
+    html.find('.dd-self-meal-chat-btn').on('click',  ev => this._onBankedFoodChat(ev));
+    html.find('.dd-self-meal-clear-btn').on('click', ev => this._onBankedFoodClear(ev));
+
     // JS-positioned skill tooltips
     const $tip = $('<div class="skill-hover-tip"></div>').appendTo(html);
     html.find('.digi-skill-name[data-tip-desc]').on('mouseenter', ev => {
       const el   = ev.currentTarget;
       const desc = el.dataset.tipDesc;
       if (!desc) return;
-      $tip.html(`
+      $tip.removeClass('dd-food-tip').html(`
         <strong class="skill-tip-title">${el.dataset.tipTitle ?? ""}</strong>
         <span class="skill-tip-desc">${desc}</span>
         ${el.dataset.tipExample ? `<em class="skill-tip-example">"${el.dataset.tipExample}"</em>` : ""}
@@ -472,6 +523,33 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       let left = elRect.left - formRect.left;
       if (top < 0) top = elRect.bottom - formRect.top + 6;
       if (left + tipW > formRect.width) left = formRect.width - tipW - 8;
+      $tip.css({ top, left });
+    }).on('mouseleave', () => $tip.hide());
+
+    // Same hover-tooltip mechanism as skill descriptions above, reused for
+    // the Food & Rest panel's banked-meal pill — the compact panel has no
+    // room to show the food's effect text inline (see dd-food-rest-panel
+    // CSS), so it shows on hover instead.
+    html.find('.dd-food-rest-panel .party-meal-fed[data-tip-desc]').on('mouseenter', ev => {
+      const el   = ev.currentTarget;
+      const desc = el.dataset.tipDesc;
+      if (!desc) return;
+
+      $tip.addClass('dd-food-tip').html(`
+        <strong class="skill-tip-title">${el.dataset.tipTitle ?? ""}</strong>
+        <span class="skill-tip-desc">${desc}</span>
+      `).css('display', 'flex');
+
+      const formRect = html[0].getBoundingClientRect();
+      const elRect   = el.getBoundingClientRect();
+      const tipH     = $tip.outerHeight();
+      const tipW     = $tip.outerWidth();
+
+      let top  = elRect.top  - formRect.top  - tipH - 6;
+      let left = elRect.left - formRect.left;
+      if (top < 0) top = elRect.bottom - formRect.top + 6;
+      if (left + tipW > formRect.width) left = formRect.width - tipW - 8;
+
       $tip.css({ top, left });
     }).on('mouseleave', () => $tip.hide());
 
@@ -628,12 +706,12 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     const preview = `${skillRank}d6`;
 
-    const modRowHtml = () => `
-      <div class="modifier-row flexrow">
-        <input type="text"   class="mod-reason" placeholder="Why this modifier?" />
-        <input type="number" class="mod-value"  value="0" />
-        <button type="button" class="mod-remove" title="Remove">×</button>
-      </div>`;
+    // Any active "next skill check" bonus effects on this actor — hand-built
+    // by the GM, or auto-granted by using an item with onUseSkillBonus from
+    // the linked Tamer's sheet (see _grantOnUseEffects in TamerSheet.js) —
+    // show up pre-filled here, same pattern as the attack-roll dialog's
+    // "next attack" bonuses in combat.js.
+    const autoMods = collectNextSkillBonuses(this.actor, skill);
 
     const input = await new Promise(resolve => {
       new Dialog({
@@ -645,7 +723,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
               <span>Why are you modifying this roll?</span>
               <span class="mod-amount-head">Amount</span>
             </div>
-            <div class="modifier-list"></div>
+            <div class="modifier-list">${autoMods.map(m => modRow(m.reason, m.raw, m.effectId)).join("")}</div>
             <button type="button" class="mod-add-btn">+ Add Modifier</button>
           </form>`,
         buttons: {
@@ -654,9 +732,10 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
             callback: html => {
               const mods = [];
               html.find('.modifier-row').each((_, row) => {
-                const reason = $(row).find('.mod-reason').val().trim();
-                const value  = parseInt($(row).find('.mod-value').val()) || 0;
-                mods.push({ reason, value });
+                const reason   = $(row).find('.mod-reason').val().trim();
+                const raw      = $(row).find('.mod-value').val().trim();
+                const effectId = $(row).data('effect-id') || "";
+                mods.push({ reason, raw, effectId });
               });
               resolve({ mods });
             }
@@ -666,7 +745,7 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
         default: "roll",
         render: html => {
           html.find('.mod-add-btn').on('click', () => {
-            html.find('.modifier-list').append(modRowHtml());
+            html.find('.modifier-list').append(modRow());
             html.find('.modifier-row:last-child .mod-reason').focus();
           });
           html.on('click', '.mod-remove', ev => $(ev.currentTarget).closest('.modifier-row').remove());
@@ -676,13 +755,28 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
 
     if (!input) return;
 
+    input.mods = await resolveModifiers(input.mods);
+
+    // Consume every "next skill check" bonus effect whose row is still
+    // present — removing a pre-filled row before clicking Roll! leaves that
+    // effect alone instead (saves it for a later check).
+    const usedEffectIds = [...new Set(input.mods.map(m => m.effectId).filter(Boolean))];
+    if (usedEffectIds.length) {
+      try { await this.actor.deleteEmbeddedDocuments("Item", usedEffectIds); }
+      catch (err) { console.error("DigitalDestiny | Failed to consume next-skill-check bonus effect(s):", err); }
+    }
+
     const extraFlat = input.mods.reduce((sum, m) => sum + m.value, 0);
     const formula   = extraFlat !== 0 ? `${skillRank}d6 + ${extraFlat}` : `${skillRank}d6`;
 
     const modLines = [];
     for (const m of input.mods) {
       if (m.value === 0 && !m.reason) continue;
-      modLines.push(`${m.value >= 0 ? "+" : ""}${m.value}${m.reason ? ` — ${m.reason}` : ""}`);
+      const sign        = m.value >= 0 ? "+" : "";
+      const isFormula    = m.raw && m.raw !== `${m.value}` && !m.invalid;
+      const formulaPart  = isFormula ? ` [${m.raw}]` : "";
+      const invalidPart  = m.invalid ? ` (invalid: "${m.raw}")` : "";
+      modLines.push(`${sign}${m.value}${formulaPart}${invalidPart}${m.reason ? ` — ${m.reason}` : ""}`);
     }
 
     let flavor = `<strong>${label}</strong> &nbsp;${skillRank}d6`;
@@ -884,24 +978,16 @@ export class DigimonSheet extends foundry.appv1.sheets.ActorSheet {
       await this.actor.deleteEmbeddedDocuments("Item", oldSigMoves.map(i => i.id));
     }
 
-    const sigMoveName = s.signatureMove?.trim();
-    if (!sigMoveName) return;
-
-    const pack = game.packs.get("digital-destiny.digimon-moves");
-    if (!pack) {
-      ui.notifications.warn(`Signature move "${sigMoveName}" couldn't be added — Digimon Moves compendium not found.`);
+    const moveDoc = await resolveSignatureMoveDocument(s);
+    if (!moveDoc) {
+      const label = (s.signatureMoveUuid || s.signatureMove || "").trim();
+      if (label) {
+        ui.notifications.warn(`Signature move "${label}" couldn't be added — it wasn't found (linked item may have been deleted, or the name doesn't match anything in the Digimon Moves compendium).`);
+      }
       return;
     }
-
-    const index = await pack.getIndex();
-    const entry = index.find(e => e.name === sigMoveName);
-    if (!entry) {
-      ui.notifications.warn(`Signature move "${sigMoveName}" not found in compendium — run the build script to add it.`);
-      return;
-    }
-
-    const moveDoc  = await pack.getDocument(entry._id);
     const baseData = moveDoc.toObject();
+    const sigMoveName = moveDoc.name;
 
     // Add the new signature slot (isSignature: true — shown in the dedicated sig move row)
     await this.actor.createEmbeddedDocuments("Item", [{

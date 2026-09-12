@@ -191,6 +191,107 @@
   white-space: nowrap;
 }
 
+/* --- Compact header panels (Tamer/Digimon sheet) ---------------------------
+   HP/Hope(or Stage)/EXP used to stretch (flex:1) across the whole header
+   row. Pinning them to a modest, shrinkable width clusters them to the left
+   instead, freeing up room for the Food & Rest panel on the right. Other
+   sheets (Spirit Tamer, DNA, NPC Digimon, Party) still use the base
+   .header-panel flex:1 behavior untouched. */
+/* Scoped to just the Tamer/Digimon sheet header row (via the
+   dd-header-nowrap class added alongside .header-panels there) — this is
+   NOT applied to the base .header-panels class shared by Spirit Tamer/DNA/
+   NPC Digimon/Party sheets, some of which rely on the default Foundry
+   .flexrow wrap behavior for their own (larger) panel counts.
+   Root cause of the "Food & Rest panel dropped below everything" bug: with
+   wrap still enabled, once the 4-5 header items' combined flex-basis
+   exceeded the row's width, the browser broke a new line before flex-shrink
+   ever got a chance to compact them onto one line. Forcing nowrap here
+   lets flex-shrink (already set below) do its job instead. */
+.digital-destiny .dd-header-nowrap {
+  flex-wrap: nowrap;
+}
+
+.digital-destiny .header-panel-compact {
+  flex: 0 1 175px;
+}
+
+/* --- Food & Rest header panel (Tamer/Digimon/Spirit Tamer sheet) -----------
+   Per-actor Rest/Feed + banked-meal display, same data model as the Party
+   sheet's Rest/Feed/Meal Status (module/food-rest.js) but scoped to just
+   this character. margin-left:auto pushes it to the right end of the row
+   once the panels above it stop stretching to fill the space.
+
+   Redesigned to match the visual scale of the HP/Hope/EXP panels next to
+   it — small icon buttons and a compact status pill, not full-width text
+   buttons — instead of forcing a fixed height + overflow:hidden crop on a
+   panel whose content didn't actually fit that height (which is what was
+   slicing the banked-meal row in half before). Every state (actions row,
+   fed/hungry/none status row) now renders at the same small height by
+   design, so the header bar has no reason to resize when a meal is banked
+   or cleared, and the panel's own width is still fixed (flex: 0 0) so it
+   never varies by sheet the way it did when it was allowed to shrink. */
+.digital-destiny .dd-food-rest-panel {
+  flex: 0 0 190px;
+  margin-left: auto;
+}
+
+.digital-destiny .dd-food-rest-actions {
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.digital-destiny .dd-self-rest-btn,
+.digital-destiny .dd-self-feed-btn {
+  width: 24px;
+  height: 24px;
+  min-width: 0;
+  line-height: 1;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  border: none;
+  background: var(--digimon-accent, var(--tamer-accent, #5a7a3a));
+  color: #fff;
+}
+.digital-destiny .dd-self-rest-btn:hover,
+.digital-destiny .dd-self-feed-btn:hover {
+  filter: brightness(1.15);
+}
+
+/* The banked-meal/hungry/none row inside the Food & Rest panel — forced to
+   a single line, min-height locked so all three states (fed, with its two
+   small buttons; hungry-warning text; plain "No meal banked" text) render
+   at the identical height regardless of which one is showing. */
+.digital-destiny .dd-food-rest-panel .party-meal-status {
+  flex-wrap: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 20px;
+  margin-top: 3px;
+  font-size: 0.72em;
+  padding: 2px 6px;
+}
+
+.digital-destiny .dd-meal-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.digital-destiny .dd-food-rest-panel .party-meal-chat-btn,
+.digital-destiny .dd-food-rest-panel .party-meal-clear-btn {
+  width: 18px;
+  height: 18px;
+  font-size: 0.75em;
+}
+
 .digital-destiny .hope-pt-label {
   font-size: 0.7em;
   color: #7060a0;
@@ -1278,6 +1379,19 @@
   pointer-events: none;
   flex-direction: column;
   gap: 8px;
+}
+
+/* Food & Rest panel's banked-meal tooltip reuses .skill-hover-tip (see
+   TamerSheet.js/DigimonSheet.js) but with this modifier class added —
+   semi-transparent instead of solid, because on this small panel the
+   tooltip pops up right over the Post-to-chat/Clear buttons, and although
+   pointer-events:none already lets clicks reach them underneath, a solid
+   background hid them from view entirely. Skill tooltips elsewhere keep
+   the normal solid background (this class is only toggled on for the
+   food-bonus hover, see the mouseenter handler). */
+.digital-destiny .skill-hover-tip.dd-food-tip {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(1px);
 }
 
 .digital-destiny .skill-hover-tip.visible,
@@ -2665,6 +2779,119 @@
 }
 
 /* -----------------------------------------------
+   Items tab redesign — boxed category cards, bigger
+   icons with an action-icon hover swap, zebra rows,
+   an on-use automation badge, and a Total Wealth
+   panel (inspired by Pokemon Tabletop Reunited's
+   inventory layout, adapted to this system's theme).
+   ----------------------------------------------- */
+.digital-destiny .dd-item-category {
+  border: 1px solid var(--digimon-accent, var(--tamer-accent, #4a90d9));
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+}
+
+.digital-destiny .dd-item-category-header {
+  margin: 0;
+  padding: 5px 10px;
+  background: var(--digimon-accent, var(--tamer-accent, #4a90d9));
+  color: #fff;
+  border-left: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.digital-destiny .dd-item-category-header .dd-category-hint {
+  font-weight: 400;
+  font-size: 0.82em;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #fff;
+  opacity: 0.85;
+}
+
+.digital-destiny .dd-item-category .gear-slot-block,
+.digital-destiny .dd-item-category .gear-items-list {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.digital-destiny .dd-item-category .gear-slot-block + .gear-slot-block {
+  border-top: 1px solid #eee2d0;
+}
+
+.digital-destiny .dd-item-category .gear-item-row:nth-child(even) {
+  background: rgba(0, 0, 0, 0.035);
+}
+
+/* Bigger item icon with a hover action-icon swap (dice-hover, PTR-style) */
+.digital-destiny .dd-item-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f0ece4;
+  border: 1px solid #ddd;
+}
+.digital-destiny .dd-item-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.digital-destiny .dd-item-icon .dd-item-icon-action {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 20, 30, 0.75);
+  color: #fff;
+  font-size: 1.15em;
+}
+.digital-destiny .dd-item-icon:hover .dd-item-icon-action {
+  display: flex;
+}
+
+/* Automation-enabled badge next to an item's name */
+.digital-destiny .dd-automation-badge {
+  color: var(--digimon-accent, var(--tamer-accent, #d4a017));
+  font-size: 0.8em;
+  margin-left: 3px;
+  opacity: 0.9;
+}
+
+/* Total Wealth panel (Currency panel's read-only companion) */
+.digital-destiny .wealth-panel {
+  gap: 16px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #d0c8b8;
+  border-radius: 6px;
+}
+.digital-destiny .wealth-field {
+  gap: 2px;
+}
+.digital-destiny .wealth-field label {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #6a6a7e;
+}
+.digital-destiny .wealth-field .wealth-value {
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #3a3a5e;
+}
+
+/* -----------------------------------------------
    Gear sheet — stat bonus grid
    ----------------------------------------------- */
 .digital-destiny .gear-stat-bonuses {
@@ -2954,6 +3181,26 @@
   font-size: 0.8em;
   color: #555;
   font-style: italic;
+}
+
+/* Item-inflict card (thrown status items) reference roll button */
+.dd-inflict-roll-btn {
+  font-size: 0.8em;
+  padding: 3px 10px;
+  background: #eee;
+  color: #333;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.15s, border-color 0.15s;
+}
+.dd-inflict-roll-btn:hover {
+  background: #d0e8ff;
+  border-color: #6aaddd;
+}
+.dd-inflict-roll-result {
+  font-size: 0.85em;
 }
 
 /* Dialog sections */
@@ -3326,6 +3573,55 @@
 .dfc-open-sigmove-btn:hover {
   border-color: #4a90d9;
   color: #4a90d9;
+}
+
+.dfc-sigmove-linked {
+  background: #16213e;
+  border: 1px dashed #3a5a8a;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+.dfc-sigmove-thumb {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 3px;
+  background: #0e1226;
+  flex-shrink: 0;
+}
+.dfc-sigmove-linked-name {
+  flex: 1;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #e8e0d0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dfc-unlink-sigmove-btn {
+  background: #1a2040;
+  border: 1px solid #2a3560;
+  color: #d97a7a;
+  border-radius: 4px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  font-size: 0.75em;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.dfc-unlink-sigmove-btn:hover {
+  border-color: #d9534f;
+  color: #d9534f;
+}
+.dfc-sigmove-hint {
+  margin: 3px 0 0;
+  font-size: 0.68em;
+  color: #5a6a90;
+  font-style: italic;
 }
 
 /* Body */
